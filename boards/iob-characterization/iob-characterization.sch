@@ -21,7 +21,7 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 1 1
 Title "STARSHIPRAIDER I/O Buffer Characterization Board"
-Date "2016-12-28"
+Date "2016-12-29"
 Rev "0.1"
 Comp "Andrew Zonenberg"
 Comment1 ""
@@ -993,17 +993,6 @@ Text Label 4300 5200 2    60   ~ 0
 5V0
 Text Label 4300 5600 2    60   ~ 0
 VIN_PROT_IN
-$Comp
-L 74AVCH2T45 U8
-U 1 1 58663593
-P 8950 6400
-F 0 "U8" H 9225 7097 60  0000 C CNN
-F 1 "74AVCH2T45" H 9225 6991 60  0000 C CNN
-F 2 "azonenberg_pcb:DFN_8_0.5MM_2x1MM" H 8950 6400 60  0001 C CNN
-F 3 "" H 8950 6400 60  0001 C CNN
-	1    8950 6400
-	1    0    0    -1  
-$EndComp
 Text Notes 8950 6500 0    60   ~ 0
 Low voltage output buffer
 $Comp
@@ -1049,11 +1038,11 @@ Text Label 8650 6050 2    60   ~ 0
 GND
 Text Label 9950 5150 0    60   ~ 0
 GND
-Text Label 9850 6050 0    60   ~ 0
+Text Label 9950 6050 0    60   ~ 0
 GND
 Text Label 9950 5050 0    60   ~ 0
 3V3
-Text Label 9850 5950 0    60   ~ 0
+Text Label 9950 5950 0    60   ~ 0
 3V3
 Text Notes 8950 5500 0    60   ~ 0
 High voltage output buffer
@@ -1422,8 +1411,6 @@ Wire Wire Line
 Wire Wire Line
 	8150 5950 8750 5950
 Wire Wire Line
-	9850 6350 9700 6350
-Wire Wire Line
 	8150 5050 8750 5050
 Wire Wire Line
 	8650 5150 8750 5150
@@ -1432,11 +1419,11 @@ Wire Wire Line
 Wire Wire Line
 	9950 5150 9800 5150
 Wire Wire Line
-	9850 6050 9700 6050
+	9950 6050 9800 6050
 Wire Wire Line
 	9950 5050 9800 5050
 Wire Wire Line
-	9850 5950 9700 5950
+	9950 5950 9800 5950
 Wire Wire Line
 	8650 5350 8750 5350
 Wire Wire Line
@@ -1444,12 +1431,8 @@ Wire Wire Line
 Wire Wire Line
 	9800 5350 10400 5350
 Wire Wire Line
-	9700 6250 10650 6250
-Wire Wire Line
 	10400 5350 10400 6250
 Connection ~ 10400 6250
-Wire Wire Line
-	10250 6450 10800 6450
 Wire Wire Line
 	6900 5050 7150 5050
 Wire Wire Line
@@ -1671,22 +1654,6 @@ Wire Wire Line
 	13800 4900 13600 4900
 Wire Wire Line
 	13600 5000 13800 5000
-NoConn ~ 8750 6350
-$Comp
-L R R18
-U 1 1 5865188B
-P 10000 6350
-F 0 "R18" V 9950 6500 50  0000 C CNN
-F 1 "10K" V 10000 6350 50  0000 C CNN
-F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 9930 6350 50  0001 C CNN
-F 3 "" H 10000 6350 50  0000 C CNN
-	1    10000 6350
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	10150 6350 10250 6350
-Wire Wire Line
-	10250 6350 10250 6450
 $Comp
 L RELAY_COTO_9007 RL1
 U 1 1 5866AE7D
@@ -1731,4 +1698,90 @@ F 3 "" H 14750 7200 50  0000 C CNN
 	1    14750 7200
 	1    0    0    -1  
 $EndComp
+$Comp
+L C C15
+U 1 1 5867E68B
+P 11850 7700
+F 0 "C15" H 11965 7746 50  0000 L CNN
+F 1 "4.7 uF" H 11965 7655 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0603_CAP_NOSILK" H 11888 7550 50  0001 C CNN
+F 3 "" H 11850 7700 50  0000 C CNN
+	1    11850 7700
+	1    0    0    -1  
+$EndComp
+Text Label 11700 7550 2    60   ~ 0
+VREF_IN
+Wire Wire Line
+	11700 7550 11850 7550
+Text Label 11700 7850 2    60   ~ 0
+GND
+Wire Wire Line
+	11700 7850 11850 7850
+$Comp
+L 74LVC1T45 U8
+U 1 1 5865F420
+P 8950 6300
+F 0 "U8" H 9275 6897 60  0000 C CNN
+F 1 "74AVCH1T45" H 9275 6791 60  0000 C CNN
+F 2 "azonenberg_pcb:SOT363" H 8950 6300 60  0001 C CNN
+F 3 "" H 8950 6300 60  0001 C CNN
+	1    8950 6300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10800 6450 10600 6450
+Wire Wire Line
+	9800 6250 10650 6250
+Text Label 1500 7150 0    60   ~ 0
+VCCO_TX
+$Comp
+L CONN_01X01 P30
+U 1 1 586630A4
+P 950 7150
+F 0 "P30" H 700 7100 50  0000 C CNN
+F 1 "SMT_TESTPOINT" H 869 7016 50  0000 C CNN
+F 2 "azonenberg_pcb:TESTPOINT_SMT_0.5MM" H 950 7150 50  0001 C CNN
+F 3 "" H 950 7150 50  0000 C CNN
+	1    950  7150
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1500 7150 1150 7150
+$Comp
+L C C?
+U 1 1 58664F34
+P 11850 7050
+F 0 "C?" H 11965 7096 50  0000 L CNN
+F 1 "0.47 uF" H 11965 7005 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0402_CAP_NOSILK" H 11888 6900 50  0001 C CNN
+F 3 "" H 11850 7050 50  0000 C CNN
+	1    11850 7050
+	1    0    0    -1  
+$EndComp
+Text Notes 11800 7350 0    60   ~ 0
+Output driver decoupling
+Text Label 11700 6900 2    60   ~ 0
+VCCO_TX_LO
+Text Label 11700 7200 2    60   ~ 0
+GND
+Wire Wire Line
+	11700 7200 12400 7200
+$Comp
+L C C?
+U 1 1 58665CB4
+P 12400 7050
+F 0 "C?" H 12515 7096 50  0000 L CNN
+F 1 "0.47 uF" H 12515 7005 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0402_CAP_NOSILK" H 12438 6900 50  0001 C CNN
+F 3 "" H 12400 7050 50  0000 C CNN
+	1    12400 7050
+	1    0    0    -1  
+$EndComp
+Text Label 12550 6900 0    60   ~ 0
+VCCO_TX_HI
+Wire Wire Line
+	12550 6900 12400 6900
+Connection ~ 11850 7200
+Wire Wire Line
+	11850 6900 11700 6900
 $EndSCHEMATC
