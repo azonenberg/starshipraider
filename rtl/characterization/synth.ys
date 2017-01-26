@@ -1,0 +1,4 @@
+#!/usr/local/bin/yosys
+read_verilog driver.v
+synth_greenpak4
+write_json /tmp/driver.json
