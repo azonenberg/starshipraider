@@ -1,7 +1,7 @@
 module driver(
 
 	(* LOC = "P3" *)
-	output reg prot_relay_en,
+	output reg prot_relay_en = 0,
 
 	(* LOC = "P4" *)
 	(* IBUF_TYPE = "ANALOG" *)
@@ -25,17 +25,21 @@ module driver(
 	);
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	// Oscillators
+	// Time base for re-enabling faulted outputs
 
-	//The 1730 Hz oscillator
-	wire clk_108hz;
-	GP_LFOSC #(
+	//The 2 MHz RC oscillator
+	wire clk_cnt;
+	wire clk;
+	GP_RCOSC #(
 		.PWRDN_EN(0),
 		.AUTO_PWRDN(0),
-		.OUT_DIV(16)
-	) lfosc (
+		.OSC_FREQ("2M"),
+		.HARDIP_DIV(2),
+		.FABRIC_DIV(1)
+	) rcosc (
 		.PWRDN(1'b0),
-		.CLKOUT(clk_108hz)
+		.CLKOUT_HARDIP(clk_cnt),
+		.CLKOUT_FABRIC(clk)
 	);
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -73,14 +77,63 @@ module driver(
 		cmp_vinlo (.PWREN(por_done), .OUT(vin_not_negative), .VIN(vin_lo), .VREF(vref_850) );
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	// Turn off the output if the input voltage gets too high
+	// Turn off the output if the input voltage gets too high. Re-enable after a time delay.
 
-	reg input_ok;
+	wire input_ok		= vin_not_negative && !vin_too_high;
+	wire input_disable 	= !input_ok;
+
+	//Count cycles from fault until we re-enable the input
+	localparam COUNT_LIMIT = 1024;
+	reg[13:0] enable_count = COUNT_LIMIT;
+	always @(posedge clk_cnt, posedge input_disable) begin
+
+		if(input_disable)
+			enable_count	<= 0;
+
+		else begin
+			enable_count		<= enable_count - 1'h1;
+			if(enable_count == 0)
+				enable_count	<= COUNT_LIMIT;
+		end
+
+	end
+	wire re_enable = (enable_count == 0);
+
+	//Register the input and see if it's been OK for two timer cycles in a row
+	reg input_ok_ff = 0;
+	reg input_ok_ff2 = 0;
+	always @(posedge clk) begin
+
+		//Save state on timer ticks if good
+		if(re_enable && input_ok) begin
+			input_ok_ff		<= 1;
+			input_ok_ff2	<= input_ok_ff;
+		end
+
+		//If bad, clear state right away
+		if(!input_ok) begin
+			input_ok_ff		<= 0;
+			input_ok_ff2	<= 0;
+		end
+
+	end
+
+	//Open the circuit as soon as we get a fault. Re-enable after two consecutive OK periods
+	always @(posedge clk) begin
+
+		if(input_ok_ff && input_ok_ff2)
+			prot_relay_en	<= 1;
+
+		if(!input_ok)
+			prot_relay_en	<= 0;
+
+	end
+
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// Status LEDs
+
 	always @(*) begin
-		input_ok		<= vin_not_negative && !vin_too_high;
-
-		prot_relay_en	<= input_ok;
-		ok_led_en		<= input_ok;
+		ok_led_en		<= prot_relay_en;
 		fault_led_en	<= !input_ok;
 
 		//DEBUG
