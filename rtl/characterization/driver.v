@@ -17,6 +17,12 @@ module driver(
 	(* LOC = "P8" *)
 	output reg fault_led_en,
 
+	(* LOC = "P9" *)
+	output reg vcco_hi_en = 0,
+
+	(* LOC = "P10" *)
+	output reg vcco_lo_en = 0,
+
 	(* LOC = "P15" *)
 	output reg vhi_led_en = 0,
 
@@ -137,8 +143,8 @@ module driver(
 		fault_led_en	<= !input_ok;
 
 		//DEBUG
-		vhi_led_en		<= vin_too_high;
-		vlo_led_en		<= !vin_not_negative;
+		//vhi_led_en		<= vin_too_high;
+		//vlo_led_en		<= !vin_not_negative;
 	end
 
 endmodule
