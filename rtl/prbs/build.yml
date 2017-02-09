@@ -27,7 +27,7 @@
 #                                                                                                                      #
 ########################################################################################################################
 
-PRBSTester:
+PRBSTesterTop:
 
     toolchain:      verilog/ise
     type:           bitstream
@@ -35,8 +35,8 @@ PRBSTester:
     # use default configs
 
     # Specify target BSP rather than list of triplets
-    #boards:
-    #    - ../../../boards/zybo.yml
+    boards:
+        - ../../bsp/zybo.yml
 
     # Signals that we need broken out at the top level (in addition to anything that peripheral IP requires)
     pins:
@@ -50,4 +50,4 @@ PRBSTester:
 
     # All source code for now, no automatic generation
     sources:
-        - ZyboBlinkyTestBitstream.v
+        - PRBSTesterTop.v
