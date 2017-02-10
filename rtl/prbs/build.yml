@@ -45,9 +45,20 @@ PRBSTesterTop:
             dir: input
 
         led:
-            width: 1
+            width: 4
             dir: output
+
+        pmod_b:
+            width: 8
+            dir: inout
+
+        pmod_c:
+            width: 8
+            dir: inout
 
     # All source code for now, no automatic generation
     sources:
         - PRBSTesterTop.v
+        - ../antikernel-ipcores/device_abstraction/ClockBuffer.v
+        - ../antikernel-ipcores/device_abstraction/DDROutputBuffer.v
+        - ../antikernel-ipcores/clock/pll/ReconfigurablePLL.v
