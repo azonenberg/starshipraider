@@ -71,7 +71,7 @@ module PRBSTesterTop(
 	wire[4:0]	clk_unused;
 	wire		sysclk;
 
-	reg			pll_reset	= 0;
+	reg			pll_reset					= 0;
 	wire		pll_locked;
 	wire		pll_busy;
 
@@ -139,39 +139,51 @@ module PRBSTesterTop(
 		reconfig_finish		<= 0;
 		reconfig_vco_en		<= 0;
 		reconfig_output_en	<= 0;
+		pll_reset			<= 0;
 
 		case(init_state)
 
 			//Wait for PLL to stop being busy.
 			//When it's done, start reconfiguring stuff.
 			0: begin
-				reconfig_start		<= 1;
-				init_state			<= 1;
+				if(!pll_busy) begin
+					reconfig_start		<= 1;
+					init_state			<= 1;
+				end
 			end
 
 			//Configure VCO
 			1: begin
-				reconfig_vco_en			<= 1;
-				reconfig_vco_mult		<= 8;
-				reconfig_vco_indiv		<= 0;
-				reconfig_vco_bandwidth	<= 1;	//high/optimized
-				init_state				<= 2;
+				if(!reconfig_start) begin
+					reconfig_vco_en			<= 1;
+					reconfig_vco_mult		<= 8;	//1 GHz
+					reconfig_vco_indiv		<= 1;
+					reconfig_vco_bandwidth	<= 1;	//high/optimized
+					init_state				<= 2;
+				end
+
+				//Prepare to reconfigure channel 0 (will increment when we send the first write and wrap)
+				reconfig_output_idx			<= 7;
+
 			end
 
-			//Configure first output (ignore the rest)
+			//Configure each output in sequence
 			2: begin
 				if(reconfig_cmd_done) begin
 					reconfig_output_en	<= 1;
-					reconfig_output_idx	<= 0;
-					reconfig_output_div	<= 10;
-					init_state			<= 3;
+					reconfig_output_div	<= 5; //200 MHz //10;		//100 MHz
+					reconfig_output_idx	<= reconfig_output_idx + 1'h1;
+
+					//If we're about to write the last output, move on
+					if(reconfig_output_idx == 4)
+						init_state			<= 3;
 				end
 			end
 
 			//Restart the PLL
 			3: begin
 				if(reconfig_cmd_done) begin
-					reconfig_finish		<= 1;
+					reconfig_finish		<=  1;
 					init_state			<=  4;
 				end
 			end
@@ -179,7 +191,6 @@ module PRBSTesterTop(
 			//Wait for PLL to lock
 			4: begin
 				if(pll_locked) begin
-					led[0]				<= 1;
 					init_state			<= 5;
 				end
 			end
@@ -190,6 +201,8 @@ module PRBSTesterTop(
 			end
 
 		endcase
+
+		led <= init_state[3:0];
 
 	end
 

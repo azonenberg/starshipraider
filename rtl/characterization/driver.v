@@ -1,3 +1,5 @@
+`default_nettype none
+
 module driver(
 
 	(* LOC = "P3" *)
@@ -6,6 +8,9 @@ module driver(
 	(* LOC = "P4" *)
 	(* IBUF_TYPE = "ANALOG" *)
 	input wire vin_lo,
+
+	(* LOC = "P5" *)
+	output reg vout_relay_en,
 
 	(* LOC = "P6" *)
 	(* IBUF_TYPE = "ANALOG" *)
@@ -18,16 +23,20 @@ module driver(
 	output reg fault_led_en,
 
 	(* LOC = "P9" *)
-	output reg vcco_hi_en = 0,
+	output reg vcco_hi_en,
 
 	(* LOC = "P10" *)
-	output reg vcco_lo_en = 0,
+	output reg vcco_lo_en,
+
+	(* LOC = "P13" *)
+	(* IBUF_TYPE = "ANALOG" *)
+	input wire vcco_tx_div,
 
 	(* LOC = "P15" *)
-	output reg vhi_led_en = 0,
+	output reg vhi_led_en,
 
 	(* LOC = "P16" *)
-	output reg vlo_led_en = 0
+	output reg vlo_led_en
 	);
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -136,15 +145,35 @@ module driver(
 	end
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// Check range for VCCO voltage (attenuated by 5x)
+
+	//We want to switch at ~3.5V which comes out to 700 mV
+
+	wire vref_700;
+	GP_VREF #( .VIN_DIV(4'd1), .VREF(16'd700)  ) vr700  ( .VIN(1'b0), .VOUT(vref_700)  );
+
+	wire vcco_is_high;
+	GP_ACMP #(.BANDWIDTH("LOW"), .VIN_ATTEN(4'd1), .VIN_ISRC_EN(1'b0), .HYSTERESIS(8'd25) )
+		cmp_vcco (.PWREN(por_done), .OUT(vcco_is_high), .VIN(vcco_tx_div), .VREF(vref_700) );
+
+	//Drive power-gate outputs.
+	//Connect the low-volage driver if we're below Vmax for it.
+	//TODO: External input to select vdd/vss
+	always @(posedge clk) begin
+		vcco_hi_en 		<= vcco_is_high;
+		vcco_lo_en 		<= !vcco_is_high;
+
+		vout_relay_en	<= !vcco_is_high;
+	end
+
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// Status LEDs
 
-	always @(*) begin
+	always @(posedge clk) begin
 		ok_led_en		<= prot_relay_en;
 		fault_led_en	<= !input_ok;
-
-		//DEBUG
-		//vhi_led_en		<= vin_too_high;
-		//vlo_led_en		<= !vin_not_negative;
+		vhi_led_en		<= vcco_is_high;
+		vlo_led_en		<= !vcco_is_high;
 	end
 
 endmodule
