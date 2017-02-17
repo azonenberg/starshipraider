@@ -27,27 +27,74 @@
 #                                                                                                                      #
 ########################################################################################################################
 
-PRBSTesterTop:
+########################################################################################################################
+# Board info
 
-    toolchain:      verilog/ise
-    type:           bitstream
+device:
+    triplet: greenpak4-slg46620
+    speed: 1
+    package: stfqn20
 
-    # use default configs
 
-    # Specify target BSP rather than list of triplets
-    boards:
-        - ../../bsp/zybo.yml
+########################################################################################################################
+# Clock sources
 
-    # Signals that we need broken out at the top level (in addition to anything that peripheral IP requires)
-    pins:
-        clk:    1
-        led:    4
-        pmod_b: 8
-        pmod_c: 8
+clocks:
 
-    # All source code for now, no automatic generation
-    sources:
-        - PRBSTesterTop.v
-        - ../antikernel-ipcores/device_abstraction/ClockBuffer.v
-        - ../antikernel-ipcores/device_abstraction/DDROutputBuffer.v
-        - ../antikernel-ipcores/clock/pll/ReconfigurablePLL.v
+########################################################################################################################
+# Top-level signals
+
+ios:
+
+    ####################################################################################################################
+    # Input protection
+
+    prot_relay_en:
+        loc:    P3
+        std:    LVCMOS33
+
+    vin_lo:
+        loc:    P4
+        std:    LVCMOS33
+
+    vin_hi:
+        loc:    P6
+        std:    LVCMOS33
+
+    ####################################################################################################################
+    # Output buffer
+
+    vout_relay_en:
+        loc:    P5
+        std:    LVCMOS33
+
+    vcco_hi_en:
+        loc:    P9
+        std:    LVCMOS33
+
+    vcco_lo_en:
+        loc:    P10
+        std:    LVCMOS33
+
+    vcco_tx_div:
+        loc:    P13
+        std:    LVCMOS33
+
+    ####################################################################################################################
+    # Diagnostics
+
+    ok_led_en:
+        loc:    P7
+        std:    LVCMOS33
+
+    fault_led_en:
+        loc:    P8
+        std:    LVCMOS33
+
+    vhi_led_en:
+        loc:    P15
+        std:    LVCMOS33
+
+    vlo_led_en:
+        loc:    P16
+        std:    LVCMOS33

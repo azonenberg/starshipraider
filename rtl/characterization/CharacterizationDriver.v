@@ -1,42 +1,56 @@
+/***********************************************************************************************************************
+*                                                                                                                      *
+* STARSHIPRAIDER v0.1                                                                                                  *
+*                                                                                                                      *
+* Copyright (c) 2017 Andrew D. Zonenberg                                                                               *
+* All rights reserved.                                                                                                 *
+*                                                                                                                      *
+* Redistribution and use in source and binary forms, with or without modification, are permitted provided that the     *
+* following conditions are met:                                                                                        *
+*                                                                                                                      *
+*    * Redistributions of source code must retain the above copyright notice, this list of conditions, and the         *
+*      following disclaimer.                                                                                           *
+*                                                                                                                      *
+*    * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the       *
+*      following disclaimer in the documentation and/or other materials provided with the distribution.                *
+*                                                                                                                      *
+*    * Neither the name of the author nor the names of any contributors may be used to endorse or promote products     *
+*      derived from this software without specific prior written permission.                                           *
+*                                                                                                                      *
+* THIS SOFTWARE IS PROVIDED BY THE AUTHORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED   *
+* TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL *
+* THE AUTHORS BE HELD LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES        *
+* (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR       *
+* BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT *
+* (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE       *
+* POSSIBILITY OF SUCH DAMAGE.                                                                                          *
+*                                                                                                                      *
+***********************************************************************************************************************/
+
 `default_nettype none
 
-module driver(
-
-	(* LOC = "P3" *)
+module CharacterizationDriver(
 	output reg prot_relay_en = 0,
-
-	(* LOC = "P4" *)
-	(* IBUF_TYPE = "ANALOG" *)
-	input wire vin_lo,
-
-	(* LOC = "P5" *)
 	output reg vout_relay_en,
 
-	(* LOC = "P6" *)
-	(* IBUF_TYPE = "ANALOG" *)
-	input wire vin_hi,
-
-	(* LOC = "P7" *)
-	output reg ok_led_en,
-
-	(* LOC = "P8" *)
-	output reg fault_led_en,
-
-	(* LOC = "P9" *)
-	output reg vcco_hi_en,
-
-	(* LOC = "P10" *)
-	output reg vcco_lo_en,
-
-	(* LOC = "P13" *)
 	(* IBUF_TYPE = "ANALOG" *)
 	input wire vcco_tx_div,
 
-	(* LOC = "P15" *)
-	output reg vhi_led_en,
+	(* IBUF_TYPE = "ANALOG" *)
+	input wire vin_lo,
 
-	(* LOC = "P16" *)
-	output reg vlo_led_en
+	(* IBUF_TYPE = "ANALOG" *)
+	input wire vin_hi,
+
+	output reg ok_led_en,
+	output reg fault_led_en,
+	output reg vhi_led_en,
+	output reg vlo_led_en,
+
+	output reg vcco_hi_en,
+	output reg vcco_lo_en,
+
+	output wire unconstrained1
 	);
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -67,6 +81,8 @@ module driver(
 	) por (
 		.RST_DONE(por_done)
 	);
+
+	assign unconstrained1 = por_done ? 1'bz : vcco_hi_en;
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// Check if the input voltage (10x attenuated, before reference) is greater than 5V.

@@ -27,27 +27,31 @@
 #                                                                                                                      #
 ########################################################################################################################
 
-PRBSTesterTop:
+CharacterizationDriver:
 
-    toolchain:      verilog/ise
+    toolchain:      verilog/yosys
     type:           bitstream
 
     # use default configs
 
     # Specify target BSP rather than list of triplets
     boards:
-        - ../../bsp/zybo.yml
+        - ../../boards/iob-characterization/iob-characterization-greenpak.yml
 
     # Signals that we need broken out at the top level (in addition to anything that peripheral IP requires)
     pins:
-        clk:    1
-        led:    4
-        pmod_b: 8
-        pmod_c: 8
+        prot_relay_en:  1
+        vcco_tx_div:    1
+        vin_lo:         1
+        vin_hi:         1
+        vout_relay_en:  1
+        ok_led_en:      1
+        fault_led_en:   1
+        vcco_hi_en:     1
+        vcco_lo_en:     1
+        vhi_led_en:     1
+        vlo_led_en:     1
 
     # All source code for now, no automatic generation
     sources:
-        - PRBSTesterTop.v
-        - ../antikernel-ipcores/device_abstraction/ClockBuffer.v
-        - ../antikernel-ipcores/device_abstraction/DDROutputBuffer.v
-        - ../antikernel-ipcores/clock/pll/ReconfigurablePLL.v
+        - CharacterizationDriver.v
