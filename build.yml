@@ -56,13 +56,36 @@ recursive_config:
             - define/NDEBUG
 
 ########################################################################################################################
-# FPGA
+# GreenPAK FPGA
+
+---
+recursive_config:
+    toolchain:      verilog/yosys
+
+    # No default target architectures (board file specifies this)
+
+    # Default config: use all warnings, pull unused pins to ground w/ 10K resistor
+    flags:
+        - warning/max
+        - output/unused/down
+        - output/pull/10k
+
+    # Generic per-configuration flags
+    configurations:
+        debug:
+            - define/_DEBUG
+        release:
+            - define/NDEBUG
+
+
+########################################################################################################################
+# Xilinx FPGA
 
 ---
 recursive_config:
     toolchain:      verilog/ise
 
-    # No default target architectures (must override for each target)
+    # No default target architectures (board file specifies this)
 
     # Generic flags that apply everywhere
     flags:
