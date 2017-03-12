@@ -1,0 +1,16 @@
+ADCMP573
+Needs 5V supply rail to work
+Put external barrel on, not a SMA, to KISS
+
+Maybe want to use ADCMP572 (CML output stage) instead?
+This would output TMDS, which the FPGA can take... but it needs external 50R pullups to 3V3 on inputs
+Zybo doesn't have these...
+
+RSPECL
+	Voh = 2.32
+	Vol = 1.95V
+	50 ohm terminate to VCCO-2
+
+CML is 3.25, 2.85 so 3.05V Vcm, 375 mV Vdiff
+Compatible with TMDS_33
+
