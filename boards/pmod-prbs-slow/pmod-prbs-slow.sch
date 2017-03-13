@@ -57,23 +57,23 @@ Wire Wire Line
 	1500 4450 1400 4450
 Connection ~ 1500 4350
 Wire Wire Line
-	1400 4750 1600 4750
+	1400 5000 1600 5000
 $Comp
 L BNC P2
 U 1 1 58C5CBED
-P 3750 4900
-F 0 "P2" H 3851 4876 50  0000 L CNN
-F 1 "SMA" H 3851 4785 50  0000 L CNN
-F 2 "azonenberg_pcb:CONN_SMA_EDGE_SAMTEC_SMA_J_P_H_ST_EM1" H 3750 4900 50  0001 C CNN
-F 3 "" H 3750 4900 50  0000 C CNN
-	1    3750 4900
+P 3750 4650
+F 0 "P2" H 3851 4626 50  0000 L CNN
+F 1 "SMA" H 3851 4535 50  0000 L CNN
+F 2 "azonenberg_pcb:CONN_SMA_EDGE_SAMTEC_SMA_J_P_H_ST_EM1" H 3750 4650 50  0001 C CNN
+F 3 "" H 3750 4650 50  0000 C CNN
+	1    3750 4650
 	1    0    0    -1  
 $EndComp
-Text Label 3600 5100 2    60   ~ 0
+Text Label 3600 4850 2    60   ~ 0
 GND
 Wire Wire Line
-	1400 4900 3600 4900
-Text Label 1800 4900 0    60   ~ 0
+	1400 4650 3600 4650
+Text Label 1800 4650 0    60   ~ 0
 PRBS_OUT
 $Comp
 L BNC P1
@@ -86,7 +86,7 @@ F 3 "" H 1050 1050 50  0000 C CNN
 	1    1050 1050
 	-1   0    0    -1  
 $EndComp
-Connection ~ 3750 5100
+Connection ~ 3750 4850
 Text Label 1300 1050 0    60   ~ 0
 PRBS_IN_RAW
 Wire Wire Line
@@ -103,7 +103,7 @@ F 3 "" H 2800 1550 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3600 5100 3750 5100
+	3600 4850 3750 4850
 Text Label 1200 1250 0    60   ~ 0
 GND
 Wire Wire Line
@@ -151,12 +151,12 @@ Text Label 1300 7100 2    60   ~ 0
 I2C_SDA
 Text Label 1300 7200 2    60   ~ 0
 I2C_SCL
-Text Label 1600 4650 0    60   ~ 0
+Text Label 1600 4900 0    60   ~ 0
 I2C_SDA
-Text Label 1600 4750 0    60   ~ 0
+Text Label 1600 5000 0    60   ~ 0
 I2C_SCL
 Wire Wire Line
-	1400 5000 1800 5000
+	1400 4750 1800 4750
 Text Label 5000 2050 0    60   ~ 0
 CMP_VREF
 Wire Wire Line
@@ -210,35 +210,35 @@ Text Label 8350 2350 0    60   ~ 0
 CMP_LE_P
 Text Label 8350 2450 0    60   ~ 0
 CMP_LE_N
-Text Notes 2450 4900 0    60   ~ 0
-LVCMOS33
-Text Notes 2450 4750 0    60   ~ 0
-LVCMOS33
 Text Notes 2450 4650 0    60   ~ 0
 LVCMOS33
-Text Label 1600 5500 0    60   ~ 0
+Text Notes 2450 5000 0    60   ~ 0
+LVCMOS33
+Text Notes 2450 4900 0    60   ~ 0
+LVCMOS33
+Text Label 1600 5200 0    60   ~ 0
 CMP_LE_P
-Text Label 1600 5600 0    60   ~ 0
+Text Label 1600 5300 0    60   ~ 0
 CMP_LE_N
 Wire Wire Line
-	1600 5500 1400 5500
+	1600 5200 1400 5200
 Wire Wire Line
-	1400 5600 1600 5600
-Text Notes 2450 5500 0    60   ~ 0
+	1400 5300 1600 5300
+Text Notes 2450 5200 0    60   ~ 0
 TMDS_33
-Text Notes 2450 5600 0    60   ~ 0
+Text Notes 2450 5300 0    60   ~ 0
 TMDS_33
-Text Label 1600 5200 0    60   ~ 0
+Text Label 1600 5500 0    60   ~ 0
 CMPOUT_LVDS_P
-Text Label 1600 5300 0    60   ~ 0
+Text Label 1600 5600 0    60   ~ 0
 CMPOUT_LVDS_N
 Wire Wire Line
-	1600 5300 1400 5300
+	1600 5600 1400 5600
 Wire Wire Line
-	1400 5200 1600 5200
-Text Notes 2450 5200 0    60   ~ 0
+	1400 5500 1600 5500
+Text Notes 2450 5500 0    60   ~ 0
 LVDS_33 w/ DIFF_TERM
-Text Notes 2450 5300 0    60   ~ 0
+Text Notes 2450 5600 0    60   ~ 0
 LVDS_33 w/ DIFF_TERM
 $Comp
 L R R1
@@ -283,7 +283,7 @@ U 1 1 58C601B6
 P 9900 2200
 F 0 "U4" H 10350 2997 60  0000 C CNN
 F 1 "DS25BR150" H 10350 2891 60  0000 C CNN
-F 2 "azonenberg_pcb:DFN_10_0.5MM_3x3MM" H 9900 2200 60  0001 C CNN
+F 2 "azonenberg_pcb:DFN_8_0.5MM_3x3MM" H 9900 2200 60  0001 C CNN
 F 3 "" H 9900 2200 60  0001 C CNN
 	1    9900 2200
 	1    0    0    -1  
@@ -673,7 +673,7 @@ U 1 1 58C683B9
 P 1200 5650
 F 0 "J1" H 1550 5600 60  0000 R CNN
 F 1 "PMOD_HEADER" H 1550 5500 60  0000 R CNN
-F 2 "azonenberg_pcb:CONN_HEADER_2.54MM_2x6_RA" H 1200 5650 60  0001 C CNN
+F 2 "azonenberg_pcb:CONN_HEADER_2.54MM_2x6_RA_PMOD_MODULE" H 1200 5650 60  0001 C CNN
 F 3 "" H 1200 5650 60  0001 C CNN
 	1    1200 5650
 	-1   0    0    -1  
@@ -681,18 +681,18 @@ $EndComp
 $Comp
 L R R6
 U 1 1 58C68C49
-P 1950 5000
-F 0 "R6" V 1900 5200 50  0000 C CNN
-F 1 "0" V 1950 5000 50  0000 C CNN
-F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 1880 5000 50  0001 C CNN
-F 3 "" H 1950 5000 50  0000 C CNN
-	1    1950 5000
+P 1950 4750
+F 0 "R6" V 1900 4950 50  0000 C CNN
+F 1 "0" V 1950 4750 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 1880 4750 50  0001 C CNN
+F 3 "" H 1950 4750 50  0000 C CNN
+	1    1950 4750
 	0    1    1    0   
 $EndComp
-Text Label 2300 5000 0    60   ~ 0
+Text Label 2300 4750 0    60   ~ 0
 GND
 Wire Wire Line
-	2300 5000 2100 5000
+	2300 4750 2100 4750
 $Comp
 L C C15
 U 1 1 58C699CC
@@ -873,5 +873,5 @@ $EndComp
 Wire Wire Line
 	14550 800  14850 800 
 Wire Wire Line
-	1400 4650 1600 4650
+	1400 4900 1600 4900
 $EndSCHEMATC
