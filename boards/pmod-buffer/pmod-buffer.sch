@@ -1,0 +1,184 @@
+EESchema Schematic File Version 2
+LIBS:analog-azonenberg
+LIBS:passive-azonenberg
+LIBS:power-azonenberg
+LIBS:special-azonenberg
+LIBS:conn
+LIBS:device
+LIBS:pmod-buffer-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L PMOD_DEVICE_DIFF J1
+U 1 1 58E72986
+P 7850 3350
+F 0 "J1" H 8228 4183 60  0000 L CNN
+F 1 "PMOD_DEVICE_DIFF" H 8228 4077 60  0000 L CNN
+F 2 "azonenberg_pcb:CONN_HEADER_2.54MM_2x6_RA_PMOD_MODULE" H 7850 3350 60  0001 C CNN
+F 3 "" H 7850 3350 60  0001 C CNN
+	1    7850 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74AVC1T45 U1
+U 1 1 58E72D59
+P 5450 2200
+F 0 "U1" H 5725 2797 60  0000 C CNN
+F 1 "74AVC1T45" H 5725 2691 60  0000 C CNN
+F 2 "azonenberg_pcb:SOT23_6" H 5450 2200 60  0001 C CNN
+F 3 "" H 5450 2200 60  0001 C CNN
+	1    5450 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L BNC P1
+U 1 1 58E72E95
+P 4850 2150
+F 0 "P1" H 4951 2126 50  0000 L CNN
+F 1 "SMA" H 4951 2035 50  0000 L CNN
+F 2 "azonenberg_pcb:CONN_SMA_EDGE_SAMTEC_SMA_J_P_H_ST_EM1" H 4850 2150 50  0001 C CNN
+F 3 "" H 4850 2150 50  0000 C CNN
+	1    4850 2150
+	-1   0    0    -1  
+$EndComp
+Text Label 5100 1850 2    60   ~ 0
+3V3
+Wire Wire Line
+	5100 1850 5250 1850
+Text Label 6450 1850 0    60   ~ 0
+3V3
+Wire Wire Line
+	6450 1850 6200 1850
+Text Label 6450 1950 0    60   ~ 0
+GND
+Wire Wire Line
+	6450 1950 6200 1950
+Wire Wire Line
+	6400 2150 6200 2150
+$Comp
+L R R1
+U 1 1 58E73113
+P 5150 2300
+F 0 "R1" H 5220 2346 50  0000 L CNN
+F 1 "49.9" H 5220 2255 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 5080 2300 50  0001 C CNN
+F 3 "" H 5150 2300 50  0000 C CNN
+	1    5150 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 2150 5250 2150
+Connection ~ 5150 2150
+Wire Wire Line
+	4850 2350 4850 2450
+Connection ~ 5150 2450
+Text Label 6300 2450 0    60   ~ 0
+GND
+Text Label 6200 2150 0    60   ~ 0
+VOUT
+Text Label 5000 2150 0    60   ~ 0
+VIN
+Wire Wire Line
+	5250 1950 5150 1950
+Wire Wire Line
+	5150 1950 5150 1850
+Connection ~ 5150 1850
+Text Label 7450 1850 2    60   ~ 0
+3V3
+Wire Wire Line
+	7450 1850 7650 1850
+Wire Wire Line
+	7550 1850 7550 1950
+Wire Wire Line
+	7550 1950 7650 1950
+Connection ~ 7550 1850
+Text Label 7450 2050 2    60   ~ 0
+GND
+Wire Wire Line
+	7450 2050 7650 2050
+Wire Wire Line
+	7550 2050 7550 2150
+Wire Wire Line
+	7550 2150 7650 2150
+Connection ~ 7550 2050
+NoConn ~ 7650 2350
+NoConn ~ 7650 2450
+NoConn ~ 7650 2600
+NoConn ~ 7650 2700
+NoConn ~ 7650 2900
+NoConn ~ 7650 3000
+NoConn ~ 7650 3200
+NoConn ~ 7650 3300
+$Comp
+L C C1
+U 1 1 58E73389
+P 5500 2950
+F 0 "C1" H 5615 2996 50  0000 L CNN
+F 1 "4.7 uF" H 5615 2905 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0603_CAP_NOSILK" H 5538 2800 50  0001 C CNN
+F 3 "" H 5500 2950 50  0000 C CNN
+	1    5500 2950
+	1    0    0    -1  
+$EndComp
+Text Label 5300 2800 2    60   ~ 0
+3V3
+Wire Wire Line
+	5300 2800 6550 2800
+Text Label 5300 3100 2    60   ~ 0
+GND
+Wire Wire Line
+	5300 3100 6550 3100
+$Comp
+L C C2
+U 1 1 58E73462
+P 6000 2950
+F 0 "C2" H 6115 2996 50  0000 L CNN
+F 1 "4.7 uF" H 6115 2905 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0603_CAP_NOSILK" H 6038 2800 50  0001 C CNN
+F 3 "" H 6000 2950 50  0000 C CNN
+	1    6000 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C3
+U 1 1 58E73490
+P 6550 2950
+F 0 "C3" H 6665 2996 50  0000 L CNN
+F 1 "0.47 uF" H 6665 2905 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0402_CAP_NOSILK" H 6588 2800 50  0001 C CNN
+F 3 "" H 6550 2950 50  0000 C CNN
+	1    6550 2950
+	1    0    0    -1  
+$EndComp
+Connection ~ 5500 2800
+Connection ~ 6000 2800
+Connection ~ 5500 3100
+Connection ~ 6000 3100
+$Comp
+L BNC P2
+U 1 1 58E72F96
+P 6550 2150
+F 0 "P2" H 6651 2126 50  0000 L CNN
+F 1 "SMA" H 6651 2035 50  0000 L CNN
+F 2 "azonenberg_pcb:CONN_SMA_EDGE_SAMTEC_SMA_J_P_H_ST_EM1" H 6550 2150 50  0001 C CNN
+F 3 "" H 6550 2150 50  0000 C CNN
+	1    6550 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6550 2450 6550 2350
+Wire Wire Line
+	4850 2450 6550 2450
+$EndSCHEMATC
