@@ -1,0 +1,94 @@
+STARSHIPRAIDER host
+
+POWER ESTIMATES (including safety margins)
+	FPGA
+		3.0A @ 1V0 for VCCINT/VCCBRAM
+		1.0A @ 1V8 for VCCAUX
+
+		TODO: VCCIO
+
+	DRAM (x4)
+		0.3A @ 1V8
+
+	Flash
+		0.1A @ 1V8
+
+	Ethernet
+		0.3A @ 1V2 core
+		0.1A @ 1V8 digital IO
+		0.1A @ 3V3 transceiver
+
+	IO board power TBD
+
+	COMBINED
+		3.0A @ 1V0
+		0.3A @ 1V2
+		1.5A @ 1V8
+		0.1A @ 3V3
+		(plus IO board)
+
+	LTC3374 allocation
+		3.0A @ 1V0
+		1.0A @ 1V2
+		3.0A @ 1V8
+		1.0A @ 3V3
+
+	Plus raw 5V to IO board
+
+IO REQUIREMENTS
+	DRAM		12 signals each (leave reset unconnected)
+				= 48x LVCMOS18
+
+	Flash		6x LVCMOS18 (but CCLK is dedicated, 5 from bank 14)
+
+	Ethernet	15x LVCMOS18 (1 clock input)
+
+	IO board
+				8x TMDS_33
+				16x LVCMOS33
+				2x I2C 3V3
+		
+IO BANKS
+	Bank	Volt	Pins
+	14		1V8		50
+						5	Flash
+						15	Ethernet
+						1	System clock
+						4	Debug LEDs
+						25	NC
+
+	15		1V8		50
+						48	DRAM
+						2	NC
+
+	34				20
+						20	NC
+						
+	35		3V3		50
+						16	Inputs from line card
+						8	Outputs to line card
+						8	Output enables to line card
+						2	I2C to line card
+						16	NC
+
+IO BOARD INTERFACE
+	Pins			Description
+	16				8x TMDS_33 inputs (50R pullups to 3V3)
+	8				8x LVCMOS33 outputs (33R series terminators)
+	8				8x LVCMOS33 output enables (33R series terminators)
+	2				3.3V I2C (level shift on io module if needed)
+
+	2				2x 3.3V power
+	4				4x 5V power
+
+MEMORY BANDWIDTH
+	8 signals @ 500 Mbps = 4 Gbps peak required
+	DDR3 800 x16
+		16 bits @ 667 MT/s = 10.6 Gbps, overkill
+		512 MB
+	1.8V HyperRAM x8
+		8 bits @ 333 MT/s = 2.6 Gbps
+	4x 1.8V HyperRAM x8
+		32 bits @ 333 MT/s = 10.6 Gbps
+		32 MB
+		$15.68
