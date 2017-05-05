@@ -17,10 +17,10 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title ""
-Date ""
-Rev ""
-Comp ""
+Title "STARSHIPRAIDER Single-Lane Host"
+Date "2017-05-04"
+Rev "0.1"
+Comp "Andrew D. Zonenberg"
 Comment1 ""
 Comment2 ""
 Comment3 ""
