@@ -58,11 +58,12 @@ IO BANKS
 						25	NC
 
 	15		1V8		50
-						48	DRAM
-						2	NC
+						36	DRAM
+						14	NC
 
-	34				20
-						20	NC
+	34		1V8		20
+						12	DRAM
+						6	NC
 						
 	35		3V3		50
 						16	Inputs from line card
