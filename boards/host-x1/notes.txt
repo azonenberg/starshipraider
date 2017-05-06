@@ -57,20 +57,20 @@ IO BANKS
 						4	Debug LEDs
 						25	NC
 
-	15		1V8		50
-						36	DRAM
-						14	NC
-
-	34		1V8		20
-						12	DRAM
-						6	NC
-						
-	35		3V3		50
+	15		3V3		50
 						16	Inputs from line card
 						8	Outputs to line card
 						8	Output enables to line card
 						2	I2C to line card
 						16	NC
+
+	34		1V8		20
+						12	DRAM
+						6	NC
+						
+	35		1V8		50
+						36	DRAM
+						14	NC
 
 IO BOARD INTERFACE
 	Pins			Description
