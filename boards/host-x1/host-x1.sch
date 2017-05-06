@@ -18,7 +18,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 5
 Title "STARSHIPRAIDER Single-Lane Host"
-Date "2017-05-04"
+Date "2017-05-06"
 Rev "0.1"
 Comp "Andrew D. Zonenberg"
 Comment1 ""
@@ -27,10 +27,16 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Sheet
-S 800  900  1050 1450
+S 800  900  900  600 
 U 590BFAA3
 F0 "Power Supply" 60
 F1 "power_supply.sch" 60
+F2 "GND" O R 1700 1450 60 
+F3 "1V0" O R 1700 1350 60 
+F4 "1V2" O R 1700 1250 60 
+F5 "1V8" O R 1700 1150 60 
+F6 "3V3" O R 1700 1050 60 
+F7 "5V0" O R 1700 950 60 
 $EndSheet
 $Sheet
 S 2600 900  1050 1450

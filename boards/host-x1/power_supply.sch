@@ -18,7 +18,7 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 2 5
 Title "STARSHIPRAIDER Single-Lane Host"
-Date "2017-05-04"
+Date "2017-05-06"
 Rev "0.1"
 Comp "Andrew D. Zonenberg"
 Comment1 "Power Supply"
@@ -146,8 +146,6 @@ F 3 "" H 4500 1900 50  0000 C CNN
 	1    4500 1900
 	1    0    0    -1  
 $EndComp
-Text Label 5100 1100 0    60   ~ 0
-5V0
 Wire Wire Line
 	4850 1100 5950 1100
 Text Label 4350 1750 2    60   ~ 0
@@ -169,8 +167,6 @@ F 3 "" H 5000 750 50  0000 C CNN
 $EndComp
 Wire Wire Line
 	4850 900  5200 900 
-Text Label 4850 600  2    60   ~ 0
-5V0
 Wire Wire Line
 	4850 600  5000 600 
 Wire Wire Line
@@ -743,8 +739,6 @@ F 3 "" H 4700 3750 50  0000 C CNN
 	1    4700 3750
 	0    1    1    0   
 $EndComp
-Text Label 4300 3750 0    60   ~ 0
-1V0
 Wire Wire Line
 	4250 3750 4550 3750
 $Comp
@@ -760,8 +754,6 @@ F 3 "" H 5100 3750 50  0000 C CNN
 $EndComp
 Wire Wire Line
 	4950 3750 4850 3750
-Text Label 5350 3750 0    60   ~ 0
-GND
 Wire Wire Line
 	5350 3750 5250 3750
 Wire Wire Line
@@ -797,8 +789,6 @@ F 3 "" H 4700 5550 50  0000 C CNN
 	1    4700 5550
 	0    1    1    0   
 $EndComp
-Text Label 4300 5550 0    60   ~ 0
-1V2
 Wire Wire Line
 	4250 5550 4550 5550
 $Comp
@@ -851,8 +841,6 @@ F 3 "" H 4700 6150 50  0000 C CNN
 	1    4700 6150
 	0    1    1    0   
 $EndComp
-Text Label 4300 6150 0    60   ~ 0
-1V8
 Wire Wire Line
 	4250 6150 4550 6150
 $Comp
@@ -937,8 +925,6 @@ F 3 "" H 4700 7950 50  0000 C CNN
 	1    4700 7950
 	0    1    1    0   
 $EndComp
-Text Label 4300 7950 0    60   ~ 0
-3V3
 Wire Wire Line
 	4250 7950 4550 7950
 $Comp
@@ -1142,4 +1128,41 @@ Connection ~ 1100 8300
 Wire Wire Line
 	650  8600 650  8700
 Connection ~ 1100 8700
+Text HLabel 5350 3750 2    60   Output ~ 0
+GND
+Text HLabel 4250 3450 0    60   Output ~ 0
+1V0
+Wire Wire Line
+	4250 3450 4300 3450
+Wire Wire Line
+	4300 3450 4300 3750
+Connection ~ 4300 3750
+Text HLabel 4300 5300 0    60   Output ~ 0
+1V2
+Wire Wire Line
+	4300 5300 4350 5300
+Wire Wire Line
+	4350 5300 4350 5550
+Connection ~ 4350 5550
+Text HLabel 4400 5850 0    60   Output ~ 0
+1V8
+Wire Wire Line
+	4400 5850 4400 6150
+Connection ~ 4400 6150
+Text HLabel 4250 7700 0    60   Output ~ 0
+3V3
+Wire Wire Line
+	4250 7700 4300 7700
+Wire Wire Line
+	4300 7700 4300 7950
+Connection ~ 4300 7950
+Text Label 4850 600  2    60   ~ 0
+5V0
+Text HLabel 5200 1200 2    60   Output ~ 0
+5V0
+Wire Wire Line
+	5200 1200 5150 1200
+Wire Wire Line
+	5150 1200 5150 1100
+Connection ~ 5150 1100
 $EndSCHEMATC
