@@ -22,7 +22,7 @@ Title "STARSHIPRAIDER Single-Lane Host"
 Date "2017-05-06"
 Rev "0.1"
 Comp "Andrew D. Zonenberg"
-Comment1 ""
+Comment1 "Top level"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -64,6 +64,7 @@ F1 "fpga_support.sch" 60
 F2 "GND" I L 6000 1150 60 
 F3 "1V8" I L 6000 1050 60 
 F4 "FLASH_SCK" O R 7100 1050 60 
+F5 "3V3" I L 6000 950 60 
 $EndSheet
 Text Label 1850 1150 0    60   ~ 0
 1V8
@@ -148,4 +149,8 @@ Text Label 7700 1550 2    60   ~ 0
 GND
 Wire Wire Line
 	7700 1550 7850 1550
+Text Label 5850 950  2    60   ~ 0
+3V3
+Wire Wire Line
+	5850 950  6000 950 
 $EndSCHEMATC

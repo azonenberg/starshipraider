@@ -22,7 +22,7 @@ Title "STARSHIPRAIDER Single-Lane Host"
 Date "2017-05-06"
 Rev "0.1"
 Comp "Andrew D. Zonenberg"
-Comment1 ""
+Comment1 "FPGA strap pins etc"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -145,7 +145,7 @@ $Comp
 L R R20
 U 1 1 590FB3EA
 P 7400 5600
-F 0 "R20" V 7300 5600 50  0000 C CNN
+F 0 "R20" V 7350 5400 50  0000 C CNN
 F 1 "1k" V 7400 5600 50  0000 C CNN
 F 2 "" V 7330 5600 50  0000 C CNN
 F 3 "" H 7400 5600 50  0000 C CNN
@@ -240,22 +240,18 @@ Wire Wire Line
 Text Label 8150 5500 2    60   ~ 0
 FPGA_INIT
 Wire Wire Line
-	8150 5500 8550 5500
-Text Label 7100 6400 2    60   ~ 0
-FPGA_INIT
+	7550 5500 8550 5500
 $Comp
 L R R21
 U 1 1 590FC191
-P 7400 6400
-F 0 "R21" V 7300 6400 50  0000 C CNN
-F 1 "1k" V 7400 6400 50  0000 C CNN
-F 2 "" V 7330 6400 50  0000 C CNN
-F 3 "" H 7400 6400 50  0000 C CNN
-	1    7400 6400
+P 7400 5500
+F 0 "R21" V 7350 5300 50  0000 C CNN
+F 1 "1k" V 7400 5500 50  0000 C CNN
+F 2 "" V 7330 5500 50  0000 C CNN
+F 3 "" H 7400 5500 50  0000 C CNN
+	1    7400 5500
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	7250 6400 7100 6400
 Text Label 5050 5650 2    60   ~ 0
 FPGA_DONE
 $Comp
@@ -280,7 +276,7 @@ L R R19
 U 1 1 590FC53F
 P 5650 4700
 F 0 "R19" H 5720 4746 50  0000 L CNN
-F 1 "470" H 5720 4655 50  0000 L CNN
+F 1 "270" H 5720 4655 50  0000 L CNN
 F 2 "" V 5580 4700 50  0000 C CNN
 F 3 "" H 5650 4700 50  0000 C CNN
 	1    5650 4700
@@ -301,8 +297,6 @@ Wire Wire Line
 	5650 5300 5650 5450
 Wire Wire Line
 	5650 4850 5650 5000
-Text Label 5350 4550 2    60   ~ 0
-3V3
 Wire Wire Line
 	5350 4550 5650 4550
 $Comp
@@ -323,4 +317,36 @@ Text Label 5050 5350 2    60   ~ 0
 1V8
 Wire Wire Line
 	5050 5350 5200 5350
+Text Label 8150 4250 2    60   ~ 0
+GND
+Wire Wire Line
+	8150 4250 8550 4250
+Text Label 8150 4150 2    60   ~ 0
+GND
+Wire Wire Line
+	8150 4150 8550 4150
+Text Notes 7800 4150 2    60   ~ 0
+VREF_P gnd selects internal ref
+Text Label 8150 3900 2    60   ~ 0
+GND
+Wire Wire Line
+	8150 3900 8550 3900
+Text Label 8150 4000 2    60   ~ 0
+GND
+Wire Wire Line
+	8150 4000 8550 4000
+Text Label 8150 4400 2    60   ~ 0
+GND
+Text Label 8150 4500 2    60   ~ 0
+GND
+Wire Wire Line
+	8150 4500 8550 4500
+Wire Wire Line
+	8550 4400 8150 4400
+Wire Wire Line
+	7250 5500 7100 5500
+Wire Wire Line
+	7100 5500 7100 5600
+Text HLabel 5350 4550 0    60   Input ~ 0
+3V3
 $EndSCHEMATC
