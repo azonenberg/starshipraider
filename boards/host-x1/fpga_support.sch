@@ -19,7 +19,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 5 6
 Title "STARSHIPRAIDER Single-Lane Host"
-Date "2017-05-06"
+Date "2017-05-07"
 Rev "0.1"
 Comp "Andrew D. Zonenberg"
 Comment1 "FPGA strap pins etc"
@@ -236,7 +236,7 @@ $EndComp
 Text Label 8150 5400 2    60   ~ 0
 FPGA_DONE
 Wire Wire Line
-	8150 5400 8550 5400
+	7550 5400 8550 5400
 Text Label 8150 5500 2    60   ~ 0
 FPGA_INIT
 Wire Wire Line
@@ -302,21 +302,16 @@ Wire Wire Line
 $Comp
 L R R27
 U 1 1 590FC93D
-P 5200 5500
-F 0 "R27" V 5100 5500 50  0000 C CNN
-F 1 "1k" V 5200 5500 50  0000 C CNN
-F 2 "" V 5130 5500 50  0000 C CNN
-F 3 "" H 5200 5500 50  0000 C CNN
-	1    5200 5500
-	-1   0    0    1   
+P 7400 5400
+F 0 "R27" V 7300 5400 50  0000 C CNN
+F 1 "1k" V 7400 5400 50  0000 C CNN
+F 2 "" V 7330 5400 50  0000 C CNN
+F 3 "" H 7400 5400 50  0000 C CNN
+	1    7400 5400
+	0    1    1    0   
 $EndComp
 Wire Wire Line
 	5050 5650 5350 5650
-Connection ~ 5200 5650
-Text Label 5050 5350 2    60   ~ 0
-1V8
-Wire Wire Line
-	5050 5350 5200 5350
 Text Label 8150 4250 2    60   ~ 0
 GND
 Wire Wire Line
@@ -346,7 +341,10 @@ Wire Wire Line
 Wire Wire Line
 	7250 5500 7100 5500
 Wire Wire Line
-	7100 5500 7100 5600
+	7100 5400 7100 5600
 Text HLabel 5350 4550 0    60   Input ~ 0
 3V3
+Wire Wire Line
+	7100 5400 7250 5400
+Connection ~ 7100 5500
 $EndSCHEMATC
