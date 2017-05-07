@@ -1,4 +1,4 @@
-update=Thu 04 May 2017 06:14:53 PM PDT
+update=Sat 06 May 2017 07:05:21 PM PDT
 version=1
 last_client=kicad
 [pcbnew]
@@ -41,3 +41,4 @@ LibName9=passive-azonenberg
 LibName10=power-azonenberg
 LibName11=special-azonenberg
 LibName12=xilinx-azonenberg
+LibName13=switches
