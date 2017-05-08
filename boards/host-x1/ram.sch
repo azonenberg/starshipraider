@@ -528,23 +528,23 @@ Text Label 9800 5950 2    60   ~ 0
 RAM2_DQ6
 Text Label 9800 6050 2    60   ~ 0
 RAM2_DQ7
-Text Label 12900 2500 2    60   ~ 0
-RAM3_DQS
-Text Label 12900 2700 2    60   ~ 0
-RAM3_DQ0
 Text Label 12900 2800 2    60   ~ 0
+RAM3_DQS
+Text Label 12900 3600 2    60   ~ 0
+RAM3_DQ0
+Text Label 12900 3800 2    60   ~ 0
 RAM3_DQ1
-Text Label 12900 2900 2    60   ~ 0
+Text Label 12900 2600 2    60   ~ 0
 RAM3_DQ2
-Text Label 12900 3000 2    60   ~ 0
+Text Label 12900 2900 2    60   ~ 0
 RAM3_DQ3
-Text Label 12900 3100 2    60   ~ 0
+Text Label 12900 2500 2    60   ~ 0
 RAM3_DQ4
-Text Label 12900 3200 2    60   ~ 0
+Text Label 12900 3000 2    60   ~ 0
 RAM3_DQ5
-Text Label 12900 3300 2    60   ~ 0
+Text Label 12900 3500 2    60   ~ 0
 RAM3_DQ6
-Text Label 12900 3400 2    60   ~ 0
+Text Label 12900 3700 2    60   ~ 0
 RAM3_DQ7
 Text Label 9800 2250 2    60   ~ 0
 RAM0_CS_N
@@ -566,17 +566,17 @@ Text Label 9800 5250 2    60   ~ 0
 RAM2_CS_N
 Text Label 9800 4850 2    60   ~ 0
 RAM2_RST_N
-Text Label 9800 4950 2    60   ~ 0
+Text Label 9800 6750 2    60   ~ 0
 RAM2_CLK_P
-Text Label 9800 5050 2    60   ~ 0
+Text Label 9800 6850 2    60   ~ 0
 RAM2_CLK_N
-Text Label 12900 2600 2    60   ~ 0
+Text Label 12900 2700 2    60   ~ 0
 RAM3_CS_N
-Text Label 12900 2200 2    60   ~ 0
+Text Label 12900 3200 2    60   ~ 0
 RAM3_RST_N
-Text Label 12900 2300 2    60   ~ 0
+Text Label 12900 3900 2    60   ~ 0
 RAM3_CLK_P
-Text Label 12900 2400 2    60   ~ 0
+Text Label 12900 4000 2    60   ~ 0
 RAM3_CLK_N
 Wire Wire Line
 	1350 1200 1950 1200
@@ -813,46 +813,36 @@ Wire Wire Line
 Wire Wire Line
 	1850 7450 1950 7450
 Wire Wire Line
-	12900 3400 13050 3400
+	12900 3700 13050 3700
 Wire Wire Line
-	13050 3300 12900 3300
-Wire Wire Line
-	12900 3200 13050 3200
-Wire Wire Line
-	13050 3100 12900 3100
+	13050 3500 12900 3500
 Wire Wire Line
 	12900 3000 13050 3000
 Wire Wire Line
-	13050 2900 12900 2900
+	13050 2500 12900 2500
+Wire Wire Line
+	12900 2900 13050 2900
+Wire Wire Line
+	13050 2600 12900 2600
+Wire Wire Line
+	12900 3800 13050 3800
+Wire Wire Line
+	13050 3600 12900 3600
+Wire Wire Line
+	12900 2700 13050 2700
 Wire Wire Line
 	12900 2800 13050 2800
 Wire Wire Line
-	13050 2700 12900 2700
+	12900 4000 13050 4000
 Wire Wire Line
-	12900 2600 13050 2600
+	12900 3200 13050 3200
 Wire Wire Line
-	12900 2500 13050 2500
-Wire Wire Line
-	12900 2400 13050 2400
-Wire Wire Line
-	12900 2200 13050 2200
-Wire Wire Line
-	13050 2300 12900 2300
-NoConn ~ 13050 3500
-NoConn ~ 13050 3600
-NoConn ~ 13050 3700
-NoConn ~ 13050 3800
-NoConn ~ 13050 3900
-NoConn ~ 13050 4000
+	13050 3900 12900 3900
 NoConn ~ 13050 4100
 NoConn ~ 9950 6150
 NoConn ~ 9950 6250
 NoConn ~ 9950 6350
 NoConn ~ 9950 6450
-NoConn ~ 9950 6550
-NoConn ~ 9950 6650
-NoConn ~ 9950 6750
-NoConn ~ 9950 6850
 NoConn ~ 9950 6950
 NoConn ~ 9950 7050
 NoConn ~ 9950 7150
@@ -929,9 +919,9 @@ Wire Wire Line
 Wire Wire Line
 	9950 4850 9800 4850
 Wire Wire Line
-	9800 4950 9950 4950
+	9800 6750 9950 6750
 Wire Wire Line
-	9950 5050 9800 5050
+	9950 6850 9800 6850
 Wire Wire Line
 	9800 5150 9950 5150
 Text Notes 10150 7300 0    60   ~ 0
@@ -1002,4 +992,14 @@ Wire Wire Line
 	2050 10700 1800 10700
 Text Notes 1600 10950 0    60   ~ 0
 Test points for SI verification\n(use ILA for logic debug)
+NoConn ~ 13050 2300
+NoConn ~ 13050 2400
+NoConn ~ 13050 3400
+NoConn ~ 13050 3300
+NoConn ~ 13050 3100
+NoConn ~ 13050 2200
+NoConn ~ 9950 4950
+NoConn ~ 9950 5050
+NoConn ~ 9950 6650
+NoConn ~ 9950 6550
 $EndSCHEMATC
