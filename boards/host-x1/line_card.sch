@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:host-x1-rescue
 LIBS:conn
 LIBS:device
 LIBS:analog-azonenberg
@@ -44,6 +45,8 @@ $Comp
 L STARSHIPRAIDER_IOBOARD_HOST J3
 U 1 1 590F824D
 P 1900 4050
+AR Path="/590F824D" Ref="J3"  Part="1" 
+AR Path="/590BFAC9/590F824D" Ref="J3"  Part="1" 
 F 0 "J3" H 2450 7487 60  0000 C CNN
 F 1 "STARSHIPRAIDER_IOBOARD_HOST" H 2450 7381 60  0000 C CNN
 F 2 "azonenberg_pcb:CONN_SAMTEC_QTH-030-01-L-D-A" H 2550 4250 60  0001 C CNN

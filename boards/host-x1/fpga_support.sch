@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:host-x1-rescue
 LIBS:conn
 LIBS:device
 LIBS:analog-azonenberg
