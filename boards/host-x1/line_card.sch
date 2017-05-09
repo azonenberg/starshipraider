@@ -20,7 +20,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 4 6
 Title "STARSHIPRAIDER Single-Lane Host"
-Date "2017-05-08"
+Date "2017-05-09"
 Rev "0.1"
 Comp "Andrew D. Zonenberg"
 Comment1 "Interface to I/O module"

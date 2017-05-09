@@ -20,7 +20,7 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 3 6
 Title "STARSHIPRAIDER Single-Lane Host"
-Date "2017-05-07"
+Date "2017-05-09"
 Rev "0.1"
 Comp "Andrew D. Zonenberg"
 Comment1 "32-bit HyperRAM"
@@ -463,23 +463,23 @@ Text Label 1850 7050 2    60   ~ 0
 1V8
 Text Label 1850 7450 2    60   ~ 0
 GND
-Text Label 9800 2550 2    60   ~ 0
+Text Label 9800 2450 2    60   ~ 0
 RAM0_DQS
-Text Label 9800 2750 2    60   ~ 0
+Text Label 9800 2650 2    60   ~ 0
 RAM0_DQ0
-Text Label 9800 2850 2    60   ~ 0
-RAM0_DQ1
 Text Label 9800 2950 2    60   ~ 0
+RAM0_DQ1
+Text Label 9800 2350 2    60   ~ 0
 RAM0_DQ2
-Text Label 9800 3050 2    60   ~ 0
+Text Label 9800 2550 2    60   ~ 0
 RAM0_DQ3
 Text Label 9800 3150 2    60   ~ 0
 RAM0_DQ4
-Text Label 9800 3250 2    60   ~ 0
+Text Label 9800 2750 2    60   ~ 0
 RAM0_DQ5
-Text Label 9800 3350 2    60   ~ 0
+Text Label 9800 2850 2    60   ~ 0
 RAM0_DQ6
-Text Label 9800 3450 2    60   ~ 0
+Text Label 9800 3050 2    60   ~ 0
 RAM0_DQ7
 Text Label 9800 3550 2    60   ~ 0
 RAM1_DQS
@@ -535,13 +535,13 @@ Text Label 12900 3500 2    60   ~ 0
 RAM3_DQ6
 Text Label 12900 3700 2    60   ~ 0
 RAM3_DQ7
-Text Label 9800 2250 2    60   ~ 0
+Text Label 9800 3250 2    60   ~ 0
 RAM0_CS_N
-Text Label 9800 2650 2    60   ~ 0
+Text Label 9800 4850 2    60   ~ 0
 RAM0_RST_N
-Text Label 9800 2350 2    60   ~ 0
+Text Label 9800 3350 2    60   ~ 0
 RAM0_CLK_P
-Text Label 9800 2450 2    60   ~ 0
+Text Label 9800 3450 2    60   ~ 0
 RAM0_CLK_N
 Text Label 9800 3850 2    60   ~ 0
 RAM1_CS_N
@@ -849,11 +849,11 @@ Wire Wire Line
 Wire Wire Line
 	9800 5650 9950 5650
 Wire Wire Line
-	9800 2250 9950 2250
+	9800 3250 9950 3250
 Wire Wire Line
-	9800 2350 9950 2350
+	9800 3350 9950 3350
 Wire Wire Line
-	9950 2450 9800 2450
+	9950 3450 9800 3450
 Wire Wire Line
 	9800 2550 9950 2550
 Wire Wire Line
@@ -869,11 +869,11 @@ Wire Wire Line
 Wire Wire Line
 	9800 3150 9950 3150
 Wire Wire Line
-	9950 3250 9800 3250
+	9950 4850 9800 4850
 Wire Wire Line
-	9800 3350 9950 3350
+	9800 2350 9950 2350
 Wire Wire Line
-	9950 3450 9800 3450
+	9950 2450 9800 2450
 Wire Wire Line
 	9800 3550 9950 3550
 Wire Wire Line
@@ -986,7 +986,6 @@ NoConn ~ 9950 5450
 NoConn ~ 9950 5950
 NoConn ~ 9950 5350
 NoConn ~ 9950 5750
-NoConn ~ 9950 4850
 $Comp
 L XC7AxT-xFTG256x U2
 U 6 1 590BFFBD
@@ -1002,4 +1001,7 @@ NoConn ~ 9950 4750
 NoConn ~ 9950 4650
 NoConn ~ 9950 4350
 NoConn ~ 9950 4450
+Text Notes 6200 8200 0    60   ~ 0
+TODO: Termination resistors for differential clock?
+NoConn ~ 9950 2250
 $EndSCHEMATC
