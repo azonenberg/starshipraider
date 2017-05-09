@@ -30,17 +30,6 @@ Comment4 ""
 $EndDescr
 $Comp
 L XC7AxT-xFTG256x U2
-U 6 1 590BFFBD
-P 10150 7150
-F 0 "U2" H 11528 9658 60  0000 L CNN
-F 1 "XC7A100T-1FTG256C" H 11528 9552 60  0000 L CNN
-F 2 "azonenberg_pcb:BGA_256_17x17_FULLARRAY_1MM" H 10150 7150 60  0001 C CNN
-F 3 "" H 10150 7150 60  0000 C CNN
-	6    10150 7150
-	1    0    0    -1  
-$EndComp
-$Comp
-L XC7AxT-xFTG256x U2
 U 5 1 590C013F
 P 13250 7100
 F 0 "U2" H 14628 9608 60  0000 L CNN
@@ -492,41 +481,41 @@ Text Label 9800 3350 2    60   ~ 0
 RAM0_DQ6
 Text Label 9800 3450 2    60   ~ 0
 RAM0_DQ7
-Text Label 9800 3950 2    60   ~ 0
+Text Label 9800 3550 2    60   ~ 0
 RAM1_DQS
-Text Label 9800 4050 2    60   ~ 0
-RAM1_DQ0
-Text Label 9800 4150 2    60   ~ 0
-RAM1_DQ1
 Text Label 9800 4250 2    60   ~ 0
-RAM1_DQ2
-Text Label 9800 4350 2    60   ~ 0
-RAM1_DQ3
-Text Label 9800 4450 2    60   ~ 0
-RAM1_DQ4
+RAM1_DQ0
+Text Label 9800 5250 2    60   ~ 0
+RAM1_DQ1
 Text Label 9800 4550 2    60   ~ 0
+RAM1_DQ2
+Text Label 9800 3650 2    60   ~ 0
+RAM1_DQ3
+Text Label 9800 4050 2    60   ~ 0
+RAM1_DQ4
+Text Label 9800 3950 2    60   ~ 0
 RAM1_DQ5
-Text Label 9800 4650 2    60   ~ 0
+Text Label 9800 4150 2    60   ~ 0
 RAM1_DQ6
-Text Label 9800 4750 2    60   ~ 0
-RAM1_DQ7
 Text Label 9800 5150 2    60   ~ 0
+RAM1_DQ7
+Text Label 9800 6350 2    60   ~ 0
 RAM2_DQS
-Text Label 9800 5350 2    60   ~ 0
+Text Label 9800 6150 2    60   ~ 0
 RAM2_DQ0
-Text Label 9800 5450 2    60   ~ 0
+Text Label 9800 6550 2    60   ~ 0
 RAM2_DQ1
-Text Label 9800 5550 2    60   ~ 0
+Text Label 9800 6450 2    60   ~ 0
 RAM2_DQ2
-Text Label 9800 5650 2    60   ~ 0
-RAM2_DQ3
-Text Label 9800 5750 2    60   ~ 0
-RAM2_DQ4
-Text Label 9800 5850 2    60   ~ 0
-RAM2_DQ5
-Text Label 9800 5950 2    60   ~ 0
-RAM2_DQ6
 Text Label 9800 6050 2    60   ~ 0
+RAM2_DQ3
+Text Label 9800 5850 2    60   ~ 0
+RAM2_DQ4
+Text Label 9800 6250 2    60   ~ 0
+RAM2_DQ5
+Text Label 9800 6650 2    60   ~ 0
+RAM2_DQ6
+Text Label 9800 7050 2    60   ~ 0
 RAM2_DQ7
 Text Label 12900 2800 2    60   ~ 0
 RAM3_DQS
@@ -554,17 +543,17 @@ Text Label 9800 2350 2    60   ~ 0
 RAM0_CLK_P
 Text Label 9800 2450 2    60   ~ 0
 RAM0_CLK_N
-Text Label 9800 3550 2    60   ~ 0
-RAM1_CS_N
-Text Label 9800 3650 2    60   ~ 0
-RAM1_RST_N
-Text Label 9800 3750 2    60   ~ 0
-RAM1_CLK_P
 Text Label 9800 3850 2    60   ~ 0
+RAM1_CS_N
+Text Label 9800 3750 2    60   ~ 0
+RAM1_RST_N
+Text Label 9800 4950 2    60   ~ 0
+RAM1_CLK_P
+Text Label 9800 5050 2    60   ~ 0
 RAM1_CLK_N
-Text Label 9800 5250 2    60   ~ 0
+Text Label 9800 5650 2    60   ~ 0
 RAM2_CS_N
-Text Label 9800 4850 2    60   ~ 0
+Text Label 9800 5550 2    60   ~ 0
 RAM2_RST_N
 Text Label 9800 6750 2    60   ~ 0
 RAM2_CLK_P
@@ -839,31 +828,26 @@ Wire Wire Line
 Wire Wire Line
 	13050 3900 12900 3900
 NoConn ~ 13050 4100
-NoConn ~ 9950 6150
-NoConn ~ 9950 6250
-NoConn ~ 9950 6350
-NoConn ~ 9950 6450
 NoConn ~ 9950 6950
-NoConn ~ 9950 7050
 NoConn ~ 9950 7150
 Wire Wire Line
-	9800 5950 9950 5950
+	9800 6650 9950 6650
 Wire Wire Line
-	9950 6050 9800 6050
+	9950 7050 9800 7050
 Wire Wire Line
-	9800 5850 9950 5850
+	9800 6250 9950 6250
 Wire Wire Line
-	9950 5750 9800 5750
+	9950 6450 9800 6450
+Wire Wire Line
+	9800 6050 9950 6050
+Wire Wire Line
+	9950 5850 9800 5850
+Wire Wire Line
+	9800 6550 9950 6550
+Wire Wire Line
+	9950 6150 9800 6150
 Wire Wire Line
 	9800 5650 9950 5650
-Wire Wire Line
-	9950 5550 9800 5550
-Wire Wire Line
-	9800 5450 9950 5450
-Wire Wire Line
-	9950 5350 9800 5350
-Wire Wire Line
-	9800 5250 9950 5250
 Wire Wire Line
 	9800 2250 9950 2250
 Wire Wire Line
@@ -881,7 +865,7 @@ Wire Wire Line
 Wire Wire Line
 	9800 2950 9950 2950
 Wire Wire Line
-	9950 3050 9800 3050
+	9950 3850 9800 3850
 Wire Wire Line
 	9800 3150 9950 3150
 Wire Wire Line
@@ -895,35 +879,35 @@ Wire Wire Line
 Wire Wire Line
 	9950 3650 9800 3650
 Wire Wire Line
-	9800 3750 9950 3750
+	9800 4950 9950 4950
 Wire Wire Line
-	9950 3850 9800 3850
+	9950 5050 9800 5050
 Wire Wire Line
 	9800 3950 9950 3950
 Wire Wire Line
-	9950 4050 9800 4050
-Wire Wire Line
-	9800 4150 9950 4150
-Wire Wire Line
 	9950 4250 9800 4250
 Wire Wire Line
-	9800 4350 9950 4350
+	9800 5250 9950 5250
 Wire Wire Line
-	9950 4450 9800 4450
+	9950 4050 9800 4050
+Wire Wire Line
+	9800 3750 9950 3750
+Wire Wire Line
+	9950 3050 9800 3050
 Wire Wire Line
 	9800 4550 9950 4550
 Wire Wire Line
-	9950 4650 9800 4650
+	9950 4150 9800 4150
 Wire Wire Line
-	9800 4750 9950 4750
+	9800 5150 9950 5150
 Wire Wire Line
-	9950 4850 9800 4850
+	9950 5550 9800 5550
 Wire Wire Line
 	9800 6750 9950 6750
 Wire Wire Line
 	9950 6850 9800 6850
 Wire Wire Line
-	9800 5150 9950 5150
+	9800 6350 9950 6350
 Text Notes 10150 7300 0    60   ~ 0
 VCCO = 1V8
 Text Notes 13250 7250 0    60   ~ 0
@@ -998,8 +982,24 @@ NoConn ~ 13050 3400
 NoConn ~ 13050 3300
 NoConn ~ 13050 3100
 NoConn ~ 13050 2200
-NoConn ~ 9950 4950
-NoConn ~ 9950 5050
-NoConn ~ 9950 6650
-NoConn ~ 9950 6550
+NoConn ~ 9950 5450
+NoConn ~ 9950 5950
+NoConn ~ 9950 5350
+NoConn ~ 9950 5750
+NoConn ~ 9950 4850
+$Comp
+L XC7AxT-xFTG256x U2
+U 6 1 590BFFBD
+P 10150 7150
+F 0 "U2" H 11528 9658 60  0000 L CNN
+F 1 "XC7A100T-1FTG256C" H 11528 9552 60  0000 L CNN
+F 2 "azonenberg_pcb:BGA_256_17x17_FULLARRAY_1MM" H 10150 7150 60  0001 C CNN
+F 3 "" H 10150 7150 60  0000 C CNN
+	6    10150 7150
+	1    0    0    -1  
+$EndComp
+NoConn ~ 9950 4750
+NoConn ~ 9950 4650
+NoConn ~ 9950 4350
+NoConn ~ 9950 4450
 $EndSCHEMATC
