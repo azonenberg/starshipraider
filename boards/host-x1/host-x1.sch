@@ -29,7 +29,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Sheet
-S 800  900  900  600 
+S 800  900  900  800 
 U 590BFAA3
 F0 "Power Supply" 60
 F1 "power_supply.sch" 60
@@ -39,6 +39,7 @@ F4 "1V2" O R 1700 1250 60
 F5 "1V8" O R 1700 1150 60 
 F6 "3V3" O R 1700 1050 60 
 F7 "5V0" O R 1700 950 60 
+F8 "12V0_FUSED" O R 1700 1650 60 
 $EndSheet
 $Sheet
 S 2600 900  1050 1450
@@ -56,6 +57,7 @@ F1 "line_card.sch" 60
 F2 "5V0" I L 4400 950 60 
 F3 "3V3" I L 4400 1050 60 
 F4 "GND" I L 4400 1150 60 
+F5 "12V0_FUSED" I L 4400 1350 60 
 $EndSheet
 $Sheet
 S 6000 900  1100 1450
@@ -154,4 +156,12 @@ Text Label 5850 950  2    60   ~ 0
 3V3
 Wire Wire Line
 	5850 950  6000 950 
+Text Label 1850 1650 0    60   ~ 0
+12V0_FUSED
+Wire Wire Line
+	1850 1650 1700 1650
+Text Label 4250 1350 2    60   ~ 0
+12V0_FUSED
+Wire Wire Line
+	4250 1350 4400 1350
 $EndSCHEMATC

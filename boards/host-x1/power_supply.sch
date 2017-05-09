@@ -32,8 +32,6 @@ Text Label 1650 1000 0    60   ~ 0
 12V0_UNFUSED
 Text Label 1650 1200 0    60   ~ 0
 GND
-Text Label 2950 1000 0    60   ~ 0
-12V0_FUSED
 $Comp
 L XC7AxT-xFTG256x U?
 U 2 1 590C07C9
@@ -1984,4 +1982,9 @@ Text Label 11700 4250 0    60   ~ 0
 5V0
 Wire Wire Line
 	11700 4250 11550 4250
+Text HLabel 3100 600  0    60   Output ~ 0
+12V0_FUSED
+Wire Wire Line
+	3100 600  3100 1000
+Connection ~ 3100 1000
 $EndSCHEMATC

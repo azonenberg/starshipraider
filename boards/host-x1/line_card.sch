@@ -20,7 +20,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 4 6
 Title "STARSHIPRAIDER Single-Lane Host"
-Date "2017-05-07"
+Date "2017-05-08"
 Rev "0.1"
 Comp "Andrew D. Zonenberg"
 Comment1 "Interface to I/O module"
@@ -103,11 +103,9 @@ GND
 Text Label 3350 3700 0    60   ~ 0
 3V3
 Text Label 3350 3800 0    60   ~ 0
-5V0
+12V0_FUSED
 Text Label 1500 3700 2    60   ~ 0
 3V3
-Text Label 1500 3800 2    60   ~ 0
-5V0
 Text Label 1500 1100 2    60   ~ 0
 I2C_SDA
 Text Label 3350 1100 0    60   ~ 0
@@ -638,4 +636,6 @@ Wire Wire Line
 	1450 6250 1450 6350
 Text Notes 1500 6350 0    60   ~ 0
 D0_N is grounded on module, ground D0_P to reduce noise\n(This is PRBS_OUT but we don't need it)
+Text HLabel 1500 3800 0    60   Input ~ 0
+12V0_FUSED
 $EndSCHEMATC
