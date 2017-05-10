@@ -29,20 +29,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L XC7AxT-xFTG256x U?
-U 3 1 590E87C3
-P 14200 5750
-AR Path="/590BFAB4/590E87C3" Ref="U?"  Part="6" 
-AR Path="/590BFAE6/590E87C3" Ref="U?"  Part="3" 
-AR Path="/590E8635/590E87C3" Ref="U2"  Part="3" 
-F 0 "U2" H 14950 5650 60  0000 L CNN
-F 1 "XC7A100T-1FTG256C" H 14950 5550 60  0000 L CNN
-F 2 "azonenberg_pcb:BGA_256_17x17_FULLARRAY_1MM" H 14200 5750 60  0001 C CNN
-F 3 "" H 14200 5750 60  0000 C CNN
-	3    14200 5750
-	1    0    0    -1  
-$EndComp
-$Comp
 L R R29
 U 1 1 590FCC5A
 P 13650 1350
@@ -697,13 +683,13 @@ F 3 "" H 5350 9750 50  0000 C CNN
 	1    5350 9750
 	0    -1   -1   0   
 $EndComp
-Text Label 13800 5750 2    60   ~ 0
+Text Label 13800 4950 2    60   ~ 0
 LED0
-Text Label 13800 5650 2    60   ~ 0
-LED1
 Text Label 13800 5550 2    60   ~ 0
-LED2
+LED1
 Text Label 13800 5450 2    60   ~ 0
+LED2
+Text Label 13800 5350 2    60   ~ 0
 LED3
 Text Label 13800 3550 2    60   ~ 0
 RGMII_TXD3
@@ -754,11 +740,11 @@ F 3 "" H 7750 3050 50  0000 C CNN
 	1    7750 3050
 	0    1    1    0   
 $EndComp
-Text Label 13800 4350 2    60   ~ 0
+Text Label 13800 2250 2    60   ~ 0
 ETH_INT_N
 Text Label 8100 3250 0    60   ~ 0
 ETH_RST_N
-Text Label 13800 4450 2    60   ~ 0
+Text Label 13800 2350 2    60   ~ 0
 ETH_RST_N
 NoConn ~ 14000 3450
 Text Label 13800 3350 2    60   ~ 0
@@ -964,16 +950,11 @@ NoConn ~ 14000 1650
 NoConn ~ 14000 1750
 NoConn ~ 14000 1850
 NoConn ~ 14000 2050
-NoConn ~ 14000 2350
-NoConn ~ 14000 2450
-NoConn ~ 14000 2550
 NoConn ~ 14000 4750
 NoConn ~ 14000 4850
-NoConn ~ 14000 4950
 NoConn ~ 14000 5050
 NoConn ~ 14000 5150
 NoConn ~ 14000 5250
-NoConn ~ 14000 5350
 Wire Wire Line
 	13800 1350 14000 1350
 Wire Wire Line
@@ -1179,11 +1160,11 @@ Connection ~ 1600 10300
 Connection ~ 2850 10300
 Connection ~ 4100 10300
 Wire Wire Line
-	13800 5750 14000 5750
+	13800 4950 14000 4950
 Wire Wire Line
-	14000 5650 13800 5650
+	14000 5550 13800 5550
 Wire Wire Line
-	13800 5550 14000 5550
+	13800 5350 14000 5350
 Wire Wire Line
 	13800 5450 14000 5450
 Wire Wire Line
@@ -1213,11 +1194,11 @@ Wire Wire Line
 Wire Wire Line
 	8100 3050 7900 3050
 Wire Wire Line
-	13800 4350 14000 4350
+	13800 2250 14000 2250
 Wire Wire Line
 	8100 3250 7300 3250
 Wire Wire Line
-	13800 4450 14000 4450
+	13800 2350 14000 2350
 Wire Wire Line
 	13800 3350 14000 3350
 Wire Wire Line
@@ -1333,7 +1314,6 @@ Text Label 8100 3150 0    60   ~ 0
 1V8
 Wire Wire Line
 	8100 3150 7900 3150
-NoConn ~ 14000 2250
 NoConn ~ 14000 2150
 $Comp
 L R R48
@@ -1439,14 +1419,14 @@ Wire Wire Line
 	8850 10100 9000 10100
 Connection ~ 5350 10300
 Connection ~ 7250 10300
-Text Label 13800 4550 2    60   ~ 0
+Text Label 13800 2450 2    60   ~ 0
 ETH_ACTIVITY_LED
-Text Label 13800 4650 2    60   ~ 0
+Text Label 13800 2550 2    60   ~ 0
 ETH_LINK_LED
 Wire Wire Line
-	13800 4550 14000 4550
+	13800 2450 14000 2450
 Wire Wire Line
-	14000 4650 13800 4650
+	14000 2550 13800 2550
 $Comp
 L S25FS064S_BGA U11
 U 1 1 59126480
@@ -1700,4 +1680,24 @@ Wire Wire Line
 	8950 10850 9300 10850
 Text Notes 8950 10950 0    60   ~ 0
 Tie off unused transistor
+NoConn ~ 14000 5650
+NoConn ~ 14000 5750
+NoConn ~ 14000 4650
+NoConn ~ 14000 4550
+$Comp
+L XC7AxT-xFTG256x U?
+U 3 1 590E87C3
+P 14200 5750
+AR Path="/590BFAB4/590E87C3" Ref="U?"  Part="6" 
+AR Path="/590BFAE6/590E87C3" Ref="U?"  Part="3" 
+AR Path="/590E8635/590E87C3" Ref="U2"  Part="3" 
+F 0 "U2" H 14950 5650 60  0000 L CNN
+F 1 "XC7A100T-1FTG256C" H 14950 5550 60  0000 L CNN
+F 2 "azonenberg_pcb:BGA_256_17x17_FULLARRAY_1MM" H 14200 5750 60  0001 C CNN
+F 3 "" H 14200 5750 60  0000 C CNN
+	3    14200 5750
+	1    0    0    -1  
+$EndComp
+NoConn ~ 14000 4450
+NoConn ~ 14000 4350
 $EndSCHEMATC

@@ -188,59 +188,59 @@ Text Label 6600 3500 2    60   ~ 0
 RXD2_P
 Text Label 6600 3600 2    60   ~ 0
 RXD2_N
-Text Label 6600 3700 2    60   ~ 0
+Text Label 6600 3000 2    60   ~ 0
 RXD3_P
-Text Label 6600 3800 2    60   ~ 0
+Text Label 6600 2900 2    60   ~ 0
 RXD3_N
-Text Label 6600 3900 2    60   ~ 0
+Text Label 6600 2600 2    60   ~ 0
 RXD4_P
-Text Label 6600 4000 2    60   ~ 0
+Text Label 6600 2500 2    60   ~ 0
 RXD4_N
-Text Label 6600 4100 2    60   ~ 0
+Text Label 6600 2100 2    60   ~ 0
 RXD5_P
-Text Label 6600 4200 2    60   ~ 0
+Text Label 6600 2200 2    60   ~ 0
 RXD5_N
-Text Label 6600 4300 2    60   ~ 0
+Text Label 6600 1800 2    60   ~ 0
 RXD6_P
-Text Label 6600 4400 2    60   ~ 0
+Text Label 6600 1700 2    60   ~ 0
 RXD6_N
-Text Label 6600 4500 2    60   ~ 0
+Text Label 6600 1600 2    60   ~ 0
 RXD7_P
-Text Label 6600 4600 2    60   ~ 0
+Text Label 6600 1500 2    60   ~ 0
 RXD7_N
 Text Label 6600 1300 2    60   ~ 0
 I2C_SDA
-Text Label 6600 1600 2    60   ~ 0
+Text Label 6600 4600 2    60   ~ 0
 OE0
-Text Label 6600 1700 2    60   ~ 0
+Text Label 6600 4300 2    60   ~ 0
 TXD1
-Text Label 6600 1800 2    60   ~ 0
+Text Label 6600 4400 2    60   ~ 0
 OE1
 Text Label 6600 1900 2    60   ~ 0
 TXD2
 Text Label 6600 2000 2    60   ~ 0
 OE2
-Text Label 6600 2100 2    60   ~ 0
+Text Label 6600 4100 2    60   ~ 0
 TXD3
-Text Label 6600 2200 2    60   ~ 0
+Text Label 6600 4200 2    60   ~ 0
 OE3
 Text Label 6600 2300 2    60   ~ 0
 TXD4
 Text Label 6600 2400 2    60   ~ 0
 OE4
-Text Label 6600 2500 2    60   ~ 0
+Text Label 6600 3900 2    60   ~ 0
 TXD5
-Text Label 6600 2600 2    60   ~ 0
+Text Label 6600 4000 2    60   ~ 0
 OE5
 Text Label 6600 2700 2    60   ~ 0
 TXD6
 Text Label 6600 2800 2    60   ~ 0
 OE6
-Text Label 6600 2900 2    60   ~ 0
+Text Label 6600 3700 2    60   ~ 0
 TXD7
-Text Label 6600 3000 2    60   ~ 0
+Text Label 6600 3800 2    60   ~ 0
 OE7
-Text Label 6600 1500 2    60   ~ 0
+Text Label 6600 4500 2    60   ~ 0
 TXD0
 NoConn ~ 6750 5300
 NoConn ~ 6750 5400
@@ -502,13 +502,13 @@ Wire Wire Line
 Wire Wire Line
 	6750 1400 6600 1400
 Wire Wire Line
-	6600 1500 6750 1500
+	6600 4500 6750 4500
 Wire Wire Line
-	6600 1600 6750 1600
+	6600 4600 6750 4600
 Wire Wire Line
-	6750 1700 6600 1700
+	6750 4300 6600 4300
 Wire Wire Line
-	6600 1800 6750 1800
+	6600 4400 6750 4400
 Wire Wire Line
 	6750 1900 6600 1900
 Wire Wire Line
@@ -536,13 +536,13 @@ Wire Wire Line
 Wire Wire Line
 	6750 3100 6600 3100
 Wire Wire Line
-	6600 4600 6750 4600
+	6600 1600 6750 1600
 Wire Wire Line
-	6750 4500 6600 4500
+	6750 1500 6600 1500
 Wire Wire Line
-	6600 4400 6750 4400
+	6600 1800 6750 1800
 Wire Wire Line
-	6750 4300 6600 4300
+	6750 1700 6600 1700
 Wire Wire Line
 	6600 4200 6750 4200
 Wire Wire Line
@@ -638,4 +638,6 @@ Text Notes 1500 6350 0    60   ~ 0
 D0_N is grounded on module, ground D0_P to reduce noise\n(This is PRBS_OUT but we don't need it)
 Text HLabel 1500 3800 0    60   Input ~ 0
 12V0_FUSED
+Text Notes 4400 1150 0    60   ~ 0
+Some pairs swapped to ease routing:\n* RXD7\n* RXD6\n* RXD4\n* RXD3
 $EndSCHEMATC
