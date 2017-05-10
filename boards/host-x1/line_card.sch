@@ -20,7 +20,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 4 6
 Title "STARSHIPRAIDER Single-Lane Host"
-Date "2017-05-09"
+Date "2017-05-10"
 Rev "0.1"
 Comp "Andrew D. Zonenberg"
 Comment1 "Interface to I/O module"
@@ -174,19 +174,19 @@ Text Label 3350 3400 0    60   ~ 0
 RXD7_P
 Text Label 3350 3500 0    60   ~ 0
 RXD7_N
-Text Label 6600 1400 2    60   ~ 0
+Text Label 6600 5600 2    60   ~ 0
 I2C_SCL
 Text Label 6600 3100 2    60   ~ 0
 RXD0_P
 Text Label 6600 3200 2    60   ~ 0
 RXD0_N
-Text Label 6600 3300 2    60   ~ 0
-RXD1_P
 Text Label 6600 3400 2    60   ~ 0
+RXD1_P
+Text Label 6600 3300 2    60   ~ 0
 RXD1_N
-Text Label 6600 3500 2    60   ~ 0
+Text Label 6600 2000 2    60   ~ 0
 RXD2_P
-Text Label 6600 3600 2    60   ~ 0
+Text Label 6600 1900 2    60   ~ 0
 RXD2_N
 Text Label 6600 3000 2    60   ~ 0
 RXD3_P
@@ -208,7 +208,7 @@ Text Label 6600 1600 2    60   ~ 0
 RXD7_P
 Text Label 6600 1500 2    60   ~ 0
 RXD7_N
-Text Label 6600 1300 2    60   ~ 0
+Text Label 6600 5300 2    60   ~ 0
 I2C_SDA
 Text Label 6600 4600 2    60   ~ 0
 OE0
@@ -216,21 +216,21 @@ Text Label 6600 4300 2    60   ~ 0
 TXD1
 Text Label 6600 4400 2    60   ~ 0
 OE1
-Text Label 6600 1900 2    60   ~ 0
+Text Label 6600 3500 2    60   ~ 0
 TXD2
-Text Label 6600 2000 2    60   ~ 0
+Text Label 6600 3600 2    60   ~ 0
 OE2
 Text Label 6600 4100 2    60   ~ 0
 TXD3
 Text Label 6600 4200 2    60   ~ 0
 OE3
-Text Label 6600 2300 2    60   ~ 0
+Text Label 6600 5400 2    60   ~ 0
 TXD4
-Text Label 6600 2400 2    60   ~ 0
+Text Label 6600 5500 2    60   ~ 0
 OE4
-Text Label 6600 3900 2    60   ~ 0
+Text Label 6600 5700 2    60   ~ 0
 TXD5
-Text Label 6600 4000 2    60   ~ 0
+Text Label 6600 5800 2    60   ~ 0
 OE5
 Text Label 6600 2700 2    60   ~ 0
 TXD6
@@ -242,12 +242,6 @@ Text Label 6600 3800 2    60   ~ 0
 OE7
 Text Label 6600 4500 2    60   ~ 0
 TXD0
-NoConn ~ 6750 5300
-NoConn ~ 6750 5400
-NoConn ~ 6750 5500
-NoConn ~ 6750 5600
-NoConn ~ 6750 5700
-NoConn ~ 6750 5800
 NoConn ~ 6750 5900
 NoConn ~ 6750 6000
 NoConn ~ 6750 6100
@@ -498,9 +492,9 @@ Wire Wire Line
 Wire Wire Line
 	3200 3400 3350 3400
 Wire Wire Line
-	6600 1300 6750 1300
+	6600 5300 6750 5300
 Wire Wire Line
-	6750 1400 6600 1400
+	6750 5600 6600 5600
 Wire Wire Line
 	6600 4500 6750 4500
 Wire Wire Line
@@ -510,17 +504,17 @@ Wire Wire Line
 Wire Wire Line
 	6600 4400 6750 4400
 Wire Wire Line
-	6750 1900 6600 1900
+	6750 3500 6600 3500
 Wire Wire Line
-	6600 2000 6750 2000
+	6600 3600 6750 3600
 Wire Wire Line
 	6750 2100 6600 2100
 Wire Wire Line
 	6600 2200 6750 2200
 Wire Wire Line
-	6750 2300 6600 2300
+	6750 5400 6600 5400
 Wire Wire Line
-	6600 2400 6750 2400
+	6600 5500 6750 5500
 Wire Wire Line
 	6750 2500 6600 2500
 Wire Wire Line
@@ -548,17 +542,17 @@ Wire Wire Line
 Wire Wire Line
 	6750 4100 6600 4100
 Wire Wire Line
-	6600 4000 6750 4000
+	6600 5800 6750 5800
 Wire Wire Line
-	6750 3900 6600 3900
+	6750 5700 6600 5700
 Wire Wire Line
 	6600 3800 6750 3800
 Wire Wire Line
 	6750 3700 6600 3700
 Wire Wire Line
-	6600 3600 6750 3600
+	6600 2000 6750 2000
 Wire Wire Line
-	6750 3500 6600 3500
+	6750 1900 6600 1900
 Wire Wire Line
 	6600 3400 6750 3400
 Wire Wire Line
@@ -638,6 +632,12 @@ Text Notes 1500 6350 0    60   ~ 0
 D0_N is grounded on module, ground D0_P to reduce noise\n(This is PRBS_OUT but we don't need it)
 Text HLabel 1500 3800 0    60   Input ~ 0
 12V0_FUSED
-Text Notes 4400 1150 0    60   ~ 0
-Some pairs swapped to ease routing:\n* RXD7\n* RXD6\n* RXD4\n* RXD3
+Text Notes 4150 1300 0    60   ~ 0
+Some pairs swapped to ease routing:\n* RXD7\n* RXD6\n* RXD4\n* RXD3\n* RXD2\n* RXD1
+NoConn ~ 6750 2300
+NoConn ~ 6750 1300
+NoConn ~ 6750 2400
+NoConn ~ 6750 1400
+NoConn ~ 6750 3900
+NoConn ~ 6750 4000
 $EndSCHEMATC

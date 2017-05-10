@@ -20,7 +20,7 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 6 6
 Title "STARSHIPRAIDER Single-Lane Host"
-Date "2017-05-09"
+Date "2017-05-10"
 Rev "0.1"
 Comp "Andrew D. Zonenberg"
 Comment1 ""
