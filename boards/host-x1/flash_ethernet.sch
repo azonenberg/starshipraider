@@ -202,15 +202,15 @@ Text Label 8100 2650 0    60   ~ 0
 RGMII_RX_DV
 Text Label 8100 2750 0    60   ~ 0
 RGMII_RX_CLK
-Text Label 13800 2650 2    60   ~ 0
+Text Label 13800 2450 2    60   ~ 0
 RGMII_RXD3
-Text Label 13800 2750 2    60   ~ 0
+Text Label 13800 2350 2    60   ~ 0
 RGMII_RXD2
-Text Label 13800 2850 2    60   ~ 0
+Text Label 13800 2650 2    60   ~ 0
 RGMII_RXD1
-Text Label 13800 2950 2    60   ~ 0
+Text Label 13800 2550 2    60   ~ 0
 RGMII_RXD0
-Text Label 13800 3050 2    60   ~ 0
+Text Label 13800 2850 2    60   ~ 0
 RGMII_RX_DV
 Text Label 13800 3150 2    60   ~ 0
 RGMII_RX_CLK
@@ -691,22 +691,21 @@ Text Label 13800 5450 2    60   ~ 0
 LED2
 Text Label 13800 5350 2    60   ~ 0
 LED3
-Text Label 13800 3550 2    60   ~ 0
+Text Label 13800 3250 2    60   ~ 0
 RGMII_TXD3
-NoConn ~ 14000 3250
-Text Label 13800 3650 2    60   ~ 0
+Text Label 13800 2250 2    60   ~ 0
 RGMII_TXD2
-Text Label 13800 3750 2    60   ~ 0
+Text Label 13800 1450 2    60   ~ 0
 RGMII_TXD1
-Text Label 13800 3850 2    60   ~ 0
+Text Label 13800 2150 2    60   ~ 0
 RGMII_TXD0
-Text Label 13800 3950 2    60   ~ 0
-RGMII_TX_EN
 Text Label 13800 4050 2    60   ~ 0
+RGMII_TX_EN
+Text Label 13800 2750 2    60   ~ 0
 RGMII_TX_CLK
-Text Label 13800 4150 2    60   ~ 0
+Text Label 13800 3850 2    60   ~ 0
 ETH_MDIO
-Text Label 13800 4250 2    60   ~ 0
+Text Label 13800 3750 2    60   ~ 0
 ETH_MDC
 Text Label 8100 2950 0    60   ~ 0
 ETH_MDIO
@@ -740,11 +739,11 @@ F 3 "" H 7750 3050 50  0000 C CNN
 	1    7750 3050
 	0    1    1    0   
 $EndComp
-Text Label 13800 2250 2    60   ~ 0
+Text Label 13800 5050 2    60   ~ 0
 ETH_INT_N
 Text Label 8100 3250 0    60   ~ 0
 ETH_RST_N
-Text Label 13800 2350 2    60   ~ 0
+Text Label 13800 4850 2    60   ~ 0
 ETH_RST_N
 NoConn ~ 14000 3450
 Text Label 13800 3350 2    60   ~ 0
@@ -944,15 +943,12 @@ $EndComp
 Text Label 1300 4600 2    60   ~ 0
 ETH_D_TAP
 NoConn ~ 14000 850 
-NoConn ~ 14000 1450
 NoConn ~ 14000 1550
 NoConn ~ 14000 1650
 NoConn ~ 14000 1750
 NoConn ~ 14000 1850
 NoConn ~ 14000 2050
 NoConn ~ 14000 4750
-NoConn ~ 14000 4850
-NoConn ~ 14000 5050
 NoConn ~ 14000 5150
 NoConn ~ 14000 5250
 Wire Wire Line
@@ -1052,7 +1048,7 @@ Wire Wire Line
 Wire Wire Line
 	13800 2650 14000 2650
 Wire Wire Line
-	14000 2750 13800 2750
+	14000 2350 13800 2350
 Wire Wire Line
 	13800 2850 14000 2850
 Wire Wire Line
@@ -1168,21 +1164,21 @@ Wire Wire Line
 Wire Wire Line
 	13800 5450 14000 5450
 Wire Wire Line
-	13800 3550 14000 3550
+	13800 3250 14000 3250
 Wire Wire Line
 	13800 3850 14000 3850
 Wire Wire Line
 	14000 3750 13800 3750
 Wire Wire Line
-	13800 3650 14000 3650
+	13800 1450 14000 1450
 Wire Wire Line
 	13800 4050 14000 4050
 Wire Wire Line
-	14000 3950 13800 3950
+	14000 2250 13800 2250
 Wire Wire Line
-	13800 4250 14000 4250
+	13800 2750 14000 2750
 Wire Wire Line
-	14000 4150 13800 4150
+	14000 2150 13800 2150
 Wire Wire Line
 	8100 2850 7300 2850
 Wire Wire Line
@@ -1194,11 +1190,11 @@ Wire Wire Line
 Wire Wire Line
 	8100 3050 7900 3050
 Wire Wire Line
-	13800 2250 14000 2250
+	13800 5050 14000 5050
 Wire Wire Line
 	8100 3250 7300 3250
 Wire Wire Line
-	13800 2350 14000 2350
+	13800 4850 14000 4850
 Wire Wire Line
 	13800 3350 14000 3350
 Wire Wire Line
@@ -1314,7 +1310,6 @@ Text Label 8100 3150 0    60   ~ 0
 1V8
 Wire Wire Line
 	8100 3150 7900 3150
-NoConn ~ 14000 2150
 $Comp
 L R R48
 U 1 1 59120E0B
@@ -1419,9 +1414,9 @@ Wire Wire Line
 	8850 10100 9000 10100
 Connection ~ 5350 10300
 Connection ~ 7250 10300
-Text Label 13800 2450 2    60   ~ 0
+Text Label 13800 3050 2    60   ~ 0
 ETH_ACTIVITY_LED
-Text Label 13800 2550 2    60   ~ 0
+Text Label 13800 2950 2    60   ~ 0
 ETH_LINK_LED
 Wire Wire Line
 	13800 2450 14000 2450
@@ -1702,4 +1697,9 @@ NoConn ~ 14000 4450
 NoConn ~ 14000 4350
 Text Notes 2550 4400 0    60   ~ 0
 B/D pairs swapped for easier routing\n(KSZ9031 auto-corrects)
+NoConn ~ 14000 3950
+NoConn ~ 14000 4250
+NoConn ~ 14000 3550
+NoConn ~ 14000 3650
+NoConn ~ 14000 4150
 $EndSCHEMATC
