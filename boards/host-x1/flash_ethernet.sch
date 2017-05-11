@@ -218,17 +218,17 @@ Text Label 4900 3350 2    60   ~ 0
 ETH_A_P
 Text Label 4900 3450 2    60   ~ 0
 ETH_A_N
-Text Label 4900 3550 2    60   ~ 0
-ETH_B_P
 Text Label 4900 3650 2    60   ~ 0
+ETH_B_P
+Text Label 4900 3550 2    60   ~ 0
 ETH_B_N
 Text Label 4900 3750 2    60   ~ 0
 ETH_C_P
 Text Label 4900 3850 2    60   ~ 0
 ETH_C_N
-Text Label 4900 3950 2    60   ~ 0
-ETH_D_P
 Text Label 4900 4050 2    60   ~ 0
+ETH_D_P
+Text Label 4900 3950 2    60   ~ 0
 ETH_D_N
 $Comp
 L C C82
@@ -1700,4 +1700,6 @@ F 3 "" H 14200 5750 60  0000 C CNN
 $EndComp
 NoConn ~ 14000 4450
 NoConn ~ 14000 4350
+Text Notes 2550 4400 0    60   ~ 0
+B/D pairs swapped for easier routing\n(KSZ9031 auto-corrects)
 $EndSCHEMATC
