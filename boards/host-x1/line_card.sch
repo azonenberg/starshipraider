@@ -29,19 +29,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L XC7AxT-xFTG256x U?
-U 4 1 590C044B
-P 6950 6100
-AR Path="/590BFAB4/590C044B" Ref="U?"  Part="6" 
-AR Path="/590BFAC9/590C044B" Ref="U2"  Part="4" 
-F 0 "U2" H 8328 8608 60  0000 L CNN
-F 1 "XC7A100T-1FTG256C" H 8328 8502 60  0000 L CNN
-F 2 "azonenberg_pcb:BGA_256_17x17_FULLARRAY_1MM" H 6950 6100 60  0001 C CNN
-F 3 "" H 6950 6100 60  0000 C CNN
-	4    6950 6100
-	1    0    0    -1  
-$EndComp
-$Comp
 L STARSHIPRAIDER_IOBOARD_HOST J3
 U 1 1 590F824D
 P 1900 4050
@@ -174,7 +161,7 @@ Text Label 3350 3400 0    60   ~ 0
 RXD7_P
 Text Label 3350 3500 0    60   ~ 0
 RXD7_N
-Text Label 6600 5600 2    60   ~ 0
+Text Label 6600 5200 2    60   ~ 0
 I2C_SCL
 Text Label 6600 3100 2    60   ~ 0
 RXD0_P
@@ -226,11 +213,11 @@ Text Label 6600 4200 2    60   ~ 0
 OE3
 Text Label 6600 5400 2    60   ~ 0
 TXD4
-Text Label 6600 5500 2    60   ~ 0
+Text Label 6600 5100 2    60   ~ 0
 OE4
-Text Label 6600 5700 2    60   ~ 0
+Text Label 6600 4900 2    60   ~ 0
 TXD5
-Text Label 6600 5800 2    60   ~ 0
+Text Label 6600 5000 2    60   ~ 0
 OE5
 Text Label 6600 2700 2    60   ~ 0
 TXD6
@@ -242,8 +229,6 @@ Text Label 6600 3800 2    60   ~ 0
 OE7
 Text Label 6600 4500 2    60   ~ 0
 TXD0
-NoConn ~ 6750 5900
-NoConn ~ 6750 6000
 NoConn ~ 6750 6100
 NoConn ~ 6750 1200
 $Comp
@@ -349,9 +334,9 @@ F 3 "" H 4500 5000 50  0000 C CNN
 $EndComp
 Text Label 4850 5150 0    60   ~ 0
 SCOPE_SCL
-Text Label 6600 4700 2    60   ~ 0
+Text Label 6600 6000 2    60   ~ 0
 SCOPE_SDA
-Text Label 6600 4800 2    60   ~ 0
+Text Label 6600 5900 2    60   ~ 0
 SCOPE_SCL
 Text Label 1550 6500 0    60   ~ 0
 SCOPE_SDA
@@ -361,9 +346,9 @@ Text Label 1550 6800 0    60   ~ 0
 SCOPE_LE_P
 Text Label 1550 6900 0    60   ~ 0
 SCOPE_LE_N
-Text Label 6600 4900 2    60   ~ 0
+Text Label 6600 5700 2    60   ~ 0
 SCOPE_LE_P
-Text Label 6600 5000 2    60   ~ 0
+Text Label 6600 5800 2    60   ~ 0
 SCOPE_LE_N
 Text Label 1550 7100 0    60   ~ 0
 SCOPEOUT_P
@@ -597,9 +582,9 @@ Connection ~ 4000 4850
 Wire Wire Line
 	4850 5150 4500 5150
 Wire Wire Line
-	6600 4800 6750 4800
+	6600 6000 6750 6000
 Wire Wire Line
-	6750 4700 6600 4700
+	6750 5900 6600 5900
 Wire Wire Line
 	1550 6600 1350 6600
 Wire Wire Line
@@ -616,9 +601,9 @@ Wire Wire Line
 	1350 7100 1550 7100
 Wire Wire Line
 	1550 7200 1350 7200
-Text Label 6600 5100 2    60   ~ 0
+Text Label 6600 5500 2    60   ~ 0
 SCOPEOUT_P
-Text Label 6600 5200 2    60   ~ 0
+Text Label 6600 5600 2    60   ~ 0
 SCOPEOUT_N
 Wire Wire Line
 	6750 5200 6600 5200
@@ -640,4 +625,19 @@ NoConn ~ 6750 2400
 NoConn ~ 6750 1400
 NoConn ~ 6750 3900
 NoConn ~ 6750 4000
+$Comp
+L XC7AxT-xFTG256x U?
+U 4 1 590C044B
+P 6950 6100
+AR Path="/590BFAB4/590C044B" Ref="U?"  Part="6" 
+AR Path="/590BFAC9/590C044B" Ref="U2"  Part="4" 
+F 0 "U2" H 8328 8608 60  0000 L CNN
+F 1 "XC7A100T-1FTG256C" H 8328 8502 60  0000 L CNN
+F 2 "azonenberg_pcb:BGA_256_17x17_FULLARRAY_1MM" H 6950 6100 60  0001 C CNN
+F 3 "" H 6950 6100 60  0000 C CNN
+	4    6950 6100
+	1    0    0    -1  
+$EndComp
+NoConn ~ 6750 4800
+NoConn ~ 6750 4700
 $EndSCHEMATC

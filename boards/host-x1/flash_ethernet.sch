@@ -1052,9 +1052,9 @@ Wire Wire Line
 Wire Wire Line
 	13800 2850 14000 2850
 Wire Wire Line
-	14000 2950 13800 2950
+	14000 3550 13800 3550
 Wire Wire Line
-	13800 3050 14000 3050
+	13800 3650 14000 3650
 Wire Wire Line
 	14000 3150 13800 3150
 Wire Wire Line
@@ -1414,9 +1414,9 @@ Wire Wire Line
 	8850 10100 9000 10100
 Connection ~ 5350 10300
 Connection ~ 7250 10300
-Text Label 13800 3050 2    60   ~ 0
+Text Label 13800 3650 2    60   ~ 0
 ETH_ACTIVITY_LED
-Text Label 13800 2950 2    60   ~ 0
+Text Label 13800 3550 2    60   ~ 0
 ETH_LINK_LED
 Wire Wire Line
 	13800 2450 14000 2450
@@ -1699,7 +1699,7 @@ Text Notes 2550 4400 0    60   ~ 0
 B/D pairs swapped for easier routing\n(KSZ9031 auto-corrects)
 NoConn ~ 14000 3950
 NoConn ~ 14000 4250
-NoConn ~ 14000 3550
-NoConn ~ 14000 3650
 NoConn ~ 14000 4150
+NoConn ~ 14000 3050
+NoConn ~ 14000 2950
 $EndSCHEMATC
