@@ -20,7 +20,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 5 6
 Title "STARSHIPRAIDER Single-Lane Host"
-Date "2017-05-10"
+Date "2017-05-11"
 Rev "0.1"
 Comp "Andrew D. Zonenberg"
 Comment1 "FPGA strap pins etc"

@@ -20,7 +20,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 4 6
 Title "STARSHIPRAIDER Single-Lane Host"
-Date "2017-05-10"
+Date "2017-05-11"
 Rev "0.1"
 Comp "Andrew D. Zonenberg"
 Comment1 "Interface to I/O module"
@@ -167,33 +167,33 @@ Text Label 6600 3100 2    60   ~ 0
 RXD0_P
 Text Label 6600 3200 2    60   ~ 0
 RXD0_N
-Text Label 6600 3400 2    60   ~ 0
-RXD1_P
-Text Label 6600 3300 2    60   ~ 0
-RXD1_N
-Text Label 6600 2000 2    60   ~ 0
-RXD2_P
-Text Label 6600 1900 2    60   ~ 0
-RXD2_N
-Text Label 6600 3000 2    60   ~ 0
-RXD3_P
 Text Label 6600 2900 2    60   ~ 0
-RXD3_N
+RXD1_P
+Text Label 6600 3000 2    60   ~ 0
+RXD1_N
 Text Label 6600 2600 2    60   ~ 0
-RXD4_P
+RXD2_P
 Text Label 6600 2500 2    60   ~ 0
-RXD4_N
+RXD2_N
 Text Label 6600 2100 2    60   ~ 0
-RXD5_P
+RXD3_P
 Text Label 6600 2200 2    60   ~ 0
-RXD5_N
+RXD3_N
 Text Label 6600 1800 2    60   ~ 0
-RXD6_P
+RXD4_P
 Text Label 6600 1700 2    60   ~ 0
-RXD6_N
+RXD4_N
 Text Label 6600 1600 2    60   ~ 0
-RXD7_P
+RXD5_P
 Text Label 6600 1500 2    60   ~ 0
+RXD5_N
+Text Label 6600 3400 2    60   ~ 0
+RXD6_P
+Text Label 6600 3300 2    60   ~ 0
+RXD6_N
+Text Label 6600 2000 2    60   ~ 0
+RXD7_P
+Text Label 6600 1900 2    60   ~ 0
 RXD7_N
 Text Label 6600 5300 2    60   ~ 0
 I2C_SDA
@@ -618,7 +618,7 @@ D0_N is grounded on module, ground D0_P to reduce noise\n(This is PRBS_OUT but w
 Text HLabel 1500 3800 0    60   Input ~ 0
 12V0_FUSED
 Text Notes 4150 1300 0    60   ~ 0
-Some pairs swapped to ease routing:\n* RXD7\n* RXD6\n* RXD4\n* RXD3\n* RXD2\n* RXD1
+Some pairs swapped to ease routing:\n* RXD7\n* RXD5\n* RXD6\n* RXD4\n* RXD2
 NoConn ~ 6750 2300
 NoConn ~ 6750 1300
 NoConn ~ 6750 2400
