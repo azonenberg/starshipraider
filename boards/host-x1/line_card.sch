@@ -161,7 +161,7 @@ Text Label 3350 3400 0    60   ~ 0
 RXD7_P
 Text Label 3350 3500 0    60   ~ 0
 RXD7_N
-Text Label 6600 5200 2    60   ~ 0
+Text Label 6600 4200 2    60   ~ 0
 I2C_SCL
 Text Label 6600 3100 2    60   ~ 0
 RXD0_P
@@ -195,42 +195,41 @@ Text Label 6600 2000 2    60   ~ 0
 RXD7_P
 Text Label 6600 1900 2    60   ~ 0
 RXD7_N
-Text Label 6600 5300 2    60   ~ 0
+Text Label 6600 6000 2    60   ~ 0
 I2C_SDA
-Text Label 6600 4600 2    60   ~ 0
-OE0
-Text Label 6600 4300 2    60   ~ 0
-TXD1
-Text Label 6600 4400 2    60   ~ 0
-OE1
-Text Label 6600 3500 2    60   ~ 0
-TXD2
-Text Label 6600 3600 2    60   ~ 0
-OE2
-Text Label 6600 4100 2    60   ~ 0
-TXD3
-Text Label 6600 4200 2    60   ~ 0
-OE3
-Text Label 6600 5400 2    60   ~ 0
-TXD4
-Text Label 6600 5100 2    60   ~ 0
-OE4
-Text Label 6600 4900 2    60   ~ 0
-TXD5
-Text Label 6600 5000 2    60   ~ 0
-OE5
-Text Label 6600 2700 2    60   ~ 0
-TXD6
-Text Label 6600 2800 2    60   ~ 0
-OE6
-Text Label 6600 3700 2    60   ~ 0
-TXD7
-Text Label 6600 3800 2    60   ~ 0
-OE7
 Text Label 6600 4500 2    60   ~ 0
+OE0
+Text Label 6600 4800 2    60   ~ 0
+TXD1
+Text Label 6600 4600 2    60   ~ 0
+OE1
+Text Label 6600 3700 2    60   ~ 0
+TXD2
+Text Label 6600 4100 2    60   ~ 0
+OE2
+Text Label 6600 3800 2    60   ~ 0
+TXD3
+Text Label 6600 2700 2    60   ~ 0
+OE3
+Text Label 6600 2800 2    60   ~ 0
+TXD4
+Text Label 6600 3500 2    60   ~ 0
+OE4
+Text Label 6600 3600 2    60   ~ 0
+TXD5
+Text Label 6600 4000 2    60   ~ 0
+OE5
+Text Label 6600 1200 2    60   ~ 0
+TXD6
+Text Label 6600 1400 2    60   ~ 0
+OE6
+Text Label 6600 2400 2    60   ~ 0
+TXD7
+Text Label 6600 1300 2    60   ~ 0
+OE7
+Text Label 6600 4700 2    60   ~ 0
 TXD0
 NoConn ~ 6750 6100
-NoConn ~ 6750 1200
 $Comp
 L C C80
 U 1 1 590F9668
@@ -334,7 +333,7 @@ F 3 "" H 4500 5000 50  0000 C CNN
 $EndComp
 Text Label 4850 5150 0    60   ~ 0
 SCOPE_SCL
-Text Label 6600 6000 2    60   ~ 0
+Text Label 6600 5200 2    60   ~ 0
 SCOPE_SDA
 Text Label 6600 5900 2    60   ~ 0
 SCOPE_SCL
@@ -485,19 +484,19 @@ Wire Wire Line
 Wire Wire Line
 	6600 4600 6750 4600
 Wire Wire Line
-	6750 4300 6600 4300
+	6750 4700 6600 4700
 Wire Wire Line
-	6600 4400 6750 4400
+	6600 4800 6750 4800
 Wire Wire Line
-	6750 3500 6600 3500
+	6750 1200 6600 1200
 Wire Wire Line
-	6600 3600 6750 3600
+	6600 2400 6750 2400
 Wire Wire Line
 	6750 2100 6600 2100
 Wire Wire Line
 	6600 2200 6750 2200
 Wire Wire Line
-	6750 5400 6600 5400
+	6750 2800 6600 2800
 Wire Wire Line
 	6600 5500 6750 5500
 Wire Wire Line
@@ -507,7 +506,7 @@ Wire Wire Line
 Wire Wire Line
 	6750 2700 6600 2700
 Wire Wire Line
-	6600 2800 6750 2800
+	6600 1400 6750 1400
 Wire Wire Line
 	6750 2900 6600 2900
 Wire Wire Line
@@ -525,15 +524,15 @@ Wire Wire Line
 Wire Wire Line
 	6600 4200 6750 4200
 Wire Wire Line
-	6750 4100 6600 4100
+	6750 4000 6600 4000
 Wire Wire Line
 	6600 5800 6750 5800
 Wire Wire Line
 	6750 5700 6600 5700
 Wire Wire Line
-	6600 3800 6750 3800
+	6600 3500 6750 3500
 Wire Wire Line
-	6750 3700 6600 3700
+	6750 1300 6600 1300
 Wire Wire Line
 	6600 2000 6750 2000
 Wire Wire Line
@@ -582,7 +581,7 @@ Connection ~ 4000 4850
 Wire Wire Line
 	4850 5150 4500 5150
 Wire Wire Line
-	6600 6000 6750 6000
+	6600 5200 6750 5200
 Wire Wire Line
 	6750 5900 6600 5900
 Wire Wire Line
@@ -594,9 +593,9 @@ Wire Wire Line
 Wire Wire Line
 	1350 6900 1550 6900
 Wire Wire Line
-	6600 5000 6750 5000
+	6600 5400 6750 5400
 Wire Wire Line
-	6750 4900 6600 4900
+	6750 3600 6600 3600
 Wire Wire Line
 	1350 7100 1550 7100
 Wire Wire Line
@@ -606,9 +605,9 @@ SCOPEOUT_P
 Text Label 6600 5600 2    60   ~ 0
 SCOPEOUT_N
 Wire Wire Line
-	6750 5200 6600 5200
+	6750 4100 6600 4100
 Wire Wire Line
-	6600 5100 6750 5100
+	6600 3800 6750 3800
 Wire Wire Line
 	1350 6250 1450 6250
 Wire Wire Line
@@ -620,11 +619,6 @@ Text HLabel 1500 3800 0    60   Input ~ 0
 Text Notes 4150 1300 0    60   ~ 0
 Some pairs swapped to ease routing:\n* RXD7\n* RXD5\n* RXD6\n* RXD4\n* RXD2
 NoConn ~ 6750 2300
-NoConn ~ 6750 1300
-NoConn ~ 6750 2400
-NoConn ~ 6750 1400
-NoConn ~ 6750 3900
-NoConn ~ 6750 4000
 $Comp
 L XC7AxT-xFTG256x U?
 U 4 1 590C044B
@@ -638,6 +632,97 @@ F 3 "" H 6950 6100 60  0000 C CNN
 	4    6950 6100
 	1    0    0    -1  
 $EndComp
-NoConn ~ 6750 4800
-NoConn ~ 6750 4700
+$Comp
+L PMOD_DEVICE_DIFF_PWRIN J6
+U 1 1 5915979C
+P 4700 7250
+F 0 "J6" H 5050 7100 60  0000 R CNN
+F 1 "PMOD_HEADER" H 5050 7200 60  0000 R CNN
+F 2 "azonenberg_pcb:CONN_HEADER_2.54MM_2x6_RA_PMOD_HOST" H 4700 7250 60  0001 C CNN
+F 3 "" H 4700 7250 60  0001 C CNN
+	1    4700 7250
+	-1   0    0    -1  
+$EndComp
+Text Label 5050 5750 0    60   ~ 0
+3V3
+Wire Wire Line
+	4900 5750 5050 5750
+Wire Wire Line
+	5000 5750 5000 5850
+Wire Wire Line
+	5000 5850 4900 5850
+Connection ~ 5000 5750
+Text Label 5050 5950 0    60   ~ 0
+GND
+Wire Wire Line
+	5050 5950 4900 5950
+Wire Wire Line
+	5000 5950 5000 6050
+Wire Wire Line
+	5000 6050 4900 6050
+Connection ~ 5000 5950
+Text Label 5050 6250 0    60   ~ 0
+PMOD_DQ0
+Wire Wire Line
+	5050 6250 4900 6250
+Text Label 5050 6350 0    60   ~ 0
+PMOD_DQ1
+Wire Wire Line
+	5050 6350 4900 6350
+Text Label 5050 6500 0    60   ~ 0
+PMOD_DQ2
+Wire Wire Line
+	5050 6500 4900 6500
+Text Label 5050 6600 0    60   ~ 0
+PMOD_DQ3
+Wire Wire Line
+	5050 6600 4900 6600
+Text Label 6600 5400 2    60   ~ 0
+PMOD_DQ0
+Text Label 6600 3900 2    60   ~ 0
+PMOD_DQ1
+Text Label 6600 5000 2    60   ~ 0
+PMOD_DQ2
+Text Label 6600 5300 2    60   ~ 0
+PMOD_DQ3
+Wire Wire Line
+	6600 4400 6750 4400
+Wire Wire Line
+	6600 3900 6750 3900
+Wire Wire Line
+	6600 3700 6750 3700
+Wire Wire Line
+	6600 4300 6750 4300
+Text Label 5050 6800 0    60   ~ 0
+PMOD_DQ4
+Wire Wire Line
+	5050 6800 4900 6800
+Text Label 5050 6900 0    60   ~ 0
+PMOD_DQ5
+Wire Wire Line
+	5050 6900 4900 6900
+Text Label 6600 4400 2    60   ~ 0
+PMOD_DQ4
+Text Label 6600 4300 2    60   ~ 0
+PMOD_DQ5
+Wire Wire Line
+	6600 5000 6750 5000
+Wire Wire Line
+	6600 5100 6750 5100
+Text Label 5050 7100 0    60   ~ 0
+PMOD_DQ6
+Wire Wire Line
+	5050 7100 4900 7100
+Text Label 5050 7200 0    60   ~ 0
+PMOD_DQ7
+Wire Wire Line
+	5050 7200 4900 7200
+Text Label 6600 5100 2    60   ~ 0
+PMOD_DQ6
+Wire Wire Line
+	6750 4900 6600 4900
+Text Label 6600 4900 2    60   ~ 0
+PMOD_DQ7
+Wire Wire Line
+	6600 6000 6750 6000
 $EndSCHEMATC
