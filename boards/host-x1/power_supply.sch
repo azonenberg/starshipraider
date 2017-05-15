@@ -1,5 +1,4 @@
 EESchema Schematic File Version 2
-LIBS:host-x1-rescue
 LIBS:conn
 LIBS:device
 LIBS:analog-azonenberg
@@ -20,7 +19,7 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 2 6
 Title "STARSHIPRAIDER Single-Lane Host"
-Date "2017-05-11"
+Date "2017-05-14"
 Rev "0.1"
 Comp "Andrew D. Zonenberg"
 Comment1 "Power Supply"
@@ -38,6 +37,7 @@ U 2 1 590C07C9
 P 13650 6200
 AR Path="/590BFAB4/590C07C9" Ref="U?"  Part="6" 
 AR Path="/590BFAA3/590C07C9" Ref="U2"  Part="2" 
+AR Path="/590C07C9" Ref="U2"  Part="2" 
 F 0 "U2" H 14325 11347 60  0000 C CNN
 F 1 "XC7A100T-1FTG256C" H 14325 11241 60  0000 C CNN
 F 2 "azonenberg_pcb:BGA_256_17x17_FULLARRAY_1MM" H 13650 6200 60  0001 C CNN

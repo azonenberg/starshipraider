@@ -1,5 +1,4 @@
 EESchema Schematic File Version 2
-LIBS:host-x1-rescue
 LIBS:conn
 LIBS:device
 LIBS:analog-azonenberg
@@ -20,7 +19,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 4 6
 Title "STARSHIPRAIDER Single-Lane Host"
-Date "2017-05-11"
+Date "2017-05-14"
 Rev "0.1"
 Comp "Andrew D. Zonenberg"
 Comment1 "Interface to I/O module"
@@ -625,8 +624,9 @@ U 4 1 590C044B
 P 6950 6100
 AR Path="/590BFAB4/590C044B" Ref="U?"  Part="6" 
 AR Path="/590BFAC9/590C044B" Ref="U2"  Part="4" 
-F 0 "U2" H 8328 8608 60  0000 L CNN
-F 1 "XC7A100T-1FTG256C" H 8328 8502 60  0000 L CNN
+AR Path="/590C044B" Ref="U2"  Part="4" 
+F 0 "U2" H 6950 11200 60  0000 L CNN
+F 1 "XC7A100T-1FTG256C" H 6950 11100 60  0000 L CNN
 F 2 "azonenberg_pcb:BGA_256_17x17_FULLARRAY_1MM" H 6950 6100 60  0001 C CNN
 F 3 "" H 6950 6100 60  0000 C CNN
 	4    6950 6100
@@ -725,4 +725,237 @@ Text Label 6600 4900 2    60   ~ 0
 PMOD_DQ7
 Wire Wire Line
 	6600 6000 6750 6000
+Text Notes 8750 1200 0    60   ~ 0
+Differential input termination\nCan't use DIFF_TERM on FPGA b/c VCCO=3.3
+$Comp
+L R R57
+U 1 1 5918D283
+P 9300 1450
+F 0 "R57" V 9250 1250 50  0000 C CNN
+F 1 "100" V 9300 1450 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0201_RES_NOSILK" V 9230 1450 50  0001 C CNN
+F 3 "" H 9300 1450 50  0000 C CNN
+	1    9300 1450
+	0    1    1    0   
+$EndComp
+Text Label 9000 1450 2    60   ~ 0
+RXD7_P
+Text Label 9550 1450 0    60   ~ 0
+RXD7_N
+Wire Wire Line
+	9550 1450 9450 1450
+Wire Wire Line
+	9000 1450 9150 1450
+$Comp
+L R R58
+U 1 1 5918D719
+P 9300 1550
+F 0 "R58" V 9250 1350 50  0000 C CNN
+F 1 "100" V 9300 1550 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0201_RES_NOSILK" V 9230 1550 50  0001 C CNN
+F 3 "" H 9300 1550 50  0000 C CNN
+	1    9300 1550
+	0    1    1    0   
+$EndComp
+Text Label 9000 1550 2    60   ~ 0
+RXD6_P
+Text Label 9550 1550 0    60   ~ 0
+RXD6_N
+Wire Wire Line
+	9550 1550 9450 1550
+Wire Wire Line
+	9000 1550 9150 1550
+$Comp
+L R R59
+U 1 1 5918D77F
+P 9300 1650
+F 0 "R59" V 9250 1450 50  0000 C CNN
+F 1 "100" V 9300 1650 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0201_RES_NOSILK" V 9230 1650 50  0001 C CNN
+F 3 "" H 9300 1650 50  0000 C CNN
+	1    9300 1650
+	0    1    1    0   
+$EndComp
+Text Label 9000 1650 2    60   ~ 0
+RXD5_P
+Text Label 9550 1650 0    60   ~ 0
+RXD5_N
+Wire Wire Line
+	9550 1650 9450 1650
+Wire Wire Line
+	9000 1650 9150 1650
+$Comp
+L R R60
+U 1 1 5918D789
+P 9300 1750
+F 0 "R60" V 9250 1550 50  0000 C CNN
+F 1 "100" V 9300 1750 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0201_RES_NOSILK" V 9230 1750 50  0001 C CNN
+F 3 "" H 9300 1750 50  0000 C CNN
+	1    9300 1750
+	0    1    1    0   
+$EndComp
+Text Label 9000 1750 2    60   ~ 0
+RXD4_P
+Text Label 9550 1750 0    60   ~ 0
+RXD4_N
+Wire Wire Line
+	9550 1750 9450 1750
+Wire Wire Line
+	9000 1750 9150 1750
+$Comp
+L R R61
+U 1 1 5918D82B
+P 9300 1850
+F 0 "R61" V 9250 1650 50  0000 C CNN
+F 1 "100" V 9300 1850 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0201_RES_NOSILK" V 9230 1850 50  0001 C CNN
+F 3 "" H 9300 1850 50  0000 C CNN
+	1    9300 1850
+	0    1    1    0   
+$EndComp
+Text Label 9000 1850 2    60   ~ 0
+RXD3_P
+Text Label 9550 1850 0    60   ~ 0
+RXD3_N
+Wire Wire Line
+	9550 1850 9450 1850
+Wire Wire Line
+	9000 1850 9150 1850
+$Comp
+L R R62
+U 1 1 5918D835
+P 9300 1950
+F 0 "R62" V 9250 1750 50  0000 C CNN
+F 1 "100" V 9300 1950 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0201_RES_NOSILK" V 9230 1950 50  0001 C CNN
+F 3 "" H 9300 1950 50  0000 C CNN
+	1    9300 1950
+	0    1    1    0   
+$EndComp
+Text Label 9000 1950 2    60   ~ 0
+RXD2_P
+Text Label 9550 1950 0    60   ~ 0
+RXD2_N
+Wire Wire Line
+	9550 1950 9450 1950
+Wire Wire Line
+	9000 1950 9150 1950
+$Comp
+L R R63
+U 1 1 5918D83F
+P 9300 2050
+F 0 "R63" V 9250 1850 50  0000 C CNN
+F 1 "100" V 9300 2050 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0201_RES_NOSILK" V 9230 2050 50  0001 C CNN
+F 3 "" H 9300 2050 50  0000 C CNN
+	1    9300 2050
+	0    1    1    0   
+$EndComp
+Text Label 9000 2050 2    60   ~ 0
+RXD1_P
+Text Label 9550 2050 0    60   ~ 0
+RXD1_N
+Wire Wire Line
+	9550 2050 9450 2050
+Wire Wire Line
+	9000 2050 9150 2050
+$Comp
+L R R64
+U 1 1 5918D849
+P 9300 2150
+F 0 "R64" V 9250 1950 50  0000 C CNN
+F 1 "100" V 9300 2150 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0201_RES_NOSILK" V 9230 2150 50  0001 C CNN
+F 3 "" H 9300 2150 50  0000 C CNN
+	1    9300 2150
+	0    1    1    0   
+$EndComp
+Text Label 9000 2150 2    60   ~ 0
+RXD0_P
+Text Label 9550 2150 0    60   ~ 0
+RXD0_N
+Wire Wire Line
+	9550 2150 9450 2150
+Wire Wire Line
+	9000 2150 9150 2150
+Text Notes 8750 2550 0    60   ~ 0
+Layer-changing caps
+$Comp
+L C C112
+U 1 1 5918E4EB
+P 8900 2800
+F 0 "C112" H 9015 2846 50  0000 L CNN
+F 1 "0.1 uF" H 9015 2755 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0402_CAP_NOSILK" H 8938 2650 50  0001 C CNN
+F 3 "" H 8900 2800 50  0000 C CNN
+	1    8900 2800
+	1    0    0    -1  
+$EndComp
+Text Label 8750 2950 2    60   ~ 0
+GND
+Wire Wire Line
+	8750 2950 10450 2950
+Text Label 8750 2650 2    60   ~ 0
+3V3
+Wire Wire Line
+	8750 2650 10450 2650
+$Comp
+L C C113
+U 1 1 5918E948
+P 9450 2800
+F 0 "C113" H 9565 2846 50  0000 L CNN
+F 1 "0.1 uF" H 9565 2755 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0402_CAP_NOSILK" H 9488 2650 50  0001 C CNN
+F 3 "" H 9450 2800 50  0000 C CNN
+	1    9450 2800
+	1    0    0    -1  
+$EndComp
+Connection ~ 8900 2650
+Connection ~ 8900 2950
+$Comp
+L C C114
+U 1 1 5918F7AE
+P 9950 2800
+F 0 "C114" H 10065 2846 50  0000 L CNN
+F 1 "0.1 uF" H 10065 2755 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0402_CAP_NOSILK" H 9988 2650 50  0001 C CNN
+F 3 "" H 9950 2800 50  0000 C CNN
+	1    9950 2800
+	1    0    0    -1  
+$EndComp
+Connection ~ 9450 2650
+Connection ~ 9450 2950
+$Comp
+L C C115
+U 1 1 5918FC12
+P 10450 2800
+F 0 "C115" H 10565 2846 50  0000 L CNN
+F 1 "0.1 uF" H 10565 2755 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0402_CAP_NOSILK" H 10488 2650 50  0001 C CNN
+F 3 "" H 10450 2800 50  0000 C CNN
+	1    10450 2800
+	1    0    0    -1  
+$EndComp
+Connection ~ 9950 2650
+Connection ~ 9950 2950
+$Comp
+L C C?
+U 1 1 59190054
+P 8900 3250
+F 0 "C?" H 9015 3296 50  0000 L CNN
+F 1 "0.1 uF" H 9015 3205 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0402_CAP_NOSILK" H 8938 3100 50  0001 C CNN
+F 3 "" H 8900 3250 50  0000 C CNN
+	1    8900 3250
+	1    0    0    -1  
+$EndComp
+Text Label 8750 3100 2    60   ~ 0
+3V3
+Text Label 8750 3400 2    60   ~ 0
+GND
+Wire Wire Line
+	8750 3400 8900 3400
+Wire Wire Line
+	8900 3100 8750 3100
 $EndSCHEMATC

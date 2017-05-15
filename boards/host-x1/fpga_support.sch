@@ -1,5 +1,4 @@
 EESchema Schematic File Version 2
-LIBS:host-x1-rescue
 LIBS:conn
 LIBS:device
 LIBS:analog-azonenberg
@@ -20,7 +19,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 5 6
 Title "STARSHIPRAIDER Single-Lane Host"
-Date "2017-05-11"
+Date "2017-05-14"
 Rev "0.1"
 Comp "Andrew D. Zonenberg"
 Comment1 "FPGA strap pins etc"
@@ -45,6 +44,7 @@ U 1 1 590C06F1
 P 8750 6100
 AR Path="/590BFAB4/590C06F1" Ref="U?"  Part="6" 
 AR Path="/590BFAE6/590C06F1" Ref="U2"  Part="1" 
+AR Path="/590C06F1" Ref="U2"  Part="1" 
 F 0 "U2" H 10128 8603 60  0000 L CNN
 F 1 "XC7A100T-1FTG256C" H 10128 8497 60  0000 L CNN
 F 2 "azonenberg_pcb:BGA_256_17x17_FULLARRAY_1MM" H 8750 6100 60  0001 C CNN

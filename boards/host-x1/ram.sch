@@ -1,5 +1,4 @@
 EESchema Schematic File Version 2
-LIBS:host-x1-rescue
 LIBS:conn
 LIBS:device
 LIBS:analog-azonenberg
@@ -20,7 +19,7 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 3 6
 Title "STARSHIPRAIDER Single-Lane Host"
-Date "2017-05-11"
+Date "2017-05-14"
 Rev "0.1"
 Comp "Andrew D. Zonenberg"
 Comment1 "32-bit HyperRAM"
@@ -32,6 +31,8 @@ $Comp
 L XC7AxT-xFTG256x U2
 U 5 1 590C013F
 P 13250 7100
+AR Path="/590C013F" Ref="U2"  Part="5" 
+AR Path="/590BFAB4/590C013F" Ref="U2"  Part="5" 
 F 0 "U2" H 14628 9608 60  0000 L CNN
 F 1 "XC7A100T-1FTG256C" H 14628 9502 60  0000 L CNN
 F 2 "azonenberg_pcb:BGA_256_17x17_FULLARRAY_1MM" H 13250 7100 60  0001 C CNN
@@ -990,6 +991,8 @@ $Comp
 L XC7AxT-xFTG256x U2
 U 6 1 590BFFBD
 P 10150 7150
+AR Path="/590BFFBD" Ref="U2"  Part="6" 
+AR Path="/590BFAB4/590BFFBD" Ref="U2"  Part="6" 
 F 0 "U2" H 11528 9658 60  0000 L CNN
 F 1 "XC7A100T-1FTG256C" H 11528 9552 60  0000 L CNN
 F 2 "azonenberg_pcb:BGA_256_17x17_FULLARRAY_1MM" H 10150 7150 60  0001 C CNN
