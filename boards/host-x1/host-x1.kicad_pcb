@@ -5,7 +5,7 @@
     (no_connects 0)
     (area 25.002976 15.6175 126.21131 103.61275)
     (thickness 1.6)
-    (drawings 34)
+    (drawings 35)
     (tracks 10416)
     (zones 0)
     (modules 253)
@@ -9145,6 +9145,9 @@
       (xy 0.72898 0.43688) (xy 0.73152 0.4572) (xy 0.73152 0.4572)) (layer F.SilkS) (width 0.00254))
   )
 
+  (gr_text Serial: (at 116.5 84) (layer B.SilkS)
+    (effects (font (size 1 1) (thickness 0.125)) (justify mirror))
+  )
   (gr_text BS (at 79.5 18.75) (layer B.SilkS) (tstamp 5918C41E)
     (effects (font (size 0.75 0.75) (thickness 0.125)))
   )
@@ -22644,6 +22647,21 @@
         (xy 68.925 82.925) (xy 68.575 82.925) (xy 68.575 82.699827) (xy 68.599896 82.639871) (xy 68.600104 82.401176)
         (xy 68.575 82.34042) (xy 68.575 76.979827) (xy 68.599896 76.919871) (xy 68.600104 76.681176) (xy 68.575 76.62042)
         (xy 68.575 76.575) (xy 68.925 76.575)
+      )
+    )
+  )
+  (zone (net 0) (net_name "") (layer B.SilkS) (tstamp 0) (hatch edge 0.508)
+    (connect_pads (clearance 0.15))
+    (min_thickness 0.125)
+    (fill yes (arc_segments 16) (thermal_gap 0.15) (thermal_bridge_width 0.25))
+    (polygon
+      (pts
+        (xy 119 85) (xy 106 85) (xy 106 90) (xy 119 90)
+      )
+    )
+    (filled_polygon
+      (pts
+        (xy 118.9375 89.9375) (xy 106.0625 89.9375) (xy 106.0625 85.0625) (xy 118.9375 85.0625)
       )
     )
   )
