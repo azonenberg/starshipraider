@@ -28,7 +28,7 @@
   )
 
   (setup
-    (last_trace_width 0.15)
+    (last_trace_width 0.125)
     (user_trace_width 0.125)
     (user_trace_width 0.15)
     (user_trace_width 0.245)
@@ -66,7 +66,7 @@
     (visible_elements FFFEFF7F)
     (pcbplotparams
       (layerselection 0x010fc_ffffffff)
-      (usegerberextensions false)
+      (usegerberextensions true)
       (excludeedgelayer true)
       (linewidth 0.100000)
       (plotframeref false)
@@ -812,9 +812,9 @@
     (fp_text value "0.1 uF" (at 0.05 -3.1 225) (layer B.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
-    (pad 1 smd rect (at -0.5 0 225) (size 0.5 0.5) (layers B.Cu B.Paste B.Mask)
+    (pad 1 smd rect (at -0.499999 0 225) (size 0.5 0.5) (layers B.Cu B.Paste B.Mask)
       (net 13 /3V3))
-    (pad 2 smd rect (at 0.5 0 225) (size 0.5 0.5) (layers B.Cu B.Paste B.Mask)
+    (pad 2 smd rect (at 0.499999 0 225) (size 0.5 0.5) (layers B.Cu B.Paste B.Mask)
       (net 3 /GND))
     (model /nfs4/home/azonenberg/kicad-libs/3rdparty/walter/smd_cap/c_0402.wrl
       (at (xyz 0 0 0))
@@ -1366,9 +1366,9 @@
     (fp_text value 100 (at 0.05 1.5 225) (layer F.SilkS) hide
       (effects (font (size 0.508 0.457) (thickness 0.11)))
     )
-    (pad 2 smd rect (at 0.22 0 225) (size 0.21 0.3) (layers F.Cu F.Paste F.Mask)
+    (pad 2 smd rect (at 0.219999 0 225) (size 0.21 0.3) (layers F.Cu F.Paste F.Mask)
       (net 156 "/Line Card/RXD1_P"))
-    (pad 1 smd rect (at -0.22 0 225) (size 0.21 0.3) (layers F.Cu F.Paste F.Mask)
+    (pad 1 smd rect (at -0.219999 0 225) (size 0.21 0.3) (layers F.Cu F.Paste F.Mask)
       (net 157 "/Line Card/RXD1_N"))
     (model /nfs4/home/azonenberg/kicad-libs/3rdparty/walter/smd_resistors/r_0402.wrl
       (at (xyz 0 0 0))
@@ -1406,9 +1406,9 @@
     (fp_text value 100 (at 0.05 1.5 225) (layer F.SilkS) hide
       (effects (font (size 0.508 0.457) (thickness 0.11)))
     )
-    (pad 2 smd rect (at 0.22 0 225) (size 0.21 0.3) (layers F.Cu F.Paste F.Mask)
+    (pad 2 smd rect (at 0.219999 0 225) (size 0.21 0.3) (layers F.Cu F.Paste F.Mask)
       (net 178 "/Line Card/RXD4_P"))
-    (pad 1 smd rect (at -0.22 0 225) (size 0.21 0.3) (layers F.Cu F.Paste F.Mask)
+    (pad 1 smd rect (at -0.219999 0 225) (size 0.21 0.3) (layers F.Cu F.Paste F.Mask)
       (net 168 "/Line Card/RXD4_N"))
     (model /nfs4/home/azonenberg/kicad-libs/3rdparty/walter/smd_resistors/r_0402.wrl
       (at (xyz 0 0 0))
@@ -1426,9 +1426,9 @@
     (fp_text value 100 (at 0.05 1.5 225) (layer F.SilkS) hide
       (effects (font (size 0.508 0.457) (thickness 0.11)))
     )
-    (pad 1 smd rect (at -0.22 0 225) (size 0.21 0.3) (layers F.Cu F.Paste F.Mask)
+    (pad 1 smd rect (at -0.219999 0 225) (size 0.21 0.3) (layers F.Cu F.Paste F.Mask)
       (net 150 "/Line Card/RXD0_N"))
-    (pad 2 smd rect (at 0.22 0 225) (size 0.21 0.3) (layers F.Cu F.Paste F.Mask)
+    (pad 2 smd rect (at 0.219999 0 225) (size 0.21 0.3) (layers F.Cu F.Paste F.Mask)
       (net 160 "/Line Card/RXD0_P"))
     (model /nfs4/home/azonenberg/kicad-libs/3rdparty/walter/smd_resistors/r_0402.wrl
       (at (xyz 0 0 0))
@@ -1506,9 +1506,9 @@
     (fp_text value 100 (at 0.05 1.5 225) (layer F.SilkS) hide
       (effects (font (size 0.508 0.457) (thickness 0.11)))
     )
-    (pad 1 smd rect (at -0.22 0 225) (size 0.21 0.3) (layers F.Cu F.Paste F.Mask)
+    (pad 1 smd rect (at -0.219999 0 225) (size 0.21 0.3) (layers F.Cu F.Paste F.Mask)
       (net 158 "/Line Card/RXD2_N"))
-    (pad 2 smd rect (at 0.22 0 225) (size 0.21 0.3) (layers F.Cu F.Paste F.Mask)
+    (pad 2 smd rect (at 0.219999 0 225) (size 0.21 0.3) (layers F.Cu F.Paste F.Mask)
       (net 169 "/Line Card/RXD2_P"))
     (model /nfs4/home/azonenberg/kicad-libs/3rdparty/walter/smd_resistors/r_0402.wrl
       (at (xyz 0 0 0))
@@ -4461,9 +4461,9 @@
     (fp_text value "0.47 uF" (at 0.05 -3.1 225) (layer B.SilkS) hide
       (effects (font (size 1 1) (thickness 0.125)) (justify mirror))
     )
-    (pad 2 smd rect (at 0.5 0 225) (size 0.5 0.5) (layers B.Cu B.Paste B.Mask)
+    (pad 2 smd rect (at 0.499999 0 225) (size 0.5 0.5) (layers B.Cu B.Paste B.Mask)
       (net 3 /GND))
-    (pad 1 smd rect (at -0.5 0 225) (size 0.5 0.5) (layers B.Cu B.Paste B.Mask)
+    (pad 1 smd rect (at -0.499999 0 225) (size 0.5 0.5) (layers B.Cu B.Paste B.Mask)
       (net 2 /1V8))
     (model /nfs4/home/azonenberg/kicad-libs/3rdparty/walter/smd_cap/c_0402.wrl
       (at (xyz 0 0 0))
@@ -4881,9 +4881,9 @@
     (fp_text value "0.47 uF" (at 0.05 -3.1 315) (layer B.SilkS) hide
       (effects (font (size 1 1) (thickness 0.125)) (justify mirror))
     )
-    (pad 1 smd rect (at -0.5 0 315) (size 0.5 0.5) (layers B.Cu B.Paste B.Mask)
+    (pad 1 smd rect (at -0.499999 0 315) (size 0.5 0.5) (layers B.Cu B.Paste B.Mask)
       (net 11 /1V0))
-    (pad 2 smd rect (at 0.5 0 315) (size 0.5 0.5) (layers B.Cu B.Paste B.Mask)
+    (pad 2 smd rect (at 0.499999 0 315) (size 0.5 0.5) (layers B.Cu B.Paste B.Mask)
       (net 3 /GND))
     (model /nfs4/home/azonenberg/kicad-libs/3rdparty/walter/smd_cap/c_0402.wrl
       (at (xyz 0 0 0))
