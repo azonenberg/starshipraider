@@ -1,6 +1,6 @@
 [submodule "bsp"]
 	path = bsp
-	url = git@github.com:/azonenberg/antikernel-bsps
+	url = https://github.com/azonenberg/antikernel-bsps
 [submodule "rtl/antikernel-ipcores"]
 	path = rtl/antikernel-ipcores
 	url = git@github.com:azonenberg/antikernel-ipcores
