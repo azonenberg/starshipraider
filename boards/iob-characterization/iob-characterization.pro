@@ -1,4 +1,4 @@
-update=Tue 27 Dec 2016 10:42:09 PM PST
+update=Thu 18 May 2017 05:32:33 PM PDT
 version=1
 last_client=kicad
 [pcbnew]
@@ -25,9 +25,19 @@ version=1
 NetIExt=net
 [general]
 version=1
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=/tmp/
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceAjustPassiveValues=0
+LabSize=60
+ERC_TestSimilarLabels=1
 [eeschema]
 version=1
-LibDir=/nfs4/home/azonenberg/code/3rdparty/kicad-library/library;/nfs4/home/azonenberg/code/azonenberg-devboards/trunk/libs
+LibDir=/nfs4/home/azonenberg/code/3rdparty/kicad-library/library;/nfs4/home/azonenberg/code/kicad-libraries/schematic
 [eeschema/libraries]
 LibName1=device
 LibName2=relays
@@ -44,13 +54,3 @@ LibName12=passive-azonenberg
 LibName13=power-azonenberg
 LibName14=special-azonenberg
 LibName15=xilinx-azonenberg
-[schematic_editor]
-version=1
-PageLayoutDescrFile=
-PlotDirectoryName=/tmp/
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=
-SpiceAjustPassiveValues=0
-LabSize=60
-ERC_TestSimilarLabels=1
