@@ -1,7 +1,7 @@
 (kicad_pcb (version 20170123) (host pcbnew "(2017-05-24 revision 38c8470)-master")
 
   (general
-    (links 0)
+    (links 47)
     (no_connects 0)
     (area 37.4625 25.969285 100.403572 48.100001)
     (thickness 1.6)
@@ -64,7 +64,7 @@
     (mod_text_width 0.15)
     (pad_size 1.524 1.524)
     (pad_drill 0.762)
-    (pad_to_mask_clearance 0.2)
+    (pad_to_mask_clearance 0.05)
     (aux_axis_origin 0 0)
     (visible_elements FFFFFF7F)
     (pcbplotparams
