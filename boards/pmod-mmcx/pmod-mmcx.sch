@@ -1,0 +1,260 @@
+EESchema Schematic File Version 2
+LIBS:conn
+LIBS:device
+LIBS:analog-azonenberg
+LIBS:cmos
+LIBS:cypress-azonenberg
+LIBS:hirose-azonenberg
+LIBS:memory-azonenberg
+LIBS:microchip-azonenberg
+LIBS:osc-azonenberg
+LIBS:passive-azonenberg
+LIBS:power-azonenberg
+LIBS:special-azonenberg
+LIBS:xilinx-azonenberg
+LIBS:pmod-mmcx-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "PMOD to MMCX"
+Date "2017-06-07"
+Rev ""
+Comp "Andrew Zonenberg"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L BNC P1
+U 1 1 5937A9AB
+P 5300 1500
+F 0 "P1" H 5401 1476 50  0000 L CNN
+F 1 "MMCX" H 5401 1385 50  0000 L CNN
+F 2 "azonenberg_pcb:CONN_MMCX_LINX_CONNMMCX002SMD" H 5300 1500 50  0001 C CNN
+F 3 "" H 5300 1500 50  0000 C CNN
+	1    5300 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L PMOD_DEVICE_DIFF J1
+U 1 1 5937AA51
+P 2550 3100
+F 0 "J1" H 2928 3933 60  0000 L CNN
+F 1 "PMOD_DEVICE_DIFF" H 2928 3827 60  0000 L CNN
+F 2 "azonenberg_pcb:CONN_HEADER_2.54MM_2x6_RA_PMOD_MODULE" H 2550 3100 60  0001 C CNN
+F 3 "" H 2550 3100 60  0001 C CNN
+	1    2550 3100
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2750 1600 2850 1600
+Wire Wire Line
+	2850 1600 2850 1700
+Wire Wire Line
+	2850 1700 2750 1700
+Wire Wire Line
+	2750 1800 2850 1800
+Wire Wire Line
+	2850 1800 2850 1900
+Wire Wire Line
+	2850 1900 2750 1900
+Text Label 2850 1600 0    60   ~ 0
+3V3
+Text Label 2850 1800 0    60   ~ 0
+GND
+Text Label 2850 2100 0    60   ~ 0
+DQ0
+Text Label 2850 2200 0    60   ~ 0
+DQ1
+Text Label 2850 2350 0    60   ~ 0
+DQ2
+Text Label 2850 2450 0    60   ~ 0
+DQ3
+Text Label 2850 2650 0    60   ~ 0
+DQ4
+Text Label 2850 2750 0    60   ~ 0
+DQ5
+Text Label 2850 2950 0    60   ~ 0
+DQ6
+Text Label 2850 3050 0    60   ~ 0
+DQ7
+Wire Wire Line
+	2850 3050 2750 3050
+Wire Wire Line
+	2750 2950 2850 2950
+Wire Wire Line
+	2850 2750 2750 2750
+Wire Wire Line
+	2750 2650 2850 2650
+Wire Wire Line
+	2750 2450 2850 2450
+Wire Wire Line
+	2850 2350 2750 2350
+Wire Wire Line
+	2750 2200 2850 2200
+Wire Wire Line
+	2850 2100 2750 2100
+Text Label 4950 1500 2    60   ~ 0
+DQ0
+Text Label 4950 1700 2    60   ~ 0
+GND
+Wire Wire Line
+	4950 1700 5300 1700
+Wire Wire Line
+	5150 1500 4950 1500
+$Comp
+L BNC P2
+U 1 1 5937AC62
+P 5300 1950
+F 0 "P2" H 5401 1926 50  0000 L CNN
+F 1 "MMCX" H 5401 1835 50  0000 L CNN
+F 2 "azonenberg_pcb:CONN_MMCX_LINX_CONNMMCX002SMD" H 5300 1950 50  0001 C CNN
+F 3 "" H 5300 1950 50  0000 C CNN
+	1    5300 1950
+	1    0    0    -1  
+$EndComp
+Text Label 4950 1950 2    60   ~ 0
+DQ1
+Text Label 4950 2150 2    60   ~ 0
+GND
+Wire Wire Line
+	4950 2150 5300 2150
+Wire Wire Line
+	5150 1950 4950 1950
+$Comp
+L BNC P3
+U 1 1 5937AC9B
+P 5300 2400
+F 0 "P3" H 5401 2376 50  0000 L CNN
+F 1 "MMCX" H 5401 2285 50  0000 L CNN
+F 2 "azonenberg_pcb:CONN_MMCX_LINX_CONNMMCX002SMD" H 5300 2400 50  0001 C CNN
+F 3 "" H 5300 2400 50  0000 C CNN
+	1    5300 2400
+	1    0    0    -1  
+$EndComp
+Text Label 4950 2400 2    60   ~ 0
+DQ2
+Text Label 4950 2600 2    60   ~ 0
+GND
+Wire Wire Line
+	4950 2600 5300 2600
+Wire Wire Line
+	5150 2400 4950 2400
+$Comp
+L BNC P4
+U 1 1 5937ACE0
+P 5300 2850
+F 0 "P4" H 5401 2826 50  0000 L CNN
+F 1 "MMCX" H 5401 2735 50  0000 L CNN
+F 2 "azonenberg_pcb:CONN_MMCX_LINX_CONNMMCX002SMD" H 5300 2850 50  0001 C CNN
+F 3 "" H 5300 2850 50  0000 C CNN
+	1    5300 2850
+	1    0    0    -1  
+$EndComp
+Text Label 4950 2850 2    60   ~ 0
+DQ3
+Text Label 4950 3050 2    60   ~ 0
+GND
+Wire Wire Line
+	4950 3050 5300 3050
+Wire Wire Line
+	5150 2850 4950 2850
+$Comp
+L BNC P5
+U 1 1 5937AE7D
+P 6800 1500
+F 0 "P5" H 6901 1476 50  0000 L CNN
+F 1 "MMCX" H 6901 1385 50  0000 L CNN
+F 2 "azonenberg_pcb:CONN_MMCX_LINX_CONNMMCX002SMD" H 6800 1500 50  0001 C CNN
+F 3 "" H 6800 1500 50  0000 C CNN
+	1    6800 1500
+	1    0    0    -1  
+$EndComp
+Text Label 6450 1500 2    60   ~ 0
+DQ4
+Text Label 6450 1700 2    60   ~ 0
+GND
+Wire Wire Line
+	6450 1700 6800 1700
+Wire Wire Line
+	6650 1500 6450 1500
+$Comp
+L BNC P6
+U 1 1 5937AE87
+P 6800 1950
+F 0 "P6" H 6901 1926 50  0000 L CNN
+F 1 "MMCX" H 6901 1835 50  0000 L CNN
+F 2 "azonenberg_pcb:CONN_MMCX_LINX_CONNMMCX002SMD" H 6800 1950 50  0001 C CNN
+F 3 "" H 6800 1950 50  0000 C CNN
+	1    6800 1950
+	1    0    0    -1  
+$EndComp
+Text Label 6450 1950 2    60   ~ 0
+DQ5
+Text Label 6450 2150 2    60   ~ 0
+GND
+Wire Wire Line
+	6450 2150 6800 2150
+Wire Wire Line
+	6650 1950 6450 1950
+$Comp
+L BNC P7
+U 1 1 5937AE91
+P 6800 2400
+F 0 "P7" H 6901 2376 50  0000 L CNN
+F 1 "MMCX" H 6901 2285 50  0000 L CNN
+F 2 "azonenberg_pcb:CONN_MMCX_LINX_CONNMMCX002SMD" H 6800 2400 50  0001 C CNN
+F 3 "" H 6800 2400 50  0000 C CNN
+	1    6800 2400
+	1    0    0    -1  
+$EndComp
+Text Label 6450 2400 2    60   ~ 0
+DQ6
+Text Label 6450 2600 2    60   ~ 0
+GND
+Wire Wire Line
+	6450 2600 6800 2600
+Wire Wire Line
+	6650 2400 6450 2400
+$Comp
+L BNC P8
+U 1 1 5937AE9B
+P 6800 2850
+F 0 "P8" H 6901 2826 50  0000 L CNN
+F 1 "MMCX" H 6901 2735 50  0000 L CNN
+F 2 "azonenberg_pcb:CONN_MMCX_LINX_CONNMMCX002SMD" H 6800 2850 50  0001 C CNN
+F 3 "" H 6800 2850 50  0000 C CNN
+	1    6800 2850
+	1    0    0    -1  
+$EndComp
+Text Label 6450 2850 2    60   ~ 0
+DQ7
+Text Label 6450 3050 2    60   ~ 0
+GND
+Wire Wire Line
+	6450 3050 6800 3050
+Wire Wire Line
+	6650 2850 6450 2850
+$Comp
+L BNC P?
+U 1 1 5937B4F4
+P 5300 1000
+F 0 "P?" H 5401 976 50  0000 L CNN
+F 1 "MMCX" H 5401 885 50  0000 L CNN
+F 2 "azonenberg_pcb:CONN_MMCX_LINX_CONNMMCX002SMD" H 5300 1000 50  0001 C CNN
+F 3 "" H 5300 1000 50  0000 C CNN
+	1    5300 1000
+	1    0    0    -1  
+$EndComp
+Text Label 4950 1000 2    60   ~ 0
+3V3
+Wire Wire Line
+	4950 1000 5150 1000
+Text Label 4950 1200 2    60   ~ 0
+GND
+Wire Wire Line
+	4950 1200 5300 1200
+$EndSCHEMATC
