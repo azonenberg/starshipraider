@@ -13,13 +13,14 @@ LIBS:special-azonenberg
 LIBS:xilinx-azonenberg
 LIBS:conn
 LIBS:device
+LIBS:diffprobe-calibrated-prototype-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 3 4
 Title "500 MHz Active Differential Probe"
-Date "2017-11-30"
+Date "2017-12-18"
 Rev "0.2"
 Comp "Andrew D. Zonenberg"
 Comment1 "Power Supply"
@@ -133,13 +134,11 @@ F 3 "" H 3950 950 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3850 800  3950 800 
+	3850 800  4100 800 
 Text Label 3900 1100 2    60   ~ 0
 GND
 Wire Wire Line
 	3900 1100 3950 1100
-Text Label 3950 800  0    60   ~ 0
-12V0_P
 $Comp
 L C C?
 U 1 1 5A1F9213
@@ -152,13 +151,11 @@ F 3 "" H 3950 1650 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3850 1500 3950 1500
+	3850 1500 4100 1500
 Text Label 3900 1800 2    60   ~ 0
 GND
 Wire Wire Line
 	3900 1800 3950 1800
-Text Label 3950 1500 0    60   ~ 0
-12V0_P
 $Comp
 L LTC3032 U?
 U 1 1 5A1F9331
@@ -447,4 +444,10 @@ Text Label 1600 5150 0    60   ~ 0
 GND
 Wire Wire Line
 	1600 5150 1500 5150
+Text HLabel 4100 800  2    60   Output ~ 0
+12V0_P
+Connection ~ 3950 800 
+Connection ~ 3950 1500
+Text Label 4100 1500 0    60   ~ 0
+12V0_N
 $EndSCHEMATC
