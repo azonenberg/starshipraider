@@ -20,7 +20,7 @@ $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 1 4
 Title "500 MHz Active Differential Probe"
-Date "2017-12-18"
+Date "2017-12-19"
 Rev "0.2"
 Comp "Andrew D. Zonenberg"
 Comment1 "Top Level"
@@ -108,4 +108,8 @@ Text Label 1400 1000 2    60   ~ 0
 GND
 Wire Wire Line
 	1400 1000 1600 1000
+Text Label 4800 1300 2    60   ~ 0
+3V3
+Text Label 4800 1400 2    60   ~ 0
+GND
 $EndSCHEMATC
