@@ -20,7 +20,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 3 4
 Title "500 MHz Active Differential Probe"
-Date "2017-12-20"
+Date "2017-12-21"
 Rev "0.2"
 Comp "Andrew D. Zonenberg"
 Comment1 "Power Supply"
@@ -58,7 +58,7 @@ U 1 1 5A1F8E2C
 P 2850 800
 F 0 "F1" H 2850 1040 50  0000 C CNN
 F 1 "250 mA" H 2850 949 50  0000 C CNN
-F 2 "azonenberg_pcb:EIA_0402_LED" H 2850 800 60  0001 C CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" H 2850 800 60  0001 C CNN
 F 3 "" H 2850 800 60  0000 C CNN
 	1    2850 800 
 	1    0    0    -1  
@@ -104,7 +104,7 @@ U 1 1 5A1F8FE5
 P 2850 1500
 F 0 "F2" H 2850 1740 50  0000 C CNN
 F 1 "250 mA" H 2850 1649 50  0000 C CNN
-F 2 "azonenberg_pcb:EIA_0402_LED" H 2850 1500 60  0001 C CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" H 2850 1500 60  0001 C CNN
 F 3 "" H 2850 1500 60  0000 C CNN
 	1    2850 1500
 	1    0    0    -1  

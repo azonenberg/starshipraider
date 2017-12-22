@@ -20,7 +20,7 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 2 4
 Title "500 MHz Active Differential Probe"
-Date "2017-12-20"
+Date "2017-12-21"
 Rev "0.2"
 Comp "Andrew D. Zonenberg"
 Comment1 ""

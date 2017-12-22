@@ -20,7 +20,7 @@ $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 4 4
 Title "500 MHz Active Differential Probe"
-Date "2017-12-20"
+Date "2017-12-21"
 Rev "0.2"
 Comp "Andrew D. Zonenberg"
 Comment1 "Microcontroller"
@@ -152,24 +152,24 @@ Text Label 3800 3800 2    60   ~ 0
 VCAP
 Wire Wire Line
 	3800 3800 3950 3800
-Text HLabel 3800 5100 0    60   Output ~ 0
+Text HLabel 3800 4600 0    60   Output ~ 0
 SPI_CS_N
-Text HLabel 3800 5200 0    60   Output ~ 0
+Text HLabel 3800 4800 0    60   Output ~ 0
 SPI_MOSI
-Text HLabel 3800 5300 0    60   Output ~ 0
+Text HLabel 3800 4700 0    60   Output ~ 0
 SPI_SCK
-Text HLabel 3800 5000 0    60   Input ~ 0
+Text HLabel 3800 4900 0    60   Input ~ 0
 SPI_MISO
 Text Notes 4150 5550 0    60   ~ 0
 Use SPI2 for DAC because SPI1 conflicts with JTAG and is not remappable\nUse UART2 for debug because UART1 conflicts with JTAG and is not remappable
 Wire Wire Line
-	3800 5000 3950 5000
+	3800 4600 3950 4600
 Wire Wire Line
-	3950 5100 3800 5100
+	3950 4700 3800 4700
 Wire Wire Line
-	3800 5200 3950 5200
+	3800 4800 3950 4800
 Wire Wire Line
-	3950 5300 3800 5300
+	3950 4900 3800 4900
 Text Label 1050 1050 2    60   ~ 0
 GND
 Text Label 8200 5200 0    60   ~ 0
@@ -180,13 +180,13 @@ Wire Wire Line
 	8200 5200 8100 5200
 Wire Wire Line
 	8200 5300 8100 5300
-Text HLabel 8200 5100 2    60   Output ~ 0
-RELAY1_DIR
-Text HLabel 8200 5000 2    60   Output ~ 0
-RELAY1_EN
-Text HLabel 8200 4900 2    60   Output ~ 0
-RELAY2_DIR
 Text HLabel 8200 4800 2    60   Output ~ 0
+RELAY1_DIR
+Text HLabel 8200 4900 2    60   Output ~ 0
+RELAY1_EN
+Text HLabel 8200 5000 2    60   Output ~ 0
+RELAY2_DIR
+Text HLabel 8200 5100 2    60   Output ~ 0
 RELAY2_EN
 Wire Wire Line
 	8200 4800 8100 4800
@@ -228,7 +228,7 @@ U 1 1 5A387391
 P 6150 2050
 F 0 "D2" V 6188 1932 50  0000 R CNN
 F 1 "GREEN" V 6097 1932 50  0000 R CNN
-F 2 "azonenberg_pcb:EIA_0402_LED" H 6150 2050 50  0001 C CNN
+F 2 "azonenberg_pcb:EIA_0603_LED" H 6150 2050 50  0001 C CNN
 F 3 "" H 6150 2050 50  0000 C CNN
 	1    6150 2050
 	0    -1   -1   0   
@@ -260,7 +260,7 @@ U 1 1 5A3875DE
 P 6800 2050
 F 0 "D3" V 6838 1932 50  0000 R CNN
 F 1 "GREEN" V 6747 1932 50  0000 R CNN
-F 2 "azonenberg_pcb:EIA_0402_LED" H 6800 2050 50  0001 C CNN
+F 2 "azonenberg_pcb:EIA_0603_LED" H 6800 2050 50  0001 C CNN
 F 3 "" H 6800 2050 50  0000 C CNN
 	1    6800 2050
 	0    -1   -1   0   
@@ -288,7 +288,7 @@ U 1 1 5A38766F
 P 7400 2050
 F 0 "D4" V 7438 1932 50  0000 R CNN
 F 1 "GREEN" V 7347 1932 50  0000 R CNN
-F 2 "azonenberg_pcb:EIA_0402_LED" H 7400 2050 50  0001 C CNN
+F 2 "azonenberg_pcb:EIA_0603_LED" H 7400 2050 50  0001 C CNN
 F 3 "" H 7400 2050 50  0000 C CNN
 	1    7400 2050
 	0    -1   -1   0   
@@ -316,7 +316,7 @@ U 1 1 5A3876FE
 P 8000 2050
 F 0 "D5" V 8038 1932 50  0000 R CNN
 F 1 "GREEN" V 7947 1932 50  0000 R CNN
-F 2 "azonenberg_pcb:EIA_0402_LED" H 8000 2050 50  0001 C CNN
+F 2 "azonenberg_pcb:EIA_0603_LED" H 8000 2050 50  0001 C CNN
 F 3 "" H 8000 2050 50  0000 C CNN
 	1    8000 2050
 	0    -1   -1   0   
@@ -330,22 +330,22 @@ Wire Wire Line
 Connection ~ 7400 2200
 Connection ~ 6800 2200
 Connection ~ 6150 2200
-Text Label 3800 4600 2    60   ~ 0
+Text Label 3800 5000 2    60   ~ 0
 LED0
-Text Label 3800 4700 2    60   ~ 0
+Text Label 3800 5100 2    60   ~ 0
 LED1
-Text Label 3800 4800 2    60   ~ 0
+Text Label 3800 5200 2    60   ~ 0
 LED2
-Text Label 3800 4900 2    60   ~ 0
+Text Label 3800 5300 2    60   ~ 0
 LED3
 Wire Wire Line
-	3800 4900 3950 4900
+	3800 5300 3950 5300
 Wire Wire Line
-	3950 4800 3800 4800
+	3950 5200 3800 5200
 Wire Wire Line
-	3800 4700 3950 4700
+	3800 5100 3950 5100
 Wire Wire Line
-	3950 4600 3800 4600
+	3950 5000 3800 5000
 NoConn ~ 8100 4700
 NoConn ~ 8100 4600
 NoConn ~ 8100 4500
