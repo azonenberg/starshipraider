@@ -48,9 +48,7 @@ module CharacterizationDriver(
 	output reg vlo_led_en,
 
 	output reg vcco_hi_en,
-	output reg vcco_lo_en,
-
-	output wire unconstrained1
+	output reg vcco_lo_en
 	);
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -81,8 +79,6 @@ module CharacterizationDriver(
 	) por (
 		.RST_DONE(por_done)
 	);
-
-	assign unconstrained1 = por_done ? 1'bz : vcco_hi_en;
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// Check if the input voltage (10x attenuated, before reference) is greater than 5V.
