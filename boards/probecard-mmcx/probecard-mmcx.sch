@@ -1,0 +1,476 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "STARSHIPRAIDER MMCX Probe Adapter"
+Date "2018-08-08"
+Rev "0.1"
+Comp "Andrew D. Zonenberg"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L special-azonenberg:STARSHIPRAIDER_PROBE_MODULE J1
+U 1 1 5B6B24A6
+P 1200 4200
+F 0 "J1" H 1750 7637 60  0000 C CNN
+F 1 "STARSHIPRAIDER_PROBE_MODULE" H 1750 7531 60  0000 C CNN
+F 2 "azonenberg_pcb:CONN_SAMTEC_QSH-030-01-L-D-A" H 1850 4400 60  0001 C CNN
+F 3 "" H 1850 4400 60  0000 C CNN
+	1    1200 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L memory-azonenberg:24Cxx-DFN8 U1
+U 1 1 5B6B256A
+P 1200 5150
+F 0 "U1" H 1600 5947 60  0000 C CNN
+F 1 "24C04-DFN8" H 1600 5841 60  0000 C CNN
+F 2 "azonenberg_pcb:DFN_8_0.5MM_2x3MM" H 1600 5450 60  0001 C CNN
+F 3 "" H 1600 5450 60  0000 C CNN
+	1    1200 5150
+	1    0    0    -1  
+$EndComp
+Text Notes 1200 5250 0    50   ~ 0
+Address = 8'hA4
+Text Label 900  4700 2    50   ~ 0
+GND
+Text Label 900  4900 2    50   ~ 0
+GND
+Text Label 900  5100 2    50   ~ 0
+GND
+Text Label 900  5000 2    50   ~ 0
+3V3
+Text Label 900  4600 2    50   ~ 0
+3V3
+Wire Wire Line
+	900  4600 1000 4600
+Wire Wire Line
+	1000 4700 900  4700
+Wire Wire Line
+	1000 4900 900  4900
+Wire Wire Line
+	900  5000 1000 5000
+Wire Wire Line
+	1000 5100 900  5100
+Text Label 2350 4600 0    50   ~ 0
+I2C_SDA
+Text Label 2350 4700 0    50   ~ 0
+I2C_SCL
+Wire Wire Line
+	2350 4600 2200 4600
+Wire Wire Line
+	2200 4700 2350 4700
+$Comp
+L special-azonenberg:JUMPER_0402_SPDT J2
+U 1 1 5B6B2807
+P 3250 5100
+F 0 "J2" H 2873 5353 60  0000 R CNN
+F 1 "JUMPER_0402_SPDT" H 2873 5247 60  0000 R CNN
+F 2 "azonenberg_pcb:EIA_0402_JUMPER" H 3250 5100 60  0001 C CNN
+F 3 "" H 3250 5100 60  0000 C CNN
+	1    3250 5100
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 4900 2950 4900
+Text Label 2200 4900 0    50   ~ 0
+EEPROM_WP_N
+Text Label 2950 4800 2    50   ~ 0
+3V3
+Text Label 2950 5000 2    50   ~ 0
+GND
+Text Label 850  1150 2    50   ~ 0
+3V3
+Text Label 850  1250 2    50   ~ 0
+I2C_SDA
+$Comp
+L conn:CONN_COAXIAL J3
+U 1 1 5B6B3CD1
+P 4700 1050
+F 0 "J3" H 4800 1026 50  0000 L CNN
+F 1 "CONN_COAXIAL" H 4800 935 50  0000 L CNN
+F 2 "azonenberg_pcb:CONN_MMCX_J_P_H_ST_EM1" H 4700 1050 50  0001 C CNN
+F 3 "" H 4700 1050 50  0001 C CNN
+	1    4700 1050
+	1    0    0    -1  
+$EndComp
+Text Label 4400 1050 2    50   ~ 0
+DQ0
+Wire Wire Line
+	4400 1050 4550 1050
+Text Label 4400 1250 2    50   ~ 0
+GND
+Wire Wire Line
+	4400 1250 4700 1250
+$Comp
+L conn:CONN_COAXIAL J4
+U 1 1 5B6B424C
+P 4700 1450
+F 0 "J4" H 4800 1426 50  0000 L CNN
+F 1 "CONN_COAXIAL" H 4800 1335 50  0000 L CNN
+F 2 "azonenberg_pcb:CONN_MMCX_J_P_H_ST_EM1" H 4700 1450 50  0001 C CNN
+F 3 "" H 4700 1450 50  0001 C CNN
+	1    4700 1450
+	1    0    0    -1  
+$EndComp
+Text Label 4400 1450 2    50   ~ 0
+DQ1
+Wire Wire Line
+	4400 1450 4550 1450
+Text Label 4400 1650 2    50   ~ 0
+GND
+Wire Wire Line
+	4400 1650 4700 1650
+$Comp
+L conn:CONN_COAXIAL J5
+U 1 1 5B6B4416
+P 4700 1900
+F 0 "J5" H 4800 1876 50  0000 L CNN
+F 1 "CONN_COAXIAL" H 4800 1785 50  0000 L CNN
+F 2 "azonenberg_pcb:CONN_MMCX_J_P_H_ST_EM1" H 4700 1900 50  0001 C CNN
+F 3 "" H 4700 1900 50  0001 C CNN
+	1    4700 1900
+	1    0    0    -1  
+$EndComp
+Text Label 4400 1900 2    50   ~ 0
+DQ2
+Wire Wire Line
+	4400 1900 4550 1900
+Text Label 4400 2100 2    50   ~ 0
+GND
+Wire Wire Line
+	4400 2100 4700 2100
+$Comp
+L conn:CONN_COAXIAL J6
+U 1 1 5B6B4420
+P 4700 2300
+F 0 "J6" H 4800 2276 50  0000 L CNN
+F 1 "CONN_COAXIAL" H 4800 2185 50  0000 L CNN
+F 2 "azonenberg_pcb:CONN_MMCX_J_P_H_ST_EM1" H 4700 2300 50  0001 C CNN
+F 3 "" H 4700 2300 50  0001 C CNN
+	1    4700 2300
+	1    0    0    -1  
+$EndComp
+Text Label 4400 2300 2    50   ~ 0
+DQ3
+Wire Wire Line
+	4400 2300 4550 2300
+Text Label 4400 2500 2    50   ~ 0
+GND
+Wire Wire Line
+	4400 2500 4700 2500
+$Comp
+L conn:CONN_COAXIAL J7
+U 1 1 5B6B494A
+P 6150 1050
+F 0 "J7" H 6250 1026 50  0000 L CNN
+F 1 "CONN_COAXIAL" H 6250 935 50  0000 L CNN
+F 2 "azonenberg_pcb:CONN_MMCX_J_P_H_ST_EM1" H 6150 1050 50  0001 C CNN
+F 3 "" H 6150 1050 50  0001 C CNN
+	1    6150 1050
+	1    0    0    -1  
+$EndComp
+Text Label 5850 1050 2    50   ~ 0
+DQ4
+Wire Wire Line
+	5850 1050 6000 1050
+Text Label 5850 1250 2    50   ~ 0
+GND
+Wire Wire Line
+	5850 1250 6150 1250
+$Comp
+L conn:CONN_COAXIAL J8
+U 1 1 5B6B4954
+P 6150 1450
+F 0 "J8" H 6250 1426 50  0000 L CNN
+F 1 "CONN_COAXIAL" H 6250 1335 50  0000 L CNN
+F 2 "azonenberg_pcb:CONN_MMCX_J_P_H_ST_EM1" H 6150 1450 50  0001 C CNN
+F 3 "" H 6150 1450 50  0001 C CNN
+	1    6150 1450
+	1    0    0    -1  
+$EndComp
+Text Label 5850 1450 2    50   ~ 0
+DQ5
+Wire Wire Line
+	5850 1450 6000 1450
+Text Label 5850 1650 2    50   ~ 0
+GND
+Wire Wire Line
+	5850 1650 6150 1650
+$Comp
+L conn:CONN_COAXIAL J9
+U 1 1 5B6B495E
+P 6150 1900
+F 0 "J9" H 6250 1876 50  0000 L CNN
+F 1 "CONN_COAXIAL" H 6250 1785 50  0000 L CNN
+F 2 "azonenberg_pcb:CONN_MMCX_J_P_H_ST_EM1" H 6150 1900 50  0001 C CNN
+F 3 "" H 6150 1900 50  0001 C CNN
+	1    6150 1900
+	1    0    0    -1  
+$EndComp
+Text Label 5850 1900 2    50   ~ 0
+DQ6
+Wire Wire Line
+	5850 1900 6000 1900
+Text Label 5850 2100 2    50   ~ 0
+GND
+Wire Wire Line
+	5850 2100 6150 2100
+$Comp
+L conn:CONN_COAXIAL J10
+U 1 1 5B6B4968
+P 6150 2300
+F 0 "J10" H 6250 2276 50  0000 L CNN
+F 1 "CONN_COAXIAL" H 6250 2185 50  0000 L CNN
+F 2 "azonenberg_pcb:CONN_MMCX_J_P_H_ST_EM1" H 6150 2300 50  0001 C CNN
+F 3 "" H 6150 2300 50  0001 C CNN
+	1    6150 2300
+	1    0    0    -1  
+$EndComp
+Text Label 5850 2300 2    50   ~ 0
+DQ7
+Wire Wire Line
+	5850 2300 6000 2300
+Text Label 5850 2500 2    50   ~ 0
+GND
+Wire Wire Line
+	5850 2500 6150 2500
+Text Label 2650 1250 0    50   ~ 0
+I2C_SCL
+Wire Wire Line
+	2650 1250 2500 1250
+$Comp
+L conn:CONN_01X02 J11
+U 1 1 5B6B5844
+P 8000 1050
+F 0 "J11" H 8078 1091 50  0000 L CNN
+F 1 "CONN_01X02" H 8078 1000 50  0000 L CNN
+F 2 "azonenberg_pcb:CONN_HEADER_2.54MM_1x2" H 8000 1050 50  0001 C CNN
+F 3 "" H 8000 1050 50  0001 C CNN
+	1    8000 1050
+	1    0    0    -1  
+$EndComp
+Text Label 7650 1000 2    50   ~ 0
+VCCO_REF
+Wire Wire Line
+	7650 1000 7800 1000
+Text Label 7650 1100 2    50   ~ 0
+GND
+Wire Wire Line
+	7650 1100 7800 1100
+Text Label 2650 1150 0    50   ~ 0
+VCCO_REF
+Wire Wire Line
+	2650 1150 2500 1150
+Text Label 2650 1350 0    50   ~ 0
+GND
+Wire Wire Line
+	2650 1350 2500 1350
+Text Label 2650 1650 0    50   ~ 0
+GND
+Wire Wire Line
+	2650 1650 2500 1650
+Text Label 2650 1950 0    50   ~ 0
+GND
+Wire Wire Line
+	2650 1950 2500 1950
+Text Label 2650 2250 0    50   ~ 0
+GND
+Wire Wire Line
+	2650 2250 2500 2250
+Text Label 2650 2250 0    50   ~ 0
+GND
+Text Label 2650 2550 0    50   ~ 0
+GND
+Wire Wire Line
+	2650 2550 2500 2550
+Text Label 2650 2850 0    50   ~ 0
+GND
+Wire Wire Line
+	2650 2850 2500 2850
+Text Label 2650 3150 0    50   ~ 0
+GND
+Wire Wire Line
+	2650 3150 2500 3150
+Text Label 2650 3450 0    50   ~ 0
+GND
+Wire Wire Line
+	2650 3450 2500 3450
+Text Label 2650 3750 0    50   ~ 0
+GND
+Wire Wire Line
+	2650 3750 2500 3750
+Text Label 850  4150 2    50   ~ 0
+GND
+Wire Wire Line
+	850  4150 1000 4150
+Text Label 850  3650 2    50   ~ 0
+GND
+Wire Wire Line
+	850  3650 900  3650
+Wire Wire Line
+	1000 3750 900  3750
+Wire Wire Line
+	900  3750 900  3650
+Connection ~ 900  3650
+Wire Wire Line
+	900  3650 1000 3650
+Text Label 850  3350 2    50   ~ 0
+GND
+Wire Wire Line
+	850  3350 900  3350
+Wire Wire Line
+	1000 3450 900  3450
+Wire Wire Line
+	900  3450 900  3350
+Connection ~ 900  3350
+Wire Wire Line
+	900  3350 1000 3350
+Text Label 850  3050 2    50   ~ 0
+GND
+Wire Wire Line
+	850  3050 900  3050
+Wire Wire Line
+	1000 3150 900  3150
+Wire Wire Line
+	900  3150 900  3050
+Connection ~ 900  3050
+Wire Wire Line
+	900  3050 1000 3050
+Text Label 850  2750 2    50   ~ 0
+GND
+Wire Wire Line
+	850  2750 900  2750
+Wire Wire Line
+	1000 2850 900  2850
+Wire Wire Line
+	900  2850 900  2750
+Connection ~ 900  2750
+Wire Wire Line
+	900  2750 1000 2750
+Text Label 850  2450 2    50   ~ 0
+GND
+Wire Wire Line
+	850  2450 900  2450
+Wire Wire Line
+	1000 2550 900  2550
+Wire Wire Line
+	900  2550 900  2450
+Connection ~ 900  2450
+Wire Wire Line
+	900  2450 1000 2450
+Text Label 850  2150 2    50   ~ 0
+GND
+Wire Wire Line
+	850  2150 900  2150
+Wire Wire Line
+	1000 2250 900  2250
+Wire Wire Line
+	900  2250 900  2150
+Connection ~ 900  2150
+Wire Wire Line
+	900  2150 1000 2150
+Text Label 850  1850 2    50   ~ 0
+GND
+Wire Wire Line
+	850  1850 900  1850
+Wire Wire Line
+	1000 1950 900  1950
+Wire Wire Line
+	900  1950 900  1850
+Connection ~ 900  1850
+Wire Wire Line
+	900  1850 1000 1850
+Text Label 850  1550 2    50   ~ 0
+GND
+Wire Wire Line
+	850  1550 900  1550
+Wire Wire Line
+	1000 1650 900  1650
+Wire Wire Line
+	900  1650 900  1550
+Connection ~ 900  1550
+Wire Wire Line
+	900  1550 1000 1550
+Text Label 850  1350 2    50   ~ 0
+GND
+Wire Wire Line
+	850  1350 1000 1350
+Wire Wire Line
+	850  1250 1000 1250
+Wire Wire Line
+	850  1150 1000 1150
+Text Label 850  1450 2    50   ~ 0
+DQ0
+Wire Wire Line
+	850  1450 1000 1450
+Text Label 850  1750 2    50   ~ 0
+DQ1
+Wire Wire Line
+	850  1750 1000 1750
+Text Label 850  2050 2    50   ~ 0
+DQ2
+Wire Wire Line
+	850  2050 1000 2050
+Text Label 850  2350 2    50   ~ 0
+DQ3
+Wire Wire Line
+	850  2350 1000 2350
+Text Label 850  2650 2    50   ~ 0
+DQ4
+Wire Wire Line
+	850  2650 1000 2650
+Text Label 850  2950 2    50   ~ 0
+DQ5
+Wire Wire Line
+	850  2950 1000 2950
+Text Label 850  3250 2    50   ~ 0
+DQ6
+Wire Wire Line
+	850  3250 1000 3250
+Text Label 850  3550 2    50   ~ 0
+DQ7
+Wire Wire Line
+	850  3550 1000 3550
+$Comp
+L device:C C1
+U 1 1 5B6EA83F
+P 2200 5650
+F 0 "C1" H 2315 5696 50  0000 L CNN
+F 1 "0.47 uF" H 2315 5605 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0402_CAP_NOSILK" H 2238 5500 50  0001 C CNN
+F 3 "" H 2200 5650 50  0001 C CNN
+	1    2200 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C2
+U 1 1 5B6EA8F5
+P 2800 5650
+F 0 "C2" H 2915 5696 50  0000 L CNN
+F 1 "4.7 uF" H 2915 5605 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0603_CAP_NOSILK" H 2838 5500 50  0001 C CNN
+F 3 "" H 2800 5650 50  0001 C CNN
+	1    2800 5650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 5800 2200 5800
+Wire Wire Line
+	2200 5500 2800 5500
+Text Label 2000 5500 2    50   ~ 0
+3V3
+Wire Wire Line
+	2000 5500 2200 5500
+Connection ~ 2200 5500
+Text Label 2000 5800 2    50   ~ 0
+GND
+Wire Wire Line
+	2000 5800 2200 5800
+Connection ~ 2200 5800
+$EndSCHEMATC
