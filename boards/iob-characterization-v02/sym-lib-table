@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name iob-characterization-v02-rescue)(type Legacy)(uri ${KIPRJMOD}/iob-characterization-v02-rescue.lib)(options "")(descr ""))
+)
