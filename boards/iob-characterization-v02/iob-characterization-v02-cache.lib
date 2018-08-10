@@ -19,6 +19,88 @@ X VDD 7 -100 500 100 R 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #
+# device:C
+#
+DEF device:C C 0 10 N Y 1 F N
+F0 "C" 25 100 50 H V L CNN
+F1 "device:C" 25 -100 50 H V L CNN
+F2 "" 38 -150 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ C_*
+$ENDFPLIST
+DRAW
+P 2 0 1 20 -80 -30 80 -30 N
+P 2 0 1 20 -80 30 80 30 N
+X ~ 1 0 150 110 D 50 50 1 1 P
+X ~ 2 0 -150 110 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# device:D_Schottky
+#
+DEF device:D_Schottky D 0 40 N N 1 F N
+F0 "D" 0 100 50 H V C CNN
+F1 "device:D_Schottky" 0 -100 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ TO-???*
+ *SingleDiode
+ *_Diode_*
+ *SingleDiode*
+ D_*
+$ENDFPLIST
+DRAW
+P 2 0 1 0 50 0 -50 0 N
+P 4 0 1 8 50 50 50 -50 -50 0 50 50 N
+P 6 0 1 8 -75 25 -75 50 -50 50 -50 -50 -25 -50 -25 -25 N
+X K 1 -150 0 100 R 50 50 1 1 P
+X A 2 150 0 100 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# device:L
+#
+DEF device:L L 0 40 N N 1 F N
+F0 "L" -50 0 50 V V C CNN
+F1 "device:L" 75 0 50 V V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Choke_*
+ *Coil*
+ Inductor_*
+ L_*
+$ENDFPLIST
+DRAW
+A 0 -75 25 -899 899 0 1 0 N 0 -100 0 -50
+A 0 -25 25 -899 899 0 1 0 N 0 -50 0 0
+A 0 25 25 -899 899 0 1 0 N 0 0 0 50
+A 0 75 25 -899 899 0 1 0 N 0 50 0 100
+X 1 1 0 150 50 D 50 50 1 1 P
+X 2 2 0 -150 50 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# device:R
+#
+DEF device:R R 0 0 N Y 1 F N
+F0 "R" 80 0 50 V V C CNN
+F1 "device:R" 0 0 50 V V C CNN
+F2 "" -70 0 50 V I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ R_*
+ R_*
+$ENDFPLIST
+DRAW
+S -40 -100 40 100 0 1 10 N
+X ~ 1 0 150 50 D 50 50 1 1 P
+X ~ 2 0 -150 50 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
 # iob-characterization-v02-rescue:24Cxx-DFN8
 #
 DEF iob-characterization-v02-rescue:24Cxx-DFN8 U 0 30 Y Y 1 F N
@@ -288,6 +370,28 @@ X NC 3 -100 50 100 R 50 50 1 1 P
 X COM 4 700 50 100 L 50 50 1 1 P
 X VDD 5 -100 500 100 R 50 50 1 1 W
 X SEL 6 700 500 100 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# special-azonenberg:PUSB3FA2Z
+#
+DEF special-azonenberg:PUSB3FA2Z D 0 40 Y Y 1 F N
+F0 "D" 50 -50 60 H V C CNN
+F1 "special-azonenberg:PUSB3FA2Z" 0 -150 60 H V C CNN
+F2 "" 0 0 60 H I C CNN
+F3 "" 0 0 60 H I C CNN
+DRAW
+S 0 700 500 0 0 1 0 f
+X CH1 1 -100 350 100 R 50 50 1 1 P
+X NC 10 600 50 100 L 50 50 1 1 P
+X CH2 2 -100 250 100 R 50 50 1 1 P
+X GND 3 -100 650 100 R 50 50 1 1 W
+X CH3 4 -100 150 100 R 50 50 1 1 P
+X CH4 5 -100 50 100 R 50 50 1 1 P
+X NC 6 600 350 100 L 50 50 1 1 P
+X NC 7 600 250 100 L 50 50 1 1 P
+X GND 8 -100 550 100 R 50 50 1 1 W
+X NC 9 600 150 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #

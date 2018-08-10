@@ -20,8 +20,6 @@ Text HLabel 5300 5350 0    60   Input ~ 0
 5V0
 Text HLabel 5300 5450 0    60   Input ~ 0
 GND
-Text Notes 1400 6650 0    60   ~ 0
-I2C to host is 3.3V, shift it to 5V
 Text HLabel 9900 850  2    60   Output ~ 0
 VCCO_HI
 Text HLabel 5050 1350 0    60   Output ~ 0
