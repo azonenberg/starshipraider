@@ -6,7 +6,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 5 6
 Title "STARSHIPRAIDER I/O Characterization"
-Date "2018-08-09"
+Date "2018-08-10"
 Rev "0.2"
 Comp "Andrew D. Zonenberg"
 Comment1 "Output Level Shifters"
@@ -166,7 +166,7 @@ AR Path="/5B7E3DA7" Ref="C?"  Part="1"
 AR Path="/5B7C6983/5B7E3DA7" Ref="C1"  Part="1" 
 F 0 "C1" H 3715 1196 50  0000 L CNN
 F 1 "0.47 uF" H 3715 1105 50  0000 L CNN
-F 2 "" H 3638 1000 50  0000 C CNN
+F 2 "" H 3638 1000 50  0001 C CNN
 F 3 "" H 3600 1150 50  0000 C CNN
 	1    3600 1150
 	1    0    0    -1  
@@ -179,7 +179,7 @@ AR Path="/5B7E3DAE" Ref="C?"  Part="1"
 AR Path="/5B7C6983/5B7E3DAE" Ref="C5"  Part="1" 
 F 0 "C5" H 4265 1196 50  0000 L CNN
 F 1 "0.47 uF" H 4265 1105 50  0000 L CNN
-F 2 "" H 4188 1000 50  0000 C CNN
+F 2 "" H 4188 1000 50  0001 C CNN
 F 3 "" H 4150 1150 50  0000 C CNN
 	1    4150 1150
 	1    0    0    -1  
@@ -203,7 +203,7 @@ AR Path="/5B7E3DBB" Ref="C?"  Part="1"
 AR Path="/5B7C6983/5B7E3DBB" Ref="C2"  Part="1" 
 F 0 "C2" H 3715 1946 50  0000 L CNN
 F 1 "0.47 uF" H 3715 1855 50  0000 L CNN
-F 2 "" H 3638 1750 50  0000 C CNN
+F 2 "" H 3638 1750 50  0001 C CNN
 F 3 "" H 3600 1900 50  0000 C CNN
 	1    3600 1900
 	1    0    0    -1  
@@ -216,7 +216,7 @@ AR Path="/5B7E3DC2" Ref="C?"  Part="1"
 AR Path="/5B7C6983/5B7E3DC2" Ref="C6"  Part="1" 
 F 0 "C6" H 4265 1946 50  0000 L CNN
 F 1 "0.47 uF" H 4265 1855 50  0000 L CNN
-F 2 "" H 4188 1750 50  0000 C CNN
+F 2 "" H 4188 1750 50  0001 C CNN
 F 3 "" H 4150 1900 50  0000 C CNN
 	1    4150 1900
 	1    0    0    -1  
@@ -240,7 +240,7 @@ AR Path="/5B7E3DCF" Ref="C?"  Part="1"
 AR Path="/5B7C6983/5B7E3DCF" Ref="C3"  Part="1" 
 F 0 "C3" H 3715 2796 50  0000 L CNN
 F 1 "0.47 uF" H 3715 2705 50  0000 L CNN
-F 2 "" H 3638 2600 50  0000 C CNN
+F 2 "" H 3638 2600 50  0001 C CNN
 F 3 "" H 3600 2750 50  0000 C CNN
 	1    3600 2750
 	1    0    0    -1  
@@ -253,7 +253,7 @@ AR Path="/5B7E3DD6" Ref="C?"  Part="1"
 AR Path="/5B7C6983/5B7E3DD6" Ref="C7"  Part="1" 
 F 0 "C7" H 4265 2796 50  0000 L CNN
 F 1 "0.47 uF" H 4265 2705 50  0000 L CNN
-F 2 "" H 4188 2600 50  0000 C CNN
+F 2 "" H 4188 2600 50  0001 C CNN
 F 3 "" H 4150 2750 50  0000 C CNN
 	1    4150 2750
 	1    0    0    -1  
@@ -277,7 +277,7 @@ AR Path="/5B7E3DE3" Ref="C?"  Part="1"
 AR Path="/5B7C6983/5B7E3DE3" Ref="C4"  Part="1" 
 F 0 "C4" H 3715 3546 50  0000 L CNN
 F 1 "0.47 uF" H 3715 3455 50  0000 L CNN
-F 2 "" H 3638 3350 50  0000 C CNN
+F 2 "" H 3638 3350 50  0001 C CNN
 F 3 "" H 3600 3500 50  0000 C CNN
 	1    3600 3500
 	1    0    0    -1  
@@ -290,7 +290,7 @@ AR Path="/5B7E3DEA" Ref="C?"  Part="1"
 AR Path="/5B7C6983/5B7E3DEA" Ref="C8"  Part="1" 
 F 0 "C8" H 4265 3546 50  0000 L CNN
 F 1 "0.47 uF" H 4265 3455 50  0000 L CNN
-F 2 "" H 4188 3350 50  0000 C CNN
+F 2 "" H 4188 3350 50  0001 C CNN
 F 3 "" H 4150 3500 50  0000 C CNN
 	1    4150 3500
 	1    0    0    -1  

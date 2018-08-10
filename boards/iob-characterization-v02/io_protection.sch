@@ -6,7 +6,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 4 6
 Title "STARSHIPRAIDER I/O Characterization"
-Date "2018-08-09"
+Date "2018-08-10"
 Rev "0.2"
 Comp "Andrew D. Zonenberg"
 Comment1 ""
@@ -18,7 +18,7 @@ Text HLabel 1700 1200 0    60   Input ~ 0
 TXD0
 Text HLabel 1700 1500 0    60   Input ~ 0
 TXD1
-Text HLabel 6050 2650 2    60   BiDi ~ 0
+Text HLabel 6800 2500 2    60   BiDi ~ 0
 IO1
 Text HLabel 6800 1000 2    60   BiDi ~ 0
 IO0
@@ -71,8 +71,6 @@ Wire Wire Line
 	2450 1000 2450 1100
 Wire Wire Line
 	2450 1100 2600 1100
-Text Label 2450 1000 2    60   ~ 0
-GND
 Wire Wire Line
 	1900 1300 2600 1300
 Connection ~ 1900 1300
@@ -184,4 +182,111 @@ Wire Wire Line
 Wire Wire Line
 	6500 1000 6500 1700
 Connection ~ 6500 1000
+$Comp
+L device:R R23
+U 1 1 5BA07DF4
+P 6650 2500
+F 0 "R23" V 6443 2500 50  0000 C CNN
+F 1 "TBD" V 6534 2500 50  0000 C CNN
+F 2 "" V 6580 2500 50  0001 C CNN
+F 3 "" H 6650 2500 50  0001 C CNN
+	1    6650 2500
+	0    1    1    0   
+$EndComp
+$Comp
+L device:C C20
+U 1 1 5BA07DFA
+P 4950 2500
+F 0 "C20" V 4698 2500 50  0000 C CNN
+F 1 "TBD" V 4789 2500 50  0000 C CNN
+F 2 "" H 4988 2350 50  0001 C CNN
+F 3 "" H 4950 2500 50  0001 C CNN
+	1    4950 2500
+	0    1    1    0   
+$EndComp
+Text Label 4500 2500 2    60   ~ 0
+TXD1
+Wire Wire Line
+	4500 2500 4800 2500
+Wire Wire Line
+	4500 2500 4500 3200
+$Comp
+L device:D_Schottky D9
+U 1 1 5BA07E03
+P 5150 3350
+F 0 "D9" V 5104 3429 50  0000 L CNN
+F 1 "TBD" V 5195 3429 50  0000 L CNN
+F 2 "" H 5150 3350 50  0001 C CNN
+F 3 "" H 5150 3350 50  0001 C CNN
+	1    5150 3350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4900 3200 5150 3200
+$Comp
+L device:D_Schottky D8
+U 1 1 5BA07E0A
+P 5150 3050
+F 0 "D8" V 5104 3129 50  0000 L CNN
+F 1 "TBD" V 5195 3129 50  0000 L CNN
+F 2 "" H 5150 3050 50  0001 C CNN
+F 3 "" H 5150 3050 50  0001 C CNN
+	1    5150 3050
+	0    1    1    0   
+$EndComp
+Connection ~ 5150 3200
+Text Label 5050 3500 2    60   ~ 0
+GND
+Wire Wire Line
+	5050 3500 5150 3500
+Text Label 5050 2900 2    60   ~ 0
+VCCO
+Wire Wire Line
+	5050 2900 5150 2900
+$Comp
+L device:L L3
+U 1 1 5BA07E15
+P 4750 3200
+F 0 "L3" V 4572 3200 50  0000 C CNN
+F 1 "TBD" V 4663 3200 50  0000 C CNN
+F 2 "" H 4750 3200 50  0001 C CNN
+F 3 "" H 4750 3200 50  0001 C CNN
+	1    4750 3200
+	0    1    1    0   
+$EndComp
+$Comp
+L device:L L4
+U 1 1 5BA07E1B
+P 6350 3200
+F 0 "L4" V 6172 3200 50  0000 C CNN
+F 1 "TBD" V 6263 3200 50  0000 C CNN
+F 2 "" H 6350 3200 50  0001 C CNN
+F 3 "" H 6350 3200 50  0001 C CNN
+	1    6350 3200
+	0    1    1    0   
+$EndComp
+$Comp
+L device:R R22
+U 1 1 5BA07E21
+P 5800 3200
+F 0 "R22" V 5593 3200 50  0000 C CNN
+F 1 "TBD" V 5684 3200 50  0000 C CNN
+F 2 "" V 5730 3200 50  0001 C CNN
+F 3 "" H 5800 3200 50  0001 C CNN
+	1    5800 3200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5650 3200 5150 3200
+Wire Wire Line
+	4500 3200 4600 3200
+Wire Wire Line
+	6200 3200 5950 3200
+Wire Wire Line
+	5100 2500 6500 2500
+Wire Wire Line
+	6500 2500 6500 3200
+Connection ~ 6500 2500
+Text HLabel 2450 1000 0    60   Input ~ 0
+GND
 $EndSCHEMATC
