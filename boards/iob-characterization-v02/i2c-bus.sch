@@ -6,7 +6,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 6 6
 Title "STARSHIPRAIDER I/O Characterization"
-Date "2018-08-13"
+Date "2018-08-15"
 Rev "0.2"
 Comp "Andrew D. Zonenberg"
 Comment1 ""
@@ -78,7 +78,7 @@ AR Path="/5B932A89" Ref="U?"  Part="1"
 AR Path="/5B92BCA2/5B932A89" Ref="U14"  Part="1" 
 F 0 "U14" H 3725 4647 60  0000 C CNN
 F 1 "PCA9306" H 3725 4541 60  0000 C CNN
-F 2 "" H 3600 3850 60  0001 C CNN
+F 2 "azonenberg_pcb:DFN_8_0.35MM_1x1.4MM" H 3600 3850 60  0001 C CNN
 F 3 "" H 3600 3850 60  0001 C CNN
 	1    3350 3850
 	1    0    0    -1  
@@ -230,7 +230,7 @@ AR Path="/5B932ADB" Ref="U?"  Part="1"
 AR Path="/5B92BCA2/5B932ADB" Ref="U17"  Part="1" 
 F 0 "U17" H 8650 6597 60  0000 C CNN
 F 1 "LTC2451" H 8650 6491 60  0000 C CNN
-F 2 "" H 8250 5700 60  0001 C CNN
+F 2 "azonenberg_pcb:DFN_8_0.5MM_2x3MM" H 8250 5700 60  0001 C CNN
 F 3 "" H 8250 5700 60  0001 C CNN
 	1    8250 5700
 	1    0    0    -1  
@@ -261,7 +261,7 @@ AR Path="/5B932AEB" Ref="C?"  Part="1"
 AR Path="/5B92BCA2/5B932AEB" Ref="C15"  Part="1" 
 F 0 "C15" H 7465 5246 50  0000 L CNN
 F 1 "0.1 uF" H 7465 5155 50  0000 L CNN
-F 2 "" H 7388 5050 50  0001 C CNN
+F 2 "azonenberg_pcb:EIA_0402_CAP_NOSILK" H 7388 5050 50  0001 C CNN
 F 3 "" H 7350 5200 50  0000 C CNN
 	1    7350 5200
 	1    0    0    -1  
@@ -290,7 +290,7 @@ AR Path="/5B932AFB" Ref="C?"  Part="1"
 AR Path="/5B92BCA2/5B932AFB" Ref="C12"  Part="1" 
 F 0 "C12" H 6965 5246 50  0000 L CNN
 F 1 "10 uF" H 6965 5155 50  0000 L CNN
-F 2 "" H 6888 5050 50  0001 C CNN
+F 2 "azonenberg_pcb:EIA_0805_CAP_NOSILK" H 6888 5050 50  0001 C CNN
 F 3 "" H 6850 5200 50  0000 C CNN
 	1    6850 5200
 	1    0    0    -1  
@@ -307,7 +307,7 @@ AR Path="/5B932B06" Ref="U?"  Part="1"
 AR Path="/5B92BCA2/5B932B06" Ref="U15"  Part="1" 
 F 0 "U15" H 8575 3797 60  0000 C CNN
 F 1 "MCP4726A0" H 8575 3691 60  0000 C CNN
-F 2 "" H 8200 2550 60  0001 C CNN
+F 2 "azonenberg_pcb:SOT23_6" H 8200 2550 60  0001 C CNN
 F 3 "" H 8200 2550 60  0001 C CNN
 	1    8250 2800
 	1    0    0    -1  
@@ -364,7 +364,7 @@ AR Path="/5B932B25" Ref="U?"  Part="1"
 AR Path="/5B92BCA2/5B932B25" Ref="U16"  Part="1" 
 F 0 "U16" H 8575 5247 60  0000 C CNN
 F 1 "MCP4726A1" H 8575 5141 60  0000 C CNN
-F 2 "" H 8200 4000 60  0001 C CNN
+F 2 "azonenberg_pcb:SOT23_6" H 8200 4000 60  0001 C CNN
 F 3 "" H 8200 4000 60  0001 C CNN
 	1    8250 4250
 	1    0    0    -1  

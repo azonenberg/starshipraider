@@ -6,7 +6,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 6
 Title "STARSHIPRAIDER I/O Characterization"
-Date "2018-08-13"
+Date "2018-08-15"
 Rev "0.2"
 Comp "Andrew D. Zonenberg"
 Comment1 ""
@@ -26,7 +26,7 @@ F 3 "" H 2050 4250 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Sheet
-S 1350 4750 1100 1150
+S 1350 4750 1100 1250
 U 591D3AB5
 F0 "Power Supply" 60
 F1 "psu.sch" 60
@@ -40,6 +40,8 @@ F8 "VCCO_IS_HI" O R 2450 5100 60
 F9 "I2C_SDA" B L 1350 5500 60 
 F10 "I2C_SCL" I L 1350 5600 60 
 F11 "3V3" I L 1350 4900 60 
+F12 "CH0_TERM_EN" O L 1350 5800 60 
+F13 "CH1_TERM_EN" O L 1350 5900 60 
 $EndSheet
 Text Label 1050 900  2    60   ~ 0
 5V0
@@ -165,9 +167,9 @@ Text Label 1200 5100 2    60   ~ 0
 GND
 Wire Wire Line
 	1200 5100 1350 5100
-Text Label 2850 1300 0    60   ~ 0
-RXD0_P
 Text Label 2850 1400 0    60   ~ 0
+RXD0_P
+Text Label 2850 1300 0    60   ~ 0
 RXD0_N
 Wire Wire Line
 	2700 1300 2850 1300
@@ -409,7 +411,7 @@ Series terminator of 33R\nWith -12V fault voltage into 5V output, we have 515 mA
 Text Notes 5850 11100 0    60   ~ 0
 HIGH SIDE LIMITS:\n* TX, active: Vcc + 0.5V, or 50 mA\n* RX: +12.2V (no protection needed!)\n\nLOW SIDE LIMITS\n* TX, active: -0.5V, or 50 mA\n* RX: Vee - 0.2V
 $Sheet
-S 6200 4750 1000 1150
+S 6200 4750 1000 1450
 U 5B7E4C7E
 F0 "Input Buffers" 60
 F1 "input_buffers.sch" 60
@@ -423,6 +425,11 @@ F8 "RXD0_N" O R 7200 4900 60
 F9 "RXD1_P" O R 7200 5100 60 
 F10 "RXD1_N" O R 7200 5200 60 
 F11 "2V5" I L 6200 5200 60 
+F12 "CH1_TERM_EN" I R 7200 5550 60 
+F13 "CH0_TERM_EN" I R 7200 5650 60 
+F14 "CH1_OE" I R 7200 5850 60 
+F15 "CH0_OE" I R 7200 5950 60 
+F16 "5V0" I L 6200 5500 60 
 $EndSheet
 Wire Wire Line
 	5800 1000 5650 1000
@@ -619,4 +626,34 @@ Text Label 4600 5650 2    60   ~ 0
 GND
 Wire Wire Line
 	4600 5650 4800 5650
+Text Notes 7550 950  0    60   ~ 0
+Invert RXD0
+Text Label 1200 5800 2    60   ~ 0
+CH0_TERM_EN
+Wire Wire Line
+	1200 5800 1350 5800
+Text Label 1200 5900 2    60   ~ 0
+CH1_TERM_EN
+Wire Wire Line
+	1200 5900 1350 5900
+Text Label 7400 5650 0    60   ~ 0
+CH0_TERM_EN
+Wire Wire Line
+	7400 5650 7200 5650
+Text Label 7400 5550 0    60   ~ 0
+CH1_TERM_EN
+Wire Wire Line
+	7400 5550 7200 5550
+Text Label 7400 5950 0    60   ~ 0
+OE0
+Text Label 7400 5850 0    60   ~ 0
+OE1
+Wire Wire Line
+	7400 5850 7200 5850
+Wire Wire Line
+	7200 5950 7400 5950
+Text Label 6050 5500 2    60   ~ 0
+5V0
+Wire Wire Line
+	6050 5500 6200 5500
 $EndSCHEMATC
