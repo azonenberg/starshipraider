@@ -595,4 +595,34 @@ Text HLabel 2950 5950 2    60   Input ~ 0
 CH0_OE
 Text HLabel 2050 4600 0    60   Input ~ 0
 5V0
+$Comp
+L device:C C38
+U 1 1 5B765805
+P 3600 4750
+F 0 "C38" H 3715 4796 50  0000 L CNN
+F 1 "0.47 uF" H 3715 4705 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0402_CAP_NOSILK" H 3638 4600 50  0001 C CNN
+F 3 "" H 3600 4750 50  0001 C CNN
+	1    3600 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C39
+U 1 1 5B765929
+P 4150 4750
+F 0 "C39" H 4265 4796 50  0000 L CNN
+F 1 "0.47 uF" H 4265 4705 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0402_CAP_NOSILK" H 4188 4600 50  0001 C CNN
+F 3 "" H 4150 4750 50  0001 C CNN
+	1    4150 4750
+	1    0    0    -1  
+$EndComp
+Text Label 3600 4600 2    60   ~ 0
+5V0
+Wire Wire Line
+	3600 4600 4150 4600
+Text Label 3600 4900 2    60   ~ 0
+GND
+Wire Wire Line
+	3600 4900 4150 4900
 $EndSCHEMATC

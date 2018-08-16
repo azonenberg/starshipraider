@@ -54,8 +54,6 @@ Wire Wire Line
 	9900 850  9800 850 
 Wire Wire Line
 	9900 1900 9800 1900
-Text Label 8550 1900 2    60   ~ 0
-VCCO
 Text Label 8550 1050 2    60   ~ 0
 GND
 Text Label 8550 2100 2    60   ~ 0
@@ -96,7 +94,7 @@ $EndComp
 Wire Wire Line
 	7200 5600 7250 5600
 Wire Wire Line
-	7350 5400 7200 5400
+	7350 5400 7250 5400
 Text Label 9450 5800 0    50   ~ 0
 VCCO
 Wire Wire Line
@@ -114,13 +112,13 @@ Wire Wire Line
 	7200 5800 7350 5800
 Text Notes 7450 6200 0    50   ~ 0
 Buffer DAC output to generate VCCO
-Text HLabel 2100 850  0    60   Output ~ 0
+Text HLabel 2100 1450 0    60   Output ~ 0
 VCCO_IS_HI
 Text Label 8550 1350 2    60   ~ 0
 VCCO_IS_HI
 Text Label 8550 2400 2    60   ~ 0
 VCCO_IS_LO
-Text Label 2100 950  2    60   ~ 0
+Text Label 2100 1550 2    60   ~ 0
 VCCO_IS_LO
 $Comp
 L power-azonenberg:LDO1117-XX U18
@@ -134,15 +132,15 @@ F 3 "" H 9200 3250 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	10250 3350 10100 3350
+	10250 3350 10150 3350
 Text Label 8200 3900 2    60   ~ 0
 GND
 Wire Wire Line
-	8200 3900 9250 3900
+	8200 3900 8300 3900
 Text Label 8200 3350 2    60   ~ 0
 5V0
 Wire Wire Line
-	8200 3350 8450 3350
+	8200 3350 8300 3350
 $Comp
 L device:C C19
 U 1 1 5B9E3C30
@@ -249,7 +247,7 @@ Wire Wire Line
 	3600 1750 3750 1750
 Text Notes 2300 3500 0    60   ~ 0
 Address = 8'h44
-Text Label 2100 1050 2    60   ~ 0
+Text Label 2100 3050 2    60   ~ 0
 VCCO_REF_TOOHIGH
 Text Label 5750 1050 2    60   ~ 0
 VCCO_REF_TOOHIGH
@@ -279,10 +277,6 @@ Text Label 6500 1050 0    60   ~ 0
 GND
 Wire Wire Line
 	6500 1050 6350 1050
-NoConn ~ 2100 3350
-NoConn ~ 2100 3250
-NoConn ~ 2100 3150
-NoConn ~ 2100 3050
 NoConn ~ 2100 2950
 NoConn ~ 2100 2850
 NoConn ~ 2100 2750
@@ -307,11 +301,7 @@ F 3 "" H 2800 4800 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 NoConn ~ 2000 4800
-Text Label 2100 1150 2    60   ~ 0
-VCCO_OVERCURRENT
-Text Label 2100 1250 2    60   ~ 0
-VCCO_UNDERVOLT
-Text Label 2100 1350 2    60   ~ 0
+Text Label 2100 3350 2    60   ~ 0
 VCCO_OVERVOLT
 Text Label 5750 1400 2    60   ~ 0
 VCCO_OVERCURRENT
@@ -430,7 +420,7 @@ Text Label 3550 4700 0    60   ~ 0
 VSHUNT_LO
 Text Label 3550 4600 0    60   ~ 0
 VSHUNT_HI
-Text Label 3550 4800 0    50   ~ 0
+Text Label 3550 4800 0    60   ~ 0
 VCCO
 Text Label 3550 5000 0    60   ~ 0
 3V3
@@ -447,8 +437,156 @@ Wire Wire Line
 Connection ~ 7250 5600
 Wire Wire Line
 	7250 5600 7350 5600
-Text HLabel 2100 1450 0    60   Output ~ 0
+Text HLabel 2100 850  0    60   Output ~ 0
 CH0_TERM_EN
-Text HLabel 2100 1550 0    60   Output ~ 0
+Text HLabel 2100 950  0    60   Output ~ 0
 CH1_TERM_EN
+$Comp
+L device:C C33
+U 1 1 5B756701
+P 4650 4700
+F 0 "C33" H 4765 4746 50  0000 L CNN
+F 1 "0.47 uF" H 4765 4655 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0402_CAP_NOSILK" H 4688 4550 50  0001 C CNN
+F 3 "" H 4650 4700 50  0001 C CNN
+	1    4650 4700
+	1    0    0    -1  
+$EndComp
+Text Label 4550 4850 2    60   ~ 0
+GND
+Wire Wire Line
+	4550 4850 4650 4850
+Text Label 4550 4550 2    60   ~ 0
+3V3
+Wire Wire Line
+	4550 4550 4650 4550
+$Comp
+L device:C C31
+U 1 1 5B7581DB
+P 3800 900
+F 0 "C31" H 3915 946 50  0000 L CNN
+F 1 "0.47 uF" H 3915 855 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0402_CAP_NOSILK" H 3838 750 50  0001 C CNN
+F 3 "" H 3800 900 50  0001 C CNN
+	1    3800 900 
+	1    0    0    -1  
+$EndComp
+Text Label 3800 750  2    60   ~ 0
+5V0
+$Comp
+L device:C C32
+U 1 1 5B7582FB
+P 4350 900
+F 0 "C32" H 4465 946 50  0000 L CNN
+F 1 "0.47 uF" H 4465 855 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0402_CAP_NOSILK" H 4388 750 50  0001 C CNN
+F 3 "" H 4350 900 50  0001 C CNN
+	1    4350 900 
+	1    0    0    -1  
+$EndComp
+Text Label 4350 750  0    60   ~ 0
+3V3
+Wire Wire Line
+	3300 1050 3800 1050
+Wire Wire Line
+	3800 1050 4350 1050
+Connection ~ 3800 1050
+$Comp
+L device:C C35
+U 1 1 5B75BD34
+P 9450 5950
+F 0 "C35" H 9565 5996 50  0000 L CNN
+F 1 "4.7 uF" H 9565 5905 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0603_CAP_NOSILK" H 9488 5800 50  0001 C CNN
+F 3 "" H 9450 5950 50  0001 C CNN
+	1    9450 5950
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C36
+U 1 1 5B75BDE0
+P 9950 5950
+F 0 "C36" H 10065 5996 50  0000 L CNN
+F 1 "4.7 uF" H 10065 5905 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0603_CAP_NOSILK" H 9988 5800 50  0001 C CNN
+F 3 "" H 9950 5950 50  0001 C CNN
+	1    9950 5950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9950 5800 9450 5800
+Connection ~ 9450 5800
+Wire Wire Line
+	9450 6100 9950 6100
+Text Label 9350 6100 2    60   ~ 0
+GND
+Wire Wire Line
+	9350 6100 9450 6100
+Connection ~ 9450 6100
+$Comp
+L device:C C34
+U 1 1 5B75F0B2
+P 8300 3500
+F 0 "C34" H 8415 3546 50  0000 L CNN
+F 1 "4.7 uF" H 8415 3455 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0603_CAP_NOSILK" H 8338 3350 50  0001 C CNN
+F 3 "" H 8300 3500 50  0001 C CNN
+	1    8300 3500
+	1    0    0    -1  
+$EndComp
+Connection ~ 8300 3350
+Wire Wire Line
+	8300 3350 8450 3350
+$Comp
+L device:C C37
+U 1 1 5B75F19A
+P 10150 3500
+F 0 "C37" H 10265 3546 50  0000 L CNN
+F 1 "4.7 uF" H 10265 3455 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0603_CAP_NOSILK" H 10188 3350 50  0001 C CNN
+F 3 "" H 10150 3500 50  0001 C CNN
+	1    10150 3500
+	1    0    0    -1  
+$EndComp
+Connection ~ 10150 3350
+Wire Wire Line
+	10150 3350 10100 3350
+Wire Wire Line
+	10150 3650 10150 3900
+Wire Wire Line
+	10150 3900 9250 3900
+Connection ~ 9250 3900
+Wire Wire Line
+	8300 3650 8300 3900
+Connection ~ 8300 3900
+Wire Wire Line
+	8300 3900 9250 3900
+$Comp
+L device:C C40
+U 1 1 5B76B3AA
+P 7250 5050
+F 0 "C40" H 7365 5096 50  0000 L CNN
+F 1 "4.7 uF" H 7365 5005 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0603_CAP_NOSILK" H 7288 4900 50  0001 C CNN
+F 3 "" H 7250 5050 50  0001 C CNN
+	1    7250 5050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7250 5200 7250 5400
+Connection ~ 7250 5400
+Wire Wire Line
+	7250 5400 7200 5400
+Text Label 7250 4900 2    60   ~ 0
+GND
+Text Label 2100 3150 2    60   ~ 0
+VCCO_OVERCURRENT
+Text Label 2100 3250 2    60   ~ 0
+VCCO_UNDERVOLT
+NoConn ~ 2100 1350
+NoConn ~ 2100 1250
+NoConn ~ 2100 1150
+NoConn ~ 2100 1050
+Text HLabel 8550 1900 0    60   Output ~ 0
+VCCO
 $EndSCHEMATC

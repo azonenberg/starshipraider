@@ -1,11 +1,11 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# analog-azonenberg:ISL24021IRT065Z-T7A‎
+# analog-azonenberg_ISL24021IRT065Z-T7A‎
 #
-DEF analog-azonenberg:ISL24021IRT065Z-T7A‎ U 0 40 Y Y 1 F N
+DEF analog-azonenberg_ISL24021IRT065Z-T7A‎ U 0 40 Y Y 1 F N
 F0 "U" 0 -50 50 H V C CNN
-F1 "analog-azonenberg:ISL24021IRT065Z-T7A‎" 0 -150 50 H V C CNN
+F1 "analog-azonenberg_ISL24021IRT065Z-T7A‎" 0 -150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -20,11 +20,36 @@ X VSS PAD -100 500 100 R 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #
-# device:C
+# conn_CONN_COAXIAL
 #
-DEF device:C C 0 10 N Y 1 F N
+DEF conn_CONN_COAXIAL J 0 40 Y N 1 F N
+F0 "J" 10 120 50 H V C CNN
+F1 "conn_CONN_COAXIAL" 115 0 50 V V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ *BNC*
+ *SMA*
+ *SMB*
+ *SMC*
+ *Cinch*
+$ENDFPLIST
+DRAW
+A -2 0 71 1636 0 0 1 10 N -70 20 70 0
+A -1 0 71 0 -1638 0 1 10 N 70 0 -70 -20
+C 0 0 20 0 1 8 N
+P 2 0 1 0 -50 0 -20 0 N
+P 2 0 1 0 0 -100 0 -70 N
+X In 1 -150 0 100 R 50 50 1 1 P
+X Ext 2 0 -200 100 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# device_C
+#
+DEF device_C C 0 10 N Y 1 F N
 F0 "C" 25 100 50 H V L CNN
-F1 "device:C" 25 -100 50 H V L CNN
+F1 "device_C" 25 -100 50 H V L CNN
 F2 "" 38 -150 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -38,11 +63,11 @@ X ~ 2 0 -150 110 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# device:D_Schottky
+# device_D_Schottky
 #
-DEF device:D_Schottky D 0 40 N N 1 F N
+DEF device_D_Schottky D 0 40 N N 1 F N
 F0 "D" 0 100 50 H V C CNN
-F1 "device:D_Schottky" 0 -100 50 H V C CNN
+F1 "device_D_Schottky" 0 -100 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -61,11 +86,11 @@ X A 2 150 0 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# device:L
+# device_L
 #
-DEF device:L L 0 40 N N 1 F N
+DEF device_L L 0 40 N N 1 F N
 F0 "L" -50 0 50 V V C CNN
-F1 "device:L" 75 0 50 V V C CNN
+F1 "device_L" 75 0 50 V V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -84,11 +109,11 @@ X 2 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# device:LED
+# device_LED
 #
-DEF device:LED D 0 40 Y N 1 F N
+DEF device_LED D 0 40 Y N 1 F N
 F0 "D" 0 100 50 H V C CNN
-F1 "device:LED" 0 -100 50 H V C CNN
+F1 "device_LED" 0 -100 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -105,11 +130,11 @@ X A 2 150 0 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# device:R
+# device_R
 #
-DEF device:R R 0 0 N Y 1 F N
+DEF device_R R 0 0 N Y 1 F N
 F0 "R" 80 0 50 V V C CNN
-F1 "device:R" 0 0 50 V V C CNN
+F1 "device_R" 0 0 50 V V C CNN
 F2 "" -70 0 50 V I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -123,11 +148,11 @@ X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# iob-characterization-v02-rescue:24Cxx-DFN8
+# iob-characterization-v02-rescue_24Cxx-DFN8
 #
-DEF iob-characterization-v02-rescue:24Cxx-DFN8 U 0 30 Y Y 1 F N
+DEF iob-characterization-v02-rescue_24Cxx-DFN8 U 0 30 Y Y 1 F N
 F0 "U" 550 650 60 H V C CNN
-F1 "iob-characterization-v02-rescue:24Cxx-DFN8" 700 -50 60 H V C CNN
+F1 "iob-characterization-v02-rescue_24Cxx-DFN8" 700 -50 60 H V C CNN
 F2 "" 400 300 60 H V C CNN
 F3 "" 400 300 60 H V C CNN
 $FPLIST
@@ -146,11 +171,11 @@ X VDD 8 -200 550 200 R 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #
-# iob-characterization-v02-rescue:C
+# iob-characterization-v02-rescue_C
 #
-DEF iob-characterization-v02-rescue:C C 0 10 N Y 1 F N
+DEF iob-characterization-v02-rescue_C C 0 10 N Y 1 F N
 F0 "C" 25 100 50 H V L CNN
-F1 "iob-characterization-v02-rescue:C" 25 -100 50 H V L CNN
+F1 "iob-characterization-v02-rescue_C" 25 -100 50 H V L CNN
 F2 "" 38 -150 50 H V C CNN
 F3 "" 0 0 50 H V C CNN
 $FPLIST
@@ -168,11 +193,11 @@ X ~ 2 0 -150 110 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# iob-characterization-v02-rescue:LMH7322
+# iob-characterization-v02-rescue_LMH7322
 #
-DEF iob-characterization-v02-rescue:LMH7322 U 0 40 Y Y 2 L N
+DEF iob-characterization-v02-rescue_LMH7322 U 0 40 Y Y 2 L N
 F0 "U" -500 -100 60 H V L CNN
-F1 "iob-characterization-v02-rescue:LMH7322" 350 -100 60 H V R CNN
+F1 "iob-characterization-v02-rescue_LMH7322" 350 -100 60 H V R CNN
 F2 "" -500 -50 60 H V C CNN
 F3 "" -500 -50 60 H V C CNN
 DRAW
@@ -212,11 +237,11 @@ X VCCO 21 550 800 200 L 50 50 2 1 W
 ENDDRAW
 ENDDEF
 #
-# iob-characterization-v02-rescue:LTC2451
+# iob-characterization-v02-rescue_LTC2451
 #
-DEF iob-characterization-v02-rescue:LTC2451 U 0 40 Y Y 1 F N
+DEF iob-characterization-v02-rescue_LTC2451 U 0 40 Y Y 1 F N
 F0 "U" 0 -50 60 H V L CNN
-F1 "iob-characterization-v02-rescue:LTC2451" 0 -150 60 H V L CNN
+F1 "iob-characterization-v02-rescue_LTC2451" 0 -150 60 H V L CNN
 F2 "" 0 0 60 H I C CNN
 F3 "" 0 0 60 H I C CNN
 DRAW
@@ -233,11 +258,11 @@ X GND PAD -200 350 200 R 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #
-# iob-characterization-v02-rescue:MCP4726_SOT23
+# iob-characterization-v02-rescue_MCP4726_SOT23
 #
-DEF iob-characterization-v02-rescue:MCP4726_SOT23 U 0 40 Y Y 1 F N
+DEF iob-characterization-v02-rescue_MCP4726_SOT23 U 0 40 Y Y 1 F N
 F0 "U" 0 -50 60 H V L CNN
-F1 "iob-characterization-v02-rescue:MCP4726_SOT23" 0 -150 60 H V L CNN
+F1 "iob-characterization-v02-rescue_MCP4726_SOT23" 0 -150 60 H V L CNN
 F2 "" -50 -250 60 H I C CNN
 F3 "" -50 -250 60 H I C CNN
 DRAW
@@ -251,11 +276,11 @@ X VREF 6 -300 750 300 R 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# iob-characterization-v02-rescue:PCA9306
+# iob-characterization-v02-rescue_PCA9306
 #
-DEF iob-characterization-v02-rescue:PCA9306 U 0 40 Y Y 1 F N
+DEF iob-characterization-v02-rescue_PCA9306 U 0 40 Y Y 1 F N
 F0 "U" 0 -50 60 H V L CNN
-F1 "iob-characterization-v02-rescue:PCA9306" 0 -150 60 H V L CNN
+F1 "iob-characterization-v02-rescue_PCA9306" 0 -150 60 H V L CNN
 F2 "" 250 0 60 H I C CNN
 F3 "" 250 0 60 H I C CNN
 DRAW
@@ -271,11 +296,11 @@ X EN 8 950 350 200 L 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# iob-characterization-v02-rescue:R
+# iob-characterization-v02-rescue_R
 #
-DEF iob-characterization-v02-rescue:R R 0 0 N Y 1 F N
+DEF iob-characterization-v02-rescue_R R 0 0 N Y 1 F N
 F0 "R" 80 0 50 V V C CNN
-F1 "iob-characterization-v02-rescue:R" 0 0 50 V V C CNN
+F1 "iob-characterization-v02-rescue_R" 0 0 50 V V C CNN
 F2 "" -70 0 50 V V C CNN
 F3 "" 0 0 50 H V C CNN
 $FPLIST
@@ -289,11 +314,11 @@ X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# iob-characterization-v02-rescue:SIP32408
+# iob-characterization-v02-rescue_SIP32408
 #
-DEF iob-characterization-v02-rescue:SIP32408 U 0 40 Y Y 1 F N
+DEF iob-characterization-v02-rescue_SIP32408 U 0 40 Y Y 1 F N
 F0 "U" 0 -50 60 H V L CNN
-F1 "iob-characterization-v02-rescue:SIP32408" 0 -150 60 H V L CNN
+F1 "iob-characterization-v02-rescue_SIP32408" 0 -150 60 H V L CNN
 F2 "" 0 0 60 H V C CNN
 F3 "" 0 0 60 H V C CNN
 DRAW
@@ -306,11 +331,11 @@ X GND PAD -200 250 200 R 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #
-# passive-azonenberg:R-4TERM
+# passive-azonenberg_R-4TERM
 #
-DEF passive-azonenberg:R-4TERM R 0 0 N Y 1 F N
+DEF passive-azonenberg_R-4TERM R 0 0 N Y 1 F N
 F0 "R" 80 0 50 V V C CNN
-F1 "passive-azonenberg:R-4TERM" 0 0 50 V V C CNN
+F1 "passive-azonenberg_R-4TERM" 0 0 50 V V C CNN
 F2 "" 0 0 60 H V C CNN
 F3 "" 0 0 60 H V C CNN
 $FPLIST
@@ -331,11 +356,11 @@ X Vi 4 50 -300 100 U 60 60 1 1 W
 ENDDRAW
 ENDDEF
 #
-# power-azonenberg:LDO1117-XX
+# power-azonenberg_LDO1117-XX
 #
-DEF power-azonenberg:LDO1117-XX U 0 40 Y Y 1 F N
+DEF power-azonenberg_LDO1117-XX U 0 40 Y Y 1 F N
 F0 "U" 50 0 60 H V C CNN
-F1 "power-azonenberg:LDO1117-XX" 50 -100 60 H V C CNN
+F1 "power-azonenberg_LDO1117-XX" 50 -100 60 H V C CNN
 F2 "" 0 0 60 H V C CNN
 F3 "" 0 0 60 H V C CNN
 DRAW
@@ -346,11 +371,11 @@ X Vin 3 -750 -100 300 R 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #
-# special-azonenberg:74AVCH1T45_DSBGA
+# special-azonenberg_74AVCH1T45_DSBGA
 #
-DEF special-azonenberg:74AVCH1T45_DSBGA U 0 40 Y Y 1 F N
+DEF special-azonenberg_74AVCH1T45_DSBGA U 0 40 Y Y 1 F N
 F0 "U" 0 -50 60 H V L CNN
-F1 "special-azonenberg:74AVCH1T45_DSBGA" 800 -150 60 H V R CNN
+F1 "special-azonenberg_74AVCH1T45_DSBGA" 800 -150 60 H V R CNN
 F2 "" 0 0 60 H I C CNN
 F3 "" 0 0 60 H I C CNN
 DRAW
@@ -364,11 +389,11 @@ X B C2 750 50 200 L 50 50 1 1 B
 ENDDRAW
 ENDDEF
 #
-# special-azonenberg:DG3257DN-T1-GE4
+# special-azonenberg_DG3257DN-T1-GE4
 #
-DEF special-azonenberg:DG3257DN-T1-GE4 U 0 40 Y Y 1 F N
+DEF special-azonenberg_DG3257DN-T1-GE4 U 0 40 Y Y 1 F N
 F0 "U" 0 -50 50 H V C CNN
-F1 "special-azonenberg:DG3257DN-T1-GE4" 50 -150 50 H V C CNN
+F1 "special-azonenberg_DG3257DN-T1-GE4" 50 -150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -385,11 +410,11 @@ X SEL 6 700 500 100 L 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# special-azonenberg:INA226
+# special-azonenberg_INA226
 #
-DEF special-azonenberg:INA226 U 0 40 Y Y 1 F N
+DEF special-azonenberg_INA226 U 0 40 Y Y 1 F N
 F0 "U" 0 0 60 H V C CNN
-F1 "special-azonenberg:INA226" 0 -100 60 H V C CNN
+F1 "special-azonenberg_INA226" 0 -100 60 H V C CNN
 F2 "" 0 0 60 H V C CNN
 F3 "" 0 0 60 H V C CNN
 DRAW
@@ -407,11 +432,34 @@ X Vin- 9 750 100 300 L 60 60 1 1 I
 ENDDRAW
 ENDDEF
 #
-# special-azonenberg:PUSB3FA2Z
+# special-azonenberg_JUMPER_0402_SPDT
 #
-DEF special-azonenberg:PUSB3FA2Z D 0 40 Y Y 1 F N
+DEF special-azonenberg_JUMPER_0402_SPDT J 0 40 Y Y 1 F N
+F0 "J" 0 -50 60 H V C CNN
+F1 "special-azonenberg_JUMPER_0402_SPDT" 0 -150 60 H V C CNN
+F2 "" 0 0 60 H V C CNN
+F3 "" 0 0 60 H V C CNN
+DRAW
+C -200 100 0 0 1 0 N
+C -200 100 50 0 1 0 N
+C -200 300 50 0 1 0 N
+S -350 400 0 0 0 1 0 N
+P 2 0 1 0 -100 200 -200 250 N
+P 2 0 1 0 -50 200 -100 200 N
+P 2 0 1 0 0 100 -200 100 N
+P 2 0 1 0 0 200 -50 200 N
+P 2 0 1 0 0 300 -200 300 N
+X ~ 1 300 300 300 L 50 50 1 1 P
+X ~ 2 300 200 300 L 50 50 1 1 P
+X ~ 3 300 100 300 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# special-azonenberg_PUSB3FA2Z
+#
+DEF special-azonenberg_PUSB3FA2Z D 0 40 Y Y 1 F N
 F0 "D" 50 -50 60 H V C CNN
-F1 "special-azonenberg:PUSB3FA2Z" 0 -150 60 H V C CNN
+F1 "special-azonenberg_PUSB3FA2Z" 0 -150 60 H V C CNN
 F2 "" 0 0 60 H I C CNN
 F3 "" 0 0 60 H I C CNN
 DRAW
@@ -429,11 +477,11 @@ X NC 9 600 250 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# special-azonenberg:SSM6N58NU_DUAL_NMOS
+# special-azonenberg_SSM6N58NU_DUAL_NMOS
 #
-DEF special-azonenberg:SSM6N58NU_DUAL_NMOS Q 0 0 N Y 2 F N
+DEF special-azonenberg_SSM6N58NU_DUAL_NMOS Q 0 0 N Y 2 F N
 F0 "Q" 10 170 60 H V R CNN
-F1 "special-azonenberg:SSM6N58NU_DUAL_NMOS" -50 -150 60 H V R CNN
+F1 "special-azonenberg_SSM6N58NU_DUAL_NMOS" -50 -150 60 H V R CNN
 F2 "" 0 0 60 H V C CNN
 F3 "" 0 0 60 H V C CNN
 DRAW
@@ -452,11 +500,11 @@ X S S2 100 -200 100 U 40 40 2 1 P
 ENDDRAW
 ENDDEF
 #
-# special-azonenberg:STARSHIPRAIDER_IOBOARD_MODULE
+# special-azonenberg_STARSHIPRAIDER_IOBOARD_MODULE
 #
-DEF special-azonenberg:STARSHIPRAIDER_IOBOARD_MODULE J 0 40 Y Y 1 F N
+DEF special-azonenberg_STARSHIPRAIDER_IOBOARD_MODULE J 0 40 Y Y 1 F N
 F0 "J" 0 -50 60 H V L CNN
-F1 "special-azonenberg:STARSHIPRAIDER_IOBOARD_MODULE" 0 -150 60 H V L CNN
+F1 "special-azonenberg_STARSHIPRAIDER_IOBOARD_MODULE" 0 -150 60 H V L CNN
 F2 "" 650 200 60 H V C CNN
 F3 "" 650 200 60 H V C CNN
 DRAW
@@ -525,11 +573,11 @@ X GND GND -200 50 200 R 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #
-# special-azonenberg:STARSHIPRAIDER_PROBE_HOST
+# special-azonenberg_STARSHIPRAIDER_PROBE_HOST
 #
-DEF special-azonenberg:STARSHIPRAIDER_PROBE_HOST J 0 40 Y Y 1 F N
+DEF special-azonenberg_STARSHIPRAIDER_PROBE_HOST J 0 40 Y Y 1 F N
 F0 "J" 0 -50 60 H V L CNN
-F1 "special-azonenberg:STARSHIPRAIDER_PROBE_HOST" 0 -150 60 H V L CNN
+F1 "special-azonenberg_STARSHIPRAIDER_PROBE_HOST" 0 -150 60 H V L CNN
 F2 "" 650 200 60 H V C CNN
 F3 "" 650 200 60 H V C CNN
 DRAW
@@ -598,11 +646,11 @@ X GND GND -200 50 200 R 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #
-# special-azonenberg:TCA6424A
+# special-azonenberg_TCA6424A
 #
-DEF special-azonenberg:TCA6424A U 0 40 Y Y 1 F N
+DEF special-azonenberg_TCA6424A U 0 40 Y Y 1 F N
 F0 "U" 0 -50 60 H V L CNN
-F1 "special-azonenberg:TCA6424A" 0 -150 60 H V L CNN
+F1 "special-azonenberg_TCA6424A" 0 -150 60 H V L CNN
 F2 "" 0 0 60 H V C CNN
 F3 "" 0 0 60 H V C CNN
 DRAW

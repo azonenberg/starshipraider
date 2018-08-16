@@ -14,24 +14,24 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text HLabel 2200 2950 0    60   Input ~ 0
+Text HLabel 1300 2950 0    60   Input ~ 0
 TXD0
-Text HLabel 2200 3250 0    60   Input ~ 0
+Text HLabel 1300 3250 0    60   Input ~ 0
 TXD1
 Text HLabel 7300 4250 2    60   BiDi ~ 0
 IO1
 Text HLabel 7300 2750 2    60   BiDi ~ 0
 IO0
-Text HLabel 2200 3050 0    60   Output ~ 0
+Text HLabel 1300 3050 0    60   Output ~ 0
 RX0_PROT
-Text HLabel 2200 3150 0    60   Output ~ 0
+Text HLabel 1300 3150 0    60   Output ~ 0
 RX1_PROT
 Wire Wire Line
-	2200 2950 2400 2950
+	1300 2950 1500 2950
 Wire Wire Line
-	2400 2950 2400 3050
+	1500 2950 1500 3050
 Wire Wire Line
-	2400 3050 2200 3050
+	1500 3050 1300 3050
 $Comp
 L device:R R15
 U 1 1 5B9C4954
@@ -72,21 +72,21 @@ Wire Wire Line
 Wire Wire Line
 	2950 2850 3100 2850
 Wire Wire Line
-	2400 3050 3100 3050
-Connection ~ 2400 3050
+	1500 3050 2200 3050
+Connection ~ 1500 3050
 Wire Wire Line
-	2200 3150 2400 3150
+	1300 3150 1500 3150
 Wire Wire Line
-	2200 3250 2400 3250
+	1300 3250 1500 3250
 Wire Wire Line
-	2400 3250 2400 3150
-Connection ~ 2400 3150
+	1500 3250 1500 3150
+Connection ~ 1500 3150
 Wire Wire Line
-	2400 3150 3100 3150
+	1500 3150 2200 3150
 Text Label 3900 3050 0    60   ~ 0
-TXD0
+TXD0_RAW
 Text Label 3900 3150 0    60   ~ 0
-TXD1
+TXD1_RAW
 Wire Wire Line
 	3900 3150 3800 3150
 Wire Wire Line
@@ -96,7 +96,7 @@ NoConn ~ 3100 3350
 NoConn ~ 3800 3250
 NoConn ~ 3800 3350
 Text Label 5000 2750 2    60   ~ 0
-TXD0
+TXD0_RAW
 Wire Wire Line
 	5000 2750 5300 2750
 Wire Wire Line
@@ -130,8 +130,6 @@ Text Label 5550 3750 2    60   ~ 0
 GND
 Wire Wire Line
 	5550 3750 5650 3750
-Text Label 5550 3150 2    60   ~ 0
-VCCO
 Wire Wire Line
 	5550 3150 5650 3150
 $Comp
@@ -205,7 +203,7 @@ F 3 "" H 5450 4250 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Text Label 5000 4250 2    60   ~ 0
-TXD1
+TXD1_RAW
 Wire Wire Line
 	5000 4250 5300 4250
 Wire Wire Line
@@ -291,4 +289,76 @@ Text HLabel 2950 2750 0    60   Input ~ 0
 GND
 Text Notes 7750 3400 0    60   ~ 0
 Max short circuit is +5V out into -12V.\n17V potential, 133 ohm series R is 127 mA
+$Comp
+L special-azonenberg:JUMPER_0402_SPDT J2
+U 1 1 5B76D30E
+P 1900 3000
+F 0 "J2" H 1881 3587 60  0000 C CNN
+F 1 "JUMPER_0402_SPDT" H 1881 3481 60  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_JUMPER" H 1900 3000 60  0001 C CNN
+F 3 "" H 1900 3000 60  0000 C CNN
+	1    1900 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 2900 2200 3050
+Wire Wire Line
+	2200 2800 2400 2800
+Wire Wire Line
+	2400 2800 2400 3050
+Wire Wire Line
+	2400 3050 3100 3050
+$Comp
+L special-azonenberg:JUMPER_0402_SPDT J4
+U 1 1 5B76DEAD
+P 1900 3850
+F 0 "J4" H 1881 4437 60  0000 C CNN
+F 1 "JUMPER_0402_SPDT" H 1881 4331 60  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_JUMPER" H 1900 3850 60  0001 C CNN
+F 3 "" H 1900 3850 60  0000 C CNN
+	1    1900 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 3150 2200 3550
+Wire Wire Line
+	2200 3650 2400 3650
+Wire Wire Line
+	2400 3650 2400 3150
+Wire Wire Line
+	2400 3150 3100 3150
+$Comp
+L conn:CONN_COAXIAL J6
+U 1 1 5B76FD17
+P 2500 2700
+F 0 "J6" H 2600 2584 50  0000 L CNN
+F 1 "CONN_COAXIAL" H 2600 2675 50  0000 L CNN
+F 2 "azonenberg_pcb:CONN_MMCX_LINX_CONNMMCX002SMD" H 2500 2700 50  0001 C CNN
+F 3 "" H 2500 2700 50  0001 C CNN
+	1    2500 2700
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	2350 2700 2200 2700
+Text Label 2500 2500 0    60   ~ 0
+GND
+$Comp
+L conn:CONN_COAXIAL J5
+U 1 1 5B77143F
+P 2350 3750
+F 0 "J5" H 2450 3726 50  0000 L CNN
+F 1 "CONN_COAXIAL" H 2450 3635 50  0000 L CNN
+F 2 "azonenberg_pcb:CONN_MMCX_LINX_CONNMMCX002SMD" H 2350 3750 50  0001 C CNN
+F 3 "" H 2350 3750 50  0001 C CNN
+	1    2350 3750
+	1    0    0    -1  
+$EndComp
+Text Label 2350 3950 2    60   ~ 0
+GND
+Text Label 3050 3150 2    60   ~ 0
+TXD1_RAW
+Text Label 3050 3050 2    60   ~ 0
+TXD0_RAW
+Text HLabel 5550 3150 0    60   Input ~ 0
+VCCO
 $EndSCHEMATC
