@@ -6,7 +6,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 4 6
 Title "STARSHIPRAIDER I/O Characterization"
-Date "2018-08-15"
+Date "2018-08-17"
 Rev "0.2"
 Comp "Andrew D. Zonenberg"
 Comment1 ""
@@ -361,4 +361,62 @@ Text Label 3050 3050 2    60   ~ 0
 TXD0_RAW
 Text HLabel 5550 3150 0    60   Input ~ 0
 VCCO
+$Comp
+L device:C C?
+U 1 1 5B79C7D7
+P 2350 4800
+AR Path="/5B7E4C7E/5B79C7D7" Ref="C?"  Part="1" 
+AR Path="/5B8504E7/5B79C7D7" Ref="C41"  Part="1" 
+F 0 "C41" H 2465 4846 50  0000 L CNN
+F 1 "0.47 uF" H 2465 4755 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0402_CAP_NOSILK" H 2388 4650 50  0001 C CNN
+F 3 "" H 2350 4800 50  0001 C CNN
+	1    2350 4800
+	1    0    0    -1  
+$EndComp
+Text Notes 2300 4600 0    60   ~ 0
+Layer change caps
+Text Label 2250 4650 2    60   ~ 0
+VCCO
+Wire Wire Line
+	2250 4650 2350 4650
+Text Label 2250 4950 2    60   ~ 0
+GND
+Wire Wire Line
+	2250 4950 2350 4950
+$Comp
+L device:C C?
+U 1 1 5B79DCC0
+P 2950 4800
+AR Path="/5B7E4C7E/5B79DCC0" Ref="C?"  Part="1" 
+AR Path="/5B8504E7/5B79DCC0" Ref="C42"  Part="1" 
+F 0 "C42" H 3065 4846 50  0000 L CNN
+F 1 "0.47 uF" H 3065 4755 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0402_CAP_NOSILK" H 2988 4650 50  0001 C CNN
+F 3 "" H 2950 4800 50  0001 C CNN
+	1    2950 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2350 4650 2950 4650
+Connection ~ 2350 4650
+Text HLabel 2950 4950 0    60   Input ~ 0
+2V5
+$Comp
+L device:C C?
+U 1 1 5B7A6757
+P 3550 4800
+AR Path="/5B7E4C7E/5B7A6757" Ref="C?"  Part="1" 
+AR Path="/5B8504E7/5B7A6757" Ref="C43"  Part="1" 
+F 0 "C43" H 3665 4846 50  0000 L CNN
+F 1 "0.47 uF" H 3665 4755 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0402_CAP_NOSILK" H 3588 4650 50  0001 C CNN
+F 3 "" H 3550 4800 50  0001 C CNN
+	1    3550 4800
+	1    0    0    -1  
+$EndComp
+Text Label 3550 4650 2    60   ~ 0
+GND
+Wire Wire Line
+	2950 4950 3550 4950
 $EndSCHEMATC

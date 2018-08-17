@@ -6,7 +6,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 6
 Title "STARSHIPRAIDER I/O Characterization"
-Date "2018-08-15"
+Date "2018-08-17"
 Rev "0.2"
 Comp "Andrew D. Zonenberg"
 Comment1 ""
@@ -447,6 +447,7 @@ F6 "RX0_PROT" O R 5750 4800 60
 F7 "RX1_PROT" O R 5750 4900 60 
 F8 "GND" I L 4800 5750 60 
 F9 "VCCO" I L 4800 5650 60 
+F10 "2V5" I L 4800 5850 60 
 $EndSheet
 Text Label 1200 5300 2    60   ~ 0
 VCCO_REF
@@ -666,4 +667,8 @@ Text Label 2600 5000 0    60   ~ 0
 VCCO
 Wire Wire Line
 	2600 5000 2450 5000
+Text Label 4600 5850 2    60   ~ 0
+2V5
+Wire Wire Line
+	4600 5850 4800 5850
 $EndSCHEMATC
