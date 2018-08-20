@@ -6,7 +6,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 6
 Title "STARSHIPRAIDER I/O Characterization"
-Date "2018-08-17"
+Date "2018-08-20"
 Rev "0.2"
 Comp "Andrew D. Zonenberg"
 Comment1 ""

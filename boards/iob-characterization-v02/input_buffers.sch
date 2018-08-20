@@ -6,7 +6,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 3 6
 Title "STARSHIPRAIDER I/O Characterization"
-Date "2018-08-17"
+Date "2018-08-20"
 Rev "0.2"
 Comp "Andrew D. Zonenberg"
 Comment1 ""
@@ -625,4 +625,34 @@ Text Label 3600 4900 2    60   ~ 0
 GND
 Wire Wire Line
 	3600 4900 4150 4900
+$Comp
+L device:C C44
+U 1 1 5B7B8DBD
+P 2950 3000
+F 0 "C44" H 3065 3046 50  0000 L CNN
+F 1 "0.47 uF" H 3065 2955 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0402_CAP_NOSILK" H 2988 2850 50  0001 C CNN
+F 3 "" H 2950 3000 50  0001 C CNN
+	1    2950 3000
+	1    0    0    -1  
+$EndComp
+Text Label 2950 2850 2    60   ~ 0
+VREF
+Text Label 2950 3150 2    60   ~ 0
+GND
+$Comp
+L device:C C45
+U 1 1 5B7BAB28
+P 3550 3000
+F 0 "C45" H 3665 3046 50  0000 L CNN
+F 1 "0.47 uF" H 3665 2955 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0402_CAP_NOSILK" H 3588 2850 50  0001 C CNN
+F 3 "" H 3550 3000 50  0001 C CNN
+	1    3550 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 3150 2950 3150
+Wire Wire Line
+	2950 2850 3550 2850
 $EndSCHEMATC
