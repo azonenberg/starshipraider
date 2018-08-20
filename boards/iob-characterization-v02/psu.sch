@@ -118,8 +118,6 @@ Text Label 8550 1350 2    60   ~ 0
 VCCO_IS_HI
 Text Label 8550 2400 2    60   ~ 0
 VCCO_IS_LO
-Text Label 2100 1550 2    60   ~ 0
-VCCO_IS_LO
 $Comp
 L power-azonenberg:LDO1117-XX U18
 U 1 1 5B9E2326
@@ -589,4 +587,6 @@ NoConn ~ 2100 1150
 NoConn ~ 2100 1050
 Text HLabel 8550 1900 0    60   Output ~ 0
 VCCO
+Text HLabel 2100 1550 0    60   Output ~ 0
+VCCO_IS_LO
 $EndSCHEMATC
