@@ -6,7 +6,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 6
 Title "STARSHIPRAIDER I/O Characterization"
-Date "2018-08-20"
+Date "2018-08-22"
 Rev "0.2"
 Comp "Andrew D. Zonenberg"
 Comment1 ""
@@ -589,4 +589,6 @@ Text HLabel 8550 1900 0    60   Output ~ 0
 VCCO
 Text HLabel 2100 1550 0    60   Output ~ 0
 VCCO_IS_LO
+Text Label 8400 6100 0    60   ~ 0
+VCCO_RAW
 $EndSCHEMATC
