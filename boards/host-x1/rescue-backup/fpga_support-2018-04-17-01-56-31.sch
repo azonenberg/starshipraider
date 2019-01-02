@@ -1,4 +1,17 @@
-EESchema Schematic File Version 4
+EESchema Schematic File Version 2
+LIBS:conn
+LIBS:device
+LIBS:analog-azonenberg
+LIBS:cypress-azonenberg
+LIBS:hirose-azonenberg
+LIBS:memory-azonenberg
+LIBS:microchip-azonenberg
+LIBS:osc-azonenberg
+LIBS:passive-azonenberg
+LIBS:power-azonenberg
+LIBS:special-azonenberg
+LIBS:xilinx-azonenberg
+LIBS:switches
 LIBS:host-x1-cache
 EELAYER 26 0
 EELAYER END
@@ -15,7 +28,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L host-x1-rescue:XILINX_JTAG J2
+L XILINX_JTAG J2
 U 1 1 590BFC2E
 P 7000 2500
 F 0 "J2" H 7719 3208 60  0000 L CNN
@@ -26,7 +39,7 @@ F 3 "" H 7000 2500 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:XC7AxT-xFTG256x U?
+L XC7AxT-xFTG256x U?
 U 1 1 590C06F1
 P 8750 6100
 AR Path="/590BFAB4/590C06F1" Ref="U?"  Part="6" 
@@ -57,7 +70,7 @@ Wire Wire Line
 	8150 6100 8250 6100
 Connection ~ 8150 6000
 $Comp
-L host-x1-rescue:R R23
+L R R23
 U 1 1 590FB052
 P 8400 5800
 F 0 "R23" V 8350 5650 50  0000 C CNN
@@ -68,7 +81,7 @@ F 3 "" H 8400 5800 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L host-x1-rescue:R R24
+L R R24
 U 1 1 590FB0F4
 P 8400 5900
 F 0 "R24" V 8350 5750 50  0000 C CNN
@@ -79,7 +92,7 @@ F 3 "" H 8400 5900 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L host-x1-rescue:R R25
+L R R25
 U 1 1 590FB110
 P 8400 6000
 F 0 "R25" V 8350 5850 50  0000 C CNN
@@ -90,7 +103,7 @@ F 3 "" H 8400 6000 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L host-x1-rescue:R R26
+L R R26
 U 1 1 590FB12A
 P 8400 6100
 F 0 "R26" V 8350 5950 50  0000 C CNN
@@ -117,7 +130,7 @@ JTAG_TMS
 Wire Wire Line
 	8150 5000 8550 5000
 $Comp
-L host-x1-rescue:R R22
+L R R22
 U 1 1 590FB341
 P 8400 5200
 F 0 "R22" V 8350 5050 50  0000 C CNN
@@ -130,7 +143,7 @@ $EndComp
 Wire Wire Line
 	8150 5200 8250 5200
 $Comp
-L host-x1-rescue:R R20
+L R R20
 U 1 1 590FB3EA
 P 7400 5600
 F 0 "R20" V 7350 5400 50  0000 C CNN
@@ -149,7 +162,7 @@ Text Label 8050 5900 2    60   ~ 0
 Wire Wire Line
 	7100 5600 7250 5600
 $Comp
-L host-x1-rescue:SW_Push SW1
+L SW_Push SW1
 U 1 1 590FB6D5
 P 7400 6100
 F 0 "SW1" H 7400 6385 50  0000 C CNN
@@ -211,7 +224,7 @@ Text Label 7100 5600 2    60   ~ 0
 Text HLabel 8150 5200 0    60   Output ~ 0
 FLASH_SCK
 $Comp
-L host-x1-rescue:SSM6N58NU_DUAL_NMOS Q1
+L SSM6N58NU_DUAL_NMOS Q1
 U 1 1 590FBFC4
 P 5550 5650
 F 0 "Q1" H 5691 5703 60  0000 L CNN
@@ -230,7 +243,7 @@ FPGA_INIT
 Wire Wire Line
 	7550 5500 8550 5500
 $Comp
-L host-x1-rescue:R R21
+L R R21
 U 1 1 590FC191
 P 7400 5500
 F 0 "R21" V 7350 5300 50  0000 C CNN
@@ -243,7 +256,7 @@ $EndComp
 Text Label 5050 5650 2    60   ~ 0
 FPGA_DONE
 $Comp
-L host-x1-rescue:CONN_01X01 TP1
+L CONN_01X01 TP1
 U 1 1 590FC345
 P 5800 6350
 F 0 "TP1" H 5877 6391 50  0000 L CNN
@@ -260,7 +273,7 @@ GND
 Wire Wire Line
 	5800 5850 5650 5850
 $Comp
-L host-x1-rescue:R R19
+L R R19
 U 1 1 590FC53F
 P 5650 4700
 F 0 "R19" H 5720 4746 50  0000 L CNN
@@ -271,7 +284,7 @@ F 3 "" H 5650 4700 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:LED D1
+L LED D1
 U 1 1 590FC5E4
 P 5650 5150
 F 0 "D1" V 5688 5032 50  0000 R CNN
@@ -288,7 +301,7 @@ Wire Wire Line
 Wire Wire Line
 	5350 4550 5650 4550
 $Comp
-L host-x1-rescue:R R27
+L R R27
 U 1 1 590FC93D
 P 7400 5400
 F 0 "R27" V 7300 5400 50  0000 C CNN

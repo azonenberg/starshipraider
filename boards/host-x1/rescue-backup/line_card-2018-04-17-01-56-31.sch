@@ -1,4 +1,17 @@
-EESchema Schematic File Version 4
+EESchema Schematic File Version 2
+LIBS:conn
+LIBS:device
+LIBS:analog-azonenberg
+LIBS:cypress-azonenberg
+LIBS:hirose-azonenberg
+LIBS:memory-azonenberg
+LIBS:microchip-azonenberg
+LIBS:osc-azonenberg
+LIBS:passive-azonenberg
+LIBS:power-azonenberg
+LIBS:special-azonenberg
+LIBS:xilinx-azonenberg
+LIBS:switches
 LIBS:host-x1-cache
 EELAYER 26 0
 EELAYER END
@@ -15,7 +28,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L host-x1-rescue:STARSHIPRAIDER_IOBOARD_HOST J3
+L STARSHIPRAIDER_IOBOARD_HOST J3
 U 1 1 590F824D
 P 1900 4050
 AR Path="/590F824D" Ref="J3"  Part="1" 
@@ -217,7 +230,7 @@ Text Label 6600 4700 2    60   ~ 0
 TXD0
 NoConn ~ 6750 6100
 $Comp
-L host-x1-rescue:C C80
+L C C80
 U 1 1 590F9668
 P 1900 4400
 F 0 "C80" H 2015 4446 50  0000 L CNN
@@ -232,7 +245,7 @@ Text Label 1750 4250 2    60   ~ 0
 Text Label 1750 4550 2    60   ~ 0
 GND
 $Comp
-L host-x1-rescue:C C81
+L C C81
 U 1 1 590F97EE
 P 2550 4400
 F 0 "C81" H 2665 4446 50  0000 L CNN
@@ -245,7 +258,7 @@ $EndComp
 Text Label 2700 4250 0    60   ~ 0
 5V0
 $Comp
-L host-x1-rescue:R R17
+L R R17
 U 1 1 590F9BF1
 P 1900 5000
 F 0 "R17" H 1970 5046 50  0000 L CNN
@@ -260,7 +273,7 @@ Text Label 1750 4850 2    60   ~ 0
 Text Label 1750 5150 2    60   ~ 0
 I2C_SDA
 $Comp
-L host-x1-rescue:R R18
+L R R18
 U 1 1 590F9D62
 P 2400 5000
 F 0 "R18" H 2470 5046 50  0000 L CNN
@@ -275,7 +288,7 @@ I2C_SCL
 Text Notes 6950 6250 0    60   ~ 0
 VCCO=3V3
 $Comp
-L host-x1-rescue:PMOD_DEVICE_DIFF_PWRIN J5
+L PMOD_DEVICE_DIFF_PWRIN J5
 U 1 1 5913CA68
 P 1150 7250
 F 0 "J5" H 1500 7100 60  0000 R CNN
@@ -292,7 +305,7 @@ PMOD header for sampling scope board
 Text Label 1550 5950 0    60   ~ 0
 GND
 $Comp
-L host-x1-rescue:R R55
+L R R55
 U 1 1 5913D3A1
 P 4000 5000
 F 0 "R55" H 4070 5046 50  0000 L CNN
@@ -307,7 +320,7 @@ Text Label 3850 4850 2    60   ~ 0
 Text Label 3850 5150 2    60   ~ 0
 SCOPE_SDA
 $Comp
-L host-x1-rescue:R R56
+L R R56
 U 1 1 5913D3A9
 P 4500 5000
 F 0 "R56" H 4570 5046 50  0000 L CNN
@@ -534,24 +547,24 @@ Wire Wire Line
 Wire Wire Line
 	2700 4250 2550 4250
 Wire Wire Line
-	1750 4850 1900 4850
+	1750 4850 2400 4850
 Wire Wire Line
 	1750 5150 1900 5150
 Connection ~ 1900 4850
 Wire Wire Line
 	2750 5150 2400 5150
 Wire Wire Line
-	1750 4550 1900 4550
+	1750 4550 2550 4550
 Connection ~ 1900 4550
 Wire Wire Line
-	1550 5750 1450 5750
+	1550 5750 1350 5750
 Wire Wire Line
 	1450 5750 1450 5850
 Wire Wire Line
 	1450 5850 1350 5850
 Connection ~ 1450 5750
 Wire Wire Line
-	1550 5950 1450 5950
+	1550 5950 1350 5950
 Wire Wire Line
 	1450 5950 1450 6050
 Wire Wire Line
@@ -560,7 +573,7 @@ Connection ~ 1450 5950
 Wire Wire Line
 	1450 6350 1350 6350
 Wire Wire Line
-	3850 4850 4000 4850
+	3850 4850 4500 4850
 Wire Wire Line
 	3850 5150 4000 5150
 Connection ~ 4000 4850
@@ -606,7 +619,7 @@ Text Notes 4150 1300 0    60   ~ 0
 Some pairs swapped to ease routing:\n* RXD7\n* RXD5\n* RXD6\n* RXD4\n* RXD2
 NoConn ~ 6750 2300
 $Comp
-L host-x1-rescue:XC7AxT-xFTG256x U?
+L XC7AxT-xFTG256x U?
 U 4 1 590C044B
 P 6950 6100
 AR Path="/590BFAB4/590C044B" Ref="U?"  Part="6" 
@@ -620,7 +633,7 @@ F 3 "" H 6950 6100 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:PMOD_DEVICE_DIFF_PWRIN J6
+L PMOD_DEVICE_DIFF_PWRIN J6
 U 1 1 5915979C
 P 4700 7250
 F 0 "J6" H 5050 7100 60  0000 R CNN
@@ -633,7 +646,7 @@ $EndComp
 Text Label 5050 5750 0    60   ~ 0
 3V3
 Wire Wire Line
-	4900 5750 5000 5750
+	4900 5750 5050 5750
 Wire Wire Line
 	5000 5750 5000 5850
 Wire Wire Line
@@ -642,7 +655,7 @@ Connection ~ 5000 5750
 Text Label 5050 5950 0    60   ~ 0
 GND
 Wire Wire Line
-	5050 5950 5000 5950
+	5050 5950 4900 5950
 Wire Wire Line
 	5000 5950 5000 6050
 Wire Wire Line
@@ -715,7 +728,7 @@ Wire Wire Line
 Text Notes 8750 1200 0    60   ~ 0
 Differential input termination\nCan't use DIFF_TERM on FPGA b/c VCCO=3.3
 $Comp
-L host-x1-rescue:R R57
+L R R57
 U 1 1 5918D283
 P 9300 1450
 F 0 "R57" V 9250 1250 50  0000 C CNN
@@ -734,7 +747,7 @@ Wire Wire Line
 Wire Wire Line
 	9000 1450 9150 1450
 $Comp
-L host-x1-rescue:R R58
+L R R58
 U 1 1 5918D719
 P 9300 1550
 F 0 "R58" V 9250 1350 50  0000 C CNN
@@ -753,7 +766,7 @@ Wire Wire Line
 Wire Wire Line
 	9000 1550 9150 1550
 $Comp
-L host-x1-rescue:R R59
+L R R59
 U 1 1 5918D77F
 P 9300 1650
 F 0 "R59" V 9250 1450 50  0000 C CNN
@@ -772,7 +785,7 @@ Wire Wire Line
 Wire Wire Line
 	9000 1650 9150 1650
 $Comp
-L host-x1-rescue:R R60
+L R R60
 U 1 1 5918D789
 P 9300 1750
 F 0 "R60" V 9250 1550 50  0000 C CNN
@@ -791,7 +804,7 @@ Wire Wire Line
 Wire Wire Line
 	9000 1750 9150 1750
 $Comp
-L host-x1-rescue:R R61
+L R R61
 U 1 1 5918D82B
 P 9300 1850
 F 0 "R61" V 9250 1650 50  0000 C CNN
@@ -810,7 +823,7 @@ Wire Wire Line
 Wire Wire Line
 	9000 1850 9150 1850
 $Comp
-L host-x1-rescue:R R62
+L R R62
 U 1 1 5918D835
 P 9300 1950
 F 0 "R62" V 9250 1750 50  0000 C CNN
@@ -829,7 +842,7 @@ Wire Wire Line
 Wire Wire Line
 	9000 1950 9150 1950
 $Comp
-L host-x1-rescue:R R63
+L R R63
 U 1 1 5918D83F
 P 9300 2050
 F 0 "R63" V 9250 1850 50  0000 C CNN
@@ -848,7 +861,7 @@ Wire Wire Line
 Wire Wire Line
 	9000 2050 9150 2050
 $Comp
-L host-x1-rescue:R R64
+L R R64
 U 1 1 5918D849
 P 9300 2150
 F 0 "R64" V 9250 1950 50  0000 C CNN
@@ -869,7 +882,7 @@ Wire Wire Line
 Text Notes 8750 2550 0    60   ~ 0
 Layer-changing caps
 $Comp
-L host-x1-rescue:C C112
+L C C112
 U 1 1 5918E4EB
 P 8900 2800
 F 0 "C112" H 9015 2846 50  0000 L CNN
@@ -882,13 +895,13 @@ $EndComp
 Text Label 8750 2950 2    60   ~ 0
 GND
 Wire Wire Line
-	8750 2950 8900 2950
+	8750 2950 10450 2950
 Text Label 8750 2650 2    60   ~ 0
 3V3
 Wire Wire Line
-	8750 2650 8900 2650
+	8750 2650 10450 2650
 $Comp
-L host-x1-rescue:C C113
+L C C113
 U 1 1 5918E948
 P 9450 2800
 F 0 "C113" H 9565 2846 50  0000 L CNN
@@ -901,7 +914,7 @@ $EndComp
 Connection ~ 8900 2650
 Connection ~ 8900 2950
 $Comp
-L host-x1-rescue:C C114
+L C C114
 U 1 1 5918F7AE
 P 9950 2800
 F 0 "C114" H 10065 2846 50  0000 L CNN
@@ -914,7 +927,7 @@ $EndComp
 Connection ~ 9450 2650
 Connection ~ 9450 2950
 $Comp
-L host-x1-rescue:C C115
+L C C115
 U 1 1 5918FC12
 P 10450 2800
 F 0 "C115" H 10565 2846 50  0000 L CNN
@@ -927,7 +940,7 @@ $EndComp
 Connection ~ 9950 2650
 Connection ~ 9950 2950
 $Comp
-L host-x1-rescue:C C116
+L C C116
 U 1 1 59190054
 P 8900 3250
 F 0 "C116" H 9015 3296 50  0000 L CNN
@@ -945,32 +958,4 @@ Wire Wire Line
 	8750 3400 8900 3400
 Wire Wire Line
 	8900 3100 8750 3100
-Wire Wire Line
-	1900 4850 2400 4850
-Wire Wire Line
-	1900 4550 2550 4550
-Wire Wire Line
-	1450 5750 1350 5750
-Wire Wire Line
-	1450 5950 1350 5950
-Wire Wire Line
-	4000 4850 4500 4850
-Wire Wire Line
-	5000 5750 5050 5750
-Wire Wire Line
-	5000 5950 4900 5950
-Wire Wire Line
-	8900 2650 9450 2650
-Wire Wire Line
-	8900 2950 9450 2950
-Wire Wire Line
-	9450 2650 9950 2650
-Wire Wire Line
-	9450 2950 9950 2950
-Wire Wire Line
-	9950 2650 10450 2650
-Wire Wire Line
-	9950 2950 10450 2950
-Text Notes 3000 3950 0    50   ~ 0
-BUG! This is actually 12V
 $EndSCHEMATC

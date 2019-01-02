@@ -1,4 +1,4 @@
-update=Tue 01 May 2018 11:15:09 PM PDT
+update=Sun 07 May 2017 07:24:40 PM PDT
 version=1
 last_client=kicad
 [pcbnew]
@@ -27,4 +27,19 @@ NetIExt=net
 version=1
 [eeschema]
 version=1
-LibDir=
+LibDir=/nfs4/home/azonenberg/code/3rdparty/kicad-library/library;/nfs4/home/azonenberg/code/kicad-libraries/schematic
+[eeschema/libraries]
+LibName1=host-x1-rescue
+LibName2=conn
+LibName3=device
+LibName4=analog-azonenberg
+LibName5=cypress-azonenberg
+LibName6=hirose-azonenberg
+LibName7=memory-azonenberg
+LibName8=microchip-azonenberg
+LibName9=osc-azonenberg
+LibName10=passive-azonenberg
+LibName11=power-azonenberg
+LibName12=special-azonenberg
+LibName13=xilinx-azonenberg
+LibName14=switches

@@ -1,4 +1,17 @@
-EESchema Schematic File Version 4
+EESchema Schematic File Version 2
+LIBS:conn
+LIBS:device
+LIBS:analog-azonenberg
+LIBS:cypress-azonenberg
+LIBS:hirose-azonenberg
+LIBS:memory-azonenberg
+LIBS:microchip-azonenberg
+LIBS:osc-azonenberg
+LIBS:passive-azonenberg
+LIBS:power-azonenberg
+LIBS:special-azonenberg
+LIBS:xilinx-azonenberg
+LIBS:switches
 LIBS:host-x1-cache
 EELAYER 26 0
 EELAYER END
@@ -15,7 +28,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L host-x1-rescue:R R29
+L R R29
 U 1 1 590FCC5A
 P 13650 1350
 F 0 "R29" V 13600 1200 50  0000 C CNN
@@ -28,7 +41,7 @@ $EndComp
 Text Label 13350 1950 2    60   ~ 0
 FLASH_CS_N
 $Comp
-L host-x1-rescue:R R30
+L R R30
 U 1 1 590FD0B0
 P 13650 1950
 F 0 "R30" V 13600 1800 50  0000 C CNN
@@ -47,7 +60,7 @@ FLASH_DQ2
 Text Label 13800 1250 2    60   ~ 0
 FLASH_DQ3
 $Comp
-L host-x1-rescue:R R28
+L R R28
 U 1 1 590FD44F
 P 12600 1950
 F 0 "R28" V 12550 1800 50  0000 C CNN
@@ -72,7 +85,7 @@ Text HLabel 900  5500 0    60   Input ~ 0
 Text HLabel 900  6600 0    60   Input ~ 0
 1V2
 $Comp
-L host-x1-rescue:KSZ9031RN U8
+L KSZ9031RN U8
 U 1 1 590FEDC8
 P 5350 4150
 F 0 "U8" H 5400 7450 60  0000 C CNN
@@ -90,7 +103,7 @@ Text Label 4850 1700 2    60   ~ 0
 A1V2
 NoConn ~ 5050 2750
 $Comp
-L host-x1-rescue:BEL_FUSE_0826-1G1T-23-F J4
+L BEL_FUSE_0826-1G1T-23-F J4
 U 1 1 590FF77A
 P 1400 2900
 F 0 "J4" H 1750 2700 60  0000 L CNN
@@ -111,7 +124,7 @@ FLASH_DQ3
 Text Label 9200 7800 2    60   ~ 0
 FLASH_CS_N
 $Comp
-L host-x1-rescue:R R31
+L R R31
 U 1 1 590FFC31
 P 7750 2250
 F 0 "R31" V 7700 2050 50  0000 C CNN
@@ -122,7 +135,7 @@ F 3 "" H 7750 2250 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L host-x1-rescue:R R32
+L R R32
 U 1 1 590FFDA4
 P 7750 2350
 F 0 "R32" V 7700 2150 50  0000 C CNN
@@ -133,7 +146,7 @@ F 3 "" H 7750 2350 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L host-x1-rescue:R R33
+L R R33
 U 1 1 590FFDC4
 P 7750 2450
 F 0 "R33" V 7700 2250 50  0000 C CNN
@@ -144,7 +157,7 @@ F 3 "" H 7750 2450 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L host-x1-rescue:R R34
+L R R34
 U 1 1 590FFDE6
 P 7750 2550
 F 0 "R34" V 7700 2350 50  0000 C CNN
@@ -155,7 +168,7 @@ F 3 "" H 7750 2550 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L host-x1-rescue:R R35
+L R R35
 U 1 1 590FFE0A
 P 7750 2650
 F 0 "R35" V 7700 2450 50  0000 C CNN
@@ -166,7 +179,7 @@ F 3 "" H 7750 2650 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L host-x1-rescue:R R36
+L R R36
 U 1 1 590FFE34
 P 7750 2750
 F 0 "R36" V 7700 2550 50  0000 C CNN
@@ -217,7 +230,7 @@ ETH_D_P
 Text Label 4900 3950 2    60   ~ 0
 ETH_D_N
 $Comp
-L host-x1-rescue:C C82
+L C C82
 U 1 1 591015A5
 P 1100 5650
 F 0 "C82" H 1215 5696 50  0000 L CNN
@@ -234,7 +247,7 @@ GND
 Text Notes 900  5900 0    60   ~ 0
 A3V3 filtering and decoupling
 $Comp
-L host-x1-rescue:INDUCTOR_PWROUT L5
+L INDUCTOR_PWROUT L5
 U 1 1 59101A69
 P 1600 5500
 F 0 "L5" V 1550 5250 40  0000 C CNN
@@ -245,7 +258,7 @@ F 3 "" H 1600 5500 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L host-x1-rescue:C C89
+L C C89
 U 1 1 59101B81
 P 2000 5650
 F 0 "C89" H 2115 5696 50  0000 L CNN
@@ -256,7 +269,7 @@ F 3 "" H 2000 5650 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C94
+L C C94
 U 1 1 59101C29
 P 2500 5650
 F 0 "C94" H 2615 5696 50  0000 L CNN
@@ -267,7 +280,7 @@ F 3 "" H 2500 5650 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C99
+L C C99
 U 1 1 59101CC5
 P 3050 5650
 F 0 "C99" H 3165 5696 50  0000 L CNN
@@ -280,7 +293,7 @@ $EndComp
 Text Notes 900  6450 0    60   ~ 0
 DVDDH decoupling
 $Comp
-L host-x1-rescue:C C83
+L C C83
 U 1 1 591020EB
 P 1100 6200
 F 0 "C83" H 1215 6246 50  0000 L CNN
@@ -295,7 +308,7 @@ Text Label 900  6050 2    60   ~ 0
 Text Label 900  6350 2    60   ~ 0
 GND
 $Comp
-L host-x1-rescue:C C87
+L C C87
 U 1 1 59102277
 P 1600 6200
 F 0 "C87" H 1715 6246 50  0000 L CNN
@@ -306,7 +319,7 @@ F 3 "" H 1600 6200 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C92
+L C C92
 U 1 1 5910237F
 P 2150 6200
 F 0 "C92" H 2265 6246 50  0000 L CNN
@@ -317,7 +330,7 @@ F 3 "" H 2150 6200 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C97
+L C C97
 U 1 1 591023C9
 P 2700 6200
 F 0 "C97" H 2815 6246 50  0000 L CNN
@@ -334,7 +347,7 @@ Text Label 4850 1900 2    60   ~ 0
 Text Notes 900  7000 0    60   ~ 0
 A1V2 filtering and decoupling
 $Comp
-L host-x1-rescue:C C84
+L C C84
 U 1 1 59102BFE
 P 1100 6750
 F 0 "C84" H 1215 6796 50  0000 L CNN
@@ -345,7 +358,7 @@ F 3 "" H 1100 6750 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:INDUCTOR_PWROUT L6
+L INDUCTOR_PWROUT L6
 U 1 1 59102C9E
 P 1600 6600
 F 0 "L6" V 1550 6350 40  0000 C CNN
@@ -358,7 +371,7 @@ $EndComp
 Text Label 900  6900 2    60   ~ 0
 GND
 $Comp
-L host-x1-rescue:C C90
+L C C90
 U 1 1 59102DB1
 P 2000 6750
 F 0 "C90" H 2115 6796 50  0000 L CNN
@@ -369,7 +382,7 @@ F 3 "" H 2000 6750 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C95
+L C C95
 U 1 1 59102E91
 P 2500 6750
 F 0 "C95" H 2615 6796 50  0000 L CNN
@@ -380,7 +393,7 @@ F 3 "" H 2500 6750 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C100
+L C C100
 U 1 1 59102F58
 P 3050 6750
 F 0 "C100" H 3165 6796 50  0000 L CNN
@@ -395,7 +408,7 @@ A1V2_PLL
 Text Notes 900  7550 0    60   ~ 0
 A1V2_PLL filtering and decoupling
 $Comp
-L host-x1-rescue:C C85
+L C C85
 U 1 1 59103A13
 P 1100 7300
 F 0 "C85" H 1215 7346 50  0000 L CNN
@@ -406,7 +419,7 @@ F 3 "" H 1100 7300 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:INDUCTOR_PWROUT L7
+L INDUCTOR_PWROUT L7
 U 1 1 59103A19
 P 1600 7150
 F 0 "L7" V 1550 6900 40  0000 C CNN
@@ -419,7 +432,7 @@ $EndComp
 Text Label 900  7450 2    60   ~ 0
 GND
 $Comp
-L host-x1-rescue:C C91
+L C C91
 U 1 1 59103A20
 P 2000 7300
 F 0 "C91" H 2115 7346 50  0000 L CNN
@@ -430,7 +443,7 @@ F 3 "" H 2000 7300 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C96
+L C C96
 U 1 1 59103A26
 P 2500 7300
 F 0 "C96" H 2615 7346 50  0000 L CNN
@@ -445,7 +458,7 @@ Text Label 900  7150 2    60   ~ 0
 Text Notes 900  8100 0    60   ~ 0
 DVDDL decoupling
 $Comp
-L host-x1-rescue:C C86
+L C C86
 U 1 1 5910439D
 P 1100 7850
 F 0 "C86" H 1215 7896 50  0000 L CNN
@@ -460,7 +473,7 @@ Text Label 900  7700 2    60   ~ 0
 Text Label 900  8000 2    60   ~ 0
 GND
 $Comp
-L host-x1-rescue:C C88
+L C C88
 U 1 1 591043A7
 P 1600 7850
 F 0 "C88" H 1715 7896 50  0000 L CNN
@@ -471,7 +484,7 @@ F 3 "" H 1600 7850 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C93
+L C C93
 U 1 1 591043AD
 P 2150 7850
 F 0 "C93" H 2265 7896 50  0000 L CNN
@@ -482,7 +495,7 @@ F 3 "" H 2150 7850 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C98
+L C C98
 U 1 1 591043B3
 P 2700 7850
 F 0 "C98" H 2815 7896 50  0000 L CNN
@@ -493,7 +506,7 @@ F 3 "" H 2700 7850 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C101
+L C C101
 U 1 1 591044D1
 P 3250 7850
 F 0 "C101" H 3365 7896 50  0000 L CNN
@@ -504,7 +517,7 @@ F 3 "" H 3250 7850 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C102
+L C C102
 U 1 1 5910453D
 P 3800 7850
 F 0 "C102" H 3915 7896 50  0000 L CNN
@@ -515,7 +528,7 @@ F 3 "" H 3800 7850 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C103
+L C C103
 U 1 1 591045A7
 P 4350 7850
 F 0 "C103" H 4465 7896 50  0000 L CNN
@@ -526,7 +539,7 @@ F 3 "" H 4350 7850 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:SSM6N58NU_DUAL_NMOS Q1
+L SSM6N58NU_DUAL_NMOS Q1
 U 2 1 5910F2D1
 P 9200 10650
 F 0 "Q1" H 9341 10703 60  0000 L CNN
@@ -539,7 +552,7 @@ $EndComp
 Text Label 1150 10100 2    60   ~ 0
 LED0
 $Comp
-L host-x1-rescue:R R37
+L R R37
 U 1 1 5910F7AB
 P 1600 9450
 F 0 "R37" H 1530 9404 50  0000 R CNN
@@ -550,7 +563,7 @@ F 3 "" H 1600 9450 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L host-x1-rescue:LED D2
+L LED D2
 U 1 1 5910FD88
 P 1600 9750
 F 0 "D2" V 1638 9632 50  0000 R CNN
@@ -565,7 +578,7 @@ Text Label 1150 9300 2    60   ~ 0
 Text Label 1150 10300 2    60   ~ 0
 GND
 $Comp
-L host-x1-rescue:SSM6N58NU_DUAL_NMOS Q2
+L SSM6N58NU_DUAL_NMOS Q2
 U 1 1 59110611
 P 1500 10100
 F 0 "Q2" H 1641 10153 60  0000 L CNN
@@ -578,7 +591,7 @@ $EndComp
 Text Label 2400 10100 2    60   ~ 0
 LED1
 $Comp
-L host-x1-rescue:R R38
+L R R38
 U 1 1 59110619
 P 2850 9450
 F 0 "R38" H 2780 9404 50  0000 R CNN
@@ -589,7 +602,7 @@ F 3 "" H 2850 9450 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L host-x1-rescue:LED D3
+L LED D3
 U 1 1 5911061F
 P 2850 9750
 F 0 "D3" V 2888 9632 50  0000 R CNN
@@ -600,7 +613,7 @@ F 3 "" H 2850 9750 50  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L host-x1-rescue:SSM6N58NU_DUAL_NMOS Q2
+L SSM6N58NU_DUAL_NMOS Q2
 U 2 1 591108D0
 P 2750 10100
 F 0 "Q2" H 2891 10153 60  0000 L CNN
@@ -613,7 +626,7 @@ $EndComp
 Text Label 3650 10100 2    60   ~ 0
 LED2
 $Comp
-L host-x1-rescue:R R39
+L R R39
 U 1 1 591108D8
 P 4100 9450
 F 0 "R39" H 4030 9404 50  0000 R CNN
@@ -624,7 +637,7 @@ F 3 "" H 4100 9450 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L host-x1-rescue:LED D4
+L LED D4
 U 1 1 591108DE
 P 4100 9750
 F 0 "D4" V 4138 9632 50  0000 R CNN
@@ -635,7 +648,7 @@ F 3 "" H 4100 9750 50  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L host-x1-rescue:SSM6N58NU_DUAL_NMOS Q3
+L SSM6N58NU_DUAL_NMOS Q3
 U 1 1 59110B5B
 P 4000 10100
 F 0 "Q3" H 4141 10153 60  0000 L CNN
@@ -648,7 +661,7 @@ $EndComp
 Text Label 4900 10100 2    60   ~ 0
 LED3
 $Comp
-L host-x1-rescue:R R40
+L R R40
 U 1 1 59110B63
 P 5350 9450
 F 0 "R40" H 5280 9404 50  0000 R CNN
@@ -659,7 +672,7 @@ F 3 "" H 5350 9450 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L host-x1-rescue:LED D5
+L LED D5
 U 1 1 59110B69
 P 5350 9750
 F 0 "D5" V 5388 9632 50  0000 R CNN
@@ -700,7 +713,7 @@ ETH_MDC
 Text Label 7850 800  0    60   ~ 0
 ETH_MDIO
 $Comp
-L host-x1-rescue:R R43
+L R R43
 U 1 1 59113675
 P 7700 800
 F 0 "R43" V 7650 600 50  0000 C CNN
@@ -715,7 +728,7 @@ Text Label 7400 800  2    60   ~ 0
 Text Label 8100 3050 0    60   ~ 0
 ETH_INT_N
 $Comp
-L host-x1-rescue:R R44
+L R R44
 U 1 1 59113DFB
 P 7750 3050
 F 0 "R44" V 7700 2850 50  0000 C CNN
@@ -735,7 +748,7 @@ NoConn ~ 14000 3450
 Text Label 13800 3350 2    60   ~ 0
 CLK_100MHZ
 $Comp
-L host-x1-rescue:OSC U9
+L OSC U9
 U 1 1 59114F51
 P 5750 4550
 F 0 "U9" H 5725 4837 60  0000 C CNN
@@ -746,7 +759,7 @@ F 3 "" H 5750 4550 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:OSC U10
+L OSC U10
 U 1 1 591156C7
 P 5750 5250
 F 0 "U10" H 5725 5537 60  0000 C CNN
@@ -765,7 +778,7 @@ Text Label 4900 5250 2    60   ~ 0
 Text Label 4900 5450 2    60   ~ 0
 GND
 $Comp
-L host-x1-rescue:R R41
+L R R41
 U 1 1 59115E60
 P 6700 4550
 F 0 "R41" V 6650 4350 50  0000 C CNN
@@ -778,7 +791,7 @@ $EndComp
 Text Label 7100 4550 0    60   ~ 0
 CLK_25MHZ
 $Comp
-L host-x1-rescue:R R42
+L R R42
 U 1 1 591164AB
 P 6700 5250
 F 0 "R42" V 6650 5050 50  0000 C CNN
@@ -794,7 +807,7 @@ Text Label 7600 3600 0    60   ~ 0
 CLK_25MHZ
 NoConn ~ 7300 3500
 $Comp
-L host-x1-rescue:R R45
+L R R45
 U 1 1 5911684F
 P 7750 3800
 F 0 "R45" V 7700 3600 50  0000 C CNN
@@ -823,7 +836,7 @@ Debug indicator LEDs
 Text Notes 900  8650 0    60   ~ 0
 Oscillator decoupling
 $Comp
-L host-x1-rescue:C C104
+L C C104
 U 1 1 59118740
 P 1100 8400
 F 0 "C104" H 1215 8446 50  0000 L CNN
@@ -838,7 +851,7 @@ Text Label 900  8250 2    60   ~ 0
 Text Label 900  8550 2    60   ~ 0
 GND
 $Comp
-L host-x1-rescue:C C105
+L C C105
 U 1 1 5911894A
 P 1600 8400
 F 0 "C105" H 1715 8446 50  0000 L CNN
@@ -875,7 +888,7 @@ ETH_D_P
 Text Label 1850 2800 0    60   ~ 0
 ETH_D_N
 $Comp
-L host-x1-rescue:C C106
+L C C106
 U 1 1 5911AE5C
 P 1650 3850
 F 0 "C106" V 1700 4050 50  0000 C CNN
@@ -890,7 +903,7 @@ ETH_A_TAP
 Text Label 2050 3850 0    60   ~ 0
 GND
 $Comp
-L host-x1-rescue:C C107
+L C C107
 U 1 1 5911BB0C
 P 1650 4100
 F 0 "C107" V 1700 4300 50  0000 C CNN
@@ -903,7 +916,7 @@ $EndComp
 Text Label 1300 4100 2    60   ~ 0
 ETH_B_TAP
 $Comp
-L host-x1-rescue:C C108
+L C C108
 U 1 1 5911BC6A
 P 1650 4350
 F 0 "C108" V 1700 4550 50  0000 C CNN
@@ -916,7 +929,7 @@ $EndComp
 Text Label 1300 4350 2    60   ~ 0
 ETH_C_TAP
 $Comp
-L host-x1-rescue:C C109
+L C C109
 U 1 1 5911BC74
 P 1650 4600
 F 0 "C109" V 1700 4800 50  0000 C CNN
@@ -1280,7 +1293,7 @@ Wire Wire Line
 Connection ~ 2050 4100
 Connection ~ 2050 4350
 $Comp
-L host-x1-rescue:R R49
+L R R49
 U 1 1 5911FC1E
 P 7750 3150
 F 0 "R49" V 7700 2950 50  0000 C CNN
@@ -1297,7 +1310,7 @@ Text Label 8100 3150 0    60   ~ 0
 Wire Wire Line
 	8100 3150 7900 3150
 $Comp
-L host-x1-rescue:R R48
+L R R48
 U 1 1 59120E0B
 P 7700 1300
 F 0 "R48" V 7650 1100 50  0000 C CNN
@@ -1308,7 +1321,7 @@ F 3 "" H 7700 1300 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L host-x1-rescue:R R47
+L R R47
 U 1 1 59120F32
 P 7700 1200
 F 0 "R47" V 7650 1000 50  0000 C CNN
@@ -1347,7 +1360,7 @@ ETH_LED_1_N
 Text Label 9300 9600 2    60   ~ 0
 ETH_LED_2_N
 $Comp
-L host-x1-rescue:SSM6N58NU_DUAL_NMOS Q3
+L SSM6N58NU_DUAL_NMOS Q3
 U 2 1 59122A75
 P 5250 10100
 F 0 "Q3" H 5391 10153 60  0000 L CNN
@@ -1360,7 +1373,7 @@ $EndComp
 Text Label 6800 10100 2    60   ~ 0
 ETH_ACTIVITY_LED
 $Comp
-L host-x1-rescue:R R46
+L R R46
 U 1 1 59122A7C
 P 7250 9750
 F 0 "R46" H 7180 9704 50  0000 R CNN
@@ -1373,7 +1386,7 @@ $EndComp
 Wire Wire Line
 	6800 10100 6950 10100
 $Comp
-L host-x1-rescue:SSM6N58NU_DUAL_NMOS Q4
+L SSM6N58NU_DUAL_NMOS Q4
 U 1 1 591232C5
 P 9200 10100
 F 0 "Q4" H 9341 10153 60  0000 L CNN
@@ -1386,7 +1399,7 @@ $EndComp
 Text Label 8850 10100 2    60   ~ 0
 ETH_LINK_LED
 $Comp
-L host-x1-rescue:R R50
+L R R50
 U 1 1 591232CC
 P 9300 9750
 F 0 "R50" H 9230 9704 50  0000 R CNN
@@ -1409,7 +1422,7 @@ Wire Wire Line
 Wire Wire Line
 	14000 2550 13800 2550
 $Comp
-L host-x1-rescue:S25FS064S_BGA U11
+L S25FS064S_BGA U11
 U 1 1 59126480
 P 9550 7950
 F 0 "U11" H 10075 8847 60  0000 C CNN
@@ -1420,7 +1433,7 @@ F 3 "" H 9550 7950 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:R R51
+L R R51
 U 1 1 591267D7
 P 11150 7400
 F 0 "R51" V 11100 7250 50  0000 C CNN
@@ -1431,7 +1444,7 @@ F 3 "" H 11150 7400 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L host-x1-rescue:R R52
+L R R52
 U 1 1 59126A4E
 P 11150 7500
 F 0 "R52" V 11100 7350 50  0000 C CNN
@@ -1442,7 +1455,7 @@ F 3 "" H 11150 7500 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L host-x1-rescue:R R53
+L R R53
 U 1 1 59126AF2
 P 11150 7600
 F 0 "R53" V 11100 7450 50  0000 C CNN
@@ -1453,7 +1466,7 @@ F 3 "" H 11150 7600 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L host-x1-rescue:R R54
+L R R54
 U 1 1 59126B94
 P 11150 7700
 F 0 "R54" V 11100 7550 50  0000 C CNN
@@ -1497,7 +1510,7 @@ GND
 Text Label 7950 7300 2    60   ~ 0
 1V8
 $Comp
-L host-x1-rescue:C C110
+L C C110
 U 1 1 59128AAD
 P 8150 7450
 F 0 "C110" H 8265 7496 50  0000 L CNN
@@ -1514,7 +1527,7 @@ Wire Wire Line
 Text Notes 14200 5900 0    60   ~ 0
 VCCO = 1V8
 $Comp
-L host-x1-rescue:TEST TP16
+L TEST TP16
 U 1 1 5913F2EA
 P 10100 3100
 F 0 "TP16" V 10315 3194 50  0000 C CNN
@@ -1529,7 +1542,7 @@ RGMII_TXD0
 Wire Wire Line
 	10350 3100 10100 3100
 $Comp
-L host-x1-rescue:TEST TP17
+L TEST TP17
 U 1 1 5913FA7F
 P 10100 3450
 F 0 "TP17" V 10315 3544 50  0000 C CNN
@@ -1544,7 +1557,7 @@ GND
 Wire Wire Line
 	10350 3450 10100 3450
 $Comp
-L host-x1-rescue:TEST TP18
+L TEST TP18
 U 1 1 5913FD07
 P 10100 3850
 F 0 "TP18" V 10315 3944 50  0000 C CNN
@@ -1559,7 +1572,7 @@ RGMII_RXD0
 Wire Wire Line
 	10350 3850 10100 3850
 $Comp
-L host-x1-rescue:TEST TP19
+L TEST TP19
 U 1 1 5913FD0F
 P 10100 4200
 F 0 "TP19" V 10315 4294 50  0000 C CNN
@@ -1574,7 +1587,7 @@ GND
 Wire Wire Line
 	10350 4200 10100 4200
 $Comp
-L host-x1-rescue:TEST TP20
+L TEST TP20
 U 1 1 591401A2
 P 10100 4550
 F 0 "TP20" V 10315 4644 50  0000 C CNN
@@ -1589,7 +1602,7 @@ FLASH_SCK
 Wire Wire Line
 	10350 4550 10100 4550
 $Comp
-L host-x1-rescue:TEST TP21
+L TEST TP21
 U 1 1 591401AA
 P 10100 4900
 F 0 "TP21" V 10315 4994 50  0000 C CNN
@@ -1604,7 +1617,7 @@ GND
 Wire Wire Line
 	10350 4900 10100 4900
 $Comp
-L host-x1-rescue:TEST TP22
+L TEST TP22
 U 1 1 59140436
 P 10100 5250
 F 0 "TP22" V 10315 5344 50  0000 C CNN
@@ -1619,7 +1632,7 @@ FLASH_DQ0
 Wire Wire Line
 	10350 5250 10100 5250
 $Comp
-L host-x1-rescue:TEST TP23
+L TEST TP23
 U 1 1 5914043E
 P 10100 5600
 F 0 "TP23" V 10315 5694 50  0000 C CNN
@@ -1638,7 +1651,7 @@ Need to pull RGMII_RXD[3:0] to 4'b1110,\nand RGMII_RX_CLK to 1'b0, during reset 
 Text Notes 9900 5850 0    60   ~ 0
 Test points for SI verification\n(use ILA for logic debug)
 $Comp
-L host-x1-rescue:SSM6N58NU_DUAL_NMOS Q4
+L SSM6N58NU_DUAL_NMOS Q4
 U 2 1 5910409D
 P 7150 10100
 F 0 "Q4" H 7291 10153 60  0000 L CNN
@@ -1666,7 +1679,7 @@ NoConn ~ 14000 5750
 NoConn ~ 14000 4650
 NoConn ~ 14000 4550
 $Comp
-L host-x1-rescue:XC7AxT-xFTG256x U?
+L XC7AxT-xFTG256x U?
 U 3 1 590E87C3
 P 14200 5750
 AR Path="/590BFAB4/590E87C3" Ref="U?"  Part="6" 

@@ -1,4 +1,17 @@
-EESchema Schematic File Version 4
+EESchema Schematic File Version 2
+LIBS:conn
+LIBS:device
+LIBS:analog-azonenberg
+LIBS:cypress-azonenberg
+LIBS:hirose-azonenberg
+LIBS:memory-azonenberg
+LIBS:microchip-azonenberg
+LIBS:osc-azonenberg
+LIBS:passive-azonenberg
+LIBS:power-azonenberg
+LIBS:special-azonenberg
+LIBS:xilinx-azonenberg
+LIBS:switches
 LIBS:host-x1-cache
 EELAYER 26 0
 EELAYER END
@@ -19,7 +32,7 @@ Text Label 1650 1000 0    60   ~ 0
 Text Label 1650 1200 0    60   ~ 0
 GND
 $Comp
-L host-x1-rescue:XC7AxT-xFTG256x U?
+L XC7AxT-xFTG256x U?
 U 2 1 590C07C9
 P 13650 6200
 AR Path="/590BFAB4/590C07C9" Ref="U?"  Part="6" 
@@ -35,7 +48,7 @@ $EndComp
 Text Notes 3750 2150 0    60   ~ 0
 Max 200 uF low-ESR caps on 5V0
 $Comp
-L host-x1-rescue:CONN_3_PWROUT J1
+L CONN_3_PWROUT J1
 U 1 1 590C0B69
 P 1200 1100
 F 0 "J1" H 1328 1128 50  0000 L CNN
@@ -46,7 +59,7 @@ F 3 "" H 1200 1100 60  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:OLK-T_3-W12P-C U1
+L OLK-T_3-W12P-C U1
 U 1 1 590C0E7F
 P 3900 1550
 F 0 "U1" H 4275 2447 60  0000 C CNN
@@ -57,7 +70,7 @@ F 3 "" H 3900 1450 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:R R1
+L R R1
 U 1 1 590C0F09
 P 3400 1500
 F 0 "R1" V 3193 1500 50  0000 C CNN
@@ -72,7 +85,7 @@ GND
 Text Label 3500 1200 2    60   ~ 0
 GND
 $Comp
-L host-x1-rescue:C C1
+L C C1
 U 1 1 590C105F
 P 3900 1900
 F 0 "C1" H 4015 1946 50  0000 L CNN
@@ -87,7 +100,7 @@ GND
 Text Label 3750 1750 2    60   ~ 0
 12V0_FUSED
 $Comp
-L host-x1-rescue:C C2
+L C C2
 U 1 1 590C135A
 P 5200 1900
 F 0 "C2" H 5315 1946 50  0000 L CNN
@@ -101,7 +114,7 @@ Text Label 5050 1750 2    60   ~ 0
 5V0
 NoConn ~ 3700 1400
 $Comp
-L host-x1-rescue:R R2
+L R R2
 U 1 1 590C15F2
 P 5000 750
 F 0 "R2" H 5070 796 50  0000 L CNN
@@ -112,7 +125,7 @@ F 3 "" H 5000 750 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:R R3
+L R R3
 U 1 1 590C1734
 P 5800 1000
 F 0 "R3" V 5700 1000 50  0000 C CNN
@@ -127,7 +140,7 @@ Text Label 5100 1000 0    60   ~ 0
 Text Label 5200 900  0    60   ~ 0
 5V0_PGOOD
 $Comp
-L host-x1-rescue:CONN_01X01 TP2
+L CONN_01X01 TP2
 U 1 1 590C1B14
 P 11350 1000
 F 0 "TP2" H 11269 775 50  0000 C CNN
@@ -140,7 +153,7 @@ $EndComp
 Text Label 11700 1000 0    60   ~ 0
 5V0_PGOOD
 $Comp
-L host-x1-rescue:CONN_01X01 TP3
+L CONN_01X01 TP3
 U 1 1 590C1CD2
 P 11350 1400
 F 0 "TP3" H 11269 1175 50  0000 C CNN
@@ -153,7 +166,7 @@ $EndComp
 Text Label 11700 1400 0    60   ~ 0
 GND
 $Comp
-L host-x1-rescue:CONN_01X01 TP4
+L CONN_01X01 TP4
 U 1 1 590C1DC3
 P 11350 1750
 F 0 "TP4" H 11269 1525 50  0000 C CNN
@@ -190,7 +203,7 @@ Text Label 15350 1500 0    60   ~ 0
 Text Label 15350 1300 0    60   ~ 0
 1V8
 $Comp
-L host-x1-rescue:LTC3374-QFN U3
+L LTC3374-QFN U3
 U 1 1 590C479B
 P 2950 3900
 F 0 "U3" H 3850 3950 60  0000 L CNN
@@ -201,7 +214,7 @@ F 3 "" H 2950 3900 60  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:LTC3374-QFN U3
+L LTC3374-QFN U3
 U 2 1 590C4823
 P 2950 4500
 F 0 "U3" H 3850 4550 60  0000 L CNN
@@ -212,7 +225,7 @@ F 3 "" H 2950 4500 60  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:LTC3374-QFN U3
+L LTC3374-QFN U3
 U 3 1 590C48B4
 P 2950 5100
 F 0 "U3" H 3850 5150 60  0000 L CNN
@@ -223,7 +236,7 @@ F 3 "" H 2950 5100 60  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:LTC3374-QFN U3
+L LTC3374-QFN U3
 U 4 1 590C493E
 P 2950 5700
 F 0 "U3" H 3850 5750 60  0000 L CNN
@@ -234,7 +247,7 @@ F 3 "" H 2950 5700 60  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:LTC3374-QFN U3
+L LTC3374-QFN U3
 U 5 1 590C4A33
 P 2950 6300
 F 0 "U3" H 3850 6350 60  0000 L CNN
@@ -245,7 +258,7 @@ F 3 "" H 2950 6300 60  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:LTC3374-QFN U3
+L LTC3374-QFN U3
 U 6 1 590C4AE9
 P 2950 6900
 F 0 "U3" H 3850 6950 60  0000 L CNN
@@ -256,7 +269,7 @@ F 3 "" H 2950 6900 60  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:LTC3374-QFN U3
+L LTC3374-QFN U3
 U 7 1 590C4B96
 P 2950 7500
 F 0 "U3" H 3850 7550 60  0000 L CNN
@@ -267,7 +280,7 @@ F 3 "" H 2950 7500 60  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:LTC3374-QFN U3
+L LTC3374-QFN U3
 U 8 1 590C4C32
 P 2950 8100
 F 0 "U3" H 3850 8150 60  0000 L CNN
@@ -278,7 +291,7 @@ F 3 "" H 2950 8100 60  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:LTC3374-QFN U3
+L LTC3374-QFN U3
 U 9 1 590C4CFB
 P 2050 8750
 F 0 "U3" H 2050 8700 60  0000 L CNN
@@ -309,7 +322,7 @@ BUCK_VTEMP
 Text Label 11700 2100 0    60   ~ 0
 BUCK_VTEMP
 $Comp
-L host-x1-rescue:CONN_01X01 TP5
+L CONN_01X01 TP5
 U 1 1 590C77F1
 P 11350 2100
 F 0 "TP5" H 11269 1875 50  0000 C CNN
@@ -324,7 +337,7 @@ LTC_PGOOD
 Text Label 11700 2500 0    60   ~ 0
 LTC_PGOOD
 $Comp
-L host-x1-rescue:CONN_01X01 TP6
+L CONN_01X01 TP6
 U 1 1 590C7D8D
 P 11350 2500
 F 0 "TP6" H 11269 2275 50  0000 C CNN
@@ -337,7 +350,7 @@ $EndComp
 Text Label 2950 9200 0    60   ~ 0
 LTC_PGOOD
 $Comp
-L host-x1-rescue:R R4
+L R R4
 U 1 1 590C7EC8
 P 2800 9200
 F 0 "R4" V 2700 9150 50  0000 C CNN
@@ -356,7 +369,7 @@ Text Label 3400 8600 0    60   ~ 0
 Text Label 3400 8300 0    60   ~ 0
 5V0
 $Comp
-L host-x1-rescue:INDUCTOR_PWROUT L1
+L INDUCTOR_PWROUT L1
 U 1 1 590C890B
 P 3950 3750
 F 0 "L1" V 3795 3750 40  0000 C CNN
@@ -381,7 +394,7 @@ Text Label 3400 4450 0    60   ~ 0
 Text Label 3400 5050 0    60   ~ 0
 5V0
 $Comp
-L host-x1-rescue:R R5
+L R R5
 U 1 1 590C9D67
 P 4700 3750
 F 0 "R5" V 4600 3700 50  0000 C CNN
@@ -392,7 +405,7 @@ F 3 "" H 4700 3750 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L host-x1-rescue:R R9
+L R R9
 U 1 1 590CA1A2
 P 5100 3750
 F 0 "R9" V 5000 3700 50  0000 C CNN
@@ -405,7 +418,7 @@ $EndComp
 Text Label 3250 3850 0    60   ~ 0
 1V0_FB
 $Comp
-L host-x1-rescue:INDUCTOR_PWROUT L2
+L INDUCTOR_PWROUT L2
 U 1 1 590CA7A3
 P 3950 5550
 F 0 "L2" V 3795 5550 40  0000 C CNN
@@ -418,7 +431,7 @@ $EndComp
 Text Label 3250 5550 0    60   ~ 0
 1V2_SW
 $Comp
-L host-x1-rescue:R R6
+L R R6
 U 1 1 590CA7AB
 P 4700 5550
 F 0 "R6" V 4600 5500 50  0000 C CNN
@@ -429,7 +442,7 @@ F 3 "" H 4700 5550 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L host-x1-rescue:R R10
+L R R10
 U 1 1 590CA7B3
 P 5100 5550
 F 0 "R10" V 5000 5500 50  0000 C CNN
@@ -444,7 +457,7 @@ GND
 Text Label 3250 5650 0    60   ~ 0
 1V2_FB
 $Comp
-L host-x1-rescue:INDUCTOR_PWROUT L3
+L INDUCTOR_PWROUT L3
 U 1 1 590CAAE6
 P 3950 6150
 F 0 "L3" V 3795 6150 40  0000 C CNN
@@ -457,7 +470,7 @@ $EndComp
 Text Label 3250 6150 0    60   ~ 0
 1V8_SW
 $Comp
-L host-x1-rescue:R R7
+L R R7
 U 1 1 590CAAEE
 P 4700 6150
 F 0 "R7" V 4600 6100 50  0000 C CNN
@@ -468,7 +481,7 @@ F 3 "" H 4700 6150 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L host-x1-rescue:R R11
+L R R11
 U 1 1 590CAAF6
 P 5100 6150
 F 0 "R11" V 5000 6100 50  0000 C CNN
@@ -499,7 +512,7 @@ Text Label 3400 7350 0    60   ~ 0
 Text Label 3400 7450 0    60   ~ 0
 5V0
 $Comp
-L host-x1-rescue:INDUCTOR_PWROUT L4
+L INDUCTOR_PWROUT L4
 U 1 1 590CB148
 P 3950 7950
 F 0 "L4" V 3795 7950 40  0000 C CNN
@@ -512,7 +525,7 @@ $EndComp
 Text Label 3250 7950 0    60   ~ 0
 3V3_SW
 $Comp
-L host-x1-rescue:R R8
+L R R8
 U 1 1 590CB150
 P 4700 7950
 F 0 "R8" V 4600 7900 50  0000 C CNN
@@ -523,7 +536,7 @@ F 3 "" H 4700 7950 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L host-x1-rescue:R R12
+L R R12
 U 1 1 590CB158
 P 5100 7950
 F 0 "R12" V 5000 7900 50  0000 C CNN
@@ -538,7 +551,7 @@ GND
 Text Label 3250 8050 0    60   ~ 0
 3V3_FB
 $Comp
-L host-x1-rescue:C C6
+L C C6
 U 1 1 590CB46E
 P 1200 3550
 F 0 "C6" H 1315 3596 50  0000 L CNN
@@ -549,7 +562,7 @@ F 3 "" H 1200 3550 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C4
+L C C4
 U 1 1 590CC56C
 P 1100 8450
 F 0 "C4" H 1215 8496 50  0000 L CNN
@@ -564,7 +577,7 @@ Text Label 850  3400 2    60   ~ 0
 Text Label 850  3700 2    60   ~ 0
 GND
 $Comp
-L host-x1-rescue:C C8
+L C C8
 U 1 1 590D6F45
 P 1200 5950
 F 0 "C8" H 1315 5996 50  0000 L CNN
@@ -579,7 +592,7 @@ Text Label 850  5800 2    60   ~ 0
 Text Label 850  6100 2    60   ~ 0
 GND
 $Comp
-L host-x1-rescue:C C7
+L C C7
 U 1 1 590D7DDB
 P 1200 5350
 F 0 "C7" H 1315 5396 50  0000 L CNN
@@ -594,7 +607,7 @@ Text Label 850  5200 2    60   ~ 0
 Text Label 850  5500 2    60   ~ 0
 GND
 $Comp
-L host-x1-rescue:C C5
+L C C5
 U 1 1 590D7FAF
 P 1150 7750
 F 0 "C5" H 1265 7796 50  0000 L CNN
@@ -609,7 +622,7 @@ Text Label 800  7600 2    60   ~ 0
 Text Label 800  7900 2    60   ~ 0
 GND
 $Comp
-L host-x1-rescue:C C9
+L C C9
 U 1 1 590D85DD
 P 4500 3450
 F 0 "C9" H 4615 3496 50  0000 L CNN
@@ -620,7 +633,7 @@ F 3 "" H 4500 3450 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C10
+L C C10
 U 1 1 590D8AEB
 P 4500 5250
 F 0 "C10" H 4615 5296 50  0000 L CNN
@@ -631,7 +644,7 @@ F 3 "" H 4500 5250 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C11
+L C C11
 U 1 1 590D8CB0
 P 4500 6550
 F 0 "C11" H 4615 6596 50  0000 L CNN
@@ -642,7 +655,7 @@ F 3 "" H 4500 6550 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C12
+L C C12
 U 1 1 590D8FDD
 P 4500 7650
 F 0 "C12" H 4615 7696 50  0000 L CNN
@@ -663,7 +676,7 @@ GND
 Text Label 4350 7500 2    60   ~ 0
 GND
 $Comp
-L host-x1-rescue:C C3
+L C C3
 U 1 1 590DA461
 P 650 8450
 F 0 "C3" H 765 8496 50  0000 L CNN
@@ -688,7 +701,7 @@ Text Label 4850 600  2    60   ~ 0
 Text HLabel 5200 1200 2    60   Output ~ 0
 5V0
 $Comp
-L host-x1-rescue:C C29
+L C C29
 U 1 1 590E8DEC
 P 8000 9450
 F 0 "C29" H 8115 9496 50  0000 L CNN
@@ -705,7 +718,7 @@ GND
 Text Notes 7800 9700 0    60   ~ 0
 VCCINT decoupling
 $Comp
-L host-x1-rescue:C C30
+L C C30
 U 1 1 590E99F3
 P 8550 9450
 F 0 "C30" H 8665 9496 50  0000 L CNN
@@ -716,7 +729,7 @@ F 3 "" H 8550 9450 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C31
+L C C31
 U 1 1 590E9B70
 P 9050 9450
 F 0 "C31" H 9165 9496 50  0000 L CNN
@@ -727,7 +740,7 @@ F 3 "" H 9050 9450 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C32
+L C C32
 U 1 1 590E9BF2
 P 9550 9450
 F 0 "C32" H 9665 9496 50  0000 L CNN
@@ -738,7 +751,7 @@ F 3 "" H 9550 9450 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C33
+L C C33
 U 1 1 590E9C7A
 P 10050 9450
 F 0 "C33" H 10165 9496 50  0000 L CNN
@@ -749,7 +762,7 @@ F 3 "" H 10050 9450 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C34
+L C C34
 U 1 1 590E9D08
 P 10550 9450
 F 0 "C34" H 10665 9496 50  0000 L CNN
@@ -760,7 +773,7 @@ F 3 "" H 10550 9450 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C35
+L C C35
 U 1 1 590E9D90
 P 11050 9450
 F 0 "C35" H 11165 9496 50  0000 L CNN
@@ -771,7 +784,7 @@ F 3 "" H 11050 9450 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C36
+L C C36
 U 1 1 590E9E5B
 P 11550 9450
 F 0 "C36" H 11665 9496 50  0000 L CNN
@@ -782,7 +795,7 @@ F 3 "" H 11550 9450 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C37
+L C C37
 U 1 1 590EA0E3
 P 12100 9450
 F 0 "C37" H 12215 9496 50  0000 L CNN
@@ -793,7 +806,7 @@ F 3 "" H 12100 9450 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C38
+L C C38
 U 1 1 590EA177
 P 12650 9450
 F 0 "C38" H 12765 9496 50  0000 L CNN
@@ -804,7 +817,7 @@ F 3 "" H 12650 9450 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C39
+L C C39
 U 1 1 590EA21B
 P 13200 9450
 F 0 "C39" H 13315 9496 50  0000 L CNN
@@ -815,7 +828,7 @@ F 3 "" H 13200 9450 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C40
+L C C40
 U 1 1 590EA2B3
 P 13750 9450
 F 0 "C40" H 13865 9496 50  0000 L CNN
@@ -826,7 +839,7 @@ F 3 "" H 13750 9450 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C41
+L C C41
 U 1 1 590EA431
 P 14300 9450
 F 0 "C41" H 14415 9496 50  0000 L CNN
@@ -837,7 +850,7 @@ F 3 "" H 14300 9450 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C42
+L C C42
 U 1 1 590EA4C9
 P 14850 9450
 F 0 "C42" H 14965 9496 50  0000 L CNN
@@ -848,7 +861,7 @@ F 3 "" H 14850 9450 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C43
+L C C43
 U 1 1 590EA563
 P 15400 9450
 F 0 "C43" H 15515 9496 50  0000 L CNN
@@ -861,7 +874,7 @@ $EndComp
 Text Notes 7800 9050 0    60   ~ 0
 VCCBRAM decoupling
 $Comp
-L host-x1-rescue:C C48
+L C C48
 U 1 1 590ED6B6
 P 8000 8750
 F 0 "C48" H 8115 8796 50  0000 L CNN
@@ -872,7 +885,7 @@ F 3 "" H 8000 8750 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C54
+L C C54
 U 1 1 590ED7F8
 P 8550 8750
 F 0 "C54" H 8665 8796 50  0000 L CNN
@@ -883,7 +896,7 @@ F 3 "" H 8550 8750 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C60
+L C C60
 U 1 1 590ED910
 P 9050 8750
 F 0 "C60" H 9165 8796 50  0000 L CNN
@@ -1390,7 +1403,7 @@ Connection ~ 8000 8600
 Text Notes 7800 8400 0    60   ~ 0
 VCCAUX decoupling
 $Comp
-L host-x1-rescue:C C47
+L C C47
 U 1 1 590EE916
 P 8000 8100
 F 0 "C47" H 8115 8146 50  0000 L CNN
@@ -1401,7 +1414,7 @@ F 3 "" H 8000 8100 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C53
+L C C53
 U 1 1 590EEA4C
 P 8550 8100
 F 0 "C53" H 8665 8146 50  0000 L CNN
@@ -1412,7 +1425,7 @@ F 3 "" H 8550 8100 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C59
+L C C59
 U 1 1 590EEB58
 P 9050 8100
 F 0 "C59" H 9165 8146 50  0000 L CNN
@@ -1423,7 +1436,7 @@ F 3 "" H 9050 8100 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C65
+L C C65
 U 1 1 590EEBFE
 P 9550 8100
 F 0 "C65" H 9665 8146 50  0000 L CNN
@@ -1434,7 +1447,7 @@ F 3 "" H 9550 8100 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C70
+L C C70
 U 1 1 590EECC2
 P 10050 8100
 F 0 "C70" H 10165 8146 50  0000 L CNN
@@ -1445,7 +1458,7 @@ F 3 "" H 10050 8100 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C75
+L C C75
 U 1 1 590EED6C
 P 10550 8100
 F 0 "C75" H 10665 8146 50  0000 L CNN
@@ -1476,7 +1489,7 @@ Connection ~ 8000 7950
 Text Notes 7800 7750 0    60   ~ 0
 VCCO_0 decoupling
 $Comp
-L host-x1-rescue:C C46
+L C C46
 U 1 1 590F081F
 P 8000 7450
 F 0 "C46" H 8115 7496 50  0000 L CNN
@@ -1497,7 +1510,7 @@ Wire Wire Line
 Text Notes 7800 7150 0    60   ~ 0
 VCCO_35 decoupling
 $Comp
-L host-x1-rescue:C C52
+L C C52
 U 1 1 590F14FF
 P 8550 6900
 F 0 "C52" H 8665 6946 50  0000 L CNN
@@ -1508,7 +1521,7 @@ F 3 "" H 8550 6900 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C58
+L C C58
 U 1 1 590F15EF
 P 9050 6900
 F 0 "C58" H 9165 6946 50  0000 L CNN
@@ -1519,7 +1532,7 @@ F 3 "" H 9050 6900 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C64
+L C C64
 U 1 1 590F16AB
 P 9550 6900
 F 0 "C64" H 9665 6946 50  0000 L CNN
@@ -1530,7 +1543,7 @@ F 3 "" H 9550 6900 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C69
+L C C69
 U 1 1 590F1785
 P 10050 6900
 F 0 "C69" H 10165 6946 50  0000 L CNN
@@ -1541,7 +1554,7 @@ F 3 "" H 10050 6900 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C74
+L C C74
 U 1 1 590F183D
 P 10550 6900
 F 0 "C74" H 10665 6946 50  0000 L CNN
@@ -1552,7 +1565,7 @@ F 3 "" H 10550 6900 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C79
+L C C79
 U 1 1 590F19E6
 P 11100 6900
 F 0 "C79" H 11215 6946 50  0000 L CNN
@@ -1583,7 +1596,7 @@ Connection ~ 10550 7050
 Text Notes 7800 6550 0    60   ~ 0
 VCCO_34 decoupling
 $Comp
-L host-x1-rescue:C C51
+L C C51
 U 1 1 590F3B4E
 P 8550 6300
 F 0 "C51" H 8665 6346 50  0000 L CNN
@@ -1594,7 +1607,7 @@ F 3 "" H 8550 6300 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C57
+L C C57
 U 1 1 590F3B54
 P 9050 6300
 F 0 "C57" H 9165 6346 50  0000 L CNN
@@ -1605,7 +1618,7 @@ F 3 "" H 9050 6300 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C63
+L C C63
 U 1 1 590F3B5A
 P 9550 6300
 F 0 "C63" H 9665 6346 50  0000 L CNN
@@ -1616,7 +1629,7 @@ F 3 "" H 9550 6300 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C68
+L C C68
 U 1 1 590F3B60
 P 10050 6300
 F 0 "C68" H 10165 6346 50  0000 L CNN
@@ -1627,7 +1640,7 @@ F 3 "" H 10050 6300 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C73
+L C C73
 U 1 1 590F3B66
 P 10550 6300
 F 0 "C73" H 10665 6346 50  0000 L CNN
@@ -1638,7 +1651,7 @@ F 3 "" H 10550 6300 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C78
+L C C78
 U 1 1 590F3B6C
 P 11100 6300
 F 0 "C78" H 11215 6346 50  0000 L CNN
@@ -1667,7 +1680,7 @@ Connection ~ 9550 6450
 Connection ~ 10550 6150
 Connection ~ 10550 6450
 $Comp
-L host-x1-rescue:C C45
+L C C45
 U 1 1 590F400A
 P 8000 5650
 F 0 "C45" H 8115 5696 50  0000 L CNN
@@ -1680,7 +1693,7 @@ $EndComp
 Text Notes 7800 5900 0    60   ~ 0
 VCCO_15 decoupling
 $Comp
-L host-x1-rescue:C C50
+L C C50
 U 1 1 590F4011
 P 8550 5650
 F 0 "C50" H 8665 5696 50  0000 L CNN
@@ -1691,7 +1704,7 @@ F 3 "" H 8550 5650 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C56
+L C C56
 U 1 1 590F4017
 P 9050 5650
 F 0 "C56" H 9165 5696 50  0000 L CNN
@@ -1702,7 +1715,7 @@ F 3 "" H 9050 5650 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C62
+L C C62
 U 1 1 590F401D
 P 9550 5650
 F 0 "C62" H 9665 5696 50  0000 L CNN
@@ -1713,7 +1726,7 @@ F 3 "" H 9550 5650 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C67
+L C C67
 U 1 1 590F4023
 P 10050 5650
 F 0 "C67" H 10165 5696 50  0000 L CNN
@@ -1724,7 +1737,7 @@ F 3 "" H 10050 5650 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C72
+L C C72
 U 1 1 590F4029
 P 10550 5650
 F 0 "C72" H 10665 5696 50  0000 L CNN
@@ -1735,7 +1748,7 @@ F 3 "" H 10550 5650 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C77
+L C C77
 U 1 1 590F402F
 P 11100 5650
 F 0 "C77" H 11215 5696 50  0000 L CNN
@@ -1766,7 +1779,7 @@ Connection ~ 9550 5800
 Connection ~ 10550 5500
 Connection ~ 10550 5800
 $Comp
-L host-x1-rescue:C C44
+L C C44
 U 1 1 590F43FE
 P 8000 5000
 F 0 "C44" H 8115 5046 50  0000 L CNN
@@ -1779,7 +1792,7 @@ $EndComp
 Text Notes 7800 5250 0    60   ~ 0
 VCCO_14 decoupling
 $Comp
-L host-x1-rescue:C C49
+L C C49
 U 1 1 590F4405
 P 8550 5000
 F 0 "C49" H 8665 5046 50  0000 L CNN
@@ -1790,7 +1803,7 @@ F 3 "" H 8550 5000 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C55
+L C C55
 U 1 1 590F440B
 P 9050 5000
 F 0 "C55" H 9165 5046 50  0000 L CNN
@@ -1801,7 +1814,7 @@ F 3 "" H 9050 5000 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C61
+L C C61
 U 1 1 590F4411
 P 9550 5000
 F 0 "C61" H 9665 5046 50  0000 L CNN
@@ -1812,7 +1825,7 @@ F 3 "" H 9550 5000 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C66
+L C C66
 U 1 1 590F4417
 P 10050 5000
 F 0 "C66" H 10165 5046 50  0000 L CNN
@@ -1823,7 +1836,7 @@ F 3 "" H 10050 5000 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C71
+L C C71
 U 1 1 590F441D
 P 10550 5000
 F 0 "C71" H 10665 5046 50  0000 L CNN
@@ -1834,7 +1847,7 @@ F 3 "" H 10550 5000 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C76
+L C C76
 U 1 1 590F4423
 P 11100 5000
 F 0 "C76" H 11215 5046 50  0000 L CNN
@@ -1865,7 +1878,7 @@ Connection ~ 9550 5150
 Connection ~ 10550 4850
 Connection ~ 10550 5150
 $Comp
-L host-x1-rescue:FUSE_PWROUT F1
+L FUSE_PWROUT F1
 U 1 1 59104DF6
 P 2700 1000
 F 0 "F1" H 2700 1240 50  0000 C CNN
@@ -1880,7 +1893,7 @@ Wire Wire Line
 Wire Wire Line
 	2950 1000 3700 1000
 $Comp
-L host-x1-rescue:C C111
+L C C111
 U 1 1 591301E3
 P 4500 1900
 F 0 "C111" H 4615 1946 50  0000 L CNN
@@ -1895,7 +1908,7 @@ Connection ~ 4500 2050
 Text Notes 2450 9800 0    60   ~ 0
 TODO: Check if we already have LTC3374 feedback resistors in inventory\nand remove from DigiKey cart if so
 $Comp
-L host-x1-rescue:CONN_01X01 TP7
+L CONN_01X01 TP7
 U 1 1 59134315
 P 11350 2850
 F 0 "TP7" H 11269 2625 50  0000 C CNN
@@ -1910,7 +1923,7 @@ Text Label 11700 2850 0    60   ~ 0
 Wire Wire Line
 	11700 2850 11550 2850
 $Comp
-L host-x1-rescue:CONN_01X01 TP8
+L CONN_01X01 TP8
 U 1 1 591345F5
 P 11350 3200
 F 0 "TP8" H 11269 2975 50  0000 C CNN
@@ -1925,7 +1938,7 @@ Text Label 11700 3200 0    60   ~ 0
 Wire Wire Line
 	11700 3200 11550 3200
 $Comp
-L host-x1-rescue:CONN_01X01 TP9
+L CONN_01X01 TP9
 U 1 1 591349A0
 P 11350 3550
 F 0 "TP9" H 11269 3325 50  0000 C CNN
@@ -1940,7 +1953,7 @@ Text Label 11700 3550 0    60   ~ 0
 Wire Wire Line
 	11700 3550 11550 3550
 $Comp
-L host-x1-rescue:CONN_01X01 TP10
+L CONN_01X01 TP10
 U 1 1 59134C86
 P 11350 3900
 F 0 "TP10" H 11269 3675 50  0000 C CNN
@@ -1955,7 +1968,7 @@ Text Label 11700 3900 0    60   ~ 0
 Wire Wire Line
 	11700 3900 11550 3900
 $Comp
-L host-x1-rescue:CONN_01X01 TP11
+L CONN_01X01 TP11
 U 1 1 591351D3
 P 11350 4250
 F 0 "TP11" H 11269 4025 50  0000 C CNN

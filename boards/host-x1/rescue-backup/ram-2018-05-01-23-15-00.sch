@@ -1,4 +1,17 @@
-EESchema Schematic File Version 4
+EESchema Schematic File Version 2
+LIBS:conn
+LIBS:device
+LIBS:analog-azonenberg
+LIBS:cypress-azonenberg
+LIBS:hirose-azonenberg
+LIBS:memory-azonenberg
+LIBS:microchip-azonenberg
+LIBS:osc-azonenberg
+LIBS:passive-azonenberg
+LIBS:power-azonenberg
+LIBS:special-azonenberg
+LIBS:xilinx-azonenberg
+LIBS:switches
 LIBS:host-x1-cache
 EELAYER 26 0
 EELAYER END
@@ -15,7 +28,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L host-x1-rescue:XC7AxT-xFTG256x U2
+L XC7AxT-xFTG256x U2
 U 5 1 590C013F
 P 13250 7100
 AR Path="/590C013F" Ref="U2"  Part="5" 
@@ -28,7 +41,7 @@ F 3 "" H 13250 7100 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:S27KS0641 U4
+L S27KS0641 U4
 U 1 1 590E03CD
 P 2150 2750
 F 0 "U4" H 2150 4500 60  0000 L CNN
@@ -71,7 +84,7 @@ RAM0_DQ6
 Text Label 3500 2100 0    60   ~ 0
 RAM0_DQ7
 $Comp
-L host-x1-rescue:C C13
+L C C13
 U 1 1 590E0A6D
 P 4550 1300
 F 0 "C13" H 4665 1346 50  0000 L CNN
@@ -82,7 +95,7 @@ F 3 "" H 4550 1300 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C17
+L C C17
 U 1 1 590E0BB3
 P 5100 1300
 F 0 "C17" H 5215 1346 50  0000 L CNN
@@ -93,7 +106,7 @@ F 3 "" H 5100 1300 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C21
+L C C21
 U 1 1 590E0BED
 P 5650 1300
 F 0 "C21" H 5765 1346 50  0000 L CNN
@@ -104,7 +117,7 @@ F 3 "" H 5650 1300 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C25
+L C C25
 U 1 1 590E0C23
 P 6250 1300
 F 0 "C25" H 6365 1346 50  0000 L CNN
@@ -119,7 +132,7 @@ Text Label 4400 1150 2    60   ~ 0
 Text Label 4400 1450 2    60   ~ 0
 GND
 $Comp
-L host-x1-rescue:R R13
+L R R13
 U 1 1 590E0EB1
 P 4550 1850
 F 0 "R13" H 4620 1896 50  0000 L CNN
@@ -134,7 +147,7 @@ RAM0_CS_N
 Text Label 4850 2000 0    60   ~ 0
 1V8
 $Comp
-L host-x1-rescue:S27KS0641 U5
+L S27KS0641 U5
 U 1 1 590E12FB
 P 2150 4750
 F 0 "U5" H 2150 6500 60  0000 L CNN
@@ -173,7 +186,7 @@ RAM1_DQ6
 Text Label 3500 4100 0    60   ~ 0
 RAM1_DQ7
 $Comp
-L host-x1-rescue:C C14
+L C C14
 U 1 1 590E132B
 P 4550 3300
 F 0 "C14" H 4665 3346 50  0000 L CNN
@@ -184,7 +197,7 @@ F 3 "" H 4550 3300 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C18
+L C C18
 U 1 1 590E1331
 P 5100 3300
 F 0 "C18" H 5215 3346 50  0000 L CNN
@@ -195,7 +208,7 @@ F 3 "" H 5100 3300 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C22
+L C C22
 U 1 1 590E1337
 P 5650 3300
 F 0 "C22" H 5765 3346 50  0000 L CNN
@@ -206,7 +219,7 @@ F 3 "" H 5650 3300 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C26
+L C C26
 U 1 1 590E133D
 P 6250 3300
 F 0 "C26" H 6365 3346 50  0000 L CNN
@@ -221,7 +234,7 @@ Text Label 4400 3150 2    60   ~ 0
 Text Label 4400 3450 2    60   ~ 0
 GND
 $Comp
-L host-x1-rescue:R R14
+L R R14
 U 1 1 590E134D
 P 4550 3850
 F 0 "R14" H 4620 3896 50  0000 L CNN
@@ -240,7 +253,7 @@ Text Label 1850 3200 2    60   ~ 0
 Text Label 1850 3600 2    60   ~ 0
 GND
 $Comp
-L host-x1-rescue:S27KS0641 U6
+L S27KS0641 U6
 U 1 1 590E1D49
 P 2150 6700
 F 0 "U6" H 2150 8450 60  0000 L CNN
@@ -279,7 +292,7 @@ RAM2_DQ6
 Text Label 3500 6050 0    60   ~ 0
 RAM2_DQ7
 $Comp
-L host-x1-rescue:C C15
+L C C15
 U 1 1 590E1D73
 P 4550 5250
 F 0 "C15" H 4665 5296 50  0000 L CNN
@@ -290,7 +303,7 @@ F 3 "" H 4550 5250 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C19
+L C C19
 U 1 1 590E1D79
 P 5100 5250
 F 0 "C19" H 5215 5296 50  0000 L CNN
@@ -301,7 +314,7 @@ F 3 "" H 5100 5250 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C23
+L C C23
 U 1 1 590E1D7F
 P 5650 5250
 F 0 "C23" H 5765 5296 50  0000 L CNN
@@ -312,7 +325,7 @@ F 3 "" H 5650 5250 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C27
+L C C27
 U 1 1 590E1D85
 P 6250 5250
 F 0 "C27" H 6365 5296 50  0000 L CNN
@@ -327,7 +340,7 @@ Text Label 4400 5100 2    60   ~ 0
 Text Label 4400 5400 2    60   ~ 0
 GND
 $Comp
-L host-x1-rescue:R R15
+L R R15
 U 1 1 590E1D95
 P 4550 5800
 F 0 "R15" H 4620 5846 50  0000 L CNN
@@ -346,7 +359,7 @@ Text Label 1850 5150 2    60   ~ 0
 Text Label 1850 5550 2    60   ~ 0
 GND
 $Comp
-L host-x1-rescue:S27KS0641 U7
+L S27KS0641 U7
 U 1 1 590E24D3
 P 2150 8600
 F 0 "U7" H 2150 10350 60  0000 L CNN
@@ -385,7 +398,7 @@ RAM3_DQ6
 Text Label 3500 7950 0    60   ~ 0
 RAM3_DQ7
 $Comp
-L host-x1-rescue:C C16
+L C C16
 U 1 1 590E24FD
 P 4550 7150
 F 0 "C16" H 4665 7196 50  0000 L CNN
@@ -396,7 +409,7 @@ F 3 "" H 4550 7150 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C20
+L C C20
 U 1 1 590E2503
 P 5100 7150
 F 0 "C20" H 5215 7196 50  0000 L CNN
@@ -407,7 +420,7 @@ F 3 "" H 5100 7150 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C24
+L C C24
 U 1 1 590E2509
 P 5650 7150
 F 0 "C24" H 5765 7196 50  0000 L CNN
@@ -418,7 +431,7 @@ F 3 "" H 5650 7150 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L host-x1-rescue:C C28
+L C C28
 U 1 1 590E250F
 P 6250 7150
 F 0 "C28" H 6365 7196 50  0000 L CNN
@@ -433,7 +446,7 @@ Text Label 4400 7000 2    60   ~ 0
 Text Label 4400 7300 2    60   ~ 0
 GND
 $Comp
-L host-x1-rescue:R R16
+L R R16
 U 1 1 590E251F
 P 4550 7700
 F 0 "R16" H 4620 7746 50  0000 L CNN
@@ -903,7 +916,7 @@ VCCO = 1V8
 Text Notes 2150 8800 0    60   ~ 0
 No termination on DQ lines.\nFPGA and RAM both have programmable drive strength
 $Comp
-L host-x1-rescue:TEST TP12
+L TEST TP12
 U 1 1 5913E5DE
 P 1800 9650
 F 0 "TP12" V 2015 9744 50  0000 C CNN
@@ -918,7 +931,7 @@ RAM0_DQS
 Wire Wire Line
 	2050 9650 1800 9650
 $Comp
-L host-x1-rescue:TEST TP13
+L TEST TP13
 U 1 1 5913E9F6
 P 1800 10000
 F 0 "TP13" V 2015 10094 50  0000 C CNN
@@ -933,7 +946,7 @@ RAM0_DQ0
 Wire Wire Line
 	2050 10000 1800 10000
 $Comp
-L host-x1-rescue:TEST TP14
+L TEST TP14
 U 1 1 5913EC17
 P 1800 10350
 F 0 "TP14" V 2015 10444 50  0000 C CNN
@@ -948,7 +961,7 @@ GND
 Wire Wire Line
 	2050 10350 1800 10350
 $Comp
-L host-x1-rescue:TEST TP15
+L TEST TP15
 U 1 1 5913ECFF
 P 1800 10700
 F 0 "TP15" V 2015 10794 50  0000 C CNN
@@ -975,7 +988,7 @@ NoConn ~ 9950 5950
 NoConn ~ 9950 5350
 NoConn ~ 9950 5750
 $Comp
-L host-x1-rescue:XC7AxT-xFTG256x U2
+L XC7AxT-xFTG256x U2
 U 6 1 590BFFBD
 P 10150 7150
 AR Path="/590BFFBD" Ref="U2"  Part="6" 
