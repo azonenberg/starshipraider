@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:host-x1-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -50,7 +50,7 @@ Wire Wire Line
 Text Label 8050 6000 2    60   ~ 0
 GND
 Wire Wire Line
-	8050 6000 8250 6000
+	8050 6000 8150 6000
 Wire Wire Line
 	8150 6000 8150 6100
 Wire Wire Line
@@ -143,7 +143,7 @@ $EndComp
 Text Label 8350 5600 2    60   ~ 0
 FPGA_RST_N
 Wire Wire Line
-	7550 5600 8550 5600
+	7550 5600 7700 5600
 Text Label 8050 5900 2    60   ~ 0
 1V8
 Wire Wire Line
@@ -180,7 +180,7 @@ NoConn ~ 7000 2000
 Text Label 8050 5800 2    60   ~ 0
 GND
 Wire Wire Line
-	6800 1900 7000 1900
+	6800 1900 6900 1900
 NoConn ~ 7000 2500
 Wire Wire Line
 	7000 2400 6800 2400
@@ -191,7 +191,7 @@ Wire Wire Line
 Wire Wire Line
 	6800 2100 7000 2100
 Wire Wire Line
-	6900 1500 6900 1900
+	6900 1500 6900 1600
 Wire Wire Line
 	6900 1800 7000 1800
 Connection ~ 6900 1900
@@ -329,10 +329,24 @@ Wire Wire Line
 Wire Wire Line
 	7250 5500 7100 5500
 Wire Wire Line
-	7100 5400 7100 5600
+	7100 5400 7100 5500
 Text HLabel 5350 4550 0    60   Input ~ 0
 3V3
 Wire Wire Line
 	7100 5400 7250 5400
 Connection ~ 7100 5500
+Wire Wire Line
+	8150 6000 8250 6000
+Wire Wire Line
+	7700 5600 8550 5600
+Wire Wire Line
+	6900 1900 7000 1900
+Wire Wire Line
+	6900 1800 6900 1900
+Wire Wire Line
+	6900 1700 6900 1800
+Wire Wire Line
+	6900 1600 6900 1700
+Wire Wire Line
+	7100 5500 7100 5600
 $EndSCHEMATC

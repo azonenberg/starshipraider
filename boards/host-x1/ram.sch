@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:host-x1-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
@@ -556,9 +556,9 @@ RAM3_CLK_P
 Text Label 12900 4000 2    60   ~ 0
 RAM3_CLK_N
 Wire Wire Line
-	1350 1200 1950 1200
+	1350 1200 1850 1200
 Wire Wire Line
-	1850 1200 1850 1400
+	1850 1200 1850 1300
 Wire Wire Line
 	1850 1300 1950 1300
 Connection ~ 1850 1200
@@ -566,9 +566,9 @@ Wire Wire Line
 	1850 1400 1950 1400
 Connection ~ 1850 1300
 Wire Wire Line
-	1350 1600 1950 1600
+	1350 1600 1850 1600
 Wire Wire Line
-	1850 1600 1850 1800
+	1850 1600 1850 1700
 Wire Wire Line
 	1850 1700 1950 1700
 Connection ~ 1850 1600
@@ -602,12 +602,12 @@ Wire Wire Line
 Wire Wire Line
 	3350 2100 3500 2100
 Wire Wire Line
-	4400 1450 6250 1450
+	4400 1450 4550 1450
 Connection ~ 4550 1450
 Connection ~ 5100 1450
 Connection ~ 5650 1450
 Wire Wire Line
-	4400 1150 6250 1150
+	4400 1150 4550 1150
 Connection ~ 5650 1150
 Connection ~ 5100 1150
 Connection ~ 4550 1150
@@ -616,14 +616,14 @@ Wire Wire Line
 Wire Wire Line
 	4850 2000 4550 2000
 Wire Wire Line
-	1850 3200 1850 3400
+	1850 3200 1850 3300
 Wire Wire Line
 	1850 3300 1950 3300
 Wire Wire Line
 	1850 3400 1950 3400
 Connection ~ 1850 3300
 Wire Wire Line
-	1850 3600 1850 3800
+	1850 3600 1850 3700
 Wire Wire Line
 	1850 3700 1950 3700
 Wire Wire Line
@@ -656,12 +656,12 @@ Wire Wire Line
 Wire Wire Line
 	3350 4100 3500 4100
 Wire Wire Line
-	4400 3450 6250 3450
+	4400 3450 4550 3450
 Connection ~ 4550 3450
 Connection ~ 5100 3450
 Connection ~ 5650 3450
 Wire Wire Line
-	4400 3150 6250 3150
+	4400 3150 4550 3150
 Connection ~ 5650 3150
 Connection ~ 5100 3150
 Connection ~ 4550 3150
@@ -674,14 +674,14 @@ Wire Wire Line
 Wire Wire Line
 	1850 3600 1950 3600
 Wire Wire Line
-	1850 5150 1850 5350
+	1850 5150 1850 5250
 Wire Wire Line
 	1850 5250 1950 5250
 Wire Wire Line
 	1850 5350 1950 5350
 Connection ~ 1850 5250
 Wire Wire Line
-	1850 5550 1850 5750
+	1850 5550 1850 5650
 Wire Wire Line
 	1850 5650 1950 5650
 Wire Wire Line
@@ -714,12 +714,12 @@ Wire Wire Line
 Wire Wire Line
 	3350 6050 3500 6050
 Wire Wire Line
-	4400 5400 6250 5400
+	4400 5400 4550 5400
 Connection ~ 4550 5400
 Connection ~ 5100 5400
 Connection ~ 5650 5400
 Wire Wire Line
-	4400 5100 6250 5100
+	4400 5100 4550 5100
 Connection ~ 5650 5100
 Connection ~ 5100 5100
 Connection ~ 4550 5100
@@ -732,14 +732,14 @@ Wire Wire Line
 Wire Wire Line
 	1850 5550 1950 5550
 Wire Wire Line
-	1850 7050 1850 7250
+	1850 7050 1850 7150
 Wire Wire Line
 	1850 7150 1950 7150
 Wire Wire Line
 	1850 7250 1950 7250
 Connection ~ 1850 7150
 Wire Wire Line
-	1850 7450 1850 7650
+	1850 7450 1850 7550
 Wire Wire Line
 	1850 7550 1950 7550
 Wire Wire Line
@@ -772,12 +772,12 @@ Wire Wire Line
 Wire Wire Line
 	3350 7950 3500 7950
 Wire Wire Line
-	4400 7300 6250 7300
+	4400 7300 4550 7300
 Connection ~ 4550 7300
 Connection ~ 5100 7300
 Connection ~ 5650 7300
 Wire Wire Line
-	4400 7000 6250 7000
+	4400 7000 4550 7000
 Connection ~ 5650 7000
 Connection ~ 5100 7000
 Connection ~ 4550 7000
@@ -994,4 +994,72 @@ NoConn ~ 9950 4450
 Text Notes 6200 8200 0    60   ~ 0
 TODO: Termination resistors for differential clock?
 NoConn ~ 9950 2250
+Wire Wire Line
+	1850 1200 1950 1200
+Wire Wire Line
+	1850 1300 1850 1400
+Wire Wire Line
+	1850 1600 1950 1600
+Wire Wire Line
+	1850 1700 1850 1800
+Wire Wire Line
+	4550 1450 5100 1450
+Wire Wire Line
+	5100 1450 5650 1450
+Wire Wire Line
+	5650 1450 6250 1450
+Wire Wire Line
+	5650 1150 6250 1150
+Wire Wire Line
+	5100 1150 5650 1150
+Wire Wire Line
+	4550 1150 5100 1150
+Wire Wire Line
+	1850 3300 1850 3400
+Wire Wire Line
+	1850 3700 1850 3800
+Wire Wire Line
+	4550 3450 5100 3450
+Wire Wire Line
+	5100 3450 5650 3450
+Wire Wire Line
+	5650 3450 6250 3450
+Wire Wire Line
+	5650 3150 6250 3150
+Wire Wire Line
+	5100 3150 5650 3150
+Wire Wire Line
+	4550 3150 5100 3150
+Wire Wire Line
+	1850 5250 1850 5350
+Wire Wire Line
+	1850 5650 1850 5750
+Wire Wire Line
+	4550 5400 5100 5400
+Wire Wire Line
+	5100 5400 5650 5400
+Wire Wire Line
+	5650 5400 6250 5400
+Wire Wire Line
+	5650 5100 6250 5100
+Wire Wire Line
+	5100 5100 5650 5100
+Wire Wire Line
+	4550 5100 5100 5100
+Wire Wire Line
+	1850 7150 1850 7250
+Wire Wire Line
+	1850 7550 1850 7650
+Wire Wire Line
+	4550 7300 5100 7300
+Wire Wire Line
+	5100 7300 5650 7300
+Wire Wire Line
+	5650 7300 6250 7300
+Wire Wire Line
+	5650 7000 6250 7000
+Wire Wire Line
+	5100 7000 5650 7000
+Wire Wire Line
+	4550 7000 5100 7000
 $EndSCHEMATC

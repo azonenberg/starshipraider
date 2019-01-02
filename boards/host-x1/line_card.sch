@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:host-x1-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -15,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L host-x1-rescue:STARSHIPRAIDER_IOBOARD_HOST J3
+L special-azonenberg:STARSHIPRAIDER_IOBOARD_HOST J3
 U 1 1 590F824D
 P 1900 4050
 AR Path="/590F824D" Ref="J3"  Part="1" 
