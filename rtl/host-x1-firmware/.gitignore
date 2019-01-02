@@ -1,0 +1,4 @@
+*.sim
+*.runs
+*.cache
+*.hw
