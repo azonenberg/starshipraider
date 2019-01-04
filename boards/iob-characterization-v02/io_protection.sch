@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:iob-characterization-v02-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -328,7 +328,7 @@ Wire Wire Line
 Wire Wire Line
 	2400 3150 3100 3150
 $Comp
-L conn:CONN_COAXIAL J6
+L iob-characterization-v02-rescue:CONN_COAXIAL-conn J6
 U 1 1 5B76FD17
 P 2500 2700
 F 0 "J6" H 2600 2584 50  0000 L CNN
@@ -343,7 +343,7 @@ Wire Wire Line
 Text Label 2500 2500 0    60   ~ 0
 GND
 $Comp
-L conn:CONN_COAXIAL J5
+L iob-characterization-v02-rescue:CONN_COAXIAL-conn J5
 U 1 1 5B77143F
 P 2350 3750
 F 0 "J5" H 2450 3726 50  0000 L CNN

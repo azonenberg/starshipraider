@@ -20,51 +20,6 @@ X VSS PAD -100 500 100 R 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #
-# conn_CONN_01X01
-#
-DEF conn_CONN_01X01 J 0 40 Y N 1 F N
-F0 "J" 0 100 50 H V C CNN
-F1 "conn_CONN_01X01" 100 0 50 V V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- Pin_Header_Straight_1X*
- Pin_Header_Angled_1X*
- Socket_Strip_Straight_1X*
- Socket_Strip_Angled_1X*
-$ENDFPLIST
-DRAW
-S -50 5 10 -5 0 1 0 N
-S -50 50 50 -50 0 1 0 N
-X P1 1 -200 0 150 R 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# conn_CONN_COAXIAL
-#
-DEF conn_CONN_COAXIAL J 0 40 Y N 1 F N
-F0 "J" 10 120 50 H V C CNN
-F1 "conn_CONN_COAXIAL" 115 0 50 V V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- *BNC*
- *SMA*
- *SMB*
- *SMC*
- *Cinch*
-$ENDFPLIST
-DRAW
-A -2 0 71 1636 0 0 1 10 N -70 20 70 0
-A -1 0 71 0 -1638 0 1 10 N 70 0 -70 -20
-C 0 0 20 0 1 8 N
-P 2 0 1 0 -50 0 -20 0 N
-P 2 0 1 0 0 -100 0 -70 N
-X In 1 -150 0 100 R 50 50 1 1 P
-X Ext 2 0 -200 100 U 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
 # device_C
 #
 DEF device_C C 0 10 N Y 1 F N
@@ -210,6 +165,51 @@ P 2 0 1 20 -80 -30 80 -30 N
 P 2 0 1 20 -80 30 80 30 N
 X ~ 1 0 150 110 D 50 50 1 1 P
 X ~ 2 0 -150 110 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# iob-characterization-v02-rescue_CONN_01X01-conn
+#
+DEF iob-characterization-v02-rescue_CONN_01X01-conn J 0 40 Y N 1 F N
+F0 "J" 0 100 50 H V C CNN
+F1 "iob-characterization-v02-rescue_CONN_01X01-conn" 100 0 50 V V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Pin_Header_Straight_1X*
+ Pin_Header_Angled_1X*
+ Socket_Strip_Straight_1X*
+ Socket_Strip_Angled_1X*
+$ENDFPLIST
+DRAW
+S -50 5 10 -5 0 1 0 N
+S -50 50 50 -50 0 1 0 N
+X P1 1 -200 0 150 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# iob-characterization-v02-rescue_CONN_COAXIAL-conn
+#
+DEF iob-characterization-v02-rescue_CONN_COAXIAL-conn J 0 40 Y N 1 F N
+F0 "J" 10 120 50 H V C CNN
+F1 "iob-characterization-v02-rescue_CONN_COAXIAL-conn" 115 0 50 V V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ *BNC*
+ *SMA*
+ *SMB*
+ *SMC*
+ *Cinch*
+$ENDFPLIST
+DRAW
+A -2 0 71 1636 0 0 1 10 N -70 20 70 0
+A -1 0 71 0 -1638 0 1 10 N 70 0 -70 -20
+C 0 0 20 0 1 8 N
+P 2 0 1 0 -50 0 -20 0 N
+P 2 0 1 0 0 -100 0 -70 N
+X In 1 -150 0 100 R 50 50 1 1 P
+X Ext 2 0 -200 100 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #

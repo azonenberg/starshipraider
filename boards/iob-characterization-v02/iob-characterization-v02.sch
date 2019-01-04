@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:iob-characterization-v02-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -771,7 +771,7 @@ GND
 Wire Wire Line
 	1650 7250 1650 7150
 $Comp
-L conn:CONN_01X01 TP1
+L iob-characterization-v02-rescue:CONN_01X01-conn TP1
 U 1 1 5B81DDFA
 P 10350 5650
 F 0 "TP1" H 10428 5691 50  0000 L CNN
