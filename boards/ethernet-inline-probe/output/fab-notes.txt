@@ -4,7 +4,7 @@ General fabrication notes
 
 	* Boards are be individually routed.
 	* Board material is S1000-2
-	* Green solder mask on both sides of board. All vias to be tented.
+	* Blue solder mask on both sides of board. All vias to be tented.
 	* White LPI legend on top side of board.
 	* Pad finish is ENIG.
 	* Finished board thickness is 1.6 mm.

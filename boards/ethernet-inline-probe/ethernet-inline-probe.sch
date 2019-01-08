@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:ethernet-inline-probe-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -295,4 +296,126 @@ Text Label 6250 2350 0    50   ~ 0
 CH4_P
 Text Label 6250 2450 0    50   ~ 0
 CH4_N
+$Comp
+L device:R R9
+U 1 1 5C344B69
+P 3000 4150
+F 0 "R9" V 2900 4150 50  0000 C CNN
+F 1 "100K" V 3000 4150 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 2930 4150 50  0001 C CNN
+F 3 "" H 3000 4150 50  0001 C CNN
+	1    3000 4150
+	0    1    1    0   
+$EndComp
+Text Label 2850 4150 2    50   ~ 0
+CH1_P
+Text Label 3150 4150 0    50   ~ 0
+GND
+$Comp
+L device:R R10
+U 1 1 5C3463CF
+P 3000 4350
+F 0 "R10" V 2900 4350 50  0000 C CNN
+F 1 "100K" V 3000 4350 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 2930 4350 50  0001 C CNN
+F 3 "" H 3000 4350 50  0001 C CNN
+	1    3000 4350
+	0    1    1    0   
+$EndComp
+Text Label 2850 4350 2    50   ~ 0
+CH1_N
+Text Label 3150 4350 0    50   ~ 0
+GND
+$Comp
+L device:R R11
+U 1 1 5C346DB8
+P 3000 4550
+F 0 "R11" V 2900 4550 50  0000 C CNN
+F 1 "100K" V 3000 4550 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 2930 4550 50  0001 C CNN
+F 3 "" H 3000 4550 50  0001 C CNN
+	1    3000 4550
+	0    1    1    0   
+$EndComp
+Text Label 2850 4550 2    50   ~ 0
+CH2_P
+Text Label 3150 4550 0    50   ~ 0
+GND
+$Comp
+L device:R R12
+U 1 1 5C346DC4
+P 3000 4750
+F 0 "R12" V 2900 4750 50  0000 C CNN
+F 1 "100K" V 3000 4750 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 2930 4750 50  0001 C CNN
+F 3 "" H 3000 4750 50  0001 C CNN
+	1    3000 4750
+	0    1    1    0   
+$EndComp
+Text Label 2850 4750 2    50   ~ 0
+CH2_N
+Text Label 3150 4750 0    50   ~ 0
+GND
+$Comp
+L device:R R13
+U 1 1 5C347FC2
+P 3000 4950
+F 0 "R13" V 2900 4950 50  0000 C CNN
+F 1 "100K" V 3000 4950 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 2930 4950 50  0001 C CNN
+F 3 "" H 3000 4950 50  0001 C CNN
+	1    3000 4950
+	0    1    1    0   
+$EndComp
+Text Label 2850 4950 2    50   ~ 0
+CH3_P
+Text Label 3150 4950 0    50   ~ 0
+GND
+$Comp
+L device:R R14
+U 1 1 5C347FCE
+P 3000 5150
+F 0 "R14" V 2900 5150 50  0000 C CNN
+F 1 "100K" V 3000 5150 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 2930 5150 50  0001 C CNN
+F 3 "" H 3000 5150 50  0001 C CNN
+	1    3000 5150
+	0    1    1    0   
+$EndComp
+Text Label 2850 5150 2    50   ~ 0
+CH3_N
+Text Label 3150 5150 0    50   ~ 0
+GND
+$Comp
+L device:R R15
+U 1 1 5C347FDA
+P 3000 5350
+F 0 "R15" V 2900 5350 50  0000 C CNN
+F 1 "100K" V 3000 5350 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 2930 5350 50  0001 C CNN
+F 3 "" H 3000 5350 50  0001 C CNN
+	1    3000 5350
+	0    1    1    0   
+$EndComp
+Text Label 2850 5350 2    50   ~ 0
+CH4_P
+Text Label 3150 5350 0    50   ~ 0
+GND
+$Comp
+L device:R R16
+U 1 1 5C347FE6
+P 3000 5550
+F 0 "R16" V 2900 5550 50  0000 C CNN
+F 1 "100K" V 3000 5550 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 2930 5550 50  0001 C CNN
+F 3 "" H 3000 5550 50  0001 C CNN
+	1    3000 5550
+	0    1    1    0   
+$EndComp
+Text Label 2850 5550 2    50   ~ 0
+CH4_N
+Text Label 3150 5550 0    50   ~ 0
+GND
+Text Notes 2600 3950 0    50   ~ 0
+Common mode biasing
 $EndSCHEMATC
