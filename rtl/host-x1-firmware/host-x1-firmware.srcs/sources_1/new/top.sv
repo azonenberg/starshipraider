@@ -634,31 +634,17 @@ module top(
 	);
 
 	//Logic analyzer
-	/*
+
 	ila_0 ila(
-		.clk(clk_125mhz),
+		.clk(clk_ipstack),
 
-		.probe0(mac.gmii_tx_bus),
-		.probe1(mac.rgmii_bridge.oserdes_rst),
-		.probe2(mac.rgmii_bridge.clock_dout),
-		.probe3(mac.rgmii_bridge.link_speed_sync),
-		.probe4(mac.rgmii_bridge.tx_data_lo),
-		.probe5(mac.rgmii_bridge.tx_data_hi),
-		.probe6(mac.rgmii_bridge.tx_phase),
-		.probe7(mac.rgmii_bridge.update_data),
-
-		.probe8(mac.mac.tx_crc_update),
-		.probe9(mac.mac.tx_crc_din),
-		.probe10(mac.mac.tx_crc),
+		.probe0(ipstack.tcpv4_rx_l4_bus),
+		.probe1(ipstack.ipv4_rx_l3_bus),
+		.probe2(ipstack.tcp_ipv4.rx_state),
 
 		.trig_out(trig_out),
 		.trig_out_ack(trig_out)
 	);
-
-	ila_1 ila1(
-		.clk(mac_rx_clk),
-		.probe0(mac.mac_rx_bus)
-	);*/
 
 	assign pmod_dq[0]	= rgmii_rxd[0];
 	assign pmod_dq[1]	= rgmii_rxd[1];
