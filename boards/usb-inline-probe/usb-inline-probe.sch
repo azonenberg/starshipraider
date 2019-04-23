@@ -1,0 +1,148 @@
+EESchema Schematic File Version 4
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:USB_A J2
+U 1 1 5CBE7A1D
+P 7100 3150
+F 0 "J2" H 6870 3139 50  0000 R CNN
+F 1 "USB_A" H 6870 3048 50  0000 R CNN
+F 2 "azonenberg_pcb:CONN_USB_AMPHENOL_UE27AC54100" H 7250 3100 50  0001 C CNN
+F 3 "" H 7250 3100 50  0001 C CNN
+	1    7100 3150
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:USB_B J1
+U 1 1 5CBE8064
+P 5650 3150
+F 0 "J1" H 5707 3617 50  0000 C CNN
+F 1 "USB_B" H 5707 3526 50  0000 C CNN
+F 2 "azonenberg_pcb:CONN_USB_B_CUI_UJ2-BH-1-TH" H 5800 3100 50  0001 C CNN
+F 3 "" H 5800 3100 50  0001 C CNN
+	1    5650 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5950 2950 6800 2950
+Wire Wire Line
+	5950 3150 6800 3150
+Wire Wire Line
+	5950 3250 6800 3250
+Wire Wire Line
+	5650 3550 7100 3550
+Wire Wire Line
+	5550 3550 5550 3650
+Wire Wire Line
+	5550 3650 7200 3650
+Wire Wire Line
+	7200 3650 7200 3550
+Text Label 6050 3650 0    50   ~ 0
+SHLD
+Text Label 6050 3550 0    50   ~ 0
+GND
+Text Label 6200 3150 0    50   ~ 0
+D_P
+Text Label 6200 3250 0    50   ~ 0
+D_N
+Text Label 6200 2950 0    50   ~ 0
+VBUS
+$Comp
+L device:C C1
+U 1 1 5CBEA5E9
+P 8800 2950
+F 0 "C1" V 8548 2950 50  0000 C CNN
+F 1 "0.1 uF" V 8639 2950 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_CAP_NOSILK" H 8838 2800 50  0001 C CNN
+F 3 "" H 8800 2950 50  0001 C CNN
+	1    8800 2950
+	0    1    1    0   
+$EndComp
+Text Label 8350 2950 2    50   ~ 0
+D_P
+$Comp
+L device:R R1
+U 1 1 5CBEAE2F
+P 8500 2950
+F 0 "R1" V 8400 2950 50  0000 C CNN
+F 1 "953" V 8500 2950 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 8430 2950 50  0001 C CNN
+F 3 "" H 8500 2950 50  0001 C CNN
+	1    8500 2950
+	0    1    1    0   
+$EndComp
+Text Label 8950 2950 0    50   ~ 0
+PROBE_P
+$Comp
+L Connector:Conn_Coaxial J3
+U 1 1 5CBEC359
+P 9650 2950
+F 0 "J3" H 9750 2925 50  0000 L CNN
+F 1 "SMA" H 9750 2834 50  0000 L CNN
+F 2 "azonenberg_pcb:CONN_SMA_EDGE_SAMTEC_SMA_J_P_H_ST_EM1" H 9650 2950 50  0001 C CNN
+F 3 "" H 9650 2950 50  0001 C CNN
+	1    9650 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8950 2950 9500 2950
+Text Label 9500 3150 2    50   ~ 0
+GND
+Wire Wire Line
+	9500 3150 9650 3150
+$Comp
+L device:C C2
+U 1 1 5CBED302
+P 8800 3400
+F 0 "C2" V 8548 3400 50  0000 C CNN
+F 1 "0.1 uF" V 8639 3400 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_CAP_NOSILK" H 8838 3250 50  0001 C CNN
+F 3 "" H 8800 3400 50  0001 C CNN
+	1    8800 3400
+	0    1    1    0   
+$EndComp
+Text Label 8350 3400 2    50   ~ 0
+D_N
+$Comp
+L device:R R2
+U 1 1 5CBED30D
+P 8500 3400
+F 0 "R2" V 8400 3400 50  0000 C CNN
+F 1 "953" V 8500 3400 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 8430 3400 50  0001 C CNN
+F 3 "" H 8500 3400 50  0001 C CNN
+	1    8500 3400
+	0    1    1    0   
+$EndComp
+Text Label 8950 3400 0    50   ~ 0
+PROBE_N
+$Comp
+L Connector:Conn_Coaxial J4
+U 1 1 5CBED318
+P 9650 3400
+F 0 "J4" H 9750 3375 50  0000 L CNN
+F 1 "SMA" H 9750 3284 50  0000 L CNN
+F 2 "azonenberg_pcb:CONN_SMA_EDGE_SAMTEC_SMA_J_P_H_ST_EM1" H 9650 3400 50  0001 C CNN
+F 3 "" H 9650 3400 50  0001 C CNN
+	1    9650 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8950 3400 9500 3400
+Text Label 9500 3600 2    50   ~ 0
+GND
+Wire Wire Line
+	9500 3600 9650 3600
+$EndSCHEMATC
