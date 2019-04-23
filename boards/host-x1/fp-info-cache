@@ -1,1 +1,3865 @@
+824992517900815
+azonenberg_pcb
+BGA_4_1p5_0p8_0.4MM
+
+
 0
+4
+4
+azonenberg_pcb
+BGA_4_06x06_FULLARRAY_0.35MM
+
+
+0
+4
+4
+azonenberg_pcb
+BGA_5_1p4x1p1_0.5MM
+
+
+0
+5
+5
+azonenberg_pcb
+BGA_6_1.5x0.9_0.5MM_TI_YZP
+
+
+0
+12
+6
+azonenberg_pcb
+BGA_8_2x2_DEPOP1_0.5MM
+
+
+0
+8
+8
+azonenberg_pcb
+BGA_9_3x3_1MM_TI_SIP
+
+
+0
+9
+9
+azonenberg_pcb
+BGA_12_1.4x1.9_FULLARRAY_0.5MM_TI_YZT
+
+
+0
+12
+12
+azonenberg_pcb
+BGA_24_6x8_DEPOP1_1MM
+
+
+0
+24
+24
+azonenberg_pcb
+BGA_25_2p7x2p7_FULLARRAY_0.5MM
+
+
+0
+25
+25
+azonenberg_pcb
+BGA_56_6x6_DEPOP4x4_0.5MM
+
+
+0
+56
+56
+azonenberg_pcb
+BGA_60_9x10_DEPOP3x10_0.8MM
+
+
+0
+60
+60
+azonenberg_pcb
+BGA_144_13x13_FULLARRAY_1MM
+
+
+0
+144
+144
+azonenberg_pcb
+BGA_165_11x15_FULLARRAY_1MM
+
+
+0
+165
+165
+azonenberg_pcb
+BGA_176_15x15_DEPOP7x7_0.4MM
+
+
+0
+176
+176
+azonenberg_pcb
+BGA_216_13x13_DEPOP3x3_0.8MM
+
+
+0
+216
+216
+azonenberg_pcb
+BGA_225_13x13_FULLARRAY_0.8MM
+
+
+0
+225
+225
+azonenberg_pcb
+BGA_256_17x17_FULLARRAY_1MM
+
+
+0
+256
+256
+azonenberg_pcb
+BGA_324_18x18_FULLARRAY_0.8MM
+
+
+0
+324
+324
+azonenberg_pcb
+BGA_484_22x22_FULLARRAY_1MM
+
+
+0
+484
+484
+azonenberg_pcb
+BGA_1156_35x35_FULLARRAY_1MM
+
+
+0
+1156
+1156
+azonenberg_pcb
+BOURNS_0612_4TERM
+
+
+0
+4
+4
+azonenberg_pcb
+CAP_AL_6.3MM_SMT
+
+
+0
+2
+2
+azonenberg_pcb
+CAP_AL_10MM_SMT
+
+
+0
+2
+2
+azonenberg_pcb
+CIRRUS_WM7236_MICROPHONE
+
+
+0
+9
+5
+azonenberg_pcb
+CONN_BELFUSE_0826_1G1T_23_F
+
+
+0
+18
+17
+azonenberg_pcb
+CONN_CUI_PJ-058BH_HIPWR_BARREL_NOSLOT
+
+
+0
+4
+3
+azonenberg_pcb
+CONN_FCI_USB_73725-0110BLF
+
+
+0
+9
+5
+azonenberg_pcb
+CONN_HEADER_1.27MM_1X2
+
+
+0
+2
+2
+azonenberg_pcb
+CONN_HEADER_1.27MM_1X3
+
+
+0
+3
+3
+azonenberg_pcb
+CONN_HEADER_1.27MM_1X4
+
+
+0
+4
+4
+azonenberg_pcb
+CONN_HEADER_1.27MM_1X5
+
+
+0
+5
+5
+azonenberg_pcb
+CONN_HEADER_1.27MM_1X6
+
+
+0
+6
+6
+azonenberg_pcb
+CONN_HEADER_1.27MM_1X7
+
+
+0
+7
+7
+azonenberg_pcb
+CONN_HEADER_1.27MM_1X8
+
+
+0
+8
+8
+azonenberg_pcb
+CONN_HEADER_1.27MM_2X5
+
+
+0
+10
+10
+azonenberg_pcb
+CONN_HEADER_1.27MM_2x10
+
+
+0
+20
+20
+azonenberg_pcb
+CONN_HEADER_2.54MM_1x2
+
+
+0
+2
+2
+azonenberg_pcb
+CONN_HEADER_2.54MM_1x3
+
+
+0
+3
+3
+azonenberg_pcb
+CONN_HEADER_2.54MM_1x4
+
+
+0
+4
+4
+azonenberg_pcb
+CONN_HEADER_2.54MM_1x6
+
+
+0
+6
+6
+azonenberg_pcb
+CONN_HEADER_2.54MM_1x6_RA
+
+
+0
+6
+6
+azonenberg_pcb
+CONN_HEADER_2.54MM_1x10
+
+
+0
+10
+10
+azonenberg_pcb
+CONN_HEADER_2.54MM_2x6_RA
+
+
+0
+12
+12
+azonenberg_pcb
+CONN_HEADER_2.54MM_2x6_RA_PMOD_HOST
+
+
+0
+12
+12
+azonenberg_pcb
+CONN_HEADER_2.54MM_2x6_RA_PMOD_MODULE
+
+
+0
+12
+12
+azonenberg_pcb
+CONN_HEADER_2.54MM_2x10
+
+
+0
+20
+20
+azonenberg_pcb
+CONN_HEADER_2.54MM_2x10_RA_FEMALE
+
+
+0
+20
+20
+azonenberg_pcb
+CONN_HEADER_2.54MM_2x10_RA_TRORIG
+
+
+0
+20
+20
+azonenberg_pcb
+CONN_HIROSE_BM10_2X8
+
+
+0
+20
+20
+azonenberg_pcb
+CONN_HIROSE_BM10_2X8_MALE
+
+
+0
+20
+20
+azonenberg_pcb
+CONN_HIROSE_UX60S-MB-5ST_MINI_USB
+
+
+0
+7
+7
+azonenberg_pcb
+CONN_MMCX_J_P_H_ST_EM1
+
+
+0
+5
+2
+azonenberg_pcb
+CONN_MMCX_LINX_CONNMMCX002SMD
+
+
+0
+5
+2
+azonenberg_pcb
+CONN_MOLEX_0533072071_0P8MM
+
+
+0
+20
+20
+azonenberg_pcb
+CONN_MOLEX_HDMI_WM10135CT-ND
+
+
+0
+23
+20
+azonenberg_pcb
+CONN_MW_12V_VERTICAL
+
+
+0
+8
+8
+azonenberg_pcb
+CONN_MW_X4
+
+
+0
+66
+32
+azonenberg_pcb
+CONN_MW_X16
+
+
+0
+166
+164
+azonenberg_pcb
+CONN_PCIE_X4_FCI_1001873_10201TLF
+
+
+0
+64
+64
+azonenberg_pcb
+CONN_PCIE_X4_FCI_10018783_10201TLF
+
+
+0
+64
+64
+azonenberg_pcb
+CONN_PCIE_X16_FCI_1001873_10203TLF
+
+
+0
+164
+164
+azonenberg_pcb
+CONN_PCIE_X16_FCI_10018783_10203TLF
+
+
+0
+164
+164
+azonenberg_pcb
+CONN_RJ11_ASSMANN_A-2014-1-4-N-T-R
+
+
+0
+6
+6
+azonenberg_pcb
+CONN_SAMTEC_QSH-030-01-L-D-A
+
+
+0
+66
+61
+azonenberg_pcb
+CONN_SAMTEC_QTH-030-01-L-D-A
+
+
+0
+66
+61
+azonenberg_pcb
+CONN_SAMTEC_QTH-060-01-L-D-A
+
+
+0
+130
+128
+azonenberg_pcb
+CONN_SAMTEC_SMH_110_02_L_D
+
+
+0
+20
+20
+azonenberg_pcb
+CONN_SFP+_AMPHENOL_UE76_A10_2000T
+
+
+0
+20
+20
+azonenberg_pcb
+CONN_SFP_CAGE_FCI_10126909-101LF
+
+
+0
+42
+1
+azonenberg_pcb
+CONN_SMA_EDGE_SAMTEC_SMA_J_P_H_ST_EM1
+
+
+0
+3
+2
+azonenberg_pcb
+CONN_SMA_PTH
+
+
+0
+5
+2
+azonenberg_pcb
+CRYSTAL_2.5x2.0
+
+
+0
+4
+2
+azonenberg_pcb
+DFN_3_0.5MM_2x2MM
+
+
+0
+4
+4
+azonenberg_pcb
+DFN_3_DIODES_X2DFN2015-3
+
+
+0
+4
+3
+azonenberg_pcb
+DFN_4_0.5MM_1.6x1.2MM
+
+
+0
+5
+5
+azonenberg_pcb
+DFN_6_0.5MM_1.85x1.85MM
+
+
+0
+7
+7
+azonenberg_pcb
+DFN_6_0.35MM_1x1MM
+
+
+0
+6
+6
+azonenberg_pcb
+DFN_6_0.65MM_2x2MM
+
+
+0
+7
+7
+azonenberg_pcb
+DFN_6_0.65MM_2x2MM_GDS
+
+
+0
+8
+6
+azonenberg_pcb
+DFN_6_1MM_3x3MM
+
+
+0
+7
+7
+azonenberg_pcb
+DFN_8_0.5MM_2x1MM
+
+
+0
+8
+8
+azonenberg_pcb
+DFN_8_0.5MM_2x2MM
+
+
+0
+9
+9
+azonenberg_pcb
+DFN_8_0.5MM_2x3MM
+
+
+0
+9
+9
+azonenberg_pcb
+DFN_8_0.5MM_3x3MM
+
+
+0
+13
+9
+azonenberg_pcb
+DFN_8_0.8MM_4x3MM
+
+
+0
+8
+8
+azonenberg_pcb
+DFN_8_0.8MM_4x4MM
+
+
+0
+18
+9
+azonenberg_pcb
+DFN_8_0.35MM_1x1.4MM
+
+
+0
+8
+8
+azonenberg_pcb
+DFN_8_0.65MM_3x3MM
+
+
+0
+9
+9
+azonenberg_pcb
+DFN_8_1.27MM_6x5MM
+
+
+0
+29
+9
+azonenberg_pcb
+DFN_8_1.27MM_8x6MM
+
+
+0
+18
+9
+azonenberg_pcb
+DFN_10_0.5MM_2.5x1MM
+
+
+0
+10
+10
+azonenberg_pcb
+DFN_10_0.5MM_3x3MM
+
+
+0
+17
+11
+azonenberg_pcb
+DFN_12_0.5MM_3x4MM
+
+
+0
+21
+13
+azonenberg_pcb
+DFN_20_0.4MM_2x4MM
+
+
+0
+20
+20
+azonenberg_pcb
+DIODES_POWERDFN8_PMOS
+
+
+0
+5
+3
+azonenberg_pcb
+DIP_8_2.54MM_7.62MM
+
+
+0
+8
+8
+azonenberg_pcb
+DUMMY_BGA_0.4MM
+
+
+0
+36
+36
+azonenberg_pcb
+EIA_0201_CAP_NOSILK
+
+
+0
+2
+2
+azonenberg_pcb
+EIA_0201_RES_NOSILK
+
+
+0
+2
+2
+azonenberg_pcb
+EIA_0402_CAP_NOSILK
+
+
+0
+2
+2
+azonenberg_pcb
+EIA_0402_JUMPER
+
+
+0
+3
+3
+azonenberg_pcb
+EIA_0402_LED
+
+
+0
+2
+2
+azonenberg_pcb
+EIA_0402_RES_NOSILK
+
+
+0
+2
+2
+azonenberg_pcb
+EIA_0603_CAP_NOSILK
+
+
+0
+2
+2
+azonenberg_pcb
+EIA_0603_INDUCTOR_NOSILK
+
+
+0
+2
+2
+azonenberg_pcb
+EIA_0603_LED
+
+
+0
+2
+2
+azonenberg_pcb
+EIA_0603_RES_NOSILK
+
+
+0
+2
+2
+azonenberg_pcb
+EIA_0805_CAP_NOSILK
+
+
+0
+2
+2
+azonenberg_pcb
+EIA_0805_INDUCTOR_NOSILK
+
+
+0
+2
+2
+azonenberg_pcb
+EIA_0805_PI_ATTENUATOR
+
+
+0
+3
+3
+azonenberg_pcb
+EIA_01005_RES_NOSILK
+
+
+0
+2
+2
+azonenberg_pcb
+EIA_1206_CAP_NOSILK
+
+
+0
+2
+2
+azonenberg_pcb
+EIA_1210_CAP_NOSILK
+
+
+0
+2
+2
+azonenberg_pcb
+FIDUCIAL_1MM
+
+
+0
+1
+0
+azonenberg_pcb
+FLEX_SOLDERPAD
+
+
+0
+1
+1
+azonenberg_pcb
+INDUCTOR_COILTRONICS_FPV1006
+
+
+0
+2
+2
+azonenberg_pcb
+INDUCTOR_TDK_SPM6530
+
+
+0
+2
+2
+azonenberg_pcb
+INDUCTOR_YUDEN_NR6028
+
+
+0
+2
+2
+azonenberg_pcb
+INDUCTOR_YUDEN_NRS5030
+
+
+0
+2
+2
+azonenberg_pcb
+IOA_LOGO_7MM
+
+
+0
+0
+0
+azonenberg_pcb
+JUMPER_2.54MM_2POS
+
+
+0
+2
+2
+azonenberg_pcb
+LED_INDICATOR_2.54MM_5MM_RG_RA
+
+
+0
+2
+2
+azonenberg_pcb
+LOGO_ESD_SENSITIVE_7MM
+
+
+0
+0
+0
+azonenberg_pcb
+LOGO_PBFREE_5MM
+
+
+0
+0
+0
+azonenberg_pcb
+LOGO_PB_FREE_8MM
+
+
+0
+0
+0
+azonenberg_pcb
+LONGTHING-300DPI
+
+
+0
+0
+0
+azonenberg_pcb
+LONGTHING-600DPI
+
+
+0
+0
+0
+azonenberg_pcb
+LONGTHING-1200DPI
+
+
+0
+0
+0
+azonenberg_pcb
+MECHANICAL_CLEARANCEHOLE_4_40
+
+
+0
+1
+1
+azonenberg_pcb
+MECHANICAL_EUROCARD_3U_BACKPLANE_SEG
+
+
+0
+2
+1
+azonenberg_pcb
+MECHANICAL_EUROCARD_3U_FRONTHOLES
+
+
+0
+0
+0
+azonenberg_pcb
+MECHANICAL_EUROCARD_3U_FRONTPANEL
+
+
+0
+0
+0
+azonenberg_pcb
+MODULE_MURATA_OKL-T3-W12
+
+
+0
+12
+12
+azonenberg_pcb
+OHMITE_LVK12
+
+
+0
+4
+4
+azonenberg_pcb
+OHMITE_LVK25
+
+
+0
+4
+4
+azonenberg_pcb
+OSCILLATOR_2.0x1.6
+
+
+0
+4
+4
+azonenberg_pcb
+OSCILLATOR_2.5x2.0
+
+
+0
+4
+4
+azonenberg_pcb
+OSCILLATOR_3.2x2.5
+
+
+0
+4
+4
+azonenberg_pcb
+OSCILLATOR_LVDS_3.2x2.5
+
+
+0
+6
+6
+azonenberg_pcb
+PANASONIC_F4S_2x25_DLPNUM
+
+
+0
+54
+50
+azonenberg_pcb
+PUI_AST-01532MR-R_SPEAKER
+
+
+0
+2
+2
+azonenberg_pcb
+QFN_10_0.4MM_1.8x1.5MM
+
+
+0
+10
+10
+azonenberg_pcb
+QFN_12_0.4MM_2x2MM
+
+
+0
+12
+12
+azonenberg_pcb
+QFN_12_0.5MM_3x3MM
+
+
+0
+13
+13
+azonenberg_pcb
+QFN_14_0.4MM_2x2MM_TI_RUC
+
+
+0
+14
+14
+azonenberg_pcb
+QFN_16_0.5MM_3x3MM
+
+
+0
+21
+17
+azonenberg_pcb
+QFN_20_0.4MM_3x2MM_SILEGO_STQFN
+
+
+0
+20
+20
+azonenberg_pcb
+QFN_24_0.5MM_4x4MM
+
+
+0
+30
+25
+azonenberg_pcb
+QFN_32_0.5MM_5x5MM
+
+
+0
+49
+33
+azonenberg_pcb
+QFN_38_0.5MM_5x7MM
+
+
+0
+54
+39
+azonenberg_pcb
+QFN_48_0.5MM_7x7MM
+
+
+0
+58
+49
+azonenberg_pcb
+QFN_56_0.5MM_8x8MM
+
+
+0
+93
+57
+azonenberg_pcb
+QFN_64_0.5MM_9x9MM
+
+
+0
+65
+65
+azonenberg_pcb
+QFP_44_0.8MM
+
+
+0
+44
+44
+azonenberg_pcb
+QFP_100_0.5MM
+
+
+0
+100
+100
+azonenberg_pcb
+RELAY_COTO_9007
+
+
+0
+4
+4
+azonenberg_pcb
+SOD323
+
+
+0
+2
+2
+azonenberg_pcb
+SOD523
+
+
+0
+2
+2
+azonenberg_pcb
+SOD523F
+
+
+0
+2
+2
+azonenberg_pcb
+SOD962_2
+
+
+0
+2
+2
+azonenberg_pcb
+SOIC_8_3.9MM
+
+
+0
+8
+8
+azonenberg_pcb
+SOIC_8_5.3MM
+
+
+0
+8
+8
+azonenberg_pcb
+SOIC_14_3.9MM
+
+
+0
+14
+14
+azonenberg_pcb
+SOIC_14_3.9MM_NOPIN11
+
+
+0
+14
+13
+azonenberg_pcb
+SOIC_16_3.9MM
+
+
+0
+16
+16
+azonenberg_pcb
+SOP_8_0.5MM_3MM
+
+
+0
+8
+8
+azonenberg_pcb
+SOP_10_0.5MM_3MM
+
+
+0
+10
+10
+azonenberg_pcb
+SOT23_3
+
+
+0
+3
+3
+azonenberg_pcb
+SOT23_5
+
+
+0
+5
+5
+azonenberg_pcb
+SOT23_6
+
+
+0
+6
+6
+azonenberg_pcb
+SOT23_GDS
+
+
+0
+3
+3
+azonenberg_pcb
+SOT223-4
+
+
+0
+4
+4
+azonenberg_pcb
+SOT353_1
+
+
+0
+5
+5
+azonenberg_pcb
+SOT363
+
+
+0
+6
+6
+azonenberg_pcb
+STENCIL8_TOOLING_HOLE
+
+
+0
+0
+0
+azonenberg_pcb
+SWITCH_RAFI_MICON_5
+
+
+0
+6
+2
+azonenberg_pcb
+TEARDROP_01
+
+
+0
+0
+0
+azonenberg_pcb
+TEARDROP_02
+
+
+0
+0
+0
+azonenberg_pcb
+TEARDROP_03
+
+
+0
+0
+0
+azonenberg_pcb
+TESTPOINT_BARETRACE_150UM
+
+
+0
+1
+1
+azonenberg_pcb
+TESTPOINT_BARETRACE_328UM
+
+
+0
+1
+1
+azonenberg_pcb
+TESTPOINT_SMT_0.5MM
+
+
+0
+1
+1
+azonenberg_pcb
+TESTPOINT_SMT_KEYSTONE_5016
+
+
+0
+1
+1
+azonenberg_pcb
+TSSOP_14_0.65MM_5p6MM
+
+
+0
+14
+14
+azonenberg_pcb
+TSSOP_14_0.65MM_5p6MM_NOPINS_1_2
+
+
+0
+14
+12
+azonenberg_pcb
+VICOR_PI34XX
+
+
+0
+123
+19
+azonenberg_pcb
+XILINX_JTAG_PTH_MOLEX_0878311420
+
+
+0
+14
+14
+azonenberg_pcb
+YAEGO_YC248_RPACK
+
+
+0
+16
+16
+Connectors_Molex
+Molex_KK-6410-02_02x2.54mm_Straight
+Connector Headers with Friction Lock, 22-27-2021, http://www.molex.com/pdm_docs/sd/022272021_sd.pdf
+connector molex kk_6410 22-27-2021
+0
+2
+2
+Connectors_Molex
+Molex_KK-6410-03_03x2.54mm_Straight
+Connector Headers with Friction Lock, 22-27-2031, http://www.molex.com/pdm_docs/sd/022272021_sd.pdf
+connector molex kk_6410 22-27-2031
+0
+3
+3
+Connectors_Molex
+Molex_KK-6410-04_04x2.54mm_Straight
+Connector Headers with Friction Lock, 22-27-2041, http://www.molex.com/pdm_docs/sd/022272021_sd.pdf
+connector molex kk_6410 22-27-2041
+0
+4
+4
+Connectors_Molex
+Molex_KK-6410-05_05x2.54mm_Straight
+Connector Headers with Friction Lock, 22-27-2051, http://www.molex.com/pdm_docs/sd/022272021_sd.pdf
+connector molex kk_6410 22-27-2051
+0
+5
+5
+Connectors_Molex
+Molex_KK-6410-06_06x2.54mm_Straight
+Connector Headers with Friction Lock, 22-27-2061, http://www.molex.com/pdm_docs/sd/022272021_sd.pdf
+connector molex kk_6410 22-27-2061
+0
+6
+6
+Connectors_Molex
+Molex_KK-6410-07_07x2.54mm_Straight
+Connector Headers with Friction Lock, 22-27-2071, http://www.molex.com/pdm_docs/sd/022272021_sd.pdf
+connector molex kk_6410 22-27-2071
+0
+7
+7
+Connectors_Molex
+Molex_KK-6410-08_08x2.54mm_Straight
+Connector Headers with Friction Lock, 22-27-2081, http://www.molex.com/pdm_docs/sd/022272021_sd.pdf
+connector molex kk_6410 22-27-2081
+0
+8
+8
+Connectors_Molex
+Molex_KK-6410-09_09x2.54mm_Straight
+Connector Headers with Friction Lock, 22-27-2091, http://www.molex.com/pdm_docs/sd/022272021_sd.pdf
+connector molex kk_6410 22-27-2091
+0
+9
+9
+Connectors_Molex
+Molex_KK-6410-10_10x2.54mm_Straight
+Connector Headers with Friction Lock, 22-27-2101, http://www.molex.com/pdm_docs/sd/022272021_sd.pdf
+connector molex kk_6410 22-27-2101
+0
+10
+10
+Connectors_Molex
+Molex_KK-6410-11_11x2.54mm_Straight
+Connector Headers with Friction Lock, 22-27-2111, http://www.molex.com/pdm_docs/sd/022272021_sd.pdf
+connector molex kk_6410 22-27-2111
+0
+11
+11
+Connectors_Molex
+Molex_KK-6410-12_12x2.54mm_Straight
+Connector Headers with Friction Lock, 22-27-2121, http://www.molex.com/pdm_docs/sd/022272021_sd.pdf
+connector molex kk_6410 22-27-2121
+0
+12
+12
+Connectors_Molex
+Molex_KK-6410-13_13x2.54mm_Straight
+Connector Headers with Friction Lock, 22-27-2131, http://www.molex.com/pdm_docs/sd/022272021_sd.pdf
+connector molex kk_6410 22-27-2131
+0
+13
+13
+Connectors_Molex
+Molex_KK-6410-14_14x2.54mm_Straight
+Connector Headers with Friction Lock, 22-27-2141, http://www.molex.com/pdm_docs/sd/022272021_sd.pdf
+connector molex kk_6410 22-27-2141
+0
+14
+14
+Connectors_Molex
+Molex_KK-6410-15_15x2.54mm_Straight
+Connector Headers with Friction Lock, 22-27-2151, http://www.molex.com/pdm_docs/sd/022272021_sd.pdf
+connector molex kk_6410 22-27-2151
+0
+15
+15
+Connectors_Molex
+Molex_KK-6410-16_16x2.54mm_Straight
+Connector Headers with Friction Lock, 22-27-2161, http://www.molex.com/pdm_docs/sd/022272021_sd.pdf
+connector molex kk_6410 22-27-2161
+0
+16
+16
+Connectors_Molex
+Molex_MegaFit_2x01x5.70mm_Angled
+Molex MegaFit, dual row, side entry type, through hole
+connector molex mega-fit 76825-0002 172064-0002 172064-1002
+0
+2
+2
+Connectors_Molex
+Molex_MegaFit_2x01x5.70mm_Straight
+Molex MegaFit, dual row, top entry type, through hole
+connector molex mega-fit
+0
+2
+2
+Connectors_Molex
+Molex_MegaFit_2x02x5.70mm_Angled
+Molex MegaFit, dual row, side entry type, through hole
+connector molex mega-fit 76825-0004 172064-0004 172064-1004
+0
+4
+4
+Connectors_Molex
+Molex_MegaFit_2x02x5.70mm_Straight
+Molex MegaFit, dual row, top entry type, through hole
+connector molex mega-fit
+0
+4
+4
+Connectors_Molex
+Molex_MegaFit_2x03x5.70mm_Angled
+Molex MegaFit, dual row, side entry type, through hole
+connector molex mega-fit 76825-0006 172064-0006 172064-1006
+0
+6
+6
+Connectors_Molex
+Molex_MegaFit_2x03x5.70mm_Straight
+Molex MegaFit, dual row, top entry type, through hole
+connector molex mega-fit
+0
+6
+6
+Connectors_Molex
+Molex_MegaFit_2x04x5.70mm_Angled
+Molex MegaFit, dual row, side entry type, through hole
+connector molex mega-fit 76825-0008 172064-0008 172064-1008
+0
+8
+8
+Connectors_Molex
+Molex_MegaFit_2x04x5.70mm_Straight
+Molex MegaFit, dual row, top entry type, through hole
+connector molex mega-fit
+0
+8
+8
+Connectors_Molex
+Molex_MegaFit_2x05x5.70mm_Angled
+Molex MegaFit, dual row, side entry type, through hole
+connector molex mega-fit 76825-0010 172064-0010 172064-1010
+0
+10
+10
+Connectors_Molex
+Molex_MegaFit_2x05x5.70mm_Straight
+Molex MegaFit, dual row, top entry type, through hole
+connector molex mega-fit
+0
+10
+10
+Connectors_Molex
+Molex_MegaFit_2x06x5.70mm_Angled
+Molex MegaFit, dual row, side entry type, through hole
+connector molex mega-fit 76825-0012 172064-0012 172064-1012
+0
+12
+12
+Connectors_Molex
+Molex_MegaFit_2x06x5.70mm_Straight
+Molex MegaFit, dual row, top entry type, through hole
+connector molex mega-fit
+0
+12
+12
+Connectors_Molex
+Molex_Microcoaxial_RF
+Molex Microcoaxial RF, mates Hirose U.FL, http://www.molex.com/pdm_docs/sd/734120110_sd.pdf
+mcrf hirose ufl u.fl microcoaxial
+0
+4
+2
+Connectors_Molex
+Molex_Microfit3_Header_02x01_Angled_43045-020x
+Microfit3 02x01 header angled 43045-0200
+connector Microfit 02x01 angled 3mm pitch
+0
+2
+2
+Connectors_Molex
+Molex_Microfit3_Header_02x01_Straight_43045-0228
+Microfit3 Header Straight 02x01 43045-0228
+connector Microfit 02x01 header straight 3mm
+0
+2
+2
+Connectors_Molex
+Molex_Microfit3_Header_02x02_Angled_43045-040x
+Microfit_02x02 header angled 43045-0400
+connector Microfit 02x02 angled 3mm pitch
+0
+4
+4
+Connectors_Molex
+Molex_Microfit3_Header_02x02_Straight_43045-0428
+Microfit3 Header Straight 02x02 43045-0428
+connector Microfit 02x02 header straight 3mm
+0
+4
+4
+Connectors_Molex
+Molex_Microfit3_Header_02x03_Angled_43045-060x
+Microfit 02x03 header angled 43045-0600
+connector Microfit 02x03 angled 3mm pitch
+0
+6
+6
+Connectors_Molex
+Molex_Microfit3_Header_02x03_Straight_43045-0628
+Microfit3 Header Straight 02x03 43045-0628
+connector Microfit 02x03 header straight 3mm
+0
+6
+6
+Connectors_Molex
+Molex_Microfit3_Header_02x04_Angled_43045-080x
+Microfit3 angled 02x04 43045-0800
+connector Microfit 02x04 angled 3mm pitch
+0
+8
+8
+Connectors_Molex
+Molex_Microfit3_Header_02x04_Straight_43045-0828
+Microfit3 Header Straight 02x04 43045-0828
+connector Microfit 02x04 header straight 3mm
+0
+8
+8
+Connectors_Molex
+Molex_Microfit3_Header_02x05_Angled_43045-100x
+Microfit angled 02x05 43045-1000
+connector Microfit 02x05 angled 3mm pitch
+0
+10
+10
+Connectors_Molex
+Molex_Microfit3_Header_02x05_Straight_43045-1028
+Microfit3 Header Straight 02x05 43045-1028
+connector Microfit 02x05 header straight 3mm
+0
+10
+10
+Connectors_Molex
+Molex_Microfit3_Header_02x06_Angled_43045-120x
+Microfit3 header angled 02x06 43045-1200
+connector Microfit 02x06 angled 3mm pitch
+0
+12
+12
+Connectors_Molex
+Molex_Microfit3_Header_02x06_Straight_43045-1228
+Microfit3 Header Straight 02x06 43045-1228
+connector Microfit 02x06 header straight 3mm
+0
+12
+12
+Connectors_Molex
+Molex_Microfit3_Header_02x07_Angled_43045-140x
+Microfit3 angled 02x07_43045-1400
+connector Microfit 02x07 angled 3mm pitch
+0
+14
+14
+Connectors_Molex
+Molex_Microfit3_Header_02x07_Straight_43045-1428
+Microfit3 Header Straight 02x07 43045-1428
+connector Microfit 02x07 header straight 3mm
+0
+14
+14
+Connectors_Molex
+Molex_Microfit3_Header_02x08_Angled_43045-160x
+Microfit 02x08 header angled 43045-1600
+connector Microfit 02x08 angled 3mm pitch
+0
+16
+16
+Connectors_Molex
+Molex_Microfit3_Header_02x08_Straight_43045-1628
+Microfit3 Header Straight 02x08 43045-1628
+connector Microfit 02x08 header straight 3mm
+0
+16
+16
+Connectors_Molex
+Molex_Microfit3_Header_02x09_Angled_43045-180x
+Microfit3 02x09 heder angled 43045-1800
+connector Microfit 02x09 angled 3mm pitch
+0
+18
+18
+Connectors_Molex
+Molex_Microfit3_Header_02x09_Straight_43045-1828
+Microfit3 Header Straight 02x09 43045-1828
+connector Microfit 02x09 header straight 3mm
+0
+18
+18
+Connectors_Molex
+Molex_Microfit3_Header_02x10_Angled_43045-200x
+Microfit3 header angled 02x10 43045-2000
+connector Microfit 02x10 angled 3mm pitch
+0
+20
+20
+Connectors_Molex
+Molex_Microfit3_Header_02x10_Straight_43045-2028
+Microfit3 Header Straight 02x10 43045-2028
+connector Microfit 02x10 header straight 3mm
+0
+20
+20
+Connectors_Molex
+Molex_Microfit3_Header_02x11_Angled_43045-220x
+Microfit3 02x11 header angled 43045-2200
+connector Microfit 02x11 angled 3mm pitch
+0
+22
+22
+Connectors_Molex
+Molex_Microfit3_Header_02x11_Straight_43045-2228
+Microfit3 Header Straight 02x11 43045-2228
+connector Microfit 02x11 header straight 3mm
+0
+22
+22
+Connectors_Molex
+Molex_Microfit3_Header_02x12_Angled_43045-240x
+Microfit3 header angled 02x12 43045-2400
+connector Microfit 02x12 angled 3mm pitch
+0
+24
+24
+Connectors_Molex
+Molex_Microfit3_Header_02x12_Straight_43045-2428
+Microfit3 Header Straight 02x12 43045-2428
+connector Microfit 02x12 header straight 3mm
+0
+24
+24
+Connectors_Molex
+Molex_MicroLatch-53253-0270_02x2.00mm_Straight
+Molex Micro-Latch connector, PN:53253-0270, top entry type, through hole
+conn molex micro latch
+0
+2
+2
+Connectors_Molex
+Molex_MicroLatch-53253-0370_03x2.00mm_Straight
+Molex Micro-Latch connector, PN:53253-0370, top entry type, through hole
+conn molex micro latch
+0
+3
+3
+Connectors_Molex
+Molex_MicroLatch-53253-0470_04x2.00mm_Straight
+Molex Micro-Latch connector, PN:53253-0470, top entry type, through hole
+conn molex micro latch
+0
+4
+4
+Connectors_Molex
+Molex_MicroLatch-53253-0570_05x2.00mm_Straight
+Molex Micro-Latch connector, PN:53253-0570, top entry type, through hole
+conn molex micro latch
+0
+5
+5
+Connectors_Molex
+Molex_MicroLatch-53253-0670_06x2.00mm_Straight
+Molex Micro-Latch connector, PN:53253-0670, top entry type, through hole
+conn molex micro latch
+0
+6
+6
+Connectors_Molex
+Molex_MicroLatch-53253-0770_07x2.00mm_Straight
+Molex Micro-Latch connector, PN:53253-0770, top entry type, through hole
+conn molex micro latch
+0
+7
+7
+Connectors_Molex
+Molex_MicroLatch-53253-0870_08x2.00mm_Straight
+Molex Micro-Latch connector, PN:53253-0870, top entry type, through hole
+conn molex micro latch
+0
+8
+8
+Connectors_Molex
+Molex_MicroLatch-53253-0970_09x2.00mm_Straight
+Molex Micro-Latch connector, PN:53253-0970, top entry type, through hole
+conn molex micro latch
+0
+9
+9
+Connectors_Molex
+Molex_MicroLatch-53253-1070_10x2.00mm_Straight
+Molex Micro-Latch connector, PN:53253-1070, top entry type, through hole
+conn molex micro latch
+0
+10
+10
+Connectors_Molex
+Molex_MicroLatch-53253-1170_11x2.00mm_Straight
+Molex Micro-Latch connector, PN:53253-1170, top entry type, through hole
+conn molex micro latch
+0
+11
+11
+Connectors_Molex
+Molex_MicroLatch-53253-1270_12x2.00mm_Straight
+Molex Micro-Latch connector, PN:53253-1270, top entry type, through hole
+conn molex micro latch
+0
+12
+12
+Connectors_Molex
+Molex_MicroLatch-53253-1370_13x2.00mm_Straight
+Molex Micro-Latch connector, PN:53253-1370, top entry type, through hole
+conn molex micro latch
+0
+13
+13
+Connectors_Molex
+Molex_MicroLatch-53253-1470_14x2.00mm_Straight
+Molex Micro-Latch connector, PN:53253-1470, top entry type, through hole
+conn molex micro latch
+0
+14
+14
+Connectors_Molex
+Molex_MicroLatch-53253-1570_15x2.00mm_Straight
+Molex Micro-Latch connector, PN:53253-1570, top entry type, through hole
+conn molex micro latch
+0
+15
+15
+Connectors_Molex
+Molex_MicroLatch-53254-0270_02x2.00mm_Angled
+Molex Micro-Latch connector, PN:53254-0270, side entry type, through hole
+conn molex micro latch
+0
+2
+2
+Connectors_Molex
+Molex_MicroLatch-53254-0370_03x2.00mm_Angled
+Molex Micro-Latch connector, PN:53254-0370, side entry type, through hole
+conn molex micro latch
+0
+3
+3
+Connectors_Molex
+Molex_MicroLatch-53254-0470_04x2.00mm_Angled
+Molex Micro-Latch connector, PN:53254-0470, side entry type, through hole
+conn molex micro latch
+0
+4
+4
+Connectors_Molex
+Molex_MicroLatch-53254-0570_05x2.00mm_Angled
+Molex Micro-Latch connector, PN:53254-0570, side entry type, through hole
+conn molex micro latch
+0
+5
+5
+Connectors_Molex
+Molex_MicroLatch-53254-0670_06x2.00mm_Angled
+Molex Micro-Latch connector, PN:53254-0670, side entry type, through hole
+conn molex micro latch
+0
+6
+6
+Connectors_Molex
+Molex_MicroLatch-53254-0770_07x2.00mm_Angled
+Molex Micro-Latch connector, PN:53254-0770, side entry type, through hole
+conn molex micro latch
+0
+7
+7
+Connectors_Molex
+Molex_MicroLatch-53254-0870_08x2.00mm_Angled
+Molex Micro-Latch connector, PN:53254-0870, side entry type, through hole
+conn molex micro latch
+0
+8
+8
+Connectors_Molex
+Molex_MicroLatch-53254-0970_09x2.00mm_Angled
+Molex Micro-Latch connector, PN:53254-0970, side entry type, through hole
+conn molex micro latch
+0
+9
+9
+Connectors_Molex
+Molex_MicroLatch-53254-1070_10x2.00mm_Angled
+Molex Micro-Latch connector, PN:53254-1070, side entry type, through hole
+conn molex micro latch
+0
+10
+10
+Connectors_Molex
+Molex_MicroLatch-53254-1170_11x2.00mm_Angled
+Molex Micro-Latch connector, PN:53254-1170, side entry type, through hole
+conn molex micro latch
+0
+11
+11
+Connectors_Molex
+Molex_MicroLatch-53254-1270_12x2.00mm_Angled
+Molex Micro-Latch connector, PN:53254-1270, side entry type, through hole
+conn molex micro latch
+0
+12
+12
+Connectors_Molex
+Molex_MicroLatch-53254-1370_13x2.00mm_Angled
+Molex Micro-Latch connector, PN:53254-1370, side entry type, through hole
+conn molex micro latch
+0
+13
+13
+Connectors_Molex
+Molex_MicroLatch-53254-1470_14x2.00mm_Angled
+Molex Micro-Latch connector, PN:53254-1470, side entry type, through hole
+conn molex micro latch
+0
+14
+14
+Connectors_Molex
+Molex_MicroLatch-53254-1570_15x2.00mm_Angled
+Molex Micro-Latch connector, PN:53254-1570, side entry type, through hole
+conn molex micro latch
+0
+15
+15
+Connectors_Molex
+Molex_MiniFit-JR-5556-02A_2x01x4.20mm_Straight
+Molex Mini-Fit JR, PN:5556-02A, dual row, top entry type, through hole
+connector molex mini-fit 5556
+0
+2
+2
+Connectors_Molex
+Molex_MiniFit-JR-5556-02B_2x01x4.20mm_Straight
+Molex Mini-Fit JR, PN:5556-02B, dual row, top entry type, through hole, with plastic PCB locators
+connector molex mini-fit 5556
+0
+2
+2
+Connectors_Molex
+Molex_MiniFit-JR-5556-04A_2x02x4.20mm_Straight
+Molex Mini-Fit JR, PN:5556-04A, dual row, top entry type, through hole
+connector molex mini-fit 5556
+0
+4
+4
+Connectors_Molex
+Molex_MiniFit-JR-5556-04B_2x02x4.20mm_Straight
+Molex Mini-Fit JR, PN:5556-04B, dual row, top entry type, through hole, with plastic PCB locators
+connector molex mini-fit 5556
+0
+4
+4
+Connectors_Molex
+Molex_MiniFit-JR-5556-06A_2x03x4.20mm_Straight
+Molex Mini-Fit JR, PN:5556-06A, dual row, top entry type, through hole
+connector molex mini-fit 5556
+0
+6
+6
+Connectors_Molex
+Molex_MiniFit-JR-5556-06B_2x03x4.20mm_Straight
+Molex Mini-Fit JR, PN:5556-06B, dual row, top entry type, through hole, with plastic PCB locators
+connector molex mini-fit 5556
+0
+6
+6
+Connectors_Molex
+Molex_MiniFit-JR-5556-08A_2x04x4.20mm_Straight
+Molex Mini-Fit JR, PN:5556-08A, dual row, top entry type, through hole
+connector molex mini-fit 5556
+0
+8
+8
+Connectors_Molex
+Molex_MiniFit-JR-5556-08B_2x04x4.20mm_Straight
+Molex Mini-Fit JR, PN:5556-08B, dual row, top entry type, through hole, with plastic PCB locators
+connector molex mini-fit 5556
+0
+8
+8
+Connectors_Molex
+Molex_MiniFit-JR-5556-10A_2x05x4.20mm_Straight
+Molex Mini-Fit JR, PN:5556-10A, dual row, top entry type, through hole
+connector molex mini-fit 5556
+0
+10
+10
+Connectors_Molex
+Molex_MiniFit-JR-5556-10B_2x05x4.20mm_Straight
+Molex Mini-Fit JR, PN:5556-10B, dual row, top entry type, through hole, with plastic PCB locators
+connector molex mini-fit 5556
+0
+10
+10
+Connectors_Molex
+Molex_MiniFit-JR-5556-12A_2x06x4.20mm_Straight
+Molex Mini-Fit JR, PN:5556-12A, dual row, top entry type, through hole
+connector molex mini-fit 5556
+0
+12
+12
+Connectors_Molex
+Molex_MiniFit-JR-5556-12B_2x06x4.20mm_Straight
+Molex Mini-Fit JR, PN:5556-12B, dual row, top entry type, through hole, with plastic PCB locators
+connector molex mini-fit 5556
+0
+12
+12
+Connectors_Molex
+Molex_MiniFit-JR-5556-14A_2x07x4.20mm_Straight
+Molex Mini-Fit JR, PN:5556-14A, dual row, top entry type, through hole
+connector molex mini-fit 5556
+0
+14
+14
+Connectors_Molex
+Molex_MiniFit-JR-5556-14B_2x07x4.20mm_Straight
+Molex Mini-Fit JR, PN:5556-14B, dual row, top entry type, through hole, with plastic PCB locators
+connector molex mini-fit 5556
+0
+14
+14
+Connectors_Molex
+Molex_MiniFit-JR-5556-16A_2x08x4.20mm_Straight
+Molex Mini-Fit JR, PN:5556-16A, dual row, top entry type, through hole
+connector molex mini-fit 5556
+0
+16
+16
+Connectors_Molex
+Molex_MiniFit-JR-5556-16B_2x08x4.20mm_Straight
+Molex Mini-Fit JR, PN:5556-16B, dual row, top entry type, through hole, with plastic PCB locators
+connector molex mini-fit 5556
+0
+16
+16
+Connectors_Molex
+Molex_MiniFit-JR-5556-18A_2x09x4.20mm_Straight
+Molex Mini-Fit JR, PN:5556-18A, dual row, top entry type, through hole
+connector molex mini-fit 5556
+0
+18
+18
+Connectors_Molex
+Molex_MiniFit-JR-5556-18B_2x09x4.20mm_Straight
+Molex Mini-Fit JR, PN:5556-18B, dual row, top entry type, through hole, with plastic PCB locators
+connector molex mini-fit 5556
+0
+18
+18
+Connectors_Molex
+Molex_MiniFit-JR-5556-20A_2x10x4.20mm_Straight
+Molex Mini-Fit JR, PN:5556-20A, dual row, top entry type, through hole
+connector molex mini-fit 5556
+0
+20
+20
+Connectors_Molex
+Molex_MiniFit-JR-5556-20B_2x10x4.20mm_Straight
+Molex Mini-Fit JR, PN:5556-20B, dual row, top entry type, through hole, with plastic PCB locators
+connector molex mini-fit 5556
+0
+20
+20
+Connectors_Molex
+Molex_MiniFit-JR-5556-22A_2x11x4.20mm_Straight
+Molex Mini-Fit JR, PN:5556-22A, dual row, top entry type, through hole
+connector molex mini-fit 5556
+0
+22
+22
+Connectors_Molex
+Molex_MiniFit-JR-5556-22B_2x11x4.20mm_Straight
+Molex Mini-Fit JR, PN:5556-22B, dual row, top entry type, through hole, with plastic PCB locators
+connector molex mini-fit 5556
+0
+22
+22
+Connectors_Molex
+Molex_MiniFit-JR-5556-24A_2x12x4.20mm_Straight
+Molex Mini-Fit JR, PN:5556-24A, dual row, top entry type, through hole
+connector molex mini-fit 5556
+0
+24
+24
+Connectors_Molex
+Molex_MiniFit-JR-5556-24B_2x12x4.20mm_Straight
+Molex Mini-Fit JR, PN:5556-24B, dual row, top entry type, through hole, with plastic PCB locators
+connector molex mini-fit 5556
+0
+24
+24
+Connectors_Molex
+Molex_MiniFit-JR-5569-02A1_2x01x4.20mm_Angled
+Molex Mini-Fit JR, PN:5569-02A1, dual row, side entry type, through hole, with screw mount
+connector molex mini-fit 5569
+0
+2
+2
+Connectors_Molex
+Molex_MiniFit-JR-5569-02A2_2x01x4.20mm_Angled
+Molex Mini-Fit JR, PN:5569-02A2, dual row, side entry type, through hole, with plastic peg mount
+connector molex mini-fit 5569
+0
+2
+2
+Connectors_Molex
+Molex_MiniFit-JR-5569-04A1_2x02x4.20mm_Angled
+Molex Mini-Fit JR, PN:5569-04A1, dual row, side entry type, through hole, with screw mount
+connector molex mini-fit 5569
+0
+4
+4
+Connectors_Molex
+Molex_MiniFit-JR-5569-04A2_2x02x4.20mm_Angled
+Molex Mini-Fit JR, PN:5569-04A2, dual row, side entry type, through hole, with plastic peg mount
+connector molex mini-fit 5569
+0
+4
+4
+Connectors_Molex
+Molex_MiniFit-JR-5569-06A1_2x03x4.20mm_Angled
+Molex Mini-Fit JR, PN:5569-06A1, dual row, side entry type, through hole, with screw mount
+connector molex mini-fit 5569
+0
+6
+6
+Connectors_Molex
+Molex_MiniFit-JR-5569-06A2_2x03x4.20mm_Angled
+Molex Mini-Fit JR, PN:5569-06A2, dual row, side entry type, through hole, with plastic peg mount
+connector molex mini-fit 5569
+0
+6
+6
+Connectors_Molex
+Molex_MiniFit-JR-5569-08A1_2x04x4.20mm_Angled
+Molex Mini-Fit JR, PN:5569-08A1, dual row, side entry type, through hole, with screw mount
+connector molex mini-fit 5569
+0
+8
+8
+Connectors_Molex
+Molex_MiniFit-JR-5569-08A2_2x04x4.20mm_Angled
+Molex Mini-Fit JR, PN:5569-08A2, dual row, side entry type, through hole, with plastic peg mount
+connector molex mini-fit 5569
+0
+8
+8
+Connectors_Molex
+Molex_MiniFit-JR-5569-10A1_2x05x4.20mm_Angled
+Molex Mini-Fit JR, PN:5569-10A1, dual row, side entry type, through hole, with screw mount
+connector molex mini-fit 5569
+0
+10
+10
+Connectors_Molex
+Molex_MiniFit-JR-5569-10A2_2x05x4.20mm_Angled
+Molex Mini-Fit JR, PN:5569-10A2, dual row, side entry type, through hole, with plastic peg mount
+connector molex mini-fit 5569
+0
+10
+10
+Connectors_Molex
+Molex_MiniFit-JR-5569-12A1_2x06x4.20mm_Angled
+Molex Mini-Fit JR, PN:5569-12A1, dual row, side entry type, through hole, with screw mount
+connector molex mini-fit 5569
+0
+12
+12
+Connectors_Molex
+Molex_MiniFit-JR-5569-12A2_2x06x4.20mm_Angled
+Molex Mini-Fit JR, PN:5569-12A2, dual row, side entry type, through hole, with plastic peg mount
+connector molex mini-fit 5569
+0
+12
+12
+Connectors_Molex
+Molex_MiniFit-JR-5569-14A1_2x07x4.20mm_Angled
+Molex Mini-Fit JR, PN:5569-14A1, dual row, side entry type, through hole, with screw mount
+connector molex mini-fit 5569
+0
+14
+14
+Connectors_Molex
+Molex_MiniFit-JR-5569-14A2_2x07x4.20mm_Angled
+Molex Mini-Fit JR, PN:5569-14A2, dual row, side entry type, through hole, with plastic peg mount
+connector molex mini-fit 5569
+0
+14
+14
+Connectors_Molex
+Molex_MiniFit-JR-5569-16A1_2x08x4.20mm_Angled
+Molex Mini-Fit JR, PN:5569-16A1, dual row, side entry type, through hole, with screw mount
+connector molex mini-fit 5569
+0
+16
+16
+Connectors_Molex
+Molex_MiniFit-JR-5569-16A2_2x08x4.20mm_Angled
+Molex Mini-Fit JR, PN:5569-16A2, dual row, side entry type, through hole, with plastic peg mount
+connector molex mini-fit 5569
+0
+16
+16
+Connectors_Molex
+Molex_MiniFit-JR-5569-18A1_2x09x4.20mm_Angled
+Molex Mini-Fit JR, PN:5569-18A1, dual row, side entry type, through hole, with screw mount
+connector molex mini-fit 5569
+0
+18
+18
+Connectors_Molex
+Molex_MiniFit-JR-5569-18A2_2x09x4.20mm_Angled
+Molex Mini-Fit JR, PN:5569-18A2, dual row, side entry type, through hole, with plastic peg mount
+connector molex mini-fit 5569
+0
+18
+18
+Connectors_Molex
+Molex_MiniFit-JR-5569-20A1_2x10x4.20mm_Angled
+Molex Mini-Fit JR, PN:5569-20A1, dual row, side entry type, through hole, with screw mount
+connector molex mini-fit 5569
+0
+20
+20
+Connectors_Molex
+Molex_MiniFit-JR-5569-20A2_2x10x4.20mm_Angled
+Molex Mini-Fit JR, PN:5569-20A2, dual row, side entry type, through hole, with plastic peg mount
+connector molex mini-fit 5569
+0
+20
+20
+Connectors_Molex
+Molex_MiniFit-JR-5569-22A1_2x11x4.20mm_Angled
+Molex Mini-Fit JR, PN:5569-22A1, dual row, side entry type, through hole, with screw mount
+connector molex mini-fit 5569
+0
+22
+22
+Connectors_Molex
+Molex_MiniFit-JR-5569-22A2_2x11x4.20mm_Angled
+Molex Mini-Fit JR, PN:5569-22A2, dual row, side entry type, through hole, with plastic peg mount
+connector molex mini-fit 5569
+0
+22
+22
+Connectors_Molex
+Molex_MiniFit-JR-5569-24A1_2x12x4.20mm_Angled
+Molex Mini-Fit JR, PN:5569-24A1, dual row, side entry type, through hole, with screw mount
+connector molex mini-fit 5569
+0
+24
+24
+Connectors_Molex
+Molex_MiniFit-JR-5569-24A2_2x12x4.20mm_Angled
+Molex Mini-Fit JR, PN:5569-24A2, dual row, side entry type, through hole, with plastic peg mount
+connector molex mini-fit 5569
+0
+24
+24
+Connectors_Molex
+Molex_MiniFit-SR-43915-xx06_2x03x10.00mm_Straight
+Molex MiniFit-Sr, dual row, top entry type, through hole
+connector molex mini-fit-sr
+0
+80
+6
+Connectors_Molex
+Molex_MiniFit-SR-43915-xx08_2x04x10.00mm_Straight
+Molex MiniFit-Sr, dual row, top entry type, through hole
+connector molex mini-fit-sr
+0
+106
+8
+Connectors_Molex
+Molex_MiniFit-SR-43915-xx10_2x05x10.00mm_Straight
+Molex MiniFit-Sr, dual row, top entry type, through hole
+connector molex mini-fit-sr
+0
+132
+10
+Connectors_Molex
+Molex_MiniFit-SR-43915-xx12_2x06x10.00mm_Straight
+Molex MiniFit-Sr, dual row, top entry type, through hole
+connector molex mini-fit-sr
+0
+158
+12
+Connectors_Molex
+Molex_MiniFit-SR-43915-xx14_2x07x10.00mm_Straight
+Molex MiniFit-Sr, dual row, top entry type, through hole
+connector molex mini-fit-sr
+0
+184
+14
+Connectors_Molex
+Molex_NanoFit_1x02x2.50mm_Angled
+Molex Nano Fit, single row, side entry, through hole, Datasheet:http://www.molex.com/pdm_docs/sd/1053131208_sd.pdf
+connector molex nano-fit 105313-xx04
+0
+2
+2
+Connectors_Molex
+Molex_NanoFit_1x02x2.50mm_Straight
+Molex Nano Fit, single row, top entry, through hole, Datasheet:http://www.molex.com/pdm_docs/sd/1053091203_sd.pdf
+connector molex nano-fit 105309-xx04
+0
+2
+2
+Connectors_Molex
+Molex_NanoFit_1x03x2.50mm_Angled
+Molex Nano Fit, single row, side entry, through hole, Datasheet:http://www.molex.com/pdm_docs/sd/1053131208_sd.pdf
+connector molex nano-fit 105313-xx06
+0
+3
+3
+Connectors_Molex
+Molex_NanoFit_1x03x2.50mm_Straight
+Molex Nano Fit, single row, top entry, through hole, Datasheet:http://www.molex.com/pdm_docs/sd/1053091203_sd.pdf
+connector molex nano-fit 105309-xx06
+0
+3
+3
+Connectors_Molex
+Molex_NanoFit_1x04x2.50mm_Angled
+Molex Nano Fit, single row, side entry, through hole, Datasheet:http://www.molex.com/pdm_docs/sd/1053131208_sd.pdf
+connector molex nano-fit 105313-xx08
+0
+4
+4
+Connectors_Molex
+Molex_NanoFit_1x04x2.50mm_Straight
+Molex Nano Fit, single row, top entry, through hole, Datasheet:http://www.molex.com/pdm_docs/sd/1053091203_sd.pdf
+connector molex nano-fit 105309-xx08
+0
+4
+4
+Connectors_Molex
+Molex_NanoFit_1x05x2.50mm_Angled
+Molex Nano Fit, single row, side entry, through hole, Datasheet:http://www.molex.com/pdm_docs/sd/1053131208_sd.pdf
+connector molex nano-fit 105313-xx10
+0
+5
+5
+Connectors_Molex
+Molex_NanoFit_1x05x2.50mm_Straight
+Molex Nano Fit, single row, top entry, through hole, Datasheet:http://www.molex.com/pdm_docs/sd/1053091203_sd.pdf
+connector molex nano-fit 105309-xx10
+0
+5
+5
+Connectors_Molex
+Molex_NanoFit_1x06x2.50mm_Angled
+Molex Nano Fit, single row, side entry, through hole, Datasheet:http://www.molex.com/pdm_docs/sd/1053131208_sd.pdf
+connector molex nano-fit 105313-xx12
+0
+6
+6
+Connectors_Molex
+Molex_NanoFit_1x06x2.50mm_Straight
+Molex Nano Fit, single row, top entry, through hole, Datasheet:http://www.molex.com/pdm_docs/sd/1053091203_sd.pdf
+connector molex nano-fit 105309-xx12
+0
+6
+6
+Connectors_Molex
+Molex_NanoFit_1x07x2.50mm_Angled
+Molex Nano Fit, single row, side entry, through hole, Datasheet:http://www.molex.com/pdm_docs/sd/1053131208_sd.pdf
+connector molex nano-fit 105313-xx14
+0
+7
+7
+Connectors_Molex
+Molex_NanoFit_1x07x2.50mm_Straight
+Molex Nano Fit, single row, top entry, through hole, Datasheet:http://www.molex.com/pdm_docs/sd/1053091203_sd.pdf
+connector molex nano-fit 105309-xx14
+0
+7
+7
+Connectors_Molex
+Molex_NanoFit_1x08x2.50mm_Angled
+Molex Nano Fit, single row, side entry, through hole, Datasheet:http://www.molex.com/pdm_docs/sd/1053131208_sd.pdf
+connector molex nano-fit 105313-xx16
+0
+8
+8
+Connectors_Molex
+Molex_NanoFit_1x08x2.50mm_Straight
+Molex Nano Fit, single row, top entry, through hole, Datasheet:http://www.molex.com/pdm_docs/sd/1053091203_sd.pdf
+connector molex nano-fit 105309-xx16
+0
+8
+8
+Connectors_Molex
+Molex_NanoFit_2x02x2.50mm_Angled
+Molex Nano Fit, dual row, side entry, through hole, Datasheet:http://www.molex.com/pdm_docs/sd/1053141208_sd.pdf
+connector molex nano-fit 105314-xx04
+0
+4
+4
+Connectors_Molex
+Molex_NanoFit_2x02x2.50mm_Straight
+Molex Nano Fit, dual row, top entry, through hole, Datasheet:http://www.molex.com/pdm_docs/sd/1053101208_sd.pdf
+connector molex nano-fit 105310-xx04
+0
+4
+4
+Connectors_Molex
+Molex_NanoFit_2x03x2.50mm_Angled
+Molex Nano Fit, dual row, side entry, through hole, Datasheet:http://www.molex.com/pdm_docs/sd/1053141208_sd.pdf
+connector molex nano-fit 105314-xx06
+0
+6
+6
+Connectors_Molex
+Molex_NanoFit_2x03x2.50mm_Straight
+Molex Nano Fit, dual row, top entry, through hole, Datasheet:http://www.molex.com/pdm_docs/sd/1053101208_sd.pdf
+connector molex nano-fit 105310-xx06
+0
+6
+6
+Connectors_Molex
+Molex_NanoFit_2x04x2.50mm_Angled
+Molex Nano Fit, dual row, side entry, through hole, Datasheet:http://www.molex.com/pdm_docs/sd/1053141208_sd.pdf
+connector molex nano-fit 105314-xx08
+0
+8
+8
+Connectors_Molex
+Molex_NanoFit_2x04x2.50mm_Straight
+Molex Nano Fit, dual row, top entry, through hole, Datasheet:http://www.molex.com/pdm_docs/sd/1053101208_sd.pdf
+connector molex nano-fit 105310-xx08
+0
+8
+8
+Connectors_Molex
+Molex_NanoFit_2x05x2.50mm_Angled
+Molex Nano Fit, dual row, side entry, through hole, Datasheet:http://www.molex.com/pdm_docs/sd/1053141208_sd.pdf
+connector molex nano-fit 105314-xx10
+0
+10
+10
+Connectors_Molex
+Molex_NanoFit_2x05x2.50mm_Straight
+Molex Nano Fit, dual row, top entry, through hole, Datasheet:http://www.molex.com/pdm_docs/sd/1053101208_sd.pdf
+connector molex nano-fit 105310-xx10
+0
+10
+10
+Connectors_Molex
+Molex_NanoFit_2x06x2.50mm_Angled
+Molex Nano Fit, dual row, side entry, through hole, Datasheet:http://www.molex.com/pdm_docs/sd/1053141208_sd.pdf
+connector molex nano-fit 105314-xx12
+0
+12
+12
+Connectors_Molex
+Molex_NanoFit_2x06x2.50mm_Straight
+Molex Nano Fit, dual row, top entry, through hole, Datasheet:http://www.molex.com/pdm_docs/sd/1053101208_sd.pdf
+connector molex nano-fit 105310-xx12
+0
+12
+12
+Connectors_Molex
+Molex_NanoFit_2x07x2.50mm_Angled
+Molex Nano Fit, dual row, side entry, through hole, Datasheet:http://www.molex.com/pdm_docs/sd/1053141208_sd.pdf
+connector molex nano-fit 105314-xx14
+0
+14
+14
+Connectors_Molex
+Molex_NanoFit_2x07x2.50mm_Straight
+Molex Nano Fit, dual row, top entry, through hole, Datasheet:http://www.molex.com/pdm_docs/sd/1053101208_sd.pdf
+connector molex nano-fit 105310-xx14
+0
+14
+14
+Connectors_Molex
+Molex_NanoFit_2x08x2.50mm_Angled
+Molex Nano Fit, dual row, side entry, through hole, Datasheet:http://www.molex.com/pdm_docs/sd/1053141208_sd.pdf
+connector molex nano-fit 105314-xx16
+0
+16
+16
+Connectors_Molex
+Molex_NanoFit_2x08x2.50mm_Straight
+Molex Nano Fit, dual row, top entry, through hole, Datasheet:http://www.molex.com/pdm_docs/sd/1053101208_sd.pdf
+connector molex nano-fit 105310-xx16
+0
+16
+16
+Connectors_Molex
+Molex_Panelmate-53780-0270_02x1.25mm_Angled
+Molex Panelmate series connector, 1.25mm pitch, side entry SMT, P/N: 53780-0270
+conn molex panelmate
+0
+4
+2
+Connectors_Molex
+Molex_Panelmate-53780-0370_03x1.25mm_Angled
+Molex Panelmate series connector, 1.25mm pitch, side entry SMT, P/N: 53780-0370
+conn molex panelmate
+0
+5
+3
+Connectors_Molex
+Molex_Panelmate-53780-0470_04x1.25mm_Angled
+Molex Panelmate series connector, 1.25mm pitch, side entry SMT, P/N: 53780-0470
+conn molex panelmate
+0
+6
+4
+Connectors_Molex
+Molex_Panelmate-53780-0570_05x1.25mm_Angled
+Molex Panelmate series connector, 1.25mm pitch, side entry SMT, P/N: 53780-0570
+conn molex panelmate
+0
+7
+5
+Connectors_Molex
+Molex_Panelmate-53780-0670_06x1.25mm_Angled
+Molex Panelmate series connector, 1.25mm pitch, side entry SMT, P/N: 53780-0670
+conn molex panelmate
+0
+8
+6
+Connectors_Molex
+Molex_Panelmate-53780-0770_07x1.25mm_Angled
+Molex Panelmate series connector, 1.25mm pitch, side entry SMT, P/N: 53780-0770
+conn molex panelmate
+0
+9
+7
+Connectors_Molex
+Molex_Panelmate-53780-0870_08x1.25mm_Angled
+Molex Panelmate series connector, 1.25mm pitch, side entry SMT, P/N: 53780-0870
+conn molex panelmate
+0
+10
+8
+Connectors_Molex
+Molex_Panelmate-53780-0970_09x1.25mm_Angled
+Molex Panelmate series connector, 1.25mm pitch, side entry SMT, P/N: 53780-0970
+conn molex panelmate
+0
+11
+9
+Connectors_Molex
+Molex_Panelmate-53780-1070_10x1.25mm_Angled
+Molex Panelmate series connector, 1.25mm pitch, side entry SMT, P/N: 53780-1070
+conn molex panelmate
+0
+12
+10
+Connectors_Molex
+Molex_Panelmate-53780-1270_12x1.25mm_Angled
+Molex Panelmate series connector, 1.25mm pitch, side entry SMT, P/N: 53780-1270
+conn molex panelmate
+0
+14
+12
+Connectors_Molex
+Molex_Panelmate-53780-1470_14x1.25mm_Angled
+Molex Panelmate series connector, 1.25mm pitch, side entry SMT, P/N: 53780-1470
+conn molex panelmate
+0
+16
+14
+Connectors_Molex
+Molex_Panelmate-53780-1570_15x1.25mm_Angled
+Molex Panelmate series connector, 1.25mm pitch, side entry SMT, P/N: 53780-1570
+conn molex panelmate
+0
+17
+15
+Connectors_Molex
+Molex_Panelmate-53780-1870_18x1.25mm_Angled
+Molex Panelmate series connector, 1.25mm pitch, side entry SMT, P/N: 53780-1870
+conn molex panelmate
+0
+20
+18
+Connectors_Molex
+Molex_Panelmate-53780-2070_20x1.25mm_Angled
+Molex Panelmate series connector, 1.25mm pitch, side entry SMT, P/N: 53780-2070
+conn molex panelmate
+0
+22
+20
+Connectors_Molex
+Molex_Panelmate-53780-3070_30x1.25mm_Angled
+Molex Panelmate series connector, 1.25mm pitch, side entry SMT, P/N: 53780-3070
+conn molex panelmate
+0
+32
+30
+Connectors_Molex
+Molex_Pico-EZmate_02x1.20mm_Angled
+Molex Pico-EZmate series connector, 1.20mm pitch, side entry SMT, P/N: 78181-0002
+connector molex pico ezmate side angled horizontal surface mount SMD SMT
+0
+4
+2
+Connectors_Molex
+Molex_Pico-EZmate_03x1.20mm_Angled
+Molex Pico-EZmate series connector, 1.20mm pitch, side entry SMT, P/N: 78181-0003
+connector molex pico ezmate side angled horizontal surface mount SMD SMT
+0
+5
+3
+Connectors_Molex
+Molex_Pico-EZmate_04x1.20mm_Angled
+Molex Pico-EZmate series connector, 1.20mm pitch, side entry SMT, P/N: 78181-0004
+connector molex pico ezmate side angled horizontal surface mount SMD SMT
+0
+6
+4
+Connectors_Molex
+Molex_Pico-EZmate_05x1.20mm_Angled
+Molex Pico-EZmate series connector, 1.20mm pitch, side entry SMT, P/N: 78181-0005
+connector molex pico ezmate side angled horizontal surface mount SMD SMT
+0
+7
+5
+Connectors_Molex
+Molex_Pico-EZmate_06x1.20mm_Angled
+Molex Pico-EZmate series connector, 1.20mm pitch, side entry SMT, P/N: 78181-5006
+connector molex pico ezmate side angled horizontal surface mount SMD SMT
+0
+8
+6
+Connectors_Molex
+Molex_Pico-EZmate_07x1.20mm_Angled
+Molex Pico-EZmate series connector, 1.20mm pitch, side entry SMT, P/N: 78181-5007
+connector molex pico ezmate side angled horizontal surface mount SMD SMT
+0
+9
+7
+Connectors_Molex
+Molex_PicoBlade_53047-0210_02x1.25mm_Straight
+Molex PicoBlade, single row, top entry type, through hole, PN:53047-0210
+connector molex picoblade
+0
+2
+2
+Connectors_Molex
+Molex_PicoBlade_53047-0310_03x1.25mm_Straight
+Molex PicoBlade, single row, top entry type, through hole, PN:53047-0310
+connector molex picoblade
+0
+3
+3
+Connectors_Molex
+Molex_PicoBlade_53047-0410_04x1.25mm_Straight
+Molex PicoBlade, single row, top entry type, through hole, PN:53047-0410
+connector molex picoblade
+0
+4
+4
+Connectors_Molex
+Molex_PicoBlade_53047-0510_05x1.25mm_Straight
+Molex PicoBlade, single row, top entry type, through hole, PN:53047-0510
+connector molex picoblade
+0
+5
+5
+Connectors_Molex
+Molex_PicoBlade_53047-0610_06x1.25mm_Straight
+Molex PicoBlade, single row, top entry type, through hole, PN:53047-0610
+connector molex picoblade
+0
+6
+6
+Connectors_Molex
+Molex_PicoBlade_53047-0710_07x1.25mm_Straight
+Molex PicoBlade, single row, top entry type, through hole, PN:53047-0710
+connector molex picoblade
+0
+7
+7
+Connectors_Molex
+Molex_PicoBlade_53047-0810_08x1.25mm_Straight
+Molex PicoBlade, single row, top entry type, through hole, PN:53047-0810
+connector molex picoblade
+0
+8
+8
+Connectors_Molex
+Molex_PicoBlade_53047-0910_09x1.25mm_Straight
+Molex PicoBlade, single row, top entry type, through hole, PN:53047-0910
+connector molex picoblade
+0
+9
+9
+Connectors_Molex
+Molex_PicoBlade_53047-1010_10x1.25mm_Straight
+Molex PicoBlade, single row, top entry type, through hole, PN:53047-1010
+connector molex picoblade
+0
+10
+10
+Connectors_Molex
+Molex_PicoBlade_53047-1110_11x1.25mm_Straight
+Molex PicoBlade, single row, top entry type, through hole, PN:53047-1110
+connector molex picoblade
+0
+11
+11
+Connectors_Molex
+Molex_PicoBlade_53047-1210_12x1.25mm_Straight
+Molex PicoBlade, single row, top entry type, through hole, PN:53047-1210
+connector molex picoblade
+0
+12
+12
+Connectors_Molex
+Molex_PicoBlade_53047-1310_13x1.25mm_Straight
+Molex PicoBlade, single row, top entry type, through hole, PN:53047-1310
+connector molex picoblade
+0
+13
+13
+Connectors_Molex
+Molex_PicoBlade_53047-1410_14x1.25mm_Straight
+Molex PicoBlade, single row, top entry type, through hole, PN:53047-1410
+connector molex picoblade
+0
+14
+14
+Connectors_Molex
+Molex_PicoBlade_53047-1510_15x1.25mm_Straight
+Molex PicoBlade, single row, top entry type, through hole, PN:53047-1510
+connector molex picoblade
+0
+15
+15
+Connectors_Molex
+Molex_PicoBlade_53048-0210_02x1.25mm_Angled
+Molex PicoBlade, single row, side entry type, through hole, PN:53048-0210
+connector molex picoblade
+0
+2
+2
+Connectors_Molex
+Molex_PicoBlade_53048-0310_03x1.25mm_Angled
+Molex PicoBlade, single row, side entry type, through hole, PN:53048-0310
+connector molex picoblade
+0
+3
+3
+Connectors_Molex
+Molex_PicoBlade_53048-0410_04x1.25mm_Angled
+Molex PicoBlade, single row, side entry type, through hole, PN:53048-0410
+connector molex picoblade
+0
+4
+4
+Connectors_Molex
+Molex_PicoBlade_53048-0510_05x1.25mm_Angled
+Molex PicoBlade, single row, side entry type, through hole, PN:53048-0510
+connector molex picoblade
+0
+5
+5
+Connectors_Molex
+Molex_PicoBlade_53048-0610_06x1.25mm_Angled
+Molex PicoBlade, single row, side entry type, through hole, PN:53048-0610
+connector molex picoblade
+0
+6
+6
+Connectors_Molex
+Molex_PicoBlade_53048-0710_07x1.25mm_Angled
+Molex PicoBlade, single row, side entry type, through hole, PN:53048-0710
+connector molex picoblade
+0
+7
+7
+Connectors_Molex
+Molex_PicoBlade_53048-0810_08x1.25mm_Angled
+Molex PicoBlade, single row, side entry type, through hole, PN:53048-0810
+connector molex picoblade
+0
+8
+8
+Connectors_Molex
+Molex_PicoBlade_53048-0910_09x1.25mm_Angled
+Molex PicoBlade, single row, side entry type, through hole, PN:53048-0910
+connector molex picoblade
+0
+9
+9
+Connectors_Molex
+Molex_PicoBlade_53048-1010_10x1.25mm_Angled
+Molex PicoBlade, single row, side entry type, through hole, PN:53048-1010
+connector molex picoblade
+0
+10
+10
+Connectors_Molex
+Molex_PicoBlade_53048-1110_11x1.25mm_Angled
+Molex PicoBlade, single row, side entry type, through hole, PN:53048-1110
+connector molex picoblade
+0
+11
+11
+Connectors_Molex
+Molex_PicoBlade_53048-1210_12x1.25mm_Angled
+Molex PicoBlade, single row, side entry type, through hole, PN:53048-1210
+connector molex picoblade
+0
+12
+12
+Connectors_Molex
+Molex_PicoBlade_53048-1310_13x1.25mm_Angled
+Molex PicoBlade, single row, side entry type, through hole, PN:53048-1310
+connector molex picoblade
+0
+13
+13
+Connectors_Molex
+Molex_PicoBlade_53048-1410_14x1.25mm_Angled
+Molex PicoBlade, single row, side entry type, through hole, PN:53048-1410
+connector molex picoblade
+0
+14
+14
+Connectors_Molex
+Molex_PicoBlade_53048-1510_15x1.25mm_Angled
+Molex PicoBlade, single row, side entry type, through hole, PN:53048-1510
+connector molex picoblade
+0
+15
+15
+Connectors_Molex
+Molex_PicoBlade_53261-0271_02x1.25mm_Angled
+Molex PicoBlade, single row, side entry type, surface mount, PN:53261-0271
+connector molex picoblade smt
+0
+4
+2
+Connectors_Molex
+Molex_PicoBlade_53261-0371_03x1.25mm_Angled
+Molex PicoBlade, single row, side entry type, surface mount, PN:53261-0371
+connector molex picoblade smt
+0
+5
+3
+Connectors_Molex
+Molex_PicoBlade_53261-0471_04x1.25mm_Angled
+Molex PicoBlade, single row, side entry type, surface mount, PN:53261-0471
+connector molex picoblade smt
+0
+6
+4
+Connectors_Molex
+Molex_PicoBlade_53261-0571_05x1.25mm_Angled
+Molex PicoBlade, single row, side entry type, surface mount, PN:53261-0571
+connector molex picoblade smt
+0
+7
+5
+Connectors_Molex
+Molex_PicoBlade_53261-0671_06x1.25mm_Angled
+Molex PicoBlade, single row, side entry type, surface mount, PN:53261-0671
+connector molex picoblade smt
+0
+8
+6
+Connectors_Molex
+Molex_PicoBlade_53261-0771_07x1.25mm_Angled
+Molex PicoBlade, single row, side entry type, surface mount, PN:53261-0771
+connector molex picoblade smt
+0
+9
+7
+Connectors_Molex
+Molex_PicoBlade_53261-0871_08x1.25mm_Angled
+Molex PicoBlade, single row, side entry type, surface mount, PN:53261-0871
+connector molex picoblade smt
+0
+10
+8
+Connectors_Molex
+Molex_PicoBlade_53261-0971_09x1.25mm_Angled
+Molex PicoBlade, single row, side entry type, surface mount, PN:53261-0971
+connector molex picoblade smt
+0
+11
+9
+Connectors_Molex
+Molex_PicoBlade_53261-1071_10x1.25mm_Angled
+Molex PicoBlade, single row, side entry type, surface mount, PN:53261-1071
+connector molex picoblade smt
+0
+12
+10
+Connectors_Molex
+Molex_PicoBlade_53261-1171_11x1.25mm_Angled
+Molex PicoBlade, single row, side entry type, surface mount, PN:53261-1171
+connector molex picoblade smt
+0
+13
+11
+Connectors_Molex
+Molex_PicoBlade_53261-1271_12x1.25mm_Angled
+Molex PicoBlade, single row, side entry type, surface mount, PN:53261-1271
+connector molex picoblade smt
+0
+14
+12
+Connectors_Molex
+Molex_PicoBlade_53261-1371_13x1.25mm_Angled
+Molex PicoBlade, single row, side entry type, surface mount, PN:53261-1371
+connector molex picoblade smt
+0
+15
+13
+Connectors_Molex
+Molex_PicoBlade_53261-1471_14x1.25mm_Angled
+Molex PicoBlade, single row, side entry type, surface mount, PN:53261-1471
+connector molex picoblade smt
+0
+16
+14
+Connectors_Molex
+Molex_PicoBlade_53261-1571_15x1.25mm_Angled
+Molex PicoBlade, single row, side entry type, surface mount, PN:53261-1571
+connector molex picoblade smt
+0
+17
+15
+Connectors_Molex
+Molex_PicoBlade_53261-1771_17x1.25mm_Angled
+Molex PicoBlade, single row, side entry type, surface mount, PN:53261-1771
+connector molex picoblade smt
+0
+19
+17
+Connectors_Molex
+Molex_PicoBlade_53398-0271_02x1.25mm_Straight
+Molex PicoBlade, single row, top entry type, surface mount, PN:53398-0271
+connector molex picoblade smt
+0
+4
+2
+Connectors_Molex
+Molex_PicoBlade_53398-0371_03x1.25mm_Straight
+Molex PicoBlade, single row, top entry type, surface mount, PN:53398-0371
+connector molex picoblade smt
+0
+5
+3
+Connectors_Molex
+Molex_PicoBlade_53398-0471_04x1.25mm_Straight
+Molex PicoBlade, single row, top entry type, surface mount, PN:53398-0471
+connector molex picoblade smt
+0
+6
+4
+Connectors_Molex
+Molex_PicoBlade_53398-0571_05x1.25mm_Straight
+Molex PicoBlade, single row, top entry type, surface mount, PN:53398-0571
+connector molex picoblade smt
+0
+7
+5
+Connectors_Molex
+Molex_PicoBlade_53398-0671_06x1.25mm_Straight
+Molex PicoBlade, single row, top entry type, surface mount, PN:53398-0671
+connector molex picoblade smt
+0
+8
+6
+Connectors_Molex
+Molex_PicoBlade_53398-0771_07x1.25mm_Straight
+Molex PicoBlade, single row, top entry type, surface mount, PN:53398-0771
+connector molex picoblade smt
+0
+9
+7
+Connectors_Molex
+Molex_PicoBlade_53398-0871_08x1.25mm_Straight
+Molex PicoBlade, single row, top entry type, surface mount, PN:53398-0871
+connector molex picoblade smt
+0
+10
+8
+Connectors_Molex
+Molex_PicoBlade_53398-0971_09x1.25mm_Straight
+Molex PicoBlade, single row, top entry type, surface mount, PN:53398-0971
+connector molex picoblade smt
+0
+11
+9
+Connectors_Molex
+Molex_PicoBlade_53398-1071_10x1.25mm_Straight
+Molex PicoBlade, single row, top entry type, surface mount, PN:53398-1071
+connector molex picoblade smt
+0
+12
+10
+Connectors_Molex
+Molex_PicoBlade_53398-1171_11x1.25mm_Straight
+Molex PicoBlade, single row, top entry type, surface mount, PN:53398-1171
+connector molex picoblade smt
+0
+13
+11
+Connectors_Molex
+Molex_PicoBlade_53398-1271_12x1.25mm_Straight
+Molex PicoBlade, single row, top entry type, surface mount, PN:53398-1271
+connector molex picoblade smt
+0
+14
+12
+Connectors_Molex
+Molex_PicoBlade_53398-1371_13x1.25mm_Straight
+Molex PicoBlade, single row, top entry type, surface mount, PN:53398-1371
+connector molex picoblade smt
+0
+15
+13
+Connectors_Molex
+Molex_PicoBlade_53398-1471_14x1.25mm_Straight
+Molex PicoBlade, single row, top entry type, surface mount, PN:53398-1471
+connector molex picoblade smt
+0
+16
+14
+Connectors_Molex
+Molex_PicoBlade_53398-1571_15x1.25mm_Straight
+Molex PicoBlade, single row, top entry type, surface mount, PN:53398-1571
+connector molex picoblade smt
+0
+17
+15
+Connectors_Molex
+Molex_Sabre_43160-0X02_02x7.49mm_Vertical
+Sabre™ Vertical Header, 43160-0X02, http://www.molex.com/pdm_docs/sd/431600102_sd.pdf
+connector molex sabre 43160
+0
+4
+2
+Connectors_Molex
+Molex_Sabre_43160-0X03_03x7.49mm_Vertical
+Sabre™ Vertical Header, 43160-0X03, http://www.molex.com/pdm_docs/sd/431600102_sd.pdf
+connector molex sabre 43160
+0
+6
+3
+Connectors_Molex
+Molex_Sabre_43160-0X04_04x7.49mm_Vertical
+Sabre™ Vertical Header, 43160-0X04, http://www.molex.com/pdm_docs/sd/431600102_sd.pdf
+connector molex sabre 43160
+0
+8
+4
+Connectors_Molex
+Molex_Sabre_43160-0X05_05x7.49mm_Vertical
+Sabre™ Vertical Header, 43160-0X05, http://www.molex.com/pdm_docs/sd/431600102_sd.pdf
+connector molex sabre 43160
+0
+10
+5
+Connectors_Molex
+Molex_Sabre_43160-0X06_06x7.49mm_Vertical
+Sabre™ Vertical Header, 43160-0X06, http://www.molex.com/pdm_docs/sd/431600102_sd.pdf
+connector molex sabre 43160
+0
+12
+6
+Connectors_Molex
+Molex_Sabre_43160-1X02_02x7.49mm_Angled
+Sabre™ Right Angle Header, 43160-1X02, http://www.molex.com/pdm_docs/sd/431601102_sd.pdf
+connector molex sabre 43160
+0
+4
+2
+Connectors_Molex
+Molex_Sabre_43160-1X03_03x7.49mm_Angled
+Sabre™ Right Angle Header, 43160-1X03, http://www.molex.com/pdm_docs/sd/431601102_sd.pdf
+connector molex sabre 43160
+0
+6
+3
+Connectors_Molex
+Molex_Sabre_43160-1X04_04x7.49mm_Angled
+Sabre™ Right Angle Header, 43160-1X04, http://www.molex.com/pdm_docs/sd/431601102_sd.pdf
+connector molex sabre 43160
+0
+8
+4
+Connectors_Molex
+Molex_Sabre_43160-1X05_05x7.49mm_Angled
+Sabre™ Right Angle Header, 43160-1X05, http://www.molex.com/pdm_docs/sd/431601102_sd.pdf
+connector molex sabre 43160
+0
+10
+5
+Connectors_Molex
+Molex_Sabre_43160-1X06_06x7.49mm_Angled
+Sabre™ Right Angle Header, 43160-1X06, http://www.molex.com/pdm_docs/sd/431601102_sd.pdf
+connector molex sabre 43160
+0
+12
+6
+Connectors_Molex
+Molex_Sabre_43160-XX02_02x7.49mm_Angled_BoardLock
+Sabre™ Right Angle Header, 43160-XX02, http://www.molex.com/pdm_docs/sd/431601102_sd.pdf
+connector molex sabre 43160
+0
+6
+2
+Connectors_Molex
+Molex_Sabre_43160-XX02_02x7.49mm_Vertical_BoardLock
+Sabre™ Vertical Header, 43160-XX02, http://www.molex.com/pdm_docs/sd/431600102_sd.pdf
+connector molex sabre 43160
+0
+6
+2
+Connectors_Molex
+Molex_Sabre_43160-XX03_03x7.49mm_Angled_BoardLock
+Sabre™ Right Angle Header, 43160-XX03, http://www.molex.com/pdm_docs/sd/431601102_sd.pdf
+connector molex sabre 43160
+0
+8
+3
+Connectors_Molex
+Molex_Sabre_43160-XX03_03x7.49mm_Vertical_BoardLock
+Sabre™ Vertical Header, 43160-XX03, http://www.molex.com/pdm_docs/sd/431600102_sd.pdf
+connector molex sabre 43160
+0
+8
+3
+Connectors_Molex
+Molex_Sabre_43160-XX04_04x7.49mm_Angled_BoardLock
+Sabre™ Right Angle Header, 43160-XX04, http://www.molex.com/pdm_docs/sd/431601102_sd.pdf
+connector molex sabre 43160
+0
+10
+4
+Connectors_Molex
+Molex_Sabre_43160-XX04_04x7.49mm_Vertical_BoardLock
+Sabre™ Vertical Header, 43160-XX04, http://www.molex.com/pdm_docs/sd/431600102_sd.pdf
+connector molex sabre 43160
+0
+10
+4
+Connectors_Molex
+Molex_Sabre_43160-XX05_05x7.49mm_Angled_BoardLock
+Sabre™ Right Angle Header, 43160-XX05, http://www.molex.com/pdm_docs/sd/431601102_sd.pdf
+connector molex sabre 43160
+0
+12
+5
+Connectors_Molex
+Molex_Sabre_43160-XX05_05x7.49mm_Vertical_BoardLock
+Sabre™ Vertical Header, 43160-XX05, http://www.molex.com/pdm_docs/sd/431600102_sd.pdf
+connector molex sabre 43160
+0
+12
+5
+Connectors_Molex
+Molex_Sabre_43160-XX06_06x7.49mm_Angled_BoardLock
+Sabre™ Right Angle Header, 43160-XX06, http://www.molex.com/pdm_docs/sd/431601102_sd.pdf
+connector molex sabre 43160
+0
+14
+6
+Connectors_Molex
+Molex_Sabre_43160-XX06_06x7.49mm_Vertical_BoardLock
+Sabre™ Vertical Header, 43160-XX06, http://www.molex.com/pdm_docs/sd/431600102_sd.pdf
+connector molex sabre 43160
+0
+14
+6
+Connectors_Molex
+Molex_SlimStack_Plug_2x08_Pitch0.5mm_55560-0161
+Molex SlimStack plug, 02x08 contacts 0.5mm pitch 1.5mm height, http://www.molex.com/pdm_docs/sd/555600307_sd.pdf
+connector molex slimstack 55560-0161
+0
+16
+16
+Connectors_Molex
+Molex_SlimStack_Plug_2x10_Pitch0.5mm_55560-0201
+Molex SlimStack plug, 02x10 contacts 0.5mm pitch 1.5mm height, http://www.molex.com/pdm_docs/sd/555600307_sd.pdf
+connector molex slimstack 55560-0201
+0
+20
+20
+Connectors_Molex
+Molex_SlimStack_Plug_2x11_Pitch0.5mm_55560-0221
+Molex SlimStack plug, 02x11 contacts 0.5mm pitch 1.5mm height, http://www.molex.com/pdm_docs/sd/555600307_sd.pdf
+connector molex slimstack 55560-0221
+0
+22
+22
+Connectors_Molex
+Molex_SlimStack_Plug_2x12_Pitch0.5mm_55560-0241
+Molex SlimStack plug, 02x12 contacts 0.5mm pitch 1.5mm height, http://www.molex.com/pdm_docs/sd/555600307_sd.pdf
+connector molex slimstack 55560-0241
+0
+24
+24
+Connectors_Molex
+Molex_SlimStack_Plug_2x15_Pitch0.5mm_55560-0301
+Molex SlimStack plug, 02x15 contacts 0.5mm pitch 1.5mm height, http://www.molex.com/pdm_docs/sd/555600307_sd.pdf
+connector molex slimstack 55560-0301
+0
+30
+30
+Connectors_Molex
+Molex_SlimStack_Plug_2x15_Pitch0.5mm_501920-3001
+Molex SlimStack plug, 02x15 contacts 0.5mm pitch 4mm height, http://www.molex.com/pdm_docs/sd/5019204001_sd.pdf
+connector molex slimstack 501920-3001
+0
+30
+30
+Connectors_Molex
+Molex_SlimStack_Plug_2x17_Pitch0.5mm_55560-0341
+Molex SlimStack plug, 02x17 contacts 0.5mm pitch 1.5mm height, http://www.molex.com/pdm_docs/sd/555600307_sd.pdf
+connector molex slimstack 55560-0341
+0
+34
+34
+Connectors_Molex
+Molex_SlimStack_Plug_2x20_Pitch0.5mm_55560-0401
+Molex SlimStack plug, 02x20 contacts 0.5mm pitch 1.5mm height, http://www.molex.com/pdm_docs/sd/555600307_sd.pdf
+connector molex slimstack 55560-0401
+0
+40
+40
+Connectors_Molex
+Molex_SlimStack_Plug_2x20_Pitch0.5mm_501920-4001
+Molex SlimStack plug, 02x20 contacts 0.5mm pitch 4mm height, http://www.molex.com/pdm_docs/sd/5019204001_sd.pdf
+connector molex slimstack 501920-4001
+0
+40
+40
+Connectors_Molex
+Molex_SlimStack_Plug_2x25_Pitch0.5mm_55560-0501
+Molex SlimStack plug, 02x25 contacts 0.5mm pitch 1.5mm height, http://www.molex.com/pdm_docs/sd/555600307_sd.pdf
+connector molex slimstack 55560-0501
+0
+50
+50
+Connectors_Molex
+Molex_SlimStack_Plug_2x25_Pitch0.5mm_501920-5001
+Molex SlimStack plug, 02x25 contacts 0.5mm pitch 4mm height, http://www.molex.com/pdm_docs/sd/5019204001_sd.pdf
+connector molex slimstack 501920-5001
+0
+50
+50
+Connectors_Molex
+Molex_SlimStack_Plug_2x30_Pitch0.5mm_55560-0601
+Molex SlimStack plug, 02x30 contacts 0.5mm pitch 1.5mm height, http://www.molex.com/pdm_docs/sd/555600307_sd.pdf
+connector molex slimstack 55560-0601
+0
+60
+60
+Connectors_Molex
+Molex_SlimStack_Plug_2x40_Pitch0.5mm_55560-0801
+Molex SlimStack plug, 02x40 contacts 0.5mm pitch 1.5mm height, http://www.molex.com/pdm_docs/sd/555600307_sd.pdf
+connector molex slimstack 55560-0801
+0
+80
+80
+Connectors_Molex
+Molex_SlimStack_Receptacle_2x08_Pitch0.5mm_54722-0164
+Molex SlimStack receptacle, 02x08 contacts 0.5mm pitch 1.5mm height, http://www.molex.com/pdm_docs/sd/547220604_sd.pdf
+connector molex slimstack 54722-0164
+0
+16
+16
+Connectors_Molex
+Molex_SlimStack_Receptacle_2x10_Pitch0.5mm_52991-0200
+Molex SlimStack receptacle, 02x10 contacts 0.5mm pitch 4mm height, http://www.molex.com/pdm_docs/sd/529910408_sd.pdf
+connector molex slimstack 52991-0200
+0
+20
+20
+Connectors_Molex
+Molex_SlimStack_Receptacle_2x10_Pitch0.5mm_54722-0204
+Molex SlimStack receptacle, 02x10 contacts 0.5mm pitch 1.5mm height, http://www.molex.com/pdm_docs/sd/547220604_sd.pdf
+connector molex slimstack 54722-0204
+0
+20
+20
+Connectors_Molex
+Molex_SlimStack_Receptacle_2x11_Pitch0.5mm_54722-0224
+Molex SlimStack receptacle, 02x11 contacts 0.5mm pitch 1.5mm height, http://www.molex.com/pdm_docs/sd/547220604_sd.pdf
+connector molex slimstack 54722-0224
+0
+22
+22
+Connectors_Molex
+Molex_SlimStack_Receptacle_2x12_Pitch0.5mm_54722-0244
+Molex SlimStack receptacle, 02x12 contacts 0.5mm pitch 1.5mm height, http://www.molex.com/pdm_docs/sd/547220604_sd.pdf
+connector molex slimstack 54722-0244
+0
+24
+24
+Connectors_Molex
+Molex_SlimStack_Receptacle_2x15_Pitch0.5mm_52991-0300
+Molex SlimStack receptacle, 02x15 contacts 0.5mm pitch 4mm height, http://www.molex.com/pdm_docs/sd/529910408_sd.pdf
+connector molex slimstack 52991-0300
+0
+30
+30
+Connectors_Molex
+Molex_SlimStack_Receptacle_2x15_Pitch0.5mm_54722-0304
+Molex SlimStack receptacle, 02x15 contacts 0.5mm pitch 1.5mm height, http://www.molex.com/pdm_docs/sd/547220604_sd.pdf
+connector molex slimstack 54722-0304
+0
+30
+30
+Connectors_Molex
+Molex_SlimStack_Receptacle_2x17_Pitch0.5mm_54722-0344
+Molex SlimStack receptacle, 02x17 contacts 0.5mm pitch 1.5mm height, http://www.molex.com/pdm_docs/sd/547220604_sd.pdf
+connector molex slimstack 54722-0344
+0
+34
+34
+Connectors_Molex
+Molex_SlimStack_Receptacle_2x20_Pitch0.5mm_52991-0400
+Molex SlimStack receptacle, 02x20 contacts 0.5mm pitch 4mm height, http://www.molex.com/pdm_docs/sd/529910408_sd.pdf
+connector molex slimstack 52991-0400
+0
+40
+40
+Connectors_Molex
+Molex_SlimStack_Receptacle_2x20_Pitch0.5mm_54722-0404
+Molex SlimStack receptacle, 02x20 contacts 0.5mm pitch 1.5mm height, http://www.molex.com/pdm_docs/sd/547220604_sd.pdf
+connector molex slimstack 54722-0404
+0
+40
+40
+Connectors_Molex
+Molex_SlimStack_Receptacle_2x25_Pitch0.5mm_52991-0500
+Molex SlimStack receptacle, 02x25 contacts 0.5mm pitch 4mm height, http://www.molex.com/pdm_docs/sd/529910408_sd.pdf
+connector molex slimstack 52991-0500
+0
+50
+50
+Connectors_Molex
+Molex_SlimStack_Receptacle_2x25_Pitch0.5mm_54722-0504
+Molex SlimStack receptacle, 02x25 contacts 0.5mm pitch 1.5mm height, http://www.molex.com/pdm_docs/sd/547220604_sd.pdf
+connector molex slimstack 54722-0504
+0
+50
+50
+Connectors_Molex
+Molex_SlimStack_Receptacle_2x30_Pitch0.5mm_52991-0600
+Molex SlimStack receptacle, 02x30 contacts 0.5mm pitch 4mm height, http://www.molex.com/pdm_docs/sd/529910408_sd.pdf
+connector molex slimstack 52991-0600
+0
+60
+60
+Connectors_Molex
+Molex_SlimStack_Receptacle_2x30_Pitch0.5mm_54722-0604
+Molex SlimStack receptacle, 02x30 contacts 0.5mm pitch 1.5mm height, http://www.molex.com/pdm_docs/sd/547220604_sd.pdf
+connector molex slimstack 54722-0604
+0
+60
+60
+Connectors_Molex
+Molex_SlimStack_Receptacle_2x35_Pitch0.5mm_52991-0700
+Molex SlimStack receptacle, 02x35 contacts 0.5mm pitch 4mm height, http://www.molex.com/pdm_docs/sd/529910408_sd.pdf
+connector molex slimstack 52991-0700
+0
+70
+70
+Connectors_Molex
+Molex_SlimStack_Receptacle_2x40_Pitch0.5mm_52991-0800
+Molex SlimStack receptacle, 02x40 contacts 0.5mm pitch 4mm height, http://www.molex.com/pdm_docs/sd/529910408_sd.pdf
+connector molex slimstack 52991-0800
+0
+80
+80
+Connectors_Molex
+Molex_SlimStack_Receptacle_2x40_Pitch0.5mm_54722-0804
+Molex SlimStack receptacle, 02x40 contacts 0.5mm pitch 1.5mm height, http://www.molex.com/pdm_docs/sd/547220604_sd.pdf
+connector molex slimstack 54722-0804
+0
+80
+80
+Connectors_Molex
+Molex_SMA_Jack_Edge_Mount
+Molex SMA Jack, Edge Mount, http://www.molex.com/pdm_docs/sd/732511150_sd.pdf
+sma edge
+0
+11
+2
+Connectors_Molex
+Molex_SPOX-5267_22-03-5025_02x2.54mm_Straight
+Connector Headers with Friction Lock, 22-03-5025, http://www.molex.com/pdm_docs/ps/PS-5264-001-001.pdf
+connector molex SPOX 5267 22-03-5025
+0
+2
+2
+Connectors_Molex
+Molex_SPOX-5267_22-03-5035_03x2.54mm_Straight
+Connector Headers with Friction Lock, 22-03-5035, http://www.molex.com/pdm_docs/ps/PS-5264-001-001.pdf
+connector molex SPOX 5267 22-03-5035
+0
+3
+3
+Connectors_Molex
+Molex_SPOX-5267_22-03-5045_04x2.54mm_Straight
+Connector Headers with Friction Lock, 22-03-5045, http://www.molex.com/pdm_docs/ps/PS-5264-001-001.pdf
+connector molex SPOX 5267 22-03-5045
+0
+4
+4
+Connectors_Molex
+Molex_SPOX-5267_22-03-5055_05x2.54mm_Straight
+Connector Headers with Friction Lock, 22-03-5055, http://www.molex.com/pdm_docs/ps/PS-5264-001-001.pdf
+connector molex SPOX 5267 22-03-5055
+0
+5
+5
+Connectors_Molex
+Molex_SPOX-5267_22-03-5065_06x2.54mm_Straight
+Connector Headers with Friction Lock, 22-03-5065, http://www.molex.com/pdm_docs/ps/PS-5264-001-001.pdf
+connector molex SPOX 5267 22-03-5065
+0
+6
+6
+Connectors_Molex
+Molex_SPOX-5267_22-03-5075_07x2.54mm_Straight
+Connector Headers with Friction Lock, 22-03-5075, http://www.molex.com/pdm_docs/ps/PS-5264-001-001.pdf
+connector molex SPOX 5267 22-03-5075
+0
+7
+7
+Connectors_Molex
+Molex_SPOX-5267_22-03-5085_08x2.54mm_Straight
+Connector Headers with Friction Lock, 22-03-5085, http://www.molex.com/pdm_docs/ps/PS-5264-001-001.pdf
+connector molex SPOX 5267 22-03-5085
+0
+8
+8
+Connectors_Molex
+Molex_SPOX-5267_22-03-5095_09x2.54mm_Straight
+Connector Headers with Friction Lock, 22-03-5095, http://www.molex.com/pdm_docs/ps/PS-5264-001-001.pdf
+connector molex SPOX 5267 22-03-5095
+0
+9
+9
+Connectors_Molex
+Molex_SPOX-5267_22-03-5105_10x2.54mm_Straight
+Connector Headers with Friction Lock, 22-03-5105, http://www.molex.com/pdm_docs/ps/PS-5264-001-001.pdf
+connector molex SPOX 5267 22-03-5105
+0
+10
+10
+Connectors_Molex
+USB_Micro-B_Molex_47346-0001
+http://www.molex.com/pdm_docs/sd/473460001_sd.pdf
+Micro-USB SMD
+0
+11
+6
+Connectors_Terminal_Blocks
+TerminalBlock_Pheonix_MKDS1.5-2pol
+2-way 5mm pitch terminal block, Phoenix MKDS series
+
+0
+2
+2
+Connectors_Terminal_Blocks
+TerminalBlock_Pheonix_MKDS1.5-3pol
+3-way 5mm pitch terminal block, Phoenix MKDS series
+
+0
+3
+3
+Connectors_Terminal_Blocks
+TerminalBlock_Pheonix_MKDS1.5-4pol
+4-way 5mm pitch terminal block, Phoenix MKDS series
+
+0
+4
+4
+Connectors_Terminal_Blocks
+TerminalBlock_Pheonix_MKDS1.5-5pol
+5-way 5mm pitch terminal block, Phoenix MKDS series
+
+0
+5
+5
+Connectors_Terminal_Blocks
+TerminalBlock_Pheonix_MKDS1.5-6pol
+6-way 5mm pitch terminal block, Phoenix MKDS series
+
+0
+6
+6
+Connectors_Terminal_Blocks
+TerminalBlock_Pheonix_MKDS1.5-7pol
+7-way 5mm pitch terminal block, Phoenix MKDS series
+
+0
+7
+7
+Connectors_Terminal_Blocks
+TerminalBlock_Pheonix_MKDS1.5-8pol
+8-way 5mm pitch terminal block, Phoenix MKDS series
+
+0
+8
+8
+Connectors_Terminal_Blocks
+TerminalBlock_Pheonix_MKDS1.5-9pol
+9-way 5mm pitch terminal block, Phoenix MKDS series
+
+0
+9
+9
+Connectors_Terminal_Blocks
+TerminalBlock_Pheonix_MKDS1.5-10pol
+10-way 5mm pitch terminal block, Phoenix MKDS series
+
+0
+10
+10
+Connectors_Terminal_Blocks
+TerminalBlock_Pheonix_MKDS1.5-11pol
+11-way 5mm pitch terminal block, Phoenix MKDS series
+
+0
+11
+11
+Connectors_Terminal_Blocks
+TerminalBlock_Pheonix_MKDS1.5-12pol
+12-way 5mm pitch terminal block, Phoenix MKDS series
+
+0
+12
+12
+Connectors_Terminal_Blocks
+TerminalBlock_Pheonix_MKDS1.5-13pol
+13-way 5mm pitch terminal block, Phoenix MKDS series
+
+0
+13
+13
+Connectors_Terminal_Blocks
+TerminalBlock_Pheonix_MKDS1.5-14pol
+14-way 5mm pitch terminal block, Phoenix MKDS series
+
+0
+14
+14
+Connectors_Terminal_Blocks
+TerminalBlock_Pheonix_MKDS1.5-15pol
+15-way 5mm pitch terminal block, Phoenix MKDS series
+
+0
+15
+15
+Connectors_Terminal_Blocks
+TerminalBlock_Pheonix_MKDS1.5-16pol
+16-way 5mm pitch terminal block, Phoenix MKDS series
+
+0
+16
+16
+Connectors_Terminal_Blocks
+TerminalBlock_Pheonix_MPT-2.54mm_2pol
+2-way 2.54mm pitch terminal block, Phoenix MPT series
+
+0
+2
+2
+Connectors_Terminal_Blocks
+TerminalBlock_Pheonix_MPT-2.54mm_3pol
+3-way 2.54mm pitch terminal block, Phoenix MPT series
+
+0
+3
+3
+Connectors_Terminal_Blocks
+TerminalBlock_Pheonix_MPT-2.54mm_4pol
+4-way 2.54mm pitch terminal block, Phoenix MPT series
+
+0
+4
+4
+Connectors_Terminal_Blocks
+TerminalBlock_Pheonix_MPT-2.54mm_5pol
+5-way 2.54mm pitch terminal block, Phoenix MPT series
+
+0
+5
+5
+Connectors_Terminal_Blocks
+TerminalBlock_Pheonix_MPT-2.54mm_6pol
+6-way 2.54mm pitch terminal block, Phoenix MPT series
+
+0
+6
+6
+Connectors_Terminal_Blocks
+TerminalBlock_Pheonix_MPT-2.54mm_7pol
+7-way 2.54mm pitch terminal block, Phoenix MPT series
+
+0
+7
+7
+Connectors_Terminal_Blocks
+TerminalBlock_Pheonix_MPT-2.54mm_8pol
+8-way 2.54mm pitch terminal block, Phoenix MPT series
+
+0
+8
+8
+Connectors_Terminal_Blocks
+TerminalBlock_Pheonix_MPT-2.54mm_9pol
+9-way 2.54mm pitch terminal block, Phoenix MPT series
+
+0
+9
+9
+Connectors_Terminal_Blocks
+TerminalBlock_Pheonix_MPT-2.54mm_10pol
+10-way 2.54mm pitch terminal block, Phoenix MPT series
+
+0
+10
+10
+Connectors_Terminal_Blocks
+TerminalBlock_Pheonix_MPT-2.54mm_11pol
+11-way 2.54mm pitch terminal block, Phoenix MPT series
+
+0
+11
+11
+Connectors_Terminal_Blocks
+TerminalBlock_Pheonix_MPT-2.54mm_12pol
+12-way 2.54mm pitch terminal block, Phoenix MPT series
+
+0
+12
+12
+Connectors_Terminal_Blocks
+TerminalBlock_Pheonix_PT-3.5mm_2pol
+2-way 3.5mm pitch terminal block, Phoenix PT series
+
+0
+2
+2
+Connectors_Terminal_Blocks
+TerminalBlock_Pheonix_PT-3.5mm_3pol
+3-way 3.5mm pitch terminal block, Phoenix PT series
+
+0
+3
+3
+Connectors_Terminal_Blocks
+TerminalBlock_Pheonix_PT-3.5mm_4pol
+4-way 3.5mm pitch terminal block, Phoenix PT series
+
+0
+4
+4
+Connectors_Terminal_Blocks
+TerminalBlock_Pheonix_PT-3.5mm_5pol
+5-way 3.5mm pitch terminal block, Phoenix PT series
+
+0
+5
+5
+Connectors_Terminal_Blocks
+TerminalBlock_Pheonix_PT-3.5mm_6pol
+6-way 3.5mm pitch terminal block, Phoenix PT series
+
+0
+6
+6
+Connectors_Terminal_Blocks
+TerminalBlock_Pheonix_PT-3.5mm_7pol
+7-way 3.5mm pitch terminal block, Phoenix PT series
+
+0
+7
+7
+Connectors_Terminal_Blocks
+TerminalBlock_Pheonix_PT-3.5mm_8pol
+8-way 3.5mm pitch terminal block, Phoenix PT series
+
+0
+8
+8
+Connectors_Terminal_Blocks
+TerminalBlock_Pheonix_PT-3.5mm_9pol
+9-way 3.5mm pitch terminal block, Phoenix PT series
+
+0
+9
+9
+Connectors_Terminal_Blocks
+TerminalBlock_Pheonix_PT-3.5mm_10pol
+10-way 3.5mm pitch terminal block, Phoenix PT series
+
+0
+10
+10
+Connectors_Terminal_Blocks
+TerminalBlock_Pheonix_PT-3.5mm_11pol
+11-way 3.5mm pitch terminal block, Phoenix PT series
+
+0
+11
+11
+Connectors_Terminal_Blocks
+TerminalBlock_Pheonix_PT-3.5mm_12pol
+12-way 3.5mm pitch terminal block, Phoenix PT series
+
+0
+12
+12
+Connectors_Terminal_Blocks
+TerminalBlock_Pheonix_PT-3.5mm_13pol
+13-way 3.5mm pitch terminal block, Phoenix PT series
+
+0
+13
+13
+Connectors_Terminal_Blocks
+TerminalBlock_Pheonix_PT-3.5mm_14pol
+14-way 3.5mm pitch terminal block, Phoenix PT series
+
+0
+14
+14
+Connectors_Terminal_Blocks
+TerminalBlock_Pheonix_PT-3.5mm_15pol
+15-way 3.5mm pitch terminal block, Phoenix PT series
+
+0
+15
+15
+Connectors_Terminal_Blocks
+TerminalBlock_Pheonix_PT-3.5mm_16pol
+16-way 3.5mm pitch terminal block, Phoenix PT series
+
+0
+16
+16
+Connectors_Terminal_Blocks
+TerminalBlock_WAGO-236_2Stift_RM5mm_1pol
+WAGO-Series 236, 2Stift, 1pol, RM 5mm,
+WAGO-Series 236, 2Stift, 1pol, RM 5mm, Anreibare Leiterplattenklemme
+0
+2
+1
+Connectors_Terminal_Blocks
+TerminalBlock_WAGO-236_2Stift_RM5mm_2pol
+WAGO-Series 236, 2Stift, 2pol, RM 5mm,
+WAGO-Series 236, 2Stift, 2pol, RM 5mm, Anreibare Leiterplattenklemme
+0
+4
+2
+Connectors_Terminal_Blocks
+TerminalBlock_WAGO-236_2Stift_RM5mm_3pol
+WAGO-Series 236, 2Stift, 3pol, RM 5mm,
+WAGO-Series 236, 2Stift, 3pol, RM 5mm, Anreibare Leiterplattenklemme
+0
+6
+3
+Connectors_Terminal_Blocks
+TerminalBlock_WAGO-236_2Stift_RM5mm_4pol
+WAGO-Series 236, 2Stift, 4pol, RM 5mm,
+WAGO-Series 236, 2Stift, 4pol, RM 5mm, Anreibare Leiterplattenklemme
+0
+8
+4
+Connectors_Terminal_Blocks
+TerminalBlock_WAGO-236_2Stift_RM5mm_5pol
+WAGO-Series 236, 2Stift, 5pol, RM 5mm,
+WAGO-Series 236, 2Stift, 5pol, RM 5mm, Anreibare Leiterplattenklemme
+0
+10
+5
+Connectors_Terminal_Blocks
+TerminalBlock_WAGO-236_2Stift_RM5mm_6pol
+WAGO-Series 236, 2Stift, 6pol, RM 5mm,
+WAGO-Series 236, 2Stift, 6pol, RM 5mm, Anreibare Leiterplattenklemme
+0
+12
+6
+Connectors_Terminal_Blocks
+TerminalBlock_WAGO-236_2Stift_RM5mm_7pol
+WAGO-Series 236, 2Stift, 7pol, RM 5mm,
+WAGO-Series 236, 2Stift, 7pol, RM 5mm, Anreibare Leiterplattenklemme
+0
+14
+7
+Connectors_Terminal_Blocks
+TerminalBlock_WAGO-236_2Stift_RM5mm_8pol
+WAGO-Series 236, 2Stift, 8pol, RM 5mm,
+WAGO-Series 236, 2Stift, 8pol, RM 5mm, Anreibare Leiterplattenklemme
+0
+16
+8
+Connectors_Terminal_Blocks
+TerminalBlock_WAGO-236_2Stift_RM5mm_9pol
+WAGO-Series 236, 2Stift, 9pol, RM 5mm,
+WAGO-Series 236, 2Stift, 9pol, RM 5mm, Anreibare Leiterplattenklemme
+0
+18
+9
+Connectors_Terminal_Blocks
+TerminalBlock_WAGO-236_2Stift_RM5mm_10pol
+WAGO-Series 236, 2Stift, 10pol, RM 5mm,
+WAGO-Series 236, 2Stift, 10pol, RM 5mm, Anreibare Leiterplattenklemme
+0
+20
+10
+Connectors_Terminal_Blocks
+TerminalBlock_WAGO-804_RM5mm_1pol
+
+
+0
+2
+1
+Connectors_Terminal_Blocks
+TerminalBlock_WAGO-804_RM5mm_2pol
+
+
+0
+4
+2
+Connectors_Terminal_Blocks
+TerminalBlock_WAGO-804_RM5mm_3pol
+
+
+0
+6
+3
+Connectors_Terminal_Blocks
+TerminalBlock_WAGO-804_RM5mm_4pol
+
+
+0
+8
+4
+Connectors_Terminal_Blocks
+TerminalBlock_WAGO-804_RM5mm_5pol
+
+
+0
+10
+5
+Connectors_Terminal_Blocks
+TerminalBlock_WAGO-804_RM5mm_6pol
+
+
+0
+12
+6
+Connectors_Terminal_Blocks
+TerminalBlock_WAGO-804_RM5mm_7pol
+
+
+0
+14
+7
+Connectors_Terminal_Blocks
+TerminalBlock_WAGO-804_RM5mm_8pol
+
+
+0
+16
+8
+Connectors_Terminal_Blocks
+TerminalBlock_WAGO-804_RM5mm_9pol
+
+
+0
+18
+9
+Connectors_Terminal_Blocks
+TerminalBlock_WAGO-804_RM5mm_10pol
+
+
+0
+20
+10
+Connectors_Terminal_Blocks
+TerminalBlock_WAGO-804_RM7.5mm_1pol
+
+
+0
+2
+1
+Connectors_Terminal_Blocks
+TerminalBlock_WAGO-804_RM7.5mm_2pol
+
+
+0
+4
+2
+Connectors_Terminal_Blocks
+TerminalBlock_WAGO-804_RM7.5mm_3pol
+
+
+0
+6
+3

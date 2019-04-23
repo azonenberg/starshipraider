@@ -1681,8 +1681,6 @@ F 3 "" H 14200 5750 60  0000 C CNN
 $EndComp
 NoConn ~ 14000 4450
 NoConn ~ 14000 4350
-Text Notes 2550 4400 0    60   ~ 0
-B/D pairs swapped for easier routing\n(KSZ9031 auto-corrects)
 NoConn ~ 14000 3950
 NoConn ~ 14000 4250
 NoConn ~ 14000 4150
@@ -1814,4 +1812,6 @@ Wire Wire Line
 	8950 10650 9000 10650
 Wire Wire Line
 	8950 10650 8950 10850
+Text Notes 2550 4400 0    60   ~ 0
+B/D pairs swapped for easier routing\n(KSZ9031 auto-corrects)
 $EndSCHEMATC
