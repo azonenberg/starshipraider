@@ -1,0 +1,14 @@
+Measurements of note
+	Opening of Pico probe holder: 4.06 mm
+	ID of Pico probe holder: 7.36 mm
+	Width of PCB at MMCX: 8 mm
+	Width of MMCX: 5.4 mm
+	Length of wide probe area: 7.5 mm
+	Length of probe shaft: 67.5 mm
+	Width of probe shaft: 5 mm
+	Length of probe shaft to resistor w/ clearance: 56.5 mm
+	Thickness of PCB: 1.6 mm
+
+Thickness of shell: 1.8 mm. Stacked = 3.6 mm, so 460 um clearance on Pico holder
+Right: 7.5, 55.5
+Left: 10.5x10
