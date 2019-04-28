@@ -1,4 +1,4 @@
-325454119598118
+328566226711118
 azonenberg_pcb
 ATC_AT_0603
 
@@ -566,6 +566,20 @@ CONN_STEWART_SS_74500_024
 0
 105
 98
+azonenberg_pcb
+CONN_USB_AMPHENOL_UE27AC54100
+
+
+0
+6
+5
+azonenberg_pcb
+CONN_USB_B_CUI_UJ2-BH-1-TH
+
+
+0
+6
+5
 azonenberg_pcb
 CRYSTAL_2.5x2.0
 

@@ -124,10 +124,10 @@
     )
     (pad 1 thru_hole circle (at 0 0) (size 1.524 1.524) (drill 1) (layers *.Cu *.Mask F.SilkS)
       (net 1 /GND))
-    (model :walter:pin_strip/pin_strip_1.wrl
+    (model :walter:pin_strip/pin_strip_1-90.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 0))
+      (rotate (xyz 0 0 -90))
     )
   )
 
@@ -193,6 +193,21 @@
       (net 1 /GND))
     (pad 1 smd rect (at 0 -1.4 90) (size 1.1 2.8) (layers F.Cu F.Paste F.Mask)
       (net 2 "Net-(J1-Pad1)"))
+    (model :share:Samtec/MMCX-J-P-H-ST-EM1.stp
+      (offset (xyz 0 3.5 0.35))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 180 0))
+    )
+    (model /nfs4/home/azonenberg/code/starshipraider/mechanical/handheld-resistive-probe/shell-bottom.step
+      (offset (xyz 0 -2 -6.25))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 90))
+    )
+    (model /nfs4/home/azonenberg/code/starshipraider/mechanical/handheld-resistive-probe/shell-top.step
+      (offset (xyz 0 -2 0.2))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 90))
+    )
   )
 
   (gr_text "20:1 Probe / A. Zonenberg / v0.1 / 2019-04-16" (at 46.25 25.25) (layer F.SilkS)
