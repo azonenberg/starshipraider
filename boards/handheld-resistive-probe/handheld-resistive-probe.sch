@@ -1,4 +1,4 @@
-EESchema Schematic File Version 4
+EESchema Schematic File Version 5
 LIBS:handheld-resistive-probe-cache
 EELAYER 29 0
 EELAYER END
@@ -6,7 +6,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Handheld 20:1 Z0 probe"
-Date "2019-04-16"
+Date "2019-05-09"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 ""
@@ -19,21 +19,10 @@ L device:R R1
 U 1 1 5CB66BBA
 P 5450 3200
 F 0 "R1" V 5350 3200 50  0000 C CNN
-F 1 "475" V 5450 3200 50  0000 C CNN
+F 1 "953" V 5450 3200 50  0000 C CNN
 F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 5380 3200 50  0001 C CNN
 F 3 "" H 5450 3200 50  0001 C CNN
 	1    5450 3200
-	0    1    1    0   
-$EndComp
-$Comp
-L device:R R2
-U 1 1 5CB66FF9
-P 5750 3200
-F 0 "R2" V 5650 3200 50  0000 C CNN
-F 1 "475" V 5750 3200 50  0000 C CNN
-F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 5680 3200 50  0001 C CNN
-F 3 "" H 5750 3200 50  0001 C CNN
-	1    5750 3200
 	0    1    1    0   
 $EndComp
 $Comp
@@ -64,4 +53,12 @@ F 3 "~" H 6100 3400 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4500 3400 5900 3400
+Text Label 5625 3200 0    50   ~ 0
+PROBE
+Text Label 4750 3200 0    50   ~ 0
+SIGNAL
+Wire Wire Line
+	5625 3200 5600 3200
+Text Notes 5350 3025 0    50   ~ 0
+Can't find any 953 ohm RF resistors!\n1K will work, but gives 21:1 gain at DC
 $EndSCHEMATC
