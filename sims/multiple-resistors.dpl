@@ -1,0 +1,28 @@
+<Qucs Schematic 0.0.20>
+<Properties>
+  <View=0,-100,1532,856,1,0,28>
+  <Grid=10,10,0>
+  <DataSet=multiple-resistors.dat>
+  <DataDisplay=multiple-resistors.sch>
+  <OpenDisplay=1>
+  <Script=multiple-resistors.m>
+  <RunScript=0>
+  <showFrame=0>
+  <FrameText0=Title>
+  <FrameText1=Drawn By:>
+  <FrameText2=Date:>
+  <FrameText3=Revision:>
+</Properties>
+<Symbol>
+</Symbol>
+<Components>
+</Components>
+<Wires>
+</Wires>
+<Diagrams>
+  <Rect 160 308 1012 318 3 #c0c0c0 1 00 0 0 0.5 5 0 -1 0.25 1 1 -1 0.5 1 315 0 225 "" "" "" "">
+	<"Resp_GHZ" #0000ff 0 3 0 0 0>
+  </Rect>
+</Diagrams>
+<Paintings>
+</Paintings>
