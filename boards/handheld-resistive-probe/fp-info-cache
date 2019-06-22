@@ -1,4 +1,4 @@
-328578079464118
+330139239049118
 azonenberg_pcb
 ATC_AT_0603
 
@@ -176,6 +176,13 @@ CAP_AL_6.3MM_SMT
 2
 azonenberg_pcb
 CAP_AL_10MM_SMT
+
+
+0
+2
+2
+azonenberg_pcb
+CAP_MICROSTRIP_0p5PF
 
 
 0
@@ -403,7 +410,7 @@ CONN_MMCX_J_P_H_ST_EM1
 
 
 0
-5
+7
 2
 azonenberg_pcb
 CONN_MMCX_LINX_CONNMMCX002SMD
