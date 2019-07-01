@@ -1,20 +1,6 @@
-EESchema Schematic File Version 3
-LIBS:analog-azonenberg
-LIBS:cmos
-LIBS:cypress-azonenberg
-LIBS:hirose-azonenberg
-LIBS:memory-azonenberg
-LIBS:microchip-azonenberg
-LIBS:osc-azonenberg
-LIBS:passive-azonenberg
-LIBS:power-azonenberg
-LIBS:silego-azonenberg
-LIBS:special-azonenberg
-LIBS:xilinx-azonenberg
-LIBS:conn
-LIBS:device
+EESchema Schematic File Version 4
 LIBS:diffprobe-calibrated-prototype-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -29,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L CONN_3_PWROUT J2
+L power-azonenberg:CONN_3_PWROUT J2
 U 1 1 5A1F8D49
 P 1300 900
 F 0 "J2" H 1428 928 50  0000 L CNN
@@ -53,7 +39,7 @@ Text Label 1800 900  0    60   ~ 0
 GND
 Connection ~ 1750 900 
 $Comp
-L FUSE_PWROUT F1
+L power-azonenberg:FUSE_PWROUT F1
 U 1 1 5A1F8E2C
 P 2850 800
 F 0 "F1" H 2850 1040 50  0000 C CNN
@@ -64,7 +50,7 @@ F 3 "" H 2850 800 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L INDUCTOR_PWROUT L1
+L passive-azonenberg:INDUCTOR_PWROUT L1
 U 1 1 5A1F8E94
 P 3550 800
 F 0 "L1" V 3395 800 40  0000 C CNN
@@ -77,7 +63,7 @@ $EndComp
 Wire Wire Line
 	3250 800  3100 800 
 $Comp
-L CONN_3_PWROUT J3
+L power-azonenberg:CONN_3_PWROUT J3
 U 1 1 5A1F8FD7
 P 1300 1600
 F 0 "J3" H 1428 1628 50  0000 L CNN
@@ -99,7 +85,7 @@ Wire Wire Line
 	1750 1700 1650 1700
 Connection ~ 1750 1600
 $Comp
-L FUSE_PWROUT F2
+L power-azonenberg:FUSE_PWROUT F2
 U 1 1 5A1F8FE5
 P 2850 1500
 F 0 "F2" H 2850 1740 50  0000 C CNN
@@ -110,7 +96,7 @@ F 3 "" H 2850 1500 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L INDUCTOR_PWROUT L2
+L passive-azonenberg:INDUCTOR_PWROUT L2
 U 1 1 5A1F8FEC
 P 3550 1500
 F 0 "L2" V 3395 1500 40  0000 C CNN
@@ -123,7 +109,7 @@ $EndComp
 Wire Wire Line
 	3250 1500 3100 1500
 $Comp
-L C C17
+L device:C C17
 U 1 1 5A1F9060
 P 3950 950
 F 0 "C17" H 4065 996 50  0000 L CNN
@@ -140,7 +126,7 @@ GND
 Wire Wire Line
 	3900 1100 3950 1100
 $Comp
-L C C18
+L device:C C18
 U 1 1 5A1F9213
 P 3950 1650
 F 0 "C18" H 4065 1696 50  0000 L CNN
@@ -157,7 +143,7 @@ GND
 Wire Wire Line
 	3900 1800 3950 1800
 $Comp
-L LTC3032 U8
+L power-azonenberg:LTC3032 U8
 U 1 1 5A1F9331
 P 2450 4050
 F 0 "U8" H 2450 5347 60  0000 C CNN
@@ -205,7 +191,7 @@ Wire Wire Line
 	1750 4000 1850 4000
 Connection ~ 1750 3900
 $Comp
-L C C13
+L device:C C13
 U 1 1 5A1F977A
 P 3300 2850
 F 0 "C13" H 3415 2896 50  0000 L CNN
@@ -225,7 +211,7 @@ Text HLabel 3850 3000 2    60   Output ~ 0
 5V0_P
 Connection ~ 3300 3000
 $Comp
-L C C14
+L device:C C14
 U 1 1 5A1F98D3
 P 3300 3250
 F 0 "C14" H 3415 3296 50  0000 L CNN
@@ -247,7 +233,7 @@ Connection ~ 3300 3100
 Text HLabel 1800 1600 2    60   Output ~ 0
 GND
 $Comp
-L C C15
+L device:C C15
 U 1 1 5A1F9B63
 P 3300 3750
 F 0 "C15" H 3415 3796 50  0000 L CNN
@@ -260,7 +246,7 @@ $EndComp
 Wire Wire Line
 	3050 3600 3300 3600
 $Comp
-L C C16
+L device:C C16
 U 1 1 5A1F9C0E
 P 3850 3750
 F 0 "C16" H 3965 3796 50  0000 L CNN
@@ -283,7 +269,7 @@ Text Label 3400 3900 0    60   ~ 0
 Wire Wire Line
 	3400 3900 3300 3900
 $Comp
-L CONN_01X01 P4
+L diffprobe-calibrated-prototype-rescue:CONN_01X01 P4
 U 1 1 5A1FA02A
 P 1300 4550
 F 0 "P4" H 1100 4500 50  0000 C CNN
@@ -300,7 +286,7 @@ GND
 Text Label 1600 4850 0    60   ~ 0
 5V0_N
 $Comp
-L CONN_01X01 P5
+L diffprobe-calibrated-prototype-rescue:CONN_01X01 P5
 U 1 1 5A1FA31D
 P 1300 4700
 F 0 "P5" H 1100 4650 50  0000 C CNN
@@ -311,7 +297,7 @@ F 3 "" H 1300 4700 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L CONN_01X01 P6
+L diffprobe-calibrated-prototype-rescue:CONN_01X01 P6
 U 1 1 5A1FA351
 P 1300 4850
 F 0 "P6" H 1100 4800 50  0000 C CNN
@@ -330,7 +316,7 @@ Wire Wire Line
 Text Label 5200 3000 2    60   ~ 0
 5V0_P
 $Comp
-L INDUCTOR_PWROUT L3
+L passive-azonenberg:INDUCTOR_PWROUT L3
 U 1 1 5A1FADF1
 P 5500 3000
 F 0 "L3" V 5345 3000 40  0000 C CNN
@@ -341,7 +327,7 @@ F 3 "" H 5500 3000 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L C C19
+L device:C C19
 U 1 1 5A1FAF27
 P 5900 3150
 F 0 "C19" H 6015 3196 50  0000 L CNN
@@ -355,7 +341,7 @@ Connection ~ 5900 3000
 Text HLabel 7750 3300 2    60   Output ~ 0
 3V3
 $Comp
-L C C21
+L device:C C21
 U 1 1 5A1FB336
 P 7400 3450
 F 0 "C21" H 7550 3500 50  0000 L CNN
@@ -367,7 +353,7 @@ F 3 "" H 7400 3450 50  0000 C CNN
 $EndComp
 Connection ~ 7400 3300
 $Comp
-L MIC5305-xxYML U9
+L power-azonenberg:MIC5305-xxYML U9
 U 1 1 5A1FBBFD
 P 6500 3350
 F 0 "U9" H 6750 3947 60  0000 C CNN
@@ -398,7 +384,7 @@ GND
 Wire Wire Line
 	7250 3600 7400 3600
 $Comp
-L C C20
+L device:C C20
 U 1 1 5A1FC0A0
 P 7400 2850
 F 0 "C20" H 7550 2900 50  0000 L CNN
@@ -417,7 +403,7 @@ Wire Wire Line
 Text Label 1600 5000 0    60   ~ 0
 3V3
 $Comp
-L CONN_01X01 P7
+L diffprobe-calibrated-prototype-rescue:CONN_01X01 P7
 U 1 1 5A1FC65E
 P 1300 5000
 F 0 "P7" H 1100 4950 50  0000 C CNN
@@ -430,7 +416,7 @@ $EndComp
 Wire Wire Line
 	1600 5000 1500 5000
 $Comp
-L CONN_01X01 P8
+L diffprobe-calibrated-prototype-rescue:CONN_01X01 P8
 U 1 1 5A1FC76F
 P 1300 5150
 F 0 "P8" H 1100 5100 50  0000 C CNN

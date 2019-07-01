@@ -6,8 +6,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 6
 Title "STARSHIPRAIDER I/O Characterization"
-Date "2018-08-22"
-Rev "0.2"
+Date "2019-01-04"
+Rev "0.2b"
 Comp "Andrew D. Zonenberg"
 Comment1 ""
 Comment2 ""
@@ -787,4 +787,6 @@ Text Label 2600 5200 0    60   ~ 0
 VCCO_IS_LO
 Wire Wire Line
 	2600 5200 2450 5200
+Text Notes 8900 1450 0    60   ~ 0
+THINGS TO FIX\n* Active high vs low polarity on analog switches\n* Analog switch footprint\n* Replace EEPROM with WLCSP\n* Replace LDO with smaller\n* Fix my name\n* Replace 24-bit expander with 16\n* Replace INA226 with INA199\n* Replace ADC with dual channel
 $EndSCHEMATC

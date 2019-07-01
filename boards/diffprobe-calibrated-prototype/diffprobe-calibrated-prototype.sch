@@ -1,20 +1,6 @@
-EESchema Schematic File Version 3
-LIBS:analog-azonenberg
-LIBS:cmos
-LIBS:cypress-azonenberg
-LIBS:hirose-azonenberg
-LIBS:memory-azonenberg
-LIBS:microchip-azonenberg
-LIBS:osc-azonenberg
-LIBS:passive-azonenberg
-LIBS:power-azonenberg
-LIBS:silego-azonenberg
-LIBS:special-azonenberg
-LIBS:xilinx-azonenberg
-LIBS:conn
-LIBS:device
+EESchema Schematic File Version 4
 LIBS:diffprobe-calibrated-prototype-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr USLetter 11000 8500
 encoding utf-8

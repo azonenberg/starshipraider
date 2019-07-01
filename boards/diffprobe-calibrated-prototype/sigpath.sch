@@ -1,20 +1,6 @@
-EESchema Schematic File Version 3
-LIBS:analog-azonenberg
-LIBS:cmos
-LIBS:cypress-azonenberg
-LIBS:hirose-azonenberg
-LIBS:memory-azonenberg
-LIBS:microchip-azonenberg
-LIBS:osc-azonenberg
-LIBS:passive-azonenberg
-LIBS:power-azonenberg
-LIBS:silego-azonenberg
-LIBS:special-azonenberg
-LIBS:xilinx-azonenberg
-LIBS:conn
-LIBS:device
+EESchema Schematic File Version 4
 LIBS:diffprobe-calibrated-prototype-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
@@ -29,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L R R1
+L device:R R1
 U 1 1 5A1F7B04
 P 4850 3150
 F 0 "R1" H 4920 3196 50  0000 L CNN
@@ -40,9 +26,11 @@ F 3 "" H 4850 3150 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L BNC J4
+L diffprobe-calibrated-prototype-rescue:BNC J4
 U 1 1 5A1F7B3B
 P 1350 1800
+AR Path="/5A1F7B3B" Ref="J4"  Part="1" 
+AR Path="/5A1F7AED/5A1F7B3B" Ref="J4"  Part="1" 
 F 0 "J4" H 1451 1684 50  0000 L CNN
 F 1 "SMA" H 1451 1775 50  0000 L CNN
 F 2 "azonenberg_pcb:CONN_SMA_EDGE_SAMTEC_SMA_J_P_H_ST_EM1" H 1350 1800 50  0001 C CNN
@@ -51,7 +39,7 @@ F 3 "" H 1350 1800 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L THS3217 U5
+L analog-azonenberg:THS3217 U5
 U 1 1 5A1F7B74
 P 6500 6850
 F 0 "U5" H 6475 9097 60  0000 C CNN
@@ -62,9 +50,11 @@ F 3 "" H 6500 6800 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L BNC J5
+L diffprobe-calibrated-prototype-rescue:BNC J5
 U 1 1 5A1F7C3D
 P 1350 2050
+AR Path="/5A1F7C3D" Ref="J5"  Part="1" 
+AR Path="/5A1F7AED/5A1F7C3D" Ref="J5"  Part="1" 
 F 0 "J5" H 1451 2026 50  0000 L CNN
 F 1 "SMA" H 1451 1935 50  0000 L CNN
 F 2 "azonenberg_pcb:CONN_SMA_EDGE_SAMTEC_SMA_J_P_H_ST_EM1" H 1350 2050 50  0001 C CNN
@@ -73,7 +63,7 @@ F 3 "" H 1350 2050 50  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L R R2
+L device:R R2
 U 1 1 5A1F7D30
 P 4850 750
 F 0 "R2" H 4920 796 50  0000 L CNN
@@ -96,21 +86,21 @@ VIN_P
 Text Label 1500 2050 0    60   ~ 0
 VIN_N
 Wire Wire Line
-	5550 4850 5700 4850
+	5550 4850 5600 4850
 Wire Wire Line
 	5600 4850 5600 4950
 Wire Wire Line
 	5600 4950 5700 4950
 Connection ~ 5600 4850
 Wire Wire Line
-	5550 5050 5700 5050
+	5550 5050 5600 5050
 Wire Wire Line
 	5600 5050 5600 5150
 Wire Wire Line
 	5600 5150 5700 5150
 Connection ~ 5600 5050
 Wire Wire Line
-	5550 5250 5700 5250
+	5550 5250 5600 5250
 Wire Wire Line
 	5700 5350 5600 5350
 Wire Wire Line
@@ -119,7 +109,7 @@ Connection ~ 5600 5250
 Text Label 5200 5550 2    60   ~ 0
 5V0_P
 $Comp
-L R R8
+L device:R R8
 U 1 1 5A1F818B
 P 5450 5550
 F 0 "R8" V 5500 5400 50  0000 C CNN
@@ -130,11 +120,11 @@ F 3 "" H 5450 5550 50  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	5200 5550 5300 5550
+	5200 5550 5250 5550
 Wire Wire Line
 	5600 5550 5700 5550
 $Comp
-L R R9
+L device:R R9
 U 1 1 5A1F8312
 P 5450 5650
 F 0 "R9" V 5500 5500 50  0000 C CNN
@@ -169,9 +159,11 @@ VOUT_RAW
 Wire Wire Line
 	7250 6150 9950 6150
 $Comp
-L BNC J6
+L diffprobe-calibrated-prototype-rescue:BNC J6
 U 1 1 5A1F85E9
 P 11850 6150
+AR Path="/5A1F85E9" Ref="J6"  Part="1" 
+AR Path="/5A1F7AED/5A1F85E9" Ref="J6"  Part="1" 
 F 0 "J6" H 11951 6126 50  0000 L CNN
 F 1 "SMA" H 11951 6035 50  0000 L CNN
 F 2 "azonenberg_pcb:CONN_SMA_EDGE_SAMTEC_SMA_J_P_H_ST_EM1" H 11850 6150 50  0001 C CNN
@@ -182,7 +174,7 @@ $EndComp
 Text Label 4450 4950 0    60   ~ 0
 VOFFSET
 $Comp
-L HMC346AMS8GE U7
+L analog-azonenberg:HMC346AMS8GE U7
 U 1 1 5A1FD030
 P 10150 6950
 F 0 "U7" H 10200 7950 60  0000 C CNN
@@ -203,14 +195,14 @@ Wire Wire Line
 Text Label 9800 6700 2    60   ~ 0
 GND
 Wire Wire Line
-	9800 6700 9950 6700
+	9800 6700 9850 6700
 Wire Wire Line
-	9850 6700 9850 6900
+	9850 6700 9850 6800
 Wire Wire Line
 	9850 6800 9950 6800
 Connection ~ 9850 6700
 $Comp
-L AD8675 U6
+L analog-azonenberg:AD8675 U6
 U 1 1 5A1FD8B9
 P 8150 7300
 F 0 "U6" H 8550 8147 60  0000 C CNN
@@ -241,7 +233,7 @@ Wire Wire Line
 Text Label 9550 7150 0    60   ~ 0
 ATTEN_V2
 $Comp
-L D D1
+L device:D D1
 U 1 1 5A1FDC38
 P 9400 6550
 F 0 "D1" H 9300 6600 50  0000 C CNN
@@ -262,7 +254,7 @@ ATTEN_REF
 Text Label 7800 7200 2    60   ~ 0
 ATTEN_REF
 $Comp
-L R R10
+L device:R R10
 U 1 1 5A1FDE64
 P 7900 7350
 F 0 "R10" H 7970 7396 50  0000 L CNN
@@ -277,10 +269,10 @@ Wire Wire Line
 Wire Wire Line
 	7950 6800 7800 6800
 Wire Wire Line
-	7800 7200 7950 7200
+	7800 7200 7900 7200
 Connection ~ 7900 7200
 $Comp
-L R R11
+L device:R R11
 U 1 1 5A1FE1FD
 P 7900 7750
 F 0 "R11" H 7970 7796 50  0000 L CNN
@@ -291,18 +283,18 @@ F 3 "" H 7900 7750 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7900 7500 7900 7600
+	7900 7500 7900 7550
 Text Label 7800 7550 2    60   ~ 0
 5V0_N
 Wire Wire Line
-	7250 7900 8250 7900
+	7250 7900 7900 7900
 Wire Wire Line
 	7800 7550 7900 7550
 Connection ~ 7900 7550
 Wire Wire Line
 	7250 7100 7950 7100
 $Comp
-L R R12
+L device:R R12
 U 1 1 5A1FE4D8
 P 8250 7750
 F 0 "R12" H 8320 7796 50  0000 L CNN
@@ -328,7 +320,7 @@ VATTEN
 Text Notes 7050 10700 0    60   ~ 0
 VOUT should not exceed 5V RMS to avoid damaging DSO\nVOUT_RAW should not exceed +18 dBm (1.776 Vrms / 5V p-p) AC voltage\nHMC346AMS doesn't specify max DC offset other than "should be about zero"\nWith 2V/V gain:\n* Input differential = 0.89 Vrms max (17.76V w/ 20x probes)\n* Input common mode = unspecified, but minimize
 $Comp
-L AD57x2 U4
+L analog-azonenberg:AD57x2 U4
 U 1 1 5A1FD27E
 P 3100 6800
 F 0 "U4" H 3550 8997 60  0000 C CNN
@@ -351,7 +343,7 @@ Wire Wire Line
 Text Label 2750 5050 2    60   ~ 0
 5V0_N
 Wire Wire Line
-	2750 5050 2900 5050
+	2750 5050 2800 5050
 Text HLabel 2400 4850 0    60   Input ~ 0
 3V3
 Wire Wire Line
@@ -362,9 +354,9 @@ Connection ~ 2800 5050
 Text Label 2750 5250 2    60   ~ 0
 GND
 Wire Wire Line
-	2750 5250 2900 5250
+	2750 5250 2800 5250
 Wire Wire Line
-	2800 5250 2800 5650
+	2800 5250 2800 5350
 Wire Wire Line
 	2800 5350 2900 5350
 Connection ~ 2800 5250
@@ -380,7 +372,7 @@ Connection ~ 2800 5550
 Text Label 2300 6050 2    60   ~ 0
 GND
 $Comp
-L R R3
+L device:R R3
 U 1 1 5A1FDC9E
 P 2650 6050
 F 0 "R3" V 2700 5850 50  0000 L CNN
@@ -397,7 +389,7 @@ Wire Wire Line
 Text Label 2300 6250 2    60   ~ 0
 GND
 $Comp
-L R R4
+L device:R R4
 U 1 1 5A1FE175
 P 2650 6250
 F 0 "R4" V 2700 6050 50  0000 L CNN
@@ -414,7 +406,7 @@ Wire Wire Line
 Text Label 2300 6350 2    60   ~ 0
 3V3
 $Comp
-L R R5
+L device:R R5
 U 1 1 5A1FE2EB
 P 2650 6350
 F 0 "R5" V 2700 6150 50  0000 L CNN
@@ -445,7 +437,7 @@ Wire Wire Line
 Wire Wire Line
 	2900 6450 2750 6450
 $Comp
-L MCP1501_DFN U1
+L analog-azonenberg:MCP1501_DFN U1
 U 1 1 5A206F69
 P 1350 6400
 F 0 "U1" H 1700 7297 60  0000 C CNN
@@ -456,7 +448,7 @@ F 3 "" H 1350 6400 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2250 5850 2900 5850
+	2250 5850 2350 5850
 Wire Wire Line
 	2250 5750 2350 5750
 Wire Wire Line
@@ -473,9 +465,9 @@ Wire Wire Line
 Text Label 950  5950 2    60   ~ 0
 GND
 Wire Wire Line
-	950  5950 1150 5950
+	950  5950 1050 5950
 Wire Wire Line
-	1050 5950 1050 6350
+	1050 5950 1050 6050
 Wire Wire Line
 	1050 6050 1150 6050
 Connection ~ 1050 5950
@@ -491,7 +483,7 @@ Connection ~ 1050 6250
 Text Label 1050 5750 2    60   ~ 0
 3V3
 $Comp
-L C C1
+L device:C C1
 U 1 1 5A20EE5F
 P 1350 8900
 F 0 "C1" H 1465 8946 50  0000 L CNN
@@ -504,7 +496,7 @@ $EndComp
 Text Label 1200 8750 2    60   ~ 0
 5V0_P
 $Comp
-L C C3
+L device:C C3
 U 1 1 5A20EF7C
 P 1850 8900
 F 0 "C3" H 1965 8946 50  0000 L CNN
@@ -515,7 +507,7 @@ F 3 "" H 1850 8900 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C5
+L device:C C5
 U 1 1 5A20EFFE
 P 2400 8900
 F 0 "C5" H 2515 8946 50  0000 L CNN
@@ -526,7 +518,7 @@ F 3 "" H 2400 8900 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C2
+L device:C C2
 U 1 1 5A20F050
 P 1350 9300
 F 0 "C2" H 1465 9346 50  0000 L CNN
@@ -537,7 +529,7 @@ F 3 "" H 1350 9300 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C4
+L device:C C4
 U 1 1 5A20F09E
 P 1850 9300
 F 0 "C4" H 1965 9346 50  0000 L CNN
@@ -548,7 +540,7 @@ F 3 "" H 1850 9300 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C6
+L device:C C6
 U 1 1 5A20F0FC
 P 2400 9300
 F 0 "C6" H 2515 9346 50  0000 L CNN
@@ -563,26 +555,26 @@ GND
 Text Label 1200 9450 2    60   ~ 0
 5V0_N
 Wire Wire Line
-	1200 9450 2400 9450
+	1200 9450 1350 9450
 Connection ~ 1350 9450
 Connection ~ 1850 9450
 Wire Wire Line
-	1350 9050 1350 9150
+	1350 9050 1350 9100
 Wire Wire Line
-	1200 9100 2400 9100
+	1200 9100 1350 9100
 Connection ~ 1350 9100
 Wire Wire Line
-	2400 9050 2400 9150
+	2400 9050 2400 9100
 Connection ~ 2400 9100
 Wire Wire Line
-	1850 9050 1850 9150
+	1850 9050 1850 9100
 Connection ~ 1850 9100
 Wire Wire Line
-	1200 8750 2400 8750
+	1200 8750 1350 8750
 Connection ~ 1350 8750
 Connection ~ 1850 8750
 $Comp
-L AXICOM_HF3_2COIL K2
+L special-azonenberg:AXICOM_HF3_2COIL K2
 U 1 1 5A2DEB78
 P 3700 4550
 F 0 "K2" H 4325 6347 60  0000 C CNN
@@ -597,7 +589,7 @@ VIN_P_COUPLED
 Text Label 5600 6250 2    60   ~ 0
 VIN_N_COUPLED
 $Comp
-L AXICOM_HF3_2COIL K1
+L special-azonenberg:AXICOM_HF3_2COIL K1
 U 1 1 5A2DFF07
 P 3700 2450
 F 0 "K1" H 4325 4247 60  0000 C CNN
@@ -618,9 +610,9 @@ Wire Wire Line
 Text Label 4050 1600 0    60   ~ 0
 GND
 Wire Wire Line
-	3900 1600 4050 1600
+	3900 1600 4000 1600
 Wire Wire Line
-	4000 1600 4000 2400
+	4000 1600 4000 1700
 Wire Wire Line
 	4000 1700 3900 1700
 Connection ~ 4000 1600
@@ -648,9 +640,9 @@ Connection ~ 4000 2300
 Text Label 4050 3700 0    60   ~ 0
 GND
 Wire Wire Line
-	3900 3700 4050 3700
+	3900 3700 4000 3700
 Wire Wire Line
-	4000 3700 4000 4500
+	4000 3700 4000 3800
 Wire Wire Line
 	4000 3800 3900 3800
 Connection ~ 4000 3700
@@ -692,7 +684,7 @@ VIN_N_AC
 Wire Wire Line
 	1350 3100 2250 3100
 $Comp
-L C C11
+L device:C C11
 U 1 1 5A2E1A29
 P 1350 850
 F 0 "C11" H 1465 896 50  0000 L CNN
@@ -707,7 +699,7 @@ Wire Wire Line
 Wire Wire Line
 	2100 700  2100 900 
 $Comp
-L C C12
+L device:C C12
 U 1 1 5A2E1C27
 P 1350 2950
 F 0 "C12" H 1465 2996 50  0000 L CNN
@@ -770,7 +762,7 @@ Wire Wire Line
 Text Label 6100 1600 2    60   ~ 0
 3V3
 $Comp
-L DRV8800_WQFN U2
+L special-azonenberg:DRV8800_WQFN U2
 U 1 1 5A377542
 P 6700 1750
 F 0 "U2" H 6750 2800 60  0000 C CNN
@@ -781,7 +773,7 @@ F 3 "" H 6700 1750 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C7
+L device:C C7
 U 1 1 5A377636
 P 8450 1150
 F 0 "C7" H 8565 1196 50  0000 L CNN
@@ -798,7 +790,7 @@ Wire Wire Line
 Wire Wire Line
 	6500 1000 6400 1000
 Wire Wire Line
-	6400 900  6400 1100
+	6400 900  6400 1000
 Wire Wire Line
 	6400 1100 6500 1100
 Text Label 6400 1000 2    60   ~ 0
@@ -811,7 +803,7 @@ Wire Wire Line
 Wire Wire Line
 	8300 1000 8450 1000
 $Comp
-L C C8
+L device:C C8
 U 1 1 5A3782CC
 P 8450 1550
 F 0 "C8" H 8565 1596 50  0000 L CNN
@@ -841,7 +833,7 @@ Wire Wire Line
 Wire Wire Line
 	6400 1500 6500 1500
 $Comp
-L R R6
+L device:R R6
 U 1 1 5A379710
 P 7900 1850
 F 0 "R6" H 7970 1896 50  0000 L CNN
@@ -864,7 +856,7 @@ Wire Wire Line
 Wire Wire Line
 	6500 3250 6400 3250
 $Comp
-L DRV8800_WQFN U3
+L special-azonenberg:DRV8800_WQFN U3
 U 1 1 5A37A03C
 P 6700 3300
 F 0 "U3" H 6750 4350 60  0000 C CNN
@@ -875,7 +867,7 @@ F 3 "" H 6700 3300 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C9
+L device:C C9
 U 1 1 5A37A042
 P 8450 2700
 F 0 "C9" H 8565 2746 50  0000 L CNN
@@ -892,7 +884,7 @@ Wire Wire Line
 Wire Wire Line
 	6500 2550 6400 2550
 Wire Wire Line
-	6400 2450 6400 2650
+	6400 2450 6400 2550
 Wire Wire Line
 	6400 2650 6500 2650
 Text Label 6400 2550 2    60   ~ 0
@@ -905,7 +897,7 @@ Wire Wire Line
 Wire Wire Line
 	8300 2550 8450 2550
 $Comp
-L C C10
+L device:C C10
 U 1 1 5A37A052
 P 8450 3100
 F 0 "C10" H 8565 3146 50  0000 L CNN
@@ -935,7 +927,7 @@ Wire Wire Line
 Wire Wire Line
 	6400 3050 6500 3050
 $Comp
-L R R7
+L device:R R7
 U 1 1 5A37A064
 P 7900 3400
 F 0 "R7" H 7970 3446 50  0000 L CNN
@@ -968,7 +960,7 @@ Wire Wire Line
 Wire Wire Line
 	4750 600  4850 600 
 $Comp
-L R R18
+L device:R R18
 U 1 1 5A38DE32
 P 6250 1500
 F 0 "R18" V 6200 1700 50  0000 C CNN
@@ -979,7 +971,7 @@ F 3 "" H 6250 1500 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R19
+L device:R R19
 U 1 1 5A38E02D
 P 6250 1600
 F 0 "R19" V 6200 1800 50  0000 C CNN
@@ -992,7 +984,7 @@ $EndComp
 Text Label 6100 3150 2    60   ~ 0
 3V3
 $Comp
-L R R20
+L device:R R20
 U 1 1 5A38E1A4
 P 6250 3050
 F 0 "R20" V 6200 3250 50  0000 C CNN
@@ -1003,7 +995,7 @@ F 3 "" H 6250 3050 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R21
+L device:R R21
 U 1 1 5A38E1AA
 P 6250 3150
 F 0 "R21" V 6200 3350 50  0000 C CNN
@@ -1018,7 +1010,7 @@ Text Label 6100 3050 2    60   ~ 0
 Text Label 6100 1500 2    60   ~ 0
 3V3
 $Comp
-L C C22
+L device:C C22
 U 1 1 5A38E9E7
 P 1350 7200
 F 0 "C22" H 1465 7246 50  0000 L CNN
@@ -1029,7 +1021,7 @@ F 3 "" H 1350 7200 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C29
+L device:C C29
 U 1 1 5A38EB07
 P 2000 7200
 F 0 "C29" H 2115 7246 50  0000 L CNN
@@ -1044,13 +1036,13 @@ Text Label 1150 7050 2    60   ~ 0
 Text Label 1150 7350 2    60   ~ 0
 GND
 Wire Wire Line
-	1150 7350 3400 7350
+	1150 7350 1350 7350
 Connection ~ 1350 7350
 Wire Wire Line
-	1150 7050 3400 7050
+	1150 7050 1350 7050
 Connection ~ 1350 7050
 $Comp
-L C C31
+L device:C C31
 U 1 1 5A38F730
 P 2700 7200
 F 0 "C31" H 2815 7246 50  0000 L CNN
@@ -1061,7 +1053,7 @@ F 3 "" H 2700 7200 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C33
+L device:C C33
 U 1 1 5A38F89A
 P 3400 7200
 F 0 "C33" H 3515 7246 50  0000 L CNN
@@ -1080,7 +1072,7 @@ H-bridge decoupling
 Text Notes 1350 9550 0    60   ~ 0
 Diff amp decoupling
 $Comp
-L C C23
+L device:C C23
 U 1 1 5A393738
 P 1350 7800
 F 0 "C23" H 1465 7846 50  0000 L CNN
@@ -1091,7 +1083,7 @@ F 3 "" H 1350 7800 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C30
+L device:C C30
 U 1 1 5A39389A
 P 2000 7800
 F 0 "C30" H 2115 7846 50  0000 L CNN
@@ -1104,15 +1096,15 @@ $EndComp
 Text Label 1150 7650 2    60   ~ 0
 3V3
 Wire Wire Line
-	1150 7650 2000 7650
+	1150 7650 1350 7650
 Connection ~ 1350 7650
 Text Label 1150 7950 2    60   ~ 0
 GND
 Wire Wire Line
-	1150 7950 4600 7950
+	1150 7950 1350 7950
 Connection ~ 1350 7950
 $Comp
-L C C32
+L device:C C32
 U 1 1 5A394111
 P 2700 7800
 F 0 "C32" H 2815 7846 50  0000 L CNN
@@ -1125,10 +1117,10 @@ $EndComp
 Text Label 2600 7650 2    60   ~ 0
 5V0_P
 Wire Wire Line
-	2600 7650 3400 7650
+	2600 7650 2700 7650
 Connection ~ 2000 7950
 $Comp
-L C C34
+L device:C C34
 U 1 1 5A394494
 P 3400 7800
 F 0 "C34" H 3515 7846 50  0000 L CNN
@@ -1141,7 +1133,7 @@ $EndComp
 Connection ~ 2700 7650
 Connection ~ 2700 7950
 $Comp
-L C C35
+L device:C C35
 U 1 1 5A394779
 P 4050 7800
 F 0 "C35" H 4165 7846 50  0000 L CNN
@@ -1154,10 +1146,10 @@ $EndComp
 Text Label 3950 7650 2    60   ~ 0
 5V0_N
 Wire Wire Line
-	3950 7650 4600 7650
+	3950 7650 4050 7650
 Connection ~ 3400 7950
 $Comp
-L C C36
+L device:C C36
 U 1 1 5A394B10
 P 4600 7800
 F 0 "C36" H 4715 7846 50  0000 L CNN
@@ -1172,7 +1164,7 @@ Connection ~ 4050 7950
 Text Notes 1350 8050 0    60   ~ 0
 DAC decoupling
 $Comp
-L C C24
+L device:C C24
 U 1 1 5A395083
 P 1350 8350
 F 0 "C24" H 1465 8396 50  0000 L CNN
@@ -1195,7 +1187,7 @@ VREF decoupling
 Text Notes 1400 10450 0    60   ~ 0
 Attenuator FB amp decoupling
 $Comp
-L C C25
+L device:C C25
 U 1 1 5A396913
 P 1350 9800
 F 0 "C25" H 1465 9846 50  0000 L CNN
@@ -1206,7 +1198,7 @@ F 3 "" H 1350 9800 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C27
+L device:C C27
 U 1 1 5A396A03
 P 1850 9800
 F 0 "C27" H 1965 9846 50  0000 L CNN
@@ -1221,7 +1213,7 @@ Text Label 1200 9650 2    60   ~ 0
 Text Label 1200 10000 2    60   ~ 0
 GND
 $Comp
-L C C26
+L device:C C26
 U 1 1 5A396C3A
 P 1350 10200
 F 0 "C26" H 1465 10246 50  0000 L CNN
@@ -1232,7 +1224,7 @@ F 3 "" H 1350 10200 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C28
+L device:C C28
 U 1 1 5A396D52
 P 1850 10200
 F 0 "C28" H 1965 10246 50  0000 L CNN
@@ -1245,18 +1237,18 @@ $EndComp
 Text Label 1200 10350 2    60   ~ 0
 5V0_N
 Wire Wire Line
-	1200 10350 1850 10350
+	1200 10350 1350 10350
 Connection ~ 1350 10350
 Wire Wire Line
-	1850 10050 1850 9950
+	1850 10050 1850 10000
 Wire Wire Line
-	1350 10050 1350 9950
+	1350 10050 1350 10000
 Wire Wire Line
-	1200 10000 1850 10000
+	1200 10000 1350 10000
 Connection ~ 1350 10000
 Connection ~ 1850 10000
 Wire Wire Line
-	1200 9650 1850 9650
+	1200 9650 1350 9650
 Connection ~ 1350 9650
 Wire Wire Line
 	6400 900  6500 900 
@@ -1267,7 +1259,7 @@ Connection ~ 6400 2550
 Text Notes 5400 9550 0    60   ~ 0
 Capacitive filtering to reduce noise on DAC outputs
 $Comp
-L C C44
+L device:C C44
 U 1 1 5A3B3EBD
 P 6000 9250
 F 0 "C44" H 6115 9296 50  0000 L CNN
@@ -1278,7 +1270,7 @@ F 3 "" H 6000 9250 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C43
+L device:C C43
 U 1 1 5A3B3FBD
 P 5500 9250
 F 0 "C43" H 5615 9296 50  0000 L CNN
@@ -1291,15 +1283,15 @@ $EndComp
 Text Label 5350 9100 2    60   ~ 0
 VATTEN
 Wire Wire Line
-	5350 9100 6000 9100
+	5350 9100 5500 9100
 Connection ~ 5500 9100
 Text Label 5350 9400 2    60   ~ 0
 GND
 Wire Wire Line
-	5350 9400 6000 9400
+	5350 9400 5500 9400
 Connection ~ 5500 9400
 $Comp
-L C C46
+L device:C C46
 U 1 1 5A3B4ABF
 P 7500 9250
 F 0 "C46" H 7615 9296 50  0000 L CNN
@@ -1310,7 +1302,7 @@ F 3 "" H 7500 9250 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C45
+L device:C C45
 U 1 1 5A3B4AC5
 P 7000 9250
 F 0 "C45" H 7115 9296 50  0000 L CNN
@@ -1323,12 +1315,12 @@ $EndComp
 Text Label 6850 9100 2    60   ~ 0
 VOFFSET
 Wire Wire Line
-	6850 9100 7500 9100
+	6850 9100 7000 9100
 Connection ~ 7000 9100
 Text Label 6850 9400 2    60   ~ 0
 GND
 Wire Wire Line
-	6850 9400 7500 9400
+	6850 9400 7000 9400
 Connection ~ 7000 9400
 Wire Wire Line
 	9850 6900 9950 6900
@@ -1338,7 +1330,7 @@ Wire Wire Line
 Wire Wire Line
 	5700 6250 5600 6250
 $Comp
-L CONN_01X01 TP1
+L diffprobe-calibrated-prototype-rescue:CONN_01X01 TP1
 U 1 1 5A3B854B
 P 11600 3300
 F 0 "TP1" H 11678 3341 50  0000 L CNN
@@ -1351,7 +1343,7 @@ $EndComp
 Text Label 11400 3300 2    60   ~ 0
 VATTEN
 $Comp
-L CONN_01X01 TP2
+L diffprobe-calibrated-prototype-rescue:CONN_01X01 TP2
 U 1 1 5A3B8754
 P 11600 3600
 F 0 "TP2" H 11678 3641 50  0000 L CNN
@@ -1364,7 +1356,7 @@ $EndComp
 Text Label 11400 3600 2    60   ~ 0
 VATTEN_P
 $Comp
-L CONN_01X01 TP3
+L diffprobe-calibrated-prototype-rescue:CONN_01X01 TP3
 U 1 1 5A3B8866
 P 11600 3900
 F 0 "TP3" H 11678 3941 50  0000 L CNN
@@ -1376,4 +1368,142 @@ F 3 "" H 11600 3900 50  0000 C CNN
 $EndComp
 Text Label 11400 3900 2    60   ~ 0
 VOFFSET
+Wire Wire Line
+	5600 4850 5700 4850
+Wire Wire Line
+	5600 5050 5700 5050
+Wire Wire Line
+	5600 5250 5700 5250
+Wire Wire Line
+	5250 5550 5300 5550
+Wire Wire Line
+	9850 6700 9950 6700
+Wire Wire Line
+	7900 7200 7950 7200
+Wire Wire Line
+	7900 7550 7900 7600
+Wire Wire Line
+	7900 7900 8250 7900
+Wire Wire Line
+	2800 5050 2900 5050
+Wire Wire Line
+	2800 5250 2900 5250
+Wire Wire Line
+	2800 5350 2800 5450
+Wire Wire Line
+	2800 5450 2800 5550
+Wire Wire Line
+	2800 5550 2800 5650
+Wire Wire Line
+	2350 5850 2900 5850
+Wire Wire Line
+	1050 5950 1150 5950
+Wire Wire Line
+	1050 6050 1050 6150
+Wire Wire Line
+	1050 6150 1050 6250
+Wire Wire Line
+	1050 6250 1050 6350
+Wire Wire Line
+	1350 9450 1850 9450
+Wire Wire Line
+	1850 9450 2400 9450
+Wire Wire Line
+	1350 9100 1350 9150
+Wire Wire Line
+	1350 9100 1850 9100
+Wire Wire Line
+	2400 9100 2400 9150
+Wire Wire Line
+	1850 9100 1850 9150
+Wire Wire Line
+	1850 9100 2400 9100
+Wire Wire Line
+	1350 8750 1850 8750
+Wire Wire Line
+	1850 8750 2400 8750
+Wire Wire Line
+	4000 1600 4050 1600
+Wire Wire Line
+	4000 1700 4000 1800
+Wire Wire Line
+	4000 1800 4000 1900
+Wire Wire Line
+	4000 1900 4000 2000
+Wire Wire Line
+	4000 2000 4000 2100
+Wire Wire Line
+	4000 2100 4000 2200
+Wire Wire Line
+	4000 2200 4000 2300
+Wire Wire Line
+	4000 2300 4000 2400
+Wire Wire Line
+	4000 3700 4050 3700
+Wire Wire Line
+	4000 3800 4000 3900
+Wire Wire Line
+	4000 3900 4000 4000
+Wire Wire Line
+	4000 4000 4000 4100
+Wire Wire Line
+	4000 4100 4000 4200
+Wire Wire Line
+	4000 4200 4000 4300
+Wire Wire Line
+	4000 4300 4000 4400
+Wire Wire Line
+	4000 4400 4000 4500
+Wire Wire Line
+	1350 7350 2000 7350
+Wire Wire Line
+	1350 7050 2000 7050
+Wire Wire Line
+	2000 7050 2700 7050
+Wire Wire Line
+	2700 7050 3400 7050
+Wire Wire Line
+	2000 7350 2700 7350
+Wire Wire Line
+	2700 7350 3400 7350
+Wire Wire Line
+	1350 7650 2000 7650
+Wire Wire Line
+	1350 7950 2000 7950
+Wire Wire Line
+	2000 7950 2700 7950
+Wire Wire Line
+	2700 7650 3400 7650
+Wire Wire Line
+	2700 7950 3400 7950
+Wire Wire Line
+	3400 7950 4050 7950
+Wire Wire Line
+	4050 7650 4600 7650
+Wire Wire Line
+	4050 7950 4600 7950
+Wire Wire Line
+	1350 10350 1850 10350
+Wire Wire Line
+	1350 10000 1350 9950
+Wire Wire Line
+	1350 10000 1850 10000
+Wire Wire Line
+	1850 10000 1850 9950
+Wire Wire Line
+	1350 9650 1850 9650
+Wire Wire Line
+	6400 1000 6400 1100
+Wire Wire Line
+	6400 2550 6400 2650
+Wire Wire Line
+	5500 9100 6000 9100
+Wire Wire Line
+	5500 9400 6000 9400
+Wire Wire Line
+	7000 9100 7500 9100
+Wire Wire Line
+	7000 9400 7500 9400
+Wire Wire Line
+	9850 6800 9850 6900
 $EndSCHEMATC

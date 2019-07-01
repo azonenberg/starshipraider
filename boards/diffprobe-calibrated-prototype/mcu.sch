@@ -1,20 +1,6 @@
-EESchema Schematic File Version 3
-LIBS:analog-azonenberg
-LIBS:cmos
-LIBS:cypress-azonenberg
-LIBS:hirose-azonenberg
-LIBS:memory-azonenberg
-LIBS:microchip-azonenberg
-LIBS:osc-azonenberg
-LIBS:passive-azonenberg
-LIBS:power-azonenberg
-LIBS:silego-azonenberg
-LIBS:special-azonenberg
-LIBS:xilinx-azonenberg
-LIBS:conn
-LIBS:device
+EESchema Schematic File Version 4
 LIBS:diffprobe-calibrated-prototype-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr USLetter 11000 8500
 encoding utf-8
@@ -29,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L CONN_01X04 J7
+L diffprobe-calibrated-prototype-rescue:CONN_01X04 J7
 U 1 1 5A1F8A2F
 P 1400 1100
 F 0 "J7" H 1478 1141 50  0000 L CNN
@@ -50,7 +36,7 @@ UART_TX
 Wire Wire Line
 	1050 1250 1200 1250
 $Comp
-L XILINX_JTAG J1
+L xilinx-azonenberg:XILINX_JTAG J1
 U 1 1 5A1F8B4D
 P 1250 2800
 F 0 "J1" H 1969 3508 60  0000 L CNN
@@ -101,7 +87,7 @@ Wire Wire Line
 	1250 2400 1050 2400
 NoConn ~ 1250 2800
 $Comp
-L PIC32MMxGPL028 U10
+L microchip-azonenberg:PIC32MMxGPL028 U10
 U 1 1 5A2E3505
 P 4150 5350
 F 0 "U10" H 6025 7647 60  0000 C CNN
@@ -197,7 +183,7 @@ Wire Wire Line
 Wire Wire Line
 	8100 4900 8200 4900
 $Comp
-L R R13
+L device:R R13
 U 1 1 5A386F8B
 P 3200 4000
 F 0 "R13" V 3100 4000 50  0000 C CNN
@@ -212,7 +198,7 @@ Wire Wire Line
 Text Label 3050 4000 2    60   ~ 0
 3V3
 $Comp
-L R R14
+L device:R R14
 U 1 1 5A3872CE
 P 6150 1650
 F 0 "R14" H 6220 1696 50  0000 L CNN
@@ -223,7 +209,7 @@ F 3 "" H 6150 1650 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LED D2
+L device:LED D2
 U 1 1 5A387391
 P 6150 2050
 F 0 "D2" V 6188 1932 50  0000 R CNN
@@ -244,7 +230,7 @@ Wire Wire Line
 Wire Wire Line
 	6000 2200 8000 2200
 $Comp
-L R R15
+L device:R R15
 U 1 1 5A3875D8
 P 6800 1650
 F 0 "R15" H 6870 1696 50  0000 L CNN
@@ -255,7 +241,7 @@ F 3 "" H 6800 1650 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LED D3
+L device:LED D3
 U 1 1 5A3875DE
 P 6800 2050
 F 0 "D3" V 6838 1932 50  0000 R CNN
@@ -272,7 +258,7 @@ LED1
 Wire Wire Line
 	6650 1500 6800 1500
 $Comp
-L R R16
+L device:R R16
 U 1 1 5A387669
 P 7400 1650
 F 0 "R16" H 7470 1696 50  0000 L CNN
@@ -283,7 +269,7 @@ F 3 "" H 7400 1650 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LED D4
+L device:LED D4
 U 1 1 5A38766F
 P 7400 2050
 F 0 "D4" V 7438 1932 50  0000 R CNN
@@ -300,7 +286,7 @@ LED2
 Wire Wire Line
 	7250 1500 7400 1500
 $Comp
-L R R17
+L device:R R17
 U 1 1 5A3876F8
 P 8000 1650
 F 0 "R17" H 8070 1696 50  0000 L CNN
@@ -311,7 +297,7 @@ F 3 "" H 8000 1650 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LED D5
+L device:LED D5
 U 1 1 5A3876FE
 P 8000 2050
 F 0 "D5" V 8038 1932 50  0000 R CNN
@@ -351,7 +337,7 @@ NoConn ~ 8100 4600
 NoConn ~ 8100 4500
 NoConn ~ 8100 4400
 $Comp
-L C C37
+L device:C C37
 U 1 1 5A38C6FE
 P 950 3500
 F 0 "C37" H 1065 3546 50  0000 L CNN
@@ -362,7 +348,7 @@ F 3 "" H 950 3500 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C39
+L device:C C39
 U 1 1 5A38C7B6
 P 1500 3500
 F 0 "C39" H 1615 3546 50  0000 L CNN
@@ -373,7 +359,7 @@ F 3 "" H 1500 3500 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C42
+L device:C C42
 U 1 1 5A38C81E
 P 2100 3500
 F 0 "C42" H 2215 3546 50  0000 L CNN
@@ -396,7 +382,7 @@ Wire Wire Line
 Connection ~ 950  3650
 Connection ~ 1500 3650
 $Comp
-L C C38
+L device:C C38
 U 1 1 5A38CB75
 P 950 4000
 F 0 "C38" H 1065 4046 50  0000 L CNN
@@ -407,7 +393,7 @@ F 3 "" H 950 4000 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C40
+L device:C C40
 U 1 1 5A38CBB9
 P 1500 4000
 F 0 "C40" H 1615 4046 50  0000 L CNN
@@ -428,7 +414,7 @@ Wire Wire Line
 	750  3850 2050 3850
 Connection ~ 950  3850
 $Comp
-L C C41
+L device:C C41
 U 1 1 5A38CDE8
 P 2050 4000
 F 0 "C41" H 2165 4046 50  0000 L CNN

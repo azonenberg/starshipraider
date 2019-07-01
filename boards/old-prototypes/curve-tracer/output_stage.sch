@@ -1,0 +1,506 @@
+EESchema Schematic File Version 2
+LIBS:conn
+LIBS:device
+LIBS:analog-azonenberg
+LIBS:cmos
+LIBS:cypress-azonenberg
+LIBS:hirose-azonenberg
+LIBS:memory-azonenberg
+LIBS:microchip-azonenberg
+LIBS:osc-azonenberg
+LIBS:passive-azonenberg
+LIBS:power-azonenberg
+LIBS:special-azonenberg
+LIBS:xilinx-azonenberg
+LIBS:relays
+LIBS:curve-tracer-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 2
+Title "STARSHIPRAIDER Curve Tracer"
+Date "2017-05-22"
+Rev "0.1"
+Comp "Andrew Zonenberg"
+Comment1 "Output Stage"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text Notes 1100 1000 0    60   ~ 0
+High speed: 20x 47 uF MLCCs\n* 940 uF @ 0V\n* 750 uF @ 4V\n* 375 uF @ 8V\n* 235 uF @ 12V
+Text HLabel 950  1100 0    60   Input ~ 0
+VCAP
+Text HLabel 950  1400 0    60   Input ~ 0
+GND
+$Comp
+L C C?
+U 1 1 5923D015
+P 1100 1250
+F 0 "C?" H 1215 1296 50  0000 L CNN
+F 1 "47 uF" H 1215 1205 50  0000 L CNN
+F 2 "" H 1138 1100 50  0000 C CNN
+F 3 "" H 1100 1250 50  0000 C CNN
+	1    1100 1250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	950  1100 5150 1100
+Wire Wire Line
+	950  1400 5150 1400
+$Comp
+L C C?
+U 1 1 5923D0CB
+P 1550 1250
+F 0 "C?" H 1665 1296 50  0000 L CNN
+F 1 "47 uF" H 1665 1205 50  0000 L CNN
+F 2 "" H 1588 1100 50  0000 C CNN
+F 3 "" H 1550 1250 50  0000 C CNN
+	1    1550 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 5923D0F5
+P 2000 1250
+F 0 "C?" H 2115 1296 50  0000 L CNN
+F 1 "47 uF" H 2115 1205 50  0000 L CNN
+F 2 "" H 2038 1100 50  0000 C CNN
+F 3 "" H 2000 1250 50  0000 C CNN
+	1    2000 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 5923D11D
+P 2450 1250
+F 0 "C?" H 2565 1296 50  0000 L CNN
+F 1 "47 uF" H 2565 1205 50  0000 L CNN
+F 2 "" H 2488 1100 50  0000 C CNN
+F 3 "" H 2450 1250 50  0000 C CNN
+	1    2450 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 5923D149
+P 2900 1250
+F 0 "C?" H 3015 1296 50  0000 L CNN
+F 1 "47 uF" H 3015 1205 50  0000 L CNN
+F 2 "" H 2938 1100 50  0000 C CNN
+F 3 "" H 2900 1250 50  0000 C CNN
+	1    2900 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 5923D501
+P 3350 1250
+F 0 "C?" H 3465 1296 50  0000 L CNN
+F 1 "47 uF" H 3465 1205 50  0000 L CNN
+F 2 "" H 3388 1100 50  0000 C CNN
+F 3 "" H 3350 1250 50  0000 C CNN
+	1    3350 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 5923D509
+P 3800 1250
+F 0 "C?" H 3915 1296 50  0000 L CNN
+F 1 "47 uF" H 3915 1205 50  0000 L CNN
+F 2 "" H 3838 1100 50  0000 C CNN
+F 3 "" H 3800 1250 50  0000 C CNN
+	1    3800 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 5923D50F
+P 4250 1250
+F 0 "C?" H 4365 1296 50  0000 L CNN
+F 1 "47 uF" H 4365 1205 50  0000 L CNN
+F 2 "" H 4288 1100 50  0000 C CNN
+F 3 "" H 4250 1250 50  0000 C CNN
+	1    4250 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 5923D515
+P 4700 1250
+F 0 "C?" H 4815 1296 50  0000 L CNN
+F 1 "47 uF" H 4815 1205 50  0000 L CNN
+F 2 "" H 4738 1100 50  0000 C CNN
+F 3 "" H 4700 1250 50  0000 C CNN
+	1    4700 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 5923D51B
+P 5150 1250
+F 0 "C?" H 5265 1296 50  0000 L CNN
+F 1 "47 uF" H 5265 1205 50  0000 L CNN
+F 2 "" H 5188 1100 50  0000 C CNN
+F 3 "" H 5150 1250 50  0000 C CNN
+	1    5150 1250
+	1    0    0    -1  
+$EndComp
+Connection ~ 1100 1100
+Connection ~ 1550 1100
+Connection ~ 2000 1100
+Connection ~ 2450 1100
+Connection ~ 2900 1100
+Connection ~ 3350 1100
+Connection ~ 3800 1100
+Connection ~ 4250 1100
+Connection ~ 4700 1100
+Connection ~ 4700 1400
+Connection ~ 4250 1400
+Connection ~ 3800 1400
+Connection ~ 3350 1400
+Connection ~ 2900 1400
+Connection ~ 2450 1400
+Connection ~ 1100 1400
+Connection ~ 2000 1400
+Connection ~ 1550 1400
+$Comp
+L C C?
+U 1 1 5923D9DC
+P 1100 1750
+F 0 "C?" H 1215 1796 50  0000 L CNN
+F 1 "47 uF" H 1215 1705 50  0000 L CNN
+F 2 "" H 1138 1600 50  0000 C CNN
+F 3 "" H 1100 1750 50  0000 C CNN
+	1    1100 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	950  1600 5150 1600
+Wire Wire Line
+	950  1900 5150 1900
+$Comp
+L C C?
+U 1 1 5923D9E4
+P 1550 1750
+F 0 "C?" H 1665 1796 50  0000 L CNN
+F 1 "47 uF" H 1665 1705 50  0000 L CNN
+F 2 "" H 1588 1600 50  0000 C CNN
+F 3 "" H 1550 1750 50  0000 C CNN
+	1    1550 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 5923D9EA
+P 2000 1750
+F 0 "C?" H 2115 1796 50  0000 L CNN
+F 1 "47 uF" H 2115 1705 50  0000 L CNN
+F 2 "" H 2038 1600 50  0000 C CNN
+F 3 "" H 2000 1750 50  0000 C CNN
+	1    2000 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 5923D9F0
+P 2450 1750
+F 0 "C?" H 2565 1796 50  0000 L CNN
+F 1 "47 uF" H 2565 1705 50  0000 L CNN
+F 2 "" H 2488 1600 50  0000 C CNN
+F 3 "" H 2450 1750 50  0000 C CNN
+	1    2450 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 5923D9F6
+P 2900 1750
+F 0 "C?" H 3015 1796 50  0000 L CNN
+F 1 "47 uF" H 3015 1705 50  0000 L CNN
+F 2 "" H 2938 1600 50  0000 C CNN
+F 3 "" H 2900 1750 50  0000 C CNN
+	1    2900 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 5923D9FC
+P 3350 1750
+F 0 "C?" H 3465 1796 50  0000 L CNN
+F 1 "47 uF" H 3465 1705 50  0000 L CNN
+F 2 "" H 3388 1600 50  0000 C CNN
+F 3 "" H 3350 1750 50  0000 C CNN
+	1    3350 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 5923DA02
+P 3800 1750
+F 0 "C?" H 3915 1796 50  0000 L CNN
+F 1 "47 uF" H 3915 1705 50  0000 L CNN
+F 2 "" H 3838 1600 50  0000 C CNN
+F 3 "" H 3800 1750 50  0000 C CNN
+	1    3800 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 5923DA08
+P 4250 1750
+F 0 "C?" H 4365 1796 50  0000 L CNN
+F 1 "47 uF" H 4365 1705 50  0000 L CNN
+F 2 "" H 4288 1600 50  0000 C CNN
+F 3 "" H 4250 1750 50  0000 C CNN
+	1    4250 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 5923DA0E
+P 4700 1750
+F 0 "C?" H 4815 1796 50  0000 L CNN
+F 1 "47 uF" H 4815 1705 50  0000 L CNN
+F 2 "" H 4738 1600 50  0000 C CNN
+F 3 "" H 4700 1750 50  0000 C CNN
+	1    4700 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 5923DA14
+P 5150 1750
+F 0 "C?" H 5265 1796 50  0000 L CNN
+F 1 "47 uF" H 5265 1705 50  0000 L CNN
+F 2 "" H 5188 1600 50  0000 C CNN
+F 3 "" H 5150 1750 50  0000 C CNN
+	1    5150 1750
+	1    0    0    -1  
+$EndComp
+Connection ~ 1100 1600
+Connection ~ 1550 1600
+Connection ~ 2000 1600
+Connection ~ 2450 1600
+Connection ~ 2900 1600
+Connection ~ 3350 1600
+Connection ~ 3800 1600
+Connection ~ 4250 1600
+Connection ~ 4700 1600
+Connection ~ 4700 1900
+Connection ~ 4250 1900
+Connection ~ 3800 1900
+Connection ~ 3350 1900
+Connection ~ 2900 1900
+Connection ~ 2450 1900
+Connection ~ 1100 1900
+Connection ~ 2000 1900
+Connection ~ 1550 1900
+Text Label 950  1600 2    60   ~ 0
+VCAP
+Text Label 950  1900 2    60   ~ 0
+GND
+Text Notes 7350 2450 0    60   ~ 0
+TODO: Output driver
+Text Notes 7350 2600 0    60   ~ 0
+TODO: Discharge current monitoring
+Text Notes 7350 3200 0    60   ~ 0
+TODO: Cap bank discharge\n\n3000 uF into 25 ohms = tau of 75 ms\n12V into 25 ohms = 0.48A = 5.8W
+$Comp
+L CP1 C?
+U 1 1 5923E01A
+P 1100 2250
+F 0 "C?" H 1215 2296 50  0000 L CNN
+F 1 "220 uF" H 1215 2205 50  0000 L CNN
+F 2 "" H 1100 2250 50  0000 C CNN
+F 3 "" H 1100 2250 50  0000 C CNN
+	1    1100 2250
+	1    0    0    -1  
+$EndComp
+Text Label 950  2100 2    60   ~ 0
+VCAP
+Wire Wire Line
+	950  2100 5600 2100
+Text Label 950  2400 2    60   ~ 0
+GND
+Wire Wire Line
+	950  2400 5600 2400
+$Comp
+L CP1 C?
+U 1 1 5923E2E4
+P 1600 2250
+F 0 "C?" H 1715 2296 50  0000 L CNN
+F 1 "220 uF" H 1715 2205 50  0000 L CNN
+F 2 "" H 1600 2250 50  0000 C CNN
+F 3 "" H 1600 2250 50  0000 C CNN
+	1    1600 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP1 C?
+U 1 1 5923E380
+P 2100 2250
+F 0 "C?" H 2215 2296 50  0000 L CNN
+F 1 "220 uF" H 2215 2205 50  0000 L CNN
+F 2 "" H 2100 2250 50  0000 C CNN
+F 3 "" H 2100 2250 50  0000 C CNN
+	1    2100 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP1 C?
+U 1 1 5923E3CE
+P 2600 2250
+F 0 "C?" H 2715 2296 50  0000 L CNN
+F 1 "220 uF" H 2715 2205 50  0000 L CNN
+F 2 "" H 2600 2250 50  0000 C CNN
+F 3 "" H 2600 2250 50  0000 C CNN
+	1    2600 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP1 C?
+U 1 1 5923E438
+P 3100 2250
+F 0 "C?" H 3215 2296 50  0000 L CNN
+F 1 "220 uF" H 3215 2205 50  0000 L CNN
+F 2 "" H 3100 2250 50  0000 C CNN
+F 3 "" H 3100 2250 50  0000 C CNN
+	1    3100 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP1 C?
+U 1 1 5923E48E
+P 3600 2250
+F 0 "C?" H 3715 2296 50  0000 L CNN
+F 1 "220 uF" H 3715 2205 50  0000 L CNN
+F 2 "" H 3600 2250 50  0000 C CNN
+F 3 "" H 3600 2250 50  0000 C CNN
+	1    3600 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP1 C?
+U 1 1 5923E4E2
+P 4100 2250
+F 0 "C?" H 4215 2296 50  0000 L CNN
+F 1 "220 uF" H 4215 2205 50  0000 L CNN
+F 2 "" H 4100 2250 50  0000 C CNN
+F 3 "" H 4100 2250 50  0000 C CNN
+	1    4100 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP1 C?
+U 1 1 5923E540
+P 4600 2250
+F 0 "C?" H 4715 2296 50  0000 L CNN
+F 1 "220 uF" H 4715 2205 50  0000 L CNN
+F 2 "" H 4600 2250 50  0000 C CNN
+F 3 "" H 4600 2250 50  0000 C CNN
+	1    4600 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP1 C?
+U 1 1 5923E598
+P 5100 2250
+F 0 "C?" H 5215 2296 50  0000 L CNN
+F 1 "220 uF" H 5215 2205 50  0000 L CNN
+F 2 "" H 5100 2250 50  0000 C CNN
+F 3 "" H 5100 2250 50  0000 C CNN
+	1    5100 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP1 C?
+U 1 1 5923E5F6
+P 5600 2250
+F 0 "C?" H 5715 2296 50  0000 L CNN
+F 1 "220 uF" H 5715 2205 50  0000 L CNN
+F 2 "" H 5600 2250 50  0000 C CNN
+F 3 "" H 5600 2250 50  0000 C CNN
+	1    5600 2250
+	1    0    0    -1  
+$EndComp
+Connection ~ 5100 2100
+Connection ~ 4600 2100
+Connection ~ 4100 2100
+Connection ~ 3600 2100
+Connection ~ 3100 2100
+Connection ~ 2600 2100
+Connection ~ 2100 2100
+Connection ~ 1100 2100
+Connection ~ 1600 2100
+Connection ~ 1100 2400
+Connection ~ 1600 2400
+Connection ~ 2100 2400
+Connection ~ 2600 2400
+Connection ~ 3100 2400
+Connection ~ 3600 2400
+Connection ~ 4100 2400
+Connection ~ 4600 2400
+Connection ~ 5100 2400
+$Comp
+L IM03 RL?
+U 1 1 5923F54A
+P 9850 5450
+F 0 "RL?" V 9283 5450 50  0000 C CNN
+F 1 "IM03" V 9374 5450 50  0000 C CNN
+F 2 "" H 9850 5450 50  0000 C CNN
+F 3 "" H 9850 5450 50  0000 C CNN
+	1    9850 5450
+	0    1    1    0   
+$EndComp
+Text Notes 9650 6350 0    60   ~ 0
+DUT polarity switching
+Wire Wire Line
+	10150 5550 10700 5550
+Wire Wire Line
+	10700 5550 10700 6150
+Wire Wire Line
+	10700 6150 10150 6150
+Wire Wire Line
+	10150 5750 10600 5750
+Wire Wire Line
+	10600 5750 10600 5950
+Wire Wire Line
+	10600 5950 10150 5950
+Text Notes 8050 6450 0    60   ~ 0
+Peak current is 1A\nINA199A2 has gain of 100\n10 mV max across shunt\ngives 1000 mV at ADC
+$Comp
+L R-4TERM R?
+U 1 1 59240585
+P 8300 5600
+F 0 "R?" V 8014 5600 50  0000 C CNN
+F 1 "LVK12R010" V 8105 5600 50  0000 C CNN
+F 2 "" H 8300 5600 60  0000 C CNN
+F 3 "" H 8300 5600 60  0000 C CNN
+	1    8300 5600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7900 5650 8000 5650
+Wire Wire Line
+	8600 5650 9550 5650
+Text HLabel 8600 5400 2    60   Output ~ 0
+VSHUNT_LO
+Wire Wire Line
+	8600 5400 8600 5550
+Text HLabel 8000 5400 0    60   Output ~ 0
+VSHUNT_HI
+Wire Wire Line
+	8000 5400 8000 5550
+Wire Wire Line
+	9450 6050 9550 6050
+Text HLabel 10700 5550 2    60   Output ~ 0
+DUT_A
+Text HLabel 10250 5700 2    60   Output ~ 0
+DUT_B
+Wire Wire Line
+	10250 5700 10250 5750
+Connection ~ 10250 5750
+$EndSCHEMATC

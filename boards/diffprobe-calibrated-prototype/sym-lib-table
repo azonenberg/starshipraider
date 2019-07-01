@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name diffprobe-calibrated-prototype-rescue)(type Legacy)(uri ${KIPRJMOD}/diffprobe-calibrated-prototype-rescue.lib)(options "")(descr ""))
+)

@@ -6,8 +6,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 6
 Title "STARSHIPRAIDER I/O Characterization"
-Date "2018-08-22"
-Rev "0.2"
+Date "2019-01-04"
+Rev "0.2b"
 Comp "Andrew D. Zonenberg"
 Comment1 ""
 Comment2 ""
@@ -591,4 +591,6 @@ Text HLabel 2100 1550 0    60   Output ~ 0
 VCCO_IS_LO
 Text Label 8400 6100 0    60   ~ 0
 VCCO_RAW
+Text Notes 8250 4300 0    60   ~ 0
+Need 25 mA per channel for comparator\nplus 18 mA per channel load current\n344 mA, target 500 or more\nTODO: regulate from 3v3 not 5v0
 $EndSCHEMATC

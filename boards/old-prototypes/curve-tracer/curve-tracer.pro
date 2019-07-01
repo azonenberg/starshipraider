@@ -1,10 +1,6 @@
-update=Fri 11 Jan 2019 04:04:33 PM PST
+update=Mon 22 May 2017 11:10:18 PM PDT
 version=1
 last_client=kicad
-[general]
-version=1
-RootSch=
-BoardNm=
 [pcbnew]
 version=1
 LastNetListRead=
@@ -27,6 +23,23 @@ ModuleOutlineThickness=0.150000000000
 [cvpcb]
 version=1
 NetIExt=net
+[general]
+version=1
 [eeschema]
 version=1
-LibDir=
+LibDir=/nfs4/home/azonenberg/code/kicad-libraries/schematic;/nfs4/home/azonenberg/code/3rdparty/kicad-library/library
+[eeschema/libraries]
+LibName1=conn
+LibName2=device
+LibName3=analog-azonenberg
+LibName4=cmos
+LibName5=cypress-azonenberg
+LibName6=hirose-azonenberg
+LibName7=memory-azonenberg
+LibName8=microchip-azonenberg
+LibName9=osc-azonenberg
+LibName10=passive-azonenberg
+LibName11=power-azonenberg
+LibName12=special-azonenberg
+LibName13=xilinx-azonenberg
+LibName14=relays
