@@ -10,8 +10,6 @@ General fabrication notes
 	* Finished board thickness is 1.6 mm.
 	* Place UL mark and date code in the area marked on the "F. Fab" gerber layer.
 
-0.225 mm plane clearance
-
 Impedances
 
 	Control to within 10%.
