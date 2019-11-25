@@ -2,13 +2,18 @@
 <?php
 //$bits = '00111110101001000101';
 
-//negative side of sgmii idle
-$bits = '11000001010110111010';
+//complemented
+$k285 = '1100000101';
+$d162 = '0110111010';
 
-$last = 1;
+//negative side of sgmii idle
+$bits = "$k285$d162";
+
+$last = 0;
 $baud = 800;
 $rise = 40;
-for($i=0; $i<strlen($bits); $i++)
+$end = strlen($bits);
+for($i=0; $i<$end; $i++)
 {
 	$next = intval($bits[$i]);
 
@@ -19,4 +24,6 @@ for($i=0; $i<strlen($bits); $i++)
 
 	$last = $next;
 }
+$t1 = $end * $baud;
+echo "${t1}e-12,$last\n";
 ?>
