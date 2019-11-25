@@ -82,7 +82,7 @@ Text Label 2050 1550 0    50   ~ 0
 TMDS_D2_P
 Text Label 2050 1650 0    50   ~ 0
 TMDS_D2_N
-Text Label 1850 750  0    50   ~ 0
+Text Label 3500 750  2    50   ~ 0
 5V_IN
 Wire Wire Line
 	1850 850  1850 950 
@@ -409,7 +409,7 @@ Text Label 950  6200 0    50   ~ 0
 5V_OUT
 Text Label 2800 6200 0    50   ~ 0
 5V_IN
-Text Label 3500 750  2    50   ~ 0
+Text Label 1850 750  0    50   ~ 0
 5V_OUT
 Text Notes 700  6750 0    50   ~ 0
 Total gain 21:1
