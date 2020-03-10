@@ -1,0 +1,295 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Resistive Probe Characterization"
+Date "2020-03-09"
+Rev "0.1"
+Comp "Antikernel Labs"
+Comment1 "Andrew D. Zonenberg"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:Conn_Coaxial J1
+U 1 1 5E605973
+P 1450 1150
+F 0 "J1" H 1403 1388 50  0000 C CNN
+F 1 "SMA" H 1403 1297 50  0000 C CNN
+F 2 "azonenberg_pcb:CONN_SMA_EDGE_SAMTEC_SMA_J_P_H_ST_EM1" H 1450 1150 50  0001 C CNN
+F 3 "" H 1450 1150 50  0001 C CNN
+	1    1450 1150
+	-1   0    0    -1  
+$EndComp
+Text Label 1450 1450 0    50   ~ 0
+GND
+$Comp
+L device:R R1
+U 1 1 5E60648A
+P 2000 1300
+F 0 "R1" H 2070 1346 50  0000 L CNN
+F 1 "100" H 2070 1255 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK_FLIPCHIP" V 1930 1300 50  0001 C CNN
+F 3 "" H 2000 1300 50  0001 C CNN
+	1    2000 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:R R4
+U 1 1 5E606B42
+P 2350 1300
+F 0 "R4" H 2420 1346 50  0000 L CNN
+F 1 "100" H 2420 1255 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK_FLIPCHIP" V 2280 1300 50  0001 C CNN
+F 3 "" H 2350 1300 50  0001 C CNN
+	1    2350 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 1150 2000 1150
+Connection ~ 2000 1150
+Wire Wire Line
+	2000 1150 2350 1150
+Wire Wire Line
+	2350 1450 2000 1450
+Wire Wire Line
+	1450 1450 1450 1350
+Connection ~ 2000 1450
+Wire Wire Line
+	2000 1450 1450 1450
+Text Notes 1450 1550 0    50   ~ 0
+50 ohm load for VNA cal
+$Comp
+L Connector:Conn_Coaxial J2
+U 1 1 5E6072DA
+P 1450 2000
+F 0 "J2" H 1403 2238 50  0000 C CNN
+F 1 "SMA" H 1403 2147 50  0000 C CNN
+F 2 "azonenberg_pcb:CONN_SMA_EDGE_SAMTEC_SMA_J_P_H_ST_EM1" H 1450 2000 50  0001 C CNN
+F 3 "" H 1450 2000 50  0001 C CNN
+	1    1450 2000
+	-1   0    0    -1  
+$EndComp
+Text Label 1450 2300 0    50   ~ 0
+GND
+$Comp
+L device:R R2
+U 1 1 5E6072E5
+P 2000 2150
+F 0 "R2" H 2070 2196 50  0000 L CNN
+F 1 "100" H 2070 2105 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK_FLIPCHIP" V 1930 2150 50  0001 C CNN
+F 3 "" H 2000 2150 50  0001 C CNN
+	1    2000 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:R R5
+U 1 1 5E6072EF
+P 2350 2150
+F 0 "R5" H 2420 2196 50  0000 L CNN
+F 1 "100" H 2420 2105 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK_FLIPCHIP" V 2280 2150 50  0001 C CNN
+F 3 "" H 2350 2150 50  0001 C CNN
+	1    2350 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 2000 2000 2000
+Connection ~ 2000 2000
+Wire Wire Line
+	2000 2000 2350 2000
+Wire Wire Line
+	2350 2300 2000 2300
+Wire Wire Line
+	1450 2300 1450 2200
+Connection ~ 2000 2300
+Wire Wire Line
+	2000 2300 1450 2300
+Text Notes 1450 2400 0    50   ~ 0
+50 ohm load w/ probe
+$Comp
+L Connector:Conn_01x01 J10
+U 1 1 5E608C57
+P 2850 2000
+F 0 "J10" H 2930 2042 50  0000 L CNN
+F 1 "PROBE" H 2930 1951 50  0000 L CNN
+F 2 "azonenberg_pcb:CONN_MILLMAX_0339_EDGELAUNCH" H 2850 2000 50  0001 C CNN
+F 3 "~" H 2850 2000 50  0001 C CNN
+	1    2850 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2650 2000 2350 2000
+Connection ~ 2350 2000
+$Comp
+L Connector:Conn_Coaxial J4
+U 1 1 5E60A222
+P 1450 3450
+F 0 "J4" H 1403 3688 50  0000 C CNN
+F 1 "SMA" H 1403 3597 50  0000 C CNN
+F 2 "azonenberg_pcb:CONN_SMA_EDGE_SAMTEC_SMA_J_P_H_ST_EM1" H 1450 3450 50  0001 C CNN
+F 3 "" H 1450 3450 50  0001 C CNN
+	1    1450 3450
+	-1   0    0    -1  
+$EndComp
+Text Label 1450 3750 0    50   ~ 0
+GND
+Wire Wire Line
+	1450 3750 1450 3650
+Text Notes 1450 3850 0    50   ~ 0
+Through line #1 for loading tests and VNA cal
+Wire Wire Line
+	1600 3450 2350 3450
+$Comp
+L Connector:Conn_Coaxial J8
+U 1 1 5E60C527
+P 2500 3450
+F 0 "J8" H 2600 3425 50  0000 L CNN
+F 1 "SMA" H 2600 3334 50  0000 L CNN
+F 2 "azonenberg_pcb:CONN_SMA_EDGE_SAMTEC_SMA_J_P_H_ST_EM1" H 2500 3450 50  0001 C CNN
+F 3 "" H 2500 3450 50  0001 C CNN
+	1    2500 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 3750 2500 3650
+Wire Wire Line
+	1450 3750 2500 3750
+$Comp
+L Connector:Conn_Coaxial J6
+U 1 1 5E60D596
+P 1450 4950
+F 0 "J6" H 1403 5188 50  0000 C CNN
+F 1 "SMA" H 1403 5097 50  0000 C CNN
+F 2 "azonenberg_pcb:CONN_SMA_EDGE_SAMTEC_SMA_J_P_H_ST_EM1" H 1450 4950 50  0001 C CNN
+F 3 "" H 1450 4950 50  0001 C CNN
+	1    1450 4950
+	-1   0    0    -1  
+$EndComp
+Text Label 1450 5150 0    50   ~ 0
+GND
+Text Notes 1450 5250 0    50   ~ 0
+Open circuit for VNA cal
+$Comp
+L Connector:Conn_Coaxial J7
+U 1 1 5E60E2D5
+P 1450 5600
+F 0 "J7" H 1403 5838 50  0000 C CNN
+F 1 "SMA" H 1403 5747 50  0000 C CNN
+F 2 "azonenberg_pcb:CONN_SMA_EDGE_SAMTEC_SMA_J_P_H_ST_EM1" H 1450 5600 50  0001 C CNN
+F 3 "" H 1450 5600 50  0001 C CNN
+	1    1450 5600
+	-1   0    0    -1  
+$EndComp
+Text Label 1450 5800 0    50   ~ 0
+GND
+Text Notes 1450 5900 0    50   ~ 0
+Short circuit for VNA cal
+Wire Wire Line
+	1450 5800 1600 5800
+Wire Wire Line
+	1600 5800 1600 5600
+$Comp
+L Connector:Conn_Coaxial J5
+U 1 1 5E612A5A
+P 1450 4200
+F 0 "J5" H 1403 4438 50  0000 C CNN
+F 1 "SMA" H 1403 4347 50  0000 C CNN
+F 2 "azonenberg_pcb:CONN_SMA_EDGE_SAMTEC_SMA_J_P_H_ST_EM1" H 1450 4200 50  0001 C CNN
+F 3 "" H 1450 4200 50  0001 C CNN
+	1    1450 4200
+	-1   0    0    -1  
+$EndComp
+Text Label 1450 4500 0    50   ~ 0
+GND
+Wire Wire Line
+	1450 4500 1450 4400
+Text Notes 1450 4600 0    50   ~ 0
+Through line #2 for loading tests and VNA cal
+Wire Wire Line
+	1600 4200 2350 4200
+$Comp
+L Connector:Conn_Coaxial J9
+U 1 1 5E612A68
+P 2500 4200
+F 0 "J9" H 2600 4175 50  0000 L CNN
+F 1 "SMA" H 2600 4084 50  0000 L CNN
+F 2 "azonenberg_pcb:CONN_SMA_EDGE_SAMTEC_SMA_J_P_H_ST_EM1" H 2500 4200 50  0001 C CNN
+F 3 "" H 2500 4200 50  0001 C CNN
+	1    2500 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 4500 2500 4400
+Wire Wire Line
+	1450 4500 2500 4500
+$Comp
+L Connector:Conn_Coaxial J3
+U 1 1 5E61548D
+P 1450 2700
+F 0 "J3" H 1403 2938 50  0000 C CNN
+F 1 "SMA" H 1403 2847 50  0000 C CNN
+F 2 "azonenberg_pcb:CONN_SMA_EDGE_SAMTEC_SMA_J_P_H_ST_EM1" H 1450 2700 50  0001 C CNN
+F 3 "" H 1450 2700 50  0001 C CNN
+	1    1450 2700
+	-1   0    0    -1  
+$EndComp
+Text Label 1450 3000 0    50   ~ 0
+GND
+$Comp
+L device:R R3
+U 1 1 5E615498
+P 2000 2850
+F 0 "R3" H 2070 2896 50  0000 L CNN
+F 1 "DNP" H 2070 2805 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK_FLIPCHIP" V 1930 2850 50  0001 C CNN
+F 3 "" H 2000 2850 50  0001 C CNN
+	1    2000 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:R R6
+U 1 1 5E6154A2
+P 2350 2850
+F 0 "R6" H 2420 2896 50  0000 L CNN
+F 1 "DNP" H 2420 2805 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK_FLIPCHIP" V 2280 2850 50  0001 C CNN
+F 3 "" H 2350 2850 50  0001 C CNN
+	1    2350 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 2700 2000 2700
+Connection ~ 2000 2700
+Wire Wire Line
+	2000 2700 2350 2700
+Wire Wire Line
+	2350 3000 2000 3000
+Wire Wire Line
+	1450 3000 1450 2900
+Connection ~ 2000 3000
+Wire Wire Line
+	2000 3000 1450 3000
+Text Notes 1450 3100 0    50   ~ 0
+Open circuit w/ probe
+$Comp
+L Connector:Conn_01x01 J11
+U 1 1 5E6154B4
+P 2850 2700
+F 0 "J11" H 2930 2742 50  0000 L CNN
+F 1 "PROBE" H 2930 2651 50  0000 L CNN
+F 2 "azonenberg_pcb:CONN_MILLMAX_0339_EDGELAUNCH" H 2850 2700 50  0001 C CNN
+F 3 "~" H 2850 2700 50  0001 C CNN
+	1    2850 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2650 2700 2350 2700
+Connection ~ 2350 2700
+Text Label 1600 4950 0    50   ~ 0
+OPEN
+$EndSCHEMATC
