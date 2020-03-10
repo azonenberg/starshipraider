@@ -1,0 +1,35 @@
+Part number:		probe-characterization v0.1
+
+General fabrication notes
+
+	* Boards are be individually routed.
+	* Board material is Rogers RO4350B
+	* Blue solder mask on both sides of board.
+	* White LPI legend on front side of board.
+	* Pad finish is immersion silver.
+	* Finished board thickness is 1.6 mm.
+	* Place UL mark and date code in the area marked on the "B. Fab" gerber layer.
+
+Impedances
+
+	Control to within 10%.
+
+	Layer 1 coplanar waveguide (ref to layer 1 and 2 ground)
+		800 μm trace = 50 ohm
+
+Suggested stackup
+	1	35 μm (1 oz) copper			Signal with ground fill
+		1.52 mm RO4350B core
+	2	35 μm (1 oz) copper			Ground
+
+File naming
+	probe-characterization-Edge_Cuts.gbr	Board outline
+	probe-characterization.drl				Through-board plated holes
+	probe-characterization-F.Fab.gbr		Shows requested location of date code and UL marking
+	probe-characterization-F_SilkS.gbr		Front silkscreen
+	probe-characterization-F_Mask.gbr		Front solder mask
+	probe-characterization-F_Cu.gbr			Layer 1 copper
+	probe-characterization-B_Cu.gbr			Layer 2 copper
+	probe-characterization-B_Mask.gbr		Back solder mask (BLANK)
+	probe-characterization-B_SilkS.gbr		Back silkscreen (BLANK)
+
