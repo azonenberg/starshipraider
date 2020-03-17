@@ -20,9 +20,11 @@ VGAIN_N
 Text HLabel 3050 2050 0    50   Input ~ 0
 GND
 Text Notes 3650 2500 0    50   ~ 0
-TODO: 8 dB single ended attenuator (0.398 V/V) on each leg
+TODO: single ended LMH6522 with +2 dB fixed gain\nand clipper circuit to keep output below 1.8V on both legs
 Text HLabel 4850 1750 2    50   Output ~ 0
 VOUT_P
 Text HLabel 4850 1850 2    50   Output ~ 0
 VOUT_N
+Text HLabel 3900 1900 0    50   Input ~ 0
+0V9_REF
 $EndSCHEMATC

@@ -26,7 +26,7 @@ F0 "DAC" 50
 F1 "dac.sch" 50
 $EndSheet
 Text Notes 6350 3850 0    50   ~ 0
-SYSTEM GAIN CALCULATIONS\n\nHMCAD1520 wants 2V full scale\nIn 12-bit mode: 488 µV/LSB @ 0 dB gain\nIn 8-bit mode: 7.8 mV/LSB @ 0 dB gain\n\nMIN GAIN:\n10V input range, -13 dB system gain (0.2V/V)\n+2 dB gain on VGA\n12 bit mode: 2.4 mV/LSB\n8 bit mode: 39 mV/LSB\n\nMAX GAIN:\n502 mV input range, +12 dB system gain (3.98V/V)\n+26 dB gain on VGA\n12 bit mode: 122.6 µV/LSB\n8 bit mode: 1.95 mV/LSB
+SYSTEM GAIN CALCULATIONS\n\nHMCAD1520 wants 2V full scale\nIn 12-bit mode: 488 µV/LSB @ 0 dB gain\nIn 8-bit mode: 7.8 mV/LSB @ 0 dB gain\n\nMIN GAIN:\n10V input range, -13 dB system gain (0.2V/V)\n-9 dB gain on VGA\n12 bit mode: 2.4 mV/LSB\n8 bit mode: 39 mV/LSB\n\nMAX GAIN:\n159 mV input range, +22 dB system gain (12.59V/V)\n+26 dB gain on VGA\n12 bit mode: 38.7 µV/LSB\n8 bit mode: 619.5 µV/LSB
 $Sheet
 S 3900 5500 650  1750
 U 5E72E351
@@ -79,7 +79,7 @@ F3 "VSHIFTED_P" I L 4500 750 50
 F4 "VSHIFTED_N" I L 4500 850 50 
 F5 "VGAIN_P" O R 5650 750 50 
 F6 "VGAIN_N" O R 5650 850 50 
-F7 "2V25_REF" I L 4500 1150 50 
+F7 "2V5_REF" I L 4500 1150 50 
 $EndSheet
 Wire Wire Line
 	4500 750  3800 750 
@@ -104,9 +104,9 @@ VIN_FILTERED\n± 2.5V range\nNet gain = 0.5 V/V (-6 dB)
 Text Notes 2600 2050 0    50   ~ 0
 VSHIFTED\n0-5V range, 2.5V CM\nNet gain = 0.5V/V (-6 dB)\nVIN_OFFSET is ± 2.5V range
 Text Notes 4500 2050 0    50   ~ 0
-VGAIN\n2.25V CM\nNet gain = 0.177 - 10 V/V\n-15 to +20 dB
+VGAIN\n2.5V CM\nNet gain = 0.177 - 10 V/V\n-15 to +20 dB
 Text Label 4500 1150 2    50   ~ 0
-2V25_REF
+2V5_REF
 $Sheet
 S 6350 650  950  950 
 U 5E75B917
@@ -114,16 +114,19 @@ F0 "Common mode shift" 50
 F1 "cm_shift.sch" 50
 F2 "VGAIN_P" I L 6350 750 50 
 F3 "VGAIN_N" I L 6350 850 50 
-F4 "GND" I L 6350 1050 50 
-F6 "VOUT_P" O R 7300 750 50 
-F7 "VOUT_N" O R 7300 850 50 
+F4 "GND" I L 6350 1150 50 
+F5 "VOUT_P" O R 7300 750 50 
+F6 "VOUT_N" O R 7300 850 50 
+F7 "0V9_REF" I L 6350 1050 50 
 $EndSheet
 Wire Wire Line
 	6350 750  5650 750 
 Wire Wire Line
 	5650 850  6350 850 
-Text Label 6350 1050 2    50   ~ 0
+Text Label 6350 1150 2    50   ~ 0
 GND
 Text Notes 6350 2050 0    50   ~ 0
-VOUT\n895 mV CM\nNet gain = 0.071 - 3.98 V/V\n-23 to +12 dB
+VOUT\n900 mV CM\nNet gain = 0.223 - 12.59 V/V\n-13 to +22 dB
+Text Label 6350 1050 2    50   ~ 0
+0V9_REF
 $EndSCHEMATC
