@@ -1,11 +1,12 @@
 EESchema Schematic File Version 4
+LIBS:entry-afe-characterization-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 6 8
 Title "Entry-Level Oscilloscope AFE Characterization Platform"
-Date "2020-03-16"
+Date "2020-03-17"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 ""
@@ -124,10 +125,6 @@ Text HLabel 6950 3400 2    50   Output ~ 0
 VSHIFTED_P
 Text HLabel 6500 3500 2    50   Output ~ 0
 VSHIFTED_N
-Text HLabel 5250 2900 0    50   Input ~ 0
-5V0_P
-Text HLabel 5250 3000 0    50   Input ~ 0
-5V0_N
 Text HLabel 6500 2900 2    50   Input ~ 0
 GND
 Text HLabel 6500 3000 2    50   Input ~ 0
@@ -149,4 +146,8 @@ Text Label 3050 3700 2    50   ~ 0
 GND
 Wire Wire Line
 	3050 3700 3200 3700
+Text HLabel 5250 2900 0    50   Input ~ 0
+6V0_P
+Text HLabel 5250 3000 0    50   Input ~ 0
+6V0_N
 $EndSCHEMATC

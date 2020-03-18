@@ -1,11 +1,12 @@
 EESchema Schematic File Version 4
+LIBS:entry-afe-characterization-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 8
 Title "Entry-Level Oscilloscope AFE Characterization Platform"
-Date "2020-03-16"
+Date "2020-03-17"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Top Level"
@@ -18,6 +19,8 @@ S 800  3000 1000 1750
 U 5E704852
 F0 "Power Supply" 50
 F1 "psu.sch" 50
+F2 "0V5_REF" O R 1800 4200 50 
+F3 "N0V5_REF" O R 1800 4300 50 
 $EndSheet
 $Sheet
 S 850  5600 650  1750
@@ -36,12 +39,18 @@ $EndSheet
 $Sheet
 S 900  650  1100 900 
 U 5E7383DD
-F0 "Input Passives" 50
+F0 "Input" 50
 F1 "input.sch" 50
-F2 "GND" I L 900 750 50 
+F2 "GND" I L 900 1050 50 
 F3 "VIN_FILTERED" O R 2000 750 50 
+F4 "VIN_EN" I L 900 1450 50 
+F5 "5V0_P" I L 900 850 50 
+F6 "5V0_N" I L 900 1250 50 
+F7 "12V0" I L 900 750 50 
+F8 "0V5_REF" I L 900 950 50 
+F9 "N0V5_REF" I L 900 1150 50 
 $EndSheet
-Text Label 900  750  2    50   ~ 0
+Text Label 900  1050 2    50   ~ 0
 GND
 $Sheet
 S 2600 650  1200 900 
@@ -52,19 +61,15 @@ F2 "VIN_FILTERED" I L 2600 750 50
 F3 "VIN_OFFSET" I L 2600 850 50 
 F4 "VSHIFTED_P" O R 3800 750 50 
 F5 "VSHIFTED_N" O R 3800 850 50 
-F6 "5V0_P" I L 2600 1050 50 
-F7 "5V0_N" I L 2600 1150 50 
-F8 "GND" I L 2600 1350 50 
-F9 "2V5_REF" I L 2600 1250 50 
+F6 "GND" I L 2600 1350 50 
+F7 "2V5_REF" I L 2600 1250 50 
+F8 "6V0_P" I L 2600 1050 50 
+F9 "6V0_N" I L 2600 1150 50 
 $EndSheet
 Text Label 2600 850  2    50   ~ 0
 VIN_OFFSET
 Wire Wire Line
 	2000 750  2600 750 
-Text Label 2600 1050 2    50   ~ 0
-5V0_P
-Text Label 2600 1150 2    50   ~ 0
-5V0_N
 Text Label 2600 1350 2    50   ~ 0
 GND
 Text Label 2600 1250 2    50   ~ 0
@@ -129,4 +134,32 @@ Text Notes 6350 2050 0    50   ~ 0
 VOUT\n900 mV CM\nNet gain = 0.223 - 12.59 V/V\n-13 to +22 dB
 Text Label 6350 1050 2    50   ~ 0
 0V9_REF
+Text Label 2600 1050 2    50   ~ 0
+6V0_P
+Text Label 2600 1150 2    50   ~ 0
+6V0_N
+Text Label 2150 3450 2    50   ~ 0
+6V0_P
+Text Label 2150 3550 2    50   ~ 0
+6V0_N
+Text Label 2150 3650 2    50   ~ 0
+0V9_REF
+Text Label 5150 5500 2    50   ~ 0
+VIN_EN
+Text Label 900  1450 2    50   ~ 0
+VIN_EN
+Text Label 900  850  2    50   ~ 0
+5V0_P
+Text Label 900  1250 2    50   ~ 0
+5V0_N
+Text Label 900  750  2    50   ~ 0
+12V0
+Text Label 2150 3750 2    50   ~ 0
+12V0
+Text Label 2150 3950 2    50   ~ 0
+0V5_REF
+Text Label 900  1150 2    50   ~ 0
+N0V5_REF
+Text Label 900  950  2    50   ~ 0
+0V5_REF
 $EndSCHEMATC
