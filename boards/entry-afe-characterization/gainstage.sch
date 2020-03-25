@@ -6,7 +6,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 7 8
 Title "Entry-Level Oscilloscope AFE Characterization Platform"
-Date "2020-03-17"
+Date "2020-03-24"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 ""
@@ -43,14 +43,14 @@ $EndComp
 $Comp
 L analog-azonenberg:ADL5205 U?
 U 1 1 5E748048
-P 9250 6100
+P 2800 5600
 AR Path="/5E748048" Ref="U?"  Part="1" 
 AR Path="/5E743C43/5E748048" Ref="U2"  Part="1" 
-F 0 "U2" H 9825 8125 50  0000 C CNN
-F 1 "ADL5205" H 9825 8034 50  0000 C CNN
-F 2 "" H 9250 6150 50  0001 C CNN
-F 3 "" H 9250 6150 50  0001 C CNN
-	1    9250 6100
+F 0 "U2" H 3375 7625 50  0000 C CNN
+F 1 "ADL5205" H 3375 7534 50  0000 C CNN
+F 2 "" H 2800 5650 50  0001 C CNN
+F 3 "" H 2800 5650 50  0001 C CNN
+	1    2800 5600
 	1    0    0    -1  
 $EndComp
 Text HLabel 2700 1450 0    50   Input ~ 0
@@ -65,8 +65,6 @@ Text HLabel 3950 1750 2    50   Output ~ 0
 VGAIN_N
 Text Notes 2800 2800 0    50   ~ 0
 Break unused amp channel out to SMAs
-Text Label 2700 2300 2    50   ~ 0
-GAIN_PWRUP
 $Comp
 L Connector:Conn_Coaxial J3
 U 1 1 5E74ED29
@@ -163,4 +161,304 @@ Text Label 4050 2600 0    50   ~ 0
 GOUT_N
 Text HLabel 3950 1450 2    50   Input ~ 0
 2V5_REF
+Text HLabel 2700 2300 0    50   Input ~ 0
+GAIN2_PWRUP
+Text HLabel 2550 3800 0    50   Input ~ 0
+5V0_P
+Wire Wire Line
+	2550 3800 2700 3800
+Wire Wire Line
+	2700 3800 2700 3900
+Connection ~ 2700 3800
+Text HLabel 2550 4100 0    50   Input ~ 0
+GND
+Wire Wire Line
+	2550 4100 2700 4100
+$Comp
+L device:R R16
+U 1 1 5E77B9A7
+P 2150 4300
+F 0 "R16" V 2100 4150 50  0000 C CNN
+F 1 "10K" V 2150 4300 50  0000 C CNN
+F 2 "" V 2080 4300 50  0001 C CNN
+F 3 "" H 2150 4300 50  0001 C CNN
+	1    2150 4300
+	0    1    1    0   
+$EndComp
+$Comp
+L device:R R17
+U 1 1 5E77C06E
+P 2150 4400
+F 0 "R17" V 2100 4250 50  0000 C CNN
+F 1 "10K" V 2150 4400 50  0000 C CNN
+F 2 "" V 2080 4400 50  0001 C CNN
+F 3 "" H 2150 4400 50  0001 C CNN
+	1    2150 4400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2300 4400 2700 4400
+Wire Wire Line
+	2700 4300 2300 4300
+Text Label 1800 4300 2    50   ~ 0
+5V0_P
+Wire Wire Line
+	1800 4300 1900 4300
+Wire Wire Line
+	1900 4300 1900 4400
+Wire Wire Line
+	1900 4400 2000 4400
+Connection ~ 1900 4300
+Wire Wire Line
+	1900 4300 2000 4300
+$Comp
+L device:R R18
+U 1 1 5E77DCCA
+P 2150 4600
+F 0 "R18" V 2100 4450 50  0000 C CNN
+F 1 "10K" V 2150 4600 50  0000 C CNN
+F 2 "" V 2080 4600 50  0001 C CNN
+F 3 "" H 2150 4600 50  0001 C CNN
+	1    2150 4600
+	0    1    1    0   
+$EndComp
+$Comp
+L device:R R19
+U 1 1 5E77E234
+P 2150 4700
+F 0 "R19" V 2100 4550 50  0000 C CNN
+F 1 "10K" V 2150 4700 50  0000 C CNN
+F 2 "" V 2080 4700 50  0001 C CNN
+F 3 "" H 2150 4700 50  0001 C CNN
+	1    2150 4700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2300 4600 2700 4600
+Wire Wire Line
+	2700 4700 2300 4700
+Text Label 1800 4600 2    50   ~ 0
+GND
+Wire Wire Line
+	1800 4600 1900 4600
+Wire Wire Line
+	1900 4600 1900 4700
+Wire Wire Line
+	1900 4700 2000 4700
+Connection ~ 1900 4600
+Wire Wire Line
+	1900 4600 2000 4600
+$Comp
+L device:R R20
+U 1 1 5E780489
+P 2150 4900
+F 0 "R20" V 2100 4750 50  0000 C CNN
+F 1 "10K" V 2150 4900 50  0000 C CNN
+F 2 "" V 2080 4900 50  0001 C CNN
+F 3 "" H 2150 4900 50  0001 C CNN
+	1    2150 4900
+	0    1    1    0   
+$EndComp
+$Comp
+L device:R R21
+U 1 1 5E7809A3
+P 2150 5000
+F 0 "R21" V 2100 4850 50  0000 C CNN
+F 1 "10K" V 2150 5000 50  0000 C CNN
+F 2 "" V 2080 5000 50  0001 C CNN
+F 3 "" H 2150 5000 50  0001 C CNN
+	1    2150 5000
+	0    1    1    0   
+$EndComp
+Text Label 1800 4900 2    50   ~ 0
+GND
+Wire Wire Line
+	1800 4900 1900 4900
+Wire Wire Line
+	1900 4900 1900 5000
+Wire Wire Line
+	1900 5000 2000 5000
+Connection ~ 1900 4900
+Wire Wire Line
+	1900 4900 2000 4900
+Wire Wire Line
+	2300 4900 2700 4900
+Wire Wire Line
+	2300 5000 2700 5000
+$Comp
+L device:R R22
+U 1 1 5E7834EF
+P 2150 5250
+F 0 "R22" V 2100 5100 50  0000 C CNN
+F 1 "10K" V 2150 5250 50  0000 C CNN
+F 2 "" V 2080 5250 50  0001 C CNN
+F 3 "" H 2150 5250 50  0001 C CNN
+	1    2150 5250
+	0    1    1    0   
+$EndComp
+$Comp
+L device:R R23
+U 1 1 5E783837
+P 2150 5350
+F 0 "R23" V 2100 5200 50  0000 C CNN
+F 1 "10K" V 2150 5350 50  0000 C CNN
+F 2 "" V 2080 5350 50  0001 C CNN
+F 3 "" H 2150 5350 50  0001 C CNN
+	1    2150 5350
+	0    1    1    0   
+$EndComp
+$Comp
+L device:R R24
+U 1 1 5E783DAE
+P 2150 5450
+F 0 "R24" V 2100 5300 50  0000 C CNN
+F 1 "10K" V 2150 5450 50  0000 C CNN
+F 2 "" V 2080 5450 50  0001 C CNN
+F 3 "" H 2150 5450 50  0001 C CNN
+	1    2150 5450
+	0    1    1    0   
+$EndComp
+$Comp
+L device:R R25
+U 1 1 5E783FC7
+P 2150 5550
+F 0 "R25" V 2100 5400 50  0000 C CNN
+F 1 "10K" V 2150 5550 50  0000 C CNN
+F 2 "" V 2080 5550 50  0001 C CNN
+F 3 "" H 2150 5550 50  0001 C CNN
+	1    2150 5550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2300 5250 2700 5250
+Wire Wire Line
+	2700 5350 2300 5350
+Wire Wire Line
+	2300 5450 2700 5450
+Wire Wire Line
+	2700 5550 2300 5550
+Text Label 1800 5250 2    50   ~ 0
+GND
+Wire Wire Line
+	1800 5250 1900 5250
+Wire Wire Line
+	1900 5250 1900 5350
+Wire Wire Line
+	1900 5350 2000 5350
+Connection ~ 1900 5250
+Wire Wire Line
+	1900 5250 2000 5250
+Wire Wire Line
+	1900 5350 1900 5450
+Wire Wire Line
+	1900 5450 2000 5450
+Connection ~ 1900 5350
+Wire Wire Line
+	1900 5450 1900 5550
+Wire Wire Line
+	1900 5550 2000 5550
+Connection ~ 1900 5450
+$Comp
+L device:R R27
+U 1 1 5E790B70
+P 4400 3900
+F 0 "R27" V 4350 3750 50  0000 C CNN
+F 1 "10K" V 4400 3900 50  0000 C CNN
+F 2 "" V 4330 3900 50  0001 C CNN
+F 3 "" H 4400 3900 50  0001 C CNN
+	1    4400 3900
+	0    1    1    0   
+$EndComp
+$Comp
+L device:R R26
+U 1 1 5E791612
+P 4400 3800
+F 0 "R26" V 4350 3650 50  0000 C CNN
+F 1 "10K" V 4400 3800 50  0000 C CNN
+F 2 "" V 4330 3800 50  0001 C CNN
+F 3 "" H 4400 3800 50  0001 C CNN
+	1    4400 3800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4250 3800 4050 3800
+Wire Wire Line
+	4050 3900 4250 3900
+Text Label 4700 3900 0    50   ~ 0
+GND
+Wire Wire Line
+	4700 3900 4550 3900
+Text Label 4700 3800 0    50   ~ 0
+5V0_P
+Wire Wire Line
+	4700 3800 4550 3800
+Text HLabel 4300 4200 2    50   Input ~ 0
+SPI_CS_A_N
+Wire Wire Line
+	4300 4200 4050 4200
+Text HLabel 4300 4300 2    50   Input ~ 0
+SPI_CS_B_N
+Wire Wire Line
+	4300 4300 4050 4300
+Text HLabel 4300 4400 2    50   BiDi ~ 0
+SPI_SDIO
+Wire Wire Line
+	4300 4400 4050 4400
+Text HLabel 4300 4500 2    50   Input ~ 0
+SPI_SCLK
+Wire Wire Line
+	4300 4500 4050 4500
+Text Notes 4300 4700 0    50   ~ 0
+SPI interace runs at 5V levels
+Text HLabel 4300 4000 2    50   Input ~ 0
+VGA_PERF_MODE
+Wire Wire Line
+	4300 4000 4050 4000
+$Comp
+L device:C C17
+U 1 1 5E7A83A9
+P 6200 3900
+F 0 "C17" H 6315 3946 50  0000 L CNN
+F 1 "4.7 uF" H 6315 3855 50  0000 L CNN
+F 2 "" H 6238 3750 50  0001 C CNN
+F 3 "" H 6200 3900 50  0001 C CNN
+	1    6200 3900
+	1    0    0    -1  
+$EndComp
+Text Label 6200 3750 2    50   ~ 0
+5V0_P
+Text Label 6200 4050 2    50   ~ 0
+GND
+$Comp
+L device:C C18
+U 1 1 5E7A8E6C
+P 6750 3900
+F 0 "C18" H 6865 3946 50  0000 L CNN
+F 1 "0.47 uF" H 6865 3855 50  0000 L CNN
+F 2 "" H 6788 3750 50  0001 C CNN
+F 3 "" H 6750 3900 50  0001 C CNN
+	1    6750 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C19
+U 1 1 5E7A90CE
+P 7300 3900
+F 0 "C19" H 7415 3946 50  0000 L CNN
+F 1 "0.47 uF" H 7415 3855 50  0000 L CNN
+F 2 "" H 7338 3750 50  0001 C CNN
+F 3 "" H 7300 3900 50  0001 C CNN
+	1    7300 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7300 3750 6750 3750
+Connection ~ 6750 3750
+Wire Wire Line
+	6750 3750 6200 3750
+Wire Wire Line
+	6200 4050 6750 4050
+Connection ~ 6750 4050
+Wire Wire Line
+	6750 4050 7300 4050
 $EndSCHEMATC
