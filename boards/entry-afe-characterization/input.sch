@@ -6,7 +6,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 4 8
 Title "Entry-Level Oscilloscope AFE Characterization Platform"
-Date "2020-03-24"
+Date "2020-03-26"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 ""
@@ -149,24 +149,6 @@ Wire Wire Line
 	2300 7150 2300 7050
 Text HLabel 1100 4500 0    50   Input ~ 0
 INPUT_RST
-Wire Wire Line
-	1600 6850 1700 6850
-$Comp
-L device:R R11
-U 1 1 5E76E9E3
-P 1700 6700
-F 0 "R11" H 1770 6746 50  0000 L CNN
-F 1 "10K" H 1770 6655 50  0000 L CNN
-F 2 "" V 1630 6700 50  0001 C CNN
-F 3 "" H 1700 6700 50  0001 C CNN
-	1    1700 6700
-	1    0    0    -1  
-$EndComp
-Connection ~ 1700 6850
-Wire Wire Line
-	1700 6850 2000 6850
-Text Label 1700 6550 2    50   ~ 0
-5V0_P
 $Comp
 L device:D_Zener D1
 U 1 1 5E76F92B
@@ -522,4 +504,8 @@ Text Label 4850 3750 0    50   ~ 0
 GND
 Text Label 1400 4700 0    50   ~ 0
 GND
+Wire Wire Line
+	1600 6850 2000 6850
+Text Notes 5400 5100 0    50   ~ 0
+TODO: OVERVOLTAGE_N is pulled to -5V, not ground\nneed to level shift or something
 $EndSCHEMATC

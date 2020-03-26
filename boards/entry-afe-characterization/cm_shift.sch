@@ -6,7 +6,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 6 8
 Title "Entry-Level Oscilloscope AFE Characterization Platform"
-Date "2020-03-24"
+Date "2020-03-26"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 ""
