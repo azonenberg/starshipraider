@@ -4,9 +4,9 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 8
+Sheet 2 8
 Title "Entry-Level Oscilloscope AFE Characterization Platform"
-Date "2020-03-26"
+Date "2020-03-27"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 ""
@@ -139,12 +139,12 @@ Text Label 2900 3500 2    50   ~ 0
 GND
 Wire Wire Line
 	2900 3500 3050 3500
-Text HLabel 5300 3800 0    50   Output ~ 0
+Text HLabel 6850 3100 0    50   Output ~ 0
 GAIN_PWRUP
 Text HLabel 5300 3400 0    50   Output ~ 0
 GAIN2_PWRUP
 Text Notes 5400 4950 0    50   ~ 0
-ADL5205 has 2.4V Vih\nso 3.3V inputs are OK\n\nSPI_SDIO and OVERVOLTAGE_N must be 5V tolerant
+ADL5205 has 2.4V Vih\nso 3.3V inputs are OK\n\nSPI_SDIO, RELAY_EN, and OVERVOLTAGE_N must be 5V tolerant
 Text HLabel 5300 4300 0    50   Output ~ 0
 VGA_PERF_MODE
 Text HLabel 5300 3000 0    50   Output ~ 0
@@ -207,7 +207,7 @@ F 3 "" H 2450 2900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 2450 2750
-Text HLabel 6850 3100 0    50   Output ~ 0
+Text HLabel 5300 3800 0    50   Output ~ 0
 RELAY_EN
 Text HLabel 6850 3500 0    50   Input ~ 0
 OVERVOLTAGE_N

@@ -6,7 +6,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 8
 Title "Entry-Level Oscilloscope AFE Characterization Platform"
-Date "2020-03-26"
+Date "2020-03-27"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 ""
@@ -821,17 +821,6 @@ Wire Wire Line
 	7550 2200 7550 2100
 Text Label 8200 2000 2    50   ~ 0
 GND
-$Comp
-L device:C C50
-U 1 1 5E865008
-P 5250 1850
-F 0 "C50" H 5365 1896 50  0000 L CNN
-F 1 "47 uF" H 5365 1805 50  0000 L CNN
-F 2 "" H 5288 1700 50  0001 C CNN
-F 3 "" H 5250 1850 50  0001 C CNN
-	1    5250 1850
-	1    0    0    -1  
-$EndComp
 Text Label 4750 2000 2    50   ~ 0
 GND
 $Comp
@@ -874,10 +863,6 @@ F 3 "" H 4750 1850 50  0001 C CNN
 	1    4750 1850
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4750 1700 5250 1700
-Wire Wire Line
-	4750 2000 5250 2000
 $Comp
 L device:C C51
 U 1 1 5E87F5EB
@@ -900,9 +885,6 @@ F 3 "" H 6200 1850 50  0001 C CNN
 	1    6200 1850
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5250 1700 5700 1700
-Connection ~ 5250 1700
 Connection ~ 5700 1700
 Wire Wire Line
 	5700 1700 6200 1700
@@ -911,10 +893,7 @@ Wire Wire Line
 	6200 1700 6800 1700
 Wire Wire Line
 	6200 2000 5700 2000
-Connection ~ 5250 2000
 Connection ~ 5700 2000
-Wire Wire Line
-	5700 2000 5250 2000
 $Comp
 L device:C C55
 U 1 1 5E891B4A
@@ -1201,14 +1180,10 @@ Text Label 2100 7350 2    50   ~ 0
 GND
 Text Label 3100 3800 0    50   ~ 0
 5V0_P_SET
-Text Label 2950 4900 0    50   ~ 0
-5V0_P_SET
-Text Label 2950 4400 0    50   ~ 0
-5V0_P
 Wire Wire Line
 	2950 4500 2950 4400
-Text Label 1650 4400 2    50   ~ 0
-7V0_P_1
+Text Label 2000 4400 2    50   ~ 0
+7V0_P_4
 $Comp
 L device:C C61
 U 1 1 5E937435
@@ -1238,7 +1213,7 @@ Connection ~ 2100 4500
 Wire Wire Line
 	2100 4500 2100 4600
 Text Label 2950 4800 0    50   ~ 0
-7V0_P_1
+7V0_P_4
 NoConn ~ 2950 4700
 $Comp
 L device:C C62
@@ -1256,8 +1231,6 @@ Wire Wire Line
 Connection ~ 2950 4400
 Text Label 3300 4700 0    50   ~ 0
 GND
-Text Notes 2950 5350 0    50   ~ 0
-Parallel U9/U16 for increased current.\nThis is supported per datasheet pages\n19-20. ERC warning about power\noutputs connected together can be\nsafely ignored.
 Text Label 5450 7500 2    50   ~ 0
 5V0_N
 $Comp
@@ -1431,4 +1404,60 @@ Wire Wire Line
 	1250 800  1350 800 
 Wire Wire Line
 	1850 800  1950 800 
+$Comp
+L device:R R58
+U 1 1 5EA11E7C
+P 3100 5050
+F 0 "R58" H 3000 5050 50  0000 C CNN
+F 1 "49.9K 1%" H 3100 5250 50  0000 C CNN
+F 2 "" V 3030 5050 50  0001 C CNN
+F 3 "" H 3100 5050 50  0001 C CNN
+	1    3100 5050
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3100 4900 2950 4900
+Text Label 3500 5200 0    50   ~ 0
+GND
+$Comp
+L device:C C66
+U 1 1 5EA11E88
+P 3450 5050
+F 0 "C66" H 3565 5096 50  0000 L CNN
+F 1 "0.47 uF" H 3565 5005 50  0000 L CNN
+F 2 "" H 3488 4900 50  0001 C CNN
+F 3 "" H 3450 5050 50  0001 C CNN
+	1    3450 5050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 5200 3450 5200
+Connection ~ 3450 5200
+Wire Wire Line
+	3450 5200 3500 5200
+Wire Wire Line
+	3450 4900 3100 4900
+Connection ~ 3100 4900
+Text Label 3100 4900 0    50   ~ 0
+5V0_P_2_SET
+Text HLabel 3300 4400 2    50   Output ~ 0
+5V0_P_2
+Text Label 1050 4400 2    50   ~ 0
+7V0_P
+$Comp
+L passive-azonenberg:INDUCTOR_PWROUT FB6
+U 1 1 5EA19602
+P 1350 4400
+F 0 "FB6" V 1192 4400 40  0000 C CNN
+F 1 "MI0603J601R-10" V 1268 4400 40  0000 C CNN
+F 2 "" H 1350 4400 60  0000 C CNN
+F 3 "" H 1350 4400 60  0000 C CNN
+	1    1350 4400
+	0    1    1    0   
+$EndComp
+Connection ~ 1650 4400
+Wire Wire Line
+	4750 1700 5700 1700
+Wire Wire Line
+	4750 2000 5700 2000
 $EndSCHEMATC

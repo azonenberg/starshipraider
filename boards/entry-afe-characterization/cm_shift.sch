@@ -4,9 +4,9 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 6 8
+Sheet 5 8
 Title "Entry-Level Oscilloscope AFE Characterization Platform"
-Date "2020-03-26"
+Date "2020-03-27"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 ""
@@ -109,50 +109,28 @@ Wire Wire Line
 	3650 3050 3500 3050
 Wire Wire Line
 	3650 3150 3500 3150
-Wire Wire Line
-	3950 3050 4000 3050
-Wire Wire Line
-	3950 3150 4100 3150
 $Comp
 L device:R R28
 U 1 1 5E7B38B4
-P 5400 3300
-F 0 "R28" V 5500 3300 50  0000 C CNN
-F 1 "127 0.1%" H 5550 3600 50  0000 C CNN
-F 2 "" V 5330 3300 50  0001 C CNN
-F 3 "" H 5400 3300 50  0001 C CNN
-	1    5400 3300
+P 5500 3350
+F 0 "R28" V 5600 3350 50  0000 C CNN
+F 1 "127 0.1%" H 5650 3650 50  0000 C CNN
+F 2 "" V 5430 3350 50  0001 C CNN
+F 3 "" H 5500 3350 50  0001 C CNN
+	1    5500 3350
 	-1   0    0    1   
 $EndComp
 $Comp
 L device:R R29
 U 1 1 5E7B4812
-P 5600 3400
-F 0 "R29" V 5700 3400 50  0000 C CNN
-F 1 "127 0.1%" H 5950 3700 50  0000 C CNN
-F 2 "" V 5530 3400 50  0001 C CNN
-F 3 "" H 5600 3400 50  0001 C CNN
-	1    5600 3400
+P 5700 3450
+F 0 "R29" V 5800 3450 50  0000 C CNN
+F 1 "127 0.1%" H 6050 3750 50  0000 C CNN
+F 2 "" V 5630 3450 50  0001 C CNN
+F 3 "" H 5700 3450 50  0001 C CNN
+	1    5700 3450
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	5600 3250 5600 3050
-Wire Wire Line
-	5600 3050 5400 3050
-Wire Wire Line
-	5600 3550 4000 3550
-Wire Wire Line
-	4000 3550 4000 3050
-Connection ~ 4000 3050
-Wire Wire Line
-	4000 3050 4150 3050
-Wire Wire Line
-	5400 3450 4100 3450
-Wire Wire Line
-	4100 3450 4100 3150
-Connection ~ 4100 3150
-Wire Wire Line
-	4100 3150 4150 3150
 $Comp
 L device:R R15
 U 1 1 5E7B5814
@@ -170,7 +148,7 @@ Text Label 3500 2850 2    50   ~ 0
 5V0_P
 Wire Wire Line
 	3500 2850 3700 2850
-Text Notes 3750 3750 0    50   ~ 0
+Text Notes 3750 3800 0    50   ~ 0
 +2 dB = 1.258V/V\n127/100 ohms gives 1.270 V/V
 Text HLabel 4300 4300 0    50   Input ~ 0
 1V8
@@ -301,9 +279,6 @@ F 3 "" H 6050 3050 50  0001 C CNN
 	1    6050 3050
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	5900 3050 5600 3050
-Connection ~ 5600 3050
 $Comp
 L device:R R33
 U 1 1 5E7C7E00
@@ -316,10 +291,39 @@ F 3 "" H 6050 3150 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	5400 3150 5900 3150
-Connection ~ 5400 3150
+	5400 3150 5700 3150
 Wire Wire Line
 	6200 3050 6800 3050
 Wire Wire Line
 	6800 3150 6200 3150
+Wire Wire Line
+	3950 3050 4000 3050
+Wire Wire Line
+	3950 3150 4100 3150
+Wire Wire Line
+	5400 3050 5500 3050
+Connection ~ 4000 3050
+Wire Wire Line
+	4000 3050 4150 3050
+Connection ~ 4100 3150
+Wire Wire Line
+	4100 3150 4150 3150
+Wire Wire Line
+	4100 3500 5500 3500
+Wire Wire Line
+	4100 3150 4100 3500
+Wire Wire Line
+	5500 3200 5500 3050
+Connection ~ 5500 3050
+Wire Wire Line
+	5500 3050 5900 3050
+Wire Wire Line
+	4000 3600 5700 3600
+Wire Wire Line
+	4000 3050 4000 3600
+Wire Wire Line
+	5700 3300 5700 3150
+Connection ~ 5700 3150
+Wire Wire Line
+	5700 3150 5900 3150
 $EndSCHEMATC

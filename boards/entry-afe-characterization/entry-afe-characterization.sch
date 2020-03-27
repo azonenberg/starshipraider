@@ -6,7 +6,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 8
 Title "Entry-Level Oscilloscope AFE Characterization Platform"
-Date "2020-03-26"
+Date "2020-03-27"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Top Level"
@@ -14,24 +14,6 @@ Comment2 "Andrew D. Zonenberg"
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Sheet
-S 1150 3550 1000 1750
-U 5E704852
-F0 "Power Supply" 50
-F1 "psu.sch" 50
-F2 "0V5_REF" O R 2150 4300 50 
-F3 "N0V5_REF" O R 2150 4500 50 
-F4 "5V0_P" O R 2150 3800 50 
-F5 "5V0_N" O R 2150 4600 50 
-F6 "12V0" O R 2150 3600 50 
-F7 "GND" O R 2150 4400 50 
-F8 "6V0_P" O R 2150 3700 50 
-F9 "6V0_N" O R 2150 4700 50 
-F10 "3V3" O R 2150 3900 50 
-F11 "2V5_REF" O R 2150 4000 50 
-F12 "1V8" O R 2150 4100 50 
-F13 "0V9_REF" O R 2150 4200 50 
-$EndSheet
 Text Notes 6300 4350 0    50   ~ 0
 SYSTEM GAIN CALCULATIONS\n\nHMCAD1520 wants 2V full scale\nIn 12-bit mode: 488 µV/LSB @ 0 dB gain\nIn 8-bit mode: 7.8 mV/LSB @ 0 dB gain\n\nMIN GAIN:\n10V input range, -13 dB system gain (0.2V/V)\n-9 dB gain on VGA\n12 bit mode: 2.4 mV/LSB\n8 bit mode: 39 mV/LSB\n\nMAX GAIN:\n159 mV input range, +22 dB system gain (12.59V/V)\n+26 dB gain on VGA\n12 bit mode: 38.7 µV/LSB\n8 bit mode: 619.5 µV/LSB
 $Sheet
@@ -107,11 +89,11 @@ Text Label 2150 6750 0    50   ~ 0
 VIN_OFFSET
 Text Label 2150 3800 0    50   ~ 0
 5V0_P
-Text Label 2150 4600 0    50   ~ 0
+Text Label 2150 4700 0    50   ~ 0
 5V0_N
-Text Label 2150 4400 0    50   ~ 0
+Text Label 2150 4500 0    50   ~ 0
 GND
-Text Label 2150 4000 0    50   ~ 0
+Text Label 2150 4100 0    50   ~ 0
 2V5_REF
 Text Notes 1150 2700 0    50   ~ 0
 VIN_FILTERED\n± 2.5V range\nCumulative gain = 0.5 V/V (-6 dB)
@@ -150,9 +132,9 @@ Text Label 2850 1150 2    50   ~ 0
 6V0_N
 Text Label 2150 3700 0    50   ~ 0
 6V0_P
-Text Label 2150 4700 0    50   ~ 0
+Text Label 2150 4800 0    50   ~ 0
 6V0_N
-Text Label 2150 4200 0    50   ~ 0
+Text Label 2150 4300 0    50   ~ 0
 0V9_REF
 Text Label 1150 850  2    50   ~ 0
 5V0_P
@@ -162,7 +144,7 @@ Text Label 1150 750  2    50   ~ 0
 12V0
 Text Label 2150 3600 0    50   ~ 0
 12V0
-Text Label 2150 4300 0    50   ~ 0
+Text Label 2150 4400 0    50   ~ 0
 0V5_REF
 Text Label 1150 1150 2    50   ~ 0
 N0V5_REF
@@ -173,7 +155,7 @@ GAIN2_PWRUP
 Text Label 4150 6050 2    50   ~ 0
 GAIN2_PWRUP
 Text Label 4750 1050 2    50   ~ 0
-5V0_P
+5V0_P_2
 Text Label 4750 1250 2    50   ~ 0
 GND
 $Sheet
@@ -222,7 +204,7 @@ Text Label 6600 1150 2    50   ~ 0
 1V8
 Text Label 6600 1450 2    50   ~ 0
 5V0_N
-Text Label 2150 4100 0    50   ~ 0
+Text Label 2150 4200 0    50   ~ 0
 1V8
 $Sheet
 S 1150 5600 1000 1750
@@ -280,8 +262,29 @@ Text Label 1150 1450 2    50   ~ 0
 INPUT_RST
 Text Label 5750 6150 0    50   ~ 0
 INPUT_RST
-Text Label 2150 3900 0    50   ~ 0
+Text Label 2150 4000 0    50   ~ 0
 3V3
-Text Label 2150 4500 0    50   ~ 0
+Text Label 2150 4600 0    50   ~ 0
 N0V5_REF
+$Sheet
+S 1150 3550 1000 1750
+U 5E704852
+F0 "Power Supply" 50
+F1 "psu.sch" 50
+F2 "0V5_REF" O R 2150 4400 50 
+F3 "N0V5_REF" O R 2150 4600 50 
+F4 "5V0_P" O R 2150 3800 50 
+F5 "5V0_N" O R 2150 4700 50 
+F6 "12V0" O R 2150 3600 50 
+F7 "GND" O R 2150 4500 50 
+F8 "6V0_P" O R 2150 3700 50 
+F9 "6V0_N" O R 2150 4800 50 
+F10 "3V3" O R 2150 4000 50 
+F11 "2V5_REF" O R 2150 4100 50 
+F12 "1V8" O R 2150 4200 50 
+F13 "0V9_REF" O R 2150 4300 50 
+F14 "5V0_P_2" O R 2150 3900 50 
+$EndSheet
+Text Label 2150 3900 0    50   ~ 0
+5V0_P_2
 $EndSCHEMATC
