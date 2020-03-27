@@ -409,7 +409,7 @@ SPI_SCLK
 Wire Wire Line
 	4300 4500 4050 4500
 Text Notes 4300 4700 0    50   ~ 0
-SPI interace runs at 5V levels
+SPI interface runs at 5V levels
 Text HLabel 4300 4000 2    50   Input ~ 0
 VGA_PERF_MODE
 Wire Wire Line

@@ -40,21 +40,6 @@ F 3 "" H 900 900 60  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 NoConn ~ 1250 1000
-$Comp
-L device:Fuse F1
-U 1 1 5E811BC3
-P 1600 800
-F 0 "F1" V 1403 800 50  0000 C CNN
-F 1 "1A" V 1494 800 50  0000 C CNN
-F 2 "" V 1530 800 50  0001 C CNN
-F 3 "" H 1600 800 50  0001 C CNN
-	1    1600 800 
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	1450 800  1250 800 
-Wire Wire Line
-	1750 800  1950 800 
 Text HLabel 3650 5550 2    50   Output ~ 0
 6V0_P
 Text HLabel 6700 3300 2    50   Output ~ 0
@@ -1271,8 +1256,8 @@ Wire Wire Line
 Connection ~ 2950 4400
 Text Label 3300 4700 0    50   ~ 0
 GND
-Text Notes 2200 5250 0    50   ~ 0
-Parallel U9/U16 for increased current
+Text Notes 2950 5350 0    50   ~ 0
+Parallel U9/U16 for increased current.\nThis is supported per datasheet pages\n19-20. ERC warning about power\noutputs connected together can be\nsafely ignored.
 Text Label 5450 7500 2    50   ~ 0
 5V0_N
 $Comp
@@ -1431,4 +1416,19 @@ Wire Wire Line
 Wire Wire Line
 	10200 5150 8600 5150
 Connection ~ 8600 5150
+$Comp
+L power-azonenberg:FUSE_PWROUT F1
+U 1 1 5E9EE5E6
+P 1600 800
+F 0 "F1" H 1600 1040 50  0000 C CNN
+F 1 "1A" H 1600 949 50  0000 C CNN
+F 2 "" H 1600 800 60  0000 C CNN
+F 3 "" H 1600 800 60  0000 C CNN
+	1    1600 800 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1250 800  1350 800 
+Wire Wire Line
+	1850 800  1950 800 
 $EndSCHEMATC
