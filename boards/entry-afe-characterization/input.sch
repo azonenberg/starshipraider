@@ -424,7 +424,7 @@ L device:R R37
 U 1 1 5E7FF1E4
 P 4700 4250
 F 0 "R37" V 4800 4150 50  0000 L CNN
-F 1 "10K" V 4700 4150 50  0000 L CNN
+F 1 "1K" V 4700 4150 50  0000 L CNN
 F 2 "" V 4630 4250 50  0001 C CNN
 F 3 "" H 4700 4250 50  0001 C CNN
 	1    4700 4250
@@ -432,9 +432,7 @@ F 3 "" H 4700 4250 50  0001 C CNN
 $EndComp
 Text Label 4850 4250 0    50   ~ 0
 5V0_P
-Text HLabel 5500 6750 2    50   Output ~ 0
-OVERVOLTAGE_N
-Text HLabel 2050 4200 0    50   Output ~ 0
+Text HLabel 5800 6750 2    50   Output ~ 0
 OVERVOLTAGE_N
 Text Label 4550 4250 2    50   ~ 0
 OVERVOLTAGE_N
@@ -506,6 +504,20 @@ Text Label 1400 4700 0    50   ~ 0
 GND
 Wire Wire Line
 	1600 6850 2000 6850
-Text Notes 5400 5100 0    50   ~ 0
-TODO: OVERVOLTAGE_N is pulled to -5V, not ground\nneed to level shift or something
+Text Notes 4450 7350 0    50   ~ 0
+LM393 output is pulled to 5V0_N in fault state\nR53 + R37 form voltage divider\nMidpoint floats to 5V0_P in normal state\nand is pulled to ground in fault state
+Text Label 2050 4200 2    50   ~ 0
+OVERVOLTAGE_N
+$Comp
+L device:R R53
+U 1 1 5E9EA740
+P 5650 6750
+F 0 "R53" V 5750 6650 50  0000 L CNN
+F 1 "1K" V 5650 6650 50  0000 L CNN
+F 2 "" V 5580 6750 50  0001 C CNN
+F 3 "" H 5650 6750 50  0001 C CNN
+	1    5650 6750
+	0    1    -1   0   
+$EndComp
+Connection ~ 5500 6750
 $EndSCHEMATC
