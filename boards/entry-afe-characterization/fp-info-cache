@@ -1,4 +1,4 @@
-357427244571118
+360597985200118
 azonenberg_pcb
 ATC_AT_0603
 
@@ -347,8 +347,8 @@ CONN_HEADER_2.54MM_1x5
 
 
 0
-6
-6
+5
+5
 azonenberg_pcb
 CONN_HEADER_2.54MM_1x6
 
@@ -1344,6 +1344,13 @@ RELAY_COTO_9007
 4
 4
 azonenberg_pcb
+RELAY_COTO_9202
+
+
+0
+6
+6
+azonenberg_pcb
 RELAY_TE_HF3_2COIL_50OHM
 
 
@@ -1588,6 +1595,13 @@ TESTPOINT_SMT_KEYSTONE_5016
 0
 1
 1
+azonenberg_pcb
+TO_253
+
+
+0
+0
+0
 azonenberg_pcb
 TSSOP_14_0.65MM_5p6MM
 
