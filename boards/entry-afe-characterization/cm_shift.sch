@@ -6,7 +6,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 5 8
 Title "Entry-Level Oscilloscope AFE Characterization Platform"
-Date "2020-03-27"
+Date "2020-03-28"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 ""
@@ -326,4 +326,40 @@ Wire Wire Line
 Connection ~ 5700 3150
 Wire Wire Line
 	5700 3150 5900 3150
+$Comp
+L device:C C?
+U 1 1 5EAA7EB6
+P 6400 1350
+AR Path="/5E73DF00/5EAA7EB6" Ref="C?"  Part="1" 
+AR Path="/5E75B917/5EAA7EB6" Ref="C71"  Part="1" 
+F 0 "C71" H 6515 1396 50  0000 L CNN
+F 1 "4.7 uF" H 6515 1305 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0805_CAP_NOSILK" H 6438 1200 50  0001 C CNN
+F 3 "" H 6400 1350 50  0001 C CNN
+	1    6400 1350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 1500 6400 1500
+Connection ~ 5600 1500
+Text Label 6400 1200 2    50   ~ 0
+5V0_P
+$Comp
+L device:C C?
+U 1 1 5EAA8E3D
+P 7000 1350
+AR Path="/5E73DF00/5EAA8E3D" Ref="C?"  Part="1" 
+AR Path="/5E75B917/5EAA8E3D" Ref="C72"  Part="1" 
+F 0 "C72" H 7115 1396 50  0000 L CNN
+F 1 "4.7 uF" H 7115 1305 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0805_CAP_NOSILK" H 7038 1200 50  0001 C CNN
+F 3 "" H 7000 1350 50  0001 C CNN
+	1    7000 1350
+	1    0    0    -1  
+$EndComp
+Text Label 7000 1200 2    50   ~ 0
+5V0_N
+Wire Wire Line
+	7000 1500 6400 1500
+Connection ~ 6400 1500
 $EndSCHEMATC

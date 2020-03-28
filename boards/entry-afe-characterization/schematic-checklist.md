@@ -27,32 +27,32 @@ off as invalid.
 * [x] Verify estimated power usage per rail against regulator rating
 * [x] Current-sense resistors on power rails after regulator output caps, not in switching loop
 * [x] Remote sense used on low voltage or high current rails
-* [ ] Linear regulators are stable with selected output cap ESR
-* [ ] Confirm power rail sequencing against device datasheets
+* [x] Linear regulators are stable with selected output cap ESR
+* [x] Confirm power rail sequencing against device datasheets
 
 ### Decoupling
-* [ ] Decoupling present for all ICs
-* [ ] Decoupling meets/exceeds vendor recommendations if specified
+* [x] Decoupling present for all ICs
+* [x] Decoupling meets/exceeds vendor recommendations if specified
 * [x] Bulk decoupling present at PSU
 
 ### General
-* [ ] All power inputs fed by correct voltage
-* [ ] Check high-power discrete semiconductors and passives to confirm they can handle expected load
+* [x] All power inputs fed by correct voltage
+* [x] Check high-power discrete semiconductors and passives to confirm they can handle expected load
 * [x] Analog rails filtered/isolated from digital circuitry as needed
 
 ## Signals
 
 ### Digital
 
-* [ ] Signals are correct logic level for input pin
-* [ ] Pullups on all open-drain outputs
-* [ ] Pulldowns on all PECL outputs
-* [ ] Termination on all high-speed signals
-* [ ] AC coupling caps on gigabit transceivers
-* [ ] TX/RX paired correctly for UART, SPI, MGT, etc
-* [ ] Differential pair polarity / pairing correct
-* [ ] Active high/low enable signal polarity correct
-* [ ] I/O banking rules met on FPGAs etc
+* [x] Signals are correct logic level for input pin
+* [x] Pullups on all open-drain outputs
+* [x] Pulldowns on all PECL outputs
+* [x] Termination on all high-speed signals
+* [x] AC coupling caps on gigabit transceivers
+* [x] TX/RX paired correctly for UART, SPI, MGT, etc
+* [x] Differential pair polarity / pairing correct
+* [x] Active high/low enable signal polarity correct
+* [x] I/O banking rules met on FPGAs etc
 
 ### Analog
 
@@ -69,11 +69,11 @@ same gain across the whole range.
 * [x] Banking / clock capable input rules met for clocks going to FPGAs
 
 ### Strap/init pins
-* [ ] Pullup/pulldowns on all signals that need defined state at boot
-* [ ] Strap pins connected to correct rail for desired state
-* [ ] JTAG/ICSP connector provided for all programmable devices
+* [x] Pullup/pulldowns on all signals that need defined state at boot
+* [x] Strap pins connected to correct rail for desired state
+* [x] JTAG/ICSP connector provided for all programmable devices
 * [x] Config/boot flash provided for all FPGAs or MPUs without internal flash
-* [ ] Reference resistors correct value and reference rail
+* [x] Reference resistors correct value and reference rail
 
 ### External interface protection
 
@@ -90,7 +90,7 @@ same gain across the whole range.
 
 ## Thermal
 
-* [ ] Power estimates for all large / high power ICs
-* [ ] Thermal calculations for all large / high power ICs
-* [ ] Specify heatsinks as needed
+* [x] Power estimates for all large / high power ICs
+* [x] Thermal calculations for all large / high power ICs
+* [x] Specify heatsinks as needed
 

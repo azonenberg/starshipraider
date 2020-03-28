@@ -6,7 +6,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 8 8
 Title "Entry-Level Oscilloscope AFE Characterization Platform"
-Date "2020-03-27"
+Date "2020-03-28"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 ""
@@ -1478,4 +1478,6 @@ F 3 "" H 6600 5300 50  0001 C CNN
 	1    6600 5300
 	1    0    0    -1  
 $EndComp
+Text Notes 8000 6350 0    50   ~ 0
+U16 is most heavily loaded LDO\nADL5205 with both channels active needs 175 mA\nWe are dropping 2V from 7V0_P = 350 mW\nθJa = 34C/W so expect 11.9C rise\n\nWell within tolerance, so not even bothering to\ndo thermal calculations for the lighter ones.
 $EndSCHEMATC

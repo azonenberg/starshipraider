@@ -6,7 +6,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 8
 Title "Entry-Level Oscilloscope AFE Characterization Platform"
-Date "2020-03-27"
+Date "2020-03-28"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 ""
@@ -182,11 +182,8 @@ Text Label 5300 3900 2    50   ~ 0
 UART_TX
 Text Label 5300 4000 2    50   ~ 0
 UART_RX
-NoConn ~ 5300 3600
-NoConn ~ 5300 3500
 Wire Wire Line
 	6850 3300 6850 3400
-NoConn ~ 6850 3600
 NoConn ~ 3500 3700
 NoConn ~ 3500 3800
 Text HLabel 5300 3300 0    50   Output ~ 0
@@ -209,7 +206,7 @@ $EndComp
 Connection ~ 2450 2750
 Text HLabel 5300 3800 0    50   Output ~ 0
 RELAY_EN
-Text HLabel 6850 3500 0    50   Input ~ 0
+Text HLabel 6850 3500 0    50   BiDi ~ 0
 OVERVOLTAGE_N
 Text HLabel 6850 3000 0    50   Output ~ 0
 INPUT_RST
@@ -224,4 +221,101 @@ F 3 "" H 6950 3650 50  0001 C CNN
 	3    6950 3650
 	1    0    0    -1  
 $EndComp
+Text Label 6850 3600 2    50   ~ 0
+LED0
+Text Label 7100 1400 2    50   ~ 0
+LED0
+Text Label 5300 3500 2    50   ~ 0
+LED1
+Text Label 5300 3600 2    50   ~ 0
+LED2
+$Comp
+L device:R R65
+U 1 1 5EAAECD4
+P 7350 1400
+F 0 "R65" V 7300 1250 50  0000 C CNN
+F 1 "470" V 7350 1400 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 7280 1400 50  0001 C CNN
+F 3 "" H 7350 1400 50  0001 C CNN
+	1    7350 1400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7100 1400 7200 1400
+$Comp
+L device:LED D9
+U 1 1 5EAAF8A7
+P 7650 1400
+F 0 "D9" H 7643 1145 50  0000 C CNN
+F 1 "GREEN" H 7643 1236 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0603_LED" H 7650 1400 50  0001 C CNN
+F 3 "~" H 7650 1400 50  0001 C CNN
+	1    7650 1400
+	-1   0    0    1   
+$EndComp
+Text Label 7950 1400 0    50   ~ 0
+GND
+Wire Wire Line
+	7950 1400 7800 1400
+Text Label 7100 1800 2    50   ~ 0
+LED1
+$Comp
+L device:R R66
+U 1 1 5EAB0A48
+P 7350 1800
+F 0 "R66" V 7300 1650 50  0000 C CNN
+F 1 "470" V 7350 1800 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 7280 1800 50  0001 C CNN
+F 3 "" H 7350 1800 50  0001 C CNN
+	1    7350 1800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7100 1800 7200 1800
+$Comp
+L device:LED D10
+U 1 1 5EAB0A53
+P 7650 1800
+F 0 "D10" H 7643 1545 50  0000 C CNN
+F 1 "GREEN" H 7643 1636 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0603_LED" H 7650 1800 50  0001 C CNN
+F 3 "~" H 7650 1800 50  0001 C CNN
+	1    7650 1800
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7950 1800 7800 1800
+Text Label 7100 2200 2    50   ~ 0
+LED2
+$Comp
+L device:R R67
+U 1 1 5EAB1BC4
+P 7350 2200
+F 0 "R67" V 7300 2050 50  0000 C CNN
+F 1 "470" V 7350 2200 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 7280 2200 50  0001 C CNN
+F 3 "" H 7350 2200 50  0001 C CNN
+	1    7350 2200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7100 2200 7200 2200
+$Comp
+L device:LED D11
+U 1 1 5EAB1BCF
+P 7650 2200
+F 0 "D11" H 7643 1945 50  0000 C CNN
+F 1 "GREEN" H 7643 2036 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0603_LED" H 7650 2200 50  0001 C CNN
+F 3 "~" H 7650 2200 50  0001 C CNN
+	1    7650 2200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7950 2200 7800 2200
+Wire Wire Line
+	7950 1400 7950 1800
+Connection ~ 7950 1800
+Wire Wire Line
+	7950 1800 7950 2200
 $EndSCHEMATC

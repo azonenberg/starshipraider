@@ -6,7 +6,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 6 8
 Title "Entry-Level Oscilloscope AFE Characterization Platform"
-Date "2020-03-27"
+Date "2020-03-28"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 ""
@@ -408,8 +408,8 @@ Text HLabel 4300 4500 2    50   Input ~ 0
 SPI_SCLK
 Wire Wire Line
 	4300 4500 4050 4500
-Text Notes 4300 4700 0    50   ~ 0
-SPI interface runs at 5V levels
+Text Notes 2800 5850 0    50   ~ 0
+SPI interface runs at 5V levels from U2 to MCU\nMCU to U2 runs at 3.3V\nADL5205 Vih is 2V so no level shift needed
 Text HLabel 4300 4000 2    50   Input ~ 0
 VGA_PERF_MODE
 Wire Wire Line

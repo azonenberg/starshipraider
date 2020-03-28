@@ -6,7 +6,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 8
 Title "Entry-Level Oscilloscope AFE Characterization Platform"
-Date "2020-03-27"
+Date "2020-03-28"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Top Level"
@@ -34,8 +34,8 @@ F11 "DAC_CS_N" O L 4150 6750 50
 F12 "DAC_LDAC" O L 4150 6850 50 
 F13 "DAC_RST_N" O L 4150 6950 50 
 F14 "RELAY_EN" O R 5750 5950 50 
-F15 "OVERVOLTAGE_N" I R 5750 6050 50 
-F16 "INPUT_RST" O R 5750 6150 50 
+F15 "INPUT_RST" O R 5750 6150 50 
+F16 "OVERVOLTAGE_N" B R 5750 6050 50 
 $EndSheet
 $Sheet
 S 1150 650  1100 1600
