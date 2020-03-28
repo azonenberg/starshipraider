@@ -1,4 +1,4 @@
-368524915753118
+370110304296118
 azonenberg_pcb
 ATC_AT_0603
 
@@ -1152,8 +1152,8 @@ MODULE_TI_PTN78000A
 
 
 0
-0
-0
+5
+5
 azonenberg_pcb
 OHMITE_LVK12
 
@@ -1546,6 +1546,13 @@ SOT223-4
 0
 4
 4
+azonenberg_pcb
+SOT323_3
+
+
+0
+3
+3
 azonenberg_pcb
 SOT353_1
 

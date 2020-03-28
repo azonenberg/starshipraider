@@ -126,8 +126,6 @@ F 3 "" H 3450 3550 50  0001 C CNN
 	1    3450 3550
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3200 3400 3450 3400
 Text Label 3300 3700 2    50   ~ 0
 GND
 Wire Wire Line
@@ -539,4 +537,6 @@ F 3 "~" H 4200 4250 50  0001 C CNN
 $EndComp
 Text Label 4000 4250 2    50   ~ 0
 VIN_OFFSET
+Wire Wire Line
+	3200 3400 3450 3400
 $EndSCHEMATC
