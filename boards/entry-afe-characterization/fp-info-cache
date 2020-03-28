@@ -1,4 +1,4 @@
-360597985200118
+368524915753118
 azonenberg_pcb
 ATC_AT_0603
 
@@ -36,6 +36,13 @@ BGA_6_1.5x0.9_0.5MM_TI_YZP
 6
 azonenberg_pcb
 BGA_8_2x2_DEPOP1_0.5MM
+
+
+0
+8
+8
+azonenberg_pcb
+BGA_8_2x2_DEPOP1_0.5MM_TI_YZR
 
 
 0
@@ -798,6 +805,13 @@ DFN_10_0.5MM_3x3MM
 17
 11
 azonenberg_pcb
+DFN_12_0.5MM_3x3MM
+
+
+0
+17
+13
+azonenberg_pcb
 DFN_12_0.5MM_3x4MM
 
 
@@ -1134,6 +1148,13 @@ MODULE_MURATA_OKL-T3-W12
 12
 12
 azonenberg_pcb
+MODULE_TI_PTN78000A
+
+
+0
+0
+0
+azonenberg_pcb
 OHMITE_LVK12
 
 
@@ -1281,6 +1302,13 @@ QFN_24_0.5MM_4x4MM
 30
 25
 azonenberg_pcb
+QFN_28_0.5MM_4x4MM_NOPAD
+
+
+0
+28
+28
+azonenberg_pcb
 QFN_28_0.65MM_6x6MM
 
 
@@ -1301,6 +1329,13 @@ QFN_38_0.5MM_5x7MM
 0
 54
 39
+azonenberg_pcb
+QFN_40_0.5MM_6x6MM
+
+
+0
+50
+41
 azonenberg_pcb
 QFN_48_0.5MM_7x7MM
 
@@ -1600,8 +1635,8 @@ TO_253
 
 
 0
-0
-0
+4
+4
 azonenberg_pcb
 TSSOP_14_0.65MM_5p6MM
 
