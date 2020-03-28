@@ -18,8 +18,8 @@ off as invalid.
 
 ### System power input
 
-* [ ] Fusing and/or reverse voltage protection at system power inlet
-* [ ] Check total input capacitance and add inrush limiter if needed
+* [x] Fusing and/or reverse voltage protection at system power inlet
+* [x] Check total input capacitance and add inrush limiter if needed
 
 ### Regulators
 
@@ -59,6 +59,7 @@ off as invalid.
 * [ ] RC time constant for attenuators sane given ADC sampling frequency
 * [ ] Verify frequency response of RF components across entire operating range. Don't assume a "1-100 MHz" amplifier has the
 same gain across the whole range.
+* [ ] Verify polarity of op-amp feedback
 
 ### Clocks
 

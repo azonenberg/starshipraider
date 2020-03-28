@@ -1,4 +1,4 @@
-352671157704118
+357427244571118
 azonenberg_pcb
 ATC_AT_0603
 
@@ -343,6 +343,13 @@ CONN_HEADER_2.54MM_1x4
 4
 4
 azonenberg_pcb
+CONN_HEADER_2.54MM_1x5
+
+
+0
+6
+6
+azonenberg_pcb
 CONN_HEADER_2.54MM_1x6
 
 
@@ -638,6 +645,13 @@ CRYSTAL_2.5x2.0
 2
 azonenberg_pcb
 CRYSTAL_2x1.2MM
+
+
+0
+2
+2
+azonenberg_pcb
+DFN_2_0.62x0.32
 
 
 0
@@ -1350,6 +1364,13 @@ SERIALNUM_MOLEX_0916580020
 0
 1
 1
+azonenberg_pcb
+SMB
+
+
+0
+2
+2
 azonenberg_pcb
 SOD123
 
