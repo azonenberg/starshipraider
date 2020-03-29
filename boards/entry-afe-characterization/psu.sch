@@ -1705,4 +1705,19 @@ F 3 "~" H 8000 950 50  0001 C CNN
 	1    8000 950 
 	1    0    0    -1  
 $EndComp
+$Comp
+L Connector:Conn_01x01 TP?
+U 1 1 5EC911B5
+P 8000 1250
+AR Path="/5E7383DD/5EC911B5" Ref="TP?"  Part="1" 
+AR Path="/5E704852/5EC911B5" Ref="TP12"  Part="1" 
+F 0 "TP12" H 8080 1292 50  0000 L CNN
+F 1 "TESTPOINT" H 8080 1201 50  0000 L CNN
+F 2 "azonenberg_pcb:TESTPOINT_SMT_0.5MM" H 8000 1250 50  0001 C CNN
+F 3 "~" H 8000 1250 50  0001 C CNN
+	1    8000 1250
+	1    0    0    -1  
+$EndComp
+Text Label 7800 1250 2    50   ~ 0
+1V8
 $EndSCHEMATC
