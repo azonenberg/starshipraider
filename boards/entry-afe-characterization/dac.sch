@@ -179,8 +179,6 @@ Wire Wire Line
 	5750 2350 5000 2350
 Text HLabel 4550 4400 2    50   Output ~ 0
 VIN_OFFSET
-NoConn ~ 4550 4500
-NoConn ~ 4550 4600
 NoConn ~ 4550 4700
 Text HLabel 3350 3400 0    50   Input ~ 0
 GND
@@ -216,4 +214,54 @@ F 3 "~" H 7100 3900 50  0001 C CNN
 $EndComp
 Text Label 6900 3900 2    50   ~ 0
 GND
+$Comp
+L Connector:Conn_Coaxial J?
+U 1 1 5EBB7D3D
+P 5650 4450
+AR Path="/5E743C43/5EBB7D3D" Ref="J?"  Part="1" 
+AR Path="/5E704937/5EBB7D3D" Ref="J13"  Part="1" 
+F 0 "J13" H 5500 4400 50  0000 C CNN
+F 1 "SMA" H 5500 4300 50  0000 C CNN
+F 2 "azonenberg_pcb:CONN_SMA_EDGE_SAMTEC_SMA_J_P_H_ST_EM1" H 5650 4450 50  0001 C CNN
+F 3 "" H 5650 4450 50  0001 C CNN
+	1    5650 4450
+	1    0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_Coaxial J?
+U 1 1 5EBB7D43
+P 5650 4650
+AR Path="/5E743C43/5EBB7D43" Ref="J?"  Part="1" 
+AR Path="/5E704937/5EBB7D43" Ref="J14"  Part="1" 
+F 0 "J14" H 5500 4600 50  0000 C CNN
+F 1 "SMA" H 5500 4500 50  0000 C CNN
+F 2 "azonenberg_pcb:CONN_SMA_EDGE_SAMTEC_SMA_J_P_H_ST_EM1" H 5650 4650 50  0001 C CNN
+F 3 "" H 5650 4650 50  0001 C CNN
+	1    5650 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 4650 5400 4650
+Wire Wire Line
+	5400 4650 5400 4600
+Wire Wire Line
+	5400 4500 5400 4450
+Wire Wire Line
+	5400 4450 5500 4450
+Wire Wire Line
+	5650 4250 5950 4250
+Wire Wire Line
+	5950 4250 5950 4850
+Wire Wire Line
+	5950 4850 5650 4850
+Text Label 5950 4850 0    50   ~ 0
+GND
+Wire Wire Line
+	4550 4500 5400 4500
+Wire Wire Line
+	4550 4600 5400 4600
+Text Label 5100 4500 0    50   ~ 0
+VDAC1
+Text Label 5100 4600 0    50   ~ 0
+VDAC2
 $EndSCHEMATC

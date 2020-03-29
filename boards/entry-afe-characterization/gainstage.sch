@@ -30,14 +30,14 @@ $EndComp
 $Comp
 L analog-azonenberg:ADL5205 U?
 U 3 1 5E744B8F
-P 2800 1850
+P 2800 1500
 AR Path="/5E744B8F" Ref="U?"  Part="3" 
 AR Path="/5E743C43/5E744B8F" Ref="U2"  Part="3" 
-F 0 "U2" H 3325 2475 50  0000 C CNN
-F 1 "ADL5205" H 3325 2384 50  0000 C CNN
-F 2 "azonenberg_pcb:QFN_40_0.5MM_6x6MM" H 2800 1900 50  0001 C CNN
-F 3 "" H 2800 1900 50  0001 C CNN
-	3    2800 1850
+F 0 "U2" H 3325 2125 50  0000 C CNN
+F 1 "ADL5205" H 3325 2034 50  0000 C CNN
+F 2 "azonenberg_pcb:QFN_40_0.5MM_6x6MM" H 2800 1550 50  0001 C CNN
+F 3 "" H 2800 1550 50  0001 C CNN
+	3    2800 1500
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -53,15 +53,15 @@ F 3 "" H 2800 5650 50  0001 C CNN
 	1    2800 5600
 	1    0    0    -1  
 $EndComp
-Text HLabel 2700 1450 0    50   Input ~ 0
+Text HLabel 2700 1100 0    50   Input ~ 0
 GAIN_PWRUP
-Text HLabel 2700 1650 0    50   Input ~ 0
+Text HLabel 2700 1400 0    50   Input ~ 0
 VSHIFTED_P
-Text HLabel 2700 1750 0    50   Input ~ 0
+Text HLabel 2700 1300 0    50   Input ~ 0
 VSHIFTED_N
-Text HLabel 3950 1650 2    50   Output ~ 0
+Text HLabel 3950 1400 2    50   Output ~ 0
 VGAIN_P
-Text HLabel 3950 1750 2    50   Output ~ 0
+Text HLabel 3950 1300 2    50   Output ~ 0
 VGAIN_N
 Text Notes 2800 2800 0    50   ~ 0
 Break unused amp channel out to SMAs
@@ -148,10 +148,6 @@ Wire Wire Line
 Wire Wire Line
 	4500 2450 4600 2450
 Wire Wire Line
-	4750 2250 5050 2250
-Wire Wire Line
-	5050 2250 5050 2850
-Wire Wire Line
 	5050 2850 4750 2850
 Text Label 5050 2850 0    50   ~ 0
 GND
@@ -159,7 +155,7 @@ Text Label 4050 2500 0    50   ~ 0
 GOUT_P
 Text Label 4050 2600 0    50   ~ 0
 GOUT_N
-Text HLabel 3950 1450 2    50   Input ~ 0
+Text HLabel 3950 1100 2    50   Input ~ 0
 2V5_REF
 Text HLabel 2700 2300 0    50   Input ~ 0
 GAIN2_PWRUP
@@ -506,19 +502,10 @@ F 3 "~" H 5550 1250 50  0001 C CNN
 	1    5550 1250
 	1    0    0    -1  
 $EndComp
-Text Label 5350 2000 2    50   ~ 0
-GND
-$Comp
-L Connector:Conn_01x01 TP?
-U 1 1 5EAC8FAE
-P 5550 2000
-AR Path="/5E7383DD/5EAC8FAE" Ref="TP?"  Part="1" 
-AR Path="/5E743C43/5EAC8FAE" Ref="TP12"  Part="1" 
-F 0 "TP12" H 5630 2042 50  0000 L CNN
-F 1 "TESTCLIP" H 5630 1951 50  0000 L CNN
-F 2 "azonenberg_pcb:TESTPOINT_SMT_KEYSTONE_5016" H 5550 2000 50  0001 C CNN
-F 3 "~" H 5550 2000 50  0001 C CNN
-	1    5550 2000
-	1    0    0    -1  
-$EndComp
+Wire Wire Line
+	5050 2250 5050 2850
+Wire Wire Line
+	4750 2250 5050 2250
+Text Notes 2800 1600 0    50   ~ 0
+Swap P/N for routability
 $EndSCHEMATC
