@@ -6,7 +6,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 8 8
 Title "Entry-Level Oscilloscope AFE Characterization Platform"
-Date "2020-03-28"
+Date "2020-03-29"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 ""
@@ -1688,21 +1688,6 @@ F 1 "TESTCLIP" H 8080 601 50  0000 L CNN
 F 2 "azonenberg_pcb:TESTPOINT_SMT_KEYSTONE_5016" H 8000 650 50  0001 C CNN
 F 3 "~" H 8000 650 50  0001 C CNN
 	1    8000 650 
-	1    0    0    -1  
-$EndComp
-Text Label 7800 950  2    50   ~ 0
-GND
-$Comp
-L Connector:Conn_01x01 TP?
-U 1 1 5EB3F586
-P 8000 950
-AR Path="/5E7383DD/5EB3F586" Ref="TP?"  Part="1" 
-AR Path="/5E704852/5EB3F586" Ref="TP16"  Part="1" 
-F 0 "TP16" H 8080 992 50  0000 L CNN
-F 1 "TESTCLIP" H 8080 901 50  0000 L CNN
-F 2 "azonenberg_pcb:TESTPOINT_SMT_KEYSTONE_5016" H 8000 950 50  0001 C CNN
-F 3 "~" H 8000 950 50  0001 C CNN
-	1    8000 950 
 	1    0    0    -1  
 $EndComp
 $Comp
