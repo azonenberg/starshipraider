@@ -8,7 +8,7 @@
 ## Decoupling
 
 * [x] Decoupling caps as close to power pins as possible
-* [ ] Low inductance mounting used for decoupling (prefer ViP if available, otherwise "[]8" shaped side vias
+* [x] Low inductance mounting used for decoupling (prefer ViP if available, otherwise "[]8" shaped side vias
 
 ## DFM / yield enhancement
 
@@ -30,7 +30,7 @@
 * [x] Confirm components are available in the selected package
 * [x] Confirm components (especially connectors and power regulators) are capable of desired current in the selected package
 * [x] Verify schematic symbol matches the selected package
-* [ ] Confirm pinout diagram is from top vs bottom of package
+* [x] Confirm pinout diagram is from top vs bottom of package
 * [x] (recommended) PCB printed 1:1 on paper and checked against physical parts
 * [x] 3D models obtained (if available) and checked against footprints
 * [x] Soldermask apertures on all SMT lands and PTH pads
@@ -42,7 +42,7 @@
 
 ## High-speed signals
 
-* [ ] Sufficient clearance to potential aggressors
+* [x] Sufficient clearance to potential aggressors
 * [x] Length matched if required
 * [x] Minimize crossing reference plane splits/slots or changing layers, use caps/stitching vias if unavoidable
 * [x] Confirm fab can do copper to edge of PCB for edge launch connectors
@@ -50,11 +50,11 @@
 
 ## Power
 * [x] Minimal slots in planes from via antipads
-* [ ] Sufficient width for planes/traces for required current
+* [x] Sufficient width for planes/traces for required current
 
 ## Sensitive analog
 * [x] Guard ring / EMI cages provided if needed
-* [ ] Physically separated from high current SMPS or other noise sources
+* [x] Physically separated from high current SMPS or other noise sources
 * [x] Consider microphone effect on MLCCs if near strong sound sources
 
 ## Mechanical
@@ -96,7 +96,7 @@ bending stress
 * [x] Text not overlapping drills or component pads
 * [x] Text removed entirely in, or moved outside of, high component/via density areas
 * [x] Traceability markings (rev, date, name, etc) provided
-* [ ] Silkscreen box provided for writing/sticking serial number
+* [x] Silkscreen box provided for writing/sticking serial number
 * [x] Text mirrored properly on bottom layer
 
 ## Flex specific
@@ -104,6 +104,6 @@ bending stress
 * [x] Teardrops on all wire-to-pad connections
 
 ## CAM production
-* [ ] KiCAD specific: rerun DRC and zone fills before exporting CAM files to ensure proper results
-* [ ] Export gerber/drill files at the same time to ensure consistency
-* [ ] Visually verify final CAM files to ensure no obvious misalignments
+* [x] KiCAD specific: rerun DRC and zone fills before exporting CAM files to ensure proper results
+* [x] Export gerber/drill files at the same time to ensure consistency
+* [x] Visually verify final CAM files to ensure no obvious misalignments
