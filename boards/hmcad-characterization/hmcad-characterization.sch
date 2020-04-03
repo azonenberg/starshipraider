@@ -1,0 +1,1281 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A3 16535 11693
+encoding utf-8
+Sheet 1 1
+Title "HMCAD1520 Test Board"
+Date "2020-04-02"
+Rev "0.1"
+Comp "Antikernel Labs"
+Comment1 "Andrew D. Zonenberg"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L special-azonenberg:CONN_INTEGRALSTICK_FPGA_HOST J12
+U 1 1 5E8588AF
+P 12550 5550
+F 0 "J12" H 13025 8725 50  0000 C CNN
+F 1 "CONN_INTEGRALSTICK_FPGA_HOST" H 13025 8634 50  0000 C CNN
+F 2 "" H 12550 5550 50  0001 C CNN
+F 3 "" H 12550 5550 50  0001 C CNN
+	1    12550 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L special-azonenberg:CONN_INTEGRALSTICK_FPGA_HOST J12
+U 2 1 5E858D22
+P 7600 8550
+F 0 "J12" H 7600 8500 50  0000 L CNN
+F 1 "CONN_INTEGRALSTICK_FPGA_HOST" H 7600 8400 50  0000 L CNN
+F 2 "" H 7600 8550 50  0001 C CNN
+F 3 "" H 7600 8550 50  0001 C CNN
+	2    7600 8550
+	1    0    0    -1  
+$EndComp
+$Comp
+L special-azonenberg:CONN_INTEGRALSTICK_FPGA_HOST J12
+U 3 1 5E85AD2E
+P 12550 9450
+F 0 "J12" H 12550 9400 50  0000 L CNN
+F 1 "CONN_INTEGRALSTICK_FPGA_HOST" H 12550 9300 50  0000 L CNN
+F 2 "" H 12550 9450 50  0001 C CNN
+F 3 "" H 12550 9450 50  0001 C CNN
+	3    12550 9450
+	1    0    0    -1  
+$EndComp
+$Comp
+L special-azonenberg:CONN_INTEGRALSTICK_FPGA_HOST J12
+U 4 1 5E85E357
+P 9850 9950
+F 0 "J12" H 9850 9900 50  0000 L CNN
+F 1 "CONN_INTEGRALSTICK_FPGA_HOST" H 9850 9800 50  0000 L CNN
+F 2 "" H 9850 9950 50  0001 C CNN
+F 3 "" H 9850 9950 50  0001 C CNN
+	4    9850 9950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power-azonenberg:CONN_3_PWROUT J1
+U 1 1 5E8606D1
+P 1150 900
+F 0 "J1" H 1017 1200 50  0000 C CNN
+F 1 "BARREL" H 1017 1116 40  0000 C CNN
+F 2 "" H 1150 900 60  0000 C CNN
+F 3 "" H 1150 900 60  0000 C CNN
+	1    1150 900 
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 800  1500 800 
+Text Label 1600 900  0    50   ~ 0
+GND
+Wire Wire Line
+	1600 900  1500 900 
+$Comp
+L osc-azonenberg:OSC_LVDS U1
+U 1 1 5E87D642
+P 1850 2100
+F 0 "U1" H 2150 2697 60  0000 C CNN
+F 1 "ASG2-D-X-A-1000.000MHZ" H 2150 2591 60  0000 C CNN
+F 2 "" H 1850 2100 60  0000 C CNN
+F 3 "" H 1850 2100 60  0000 C CNN
+	1    1850 2100
+	1    0    0    -1  
+$EndComp
+Text Label 2750 1850 0    50   ~ 0
+CLK_1GHZ_P
+Text Label 2750 1950 0    50   ~ 0
+CLK_1GHZ_N
+Text Label 1100 1750 2    50   ~ 0
+3V3
+Wire Wire Line
+	1550 1750 1550 1850
+Connection ~ 1550 1750
+Text Label 1100 2050 2    50   ~ 0
+GND
+Wire Wire Line
+	1550 2050 1550 1950
+Connection ~ 1550 2050
+$Comp
+L device:C C1
+U 1 1 5E881A38
+P 1100 1900
+F 0 "C1" H 1215 1946 50  0000 L CNN
+F 1 "0.47 uF" H 1215 1855 50  0000 L CNN
+F 2 "" H 1138 1750 50  0001 C CNN
+F 3 "" H 1100 1900 50  0001 C CNN
+	1    1100 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1100 1750 1550 1750
+Wire Wire Line
+	1100 2050 1550 2050
+$Comp
+L osc-azonenberg:OSC_LVDS U2
+U 1 1 5E88338D
+P 1850 3000
+F 0 "U2" H 2150 3597 60  0000 C CNN
+F 1 "SIT9122AI-2D3-33E625.000000T" H 2150 3491 60  0000 C CNN
+F 2 "" H 1850 3000 60  0000 C CNN
+F 3 "" H 1850 3000 60  0000 C CNN
+	1    1850 3000
+	1    0    0    -1  
+$EndComp
+Text Label 1100 2650 2    50   ~ 0
+3V3
+Text Label 1100 2950 2    50   ~ 0
+GND
+$Comp
+L device:C C2
+U 1 1 5E8841CC
+P 1100 2800
+F 0 "C2" H 1215 2846 50  0000 L CNN
+F 1 "0.47 uF" H 1215 2755 50  0000 L CNN
+F 2 "" H 1138 2650 50  0001 C CNN
+F 3 "" H 1100 2800 50  0001 C CNN
+	1    1100 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1100 2650 1550 2650
+Wire Wire Line
+	1100 2950 1550 2950
+Wire Wire Line
+	1550 2750 1550 2650
+Connection ~ 1550 2650
+Wire Wire Line
+	1550 2850 1550 2950
+Connection ~ 1550 2950
+Text Label 2750 2750 0    50   ~ 0
+CLK_625MHZ_P
+Text Label 2750 2850 0    50   ~ 0
+CLK_625MHZ_N
+$Comp
+L special-azonenberg:PI6C59S6005 U3
+U 1 1 5E887177
+P 2450 5350
+F 0 "U3" H 2900 7575 50  0000 C CNN
+F 1 "PI6C59S6005" H 2900 7484 50  0000 C CNN
+F 2 "" H 2450 5050 50  0001 C CNN
+F 3 "" H 2450 5050 50  0001 C CNN
+	1    2450 5350
+	1    0    0    -1  
+$EndComp
+Text Label 2150 3350 2    50   ~ 0
+3V3
+Wire Wire Line
+	2150 3350 2350 3350
+Wire Wire Line
+	2350 3350 2350 3450
+Connection ~ 2350 3350
+Connection ~ 2350 3450
+Wire Wire Line
+	2350 3450 2350 3550
+Connection ~ 2350 3550
+Wire Wire Line
+	2350 3550 2350 3650
+Text Label 2150 3850 2    50   ~ 0
+GND
+Wire Wire Line
+	2150 3850 2350 3850
+Text Label 2350 4050 2    50   ~ 0
+3V3
+Text Label 2350 4150 2    50   ~ 0
+BUF_IN_SEL
+Text Label 9650 6900 2    50   ~ 0
+BUF_IN_SEL
+Text Label 2350 4250 2    50   ~ 0
+BUF_MUXSEL
+Text Label 9650 6800 2    50   ~ 0
+BUF_MUXSEL
+Text Label 2350 4350 2    50   ~ 0
+GND
+Text Notes 2450 5450 0    50   ~ 0
+OS=0 means CML output levels
+Wire Wire Line
+	2350 4550 2250 4550
+Wire Wire Line
+	2250 4550 2250 4650
+Wire Wire Line
+	2250 4650 2350 4650
+$Comp
+L device:C C4
+U 1 1 5E890104
+P 2100 4650
+F 0 "C4" V 1848 4650 50  0000 C CNN
+F 1 "0.01 uF" V 1939 4650 50  0000 C CNN
+F 2 "" H 2138 4500 50  0001 C CNN
+F 3 "" H 2100 4650 50  0001 C CNN
+	1    2100 4650
+	0    1    1    0   
+$EndComp
+Connection ~ 2250 4650
+Text Label 1950 4650 2    50   ~ 0
+GND
+$Comp
+L device:C C11
+U 1 1 5E891EC2
+P 4100 3900
+F 0 "C11" V 4050 3750 50  0000 C CNN
+F 1 "0.1 uF" V 4050 4100 50  0000 C CNN
+F 2 "" H 4138 3750 50  0001 C CNN
+F 3 "" H 4100 3900 50  0001 C CNN
+	1    4100 3900
+	0    1    1    0   
+$EndComp
+$Comp
+L device:C C12
+U 1 1 5E8937F5
+P 4100 4100
+F 0 "C12" V 4050 3950 50  0000 C CNN
+F 1 "0.1 uF" V 4050 4300 50  0000 C CNN
+F 2 "" H 4138 3950 50  0001 C CNN
+F 3 "" H 4100 4100 50  0001 C CNN
+	1    4100 4100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3450 3950 3750 3950
+Wire Wire Line
+	3750 3950 3750 3900
+Wire Wire Line
+	3750 3900 3950 3900
+Wire Wire Line
+	3450 4050 3750 4050
+Wire Wire Line
+	3750 4050 3750 4100
+Wire Wire Line
+	3750 4100 3950 4100
+Text Label 4550 3900 0    50   ~ 0
+ADC_CLK_P
+Wire Wire Line
+	4550 3900 4250 3900
+Text Label 4550 4100 0    50   ~ 0
+ADC_CLK_N
+Wire Wire Line
+	4550 4100 4250 4100
+$Comp
+L device:C C9
+U 1 1 5E897CD5
+P 3850 3450
+F 0 "C9" H 3965 3496 50  0000 L CNN
+F 1 "0.47 uF" H 3965 3405 50  0000 L CNN
+F 2 "" H 3888 3300 50  0001 C CNN
+F 3 "" H 3850 3450 50  0001 C CNN
+	1    3850 3450
+	1    0    0    -1  
+$EndComp
+Text Label 3850 3300 2    50   ~ 0
+3V3
+Text Label 3850 3600 2    50   ~ 0
+GND
+$Comp
+L device:C C15
+U 1 1 5E898F18
+P 4400 3450
+F 0 "C15" H 4515 3496 50  0000 L CNN
+F 1 "0.47 uF" H 4515 3405 50  0000 L CNN
+F 2 "" H 4438 3300 50  0001 C CNN
+F 3 "" H 4400 3450 50  0001 C CNN
+	1    4400 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C18
+U 1 1 5E8991B6
+P 4950 3450
+F 0 "C18" H 5065 3496 50  0000 L CNN
+F 1 "0.47 uF" H 5065 3405 50  0000 L CNN
+F 2 "" H 4988 3300 50  0001 C CNN
+F 3 "" H 4950 3450 50  0001 C CNN
+	1    4950 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C21
+U 1 1 5E89980C
+P 5500 3450
+F 0 "C21" H 5615 3496 50  0000 L CNN
+F 1 "0.47 uF" H 5615 3405 50  0000 L CNN
+F 2 "" H 5538 3300 50  0001 C CNN
+F 3 "" H 5500 3450 50  0001 C CNN
+	1    5500 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 3300 4950 3300
+Connection ~ 4400 3300
+Wire Wire Line
+	4400 3300 3850 3300
+Connection ~ 4950 3300
+Wire Wire Line
+	4950 3300 4400 3300
+Wire Wire Line
+	3850 3600 4400 3600
+Connection ~ 4400 3600
+Wire Wire Line
+	4400 3600 4950 3600
+Connection ~ 4950 3600
+Wire Wire Line
+	4950 3600 5500 3600
+$Comp
+L device:C C13
+U 1 1 5E89BF4D
+P 4100 5100
+F 0 "C13" V 4050 4950 50  0000 C CNN
+F 1 "0.1 uF" V 4050 5300 50  0000 C CNN
+F 2 "" H 4138 4950 50  0001 C CNN
+F 3 "" H 4100 5100 50  0001 C CNN
+	1    4100 5100
+	0    1    1    0   
+$EndComp
+$Comp
+L device:C C14
+U 1 1 5E89BF57
+P 4100 5300
+F 0 "C14" V 4050 5150 50  0000 C CNN
+F 1 "0.1 uF" V 4050 5500 50  0000 C CNN
+F 2 "" H 4138 5150 50  0001 C CNN
+F 3 "" H 4100 5300 50  0001 C CNN
+	1    4100 5300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3450 5150 3750 5150
+Wire Wire Line
+	3750 5150 3750 5100
+Wire Wire Line
+	3750 5100 3950 5100
+Wire Wire Line
+	3450 5250 3750 5250
+Wire Wire Line
+	3750 5250 3750 5300
+Wire Wire Line
+	3750 5300 3950 5300
+Text Label 4550 5100 0    50   ~ 0
+DEBUG_CLK_P
+Text Label 4550 5300 0    50   ~ 0
+DEBUG_CLK_N
+$Comp
+L device:C C5
+U 1 1 5E89D866
+P 3550 1800
+F 0 "C5" V 3500 1650 50  0000 C CNN
+F 1 "0.1 uF" V 3500 2000 50  0000 C CNN
+F 2 "" H 3588 1650 50  0001 C CNN
+F 3 "" H 3550 1800 50  0001 C CNN
+	1    3550 1800
+	0    1    1    0   
+$EndComp
+$Comp
+L device:C C6
+U 1 1 5E89D870
+P 3550 2000
+F 0 "C6" V 3500 1850 50  0000 C CNN
+F 1 "0.1 uF" V 3500 2200 50  0000 C CNN
+F 2 "" H 3588 1850 50  0001 C CNN
+F 3 "" H 3550 2000 50  0001 C CNN
+	1    3550 2000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2750 1850 3300 1850
+Wire Wire Line
+	3300 1850 3300 1800
+Wire Wire Line
+	3300 1800 3400 1800
+Wire Wire Line
+	2750 1950 3300 1950
+Wire Wire Line
+	3300 1950 3300 2000
+Wire Wire Line
+	3300 2000 3400 2000
+$Comp
+L device:C C7
+U 1 1 5E8A1DEE
+P 3550 2700
+F 0 "C7" V 3500 2550 50  0000 C CNN
+F 1 "0.1 uF" V 3500 2900 50  0000 C CNN
+F 2 "" H 3588 2550 50  0001 C CNN
+F 3 "" H 3550 2700 50  0001 C CNN
+	1    3550 2700
+	0    1    1    0   
+$EndComp
+$Comp
+L device:C C8
+U 1 1 5E8A1DF8
+P 3550 2900
+F 0 "C8" V 3500 2750 50  0000 C CNN
+F 1 "0.1 uF" V 3500 3100 50  0000 C CNN
+F 2 "" H 3588 2750 50  0001 C CNN
+F 3 "" H 3550 2900 50  0001 C CNN
+	1    3550 2900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2750 2850 3300 2850
+Wire Wire Line
+	3300 2850 3300 2900
+Wire Wire Line
+	3300 2900 3400 2900
+Wire Wire Line
+	2750 2750 3300 2750
+Wire Wire Line
+	3300 2750 3300 2700
+Wire Wire Line
+	3300 2700 3400 2700
+Text Label 3950 2700 0    50   ~ 0
+CLK_625MHZ_AC_P
+Wire Wire Line
+	3950 2700 3700 2700
+Text Label 3950 2900 0    50   ~ 0
+CLK_625MHZ_AC_N
+Wire Wire Line
+	3950 2900 3700 2900
+Text Label 3950 1800 0    50   ~ 0
+CLK_1GHZ_AC_P
+Text Label 3950 2000 0    50   ~ 0
+CLK_1GHZ_AC_N
+Wire Wire Line
+	3950 2000 3700 2000
+Wire Wire Line
+	3700 1800 3950 1800
+Text Label 2350 4850 2    50   ~ 0
+CLK_1GHZ_AC_P
+Text Label 2350 4950 2    50   ~ 0
+CLK_1GHZ_AC_N
+Text Label 2350 5150 2    50   ~ 0
+CLK_625MHZ_AC_P
+Text Label 2350 5250 2    50   ~ 0
+CLK_625MHZ_AC_N
+$Comp
+L Connector:Conn_Coaxial J11
+U 1 1 5E8AC5D6
+P 5400 5300
+F 0 "J11" H 5500 5275 50  0000 L CNN
+F 1 "SMA" H 5500 5184 50  0000 L CNN
+F 2 "" H 5400 5300 50  0001 C CNN
+F 3 "" H 5400 5300 50  0001 C CNN
+	1    5400 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_Coaxial J10
+U 1 1 5E8ACE5D
+P 5400 5100
+F 0 "J10" H 5500 4982 50  0000 L CNN
+F 1 "SMA" H 5500 5073 50  0000 L CNN
+F 2 "" H 5400 5100 50  0001 C CNN
+F 3 "" H 5400 5100 50  0001 C CNN
+	1    5400 5100
+	1    0    0    1   
+$EndComp
+Text Label 5400 4900 0    50   ~ 0
+GND
+Wire Wire Line
+	5400 4900 5800 4900
+Wire Wire Line
+	5800 4900 5800 5500
+Wire Wire Line
+	5800 5500 5400 5500
+Wire Wire Line
+	4250 5300 5250 5300
+Wire Wire Line
+	4250 5100 5250 5100
+NoConn ~ 3450 4950
+NoConn ~ 3450 4850
+NoConn ~ 3450 4650
+NoConn ~ 3450 4550
+NoConn ~ 3450 4350
+NoConn ~ 3450 4250
+$Comp
+L analog-azonenberg:HMCAD1520 U5
+U 1 1 5E8723A3
+P 2450 10650
+F 0 "U5" H 2925 14425 50  0000 C CNN
+F 1 "HMCAD1520" H 2925 14334 50  0000 C CNN
+F 2 "" H 2450 10650 50  0001 C CNN
+F 3 "" H 2450 10650 50  0001 C CNN
+	1    2450 10650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power-azonenberg:LT3042 U4
+U 1 1 5E8BD0E8
+P 2450 6650
+F 0 "U4" H 2775 7625 50  0000 C CNN
+F 1 "LT3042" H 2775 7534 50  0000 C CNN
+F 2 "" H 2450 6650 50  0001 C CNN
+F 3 "" H 2450 6650 50  0001 C CNN
+	1    2450 6650
+	1    0    0    -1  
+$EndComp
+Text Label 1150 5900 2    50   ~ 0
+3V3
+Wire Wire Line
+	2350 5900 2350 6000
+Connection ~ 2350 5900
+Connection ~ 2350 6000
+Wire Wire Line
+	2350 6000 2350 6100
+Text Label 1750 6300 2    50   ~ 0
+GND
+Wire Wire Line
+	2350 6300 2350 6400
+Connection ~ 2350 6300
+$Comp
+L device:C C3
+U 1 1 5E8C1C9F
+P 1850 6150
+F 0 "C3" H 1735 6104 50  0000 R CNN
+F 1 "4.7 uF" H 1735 6195 50  0000 R CNN
+F 2 "" H 1888 6000 50  0001 C CNN
+F 3 "" H 1850 6150 50  0001 C CNN
+	1    1850 6150
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1750 6300 1850 6300
+Connection ~ 1850 6300
+Wire Wire Line
+	1850 6300 2350 6300
+Wire Wire Line
+	1750 5900 1850 5900
+Wire Wire Line
+	1850 5900 1850 6000
+Connection ~ 1850 5900
+Wire Wire Line
+	1850 5900 2350 5900
+$Comp
+L device:C C10
+U 1 1 5E8C788A
+P 4050 6050
+F 0 "C10" H 3935 6004 50  0000 R CNN
+F 1 "4.7 uF" H 3935 6095 50  0000 R CNN
+F 2 "" H 4088 5900 50  0001 C CNN
+F 3 "" H 4050 6050 50  0001 C CNN
+	1    4050 6050
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3200 5900 3200 6000
+Wire Wire Line
+	3200 5900 4050 5900
+Connection ~ 3200 5900
+Text Label 4050 5900 0    50   ~ 0
+A1V8
+Text Label 4050 6200 0    50   ~ 0
+GND
+Text Label 3200 6300 0    50   ~ 0
+3V3
+NoConn ~ 3200 6200
+$Comp
+L device:R R1
+U 1 1 5E8CF5A2
+P 3400 6550
+F 0 "R1" H 3470 6596 50  0000 L CNN
+F 1 "33K 1%" H 3470 6505 50  0000 L CNN
+F 2 "" V 3330 6550 50  0001 C CNN
+F 3 "" H 3400 6550 50  0001 C CNN
+	1    3400 6550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3200 6400 3400 6400
+Text Label 3300 6700 2    50   ~ 0
+GND
+Wire Wire Line
+	3300 6700 3400 6700
+Wire Wire Line
+	2350 6400 2350 6600
+Connection ~ 2350 6400
+$Comp
+L passive-azonenberg:INDUCTOR_PWROUT FB1
+U 1 1 5E8D711E
+P 1450 5900
+F 0 "FB1" V 1292 5900 40  0000 C CNN
+F 1 "300R" V 1368 5900 40  0000 C CNN
+F 2 "" H 1450 5900 60  0000 C CNN
+F 3 "" H 1450 5900 60  0000 C CNN
+	1    1450 5900
+	0    1    1    0   
+$EndComp
+Text Label 2100 7100 2    50   ~ 0
+A1V8
+Wire Wire Line
+	2100 7100 2350 7100
+Wire Wire Line
+	2350 7100 2350 7200
+Connection ~ 2350 7100
+Connection ~ 2350 7200
+Wire Wire Line
+	2350 7200 2350 7300
+$Comp
+L Connector:Conn_01x01 TP1
+U 1 1 5E8DC792
+P 3900 7100
+F 0 "TP1" H 3980 7142 50  0000 L CNN
+F 1 "TESTPOINT" H 3980 7051 50  0000 L CNN
+F 2 "" H 3900 7100 50  0001 C CNN
+F 3 "~" H 3900 7100 50  0001 C CNN
+	1    3900 7100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3700 7100 3500 7100
+$Comp
+L device:C C17
+U 1 1 5E8DEE83
+P 4700 7200
+F 0 "C17" H 4585 7154 50  0000 R CNN
+F 1 "4.7 uF" H 4585 7245 50  0000 R CNN
+F 2 "" H 4738 7050 50  0001 C CNN
+F 3 "" H 4700 7200 50  0001 C CNN
+	1    4700 7200
+	-1   0    0    1   
+$EndComp
+$Comp
+L device:C C20
+U 1 1 5E8DF409
+P 5150 7200
+F 0 "C20" H 5035 7154 50  0000 R CNN
+F 1 "0.47 uF" H 5035 7245 50  0000 R CNN
+F 2 "" H 5188 7050 50  0001 C CNN
+F 3 "" H 5150 7200 50  0001 C CNN
+	1    5150 7200
+	-1   0    0    1   
+$EndComp
+$Comp
+L device:C C23
+U 1 1 5E8DF7B4
+P 5700 7200
+F 0 "C23" H 5585 7154 50  0000 R CNN
+F 1 "0.47 uF" H 5585 7245 50  0000 R CNN
+F 2 "" H 5738 7050 50  0001 C CNN
+F 3 "" H 5700 7200 50  0001 C CNN
+	1    5700 7200
+	-1   0    0    1   
+$EndComp
+$Comp
+L device:C C25
+U 1 1 5E8DFAAB
+P 6250 7200
+F 0 "C25" H 6135 7154 50  0000 R CNN
+F 1 "0.47 uF" H 6135 7245 50  0000 R CNN
+F 2 "" H 6288 7050 50  0001 C CNN
+F 3 "" H 6250 7200 50  0001 C CNN
+	1    6250 7200
+	-1   0    0    1   
+$EndComp
+Text Label 4700 7050 2    50   ~ 0
+A1V8
+Text Label 4700 7350 2    50   ~ 0
+GND
+Wire Wire Line
+	4700 7350 5150 7350
+Connection ~ 5150 7350
+Wire Wire Line
+	5150 7350 5700 7350
+Connection ~ 5700 7350
+Wire Wire Line
+	5700 7350 6250 7350
+Wire Wire Line
+	4700 7050 5150 7050
+Connection ~ 5150 7050
+Wire Wire Line
+	5150 7050 5700 7050
+Connection ~ 5700 7050
+Wire Wire Line
+	5700 7050 6250 7050
+Text Label 2100 7500 2    50   ~ 0
+1V8
+Wire Wire Line
+	2100 7500 2350 7500
+Wire Wire Line
+	2350 7500 2350 7600
+Connection ~ 2350 7500
+Wire Wire Line
+	2350 7600 2350 7700
+Connection ~ 2350 7600
+Text Label 4700 6550 2    50   ~ 0
+1V8
+$Comp
+L device:C C16
+U 1 1 5E8EA1F4
+P 4700 6700
+F 0 "C16" H 4585 6654 50  0000 R CNN
+F 1 "4.7 uF" H 4585 6745 50  0000 R CNN
+F 2 "" H 4738 6550 50  0001 C CNN
+F 3 "" H 4700 6700 50  0001 C CNN
+	1    4700 6700
+	-1   0    0    1   
+$EndComp
+Text Label 4700 6850 2    50   ~ 0
+GND
+$Comp
+L device:C C19
+U 1 1 5E8EAF2C
+P 5150 6700
+F 0 "C19" H 5035 6654 50  0000 R CNN
+F 1 "0.47 uF" H 5035 6745 50  0000 R CNN
+F 2 "" H 5188 6550 50  0001 C CNN
+F 3 "" H 5150 6700 50  0001 C CNN
+	1    5150 6700
+	-1   0    0    1   
+$EndComp
+$Comp
+L device:C C22
+U 1 1 5E8EB559
+P 5700 6700
+F 0 "C22" H 5585 6654 50  0000 R CNN
+F 1 "0.47 uF" H 5585 6745 50  0000 R CNN
+F 2 "" H 5738 6550 50  0001 C CNN
+F 3 "" H 5700 6700 50  0001 C CNN
+	1    5700 6700
+	-1   0    0    1   
+$EndComp
+$Comp
+L device:C C24
+U 1 1 5E8EB9D4
+P 6250 6700
+F 0 "C24" H 6135 6654 50  0000 R CNN
+F 1 "0.47 uF" H 6135 6745 50  0000 R CNN
+F 2 "" H 6288 6550 50  0001 C CNN
+F 3 "" H 6250 6700 50  0001 C CNN
+	1    6250 6700
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6250 6550 5700 6550
+Connection ~ 5150 6550
+Wire Wire Line
+	5150 6550 4700 6550
+Connection ~ 5700 6550
+Wire Wire Line
+	5700 6550 5150 6550
+Wire Wire Line
+	4700 6850 5150 6850
+Connection ~ 5150 6850
+Wire Wire Line
+	5150 6850 5700 6850
+Connection ~ 5700 6850
+Wire Wire Line
+	5700 6850 6250 6850
+Text Label 2100 7900 2    50   ~ 0
+GND
+Wire Wire Line
+	2100 7900 2350 7900
+Wire Wire Line
+	2350 7900 2350 8000
+Connection ~ 2350 7900
+Connection ~ 2350 8000
+Wire Wire Line
+	2350 8000 2350 8100
+Connection ~ 2350 8100
+Wire Wire Line
+	2350 8100 2350 8200
+Connection ~ 2350 8200
+Wire Wire Line
+	2350 8200 2350 8400
+Connection ~ 2350 8400
+Wire Wire Line
+	2350 8400 2350 8500
+Text Label 2100 8700 2    50   ~ 0
+SPI_CS_N
+Wire Wire Line
+	2100 8700 2350 8700
+Text Label 2100 8800 2    50   ~ 0
+SPI_SDATA
+Wire Wire Line
+	2100 8800 2350 8800
+Text Label 2100 8900 2    50   ~ 0
+SPI_SCLK
+Wire Wire Line
+	2100 8900 2350 8900
+Text Label 2100 9000 2    50   ~ 0
+ADC_RST_N
+Wire Wire Line
+	2100 9000 2350 9000
+Text Label 2100 9100 2    50   ~ 0
+ADC_PD
+Wire Wire Line
+	2100 9100 2350 9100
+Text Label 2350 9300 2    50   ~ 0
+ADC_CLK_P
+Text Label 2350 9400 2    50   ~ 0
+ADC_CLK_N
+Text Label 2350 9600 2    50   ~ 0
+IN1_P
+Text Label 2350 9700 2    50   ~ 0
+IN1_N
+Text Label 2350 9900 2    50   ~ 0
+IN2_P
+Text Label 2350 10000 2    50   ~ 0
+IN2_N
+Text Label 2350 10200 2    50   ~ 0
+IN3_P
+Text Label 2350 10300 2    50   ~ 0
+IN3_N
+Text Label 2350 10500 2    50   ~ 0
+IN4_P
+Text Label 2350 10600 2    50   ~ 0
+IN4_N
+Text Label 4600 7850 2    50   ~ 0
+IN1_P
+Text Label 4600 8050 2    50   ~ 0
+IN1_N
+Text Label 3500 7800 0    50   ~ 0
+LVDS_1A_P
+Text Label 3500 7900 0    50   ~ 0
+LVDS_1A_N
+Text Label 3500 8100 0    50   ~ 0
+LVDS_1B_P
+Text Label 3500 8200 0    50   ~ 0
+LVDS_1B_N
+Text Label 3500 8400 0    50   ~ 0
+LVDS_2A_P
+Text Label 3500 8500 0    50   ~ 0
+LVDS_2A_N
+Text Label 3500 8700 0    50   ~ 0
+LVDS_2B_P
+Text Label 3500 8800 0    50   ~ 0
+LVDS_2B_N
+Text Label 3500 9000 0    50   ~ 0
+LVDS_3A_P
+Text Label 3500 9100 0    50   ~ 0
+LVDS_3A_N
+Text Label 3500 9300 0    50   ~ 0
+LVDS_3B_P
+Text Label 3500 9400 0    50   ~ 0
+LVDS_3B_N
+Text Label 3500 9600 0    50   ~ 0
+LVDS_4A_P
+Text Label 3500 9700 0    50   ~ 0
+LVDS_4A_N
+Text Label 3500 9900 0    50   ~ 0
+LVDS_4B_P
+Text Label 3500 10000 0    50   ~ 0
+LVDS_4B_N
+Text Label 7400 6600 2    50   ~ 0
+SPI_CS_N
+Text Label 7400 6700 2    50   ~ 0
+SPI_SDATA
+Text Label 7400 6800 2    50   ~ 0
+SPI_SCLK
+Text Label 7400 6900 2    50   ~ 0
+ADC_RST_N
+Text Label 7400 7000 2    50   ~ 0
+ADC_PD
+Text Notes 7600 8850 0    50   ~ 0
+Can freely reassign
+Text Label 12350 6600 2    50   ~ 0
+LVDS_1A_P
+Text Label 12350 6700 2    50   ~ 0
+LVDS_1A_N
+Text Label 12350 6900 2    50   ~ 0
+LVDS_1B_P
+Text Label 12350 7000 2    50   ~ 0
+LVDS_1B_N
+Text Label 12350 7200 2    50   ~ 0
+LVDS_2A_P
+Text Label 12350 7300 2    50   ~ 0
+LVDS_2A_N
+Text Label 12350 7500 2    50   ~ 0
+LVDS_2B_P
+Text Label 12350 7600 2    50   ~ 0
+LVDS_2B_N
+Text Label 12350 7800 2    50   ~ 0
+LVDS_3A_P
+Text Label 12350 7900 2    50   ~ 0
+LVDS_3A_N
+Text Label 12350 8100 2    50   ~ 0
+LVDS_3B_P
+Text Label 12350 8200 2    50   ~ 0
+LVDS_3B_N
+Text Label 12350 8400 2    50   ~ 0
+LVDS_4A_P
+Text Label 12350 8500 2    50   ~ 0
+LVDS_4A_N
+Text Label 12350 8700 2    50   ~ 0
+LVDS_4B_P
+Text Label 12350 8800 2    50   ~ 0
+LVDS_4B_N
+Text Label 3500 10200 0    50   ~ 0
+LCLK_P
+Text Label 3500 10300 0    50   ~ 0
+LCLK_N
+Text Label 3500 10500 0    50   ~ 0
+FCLK_P
+Text Label 3500 10600 0    50   ~ 0
+FCLK_N
+Text Label 9650 9000 2    50   ~ 0
+LCLK_P
+Text Label 9650 9200 2    50   ~ 0
+LCLK_N
+Text Label 12350 9000 2    50   ~ 0
+FCLK_P
+Text Label 12350 9100 2    50   ~ 0
+FCLK_N
+$Comp
+L Connector:Conn_Coaxial J3
+U 1 1 5E92EC21
+P 4750 8050
+F 0 "J3" H 4850 8025 50  0000 L CNN
+F 1 "SMA" H 4850 7934 50  0000 L CNN
+F 2 "" H 4750 8050 50  0001 C CNN
+F 3 "" H 4750 8050 50  0001 C CNN
+	1    4750 8050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_Coaxial J2
+U 1 1 5E92EC2B
+P 4750 7850
+F 0 "J2" H 4850 7732 50  0000 L CNN
+F 1 "SMA" H 4850 7823 50  0000 L CNN
+F 2 "" H 4750 7850 50  0001 C CNN
+F 3 "" H 4750 7850 50  0001 C CNN
+	1    4750 7850
+	1    0    0    1   
+$EndComp
+Text Label 4750 7650 0    50   ~ 0
+GND
+Wire Wire Line
+	4750 7650 5150 7650
+Wire Wire Line
+	5150 7650 5150 8250
+Wire Wire Line
+	5150 8250 4750 8250
+Text Label 4600 8650 2    50   ~ 0
+IN2_P
+Text Label 4600 8850 2    50   ~ 0
+IN2_N
+$Comp
+L Connector:Conn_Coaxial J5
+U 1 1 5E94061D
+P 4750 8850
+F 0 "J5" H 4850 8825 50  0000 L CNN
+F 1 "SMA" H 4850 8734 50  0000 L CNN
+F 2 "" H 4750 8850 50  0001 C CNN
+F 3 "" H 4750 8850 50  0001 C CNN
+	1    4750 8850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_Coaxial J4
+U 1 1 5E940627
+P 4750 8650
+F 0 "J4" H 4850 8532 50  0000 L CNN
+F 1 "SMA" H 4850 8623 50  0000 L CNN
+F 2 "" H 4750 8650 50  0001 C CNN
+F 3 "" H 4750 8650 50  0001 C CNN
+	1    4750 8650
+	1    0    0    1   
+$EndComp
+Text Label 4750 8450 0    50   ~ 0
+GND
+Wire Wire Line
+	4750 8450 5150 8450
+Wire Wire Line
+	5150 8450 5150 9050
+Wire Wire Line
+	5150 9050 4750 9050
+Text Label 4600 9450 2    50   ~ 0
+IN3_P
+Text Label 4600 9650 2    50   ~ 0
+IN3_N
+$Comp
+L Connector:Conn_Coaxial J7
+U 1 1 5E944E92
+P 4750 9650
+F 0 "J7" H 4850 9625 50  0000 L CNN
+F 1 "SMA" H 4850 9534 50  0000 L CNN
+F 2 "" H 4750 9650 50  0001 C CNN
+F 3 "" H 4750 9650 50  0001 C CNN
+	1    4750 9650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_Coaxial J6
+U 1 1 5E944E9C
+P 4750 9450
+F 0 "J6" H 4850 9332 50  0000 L CNN
+F 1 "SMA" H 4850 9423 50  0000 L CNN
+F 2 "" H 4750 9450 50  0001 C CNN
+F 3 "" H 4750 9450 50  0001 C CNN
+	1    4750 9450
+	1    0    0    1   
+$EndComp
+Text Label 4750 9250 0    50   ~ 0
+GND
+Wire Wire Line
+	4750 9250 5150 9250
+Wire Wire Line
+	5150 9250 5150 9850
+Wire Wire Line
+	5150 9850 4750 9850
+Text Label 4600 10250 2    50   ~ 0
+IN4_P
+Text Label 4600 10450 2    50   ~ 0
+IN4_N
+$Comp
+L Connector:Conn_Coaxial J9
+U 1 1 5E944EAC
+P 4750 10450
+F 0 "J9" H 4850 10425 50  0000 L CNN
+F 1 "SMA" H 4850 10334 50  0000 L CNN
+F 2 "" H 4750 10450 50  0001 C CNN
+F 3 "" H 4750 10450 50  0001 C CNN
+	1    4750 10450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_Coaxial J8
+U 1 1 5E944EB6
+P 4750 10250
+F 0 "J8" H 4850 10132 50  0000 L CNN
+F 1 "SMA" H 4850 10223 50  0000 L CNN
+F 2 "" H 4750 10250 50  0001 C CNN
+F 3 "" H 4750 10250 50  0001 C CNN
+	1    4750 10250
+	1    0    0    1   
+$EndComp
+Text Label 4750 10050 0    50   ~ 0
+GND
+Wire Wire Line
+	4750 10050 5150 10050
+Wire Wire Line
+	5150 10050 5150 10650
+Wire Wire Line
+	5150 10650 4750 10650
+NoConn ~ 7400 8500
+NoConn ~ 7400 8400
+NoConn ~ 7400 8300
+NoConn ~ 7400 8200
+NoConn ~ 7400 8100
+NoConn ~ 7400 8000
+NoConn ~ 7400 7900
+NoConn ~ 7400 7800
+NoConn ~ 7400 7700
+NoConn ~ 7400 7600
+NoConn ~ 7400 7500
+NoConn ~ 7400 7400
+NoConn ~ 7400 7300
+NoConn ~ 7400 7200
+NoConn ~ 7400 7100
+Text Notes 9850 10250 0    50   ~ 0
+Can freely reassign except for LCLK
+NoConn ~ 9650 6700
+NoConn ~ 9650 6600
+NoConn ~ 9650 9900
+NoConn ~ 9650 9800
+NoConn ~ 9650 9700
+NoConn ~ 9650 9600
+NoConn ~ 9650 9500
+NoConn ~ 9650 9400
+NoConn ~ 9650 9300
+NoConn ~ 9650 9100
+NoConn ~ 9650 8900
+NoConn ~ 9650 8800
+NoConn ~ 9650 8700
+NoConn ~ 9650 8600
+NoConn ~ 9650 8500
+NoConn ~ 9650 8400
+NoConn ~ 9650 8300
+NoConn ~ 9650 8200
+NoConn ~ 9650 8100
+NoConn ~ 9650 7000
+NoConn ~ 9650 7100
+NoConn ~ 9650 7200
+NoConn ~ 9650 7300
+NoConn ~ 9650 7400
+NoConn ~ 9650 7500
+NoConn ~ 9650 7600
+NoConn ~ 9650 7700
+NoConn ~ 9650 7800
+NoConn ~ 9650 7900
+NoConn ~ 9650 8000
+Text Notes 12550 9750 0    50   ~ 0
+Can freely reassign
+NoConn ~ 12350 9300
+NoConn ~ 12350 9400
+Text Label 12100 2600 2    50   ~ 0
+5V0
+Wire Wire Line
+	12100 2600 12350 2600
+Wire Wire Line
+	12350 2600 12350 2700
+Connection ~ 12350 2600
+Connection ~ 12350 2700
+Wire Wire Line
+	12350 2700 12350 2800
+Connection ~ 12350 2800
+Wire Wire Line
+	12350 2800 12350 2900
+Connection ~ 12350 2900
+Wire Wire Line
+	12350 2900 12350 3000
+Connection ~ 12350 3000
+Wire Wire Line
+	12350 3000 12350 3100
+Text Label 13700 2600 0    50   ~ 0
+GND
+Wire Wire Line
+	13700 2600 13700 2700
+Connection ~ 13700 2700
+Wire Wire Line
+	13700 2700 13700 2800
+Connection ~ 13700 2800
+Wire Wire Line
+	13700 2800 13700 2900
+Connection ~ 13700 2900
+Wire Wire Line
+	13700 2900 13700 3000
+Connection ~ 13700 3000
+Wire Wire Line
+	13700 3000 13700 3100
+Connection ~ 13700 3100
+Wire Wire Line
+	13700 3100 13700 3200
+Connection ~ 13700 3200
+Wire Wire Line
+	13700 3200 13700 3300
+Text Label 13700 3500 0    50   ~ 0
+3V3
+Wire Wire Line
+	13700 3500 13700 3600
+Connection ~ 13700 3600
+Wire Wire Line
+	13700 3600 13700 3700
+Connection ~ 13700 3700
+Wire Wire Line
+	13700 3700 13700 3800
+Connection ~ 13700 3800
+Wire Wire Line
+	13700 3800 13700 3900
+Connection ~ 13700 3900
+Wire Wire Line
+	13700 3900 13700 4000
+Connection ~ 13700 4000
+Wire Wire Line
+	13700 4000 13700 4100
+Connection ~ 13700 4100
+Wire Wire Line
+	13700 4100 13700 4200
+Connection ~ 13700 4200
+Wire Wire Line
+	13700 4200 13700 4300
+Connection ~ 13700 4300
+Wire Wire Line
+	13700 4300 13700 4400
+Connection ~ 13700 4400
+Wire Wire Line
+	13700 4400 13700 4500
+Connection ~ 13700 4500
+Wire Wire Line
+	13700 4500 13700 4600
+Connection ~ 13700 4600
+Wire Wire Line
+	13700 4600 13700 4700
+Connection ~ 13700 4700
+Wire Wire Line
+	13700 4700 13700 4800
+Connection ~ 13700 4800
+Wire Wire Line
+	13700 4800 13700 4900
+Connection ~ 13700 4900
+Wire Wire Line
+	13700 4900 13700 5000
+Connection ~ 13700 5000
+Wire Wire Line
+	13700 5000 13700 5100
+Connection ~ 13700 5100
+Wire Wire Line
+	13700 5100 13700 5200
+Text Label 12100 3300 2    50   ~ 0
+1V8
+Wire Wire Line
+	12100 3300 12350 3300
+Wire Wire Line
+	12350 3300 12350 3400
+Connection ~ 12350 3300
+Connection ~ 12350 3400
+Wire Wire Line
+	12350 3400 12350 3500
+Connection ~ 12350 3500
+Wire Wire Line
+	12350 3500 12350 3600
+Connection ~ 12350 3600
+Wire Wire Line
+	12350 3600 12350 3700
+Connection ~ 12350 3700
+Wire Wire Line
+	12350 3700 12350 3800
+Connection ~ 12350 3800
+Wire Wire Line
+	12350 3800 12350 3900
+Connection ~ 12350 3900
+Wire Wire Line
+	12350 3900 12350 4000
+Connection ~ 12350 4000
+Wire Wire Line
+	12350 4000 12350 4100
+Connection ~ 12350 4100
+Wire Wire Line
+	12350 4100 12350 4200
+Text Label 12100 4400 2    50   ~ 0
+2V5
+Wire Wire Line
+	12100 4400 12350 4400
+Wire Wire Line
+	12350 5500 12350 5400
+Connection ~ 12350 4400
+Connection ~ 12350 4500
+Wire Wire Line
+	12350 4500 12350 4400
+Connection ~ 12350 4600
+Wire Wire Line
+	12350 4600 12350 4500
+Connection ~ 12350 4700
+Wire Wire Line
+	12350 4700 12350 4600
+Connection ~ 12350 4800
+Wire Wire Line
+	12350 4800 12350 4700
+Connection ~ 12350 4900
+Wire Wire Line
+	12350 4900 12350 4800
+Connection ~ 12350 5000
+Wire Wire Line
+	12350 5000 12350 4900
+Connection ~ 12350 5100
+Wire Wire Line
+	12350 5100 12350 5000
+Connection ~ 12350 5200
+Wire Wire Line
+	12350 5200 12350 5100
+Connection ~ 12350 5300
+Wire Wire Line
+	12350 5300 12350 5200
+Connection ~ 12350 5400
+Wire Wire Line
+	12350 5400 12350 5300
+NoConn ~ 1500 1000
+Text Label 2100 800  0    50   ~ 0
+5V0
+$Comp
+L power-azonenberg:FUSE_PWROUT F1
+U 1 1 5E8618CA
+P 1850 800
+F 0 "F1" H 1850 1040 50  0000 C CNN
+F 1 "2A" H 1850 949 50  0000 C CNN
+F 2 "" H 1850 800 60  0000 C CNN
+F 3 "" H 1850 800 60  0000 C CNN
+	1    1850 800 
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
