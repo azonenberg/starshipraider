@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name "hdmi-inline-probe-rescue")(type "Legacy")(uri "${KIPRJMOD}/hdmi-inline-probe-rescue.lib")(options "")(descr ""))
+)
