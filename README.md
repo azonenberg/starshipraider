@@ -7,7 +7,7 @@ TODO: talk more about the project
 ## General
 
 * STARSHIPRAIDER: umbrella term for the entire project
-* FIXME: name for the original STARSHIPRAIDER project
+* CLARKE (Edith Clarke, first female EE professor in USA): the original STARSHIPRAIDER project
 
 ## Oscilloscopes
 
