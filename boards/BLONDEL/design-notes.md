@@ -164,12 +164,12 @@ To acquisition boards:
 
 To peripherals on FPGA board
 * 15x LVCMOS18, (1 clock capable)
-* 1x LVDS
+* 1x LVDS (clock capable)
 * 11x LVCMOS33
 * 121x SSTL
 
 Total FPGA signals:
-* 32 LVDS (64 pins, 2 clock capable)
+* 32 LVDS (64 pins, 3 clock capable)
 * 107x LVCMOS33
 * 25x LVCMOS18
 * 121x SSTL
