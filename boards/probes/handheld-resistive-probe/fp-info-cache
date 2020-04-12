@@ -1,4 +1,4 @@
-330139239049118
+373288927745118
 azonenberg_pcb
 ATC_AT_0603
 
@@ -36,6 +36,13 @@ BGA_6_1.5x0.9_0.5MM_TI_YZP
 6
 azonenberg_pcb
 BGA_8_2x2_DEPOP1_0.5MM
+
+
+0
+8
+8
+azonenberg_pcb
+BGA_8_2x2_DEPOP1_0.5MM_TI_YZR
 
 
 0
@@ -84,12 +91,26 @@ BGA_60_9x10_DEPOP3x10_0.8MM
 60
 60
 azonenberg_pcb
+BGA_96_9x16_DEPOP3x16_DDR3L_0.8MM
+
+
+0
+96
+96
+azonenberg_pcb
 BGA_144_13x13_FULLARRAY_1MM
 
 
 0
 144
 144
+azonenberg_pcb
+BGA_153_14x14_EMMC_BA_0.5MM
+
+
+0
+153
+153
 azonenberg_pcb
 BGA_165_11x15_FULLARRAY_1MM
 
@@ -132,6 +153,13 @@ BGA_256_17x17_FULLARRAY_1MM_0.4MM_FTG256
 0
 256
 256
+azonenberg_pcb
+BGA_289_17x17_FULLARRAY_0.8MM
+
+
+0
+289
+289
 azonenberg_pcb
 BGA_324_18x18_FULLARRAY_0.8MM
 
@@ -224,6 +252,13 @@ CONN_FCI_USB_73725-0110BLF
 9
 5
 azonenberg_pcb
+CONN_HDMI_SAMTEC_HDMR_19_01_S_SM
+
+
+0
+23
+20
+azonenberg_pcb
 CONN_HEADER_1.27MM_1X2
 
 
@@ -315,6 +350,13 @@ CONN_HEADER_2.54MM_1x4
 4
 4
 azonenberg_pcb
+CONN_HEADER_2.54MM_1x5
+
+
+0
+5
+5
+azonenberg_pcb
 CONN_HEADER_2.54MM_1x6
 
 
@@ -405,6 +447,13 @@ CONN_HIROSE_UX60S-MB-5ST_MINI_USB
 0
 7
 7
+azonenberg_pcb
+CONN_MILLMAX_0339_EDGELAUNCH
+
+
+0
+1
+1
 azonenberg_pcb
 CONN_MMCX_J_P_H_ST_EM1
 
@@ -574,6 +623,13 @@ CONN_STEWART_SS_74500_024
 105
 98
 azonenberg_pcb
+CONN_U.FL_TE_1909763-1
+
+
+0
+3
+2
+azonenberg_pcb
 CONN_USB_AMPHENOL_UE27AC54100
 
 
@@ -593,6 +649,20 @@ CRYSTAL_2.5x2.0
 
 0
 4
+2
+azonenberg_pcb
+CRYSTAL_2x1.2MM
+
+
+0
+2
+2
+azonenberg_pcb
+DFN_2_0.62x0.32
+
+
+0
+2
 2
 azonenberg_pcb
 DFN_3_0.5MM_2x2MM
@@ -735,12 +805,26 @@ DFN_10_0.5MM_3x3MM
 17
 11
 azonenberg_pcb
+DFN_12_0.5MM_3x3MM
+
+
+0
+17
+13
+azonenberg_pcb
 DFN_12_0.5MM_3x4MM
 
 
 0
 21
 13
+azonenberg_pcb
+DFN_14_0.5MM_3x4MM
+
+
+0
+23
+15
 azonenberg_pcb
 DFN_14_0.5MM_4x3MM_DUALPAD_LTC_DE14MA
 
@@ -813,6 +897,13 @@ EIA_0402_LED
 2
 azonenberg_pcb
 EIA_0402_RES_NOSILK
+
+
+0
+2
+2
+azonenberg_pcb
+EIA_0402_RES_NOSILK_FLIPCHIP
 
 
 0
@@ -1008,6 +1099,13 @@ LONGTHING-1200DPI
 0
 0
 azonenberg_pcb
+M2_GKEY_MODULE_3080
+
+
+0
+68
+68
+azonenberg_pcb
 MECHANICAL_CLEARANCEHOLE_4_40
 
 
@@ -1036,12 +1134,26 @@ MECHANICAL_EUROCARD_3U_FRONTPANEL
 0
 0
 azonenberg_pcb
+MFF2
+
+
+0
+16
+9
+azonenberg_pcb
 MODULE_MURATA_OKL-T3-W12
 
 
 0
 12
 12
+azonenberg_pcb
+MODULE_TI_PTN78000A
+
+
+0
+5
+5
 azonenberg_pcb
 OHMITE_LVK12
 
@@ -1085,7 +1197,21 @@ OSCILLATOR_3.2x2.5
 4
 4
 azonenberg_pcb
+OSCILLATOR_LVDS_2.5x2.0
+
+
+0
+6
+6
+azonenberg_pcb
 OSCILLATOR_LVDS_3.2x2.5
+
+
+0
+6
+6
+azonenberg_pcb
+OSCILLATOR_LVDS_7.0x5.0
 
 
 0
@@ -1176,12 +1302,26 @@ QFN_20_0.4MM_3x2MM_SILEGO_STQFN
 20
 20
 azonenberg_pcb
+QFN_20_0.5MM_4x4MM
+
+
+0
+26
+21
+azonenberg_pcb
 QFN_24_0.5MM_4x4MM
 
 
 0
 30
 25
+azonenberg_pcb
+QFN_28_0.5MM_4x4MM_NOPAD
+
+
+0
+28
+28
 azonenberg_pcb
 QFN_28_0.65MM_6x6MM
 
@@ -1203,6 +1343,13 @@ QFN_38_0.5MM_5x7MM
 0
 54
 39
+azonenberg_pcb
+QFN_40_0.5MM_6x6MM
+
+
+0
+50
+41
 azonenberg_pcb
 QFN_48_0.5MM_7x7MM
 
@@ -1246,6 +1393,13 @@ RELAY_COTO_9007
 4
 4
 azonenberg_pcb
+RELAY_COTO_9202
+
+
+0
+6
+6
+azonenberg_pcb
 RELAY_TE_HF3_2COIL_50OHM
 
 
@@ -1253,12 +1407,26 @@ RELAY_TE_HF3_2COIL_50OHM
 16
 16
 azonenberg_pcb
+RESISTOR_PANASONIC_EXB28
+
+
+0
+8
+8
+azonenberg_pcb
 SERIALNUM_MOLEX_0916580020
 
 
 0
 1
 1
+azonenberg_pcb
+SMB
+
+
+0
+2
+2
 azonenberg_pcb
 SOD123
 
@@ -1393,6 +1561,13 @@ SOT223-4
 4
 4
 azonenberg_pcb
+SOT323_3
+
+
+0
+3
+3
+azonenberg_pcb
 SOT353_1
 
 
@@ -1477,6 +1652,13 @@ TESTPOINT_SMT_KEYSTONE_5016
 1
 1
 azonenberg_pcb
+TO_253
+
+
+0
+4
+4
+azonenberg_pcb
 TSSOP_14_0.65MM_5p6MM
 
 
@@ -1504,6 +1686,13 @@ TSSOP_24_0.65MM_5MM_EPAD_5x3p2
 0
 25
 25
+azonenberg_pcb
+TVS_ESD7471
+
+
+0
+2
+2
 azonenberg_pcb
 VCXO_5x7MM_ASG_D
 
@@ -1534,420 +1723,420 @@ YAEGO_YC248_RPACK
 16
 w_logo
 Logo_copper_CC-BY-NC-SA_5x2mm
-CC{space}BY-NC-SA{space}logo,{space}5x2mm
+CC BY-NC-SA logo, 5x2mm
 
 0
 0
 0
 w_logo
 Logo_copper_CC-BY-NC-SA_10x3.6mm
-CC{space}BY-NC-SA{space}logo,{space}10x3.6mm
+CC BY-NC-SA logo, 10x3.6mm
 
 0
 0
 0
 w_logo
 Logo_copper_CC-BY-SA_5x2mm
-CC{space}BY-SA{space}logo,{space}5x2mm
+CC BY-SA logo, 5x2mm
 
 0
 0
 0
 w_logo
 Logo_copper_CC-BY-SA_10x4.5mm
-CC{space}BY-SA{space}logo,{space}10x4.5mm
+CC BY-SA logo, 10x4.5mm
 
 0
 0
 0
 w_logo
 Logo_copper_CE_5x3.6mm
-CE{space}logo,{space}5x3.6mm
+CE logo, 5x3.6mm
 
 0
 0
 0
 w_logo
 Logo_copper_CE_10x7.2mm
-CE{space}logo,{space}10x7.2mm
-
-0
-0
-0
-w_logo
-Logo_copper_high_voltage_5x4.2mm
-High{space}voltage{space}logo,{space}5x4.2mm
-
-0
-0
-0
-w_logo
-Logo_copper_high_voltage_10x8.5mm
-High{space}voltage{space}logo,{space}10x8.5mm
+CE logo, 10x7.2mm
 
 0
 0
 0
 w_logo
 Logo_copper_Lead-Free_5x5mm
-Lead{space}Free{space}logo,{space}5x5mm
+Lead Free logo, 5x5mm
 
 0
 0
 0
 w_logo
 Logo_copper_Lead-Free_10x10mm
-Lead{space}Free{space}logo,{space}10x10mm
+Lead Free logo, 10x10mm
 
 0
 0
 0
 w_logo
 Logo_copper_OSHW_6x6mm
-Open{space}Hardware{space}Logo,{space}6x6mm
+Open Hardware Logo, 6x6mm
 
 0
 0
 0
 w_logo
 Logo_copper_OSHW_12x13mm
-Open{space}Hardware{space}Logo,{space}12x13mm
-
-0
-0
-0
-w_logo
-Logo_copper_polarity_center_5x1.4mm
-Polarity{space}logo,{space}positive{space}center,{space}5x1.4mm
-
-0
-0
-0
-w_logo
-Logo_copper_polarity_center_10x2.8mm
-Polarity{space}logo,{space}positive{space}center,{space}10x2.8mm
-
-0
-0
-0
-w_logo
-Logo_copper_polarity_external_5x1.4mm
-Polarity{space}logo,{space}negative{space}center,{space}5x1.4mm
-
-0
-0
-0
-w_logo
-Logo_copper_polarity_external_10x2.8mm
-Polarity{space}logo,{space}negative{space}center,{space}10x2.8mm
+Open Hardware Logo, 12x13mm
 
 0
 0
 0
 w_logo
 Logo_copper_ROHS_5x2.8mm
-ROHS{space}logo,{space}5x2.8mm
+ROHS logo, 5x2.8mm
 
 0
 0
 0
 w_logo
 Logo_copper_ROHS_10x5.6mm
-ROHS{space}logo,{space}10x5.6mm
+ROHS logo, 10x5.6mm
 
 0
 0
 0
 w_logo
 Logo_copper_UR-C-US_5x2mm
-UL{space}Recognized{space}C+US{space}logo,{space}5x2mm
+UL Recognized C+US logo, 5x2mm
 
 0
 0
 0
 w_logo
 Logo_copper_UR-C-US_10x4mm
-UL{space}Recognized{space}C+US{space}logo,{space}10x4mm
+UL Recognized C+US logo, 10x4mm
 
 0
 0
 0
 w_logo
 Logo_copper_UR-C_5x2.5mm
-UL{space}Recognized{space}C{space}logo,{space}5x2.5mm
+UL Recognized C logo, 5x2.5mm
 
 0
 0
 0
 w_logo
 Logo_copper_UR-C_10x4.5mm
-UL{space}Recognized{space}C{space}logo,{space}10x4.5mm
+UL Recognized C logo, 10x4.5mm
 
 0
 0
 0
 w_logo
 Logo_copper_UR-US_5x2mm
-UL{space}Recognized{space}US{space}logo,{space}5x2mm
+UL Recognized US logo, 5x2mm
 
 0
 0
 0
 w_logo
 Logo_copper_UR-US_10x4mm
-UL{space}Recognized{space}US{space}logo,{space}10x4mm
+UL Recognized US logo, 10x4mm
 
 0
 0
 0
 w_logo
 Logo_copper_UR_5x3mm
-UL{space}Recognized{space}logo,{space}5x3mm
+UL Recognized logo, 5x3mm
 
 0
 0
 0
 w_logo
 Logo_copper_UR_10x5.6mm
-UL{space}Recognized{space}logo,{space}10x5.6mm
-
-0
-0
-0
-w_logo
-Logo_copper_warning_5x4.2mm
-Warning{space}logo,{space}5x4.2mm
-
-0
-0
-0
-w_logo
-Logo_copper_warning_10x8.5mm
-Warning{space}logo,{space}10x8.5mm
+UL Recognized logo, 10x5.6mm
 
 0
 0
 0
 w_logo
 Logo_copper_WEEE_3.4x5mm
-WEEE{space}logo,{space}3.4x5mm
+WEEE logo, 3.4x5mm
 
 0
 0
 0
 w_logo
 Logo_copper_WEEE_8x10mm
-WEEE{space}logo,{space}8x10mm
+WEEE logo, 8x10mm
+
+0
+0
+0
+w_logo
+Logo_copper_high_voltage_5x4.2mm
+High voltage logo, 5x4.2mm
+
+0
+0
+0
+w_logo
+Logo_copper_high_voltage_10x8.5mm
+High voltage logo, 10x8.5mm
+
+0
+0
+0
+w_logo
+Logo_copper_polarity_center_5x1.4mm
+Polarity logo, positive center, 5x1.4mm
+
+0
+0
+0
+w_logo
+Logo_copper_polarity_center_10x2.8mm
+Polarity logo, positive center, 10x2.8mm
+
+0
+0
+0
+w_logo
+Logo_copper_polarity_external_5x1.4mm
+Polarity logo, negative center, 5x1.4mm
+
+0
+0
+0
+w_logo
+Logo_copper_polarity_external_10x2.8mm
+Polarity logo, negative center, 10x2.8mm
+
+0
+0
+0
+w_logo
+Logo_copper_warning_5x4.2mm
+Warning logo, 5x4.2mm
+
+0
+0
+0
+w_logo
+Logo_copper_warning_10x8.5mm
+Warning logo, 10x8.5mm
 
 0
 0
 0
 w_logo
 Logo_silk_CC-BY-NC-SA_5x2mm
-CC{space}BY-NC-SA{space}logo,{space}5x2mm
+CC BY-NC-SA logo, 5x2mm
 
 0
 0
 0
 w_logo
 Logo_silk_CC-BY-NC-SA_10x3.6mm
-CC{space}BY-NC-SA{space}logo,{space}10x3.6mm
+CC BY-NC-SA logo, 10x3.6mm
 
 0
 0
 0
 w_logo
 Logo_silk_CC-BY-SA_5x2mm
-CC{space}BY-SA{space}logo,{space}5x2mm
+CC BY-SA logo, 5x2mm
 
 0
 0
 0
 w_logo
 Logo_silk_CC-BY-SA_10x4.5mm
-CC{space}BY-SA{space}logo,{space}10x4.5mm
+CC BY-SA logo, 10x4.5mm
 
 0
 0
 0
 w_logo
 Logo_silk_CE_5x3.6mm
-CE{space}logo,{space}5x3.6mm
+CE logo, 5x3.6mm
 
 0
 0
 0
 w_logo
 Logo_silk_CE_10x7.2mm
-CE{space}logo,{space}10x7.2mm
-
-0
-0
-0
-w_logo
-Logo_silk_high_voltage_5x4.2mm
-High{space}voltage{space}logo,{space}5x4.2mm
-
-0
-0
-0
-w_logo
-Logo_silk_high_voltage_10x8.5mm
-High{space}voltage{space}logo,{space}10x8.5mm
+CE logo, 10x7.2mm
 
 0
 0
 0
 w_logo
 Logo_silk_Lead-Free_5x5mm
-Lead{space}Free{space}logo,{space}5x5mm
+Lead Free logo, 5x5mm
 
 0
 0
 0
 w_logo
 Logo_silk_Lead-Free_10x10mm
-Lead{space}Free{space}logo,{space}10x10mm
+Lead Free logo, 10x10mm
 
 0
 0
 0
 w_logo
 Logo_silk_OSHW_6x6mm
-Open{space}Hardware{space}Logo,{space}6x6mm
+Open Hardware Logo, 6x6mm
 
 0
 0
 0
 w_logo
 Logo_silk_OSHW_12x13mm
-Open{space}Hardware{space}Logo,{space}12x13mm
-
-0
-0
-0
-w_logo
-Logo_silk_polarity_center_5x1.4mm
-Polarity{space}logo,{space}positive{space}center,{space}5x1.4mm
-
-0
-0
-0
-w_logo
-Logo_silk_polarity_center_10x2.8mm
-Polarity{space}logo,{space}positive{space}center,{space}10x2.8mm
-
-0
-0
-0
-w_logo
-Logo_silk_polarity_external_5x1.4mm
-Polarity{space}logo,{space}negative{space}center,{space}5x1.4mm
-
-0
-0
-0
-w_logo
-Logo_silk_polarity_external_10x2.8mm
-Polarity{space}logo,{space}negative{space}center,{space}10x2.8mm
+Open Hardware Logo, 12x13mm
 
 0
 0
 0
 w_logo
 Logo_silk_ROHS_5x2.8mm
-ROHS{space}logo,{space}5x2.8mm
+ROHS logo, 5x2.8mm
 
 0
 0
 0
 w_logo
 Logo_silk_ROHS_10x5.6mm
-ROHS{space}logo,{space}10x5.6mm
+ROHS logo, 10x5.6mm
 
 0
 0
 0
 w_logo
 Logo_silk_UR-C-US_5x2mm
-UL{space}Recognized{space}C+US{space}logo,{space}5x2mm
+UL Recognized C+US logo, 5x2mm
 
 0
 0
 0
 w_logo
 Logo_silk_UR-C-US_10x4mm
-UL{space}Recognized{space}C+US{space}logo,{space}10x4mm
+UL Recognized C+US logo, 10x4mm
 
 0
 0
 0
 w_logo
 Logo_silk_UR-C_5x2.5mm
-UL{space}Recognized{space}C{space}logo,{space}5x2.5mm
+UL Recognized C logo, 5x2.5mm
 
 0
 0
 0
 w_logo
 Logo_silk_UR-C_10x4.5mm
-UL{space}Recognized{space}C{space}logo,{space}10x4.5mm
+UL Recognized C logo, 10x4.5mm
 
 0
 0
 0
 w_logo
 Logo_silk_UR-US_5x2mm
-UL{space}Recognized{space}US{space}logo,{space}5x2mm
+UL Recognized US logo, 5x2mm
 
 0
 0
 0
 w_logo
 Logo_silk_UR-US_10x4mm
-UL{space}Recognized{space}US{space}logo,{space}10x4mm
+UL Recognized US logo, 10x4mm
 
 0
 0
 0
 w_logo
 Logo_silk_UR_5x3mm
-UL{space}Recognized{space}logo,{space}5x3mm
+UL Recognized logo, 5x3mm
 
 0
 0
 0
 w_logo
 Logo_silk_UR_10x5.6mm
-UL{space}Recognized{space}logo,{space}10x5.6mm
-
-0
-0
-0
-w_logo
-Logo_silk_warning_5x4.2mm
-Warning{space}logo,{space}5x4.2mm
-
-0
-0
-0
-w_logo
-Logo_silk_warning_10x8.5mm
-Warning{space}logo,{space}10x8.5mm
+UL Recognized logo, 10x5.6mm
 
 0
 0
 0
 w_logo
 Logo_silk_WEEE_3.4x5mm
-WEEE{space}logo,{space}3.4x5mm
+WEEE logo, 3.4x5mm
 
 0
 0
 0
 w_logo
 Logo_silk_WEEE_8x10mm
-WEEE{space}logo,{space}8x10mm
+WEEE logo, 8x10mm
+
+0
+0
+0
+w_logo
+Logo_silk_high_voltage_5x4.2mm
+High voltage logo, 5x4.2mm
+
+0
+0
+0
+w_logo
+Logo_silk_high_voltage_10x8.5mm
+High voltage logo, 10x8.5mm
+
+0
+0
+0
+w_logo
+Logo_silk_polarity_center_5x1.4mm
+Polarity logo, positive center, 5x1.4mm
+
+0
+0
+0
+w_logo
+Logo_silk_polarity_center_10x2.8mm
+Polarity logo, positive center, 10x2.8mm
+
+0
+0
+0
+w_logo
+Logo_silk_polarity_external_5x1.4mm
+Polarity logo, negative center, 5x1.4mm
+
+0
+0
+0
+w_logo
+Logo_silk_polarity_external_10x2.8mm
+Polarity logo, negative center, 10x2.8mm
+
+0
+0
+0
+w_logo
+Logo_silk_warning_5x4.2mm
+Warning logo, 5x4.2mm
+
+0
+0
+0
+w_logo
+Logo_silk_warning_10x8.5mm
+Warning logo, 10x8.5mm
 
 0
 0
