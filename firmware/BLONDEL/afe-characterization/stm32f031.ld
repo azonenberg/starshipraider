@@ -75,15 +75,31 @@ SECTIONS
 
 	.sfr_apb1 :
 	{
-		. += 1024;		/* TIM2 not yet implemented */
-		/*
 		. = ALIGN(1024);
-		*(.usart2)
-		*/
+		*(.tim2)
+		. = ALIGN(1024);
+		*(.tim3)
 	} > APB1
 
 	.sfr_apb2 :
 	{
+		. = ALIGN(1024);
+		*(.syscfg)
+		. = ALIGN(1024);
+		. += 1024;		/* EXTI not yet implemented */
+		. += 7168;		/* Reserved */
+		. += 1024;		/* ADC not yet implemented */
+		. += 1024;		/* Reserved */
 		. += 1024;		/* TIM1 not yet implemented */
+		. += 1024;		/* SPI1 not yet implemented */
+		. += 1024;		/* Reserved */
+		. = ALIGN(1024);
+		*(.usart1)
+		. = ALIGN(1024);
+		. += 2048;		/* Reserved */
+		. += 1024;		/* TIM16 not implemented */
+		. += 1024;		/* TIM17 not implemented */
+		. += 3072;		/* Reserved */
+		. += 1024;		/* DBGMCU not implemented */
 	} > APB2
 }

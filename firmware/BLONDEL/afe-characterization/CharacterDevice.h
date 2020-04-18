@@ -27,50 +27,91 @@
 *                                                                                                                      *
 ***********************************************************************************************************************/
 
-#include <stdint.h>
-#include <errno.h>
-#include "stm32f031.h"
+#ifndef characterdevice_h
+#define characterdevice_h
 
-volatile gpio_t GPIOA __attribute__((section(".gpioa")));
-volatile gpio_t GPIOB __attribute__((section(".gpiob")));
-volatile gpio_t GPIOC __attribute__((section(".gpioc")));
+#include "FIFO.h"
 
-volatile rcc_t RCC __attribute__((section(".rcc")));
-
-//volatile flash_t FLASH __attribute__((section(".flash")));
-
-//volatile spi_t SPI1 __attribute__((section(".spi1")));
-
-volatile usart_t USART1 __attribute__((section(".usart1")));
-
-volatile syscfg_t SYSCFG __attribute__((section(".syscfg")));
-
-volatile tim_t TIM2 __attribute__((section(".tim2")));
-volatile tim_t TIM3 __attribute__((section(".tim3")));
-
-extern "C" void atexit()
+/**
+	@file
+	@author Andrew D. Zonenberg
+	@brief Abstract character device base class
+ */
+class CharacterDevice
 {
-}
-
-extern "C" void _exit()
-{
-	while(true)
+public:
+	CharacterDevice()
 	{}
-}
 
-extern "C" int _kill(int /*ignored*/, int /*ignored*/)
-{
-	errno = EINVAL;
-	return -1;
-}
+	//Overrides
+	virtual void PrintBinary(char ch) =0;
 
-extern "C" int _getpid()
-{
-	return 1;
-}
+	//Convenience wrappers
+public:
+	void PrintText(char ch)
+	{
+		if(ch == '\n')
+			PrintBinary('\r');
+		PrintBinary(ch);
+	}
 
-extern "C" void* _sbrk(int nbytes)
-{
-	errno = ENOMEM;
-	return (void*)-1;
-}
+	void Write16(uint16_t n)
+	{ Write((const char*)&n, 2); }
+
+	void Write32(uint32_t n)
+	{ Write((const char*)&n, 4); }
+
+	uint32_t BlockingRead32()
+	{
+		uint32_t tmp;
+		BlockingRead((char*)&tmp, 4);
+		return tmp;
+	}
+
+	uint16_t BlockingRead16()
+	{
+		uint16_t tmp;
+		BlockingRead((char*)&tmp, 2);
+		return tmp;
+	}
+
+	bool HasInput()
+	{ return !m_rxFifo.IsEmpty(); }
+
+
+	char BlockingRead()
+	{
+		//block until at least one byte is ready
+		while(m_rxFifo.IsEmpty())
+		{}
+
+		return m_rxFifo.Pop();
+	}
+
+	void BlockingRead(char* data, uint32_t len)
+	{
+		for(uint32_t i=0; i<len; i++)
+			data[i] = BlockingRead();
+	}
+
+	void Write(const char* data, uint32_t len)
+	{
+		for(uint32_t i=0; i<len; i++)
+			PrintBinary(data[i]);
+	}
+
+	void PrintString(const char* str)
+	{
+		while(*str)
+			PrintText(*(str++));
+	}
+
+	//Interrupt handlers
+	void OnIRQRxData(char ch)
+	{ m_rxFifo.Push(ch); }
+
+protected:
+	FIFO<char, 32> m_rxFifo;
+};
+
+#endif

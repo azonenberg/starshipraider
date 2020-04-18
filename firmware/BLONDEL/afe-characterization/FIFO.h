@@ -27,50 +27,116 @@
 *                                                                                                                      *
 ***********************************************************************************************************************/
 
-#include <stdint.h>
-#include <errno.h>
-#include "stm32f031.h"
+#ifndef fifo_h
+#define fifo_h
 
-volatile gpio_t GPIOA __attribute__((section(".gpioa")));
-volatile gpio_t GPIOB __attribute__((section(".gpiob")));
-volatile gpio_t GPIOC __attribute__((section(".gpioc")));
+/**
+	@file
+	@author	Andrew D. Zonenberg
+	@brief	Declaration of Fifo class
+ */
 
-volatile rcc_t RCC __attribute__((section(".rcc")));
-
-//volatile flash_t FLASH __attribute__((section(".flash")));
-
-//volatile spi_t SPI1 __attribute__((section(".spi1")));
-
-volatile usart_t USART1 __attribute__((section(".usart1")));
-
-volatile syscfg_t SYSCFG __attribute__((section(".syscfg")));
-
-volatile tim_t TIM2 __attribute__((section(".tim2")));
-volatile tim_t TIM3 __attribute__((section(".tim3")));
-
-extern "C" void atexit()
+/**
+	@brief A circular buffer based FIFO interlocked for safe use across interrupt domains
+ */
+template<class objtype, uint32_t depth>
+class FIFO
 {
-}
+public:
 
-extern "C" void _exit()
-{
-	while(true)
+	/**
+		@brief Creates a new FIFO
+	 */
+	FIFO()
+		: m_wptr(0)
+		, m_rptr(0)
+		, m_empty(true)
 	{}
-}
 
-extern "C" int _kill(int /*ignored*/, int /*ignored*/)
-{
-	errno = EINVAL;
-	return -1;
-}
+	/**
+		@brief Adds a new item to the FIFO.
 
-extern "C" int _getpid()
-{
-	return 1;
-}
+		Pushing when the FIFO is full is a legal no-op.
+	 */
+	void Push(objtype item)
+	{
+		uint32_t sr = EnterCriticalSection();
 
-extern "C" void* _sbrk(int nbytes)
-{
-	errno = ENOMEM;
-	return (void*)-1;
-}
+		if(!InternalIsFull())
+		{
+			m_storage[m_wptr] = item;
+			m_wptr ++;
+			m_empty = false;
+		}
+
+		if(m_wptr == depth)
+			m_wptr = 0;
+
+		LeaveCriticalSection(sr);
+	}
+
+	/**
+		@brief Removes an item from the FIFO and returns it.
+
+		Popping an empty FIFO is a legal no-op with an undefined return value.
+	 */
+	objtype Pop()
+	{
+		uint32_t sr = EnterCriticalSection();
+
+		objtype ret = m_storage[m_rptr];
+
+		if(!IsEmpty())
+		{
+			m_rptr ++;
+
+			if(m_rptr == depth)
+				m_rptr = 0;
+
+			if(m_rptr == m_wptr)
+				m_empty = true;
+		}
+
+		LeaveCriticalSection(sr);
+
+		return ret;
+	}
+
+	/**
+		@brief Checks if the FIFO is empty
+	 */
+	bool IsEmpty()
+	{
+		return m_empty;
+	}
+
+	/**
+		@brief Checks if the FIFO is full
+	 */
+	bool IsFull()
+	{
+		uint32_t sr = EnterCriticalSection();
+		bool full = InternalIsFull();
+		LeaveCriticalSection(sr);
+		return full;
+	}
+
+protected:
+
+	/**
+		@brief Checks if the FIFO is full without any interlocks.
+	 */
+	bool InternalIsFull()
+	{
+		if(m_empty)
+			return false;
+		return (m_wptr == m_rptr);
+	}
+
+	objtype m_storage[depth];
+	uint32_t m_wptr;
+	uint32_t m_rptr;
+	bool m_empty;
+};
+
+#endif

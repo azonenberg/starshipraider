@@ -27,50 +27,51 @@
 *                                                                                                                      *
 ***********************************************************************************************************************/
 
+#ifndef SCPIParser_h
+#define SCPIParser_h
+
 #include <stdint.h>
-#include <errno.h>
-#include "stm32f031.h"
+#include "UART.h"
 
-volatile gpio_t GPIOA __attribute__((section(".gpioa")));
-volatile gpio_t GPIOB __attribute__((section(".gpiob")));
-volatile gpio_t GPIOC __attribute__((section(".gpioc")));
-
-volatile rcc_t RCC __attribute__((section(".rcc")));
-
-//volatile flash_t FLASH __attribute__((section(".flash")));
-
-//volatile spi_t SPI1 __attribute__((section(".spi1")));
-
-volatile usart_t USART1 __attribute__((section(".usart1")));
-
-volatile syscfg_t SYSCFG __attribute__((section(".syscfg")));
-
-volatile tim_t TIM2 __attribute__((section(".tim2")));
-volatile tim_t TIM3 __attribute__((section(".tim3")));
-
-extern "C" void atexit()
+class SCPIParser
 {
-}
+public:
+	SCPIParser();
+	void Init(UART* uart)
+	{ m_uart = uart; }
 
-extern "C" void _exit()
-{
-	while(true)
-	{}
-}
+	/**
+		@brief Single iteration of the main loop
+	 */
+	void Iteration();
 
-extern "C" int _kill(int /*ignored*/, int /*ignored*/)
-{
-	errno = EINVAL;
-	return -1;
-}
+protected:
+	/**
+		@brief Handles one or more bytes of input
+	 */
+	void OnInputReady();
 
-extern "C" int _getpid()
-{
-	return 1;
-}
+	/**
+		@brief Processes a line of user input
+	 */
+	void OnLineReady();
 
-extern "C" void* _sbrk(int nbytes)
-{
-	errno = ENOMEM;
-	return (void*)-1;
-}
+	//Keyboard event handlers
+	void OnBackspace();
+	void OnKey(char c);
+	//void OnLeftArrow();
+	//void OnRightArrow();
+
+	enum state
+	{
+		STATE_EDIT,
+		STATE_PARSE
+	} m_state;
+
+	UART* m_uart;
+
+	uint32_t m_cursorPosition;
+	char m_line[256];
+};
+
+#endif

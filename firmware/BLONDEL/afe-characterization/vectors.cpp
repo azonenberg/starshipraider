@@ -28,7 +28,6 @@
 ***********************************************************************************************************************/
 
 #include <stdint.h>
-//#include "latentred.h"
 
 typedef void(*fnptr)();
 
@@ -42,8 +41,7 @@ void BusFault_Handler();
 void HardFault_Handler();
 void NMI_Handler();
 
-void USART2_Handler();
-void UART5_Handler();
+void USART1_Handler();
 
 void defaultISR();
 
@@ -68,36 +66,36 @@ fnptr __attribute__((section(".vector"))) vectorTable[] =
 	defaultISR,				//reserved_13
 	defaultISR,				//pend_sv
 	defaultISR,				//systick
-	defaultISR,				//irq0
-	defaultISR,				//irq1
-	defaultISR,				//irq2
-	defaultISR,				//irq3
-	defaultISR,				//irq4
-	defaultISR,				//irq5
-	defaultISR,				//irq6
-	defaultISR,				//irq7
-	defaultISR,				//irq8
-	defaultISR,				//irq9
-	defaultISR,				//irq10
-	defaultISR,				//irq11
-	defaultISR,				//irq12
-	defaultISR,				//irq13
-	defaultISR,				//irq14
-	defaultISR,				//irq15
-	defaultISR,				//irq16
-	defaultISR,				//irq17
-	defaultISR,				//irq18
-	defaultISR,				//irq19
-	defaultISR,				//irq20
-	defaultISR,				//irq21
-	defaultISR,				//irq22
-	defaultISR,				//irq23
-	defaultISR,				//irq24
-	defaultISR,				//irq25
-	defaultISR,				//irq26
-	defaultISR,				//irq27
-	defaultISR,				//irq28
-	defaultISR,				//irq29
+	defaultISR,				//irq0 WWDG
+	defaultISR,				//irq1 comparator
+	defaultISR,				//irq2 RTC/EXTI
+	defaultISR,				//irq3 flash
+	defaultISR,				//irq4 RCC
+	defaultISR,				//irq5 EXTI_1_0
+	defaultISR,				//irq6 EXTI_3_2
+	defaultISR,				//irq7 EXTI_15_4
+	defaultISR,				//irq8 TSC
+	defaultISR,				//irq9 DMA_CH1
+	defaultISR,				//irq10 DMA_CH2_3
+	defaultISR,				//irq11 DMA_CH4_7
+	defaultISR,				//irq12 ADC_COMP
+	defaultISR,				//irq13 TIM1_BRK_UP
+	defaultISR,				//irq14 TIM1_CC
+	defaultISR,				//irq15 TIM2
+	defaultISR,				//irq16 TIM3
+	defaultISR,				//irq17 TIM6_DAC
+	defaultISR,				//irq18 TIM7
+	defaultISR,				//irq19 TIM14
+	defaultISR,				//irq20 TIM15
+	defaultISR,				//irq21 TIM16
+	defaultISR,				//irq22 TIM17
+	defaultISR,				//irq23 I2C1
+	defaultISR,				//irq24 I2C2
+	defaultISR,				//irq25 SPI1
+	defaultISR,				//irq26 SPI2
+	USART1_Handler,			//irq27 USART1
+	defaultISR,				//irq28 USART2
+	defaultISR,				//irq29 USART3_8
 	defaultISR,				//irq30
 	defaultISR,				//irq31
 	defaultISR,				//irq32

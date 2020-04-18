@@ -27,26 +27,89 @@
 *                                                                                                                      *
 ***********************************************************************************************************************/
 
-#include <stdint.h>
 #include "stm32f031.h"
+#include "UART.h"
+#include "SCPIParser.h"
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Entry point
 
+void PLLInit();
+void LEDInit();
+void UARTInit();
+
+UART* g_uart;
+SCPIParser scpi;
+
 int main()
 {
-	//Enable GPIOB
-	RCC.AHBENR |= RCC_AHB_GPIOB;
+	PLLInit();
+	LEDInit();
 
-	//Set PB7 (LED0) on
-	GPIOB.MODER = (GPIOB.MODER & 0xffff3fff) | 0x4000;
-	GPIOB.ODR = GPIOB.ODR | 0x80;
+	//Enable timer 2
+	RCC.APB1ENR |= RCC_APB1_TIM2;
+
+	//Configure TIM2 (enabled, counting up, prescale by 48000 so 1 ms per tick)
+	TIM2.PSC = 47999;
+	TIM2.CR1 = 0x1;
+
+	//Initialize the UART
+	UARTInit();
+	UART uart(&USART1, &USART1, 417);
+	g_uart = &uart;
+	scpi.Init(g_uart);
+
+	//Main loop
+	while(1)
+	{
+		//Blink the LED at 1.024 Hz
+		if(TIM2.CNT & 0x100)
+			GPIOB.ODR = GPIOB.ODR |= 0x80;
+		else
+			GPIOB.ODR = GPIOB.ODR &= ~0x80;
+
+		//Process UART traffic
+		scpi.Iteration();
+	}
 
 	return 0;
 }
 
-extern "C" void _exit()
+void PLLInit()
 {
-	while(true)
+	//Start the PLL with 48 MHz output (HSI / 2)*12 = 48 MHz
+	//APB clk (PCLK) = 48 MHz
+	//AHB clk (HCLK) = 48 MHz
+	//Clock on HSI oscillator
+	RCC.CFGR = 0x280000;
+	RCC.CR |= RCC_PLL_ON;
+
+	//Wait for PLL to be stable, then start using it
+	while( (RCC.CR & RCC_PLL_READY) == 0)
 	{}
+	RCC.CFGR = (RCC.CFGR & 0xfffffffc) | 2;
+	while( (RCC.CFGR & 0xc) != 0x8)
+	{}
+}
+
+void LEDInit()
+{
+	//Enable GPIOB
+	//Set PB7 (LED0)  as output
+	RCC.AHBENR |= RCC_AHB_GPIOB;
+	GPIOB.MODER = (GPIOB.MODER & 0xffff3fff) | 0x4000;
+}
+
+void UARTInit()
+{
+	//Enable USART1 at 115.2 Kbps on PA9/10
+	RCC.AHBENR |= RCC_AHB_GPIOA;
+	RCC.APB2ENR |= RCC_APB2_USART1;
+	GPIOA.MODER = (GPIOA.MODER & 0xffc3ffff) | 0x00280000;
+	GPIOA.AFRH = (GPIOA.AFRH & 0xfffff00f) | 0x110;
+
+	//Enable RXNE interrupt vector (IRQ27)
+	//TODO: better contants here
+	volatile uint32_t* NVIC_ISER0 = (volatile uint32_t*)(0xe000e100);
+	*NVIC_ISER0 = 0x8000000;
 }

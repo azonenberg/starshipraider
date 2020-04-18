@@ -27,50 +27,38 @@
 *                                                                                                                      *
 ***********************************************************************************************************************/
 
-#include <stdint.h>
-#include <errno.h>
-#include "stm32f031.h"
+#ifndef uart_h
+#define uart_h
 
-volatile gpio_t GPIOA __attribute__((section(".gpioa")));
-volatile gpio_t GPIOB __attribute__((section(".gpiob")));
-volatile gpio_t GPIOC __attribute__((section(".gpioc")));
+#include "CharacterDevice.h"
 
-volatile rcc_t RCC __attribute__((section(".rcc")));
+/**
+	@file
+	@author Andrew D. Zonenberg
+	@brief UART driver
+ */
 
-//volatile flash_t FLASH __attribute__((section(".flash")));
-
-//volatile spi_t SPI1 __attribute__((section(".spi1")));
-
-volatile usart_t USART1 __attribute__((section(".usart1")));
-
-volatile syscfg_t SYSCFG __attribute__((section(".syscfg")));
-
-volatile tim_t TIM2 __attribute__((section(".tim2")));
-volatile tim_t TIM3 __attribute__((section(".tim3")));
-
-extern "C" void atexit()
+/**
+	@brief Driver for a UART
+ */
+class UART : public CharacterDevice
 {
-}
+public:
 
-extern "C" void _exit()
-{
-	while(true)
+	UART(volatile usart_t* lane, uint32_t baud_div = 181)
+	 : UART(lane, lane, baud_div)
 	{}
-}
 
-extern "C" int _kill(int /*ignored*/, int /*ignored*/)
-{
-	errno = EINVAL;
-	return -1;
-}
+	UART(volatile usart_t* txlane, volatile usart_t* rxlane, uint32_t baud_div);
 
-extern "C" int _getpid()
-{
-	return 1;
-}
+	//TX side
+	virtual void PrintBinary(char ch);
+	void Printf(const char* format, ...);
+	void WritePadded(const char* str, int minlen, char padding, int prepad);
 
-extern "C" void* _sbrk(int nbytes)
-{
-	errno = ENOMEM;
-	return (void*)-1;
-}
+protected:
+	volatile usart_t* m_txlane;
+	volatile usart_t* m_rxlane;
+};
+
+#endif

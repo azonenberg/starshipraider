@@ -27,50 +27,157 @@
 *                                                                                                                      *
 ***********************************************************************************************************************/
 
-#include <stdint.h>
-#include <errno.h>
 #include "stm32f031.h"
+#include <memory.h>
+#include <string.h>
+#include <ctype.h>
+#include "SCPIParser.h"
 
-volatile gpio_t GPIOA __attribute__((section(".gpioa")));
-volatile gpio_t GPIOB __attribute__((section(".gpiob")));
-volatile gpio_t GPIOC __attribute__((section(".gpioc")));
+static const char* CURSOR_LEFT = "\x1b[D";
+static const char* CURSOR_RIGHT = "\x1b[C";
 
-volatile rcc_t RCC __attribute__((section(".rcc")));
-
-//volatile flash_t FLASH __attribute__((section(".flash")));
-
-//volatile spi_t SPI1 __attribute__((section(".spi1")));
-
-volatile usart_t USART1 __attribute__((section(".usart1")));
-
-volatile syscfg_t SYSCFG __attribute__((section(".syscfg")));
-
-volatile tim_t TIM2 __attribute__((section(".tim2")));
-volatile tim_t TIM3 __attribute__((section(".tim3")));
-
-extern "C" void atexit()
+SCPIParser::SCPIParser()
+ : m_state(STATE_EDIT)
+ , m_cursorPosition(0)
 {
+	memset(m_line, 0, sizeof(m_line));
 }
 
-extern "C" void _exit()
+void SCPIParser::Iteration()
 {
-	while(true)
-	{}
+	switch(m_state)
+	{
+		case STATE_EDIT:
+			if(m_uart->HasInput())
+				OnInputReady();
+			break;
+
+		case STATE_PARSE:
+			OnLineReady();
+
+			//Ready for next command
+			memset(m_line, 0, sizeof(m_line));
+			m_state = STATE_EDIT;
+			m_cursorPosition = 0;
+			break;
+	}
 }
 
-extern "C" int _kill(int /*ignored*/, int /*ignored*/)
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Input handling
+
+void SCPIParser::OnInputReady()
 {
-	errno = EINVAL;
-	return -1;
+	//If we get here, there's input ready
+	char c = m_uart->BlockingRead();
+
+	//End of line means the command is ready to execute
+	if( (c == '\r') || (c == '\n') )
+	{
+		m_uart->PrintString("\n");
+		m_state = STATE_PARSE;
+		return;
+	}
+
+	//Backspace
+	else if(c == 0x7f)
+		OnBackspace();
+
+	//Escape sequences
+	else if(c == 0x1b)
+	{
+		//TODO: don't stall if there's nothing in the fifo
+
+		//Next char should be a [
+		if(m_uart->BlockingRead() != '[')
+		{
+			//malformed escape sequence, ignore it
+			return;
+		}
+
+		//and the actual escape code
+		char code = m_uart->BlockingRead();
+		switch(code)
+		{
+			//B = down, A = up
+
+			case 'C':
+				//OnRightArrow();
+				break;
+
+			case 'D':
+				//OnLeftArrow();
+				break;
+
+			default:
+				break;
+		}
+	}
+
+	//TODO: tab completion?
+	else if(c == '\t')
+	{
+	}
+
+	//Ignore other non-printable characters
+	else if(!isprint(c))
+	{
+	}
+
+	//Echo characters as typed
+	else
+		OnKey(c);
 }
 
-extern "C" int _getpid()
+void SCPIParser::OnBackspace()
 {
-	return 1;
+	//for now assume we're at end of line
+
+	//can't go left of cursor
+	if(m_cursorPosition == 0)
+		return;
+
+	//Delete the character
+	//move left, space over the deleted character, move left for good this time
+	m_uart->Printf("%s %s", CURSOR_LEFT, CURSOR_LEFT);
+	m_line[m_cursorPosition --] = '\0';
 }
 
-extern "C" void* _sbrk(int nbytes)
+void SCPIParser::OnKey(char c)
 {
-	errno = ENOMEM;
-	return (void*)-1;
+	//Don't run off end of buffer
+	if(m_cursorPosition+1 >= sizeof(m_line))
+		return;
+
+	//Append it
+	m_line[m_cursorPosition ++] = c;
+	m_uart->PrintBinary(c);
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Execute a command
+
+void SCPIParser::OnLineReady()
+{
+	//Handle common commands with no arguments
+	if(!strcmp(m_line, "*IDN?"))
+	{
+		volatile uint32_t* serial = (volatile uint32_t*)0x1ffff7ac;
+		uint32_t wafer_xy = serial[0];
+		uint8_t wafer_num = serial[1] & 0xff;
+		char wafer_lot[8] =
+		{
+			static_cast<char>(serial[2] >> 24),
+			static_cast<char>((serial[2] >> 16) & 0xff),
+			static_cast<char>((serial[2] >> 8) & 0xff),
+			static_cast<char>(serial[2] & 0xff),
+			static_cast<char>(serial[1] >> 24),
+			static_cast<char>((serial[1] >> 16) & 0xff),
+			static_cast<char>((serial[1] >> 8) & 0xff),
+			'\0'
+		};
+		m_uart->Printf("Antikernel Labs,BLONDEL Characterization Platform,%s%03d%08x,0.1\n",
+			wafer_lot, wafer_num, wafer_xy);
+		return;
+	}
 }

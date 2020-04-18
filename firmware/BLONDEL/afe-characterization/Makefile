@@ -1,5 +1,5 @@
 CFLAGS=-g -mcpu=cortex-m0
-CXXFLAGS=$(CFLAGS) --std=c++17 -fno-exceptions -fno-rtti -g
+CXXFLAGS=$(CFLAGS) --std=c++17 -fno-exceptions -fno-rtti -g --specs=nano.specs
 CC=arm-none-eabi-gcc
 CXX=arm-none-eabi-g++
 all:
