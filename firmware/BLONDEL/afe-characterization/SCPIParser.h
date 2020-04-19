@@ -31,7 +31,7 @@
 #define SCPIParser_h
 
 #include <stdint.h>
-#include "UART.h"
+#include <peripheral/UART.h>
 
 class SCPIParser
 {

@@ -4,3 +4,6 @@
 [submodule "rtl/antikernel-ipcores"]
 	path = rtl/antikernel-ipcores
 	url = git@github.com:azonenberg/antikernel-ipcores
+[submodule "firmware/stm32-cpp"]
+	path = firmware/stm32-cpp
+	url = git@github.com:azonenberg/stm32-cpp
