@@ -32,13 +32,14 @@
 
 #include <stdint.h>
 #include <peripheral/UART.h>
+#include "LTC2664.h"
+
+#define NUM_CHANNELS 4
 
 class SCPIParser
 {
 public:
-	SCPIParser();
-	void Init(UART* uart)
-	{ m_uart = uart; }
+	SCPIParser(UART* uart, LTC2664* dac);
 
 	/**
 		@brief Single iteration of the main loop
@@ -56,11 +57,17 @@ protected:
 	 */
 	void OnLineReady();
 
+	void OnQuery(int channel, const char* field);
+	void OnSet(int channel, const char* field, const char* args);
+
 	//Keyboard event handlers
 	void OnBackspace();
 	void OnKey(char c);
 	//void OnLeftArrow();
 	//void OnRightArrow();
+
+	void PrintFloat(float f);
+	float ParseFloat(const char* str);
 
 	enum state
 	{
@@ -70,8 +77,17 @@ protected:
 
 	UART* m_uart;
 
+	//Input text entry
 	uint32_t m_cursorPosition;
 	char m_line[256];
+
+protected:
+
+	//Channel state
+	//TODO: maybe this should become a separate class
+
+	float m_offset[NUM_CHANNELS];
+	LTC2664* m_dac;
 };
 
 #endif

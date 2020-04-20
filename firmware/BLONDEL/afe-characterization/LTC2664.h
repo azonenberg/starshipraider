@@ -45,6 +45,7 @@ public:
 	LTC2664(SPI* spi, GPIOPin* rst, GPIOPin* cs, GPIOPin* ldac);
 
 	void SetCode(uint8_t lane, uint16_t code);
+	void SetVoltage(uint8_t lane, float v);
 
 protected:
 	SPI*		m_spi;

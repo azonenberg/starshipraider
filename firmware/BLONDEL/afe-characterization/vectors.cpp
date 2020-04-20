@@ -28,6 +28,8 @@
 ***********************************************************************************************************************/
 
 #include <stdint.h>
+#include <stm32fxxx.h>
+#include <peripheral/UART.h>
 
 typedef void(*fnptr)();
 
@@ -41,6 +43,7 @@ void BusFault_Handler();
 void HardFault_Handler();
 void NMI_Handler();
 
+extern UART* g_uart;
 void USART1_Handler();
 
 void defaultISR();
@@ -258,3 +261,19 @@ void MMUFault_Handler()
 	while(1)
 	{}
 }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Interrupt handlers for peripherals
+
+void __attribute__((isr)) USART1_Handler()
+{
+	//Check why we got the IRQ.
+	//For now, ignore anything other than "data ready"
+	if(0 == (USART1.ISR & USART_ISR_RXNE))
+		return;
+
+	//rx data? Shove it in the fifo
+	g_uart->OnIRQRxData(USART1.RDR);
+}
+
+

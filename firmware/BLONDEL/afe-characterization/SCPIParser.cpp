@@ -36,11 +36,16 @@
 static const char* CURSOR_LEFT = "\x1b[D";
 static const char* CURSOR_RIGHT = "\x1b[C";
 
-SCPIParser::SCPIParser()
- : m_state(STATE_EDIT)
+SCPIParser::SCPIParser(UART* uart, LTC2664* dac)
+ : m_uart(uart)
+ , m_state(STATE_EDIT)
  , m_cursorPosition(0)
+ , m_dac(dac)
 {
 	memset(m_line, 0, sizeof(m_line));
+
+	for(int i=0; i<NUM_CHANNELS; i++)
+		m_offset[i] = 0;
 }
 
 void SCPIParser::Iteration()
@@ -157,6 +162,7 @@ void SCPIParser::OnKey(char c)
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Execute a command
 
+//TODO: proper SCPI error interface
 void SCPIParser::OnLineReady()
 {
 	//Handle common commands with no arguments
@@ -179,5 +185,160 @@ void SCPIParser::OnLineReady()
 		m_uart->Printf("Antikernel Labs,BLONDEL Characterization Platform,%s%03d%08x,0.1\n",
 			wafer_lot, wafer_num, wafer_xy);
 		return;
+	}
+
+	//Look for a colon. This indicates we have a channel number and argument.
+	if(m_line[2] == ':')
+	{
+		//Expect command of the format C1:foo (one based). Convert to zero based indexing.
+		//Discard anything else
+		if( (toupper(m_line[0]) != 'C') || !isdigit(m_line[1]) )
+			return;
+		int channelNum = m_line[1] - '1';
+
+		//If channel number is invalid, discard it
+		if( (channelNum < 0) || (channelNum > NUM_CHANNELS) )
+			return;
+
+		//Figure out the parameter being set/read.
+		//Normalize to uppercase (commands are case insensitive)
+		char field[16] = {0};
+		bool is_query = false;
+		char* arg = NULL;
+		for(int i=0; i<sizeof(field)-1; i++)
+		{
+			char c = m_line[i+3];
+			if(isalpha(c))
+				field[i] = toupper(c);
+
+			else if(c == '?')
+			{
+				is_query = true;
+				break;
+			}
+
+			else if(c == ' ')
+			{
+				arg = m_line + i+4;
+				break;
+			}
+
+			//End of string with no argument
+			else if(c == '\0')
+				break;
+
+			//Malformed command, discard it
+			else
+				return;
+		}
+
+		//Read commands
+		if(is_query)
+			OnQuery(channelNum, field);
+
+		//Write commands
+		else
+			OnSet(channelNum, field, arg);
+	}
+}
+
+/**
+	@brief Prints a float to the UART in %.6f format with a trailing newline
+ */
+void SCPIParser::PrintFloat(float f)
+{
+	int intpart = (int)f;
+	int fracpart = (f - intpart) * 1000000.0;
+	if(fracpart < 0)
+		fracpart = -fracpart;
+	m_uart->Printf("%d.%06d\n", intpart, fracpart);
+}
+
+/**
+	@brief Parses a float from a string. Lightweight, limited replacement for atof().
+ */
+float SCPIParser::ParseFloat(const char* str)
+{
+	bool negative = false;
+	bool fractional = false;
+	float f = 0;
+	float scale = 0.1;
+	char c = *str;
+	do
+	{
+		//Minus sign
+		if(c == '-')
+			negative = true;
+
+		//Decimal point? Move from real to fractional part.
+		else if(c == '.')
+		{
+			//Multiple decimal points is an error, stop
+			if(fractional)
+				break;
+			else
+				fractional = true;
+		}
+
+		//Anything else should be a digit, abort if not
+		else if(!isdigit(c))
+			break;
+
+		//If we get here it's a digit
+		else
+		{
+			//Integer part
+			if(!fractional)
+				f = f*10 + (c - '0');
+
+			//Fractional part
+			else
+			{
+				f += scale*(c - '0');
+				scale *= 0.1;
+			}
+		}
+
+		//Move on
+		str ++;
+		c = *str;
+
+	} while(c != '\0');
+
+	//Invert negative numbers at the end
+	if(negative)
+		f = -f;
+
+	return f;
+}
+
+/**
+	@brief Handles a query to an object
+ */
+void SCPIParser::OnQuery(int channel, const char* field)
+{
+	//OFFSet - channel DC offset
+	if(!strcmp(field, "OFFS") || !strcmp(field, "OFFSET"))
+		PrintFloat(m_offset[channel]);
+}
+
+/**
+	@brief Handles a write to an object
+ */
+void SCPIParser::OnSet(int channel, const char* field, const char* args)
+{
+	if(!strcmp(field, "OFFS") || !strcmp(field, "OFFSET"))
+	{
+		//Save the offset. Trim it to be within allowed ranges
+		float f = ParseFloat(args);
+		if(f < -5)
+			f = -5;
+		if(f > 5)
+			f = 5;
+		m_offset[channel] = f;
+
+		//Input is attenuated by 0.5, so set the DAC to half the requested offset.
+		//TODO: calibration for non-exact attenuator here
+		m_dac->SetVoltage(channel, f/2);
 	}
 }

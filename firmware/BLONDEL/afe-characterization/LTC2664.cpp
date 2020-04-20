@@ -57,3 +57,22 @@ void LTC2664::SetCode(uint8_t lane, uint16_t code)
 	m_ldac->Set(0);
 	m_ldac->Set(1);
 }
+
+/**
+	@brief Sets the voltage for a lane
+
+	TODO: allow calibration rather than doing naive scaling
+ */
+void LTC2664::SetVoltage(uint8_t lane, float v)
+{
+	//Offset to be positive, since DAC codes are unsigned
+	v += 2.5;
+	if(v < 0)
+		v = 0;
+	if(v > 5)
+		v = 5;
+
+	//Convert to DAC code
+	v = v * 65535 / 5.0f;
+	SetCode(lane, v);
+}
