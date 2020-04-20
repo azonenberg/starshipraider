@@ -35,9 +35,18 @@ LTC2664::LTC2664(SPI* spi, GPIOPin* rst, GPIOPin* cs, GPIOPin* ldac)
 	, m_cs(cs)
 	, m_ldac(ldac)
 {
+	//Initialize all pins
 	rst->Set(1);
 	cs->Set(1);
 	ldac->Set(1);
+
+	//Reset the DAC
+	rst->Set(0);
+	rst->Set(1);
+
+	//Set all channels to 0
+	for(int i=0; i<4; i++)
+		SetVoltage(i, 0);
 }
 
 /**
