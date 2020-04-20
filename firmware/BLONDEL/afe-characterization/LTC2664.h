@@ -27,71 +27,30 @@
 *                                                                                                                      *
 ***********************************************************************************************************************/
 
+#ifndef LTC2664_h
+#define LTC2664_h
+
 #include <stm32fxxx.h>
-#include <peripheral/UART.h>
-#include <peripheral/GPIO.h>
 #include <peripheral/SPI.h>
-#include "SCPIParser.h"
-#include "LTC2664.h"
+#include <peripheral/GPIO.h>
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Entry point
+/**
+	@brief Driver for LTC2664 DAC
 
-UART* g_uart;
-SCPIParser scpi;
-
-int main()
+	Currently assumes +/- 2.5V span, selected via strap pins.
+ */
+class LTC2664
 {
-	//Initialize the PLL
-	//CPU clock = AHB clock = APB clock = 48 MHz
-	RCCHelper::InitializePLLFromInternalOscillator(2, 12, 1, 1);
+public:
+	LTC2664(SPI* spi, GPIOPin* rst, GPIOPin* cs, GPIOPin* ldac);
 
-	//Initialize the UART
-	GPIOPin uart_tx(&GPIOA, 9,	GPIOPin::MODE_PERIPHERAL, 1);
-	GPIOPin uart_rx(&GPIOA, 10, GPIOPin::MODE_PERIPHERAL, 1);
-	UART uart(&USART1, &USART1, 417);
-	g_uart = &uart;
+	void SetCode(uint8_t lane, uint16_t code);
 
-	//Enable RXNE interrupt vector (IRQ27)
-	//TODO: better contants here
-	volatile uint32_t* NVIC_ISER0 = (volatile uint32_t*)(0xe000e100);
-	*NVIC_ISER0 = 0x8000000;
+protected:
+	SPI*		m_spi;
+	GPIOPin*	m_rst;
+	GPIOPin*	m_cs;
+	GPIOPin*	m_ldac;
+};
 
-	//Initialize the LED and turn them all on
-	GPIOPin led0(&GPIOB, 7, GPIOPin::MODE_OUTPUT);
-	GPIOPin led1(&GPIOA, 5, GPIOPin::MODE_OUTPUT);
-	GPIOPin led2(&GPIOA, 6, GPIOPin::MODE_OUTPUT);
-	led0.Set(1);
-	led1.Set(1);
-	led2.Set(1);
-
-	//Set up SPI bus at 12 MHz (APB/4)
-	GPIOPin	spi_sck( &GPIOB, 3, GPIOPin::MODE_PERIPHERAL, 0);
-	//GPIOPin spi_miso(&GPIOB, 4, GPIOPin::MODE_PERIPHERAL, 0);
-	GPIOPin spi_mosi(&GPIOB, 5, GPIOPin::MODE_PERIPHERAL, 0);
-	SPI spi(&SPI1, false, 4);
-
-	//Set up DAC
-	//NOTE: schematic for AFE characterization board is wrong and has CS# and LDAC swapped
-	GPIOPin dac_rst(&GPIOA, 7, GPIOPin::MODE_OUTPUT);
-	GPIOPin dac_cs(&GPIOA, 2, GPIOPin::MODE_OUTPUT);
-	GPIOPin dac_ldac(&GPIOA, 3, GPIOPin::MODE_OUTPUT);
-	LTC2664 dac(&spi, &dac_rst, &dac_cs, &dac_ldac);
-
-	//Initialize SCPI stack
-	scpi.Init(g_uart);
-
-	//Main loop
-	uint16_t code = 0;
-	while(1)
-	{
-		//Process UART traffic
-		scpi.Iteration();
-
-		//Bump the DAC on VDAC1 (lane 1).
-		code += 32;
-		dac.SetCode(1, code);
-	}
-
-	return 0;
-}
+#endif
