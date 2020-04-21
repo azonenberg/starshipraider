@@ -27,75 +27,25 @@
 *                                                                                                                      *
 ***********************************************************************************************************************/
 
-#include <stm32fxxx.h>
-#include <peripheral/UART.h>
+#ifndef InputProtectionRelay_h
+#define InputProtectionRelay_h
+
 #include <peripheral/GPIO.h>
-#include <peripheral/SPI.h>
-#include "SCPIParser.h"
-#include "LTC2664.h"
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Entry point
-
-//UART stuff
-UART* g_uart;
-
-//When possible, long-lived stuff here should be declared static.
-//This puts them in .bss instead of stack, and enables better accounting of memory usage
-//on the (heavily limited) STM32F031 on the characterization board.
-int main()
+class InputProtectionRelay
 {
-	//Initialize the PLL
-	//CPU clock = AHB clock = APB clock = 48 MHz
-	RCCHelper::InitializePLLFromInternalOscillator(2, 12, 1, 1);
+public:
+	InputProtectionRelay(GPIOPin* relay_en, GPIOPin* input_rst, GPIOPin* overvoltage_n);
 
-	//Initialize the UART
-	static GPIOPin uart_tx(&GPIOA, 9,	GPIOPin::MODE_PERIPHERAL, 1);
-	static GPIOPin uart_rx(&GPIOA, 10, GPIOPin::MODE_PERIPHERAL, 1);
-	static UART uart(&USART1, &USART1, 417);
-	g_uart = &uart;
+	bool IsEnabled();
+	bool IsOverVoltage();
+	void Enable();
+	void Disable();
 
-	//Enable RXNE interrupt vector (IRQ27)
-	//TODO: better contants here
-	volatile uint32_t* NVIC_ISER0 = (volatile uint32_t*)(0xe000e100);
-	*NVIC_ISER0 = 0x8000000;
+protected:
+	GPIOPin*	m_relayEn;
+	GPIOPin*	m_inputRst;
+	GPIOPin*	m_overvoltage_n;
+};
 
-	//Initialize the LED and turn them all on
-	static GPIOPin led0(&GPIOB, 7, GPIOPin::MODE_OUTPUT);
-	static GPIOPin led1(&GPIOA, 5, GPIOPin::MODE_OUTPUT);
-	static GPIOPin led2(&GPIOA, 6, GPIOPin::MODE_OUTPUT);
-	led0.Set(1);
-	led1.Set(1);
-	led2.Set(1);
-
-	//Set up SPI bus at 12 MHz (APB/4)
-	static GPIOPin	spi_sck( &GPIOB, 3, GPIOPin::MODE_PERIPHERAL, 0);
-	//static GPIOPin spi_miso(&GPIOB, 4, GPIOPin::MODE_PERIPHERAL, 0);
-	static GPIOPin spi_mosi(&GPIOB, 5, GPIOPin::MODE_PERIPHERAL, 0);
-	static SPI spi(&SPI1, false, 4);
-
-	//Set up DAC
-	//NOTE: schematic for AFE characterization board is wrong and has CS# and LDAC swapped
-	static GPIOPin dac_rst(&GPIOA, 7, GPIOPin::MODE_OUTPUT);
-	static GPIOPin dac_cs(&GPIOA, 2, GPIOPin::MODE_OUTPUT);
-	static GPIOPin dac_ldac(&GPIOA, 3, GPIOPin::MODE_OUTPUT);
-	static LTC2664 dac(&spi, &dac_rst, &dac_cs, &dac_ldac);
-
-	//Set up relay driver
-	static GPIOPin relay_en(&GPIOA, 8, GPIOPin::MODE_INPUT);					//Indicates if the relay is currently on
-	static GPIOPin input_rst(&GPIOB, 0, GPIOPin::MODE_OUTPUT);					//Bring high to clear an overcurrent fault
-	static GPIOPin overvoltage_n(&GPIOB, 6, GPIOPin::MODE_OUTPUT, 0, true);		//Bring low to shut down the input
-	static InputProtectionRelay relay(&relay_en, &input_rst, &overvoltage_n);
-
-	//Initialize SCPI stack
-	static SCPIParser scpi(&uart, &dac, &relay);
-
-	//Main loop
-	while(1)
-	{
-		//Process UART traffic
-		scpi.Iteration();
-	}
-
-	return 0;
-}
+#endif

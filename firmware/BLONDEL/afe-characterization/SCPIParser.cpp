@@ -36,11 +36,12 @@
 static const char* CURSOR_LEFT = "\x1b[D";
 static const char* CURSOR_RIGHT = "\x1b[C";
 
-SCPIParser::SCPIParser(UART* uart, LTC2664* dac)
+SCPIParser::SCPIParser(UART* uart, LTC2664* dac, InputProtectionRelay* relay)
  : m_uart(uart)
  , m_state(STATE_EDIT)
  , m_cursorPosition(0)
  , m_dac(dac)
+ , m_relay(relay)
 {
 	memset(m_line, 0, sizeof(m_line));
 
@@ -320,6 +321,16 @@ void SCPIParser::OnQuery(int channel, const char* field)
 	//OFFSet - channel DC offset
 	if(!strcmp(field, "OFFS") || !strcmp(field, "OFFSET"))
 		PrintFloat(m_offset[channel]);
+
+	//ENable - channel enable status
+	//TODO: support multi channel here
+	else if(!strcmp(field, "EN") || !strcmp(field, "ENABLE"))
+		m_uart->Printf("%d\n", m_relay->IsEnabled());
+
+	//OVERload - channel overload status
+	//TODO: support multi channel here
+	else if(!strcmp(field, "OVER") || !strcmp(field, "OVERLOAD"))
+		m_uart->Printf("%d\n", m_relay->IsOverVoltage());
 }
 
 /**
@@ -327,6 +338,7 @@ void SCPIParser::OnQuery(int channel, const char* field)
  */
 void SCPIParser::OnSet(int channel, const char* field, const char* args)
 {
+	//OFFSet - channel DC offset
 	if(!strcmp(field, "OFFS") || !strcmp(field, "OFFSET"))
 	{
 		//Save the offset. Trim it to be within allowed ranges
@@ -341,4 +353,16 @@ void SCPIParser::OnSet(int channel, const char* field, const char* args)
 		//TODO: calibration for non-exact attenuator here
 		m_dac->SetVoltage(channel, f/2);
 	}
+
+	//ENable - channel enable status
+	//TODO: support multi channel here
+	//TODO: power-gate amplifiers on
+	else if(!strcmp(field, "EN") || !strcmp(field, "ENABLE"))
+		m_relay->Enable();
+
+	//DISable - channel enable status
+	//TODO: support multi channel here
+	//TODO: power-gate amplifiers off
+	else if(!strcmp(field, "DIS") || !strcmp(field, "DISABLE"))
+		m_relay->Disable();
 }

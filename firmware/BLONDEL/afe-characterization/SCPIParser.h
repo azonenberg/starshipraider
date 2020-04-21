@@ -33,13 +33,21 @@
 #include <stdint.h>
 #include <peripheral/UART.h>
 #include "LTC2664.h"
+#include "InputProtectionRelay.h"
 
 #define NUM_CHANNELS 4
 
+/**
+	@brief The SCPI stack
+
+	TODO: split this out into a base class for general SCPI stuff, and a derived class for our command set
+
+	TODO: detect channel overload via periodic poll, and power down amplifiers etc?
+ */
 class SCPIParser
 {
 public:
-	SCPIParser(UART* uart, LTC2664* dac);
+	SCPIParser(UART* uart, LTC2664* dac, InputProtectionRelay* relay);
 
 	/**
 		@brief Single iteration of the main loop
@@ -88,6 +96,7 @@ protected:
 
 	float m_offset[NUM_CHANNELS];
 	LTC2664* m_dac;
+	InputProtectionRelay* m_relay;		//for now, only channel 1
 };
 
 #endif
