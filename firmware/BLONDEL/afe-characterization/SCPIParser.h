@@ -34,6 +34,7 @@
 #include <peripheral/UART.h>
 #include "LTC2664.h"
 #include "InputProtectionRelay.h"
+#include "ADL5205.h"
 
 #define NUM_CHANNELS 4
 
@@ -47,7 +48,7 @@
 class SCPIParser
 {
 public:
-	SCPIParser(UART* uart, LTC2664* dac, InputProtectionRelay* relay);
+	SCPIParser(UART* uart, LTC2664* dac, InputProtectionRelay* relay, ADL5205* vga);
 
 	/**
 		@brief Single iteration of the main loop
@@ -97,6 +98,7 @@ protected:
 	float m_offset[NUM_CHANNELS];
 	LTC2664* m_dac;
 	InputProtectionRelay* m_relay;		//for now, only channel 1
+	ADL5205* m_vga;						//for now, only channel 1
 };
 
 #endif

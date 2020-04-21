@@ -31,17 +31,19 @@
 #include <memory.h>
 #include <string.h>
 #include <ctype.h>
+#include <stdlib.h>
 #include "SCPIParser.h"
 
 static const char* CURSOR_LEFT = "\x1b[D";
 static const char* CURSOR_RIGHT = "\x1b[C";
 
-SCPIParser::SCPIParser(UART* uart, LTC2664* dac, InputProtectionRelay* relay)
+SCPIParser::SCPIParser(UART* uart, LTC2664* dac, InputProtectionRelay* relay, ADL5205* vga)
  : m_uart(uart)
  , m_state(STATE_EDIT)
  , m_cursorPosition(0)
  , m_dac(dac)
  , m_relay(relay)
+ , m_vga(vga)
 {
 	memset(m_line, 0, sizeof(m_line));
 
@@ -331,6 +333,11 @@ void SCPIParser::OnQuery(int channel, const char* field)
 	//TODO: support multi channel here
 	else if(!strcmp(field, "OVER") || !strcmp(field, "OVERLOAD"))
 		m_uart->Printf("%d\n", m_relay->IsOverVoltage());
+
+	//GAIN - channel gain (only ADL5205 gain here, not end to end gain)
+	//TODO: support multi channel here
+	else if(!strcmp(field, "GAIN"))
+		m_uart->Printf("%d\n", m_vga->GetGain());
 }
 
 /**
@@ -358,11 +365,22 @@ void SCPIParser::OnSet(int channel, const char* field, const char* args)
 	//TODO: support multi channel here
 	//TODO: power-gate amplifiers on
 	else if(!strcmp(field, "EN") || !strcmp(field, "ENABLE"))
+	{
+		m_vga->PowerUp();
 		m_relay->Enable();
+	}
 
 	//DISable - channel enable status
 	//TODO: support multi channel here
 	//TODO: power-gate amplifiers off
 	else if(!strcmp(field, "DIS") || !strcmp(field, "DISABLE"))
+	{
 		m_relay->Disable();
+		m_vga->PowerDown();
+	}
+
+	//GAIN - set channel frontend gain
+	//TODO: support multi channel here
+	else if(!strcmp(field, "GAIN"))
+		m_vga->SetGain(atoi(args));
 }
