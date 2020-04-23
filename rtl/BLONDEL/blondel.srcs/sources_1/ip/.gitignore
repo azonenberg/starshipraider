@@ -7,3 +7,7 @@
 */*.vhdl
 */doc
 */*.vh
+*/hdl
+*/synth
+*/sim
+*/ila_v*
