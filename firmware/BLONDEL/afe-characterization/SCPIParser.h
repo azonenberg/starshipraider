@@ -70,10 +70,7 @@ protected:
 	void OnSet(int channel, const char* field, const char* args);
 
 	//Keyboard event handlers
-	void OnBackspace();
 	void OnKey(char c);
-	//void OnLeftArrow();
-	//void OnRightArrow();
 
 	void PrintFloat(float f);
 	float ParseFloat(const char* str);

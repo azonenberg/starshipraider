@@ -82,73 +82,19 @@ void SCPIParser::OnInputReady()
 	//End of line means the command is ready to execute
 	if( (c == '\r') || (c == '\n') )
 	{
-		m_uart->PrintString("\n");
+		//m_uart->PrintString("\n");
 		m_state = STATE_PARSE;
 		return;
 	}
 
-	//Backspace
-	else if(c == 0x7f)
-		OnBackspace();
-
-	//Escape sequences
-	else if(c == 0x1b)
-	{
-		//TODO: don't stall if there's nothing in the fifo
-
-		//Next char should be a [
-		if(m_uart->BlockingRead() != '[')
-		{
-			//malformed escape sequence, ignore it
-			return;
-		}
-
-		//and the actual escape code
-		char code = m_uart->BlockingRead();
-		switch(code)
-		{
-			//B = down, A = up
-
-			case 'C':
-				//OnRightArrow();
-				break;
-
-			case 'D':
-				//OnLeftArrow();
-				break;
-
-			default:
-				break;
-		}
-	}
-
-	//TODO: tab completion?
-	else if(c == '\t')
-	{
-	}
-
-	//Ignore other non-printable characters
+	//Ignore non-printable characters
 	else if(!isprint(c))
 	{
 	}
 
-	//Echo characters as typed
+	//Process characters
 	else
 		OnKey(c);
-}
-
-void SCPIParser::OnBackspace()
-{
-	//for now assume we're at end of line
-
-	//can't go left of cursor
-	if(m_cursorPosition == 0)
-		return;
-
-	//Delete the character
-	//move left, space over the deleted character, move left for good this time
-	m_uart->Printf("%s %s", CURSOR_LEFT, CURSOR_LEFT);
-	m_line[m_cursorPosition --] = '\0';
 }
 
 void SCPIParser::OnKey(char c)
@@ -159,7 +105,7 @@ void SCPIParser::OnKey(char c)
 
 	//Append it
 	m_line[m_cursorPosition ++] = c;
-	m_uart->PrintBinary(c);
+	//m_uart->PrintBinary(c);
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
