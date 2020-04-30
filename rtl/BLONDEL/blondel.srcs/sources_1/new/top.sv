@@ -43,7 +43,8 @@ module top(
 	output wire			adc_spi_cs_n,
 
 	//SCPI UART to STM32
-	output wire			uart_tx
+	output wire			uart_tx,
+	input wire			uart_rx
 );
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -245,14 +246,27 @@ module top(
 	UDPv4TxBus	udpv4_tx_bus	 =0;
 
 	TCPv4RxBus	tcpv4_rx_bus;
+	TCPv4TxBus	tcpv4_tx_bus;
 
 	logic		tcp_port_open_en	= 0;
 	logic		tcp_port_close_en	= 0;
 	portnum_t	tcp_port_num		= 0;
 
+	localparam TCP_RAM_DEPTH = 256;
+
+	wire		ram_wr_en;
+	wire[7:0]	ram_wr_addr;
+	wire[511:0]	ram_wr_data;
+
+	wire		ram_rd_en;
+	wire[7:0]	ram_rd_addr;
+	wire[511:0]	ram_rd_data;
+	logic		ram_rd_valid	= 0;
+
 	TCPIPStack #(
 		.TX_PACKET_DEPTH(8192),
-		.CLK_IPSTACK_HZ(100000000)	//100 MHz clock
+		.CLK_IPSTACK_HZ(100000000),	//100 MHz clock
+		.TCP_RAM_DEPTH(TCP_RAM_DEPTH)
 	) stack (
 		.clk_ipstack(clk_100mhz),
 
@@ -271,13 +285,55 @@ module top(
 		.udpv4_rx_bus(udpv4_rx_bus),
 		.udpv4_tx_bus(udpv4_tx_bus),
 
-		//TODO: TCP TX data
 		.tcpv4_rx_bus(tcpv4_rx_bus),
-		.tcpv4_tx_bus({$bits(TCPv4TxBus){1'b0}}),
+		.tcpv4_tx_bus(tcpv4_tx_bus),
 		.tcp_port_open_en(tcp_port_open_en),
 		.tcp_port_close_en(tcp_port_close_en),
-		.tcp_port_num(tcp_port_num)
+		.tcp_port_num(tcp_port_num),
+
+		.ram_ready(1'b1),
+		.ram_wr_en(ram_wr_en),
+		.ram_wr_addr(ram_wr_addr),
+		.ram_wr_data(ram_wr_data),
+
+		.ram_rd_en(ram_rd_en),
+		.ram_rd_addr(ram_rd_addr),
+		.ram_rd_data(ram_rd_data),
+		.ram_rd_valid(ram_rd_valid)
 	);
+
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// TCP retransmit memory
+
+	MemoryMacro #(
+		.WIDTH(512),
+		.DEPTH(TCP_RAM_DEPTH),
+		.USE_BLOCK(1),
+		.OUT_REG(2),
+		.DUAL_PORT(1),
+		.TRUE_DUAL(1)
+	) tcp_mem (
+
+		.porta_clk(clk_100mhz),
+		.porta_en(ram_wr_en),
+		.porta_addr(ram_wr_addr),
+		.porta_we(ram_wr_en),
+		.porta_din(ram_wr_data),
+		.porta_dout(),
+
+		.portb_clk(clk_100mhz),
+		.portb_en(ram_rd_en),
+		.portb_addr(ram_rd_addr),
+		.portb_we(1'b0),
+		.portb_din(512'h0),
+		.portb_dout(ram_rd_data)
+	);
+
+	logic	ram_rd_en_ff	= 0;
+	always_ff @(posedge clk_100mhz) begin
+		ram_rd_en_ff	<= ram_rd_en;
+		ram_rd_valid	<= ram_rd_en_ff;
+	end
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// Open port 5025 (SCPI) when we start up
@@ -306,8 +362,10 @@ module top(
 		.clk_tcp(clk_100mhz),
 		.tcp_port(16'd5025),
 		.tcp_rx_bus(tcpv4_rx_bus),
+		.tcp_tx_bus(tcpv4_tx_bus),
 
-		.uart_tx(uart_tx)
+		.uart_tx(uart_tx),
+		.uart_rx(uart_rx)
 	);
 
 endmodule

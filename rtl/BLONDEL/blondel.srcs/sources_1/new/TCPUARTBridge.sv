@@ -42,8 +42,10 @@ module TCPUARTBridge(
 	input wire				clk_tcp,
 	input wire[15:0]		tcp_port,
 	input wire TCPv4RxBus	tcp_rx_bus,
+	output logic TCPv4TxBus	tcp_tx_bus,
 
-	output wire				uart_tx
+	output wire				uart_tx,
+	input wire				uart_rx
 );
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -53,14 +55,18 @@ module TCPUARTBridge(
 	logic[7:0]	uart_tx_data	= 0;
 	wire		uart_tx_done;
 
+	wire		uart_rx_en;
+	wire[7:0]	uart_rx_data;
+	wire		uart_rx_active;
+
 	UART uart(
 		.clk(clk_uart),
 		.clkdiv(clkdiv_uart),
 
-		.rx(1'b1),
-		.rxactive(),
-		.rx_data(),
-		.rx_en(),
+		.rx(uart_rx),
+		.rxactive(uart_rx_active),
+		.rx_data(uart_rx_data),
+		.rx_en(uart_rx_en),
 
 		.tx(uart_tx),
 		.tx_data(uart_tx_data),
@@ -124,8 +130,8 @@ module TCPUARTBridge(
 
 			RX_STATE_IDLE: begin
 				if(fifo_rd_size != 0) begin
-					fifo_rd_en	<= 1;
-					rx_state	<= RX_STATE_READ;
+					fifo_rd_en		<= 1;
+					rx_state		<= RX_STATE_READ;
 				end
 			end	//end RX_STATE_IDLE
 
@@ -172,24 +178,173 @@ module TCPUARTBridge(
 	end
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	// TODO: TX side
+	// TX-side data buffering
+
+	//Baud rate counter
+	logic[15:0] baud_count	= 0;
+	logic		baud_tick	= 0;
+	always_ff @(posedge clk_uart) begin
+		baud_tick	<= 0;
+		baud_count	<= baud_count + 1;
+		if(baud_count == clkdiv_uart) begin
+			baud_tick	<= 1;
+			baud_count	<= 0;
+		end
+	end
+
+	//Flush the FIFO 128 UIs (16 byte times) after the last received packet, or when we see a \n
+	logic		wr_flush			= 0;
+	logic		rx_flush_pending	= 0;
+	logic[7:0]	rx_idlecount		= 0;
+	always_ff @(posedge clk_uart) begin
+
+		wr_flush	<= 0;
+
+		//If a byte is in progress, reset the counter
+		if(uart_rx_active) begin
+			rx_flush_pending	<= 1;
+			rx_idlecount		<= 0;
+		end
+
+		//Count UIs
+		else if(rx_flush_pending && baud_tick) begin
+			rx_idlecount		<= rx_idlecount + 1;
+			if(rx_idlecount == 127) begin
+				wr_flush			<= 1;
+				rx_flush_pending	<= 0;
+			end
+		end
+
+		//Flush immediately if we see a \n on the UART
+		if(uart_rx_en && uart_rx_data == "\n") begin
+			wr_flush			<= 1;
+			rx_flush_pending	<= 0;
+		end
+
+	end
+
+	wire		tx_flush_sync;
+	PulseSynchronizer sync_flush(
+		.clk_a(clk_uart),
+		.pulse_a(wr_flush),
+		.clk_b(clk_tcp),
+		.pulse_b(tx_flush_sync)
+	);
+
+	logic		tx_rd_en	= 0;
+	wire[31:0]	tx_rd_data;
+	wire[2:0]	tx_rd_bytes_valid;
+	wire[10:0]	tx_fifo_rsize;
+
+	CrossClockByteInputFifo #(
+		.DEPTH(512)
+	) tx_fifo (
+		.wr_clk(clk_uart),
+		.wr_en(uart_rx_en),
+		.wr_data({uart_rx_data, 24'h0}),
+		.wr_bytes_valid(3'd1),
+		.wr_flush(wr_flush),
+
+		.rd_clk(clk_tcp),
+		.rd_en(tx_rd_en),
+		.rd_data(tx_rd_data),
+		.rd_bytes_valid(tx_rd_bytes_valid),
+		.rd_size(tx_fifo_rsize),
+		.rd_empty(),
+		.rd_underflow()
+	);
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	// Debug ILA
-	/*
-	ila_0 ila(
-		.clk(clk_uart),
-		.probe0(fifo_rd_en),
-		.probe1(fifo_rd_size),
-		.probe2(uart_tx_en),
-		.probe3(uart_tx_data),
-		.probe4(uart_tx_done),
-		.probe5(fifo_rd_len),
-		.probe6(fifo_rd_data),
-		.probe7(fifo_pop),
-		.probe8(rx_count),
-		.probe9(rx_state)
-		);
-	*/
+	// TX-side state machine
+
+	enum logic[2:0]
+	{
+		TX_STATE_IDLE	= 0,
+		TX_STATE_POP	= 1,
+		TX_STATE_DATA	= 2,
+		TX_STATE_LAST	= 3,
+		TX_STATE_COMMIT	= 4
+	} tx_state = TX_STATE_IDLE;
+
+	always_ff @(posedge clk_tcp) begin
+
+		tx_rd_en				<= 0;
+		tcp_tx_bus.start		<= 0;
+		tcp_tx_bus.data_valid	<= 0;
+		tcp_tx_bus.commit		<= 0;
+		tcp_tx_bus.drop			<= 0;
+
+		//Use the socket of the last inbound segment with valid data as our reply address for now
+		//(only save committed packets to our port)
+		if(tcp_rx_bus.commit && (tcp_rx_bus.dst_port == tcp_port) && (tcp_rx_bus.payload_len > 0) ) begin
+			tcp_tx_bus.dst_port	<= tcp_rx_bus.src_port;
+			tcp_tx_bus.src_port	<= tcp_port;
+			tcp_tx_bus.dst_ip	<= tcp_rx_bus.src_ip;
+			tcp_tx_bus.sockid	<= tcp_rx_bus.sockid;
+		end
+
+		case(tx_state)
+
+			TX_STATE_IDLE: begin
+
+				//Purge any garbage that gets in prior to our session coming up
+				if(tcp_tx_bus.dst_ip == 32'h00000000) begin
+					if( (tx_fifo_rsize != 0) && !tx_rd_en)
+						tx_rd_en	<= 1;
+				end
+
+				//Start a packet if we are flushed, or if we get more than 256 words (1024 bytes) in the fifo.
+				else if( (tx_fifo_rsize >= 256) || (tx_flush_sync) ) begin
+					tx_rd_en			<= 1;
+					tx_state			<= TX_STATE_POP;
+				end
+
+			end	//end TX_STATE_IDLE
+
+			TX_STATE_POP: begin
+				tcp_tx_bus.start	<= 1;
+
+				if(tx_fifo_rsize >= 1) begin
+					tx_rd_en		<= 1;
+					tx_state		<= TX_STATE_DATA;
+				end
+
+				else
+					tx_state		<= TX_STATE_LAST;
+
+			end	//end TX_STATE_POP
+
+			TX_STATE_DATA: begin
+				if(tx_fifo_rsize >= 1)
+					tx_rd_en		<= 1;
+				else
+					tx_state		<= TX_STATE_LAST;
+
+				tcp_tx_bus.data_valid	<= 1;
+				tcp_tx_bus.bytes_valid	<= tx_rd_bytes_valid;
+				tcp_tx_bus.data			<= tx_rd_data;
+
+			end	//end TX_STATE_DATA
+
+			TX_STATE_LAST: begin
+
+				tcp_tx_bus.data_valid	<= 1;
+				tcp_tx_bus.bytes_valid	<= tx_rd_bytes_valid;
+				tcp_tx_bus.data			<= tx_rd_data;
+
+				tx_state				<= TX_STATE_COMMIT;
+
+			end	//end TX_STATE_DATA
+
+			TX_STATE_COMMIT: begin
+
+				//Last frame done
+				tcp_tx_bus.commit	<= 1;
+				tx_state			<= TX_STATE_IDLE;
+			end	//end TX_STATE_COMMIT
+
+		endcase
+
+	end
 
 endmodule
