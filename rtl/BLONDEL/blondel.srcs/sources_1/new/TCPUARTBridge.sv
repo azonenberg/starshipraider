@@ -266,6 +266,9 @@ module TCPUARTBridge(
 		TX_STATE_COMMIT	= 4
 	} tx_state = TX_STATE_IDLE;
 
+	logic		tx_flush_pending	= 0;
+	logic[6:0]	tx_flush_delay;
+
 	always_ff @(posedge clk_tcp) begin
 
 		tx_rd_en				<= 0;
@@ -283,19 +286,33 @@ module TCPUARTBridge(
 			tcp_tx_bus.sockid	<= tcp_rx_bus.sockid;
 		end
 
+		//When a flush request comes in, start a timer.
+		//This ensures that all flush events have propagated through the FIFO.
+		//We need a large delay because the UART clock domain is much slower than us.
+		if(tx_flush_sync)
+			tx_flush_delay	<= 1;
+		if(tx_flush_delay) begin
+			tx_flush_delay	<= tx_flush_delay + 1;
+			if(tx_flush_delay == 127)
+				tx_flush_pending	<= 1;
+		end
+
 		case(tx_state)
 
 			TX_STATE_IDLE: begin
 
 				//Purge any garbage that gets in prior to our session coming up
 				if(tcp_tx_bus.dst_ip == 32'h00000000) begin
-					if( (tx_fifo_rsize != 0) && !tx_rd_en)
-						tx_rd_en	<= 1;
+					if( (tx_fifo_rsize != 0) && !tx_rd_en) begin
+						tx_rd_en			<= 1;
+						tx_flush_pending	<= 0;
+					end
 				end
 
 				//Start a packet if we are flushed, or if we get more than 256 words (1024 bytes) in the fifo.
-				else if( (tx_fifo_rsize >= 256) || (tx_flush_sync) ) begin
+				else if( (tx_fifo_rsize >= 256) || (tx_flush_pending && tx_fifo_rsize != 0) ) begin
 					tx_rd_en			<= 1;
+					tx_flush_pending	<= 0;
 					tx_state			<= TX_STATE_POP;
 				end
 
@@ -304,7 +321,7 @@ module TCPUARTBridge(
 			TX_STATE_POP: begin
 				tcp_tx_bus.start	<= 1;
 
-				if(tx_fifo_rsize >= 1) begin
+				if(tx_fifo_rsize > 1) begin
 					tx_rd_en		<= 1;
 					tx_state		<= TX_STATE_DATA;
 				end
@@ -315,7 +332,7 @@ module TCPUARTBridge(
 			end	//end TX_STATE_POP
 
 			TX_STATE_DATA: begin
-				if(tx_fifo_rsize >= 1)
+				if(tx_fifo_rsize > 1)
 					tx_rd_en		<= 1;
 				else
 					tx_state		<= TX_STATE_LAST;
