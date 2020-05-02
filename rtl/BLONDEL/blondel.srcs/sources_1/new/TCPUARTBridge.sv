@@ -44,6 +44,9 @@ module TCPUARTBridge(
 	input wire TCPv4RxBus	tcp_rx_bus,
 	output logic TCPv4TxBus	tcp_tx_bus,
 
+	output logic			tcp_rts	= 0,
+	input wire				tcp_cts,
+
 	output wire				uart_tx,
 	input wire				uart_rx
 );
@@ -314,20 +317,27 @@ module TCPUARTBridge(
 					tx_rd_en			<= 1;
 					tx_flush_pending	<= 0;
 					tx_state			<= TX_STATE_POP;
+
+					tcp_rts				<= 1;
 				end
 
 			end	//end TX_STATE_IDLE
 
 			TX_STATE_POP: begin
-				tcp_tx_bus.start	<= 1;
 
-				if(tx_fifo_rsize > 1) begin
-					tx_rd_en		<= 1;
-					tx_state		<= TX_STATE_DATA;
+				if(tcp_cts) begin
+					tcp_rts	<= 0;
+
+					tcp_tx_bus.start	<= 1;
+
+					if(tx_fifo_rsize > 1) begin
+						tx_rd_en		<= 1;
+						tx_state		<= TX_STATE_DATA;
+					end
+
+					else
+						tx_state		<= TX_STATE_LAST;
 				end
-
-				else
-					tx_state		<= TX_STATE_LAST;
 
 			end	//end TX_STATE_POP
 

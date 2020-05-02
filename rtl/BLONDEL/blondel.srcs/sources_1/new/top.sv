@@ -106,12 +106,18 @@ module top(
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// The ADC
 
+	`include "HMCAD1520.svh"
+
+	h1520bus_t	adc_bus;
+
 	HMCAD1520 adc(
 		.ctl_clk(clk_100mhz),
 
 		.lclk(lclk),
 		.fast_clk(fast_clk),
 		.slow_clk(slow_clk),
+
+		.sample_bus(adc_bus),
 
 		.lclk_p(adc_lclk_p),
 		.lclk_n(adc_lclk_n),
@@ -336,36 +342,76 @@ module top(
 	end
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	// Open port 5025 (SCPI) when we start up
+	// Open ports when we start up
 
-	logic init	= 0;
+	logic[2:0] init_state = 0;
+
+	localparam SCPI_PORT 		= 16'd5025;
+	localparam WAVEFORM_PORT 	= 16'd50101;
 
 	always_ff @(posedge clk_100mhz) begin
 
 		tcp_port_open_en	<= 0;
 
-		if(!init) begin
-			init				<= 1;
-			tcp_port_open_en	<= 1;
-			tcp_port_num		<= 5025;
-		end
+		case(init_state)
+
+			0: begin
+				tcp_port_open_en	<= 1;
+				tcp_port_num		<= SCPI_PORT;
+				init_state			<= 1;
+			end
+
+			1: begin
+				tcp_port_open_en	<= 1;
+				tcp_port_num		<= WAVEFORM_PORT;
+				init_state			<= 2;
+			end
+
+			2: begin
+				//hang forever
+			end
+
+		endcase
 
 	end
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// Take data coming in for port 5025 and stream out the UART
 
+	TCPv4TxBus	uart_tx_bus;
+	wire		uart_rts;
+	wire		uart_cts;
+
 	TCPUARTBridge uart_bridge(
 		.clk_uart(clk_10mhz),
 		.clkdiv_uart(16'd87),	//115.2 Kbps @ 10 MHz
 
 		.clk_tcp(clk_100mhz),
-		.tcp_port(16'd5025),
+		.tcp_port(SCPI_PORT),
 		.tcp_rx_bus(tcpv4_rx_bus),
-		.tcp_tx_bus(tcpv4_tx_bus),
+		.tcp_rts(uart_rts),
+		.tcp_cts(uart_cts),
+		.tcp_tx_bus(uart_tx_bus),
 
 		.uart_tx(uart_tx),
 		.uart_rx(uart_rx)
+	);
+
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// The ADC manager
+
+	AcquisitionManager mgr(
+		.adc_clk(slow_clk),
+		.adc_bus(adc_bus),
+
+		.uart_rts(uart_rts),
+		.uart_cts(uart_cts),
+		.uart_tx_bus(uart_tx_bus),
+
+		.tcp_clk(clk_100mhz),
+		.tcp_port(WAVEFORM_PORT),
+		.tcp_rx_bus(tcpv4_rx_bus),
+		.tcp_tx_bus(tcpv4_tx_bus)
 	);
 
 endmodule
