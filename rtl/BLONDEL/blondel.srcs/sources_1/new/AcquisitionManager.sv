@@ -103,6 +103,16 @@ module AcquisitionManager(
 	logic[10:0]	ram_rd_addr	= 0;
 	h1520bus_t	ram_rd_data;
 
+	logic[10:0]	trigger_addr	= 0;
+	logic[2:0]	trigger_phase	= 0;
+
+	logic[10:0]	trigger_addr_ff		= 0;
+	logic[2:0]	trigger_phase_ff	= 0;
+	always_ff @(posedge tcp_clk) begin
+		trigger_addr_ff		<= trigger_addr;
+		trigger_phase_ff	<= trigger_phase;
+	end
+
 	MemoryMacro #(
 		.WIDTH(64),			//8 samples * 8 bits
 		.DEPTH(2048),		//2K words = 16K samples
@@ -120,7 +130,7 @@ module AcquisitionManager(
 
 		.portb_clk(tcp_clk),
 		.portb_en(ram_rd_en),
-		.portb_addr(ram_rd_addr),
+		.portb_addr(ram_rd_addr + trigger_addr_ff),
 		.portb_we(1'b0),
 		.portb_din(),
 		.portb_dout(ram_rd_data)
@@ -137,12 +147,8 @@ module AcquisitionManager(
 		ADC_STATE_IDLE		= 0,
 		ADC_STATE_PRE_TRIG	= 1,
 		ADC_STATE_ARMED		= 2,
-		ADC_STATE_CAPTURE	= 3,
-		ADC_STATE_DONE		= 4
+		ADC_STATE_CAPTURE	= 3
 	} adc_state = ADC_STATE_IDLE;
-
-	logic[10:0]	trigger_addr	= 0;
-	logic[2:0]	trigger_phase	= 0;
 
 	always_ff @(posedge adc_clk) begin
 
@@ -188,9 +194,14 @@ module AcquisitionManager(
 
 			ADC_STATE_CAPTURE: begin
 
-				//Done?
-				if( (ram_wr_addr + 1) == trigger_addr) begin
-					adc_state		<= ADC_STATE_DONE;
+				//Stop when we've recorded the other half of our window
+				if( (ram_wr_addr + 1024) == trigger_addr) begin
+
+					//The final trigger address we push is the START of our capture window.
+					//This is one after where we began triggering.
+					trigger_addr	<= ram_wr_addr + 1;
+
+					adc_state		<= ADC_STATE_IDLE;
 					waveform_ready	<= 1;
 				end
 
@@ -202,10 +213,6 @@ module AcquisitionManager(
 				end
 
 			end	//end ADC_STATE_CAPTURE
-
-			ADC_STATE_DONE: begin
-				//stay here until reset
-			end	//end ADC_STATE_DONE
 
 		endcase
 
@@ -259,11 +266,24 @@ module AcquisitionManager(
 		TX_STATE_UART			= 1,
 		TX_STATE_WAVEFORM_0		= 2,
 		TX_STATE_WAVEFORM_1		= 3,
-		TX_STATE_WAVEFORM_2		= 4
+		TX_STATE_WAVEFORM_2		= 4,
+		TX_STATE_WAVEFORM_3		= 5
 	} tx_state = TX_STATE_IDLE;
 
 	logic		waveform_pending	= 0;
 	logic		tx_phase			= 0;
+
+	logic[12:0]	tx_delay			= 0;
+
+	//100 MHz, rearm at ~52 Hz
+	logic[20:0]	rearm_count			= 0;
+
+	//Saved configuration for the waveform interface
+	logic[15:0]	dst_port			= 0;
+	logic[31:0]	dst_ip				= 0;
+	logic[15:0]	sockid				= 0;
+
+	h1520bus_t	ram_rd_data_ff		= 0;
 
 	always_ff @(posedge tcp_clk) begin
 
@@ -277,17 +297,37 @@ module AcquisitionManager(
 
 		ram_rd_en				<= 0;
 
+		if(ram_rd_en)
+			ram_rd_data_ff		<= ram_rd_data;
+
 		if(waveform_ready_sync)
 			waveform_pending	<= 1;
 
-		//If we get a byte on the incoming TCP connection, arm the trigger
-		if(tcp_rx_bus.commit && (tcp_rx_bus.dst_port == tcp_port) ) begin
-			trigger_arm			<= 1;
+		if(dst_port != 0) begin
 
-			tcp_tx_bus.dst_port	<= tcp_rx_bus.src_port;
-			tcp_tx_bus.src_port	<= tcp_port;
-			tcp_tx_bus.dst_ip	<= tcp_rx_bus.src_ip;
-			tcp_tx_bus.sockid	<= tcp_rx_bus.sockid;
+			//Only rearm if connection is idle
+			if(tx_state == TX_STATE_IDLE) begin
+				rearm_count			<= rearm_count + 1;
+				if(rearm_count == 0)
+					trigger_arm		<= 1;
+			end
+		end
+
+		//If we get a byte on the incoming TCP connection, arm the trigger
+		if(tcp_rx_bus.commit && (tcp_rx_bus.dst_port == tcp_port) && (tcp_rx_bus.payload_len > 0) ) begin
+			trigger_arm			<= 1;
+			rearm_count			<= 1;
+
+			dst_port			<= tcp_rx_bus.src_port;
+			dst_ip				<= tcp_rx_bus.src_ip;
+			sockid				<= tcp_rx_bus.sockid;
+		end
+
+		//Stop sending traffic if the socket is closed
+		if(tcp_rx_bus.close && (tcp_rx_bus.dst_port == tcp_port) ) begin
+			dst_port			<= 0;
+			dst_ip				<= 0;
+			sockid				<= 0;
 		end
 
 		case(tx_state)
@@ -297,7 +337,7 @@ module AcquisitionManager(
 
 			TX_STATE_IDLE: begin
 
-				if(waveform_pending) begin
+				if(waveform_pending && (dst_port != 0) ) begin
 					waveform_pending	<= 0;
 					ram_rd_en			<= 1;
 					ram_rd_addr			<= 0;
@@ -329,6 +369,11 @@ module AcquisitionManager(
 			TX_STATE_WAVEFORM_0: begin
 
 				tcp_tx_bus.start	<= 1;
+				tcp_tx_bus.dst_port	<= dst_port;
+				tcp_tx_bus.src_port	<= tcp_port;
+				tcp_tx_bus.dst_ip	<= dst_ip;
+				tcp_tx_bus.sockid	<= sockid;
+
 				tx_state			<= TX_STATE_WAVEFORM_1;
 
 			end	//end TX_STATE_WAVEFORM_0
@@ -343,18 +388,37 @@ module AcquisitionManager(
 
 				//First half (start reading more data)
 				if(tx_phase == 0) begin
-					tcp_tx_bus.data		<= ram_rd_data.samples[7:4];
+					case(trigger_phase_ff)
+						0: tcp_tx_bus.data		<= ram_rd_data.samples[7:4];
+						1: tcp_tx_bus.data		<= { ram_rd_data_ff.samples[0], ram_rd_data.samples[7:5]};
+						2: tcp_tx_bus.data		<= { ram_rd_data_ff.samples[1:0], ram_rd_data.samples[7:6]};
+						3: tcp_tx_bus.data		<= { ram_rd_data_ff.samples[2:0], ram_rd_data.samples[7]};
+						4: tcp_tx_bus.data		<= { ram_rd_data_ff.samples[3:0]};
+						5: tcp_tx_bus.data		<= { ram_rd_data_ff.samples[4:1]};
+						6: tcp_tx_bus.data		<= { ram_rd_data_ff.samples[5:2]};
+						7: tcp_tx_bus.data		<= { ram_rd_data_ff.samples[6:3]};
+					endcase
 
 					ram_rd_en			<= 1;
 					ram_rd_addr			<= ram_rd_addr + 1;
 				end
 
 				else begin
-					tcp_tx_bus.data		<= ram_rd_data.samples[3:0];
 
-					//For now, stop after the first 128 rows (1024 samples)
-					//(note that we alreasy incremented ram_rd_addr)
-					if(ram_rd_addr == 128)
+					case(trigger_phase_ff)
+						0: tcp_tx_bus.data		<= ram_rd_data.samples[3:0];
+						1: tcp_tx_bus.data		<= ram_rd_data.samples[4:1];
+						2: tcp_tx_bus.data		<= ram_rd_data.samples[5:2];
+						3: tcp_tx_bus.data		<= ram_rd_data.samples[6:3];
+						4: tcp_tx_bus.data		<= ram_rd_data.samples[7:4];
+						5: tcp_tx_bus.data		<= { ram_rd_data_ff.samples[0], ram_rd_data.samples[7:5]};
+						6: tcp_tx_bus.data		<= { ram_rd_data_ff.samples[1:0], ram_rd_data.samples[7:6]};
+						7: tcp_tx_bus.data		<= { ram_rd_data_ff.samples[2:0], ram_rd_data.samples[7]};
+					endcase
+
+					//End this packet every 1024 samples.
+					//Slightly inefficient compared to filling the whole segment, but keeps prototype code simple
+					if(ram_rd_addr[6:0] == 0)
 						tx_state		<= TX_STATE_WAVEFORM_2;
 
 				end
@@ -363,8 +427,20 @@ module AcquisitionManager(
 
 			TX_STATE_WAVEFORM_2: begin
 				tcp_tx_bus.commit		<= 1;
-				tx_state				<= TX_STATE_IDLE;
+				tx_state				<= TX_STATE_WAVEFORM_3;
+				tx_delay				<= 1;
+
+				//If we just wrapped around to 0, we sent the last sample. Stop.
+				if(ram_rd_addr == 0)
+					tx_state			<= TX_STATE_IDLE;
+
 			end	//end TX_STATE_WAVEFORM_2
+
+			TX_STATE_WAVEFORM_3: begin
+				tx_delay				<= tx_delay + 1;			//TODO: fix this
+				if(tx_delay == 0)
+					tx_state			<= TX_STATE_WAVEFORM_0;
+			end	//end TX_STATE_WAVEFORM_3
 
 		endcase
 
@@ -386,7 +462,10 @@ module AcquisitionManager(
 		.probe8(ram_rd_data),
 		.probe9(tcp_tx_bus.data_valid),
 		.probe10(tcp_tx_bus.data),
-		.probe11(tcp_tx_bus.commit)
+		.probe11(tcp_tx_bus.commit),
+
+		.probe12(trigger_phase_ff),
+		.probe13(trigger_addr_ff)
 	);
 
 endmodule
