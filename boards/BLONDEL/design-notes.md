@@ -2,6 +2,24 @@
 
 This document is a high level design of the BLONDEL oscilloscope.
 
+# Prototype
+
+AFE bugs found
+
+* Relay pinout (already fixed in new kicad library)
+* 2V5 oscillates (removing C15 fixes)
+* Solder short on 1V8. Need more paste reduction on output diodes
+* DAC oscillates. Added 1000 pF to C70, increased C69 to 0.47 uF, added 100 uH L between DAC and load
+* LDAC and CS# are swapped on LTC2664 (sch symbol is correct, just wrong net names)
+* Per ADL5205 datasheet, should have decoupling cap on Vcm (2V5_REF) to ground. Need to decouple cap from 2V5 reference.
+	For final board, should use a reference that's stable with capacitive loads (LT6660)
+* LMH6552 output resistors are not needed, should be 0R. But this breaks the diode clipper on the output
+* R13/14 did not take ADL5205 output impedance into account. Should be 93.1
+
+ADC board bugs found
+
+* None to date
+
 # Boards
 
 * FPGA board ("brain")
@@ -12,6 +30,8 @@ This document is a high level design of the BLONDEL oscilloscope.
 # Interfacing
 
 Convention: QSH on FPGA board, QTH on everything else
+
+# EVERYTHING BELOW HERE NEEDS TO BE UPDATED
 
 ## Acquisition board
 
