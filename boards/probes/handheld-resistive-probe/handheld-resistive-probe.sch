@@ -6,8 +6,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Handheld 10:1 Transmission Line probe"
-Date "2020-04-09"
-Rev "0.7"
+Date "2020-05-17"
+Rev "0.8"
 Comp "Antikernel Labs"
 Comment1 ""
 Comment2 ""
@@ -19,8 +19,8 @@ L Connector:Conn_Coaxial J1
 U 1 1 5CB67590
 P 4050 3200
 F 0 "J1" H 4003 3438 50  0000 C CNN
-F 1 "SMA-J-P-H-ST-EM1" H 4003 3347 50  0000 C CNN
-F 2 "azonenberg_pcb:CONN_SMA_EDGE_SAMTEC_SMA_J_P_H_ST_EM1" H 4050 3200 50  0001 C CNN
+F 1 "901-10511-3" H 4003 3347 50  0000 C CNN
+F 2 "azonenberg_pcb:CONN_SMA_EDGE_AMPHENOL_901_10511_3" H 4050 3200 50  0001 C CNN
 F 3 "" H 4050 3200 50  0001 C CNN
 	1    4050 3200
 	-1   0    0    -1  
