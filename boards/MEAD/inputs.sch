@@ -5,11 +5,11 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 5 6
-Title ""
-Date "2020-05-26"
-Rev ""
-Comp ""
-Comment1 ""
+Title "Logic Analyzer Pod"
+Date "2020-05-28"
+Rev "0.1"
+Comp "Antikernel Labs"
+Comment1 "Andrew D. Zonenberg"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -48,38 +48,12 @@ Text Label 1500 2300 2    50   ~ 0
 GND
 Text Label 1500 2500 2    50   ~ 0
 GND
-$Comp
-L special-azonenberg:RCLAMP0542T U10
-U 1 1 5ECE5387
-P 3650 1550
-F 0 "U10" H 3650 1500 60  0000 L CNN
-F 1 "RCLAMP0542T" H 3650 1400 60  0000 L CNN
-F 2 "" H 3650 1550 60  0000 C CNN
-F 3 "" H 3650 1550 60  0000 C CNN
-	1    3650 1550
-	1    0    0    -1  
-$EndComp
-Text Label 3200 900  2    50   ~ 0
+Text Label 3350 1300 2    50   ~ 0
 CH0
-Wire Wire Line
-	3200 900  3350 900 
-Wire Wire Line
-	3350 900  3350 1000
-Connection ~ 3350 900 
-Text Label 3200 1100 2    50   ~ 0
+Text Label 3350 1400 2    50   ~ 0
 CH1
-Wire Wire Line
-	3200 1100 3350 1100
-Wire Wire Line
-	3350 1100 3350 1200
-Connection ~ 3350 1100
-Text Label 3200 1400 2    50   ~ 0
+Text Label 3350 1100 2    50   ~ 0
 GND
-Wire Wire Line
-	3200 1400 3350 1400
-Wire Wire Line
-	3350 1400 3350 1500
-Connection ~ 3350 1400
 Connection ~ 2000 2200
 Connection ~ 2000 1700
 Wire Wire Line
@@ -152,102 +126,22 @@ Text HLabel 1500 2800 0    50   BiDi ~ 0
 PROBE_I2C_SDA
 Text HLabel 2000 2800 2    50   BiDi ~ 0
 PROBE_I2C_SCL
-$Comp
-L special-azonenberg:RCLAMP0542T U11
-U 1 1 5ECE818C
-P 3650 2550
-F 0 "U11" H 3650 2500 60  0000 L CNN
-F 1 "RCLAMP0542T" H 3650 2400 60  0000 L CNN
-F 2 "" H 3650 2550 60  0000 C CNN
-F 3 "" H 3650 2550 60  0000 C CNN
-	1    3650 2550
-	1    0    0    -1  
-$EndComp
-Text Label 3200 1900 2    50   ~ 0
+Text Label 3350 2250 2    50   ~ 0
 CH2
-Wire Wire Line
-	3200 1900 3350 1900
-Wire Wire Line
-	3350 1900 3350 2000
-Connection ~ 3350 1900
-Text Label 3200 2100 2    50   ~ 0
+Text Label 3350 2350 2    50   ~ 0
 CH3
-Wire Wire Line
-	3200 2100 3350 2100
-Wire Wire Line
-	3350 2100 3350 2200
-Connection ~ 3350 2100
-Text Label 3200 2400 2    50   ~ 0
+Text Label 3350 2050 2    50   ~ 0
 GND
-Wire Wire Line
-	3200 2400 3350 2400
-Wire Wire Line
-	3350 2400 3350 2500
-Connection ~ 3350 2400
-$Comp
-L special-azonenberg:RCLAMP0542T U12
-U 1 1 5ECE92F3
-P 5150 1550
-F 0 "U12" H 5150 1500 60  0000 L CNN
-F 1 "RCLAMP0542T" H 5150 1400 60  0000 L CNN
-F 2 "" H 5150 1550 60  0000 C CNN
-F 3 "" H 5150 1550 60  0000 C CNN
-	1    5150 1550
-	1    0    0    -1  
-$EndComp
-Text Label 4700 900  2    50   ~ 0
+Text Label 4450 1300 2    50   ~ 0
 CH4
-Wire Wire Line
-	4700 900  4850 900 
-Wire Wire Line
-	4850 900  4850 1000
-Connection ~ 4850 900 
-Text Label 4700 1100 2    50   ~ 0
+Text Label 4450 1400 2    50   ~ 0
 CH5
-Wire Wire Line
-	4700 1100 4850 1100
-Wire Wire Line
-	4850 1100 4850 1200
-Connection ~ 4850 1100
-Text Label 4700 1400 2    50   ~ 0
+Text Label 4450 1100 2    50   ~ 0
 GND
-Wire Wire Line
-	4700 1400 4850 1400
-Wire Wire Line
-	4850 1400 4850 1500
-Connection ~ 4850 1400
-$Comp
-L special-azonenberg:RCLAMP0542T U13
-U 1 1 5ECE9309
-P 5150 2550
-F 0 "U13" H 5150 2500 60  0000 L CNN
-F 1 "RCLAMP0542T" H 5150 2400 60  0000 L CNN
-F 2 "" H 5150 2550 60  0000 C CNN
-F 3 "" H 5150 2550 60  0000 C CNN
-	1    5150 2550
-	1    0    0    -1  
-$EndComp
-Text Label 4700 1900 2    50   ~ 0
+Text Label 4450 2250 2    50   ~ 0
 CH6
-Wire Wire Line
-	4700 1900 4850 1900
-Wire Wire Line
-	4850 1900 4850 2000
-Connection ~ 4850 1900
-Text Label 4700 2100 2    50   ~ 0
+Text Label 4450 2350 2    50   ~ 0
 CH7
-Wire Wire Line
-	4700 2100 4850 2100
-Wire Wire Line
-	4850 2100 4850 2200
-Connection ~ 4850 2100
-Text Label 4700 2400 2    50   ~ 0
-GND
-Wire Wire Line
-	4700 2400 4850 2400
-Wire Wire Line
-	4850 2400 4850 2500
-Connection ~ 4850 2400
 Text HLabel 1500 900  0    50   Input ~ 0
 GND
 Text Notes 1400 4100 0    50   ~ 0
@@ -410,4 +304,78 @@ Wire Wire Line
 Connection ~ 2050 4850
 Wire Wire Line
 	2050 4850 2050 4750
+$Comp
+L special-azonenberg:SP4010 D9
+U 1 1 5EE05990
+P 3600 1450
+F 0 "D9" H 3600 1400 50  0000 L CNN
+F 1 "SP4010" H 3600 1300 50  0000 L CNN
+F 2 "" H 3600 1450 50  0001 C CNN
+F 3 "" H 3600 1450 50  0001 C CNN
+	1    3600 1450
+	1    0    0    -1  
+$EndComp
+Text HLabel 3350 800  0    50   Input ~ 0
+5V0
+Wire Wire Line
+	3350 800  3350 900 
+Connection ~ 3350 900 
+Wire Wire Line
+	3350 900  3350 1000
+$Comp
+L special-azonenberg:SP4010 D10
+U 1 1 5EE0A3EE
+P 3600 2400
+F 0 "D10" H 3600 2350 50  0000 L CNN
+F 1 "SP4010" H 3600 2250 50  0000 L CNN
+F 2 "" H 3600 2400 50  0001 C CNN
+F 3 "" H 3600 2400 50  0001 C CNN
+	1    3600 2400
+	1    0    0    -1  
+$EndComp
+Text Label 3350 1750 2    50   ~ 0
+5V0
+Wire Wire Line
+	3350 1750 3350 1850
+Connection ~ 3350 1850
+Wire Wire Line
+	3350 1850 3350 1950
+$Comp
+L special-azonenberg:SP4010 D11
+U 1 1 5EE0B83F
+P 4700 1450
+F 0 "D11" H 4700 1400 50  0000 L CNN
+F 1 "SP4010" H 4700 1300 50  0000 L CNN
+F 2 "" H 4700 1450 50  0001 C CNN
+F 3 "" H 4700 1450 50  0001 C CNN
+	1    4700 1450
+	1    0    0    -1  
+$EndComp
+Text Label 4450 800  2    50   ~ 0
+5V0
+Wire Wire Line
+	4450 800  4450 900 
+Connection ~ 4450 900 
+Wire Wire Line
+	4450 900  4450 1000
+$Comp
+L special-azonenberg:SP4010 D12
+U 1 1 5EE0E0E3
+P 4700 2400
+F 0 "D12" H 4700 2350 50  0000 L CNN
+F 1 "SP4010" H 4700 2250 50  0000 L CNN
+F 2 "" H 4700 2400 50  0001 C CNN
+F 3 "" H 4700 2400 50  0001 C CNN
+	1    4700 2400
+	1    0    0    -1  
+$EndComp
+Text Label 4450 2050 2    50   ~ 0
+GND
+Text Label 4450 1750 2    50   ~ 0
+5V0
+Wire Wire Line
+	4450 1750 4450 1850
+Connection ~ 4450 1850
+Wire Wire Line
+	4450 1850 4450 1950
 $EndSCHEMATC

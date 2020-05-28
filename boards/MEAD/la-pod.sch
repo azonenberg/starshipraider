@@ -5,8 +5,8 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 6
-Title "MEAD Logic Analyzer Pod"
-Date "2020-05-26"
+Title "Logic Analyzer Pod"
+Date "2020-05-28"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
@@ -15,18 +15,20 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Sheet
-S 3350 1150 850  1300
+S 3350 1150 850  2300
 U 5E895DC2
 F0 "MCU" 50
 F1 "mcu.sch" 50
 F2 "UART_RX" I R 4200 2250 50 
 F3 "UART_TX" O R 4200 2350 50 
 F4 "DAC_CS_N" O R 4200 1600 50 
-F5 "DAC_SCK" O R 4200 1700 50 
-F6 "DAC_MOSI" O R 4200 1800 50 
-F7 "DAC_MISO" I R 4200 1900 50 
-F8 "3V3" I L 3350 1200 50 
-F9 "GND" I L 3350 1300 50 
+F5 "3V3" I L 3350 1200 50 
+F6 "GND" I L 3350 1300 50 
+F7 "SPI_SCK" O R 4200 1700 50 
+F8 "SPI_MOSI" O R 4200 1800 50 
+F9 "SPI_MISO" I R 4200 1900 50 
+F10 "PROBE_I2C_SDA" B R 4200 3000 50 
+F11 "PROBE_I2C_SCL" B R 4200 3100 50 
 $EndSheet
 $Sheet
 S 4800 1150 1050 850 
@@ -52,57 +54,25 @@ $EndSheet
 $Comp
 L special-azonenberg:CONN_SFF8087 J1
 U 1 1 5E89A333
-P 9550 3450
-F 0 "J1" H 9550 3400 50  0000 L CNN
-F 1 "CONN_SFF8087" H 9550 3300 50  0000 L CNN
-F 2 "" H 9550 3450 50  0001 C CNN
-F 3 "" H 9550 3450 50  0001 C CNN
-	1    9550 3450
+P 9900 3450
+F 0 "J1" H 9900 3400 50  0000 L CNN
+F 1 "CONN_SFF8087" H 9900 3300 50  0000 L CNN
+F 2 "" H 9900 3450 50  0001 C CNN
+F 3 "" H 9900 3450 50  0001 C CNN
+	1    9900 3450
 	1    0    0    -1  
 $EndComp
 $Comp
 L special-azonenberg:CONN_SFF8087 J1
 U 2 1 5E89AD6B
-P 8000 3450
-F 0 "J1" H 8000 3400 50  0000 L CNN
-F 1 "CONN_SFF8087" H 8000 3300 50  0000 L CNN
-F 2 "" H 8000 3450 50  0001 C CNN
-F 3 "" H 8000 3450 50  0001 C CNN
-	2    8000 3450
+P 8350 3450
+F 0 "J1" H 8350 3400 50  0000 L CNN
+F 1 "CONN_SFF8087" H 8350 3300 50  0000 L CNN
+F 2 "" H 8350 3450 50  0001 C CNN
+F 3 "" H 8350 3450 50  0001 C CNN
+	2    8350 3450
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	7700 1200 7900 1200
-Wire Wire Line
-	7900 1300 7700 1300
-Wire Wire Line
-	7700 1500 7900 1500
-Wire Wire Line
-	7900 1600 7700 1600
-Wire Wire Line
-	7700 1800 7900 1800
-Wire Wire Line
-	7700 1900 7900 1900
-Wire Wire Line
-	7900 2100 7700 2100
-Wire Wire Line
-	7900 2200 7700 2200
-Wire Wire Line
-	7700 2400 7900 2400
-Wire Wire Line
-	7900 2500 7700 2500
-Wire Wire Line
-	7700 2700 7900 2700
-Wire Wire Line
-	7900 2800 7700 2800
-Wire Wire Line
-	7700 3000 7900 3000
-Wire Wire Line
-	7900 3100 7700 3100
-Wire Wire Line
-	7700 3300 7900 3300
-Wire Wire Line
-	7900 3400 7700 3400
 Wire Wire Line
 	5850 1900 6450 1900
 Wire Wire Line
@@ -146,55 +116,55 @@ Text Label 6450 2200 2    50   ~ 0
 2V5
 Text Label 6450 2300 2    50   ~ 0
 GND
-Text Label 9250 2300 2    50   ~ 0
+Text Label 9600 2300 2    50   ~ 0
 GND
 Wire Wire Line
-	9250 2300 9450 2300
+	9600 2300 9800 2300
 Wire Wire Line
-	9450 2300 9450 2400
-Connection ~ 9450 2300
-Connection ~ 9450 2400
+	9800 2300 9800 2400
+Connection ~ 9800 2300
+Connection ~ 9800 2400
 Wire Wire Line
-	9450 2400 9450 2500
-Connection ~ 9450 2500
+	9800 2400 9800 2500
+Connection ~ 9800 2500
 Wire Wire Line
-	9450 2500 9450 2600
-Connection ~ 9450 2600
+	9800 2500 9800 2600
+Connection ~ 9800 2600
 Wire Wire Line
-	9450 2600 9450 2700
-Connection ~ 9450 2700
+	9800 2600 9800 2700
+Connection ~ 9800 2700
 Wire Wire Line
-	9450 2700 9450 2800
-Connection ~ 9450 2800
+	9800 2700 9800 2800
+Connection ~ 9800 2800
 Wire Wire Line
-	9450 2800 9450 2900
-Connection ~ 9450 2900
+	9800 2800 9800 2900
+Connection ~ 9800 2900
 Wire Wire Line
-	9450 2900 9450 3000
-Connection ~ 9450 3000
+	9800 2900 9800 3000
+Connection ~ 9800 3000
 Wire Wire Line
-	9450 3000 9450 3100
-Connection ~ 9450 3100
+	9800 3000 9800 3100
+Connection ~ 9800 3100
 Wire Wire Line
-	9450 3100 9450 3200
-Connection ~ 9450 3200
+	9800 3100 9800 3200
+Connection ~ 9800 3200
 Wire Wire Line
-	9450 3200 9450 3300
-Connection ~ 9450 3300
+	9800 3200 9800 3300
+Connection ~ 9800 3300
 Wire Wire Line
-	9450 3300 9450 3400
-Text Label 9250 1400 2    50   ~ 0
+	9800 3300 9800 3400
+Text Label 9600 1400 2    50   ~ 0
 UART_TX
 Wire Wire Line
-	9250 1400 9450 1400
-Text Label 9250 1500 2    50   ~ 0
+	9600 1400 9800 1400
+Text Label 9600 1500 2    50   ~ 0
 UART_RX
 Wire Wire Line
-	9250 1500 9450 1500
-Text Label 9250 1600 2    50   ~ 0
+	9600 1500 9800 1500
+Text Label 9600 1600 2    50   ~ 0
 PRESENCE_DETECT
 Wire Wire Line
-	9250 1600 9450 1600
+	9600 1600 9800 1600
 Text Label 9700 4500 2    50   ~ 0
 PRESENCE_DETECT
 $Comp
@@ -210,22 +180,22 @@ F 3 "" H 9850 4500 50  0001 C CNN
 $EndComp
 Text Label 10000 4500 0    50   ~ 0
 GND
-Text Label 9250 1700 2    50   ~ 0
+Text Label 9600 1700 2    50   ~ 0
 12V0
 Wire Wire Line
-	9250 1700 9450 1700
+	9600 1700 9800 1700
 Wire Wire Line
-	9450 1700 9450 1800
-Connection ~ 9450 1700
-Connection ~ 9450 1800
+	9800 1700 9800 1800
+Connection ~ 9800 1700
+Connection ~ 9800 1800
 Wire Wire Line
-	9450 1800 9450 1900
-Connection ~ 9450 1900
+	9800 1800 9800 1900
+Connection ~ 9800 1900
 Wire Wire Line
-	9450 1900 9450 2000
-Connection ~ 9450 2000
+	9800 1900 9800 2000
+Connection ~ 9800 2000
 Wire Wire Line
-	9450 2000 9450 2100
+	9800 2000 9800 2100
 Text Label 6450 2100 2    50   ~ 0
 6V0
 Text Label 4800 1200 2    50   ~ 0
@@ -257,10 +227,11 @@ F6 "CH4" O R 5850 3000 50
 F7 "CH5" O R 5850 3100 50 
 F8 "CH6" O R 5850 3200 50 
 F9 "CH7" O R 5850 3300 50 
-F10 "3V3" I L 4800 2600 50 
-F11 "PROBE_I2C_SDA" B L 4800 2900 50 
-F12 "PROBE_I2C_SCL" B L 4800 3000 50 
-F13 "GND" I L 4800 2700 50 
+F10 "3V3" I L 4800 2700 50 
+F11 "PROBE_I2C_SDA" B L 4800 3000 50 
+F12 "PROBE_I2C_SCL" B L 4800 3100 50 
+F13 "GND" I L 4800 2800 50 
+F14 "5V0" I L 4800 2600 50 
 $EndSheet
 $Sheet
 S 6450 1150 1250 2300
@@ -314,13 +285,13 @@ Text Label 4200 2250 0    50   ~ 0
 UART_RX
 Text Label 4200 2350 0    50   ~ 0
 UART_TX
-Text Label 4800 2900 2    50   ~ 0
-PROBE_I2C_SDA
 Text Label 4800 3000 2    50   ~ 0
+PROBE_I2C_SDA
+Text Label 4800 3100 2    50   ~ 0
 PROBE_I2C_SCL
-Text Label 4800 2600 2    50   ~ 0
-3V3
 Text Label 4800 2700 2    50   ~ 0
+3V3
+Text Label 4800 2800 2    50   ~ 0
 GND
 Wire Wire Line
 	5850 2600 6450 2600
@@ -370,4 +341,268 @@ Wire Wire Line
 	10000 4900 10000 4700
 Text Label 6450 2400 2    50   ~ 0
 1V5_N
+Text Label 4800 2600 2    50   ~ 0
+5V0
+Wire Wire Line
+	7700 1200 8250 1200
+Wire Wire Line
+	7700 1300 8250 1300
+$Comp
+L special-azonenberg:SP4010 D1
+U 1 1 5EE216FF
+P 1150 6550
+F 0 "D1" H 1150 6500 50  0000 L CNN
+F 1 "SP4010" H 1150 6400 50  0000 L CNN
+F 2 "" H 1150 6550 50  0001 C CNN
+F 3 "" H 1150 6550 50  0001 C CNN
+	1    1150 6550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7700 1500 8250 1500
+Wire Wire Line
+	7700 1600 8250 1600
+Text Label 7800 1200 0    50   ~ 0
+TX0_P
+Text Label 7800 1300 0    50   ~ 0
+TX0_N
+Text Label 7800 1500 0    50   ~ 0
+TX1_P
+Text Label 7800 1600 0    50   ~ 0
+TX1_N
+Text Label 7800 1800 0    50   ~ 0
+TX2_P
+Text Label 7800 1900 0    50   ~ 0
+TX2_N
+Text Label 7800 2100 0    50   ~ 0
+TX3_P
+Text Label 7800 2200 0    50   ~ 0
+TX3_N
+Wire Wire Line
+	7700 1800 8250 1800
+Wire Wire Line
+	7700 1900 8250 1900
+Wire Wire Line
+	7700 2100 8250 2100
+Wire Wire Line
+	7700 2200 8250 2200
+Text Label 7800 2400 0    50   ~ 0
+TX4_P
+Text Label 7800 2500 0    50   ~ 0
+TX4_N
+Wire Wire Line
+	7700 2400 8250 2400
+Wire Wire Line
+	7700 2500 8250 2500
+Text Label 7800 2700 0    50   ~ 0
+TX5_P
+Text Label 7800 2800 0    50   ~ 0
+TX5_N
+Wire Wire Line
+	7700 2700 8250 2700
+Wire Wire Line
+	7700 2800 8250 2800
+Text Label 7800 3000 0    50   ~ 0
+TX6_P
+Text Label 7800 3100 0    50   ~ 0
+TX6_N
+Wire Wire Line
+	7700 3000 8250 3000
+Wire Wire Line
+	7700 3100 8250 3100
+Text Label 7800 3300 0    50   ~ 0
+TX7_P
+Text Label 7800 3400 0    50   ~ 0
+TX7_N
+Wire Wire Line
+	7700 3300 8250 3300
+Wire Wire Line
+	7700 3400 8250 3400
+Text Label 900  6400 2    50   ~ 0
+TX0_P
+Text Label 900  6500 2    50   ~ 0
+TX0_N
+Text Label 900  5900 2    50   ~ 0
+2V5
+Wire Wire Line
+	900  5900 900  6000
+Connection ~ 900  6000
+Wire Wire Line
+	900  6000 900  6100
+Text Label 900  6200 2    50   ~ 0
+GND
+$Comp
+L special-azonenberg:SP4010 D2
+U 1 1 5EE38940
+P 1150 7500
+F 0 "D2" H 1150 7450 50  0000 L CNN
+F 1 "SP4010" H 1150 7350 50  0000 L CNN
+F 2 "" H 1150 7500 50  0001 C CNN
+F 3 "" H 1150 7500 50  0001 C CNN
+	1    1150 7500
+	1    0    0    -1  
+$EndComp
+Text Label 900  7350 2    50   ~ 0
+TX1_P
+Text Label 900  7450 2    50   ~ 0
+TX1_N
+Text Label 900  6850 2    50   ~ 0
+2V5
+Wire Wire Line
+	900  6850 900  6950
+Connection ~ 900  6950
+Wire Wire Line
+	900  6950 900  7050
+Text Label 900  7150 2    50   ~ 0
+GND
+Text Notes 1150 5800 0    50   ~ 0
+LVDS ESD protection
+$Comp
+L special-azonenberg:SP4010 D3
+U 1 1 5EE3D3D8
+P 2200 6550
+F 0 "D3" H 2200 6500 50  0000 L CNN
+F 1 "SP4010" H 2200 6400 50  0000 L CNN
+F 2 "" H 2200 6550 50  0001 C CNN
+F 3 "" H 2200 6550 50  0001 C CNN
+	1    2200 6550
+	1    0    0    -1  
+$EndComp
+Text Label 1950 6400 2    50   ~ 0
+TX2_P
+Text Label 1950 6500 2    50   ~ 0
+TX2_N
+Text Label 1950 5900 2    50   ~ 0
+2V5
+Wire Wire Line
+	1950 5900 1950 6000
+Connection ~ 1950 6000
+Wire Wire Line
+	1950 6000 1950 6100
+Text Label 1950 6200 2    50   ~ 0
+GND
+$Comp
+L special-azonenberg:SP4010 D4
+U 1 1 5EE3D3E9
+P 2200 7500
+F 0 "D4" H 2200 7450 50  0000 L CNN
+F 1 "SP4010" H 2200 7350 50  0000 L CNN
+F 2 "" H 2200 7500 50  0001 C CNN
+F 3 "" H 2200 7500 50  0001 C CNN
+	1    2200 7500
+	1    0    0    -1  
+$EndComp
+Text Label 1950 7350 2    50   ~ 0
+TX3_P
+Text Label 1950 7450 2    50   ~ 0
+TX3_N
+Text Label 1950 6850 2    50   ~ 0
+2V5
+Wire Wire Line
+	1950 6850 1950 6950
+Connection ~ 1950 6950
+Wire Wire Line
+	1950 6950 1950 7050
+Text Label 1950 7150 2    50   ~ 0
+GND
+$Comp
+L special-azonenberg:SP4010 D5
+U 1 1 5EE3F291
+P 3250 6550
+F 0 "D5" H 3250 6500 50  0000 L CNN
+F 1 "SP4010" H 3250 6400 50  0000 L CNN
+F 2 "" H 3250 6550 50  0001 C CNN
+F 3 "" H 3250 6550 50  0001 C CNN
+	1    3250 6550
+	1    0    0    -1  
+$EndComp
+Text Label 3000 6400 2    50   ~ 0
+TX4_P
+Text Label 3000 6500 2    50   ~ 0
+TX4_N
+Text Label 3000 5900 2    50   ~ 0
+2V5
+Wire Wire Line
+	3000 5900 3000 6000
+Connection ~ 3000 6000
+Wire Wire Line
+	3000 6000 3000 6100
+Text Label 3000 6200 2    50   ~ 0
+GND
+$Comp
+L special-azonenberg:SP4010 D6
+U 1 1 5EE3F2A2
+P 3250 7500
+F 0 "D6" H 3250 7450 50  0000 L CNN
+F 1 "SP4010" H 3250 7350 50  0000 L CNN
+F 2 "" H 3250 7500 50  0001 C CNN
+F 3 "" H 3250 7500 50  0001 C CNN
+	1    3250 7500
+	1    0    0    -1  
+$EndComp
+Text Label 3000 7350 2    50   ~ 0
+TX5_P
+Text Label 3000 7450 2    50   ~ 0
+TX5_N
+Text Label 3000 6850 2    50   ~ 0
+2V5
+Wire Wire Line
+	3000 6850 3000 6950
+Connection ~ 3000 6950
+Wire Wire Line
+	3000 6950 3000 7050
+Text Label 3000 7150 2    50   ~ 0
+GND
+$Comp
+L special-azonenberg:SP4010 D7
+U 1 1 5EE3F2B3
+P 4300 6550
+F 0 "D7" H 4300 6500 50  0000 L CNN
+F 1 "SP4010" H 4300 6400 50  0000 L CNN
+F 2 "" H 4300 6550 50  0001 C CNN
+F 3 "" H 4300 6550 50  0001 C CNN
+	1    4300 6550
+	1    0    0    -1  
+$EndComp
+Text Label 4050 6400 2    50   ~ 0
+TX6_P
+Text Label 4050 6500 2    50   ~ 0
+TX6_N
+Text Label 4050 5900 2    50   ~ 0
+2V5
+Wire Wire Line
+	4050 5900 4050 6000
+Connection ~ 4050 6000
+Wire Wire Line
+	4050 6000 4050 6100
+Text Label 4050 6200 2    50   ~ 0
+GND
+$Comp
+L special-azonenberg:SP4010 D8
+U 1 1 5EE3F2C4
+P 4300 7500
+F 0 "D8" H 4300 7450 50  0000 L CNN
+F 1 "SP4010" H 4300 7350 50  0000 L CNN
+F 2 "" H 4300 7500 50  0001 C CNN
+F 3 "" H 4300 7500 50  0001 C CNN
+	1    4300 7500
+	1    0    0    -1  
+$EndComp
+Text Label 4050 7350 2    50   ~ 0
+TX7_P
+Text Label 4050 7450 2    50   ~ 0
+TX7_N
+Text Label 4050 6850 2    50   ~ 0
+2V5
+Wire Wire Line
+	4050 6850 4050 6950
+Connection ~ 4050 6950
+Wire Wire Line
+	4050 6950 4050 7050
+Text Label 4050 7150 2    50   ~ 0
+GND
+Wire Wire Line
+	4200 3000 4800 3000
+Wire Wire Line
+	4200 3100 4800 3100
 $EndSCHEMATC
