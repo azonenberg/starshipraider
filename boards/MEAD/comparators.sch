@@ -14,9 +14,9 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text HLabel 2450 1350 2    50   Output ~ 0
+Text HLabel 2450 2600 2    50   Output ~ 0
 CH0_P
-Text HLabel 2450 1450 2    50   Output ~ 0
+Text HLabel 2450 2700 2    50   Output ~ 0
 CH0_N
 Text HLabel 2450 3850 2    50   Output ~ 0
 CH2_P
@@ -42,7 +42,7 @@ Text HLabel 5550 5100 2    50   Output ~ 0
 CH7_P
 Text HLabel 5550 5200 2    50   Output ~ 0
 CH7_N
-Text HLabel 1200 1450 0    50   Input ~ 0
+Text HLabel 1200 2700 0    50   Input ~ 0
 VREF0
 Text HLabel 1200 3950 0    50   Input ~ 0
 VREF2
@@ -58,17 +58,6 @@ Text HLabel 4300 5200 0    50   Input ~ 0
 VREF7
 Text HLabel 7850 850  0    50   Input ~ 0
 GND
-$Comp
-L analog-azonenberg:LMH7322 U1
-U 1 1 5E8A820C
-P 1900 1750
-F 0 "U1" H 1825 2897 60  0000 C CNN
-F 1 "LMH7322" H 1825 2791 60  0000 C CNN
-F 2 "azonenberg_pcb:QFN_24_0.5MM_4x4MM" H 1400 1700 60  0001 C CNN
-F 3 "" H 1400 1700 60  0000 C CNN
-	1    1900 1750
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	1200 950  1200 1050
 $Comp
@@ -271,11 +260,11 @@ Wire Wire Line
 Connection ~ 8500 4800
 Wire Wire Line
 	8500 4800 9050 4800
-Text HLabel 2450 2600 2    50   Output ~ 0
+Text HLabel 2450 1350 2    50   Output ~ 0
 CH1_P
-Text HLabel 2450 2700 2    50   Output ~ 0
+Text HLabel 2450 1450 2    50   Output ~ 0
 CH1_N
-Text HLabel 1200 2700 0    50   Input ~ 0
+Text HLabel 1200 1450 0    50   Input ~ 0
 VREF1
 $Comp
 L analog-azonenberg:LMH7322 U1
@@ -1716,9 +1705,9 @@ Wire Wire Line
 Connection ~ 8000 6150
 Text HLabel 1200 850  0    50   Input ~ 0
 6V0
-Text HLabel 1200 2600 0    50   Input ~ 0
-CH1
 Text HLabel 1200 1350 0    50   Input ~ 0
+CH1
+Text HLabel 1200 2600 0    50   Input ~ 0
 CH0
 Text HLabel 1200 3850 0    50   Input ~ 0
 CH2
@@ -1747,21 +1736,21 @@ Text Label 4300 3450 2    50   ~ 0
 Text Label 4300 4700 2    50   ~ 0
 1V5_N
 Text Label 3050 1650 0    50   ~ 0
-1V0_N
+1V5_N
 Text Label 3050 2900 0    50   ~ 0
-1V0_N
+1V5_N
 Text Label 3050 4150 0    50   ~ 0
-1V0_N
+1V5_N
 Text Label 3050 5400 0    50   ~ 0
-1V0_N
+1V5_N
 Text Label 6150 5400 0    50   ~ 0
-1V0_N
+1V5_N
 Text Label 6150 4150 0    50   ~ 0
-1V0_N
+1V5_N
 Text Label 6150 2900 0    50   ~ 0
-1V0_N
+1V5_N
 Text Label 6150 1650 0    50   ~ 0
-1V0_N
+1V5_N
 $Comp
 L device:C C44
 U 1 1 5EB7BA72
@@ -1978,4 +1967,15 @@ Connection ~ 4300 6950
 Wire Wire Line
 	4300 7100 4850 7100
 Connection ~ 4300 7100
+$Comp
+L analog-azonenberg:LMH7322 U1
+U 1 1 5E8A820C
+P 1900 1750
+F 0 "U1" H 1825 2897 60  0000 C CNN
+F 1 "LMH7322" H 1825 2791 60  0000 C CNN
+F 2 "azonenberg_pcb:QFN_24_0.5MM_4x4MM" H 1400 1700 60  0001 C CNN
+F 3 "" H 1400 1700 60  0000 C CNN
+	1    1900 1750
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

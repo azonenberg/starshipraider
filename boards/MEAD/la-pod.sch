@@ -343,10 +343,6 @@ Text Label 6450 2400 2    50   ~ 0
 1V5_N
 Text Label 4800 2600 2    50   ~ 0
 5V0
-Wire Wire Line
-	7700 1200 8250 1200
-Wire Wire Line
-	7700 1300 8250 1300
 $Comp
 L special-azonenberg:SP4010 D1
 U 1 1 5EE216FF
@@ -362,9 +358,9 @@ Wire Wire Line
 	7700 1500 8250 1500
 Wire Wire Line
 	7700 1600 8250 1600
-Text Label 7800 1200 0    50   ~ 0
+Text Label 7700 1200 0    50   ~ 0
 TX0_P
-Text Label 7800 1300 0    50   ~ 0
+Text Label 7700 1300 0    50   ~ 0
 TX0_N
 Text Label 7800 1500 0    50   ~ 0
 TX1_P
@@ -442,9 +438,9 @@ F 3 "" H 1150 7500 50  0001 C CNN
 	1    1150 7500
 	1    0    0    -1  
 $EndComp
-Text Label 900  7350 2    50   ~ 0
-TX1_P
 Text Label 900  7450 2    50   ~ 0
+TX1_P
+Text Label 900  7350 2    50   ~ 0
 TX1_N
 Text Label 900  6850 2    50   ~ 0
 2V5
@@ -655,21 +651,8 @@ F 3 "~" H 9900 5450 50  0001 C CNN
 	1    9900 5450
 	1    0    0    -1  
 $EndComp
-Text Label 9700 5400 2    50   ~ 0
+Text Label 9700 5450 2    50   ~ 0
 GND
-$Comp
-L Connector:Conn_01x01 TP4
-U 1 1 5ED5A825
-P 8950 5200
-F 0 "TP4" H 9030 5242 50  0000 L CNN
-F 1 "TESTPAD" H 9030 5151 50  0000 L CNN
-F 2 "azonenberg_pcb:TESTPOINT_SMT_0.5MM" H 8950 5200 50  0001 C CNN
-F 3 "~" H 8950 5200 50  0001 C CNN
-	1    8950 5200
-	1    0    0    -1  
-$EndComp
-Text Label 8750 5200 2    50   ~ 0
-12V0
 $Comp
 L Connector:Conn_01x01 TP5
 U 1 1 5ED5B185
@@ -750,4 +733,10 @@ F 3 "~" H 8950 6400 50  0001 C CNN
 	1    8950 6400
 	1    0    0    -1  
 $EndComp
+Text Label 8250 1300 2    50   ~ 0
+TX0_P
+Text Label 8250 1200 2    50   ~ 0
+TX0_N
+Text Notes 8350 1100 0    50   ~ 0
+Invert lanes 0 for routability
 $EndSCHEMATC

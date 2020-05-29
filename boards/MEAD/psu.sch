@@ -63,7 +63,7 @@ Connection ~ 3200 1500
 Wire Wire Line
 	3200 1500 3200 1400
 Text Label 3200 1800 2    50   ~ 0
-12V0
+12V0_FUSED
 Text Label 4100 1400 0    50   ~ 0
 GND
 Wire Wire Line
@@ -234,7 +234,7 @@ Connection ~ 3200 3200
 Wire Wire Line
 	3200 3200 3200 3100
 Text Label 3200 3500 2    50   ~ 0
-12V0
+12V0_FUSED
 Text Label 4100 3100 0    50   ~ 0
 GND
 Wire Wire Line
@@ -289,7 +289,7 @@ Connection ~ 2750 3300
 Wire Wire Line
 	2750 3300 3200 3300
 Text Label 2100 3000 2    50   ~ 0
-12V0
+12V0_FUSED
 Text Label 2100 3300 2    50   ~ 0
 GND
 Wire Wire Line
@@ -359,7 +359,7 @@ Connection ~ 3200 4200
 Wire Wire Line
 	3200 4200 3200 4100
 Text Label 3200 4500 2    50   ~ 0
-12V0
+12V0_FUSED
 Text Label 4100 4100 0    50   ~ 0
 GND
 Wire Wire Line
@@ -414,7 +414,7 @@ Connection ~ 2750 4300
 Wire Wire Line
 	2750 4300 3200 4300
 Text Label 2100 4000 2    50   ~ 0
-12V0
+12V0_FUSED
 Text Label 2100 4300 2    50   ~ 0
 GND
 Wire Wire Line
@@ -557,7 +557,7 @@ F 3 "https://en.wikipedia.org/wiki/Zener_diode" H 6350 1600 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Text Label 6350 1450 2    50   ~ 0
-12V0
+12V0_FUSED
 Text Label 6350 1750 2    50   ~ 0
 GND
 $Comp
@@ -605,4 +605,21 @@ F 3 "" H 1700 1300 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1850 1300 2250 1300
+Text Label 2250 1300 0    50   ~ 0
+12V0_FUSED
+$Comp
+L Connector:Conn_01x01 TP?
+U 1 1 5EDF385D
+P 7700 1550
+AR Path="/5EDF385D" Ref="TP?"  Part="1" 
+AR Path="/5E895D8C/5EDF385D" Ref="TP4"  Part="1" 
+F 0 "TP4" H 7780 1592 50  0000 L CNN
+F 1 "TESTPAD" H 7780 1501 50  0000 L CNN
+F 2 "azonenberg_pcb:TESTPOINT_SMT_0.5MM" H 7700 1550 50  0001 C CNN
+F 3 "~" H 7700 1550 50  0001 C CNN
+	1    7700 1550
+	1    0    0    -1  
+$EndComp
+Text Label 7500 1550 2    50   ~ 0
+12V0_FUSED
 $EndSCHEMATC
