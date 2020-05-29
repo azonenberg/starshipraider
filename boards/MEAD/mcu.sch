@@ -6,7 +6,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 6
 Title "Logic Analyzer Pod"
-Date "2020-05-28"
+Date "2020-05-29"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
@@ -294,7 +294,7 @@ U 1 1 5EE51216
 P 7050 5600
 F 0 "C66" H 7165 5646 50  0000 L CNN
 F 1 "4.7 uF 25V" H 7165 5555 50  0000 L CNN
-F 2 "azonenberg_pcb:EIA_0402_CAP_NOSILK" H 7088 5450 50  0001 C CNN
+F 2 "azonenberg_pcb:EIA_0805_CAP_NOSILK" H 7088 5450 50  0001 C CNN
 F 3 "" H 7050 5600 50  0001 C CNN
 	1    7050 5600
 	1    0    0    -1  
@@ -330,7 +330,7 @@ U 1 1 5EE55052
 P 7950 5600
 F 0 "C68" H 8065 5646 50  0000 L CNN
 F 1 "4.7 uF 25V" H 8065 5555 50  0000 L CNN
-F 2 "azonenberg_pcb:EIA_0402_CAP_NOSILK" H 7988 5450 50  0001 C CNN
+F 2 "azonenberg_pcb:EIA_0805_CAP_NOSILK" H 7988 5450 50  0001 C CNN
 F 3 "" H 7950 5600 50  0001 C CNN
 	1    7950 5600
 	1    0    0    -1  
@@ -349,7 +349,7 @@ U 1 1 5EE55E77
 P 7950 6050
 F 0 "C69" H 8065 6096 50  0000 L CNN
 F 1 "4.7 uF 25V" H 8065 6005 50  0000 L CNN
-F 2 "azonenberg_pcb:EIA_0402_CAP_NOSILK" H 7988 5900 50  0001 C CNN
+F 2 "azonenberg_pcb:EIA_0805_CAP_NOSILK" H 7988 5900 50  0001 C CNN
 F 3 "" H 7950 6050 50  0001 C CNN
 	1    7950 6050
 	1    0    0    -1  
@@ -362,4 +362,46 @@ Text Label 7950 5900 2    50   ~ 0
 VB1+
 Text Label 6800 4100 2    50   ~ 0
 VB1+
+Text Label 7300 1200 2    50   ~ 0
+SPI_SCK
+Text Label 7300 1300 2    50   ~ 0
+SPI_MOSI
+Text Label 7300 2000 2    50   ~ 0
+DAC_CS_N
+Text Label 7300 2100 2    50   ~ 0
+LCD_CS_N
+Text Label 7300 1500 2    50   ~ 0
+LCD_CTRL_DATA
+Text Label 7300 1600 2    50   ~ 0
+GND
+Text Label 7300 1800 2    50   ~ 0
+PROBE_I2C_SCL
+Text Label 7300 1900 2    50   ~ 0
+PROBE_I2C_SDA
+$Comp
+L Connector:Conn_01x05 TP3
+U 1 1 5ED6AE0A
+P 7500 1400
+F 0 "TP3" H 7580 1442 50  0000 L CNN
+F 1 "PINHEADER_1x5" H 7580 1351 50  0000 L CNN
+F 2 "azonenberg_pcb:CONN_HEADER_2.54MM_1x5" H 7500 1400 50  0001 C CNN
+F 3 "~" H 7500 1400 50  0001 C CNN
+	1    7500 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x05 TP13
+U 1 1 5ED6C28B
+P 7500 2000
+F 0 "TP13" H 7580 2042 50  0000 L CNN
+F 1 "PINHEADER_1x5" H 7580 1951 50  0000 L CNN
+F 2 "azonenberg_pcb:CONN_HEADER_2.54MM_1x5" H 7500 2000 50  0001 C CNN
+F 3 "~" H 7500 2000 50  0001 C CNN
+	1    7500 2000
+	1    0    0    -1  
+$EndComp
+Text Label 7300 2200 2    50   ~ 0
+GND
+Text Label 7300 1400 2    50   ~ 0
+SPI_MISO
 $EndSCHEMATC

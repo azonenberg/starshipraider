@@ -6,7 +6,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 6
 Title "Logic Analyzer Pod"
-Date "2020-05-28"
+Date "2020-05-29"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
@@ -631,4 +631,123 @@ Text Label 5150 6400 2    50   ~ 0
 UART_TX
 Text Label 5150 6500 2    50   ~ 0
 UART_RX
+$Comp
+L Connector:Conn_01x01 TP11
+U 1 1 5ED596F2
+P 9900 5200
+F 0 "TP11" H 9980 5242 50  0000 L CNN
+F 1 "TESTCLIP" H 9980 5151 50  0000 L CNN
+F 2 "azonenberg_pcb:TESTPOINT_SMT_KEYSTONE_5016" H 9900 5200 50  0001 C CNN
+F 3 "~" H 9900 5200 50  0001 C CNN
+	1    9900 5200
+	1    0    0    -1  
+$EndComp
+Text Label 9700 5200 2    50   ~ 0
+GND
+$Comp
+L Connector:Conn_01x01 TP12
+U 1 1 5ED5A23C
+P 9900 5450
+F 0 "TP12" H 9980 5492 50  0000 L CNN
+F 1 "TESTCLIP" H 9980 5401 50  0000 L CNN
+F 2 "azonenberg_pcb:TESTPOINT_SMT_KEYSTONE_5016" H 9900 5450 50  0001 C CNN
+F 3 "~" H 9900 5450 50  0001 C CNN
+	1    9900 5450
+	1    0    0    -1  
+$EndComp
+Text Label 9700 5400 2    50   ~ 0
+GND
+$Comp
+L Connector:Conn_01x01 TP4
+U 1 1 5ED5A825
+P 8950 5200
+F 0 "TP4" H 9030 5242 50  0000 L CNN
+F 1 "TESTPAD" H 9030 5151 50  0000 L CNN
+F 2 "azonenberg_pcb:TESTPOINT_SMT_0.5MM" H 8950 5200 50  0001 C CNN
+F 3 "~" H 8950 5200 50  0001 C CNN
+	1    8950 5200
+	1    0    0    -1  
+$EndComp
+Text Label 8750 5200 2    50   ~ 0
+12V0
+$Comp
+L Connector:Conn_01x01 TP5
+U 1 1 5ED5B185
+P 8950 5400
+F 0 "TP5" H 9030 5442 50  0000 L CNN
+F 1 "TESTPAD" H 9030 5351 50  0000 L CNN
+F 2 "azonenberg_pcb:TESTPOINT_SMT_0.5MM" H 8950 5400 50  0001 C CNN
+F 3 "~" H 8950 5400 50  0001 C CNN
+	1    8950 5400
+	1    0    0    -1  
+$EndComp
+Text Label 8750 5400 2    50   ~ 0
+6V0
+$Comp
+L Connector:Conn_01x01 TP6
+U 1 1 5ED5B641
+P 8950 5600
+F 0 "TP6" H 9030 5642 50  0000 L CNN
+F 1 "TESTPAD" H 9030 5551 50  0000 L CNN
+F 2 "azonenberg_pcb:TESTPOINT_SMT_0.5MM" H 8950 5600 50  0001 C CNN
+F 3 "~" H 8950 5600 50  0001 C CNN
+	1    8950 5600
+	1    0    0    -1  
+$EndComp
+Text Label 8750 5600 2    50   ~ 0
+5V0
+$Comp
+L Connector:Conn_01x01 TP7
+U 1 1 5ED5BCF0
+P 8950 5800
+F 0 "TP7" H 9030 5842 50  0000 L CNN
+F 1 "TESTPAD" H 9030 5751 50  0000 L CNN
+F 2 "azonenberg_pcb:TESTPOINT_SMT_0.5MM" H 8950 5800 50  0001 C CNN
+F 3 "~" H 8950 5800 50  0001 C CNN
+	1    8950 5800
+	1    0    0    -1  
+$EndComp
+Text Label 8750 5800 2    50   ~ 0
+3V3
+$Comp
+L Connector:Conn_01x01 TP8
+U 1 1 5ED5C198
+P 8950 6000
+F 0 "TP8" H 9030 6042 50  0000 L CNN
+F 1 "TESTPAD" H 9030 5951 50  0000 L CNN
+F 2 "azonenberg_pcb:TESTPOINT_SMT_0.5MM" H 8950 6000 50  0001 C CNN
+F 3 "~" H 8950 6000 50  0001 C CNN
+	1    8950 6000
+	1    0    0    -1  
+$EndComp
+Text Label 8750 6000 2    50   ~ 0
+2V5
+$Comp
+L Connector:Conn_01x01 TP9
+U 1 1 5ED5C910
+P 8950 6200
+F 0 "TP9" H 9030 6242 50  0000 L CNN
+F 1 "TESTPAD" H 9030 6151 50  0000 L CNN
+F 2 "azonenberg_pcb:TESTPOINT_SMT_0.5MM" H 8950 6200 50  0001 C CNN
+F 3 "~" H 8950 6200 50  0001 C CNN
+	1    8950 6200
+	1    0    0    -1  
+$EndComp
+Text Label 8750 6200 2    50   ~ 0
+1V5_N
+Text Label 6000 1200 0    50   ~ 0
+VREF0
+Text Label 8750 6400 2    50   ~ 0
+VREF0
+$Comp
+L Connector:Conn_01x01 TP10
+U 1 1 5ED5D15E
+P 8950 6400
+F 0 "TP10" H 9030 6442 50  0000 L CNN
+F 1 "TESTPAD" H 9030 6351 50  0000 L CNN
+F 2 "azonenberg_pcb:TESTPOINT_SMT_0.5MM" H 8950 6400 50  0001 C CNN
+F 3 "~" H 8950 6400 50  0001 C CNN
+	1    8950 6400
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
