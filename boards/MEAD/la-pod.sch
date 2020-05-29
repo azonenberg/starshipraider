@@ -382,14 +382,10 @@ Wire Wire Line
 	7700 2100 8250 2100
 Wire Wire Line
 	7700 2200 8250 2200
-Text Label 7800 2400 0    50   ~ 0
+Text Label 7700 2400 0    50   ~ 0
 TX4_P
-Text Label 7800 2500 0    50   ~ 0
+Text Label 7700 2500 0    50   ~ 0
 TX4_N
-Wire Wire Line
-	7700 2400 8250 2400
-Wire Wire Line
-	7700 2500 8250 2500
 Text Label 7800 2700 0    50   ~ 0
 TX5_P
 Text Label 7800 2800 0    50   ~ 0
@@ -536,9 +532,9 @@ F 3 "" H 3250 7500 50  0001 C CNN
 	1    3250 7500
 	1    0    0    -1  
 $EndComp
-Text Label 3000 7350 2    50   ~ 0
-TX5_P
 Text Label 3000 7450 2    50   ~ 0
+TX5_P
+Text Label 3000 7350 2    50   ~ 0
 TX5_N
 Text Label 3000 6850 2    50   ~ 0
 2V5
@@ -615,7 +611,7 @@ F 3 "" H 5400 6550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 5150 5900 2    50   ~ 0
-2V5
+3V3
 Wire Wire Line
 	5150 5900 5150 6000
 Connection ~ 5150 6000
@@ -738,5 +734,9 @@ TX0_P
 Text Label 8250 1200 2    50   ~ 0
 TX0_N
 Text Notes 8350 1100 0    50   ~ 0
-Invert lanes 0 for routability
+Invert lanes 0, 4 for routability
+Text Label 8250 2500 2    50   ~ 0
+TX4_P
+Text Label 8250 2400 2    50   ~ 0
+TX4_N
 $EndSCHEMATC
