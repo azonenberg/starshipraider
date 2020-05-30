@@ -100,7 +100,6 @@ Wire Wire Line
 NoConn ~ 2500 2500
 NoConn ~ 2500 2600
 NoConn ~ 2500 2700
-NoConn ~ 2500 2800
 NoConn ~ 2500 2900
 NoConn ~ 2500 3900
 NoConn ~ 2500 3800
@@ -452,4 +451,93 @@ Text Label 5900 4400 0    50   ~ 0
 LCD_VDD
 Text Label 5900 4700 2    50   ~ 0
 GND
+Text HLabel 2500 2800 0    50   Input ~ 0
+12V_SENSE
+$Comp
+L special-azonenberg:AT30TS74_UDFN U10
+U 1 1 5F38C16E
+P 1550 6200
+F 0 "U10" H 1850 6875 50  0000 C CNN
+F 1 "AT30TS74_UDFN" H 1850 6784 50  0000 C CNN
+F 2 "azonenberg_pcb:DFN_8_0.5MM_3x3MM" H 1550 6200 50  0001 C CNN
+F 3 "" H 1550 6200 50  0001 C CNN
+	1    1550 6200
+	1    0    0    -1  
+$EndComp
+$Comp
+L special-azonenberg:AT30TS74_UDFN U11
+U 1 1 5F38D677
+P 1550 6950
+F 0 "U11" H 1850 7625 50  0000 C CNN
+F 1 "AT30TS74_UDFN" H 1850 7534 50  0000 C CNN
+F 2 "azonenberg_pcb:DFN_8_0.5MM_3x3MM" H 1550 6950 50  0001 C CNN
+F 3 "" H 1550 6950 50  0001 C CNN
+	1    1550 6950
+	1    0    0    -1  
+$EndComp
+Text Label 1450 5750 2    50   ~ 0
+3V3
+Text Label 1450 5850 2    50   ~ 0
+GND
+$Comp
+L device:C C72
+U 1 1 5F38DFDB
+P 1550 7250
+F 0 "C72" H 1665 7296 50  0000 L CNN
+F 1 "0.47 uF" H 1665 7205 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0402_CAP_NOSILK" H 1588 7100 50  0001 C CNN
+F 3 "" H 1550 7250 50  0001 C CNN
+	1    1550 7250
+	1    0    0    -1  
+$EndComp
+Text Label 1550 7100 2    50   ~ 0
+3V3
+Text Label 1550 7400 2    50   ~ 0
+GND
+$Comp
+L device:C C73
+U 1 1 5F38E759
+P 2150 7250
+F 0 "C73" H 2265 7296 50  0000 L CNN
+F 1 "0.47 uF" H 2265 7205 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0402_CAP_NOSILK" H 2188 7100 50  0001 C CNN
+F 3 "" H 2150 7250 50  0001 C CNN
+	1    2150 7250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2150 7100 1550 7100
+Wire Wire Line
+	1550 7400 2150 7400
+Text Label 1450 6050 2    50   ~ 0
+PROBE_I2C_SDA
+Text Label 1450 6150 2    50   ~ 0
+PROBE_I2C_SCL
+Text Label 1450 6500 2    50   ~ 0
+3V3
+Text Label 1450 6600 2    50   ~ 0
+GND
+Text Label 1450 6800 2    50   ~ 0
+PROBE_I2C_SDA
+Text Label 1450 6900 2    50   ~ 0
+PROBE_I2C_SCL
+NoConn ~ 2250 6150
+NoConn ~ 2250 6900
+Text Label 2250 5750 0    50   ~ 0
+GND
+Wire Wire Line
+	2250 5750 2250 5850
+Connection ~ 2250 5850
+Wire Wire Line
+	2250 5850 2250 5950
+Text Label 2250 6600 0    50   ~ 0
+GND
+Wire Wire Line
+	2250 6600 2250 6700
+Text Label 2250 6500 0    50   ~ 0
+3V3
+Text Notes 2550 5750 0    50   ~ 0
+Addr = 0x90
+Text Notes 2550 6500 0    50   ~ 0
+Addr = 0x92
 $EndSCHEMATC

@@ -413,8 +413,6 @@ Wire Wire Line
 Connection ~ 2750 4300
 Wire Wire Line
 	2750 4300 3200 4300
-Text Label 2100 4000 2    50   ~ 0
-12V0_FUSED
 Text Label 2100 4300 2    50   ~ 0
 GND
 Wire Wire Line
@@ -621,5 +619,7 @@ F 3 "~" H 7700 1550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 7500 1550 2    50   ~ 0
+12V0_FUSED
+Text HLabel 2100 4000 0    50   Output ~ 0
 12V0_FUSED
 $EndSCHEMATC
