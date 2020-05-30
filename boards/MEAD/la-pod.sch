@@ -6,7 +6,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 6
 Title "Logic Analyzer Pod"
-Date "2020-05-29"
+Date "2020-05-30"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
@@ -607,19 +607,6 @@ Text Label 5150 6400 2    50   ~ 0
 UART_TX
 Text Label 5150 6500 2    50   ~ 0
 UART_RX
-$Comp
-L Connector:Conn_01x01 TP11
-U 1 1 5ED596F2
-P 9900 5200
-F 0 "TP11" H 9980 5242 50  0000 L CNN
-F 1 "TESTCLIP" H 9980 5151 50  0000 L CNN
-F 2 "azonenberg_pcb:TESTPOINT_SMT_KEYSTONE_5016" H 9900 5200 50  0001 C CNN
-F 3 "~" H 9900 5200 50  0001 C CNN
-	1    9900 5200
-	1    0    0    -1  
-$EndComp
-Text Label 9700 5200 2    50   ~ 0
-GND
 $Comp
 L Connector:Conn_01x01 TP12
 U 1 1 5ED5A23C

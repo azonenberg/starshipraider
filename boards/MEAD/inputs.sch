@@ -6,7 +6,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 5 6
 Title "Logic Analyzer Pod"
-Date "2020-05-29"
+Date "2020-05-30"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
@@ -14,21 +14,21 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text HLabel 1500 1000 0    50   Output ~ 0
-CH0
-Text HLabel 1500 1200 0    50   Output ~ 0
-CH1
-Text HLabel 1500 1400 0    50   Output ~ 0
-CH2
-Text HLabel 1500 1600 0    50   Output ~ 0
-CH3
-Text HLabel 1500 1800 0    50   Output ~ 0
-CH4
 Text HLabel 1500 2000 0    50   Output ~ 0
-CH5
-Text HLabel 1500 2200 0    50   Output ~ 0
-CH6
+CH0
+Text HLabel 1500 1800 0    50   Output ~ 0
+CH1
+Text HLabel 1500 1600 0    50   Output ~ 0
+CH2
+Text HLabel 1500 1400 0    50   Output ~ 0
+CH3
 Text HLabel 1500 2400 0    50   Output ~ 0
+CH4
+Text HLabel 1500 2200 0    50   Output ~ 0
+CH5
+Text HLabel 1500 1200 0    50   Output ~ 0
+CH6
+Text HLabel 1500 1000 0    50   Output ~ 0
 CH7
 Text Label 2000 900  0    50   ~ 0
 GND

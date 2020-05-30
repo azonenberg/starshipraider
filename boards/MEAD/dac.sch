@@ -6,7 +6,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 3 6
 Title "Logic Analyzer Pod"
-Date "2020-05-29"
+Date "2020-05-30"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
@@ -14,21 +14,21 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text HLabel 5900 2950 2    50   Output ~ 0
+Text HLabel 5900 3650 2    50   Output ~ 0
 VREF0
-Text HLabel 5900 3050 2    50   Output ~ 0
+Text HLabel 5900 3550 2    50   Output ~ 0
 VREF1
-Text HLabel 5900 3150 2    50   Output ~ 0
+Text HLabel 5900 2950 2    50   Output ~ 0
 VREF2
-Text HLabel 5900 3250 2    50   Output ~ 0
+Text HLabel 5900 3050 2    50   Output ~ 0
 VREF3
 Text HLabel 5900 3350 2    50   Output ~ 0
 VREF4
 Text HLabel 5900 3450 2    50   Output ~ 0
 VREF5
-Text HLabel 5900 3550 2    50   Output ~ 0
+Text HLabel 5900 3150 2    50   Output ~ 0
 VREF6
-Text HLabel 5900 3650 2    50   Output ~ 0
+Text HLabel 5900 3250 2    50   Output ~ 0
 VREF7
 $Comp
 L analog-azonenberg:DACx0508_WQFN U6
@@ -166,4 +166,6 @@ Wire Wire Line
 	5200 4800 5100 4800
 Wire Wire Line
 	5100 5100 5200 5100
+Text Notes 5800 2850 0    50   ~ 0
+DAC channels reassigned for routability
 $EndSCHEMATC
