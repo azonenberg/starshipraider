@@ -219,7 +219,7 @@ F 3 "" H 7050 5250 50  0001 C CNN
 $EndComp
 Text Label 6800 4500 2    50   ~ 0
 GND
-Text Label 6800 4400 2    50   ~ 0
+Text Label 5500 4400 2    50   ~ 0
 3V3
 NoConn ~ 8150 3600
 Text Label 8150 3900 0    50   ~ 0
@@ -404,4 +404,52 @@ Text Label 7300 2200 2    50   ~ 0
 GND
 Text Label 7300 1400 2    50   ~ 0
 SPI_MISO
+Text Label 2000 1300 0    50   ~ 0
+BOOT0
+Text Label 4000 1200 2    50   ~ 0
+BOOT0
+$Comp
+L Connector:Conn_01x02 J5
+U 1 1 5F0B6374
+P 4200 1200
+F 0 "J5" H 4280 1192 50  0000 L CNN
+F 1 "PINHEADER_1x2" H 4280 1101 50  0000 L CNN
+F 2 "azonenberg_pcb:CONN_HEADER_2.54MM_1x2" H 4200 1200 50  0001 C CNN
+F 3 "~" H 4200 1200 50  0001 C CNN
+	1    4200 1200
+	1    0    0    -1  
+$EndComp
+Text Label 4000 1300 2    50   ~ 0
+3V3
+$Comp
+L device:R R77
+U 1 1 5F0BB906
+P 5650 4400
+F 0 "R77" V 5443 4400 50  0000 C CNN
+F 1 "0" V 5534 4400 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 5580 4400 50  0001 C CNN
+F 3 "" H 5650 4400 50  0001 C CNN
+	1    5650 4400
+	0    1    1    0   
+$EndComp
+$Comp
+L device:C C71
+U 1 1 5F0BC815
+P 5900 4550
+F 0 "C71" H 6015 4596 50  0000 L CNN
+F 1 "0.47 uF" H 6015 4505 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0402_CAP_NOSILK" H 5938 4400 50  0001 C CNN
+F 3 "" H 5900 4550 50  0001 C CNN
+	1    5900 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 4400 5900 4400
+Connection ~ 5900 4400
+Wire Wire Line
+	5900 4400 6800 4400
+Text Label 5900 4400 0    50   ~ 0
+LCD_VDD
+Text Label 5900 4700 2    50   ~ 0
+GND
 $EndSCHEMATC

@@ -18,13 +18,13 @@ Text HLabel 2450 2600 2    50   Output ~ 0
 CH0_P
 Text HLabel 2450 2700 2    50   Output ~ 0
 CH0_N
-Text HLabel 2450 3850 2    50   Output ~ 0
-CH2_P
-Text HLabel 2450 3950 2    50   Output ~ 0
-CH2_N
 Text HLabel 2450 5100 2    50   Output ~ 0
-CH3_P
+CH2_P
 Text HLabel 2450 5200 2    50   Output ~ 0
+CH2_N
+Text HLabel 2450 3850 2    50   Output ~ 0
+CH3_P
+Text HLabel 2450 3950 2    50   Output ~ 0
 CH3_N
 Text HLabel 5550 2600 2    50   Output ~ 0
 CH4_P
@@ -34,27 +34,27 @@ Text HLabel 5550 1350 2    50   Output ~ 0
 CH5_P
 Text HLabel 5550 1450 2    50   Output ~ 0
 CH5_N
-Text HLabel 5550 3850 2    50   Output ~ 0
-CH6_P
-Text HLabel 5550 3950 2    50   Output ~ 0
-CH6_N
 Text HLabel 5550 5100 2    50   Output ~ 0
-CH7_P
+CH6_P
 Text HLabel 5550 5200 2    50   Output ~ 0
+CH6_N
+Text HLabel 5550 3850 2    50   Output ~ 0
+CH7_P
+Text HLabel 5550 3950 2    50   Output ~ 0
 CH7_N
 Text HLabel 1200 2700 0    50   Input ~ 0
 VREF0
-Text HLabel 1200 3950 0    50   Input ~ 0
-VREF2
 Text HLabel 1200 5200 0    50   Input ~ 0
+VREF2
+Text HLabel 1200 3950 0    50   Input ~ 0
 VREF3
 Text HLabel 4300 2700 0    50   Input ~ 0
 VREF4
 Text HLabel 4300 1450 0    50   Input ~ 0
 VREF5
-Text HLabel 4300 3950 0    50   Input ~ 0
-VREF6
 Text HLabel 4300 5200 0    50   Input ~ 0
+VREF6
+Text HLabel 4300 3950 0    50   Input ~ 0
 VREF7
 Text HLabel 7850 850  0    50   Input ~ 0
 GND
@@ -1709,17 +1709,17 @@ Text HLabel 1200 1350 0    50   Input ~ 0
 CH1
 Text HLabel 1200 2600 0    50   Input ~ 0
 CH0
-Text HLabel 1200 3850 0    50   Input ~ 0
-CH2
 Text HLabel 1200 5100 0    50   Input ~ 0
+CH2
+Text HLabel 1200 3850 0    50   Input ~ 0
 CH3
 Text HLabel 4300 2600 0    50   Input ~ 0
 CH4
 Text HLabel 4300 1350 0    50   Input ~ 0
 CH5
-Text HLabel 4300 3850 0    50   Input ~ 0
-CH6
 Text HLabel 4300 5100 0    50   Input ~ 0
+CH6
+Text HLabel 4300 3850 0    50   Input ~ 0
 CH7
 Text Label 1200 2200 2    50   ~ 0
 1V5_N
