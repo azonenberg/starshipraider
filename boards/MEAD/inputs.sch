@@ -6,7 +6,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 5 6
 Title "Logic Analyzer Pod"
-Date "2020-05-30"
+Date "2020-05-31"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
