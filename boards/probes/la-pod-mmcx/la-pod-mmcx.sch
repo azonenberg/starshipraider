@@ -5,7 +5,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "MEAD MMCX input adapter"
-Date "2020-06-02"
+Date "2020-06-03"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
@@ -302,18 +302,6 @@ Text Label 2700 2900 0    50   ~ 0
 3V3
 Text Label 2700 2800 0    50   ~ 0
 I2C_SDA
-NoConn ~ 4850 950 
-$Comp
-L Connector:Conn_01x01 MH1
-U 1 1 5ED7850E
-P 5050 950
-F 0 "MH1" H 5130 992 50  0000 L CNN
-F 1 "SCREWHOLE" H 5130 901 50  0000 L CNN
-F 2 "azonenberg_pcb:MECHANICAL_CLEARANCEHOLE_4_40" H 5050 950 50  0001 C CNN
-F 3 "~" H 5050 950 50  0001 C CNN
-	1    5050 950 
-	1    0    0    -1  
-$EndComp
 $Comp
 L Connector:Conn_01x01 MH2
 U 1 1 5ED793A2
@@ -325,5 +313,19 @@ F 3 "~" H 5050 1200 50  0001 C CNN
 	1    5050 1200
 	1    0    0    -1  
 $EndComp
-NoConn ~ 4850 1200
+$Comp
+L Connector:Conn_01x01 MH1
+U 1 1 5ED7850E
+P 5050 950
+F 0 "MH1" H 5130 992 50  0000 L CNN
+F 1 "SCREWHOLE" H 5130 901 50  0000 L CNN
+F 2 "azonenberg_pcb:MECHANICAL_CLEARANCEHOLE_4_40" H 5050 950 50  0001 C CNN
+F 3 "~" H 5050 950 50  0001 C CNN
+	1    5050 950 
+	1    0    0    -1  
+$EndComp
+Text Label 4850 950  2    50   ~ 0
+GND
+Text Label 4850 1200 2    50   ~ 0
+GND
 $EndSCHEMATC
