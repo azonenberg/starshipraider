@@ -6,7 +6,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 4 6
 Title "Logic Analyzer Pod"
-Date "2020-06-04"
+Date "2020-06-05"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
@@ -537,10 +537,8 @@ Text Label 2150 5650 2    50   ~ 0
 GND
 Wire Wire Line
 	2150 5650 2250 5650
-Text Label 2550 5650 2    50   ~ 0
-1V5_N
-Wire Wire Line
-	2550 5650 2600 5650
+Text Label 2600 5750 2    50   ~ 0
+1V5_N_RAW
 Text Label 3100 5550 2    50   ~ 0
 5V0
 $Comp
@@ -622,4 +620,8 @@ Text Label 7500 1550 2    50   ~ 0
 12V0_FUSED
 Text HLabel 2100 4000 0    50   Output ~ 0
 12V0_FUSED
+Text Label 5100 5050 2    50   ~ 0
+1V5_N_RAW
+Wire Wire Line
+	2600 5650 2600 5750
 $EndSCHEMATC
