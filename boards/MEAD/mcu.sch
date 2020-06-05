@@ -6,7 +6,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 6
 Title "Logic Analyzer Pod"
-Date "2020-05-31"
+Date "2020-06-04"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
@@ -204,7 +204,6 @@ Connection ~ 4850 2200
 Connection ~ 5350 2200
 Wire Wire Line
 	5350 2200 5900 2200
-NoConn ~ 2500 2400
 $Comp
 L special-azonenberg:AMG240160P-G-W6WFDW J4
 U 1 1 5EE1B20A
@@ -252,7 +251,7 @@ Wire Wire Line
 	2450 4950 2300 4950
 Text Label 2750 4950 0    50   ~ 0
 3V3
-Text Label 2500 2200 2    50   ~ 0
+Text Label 2500 2400 2    50   ~ 0
 LCD_CTRL_DATA
 Text Label 6800 4900 2    50   ~ 0
 LCD_CTRL_DATA
@@ -540,4 +539,5 @@ Text Notes 2550 5750 0    50   ~ 0
 Addr = 0x90
 Text Notes 2550 6500 0    50   ~ 0
 Addr = 0x92
+NoConn ~ 2500 2200
 $EndSCHEMATC
