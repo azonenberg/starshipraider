@@ -1,0 +1,237 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# Connector_Conn_01x01
+#
+DEF Connector_Conn_01x01 J 0 40 Y N 1 F N
+F0 "J" 0 100 50 H V C CNN
+F1 "Connector_Conn_01x01" 0 -100 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Connector*:*_??x*mm*
+ Connector*:*1x??x*mm*
+ Pin?Header?Straight?1X*
+ Pin?Header?Angled?1X*
+ Socket?Strip?Straight?1X*
+ Socket?Strip?Angled?1X*
+$ENDFPLIST
+DRAW
+S -50 5 0 -5 1 1 6 N
+S -50 50 50 -50 1 1 10 f
+X Pin_1 1 -200 0 150 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Connector_Conn_01x02
+#
+DEF Connector_Conn_01x02 J 0 40 Y N 1 F N
+F0 "J" 0 100 50 H V C CNN
+F1 "Connector_Conn_01x02" 0 -200 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Connector*:*_??x*mm*
+ Connector*:*1x??x*mm*
+ Pin?Header?Straight?1X*
+ Pin?Header?Angled?1X*
+ Socket?Strip?Straight?1X*
+ Socket?Strip?Angled?1X*
+$ENDFPLIST
+DRAW
+S -50 -95 0 -105 1 1 6 N
+S -50 5 0 -5 1 1 6 N
+S -50 50 50 -150 1 1 10 f
+X Pin_1 1 -200 0 150 R 50 50 1 1 P
+X Pin_2 2 -200 -100 150 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Connector_Conn_01x03
+#
+DEF Connector_Conn_01x03 J 0 40 Y N 1 F N
+F0 "J" 0 200 50 H V C CNN
+F1 "Connector_Conn_01x03" 0 -200 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Connector*:*_??x*mm*
+ Connector*:*1x??x*mm*
+ Pin?Header?Straight?1X*
+ Pin?Header?Angled?1X*
+ Socket?Strip?Straight?1X*
+ Socket?Strip?Angled?1X*
+$ENDFPLIST
+DRAW
+S -50 -95 0 -105 1 1 6 N
+S -50 5 0 -5 1 1 6 N
+S -50 105 0 95 1 1 6 N
+S -50 150 50 -150 1 1 10 f
+X Pin_1 1 -200 100 150 R 50 50 1 1 P
+X Pin_2 2 -200 0 150 R 50 50 1 1 P
+X Pin_3 3 -200 -100 150 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Connector_Conn_Coaxial
+#
+DEF Connector_Conn_Coaxial J 0 40 Y N 1 F N
+F0 "J" 10 120 50 H V C CNN
+F1 "Connector_Conn_Coaxial" 115 0 50 V V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ *BNC*
+ *SMA*
+ *SMB*
+ *SMC*
+ *Cinch*
+$ENDFPLIST
+DRAW
+A -2 0 71 1636 0 0 1 10 N -70 20 70 0
+A -1 0 71 0 -1638 0 1 10 N 70 0 -70 -20
+C 0 0 20 0 1 8 N
+P 2 0 1 0 -50 0 -20 0 N
+P 2 0 1 0 0 -100 0 -70 N
+X In 1 -150 0 100 R 50 50 1 1 P
+X Ext 2 0 -200 100 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# device_C
+#
+DEF device_C C 0 10 N Y 1 F N
+F0 "C" 25 100 50 H V L CNN
+F1 "device_C" 25 -100 50 H V L CNN
+F2 "" 38 -150 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ C_*
+$ENDFPLIST
+DRAW
+P 2 0 1 20 -80 -30 80 -30 N
+P 2 0 1 20 -80 30 80 30 N
+X ~ 1 0 150 110 D 50 50 1 1 P
+X ~ 2 0 -150 110 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# device_LED
+#
+DEF device_LED D 0 40 Y N 1 F N
+F0 "D" 0 100 50 H V C CNN
+F1 "device_LED" 0 -100 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ LED*
+$ENDFPLIST
+DRAW
+P 2 0 1 8 -50 -50 -50 50 N
+P 2 0 1 0 -50 0 50 0 N
+P 4 0 1 8 50 -50 50 50 -50 0 50 -50 N
+P 5 0 1 0 -120 -30 -180 -90 -150 -90 -180 -90 -180 -60 N
+P 5 0 1 0 -70 -30 -130 -90 -100 -90 -130 -90 -130 -60 N
+X K 1 -150 0 100 R 50 50 1 1 P
+X A 2 150 0 100 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# device_R
+#
+DEF device_R R 0 0 N Y 1 F N
+F0 "R" 80 0 50 V V C CNN
+F1 "device_R" 0 0 50 V V C CNN
+F2 "" -70 0 50 V I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ R_*
+ R_*
+$ENDFPLIST
+DRAW
+S -40 -100 40 100 0 1 10 N
+X ~ 1 0 150 50 D 50 50 1 1 P
+X ~ 2 0 -150 50 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# passive-azonenberg_INDUCTOR_PWROUT
+#
+DEF passive-azonenberg_INDUCTOR_PWROUT L 0 40 N N 1 F N
+F0 "L" -50 0 40 V V C CNN
+F1 "passive-azonenberg_INDUCTOR_PWROUT" 100 0 40 V V C CNN
+F2 "" 0 0 60 H V C CNN
+F3 "" 0 0 60 H V C CNN
+DRAW
+A 0 -150 50 -889 889 0 1 0 N 1 -199 1 -100
+A 0 -49 51 -889 889 0 1 0 N 1 -99 1 2
+A 0 51 51 -889 889 0 1 0 N 1 1 1 102
+A 0 148 48 -889 889 0 1 0 N 1 101 1 196
+X 1 1 0 300 100 D 70 70 1 1 w
+X 2 2 0 -300 100 U 70 70 1 1 P
+ENDDRAW
+ENDDEF
+#
+# power-azonenberg_CONN_3_PWROUT
+#
+DEF power-azonenberg_CONN_3_PWROUT K 0 40 Y N 1 F N
+F0 "K" -50 0 50 V V C CNN
+F1 "power-azonenberg_CONN_3_PWROUT" 50 0 40 V V C CNN
+F2 "" 0 0 60 H V C CNN
+F3 "" 0 0 60 H V C CNN
+DRAW
+S -100 150 100 -150 0 1 0 N
+X P1 1 -350 100 250 R 60 60 1 1 w I
+X PM 2 -350 0 250 R 60 60 1 1 w I
+X P3 3 -350 -100 250 R 60 60 1 1 P I
+ENDDRAW
+ENDDEF
+#
+# power-azonenberg_FUSE_PWROUT
+#
+DEF power-azonenberg_FUSE_PWROUT F 0 10 Y Y 1 F N
+F0 "F" 100 50 50 H V C CNN
+F1 "power-azonenberg_FUSE_PWROUT" -100 -50 50 H V C CNN
+F2 "" 0 0 60 H V C CNN
+F3 "" 0 0 60 H V C CNN
+DRAW
+A -75 0 75 1 1799 0 1 0 N 0 0 -150 0
+A 75 0 75 -1799 -1 0 1 0 N 0 0 150 0
+X ~ 1 -250 0 100 R 40 40 1 1 W
+X ~ 2 250 0 100 L 40 40 1 1 w
+ENDDRAW
+ENDDEF
+#
+# special-azonenberg_CONN_SFP_HOST
+#
+DEF special-azonenberg_CONN_SFP_HOST J 0 40 Y Y 1 F N
+F0 "J" 0 -50 60 H V L CNN
+F1 "special-azonenberg_CONN_SFP_HOST" 0 -150 60 H V L CNN
+F2 "" 0 0 60 H V C CNN
+F3 "" 0 0 60 H V C CNN
+DRAW
+S 0 2700 550 0 0 1 0 f
+X GND_TX 1 -200 2050 200 R 50 50 1 1 W
+X GND_RX 10 -200 2350 200 R 50 50 1 1 W
+X GND_RX 11 -200 2250 200 R 50 50 1 1 W
+X RX_N 12 -200 1550 200 R 50 50 1 1 O
+X RX_P 13 -200 1650 200 R 50 50 1 1 O
+X GND_RX 14 -200 2150 200 R 50 50 1 1 W
+X VDD_RX 15 -200 2650 200 R 50 50 1 1 W
+X VDD_TX 16 -200 2550 200 R 50 50 1 1 W
+X GND_TX 17 -200 1950 200 R 50 50 1 1 W
+X TX_P 18 -200 1350 200 R 50 50 1 1 I
+X TX_N 19 -200 1250 200 R 50 50 1 1 I
+X TX_FAULT 2 -200 350 200 R 50 50 1 1 O
+X GND_TX 20 -200 1850 200 R 50 50 1 1 W
+X TX_DISABLE 3 -200 450 200 R 50 50 1 1 I
+X SDA 4 -200 50 200 R 50 50 1 1 B
+X SCL 5 -200 150 200 R 50 50 1 1 I
+X MOD_ABS 6 -200 650 200 R 50 50 1 1 O
+X RS0 7 -200 1050 200 R 50 50 1 1 I
+X RX_LOS 8 -200 750 200 R 50 50 1 1 O
+X RS1 9 -200 950 200 R 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+#End Library
