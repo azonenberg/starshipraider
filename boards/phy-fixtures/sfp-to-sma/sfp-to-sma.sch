@@ -1129,17 +1129,6 @@ F 3 "" H 7950 3250 50  0001 C CNN
 	1    7950 3250
 	0    1    1    0   
 $EndComp
-$Comp
-L special-azonenberg:SSM6N58NU_DUAL_NMOS Q1
-U 2 1 5EEC463F
-P 7700 3600
-F 0 "Q1" H 7844 3653 60  0000 L CNN
-F 1 "SSM6N58NU" H 7844 3547 60  0000 L CNN
-F 2 "azonenberg_pcb:DFN_6_0.65MM_2x2MM_GDS" H 7700 3600 60  0001 C CNN
-F 3 "transistors/mos/*.*" H 7844 3494 60  0001 L CNN
-	2    7700 3600
-	1    0    0    -1  
-$EndComp
 Text Label 7500 3600 2    50   ~ 0
 RX_LOS2
 Text Label 7500 3800 2    50   ~ 0
@@ -1240,17 +1229,6 @@ F 3 "" H 7950 4350 50  0001 C CNN
 	1    7950 4350
 	0    1    1    0   
 $EndComp
-$Comp
-L special-azonenberg:SSM6N58NU_DUAL_NMOS Q2
-U 1 1 5EED1FE6
-P 7700 4700
-F 0 "Q2" H 7844 4753 60  0000 L CNN
-F 1 "SSM6N58NU" H 7844 4647 60  0000 L CNN
-F 2 "azonenberg_pcb:DFN_6_0.65MM_2x2MM_GDS" H 7700 4700 60  0001 C CNN
-F 3 "transistors/mos/*.*" H 7844 4594 60  0001 L CNN
-	1    7700 4700
-	1    0    0    -1  
-$EndComp
 Text Label 7500 4900 2    50   ~ 0
 GND
 Wire Wire Line
@@ -1331,4 +1309,26 @@ Text Label 6000 5250 0    50   ~ 0
 I2C_SDA2
 Text Label 6000 5350 0    50   ~ 0
 GND
+$Comp
+L special-azonenberg:SSM6N58NU_DUAL_NMOS Q2
+U 1 1 5EED1FE6
+P 7700 3600
+F 0 "Q2" H 7844 3653 60  0000 L CNN
+F 1 "SSM6N58NU" H 7844 3547 60  0000 L CNN
+F 2 "azonenberg_pcb:DFN_6_0.65MM_2x2MM_GDS" H 7700 3600 60  0001 C CNN
+F 3 "transistors/mos/*.*" H 7844 3494 60  0001 L CNN
+	1    7700 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L special-azonenberg:SSM6N58NU_DUAL_NMOS Q1
+U 2 1 5EEC463F
+P 7700 4700
+F 0 "Q1" H 7844 4753 60  0000 L CNN
+F 1 "SSM6N58NU" H 7844 4647 60  0000 L CNN
+F 2 "azonenberg_pcb:DFN_6_0.65MM_2x2MM_GDS" H 7700 4700 60  0001 C CNN
+F 3 "transistors/mos/*.*" H 7844 4594 60  0001 L CNN
+	2    7700 4700
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
