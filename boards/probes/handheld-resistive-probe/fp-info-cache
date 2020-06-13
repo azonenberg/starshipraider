@@ -1,4 +1,4 @@
-374878967452118
+386150629393118
 azonenberg_pcb
 ATC_AT_0603
 
@@ -252,6 +252,13 @@ CONN_FCI_USB_73725-0110BLF
 9
 5
 azonenberg_pcb
+CONN_FFC_0.5MM_1x28_MOLEX_0524352871
+
+
+0
+30
+29
+azonenberg_pcb
 CONN_HDMI_SAMTEC_HDMR_19_01_S_SM
 
 
@@ -462,6 +469,13 @@ CONN_MMCX_J_P_H_ST_EM1
 7
 2
 azonenberg_pcb
+CONN_MMCX_J_P_H_ST_EM1_0P7MM_CENTER
+
+
+0
+7
+2
+azonenberg_pcb
 CONN_MMCX_LINX_CONNMMCX002SMD
 
 
@@ -539,6 +553,13 @@ CONN_RJ11_ASSMANN_A-2014-1-4-N-T-R
 6
 6
 azonenberg_pcb
+CONN_SAMTEC_LSHM-120-02.5-L-DV-A-N-K-TR
+
+
+0
+42
+41
+azonenberg_pcb
 CONN_SAMTEC_QSH-030-01-L-D-A
 
 
@@ -580,6 +601,13 @@ CONN_SAMTEC_SMH_110_02_L_D
 0
 20
 20
+azonenberg_pcb
+CONN_SFF8087_MOLEX_75783-0140
+
+
+0
+47
+37
 azonenberg_pcb
 CONN_SFP+_AMPHENOL_UE76_A10_2000T
 
@@ -687,6 +715,13 @@ DFN_3_DIODES_X2DFN2015-3
 3
 azonenberg_pcb
 DFN_4_0.5MM_1.6x1.2MM
+
+
+0
+5
+5
+azonenberg_pcb
+DFN_4_0.65MM_1x1MM_TI_DQN
 
 
 0
@@ -1013,6 +1048,13 @@ FLEX_SOLDERPAD
 
 0
 1
+1
+azonenberg_pcb
+HOLLAND_SHIELDING_TC
+
+
+0
+3
 1
 azonenberg_pcb
 INDUCTOR_COILTRONICS_FPV1006
@@ -1427,6 +1469,13 @@ SERIALNUM_MOLEX_0916580020
 0
 1
 1
+azonenberg_pcb
+SMA
+
+
+0
+2
+2
 azonenberg_pcb
 SMB
 

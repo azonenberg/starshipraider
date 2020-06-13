@@ -6,7 +6,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Handheld 10:1 Transmission Line probe"
-Date "2020-05-17"
+Date "2020-06-07"
 Rev "0.8"
 Comp "Antikernel Labs"
 Comment1 ""
@@ -126,5 +126,18 @@ F 3 "~" H 8450 3500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 8250 3500 2    50   ~ 0
+GND
+$Comp
+L Connector:Conn_01x01 J4
+U 1 1 5EDDBD80
+P 8450 3750
+F 0 "J4" H 8530 3792 50  0000 L CNN
+F 1 "PROBETIP" H 8530 3701 50  0000 L CNN
+F 2 "azonenberg_pcb:CONN_MILLMAX_0339_EDGELAUNCH" H 8450 3750 50  0001 C CNN
+F 3 "~" H 8450 3750 50  0001 C CNN
+	1    8450 3750
+	1    0    0    -1  
+$EndComp
+Text Label 8250 3750 2    50   ~ 0
 GND
 $EndSCHEMATC
