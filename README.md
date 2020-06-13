@@ -60,3 +60,10 @@ All are 8 channels.
 
 * HALL (discovered Hall effect)
   AKL-PT1 passive probe
+
+## Signal Generators
+
+* FLEMING (John Ambrose Fleming, inventor of vacuum tube)
+  4 channel 16 bit 1 Gsps arbitrary waveform generator, AD9154 + Kintex-7 + DDR3 SODIMM based.
+  4GB DDR3 SODIMM, 1 GB per channel = 512 Mpoints of waveform data
+  Probably some digital outputs (mix of LVDS and LVCMOS, and maybe some slow pin headers?)
