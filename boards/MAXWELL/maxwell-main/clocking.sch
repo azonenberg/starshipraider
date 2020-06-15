@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 8 14
+Sheet 12 15
 Title "MAXWELL Main Board"
 Date "2020-06-15"
 Rev "0.1"
@@ -46,4 +46,10 @@ F 3 "" H 6600 5100 50  0001 C CNN
 	3    6600 5100
 	1    0    0    -1  
 $EndComp
+$Sheet
+S 6900 1450 1050 1500
+U 5F303230
+F0 "Trigger and Reference Inputs" 50
+F1 "trigger.sch" 50
+$EndSheet
 $EndSCHEMATC
