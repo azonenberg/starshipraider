@@ -5,7 +5,7 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 5 12
 Title "MAXWELL Main Board"
-Date "2020-06-14"
+Date "2020-06-15"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
@@ -78,4 +78,10 @@ F 3 "" H 8950 5700 50  0001 C CNN
 	13   8950 5700
 	1    0    0    -1  
 $EndComp
+$Sheet
+S 1400 6800 1000 1500
+U 5F0BA462
+F0 "Pod Power" 50
+F1 "podpower.sch" 50
+$EndSheet
 $EndSCHEMATC

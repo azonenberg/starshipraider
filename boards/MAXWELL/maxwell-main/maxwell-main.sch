@@ -5,7 +5,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 12
 Title "MAXWELL Main Board"
-Date "2020-06-14"
+Date "2020-06-15"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
@@ -72,11 +72,5 @@ S 5500 3000 1050 1500
 U 5F049B6D
 F0 "I/O FPGA" 50
 F1 "iofpga.sch" 50
-$EndSheet
-$Sheet
-S 7000 3000 1000 1500
-U 5F080E90
-F0 "Pod Power" 50
-F1 "podpower.sch" 50
 $EndSheet
 $EndSCHEMATC

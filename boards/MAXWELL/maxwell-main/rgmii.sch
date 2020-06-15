@@ -5,7 +5,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 7 12
 Title "MAXWELL Main Board"
-Date "2020-06-14"
+Date "2020-06-15"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"

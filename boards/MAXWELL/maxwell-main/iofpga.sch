@@ -4,11 +4,11 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 11 12
-Title ""
-Date ""
-Rev ""
-Comp ""
-Comment1 ""
+Title "MAXWELL Main Board"
+Date "2020-06-15"
+Rev "0.1"
+Comp "Antikernel Labs"
+Comment1 "Andrew D. Zonenberg"
 Comment2 ""
 Comment3 ""
 Comment4 ""
