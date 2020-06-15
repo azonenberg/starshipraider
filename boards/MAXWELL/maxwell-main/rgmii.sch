@@ -59,10 +59,4 @@ Text HLabel 1250 1450 0    50   BiDi ~ 0
 K7_QSPI_DQ3
 Text HLabel 1250 2150 0    50   BiDi ~ 0
 K7_QSPI_CS_N
-Text HLabel 1250 3350 0    50   Input ~ 0
-K7_CLK_P
-Text HLabel 1250 3450 0    50   Input ~ 0
-K7_CLK_N
-Text Notes 3000 1000 0    50   ~ 0
-TODO: terminating resistor for K7_CLK\n(no DIFF_TERM in 3.3V I/O banks)
 $EndSCHEMATC
