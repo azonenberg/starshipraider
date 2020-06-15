@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 11 15
+Sheet 12 15
 Title "MAXWELL Main Board"
 Date "2020-06-15"
 Rev "0.1"
@@ -35,4 +35,34 @@ F 3 "" H 8800 4400 60  0000 C CNN
 	1    8800 4400
 	1    0    0    -1  
 $EndComp
+$Comp
+L xilinx-azonenberg:XC7KxT-FFG676 U?
+U 6 1 5F47F363
+P 1450 6000
+AR Path="/5EDD71F2/5F47F363" Ref="U?"  Part="9" 
+AR Path="/5EF1FA37/5F47F363" Ref="U?"  Part="7" 
+AR Path="/5EE2921B/5F47F363" Ref="U?"  Part="6" 
+F 0 "U?" H 1450 5950 50  0000 L CNN
+F 1 "XC7K160T-2FFG676C" H 1450 5850 50  0000 L CNN
+F 2 "" H 1450 6000 50  0001 C CNN
+F 3 "" H 1450 6000 50  0001 C CNN
+	6    1450 6000
+	1    0    0    -1  
+$EndComp
+Text HLabel 1250 1150 0    50   BiDi ~ 0
+K7_QSPI_DQ0
+Text HLabel 1250 1250 0    50   BiDi ~ 0
+K7_QSPI_DQ1
+Text HLabel 1250 1350 0    50   BiDi ~ 0
+K7_QSPI_DQ2
+Text HLabel 1250 1450 0    50   BiDi ~ 0
+K7_QSPI_DQ3
+Text HLabel 1250 2150 0    50   BiDi ~ 0
+K7_QSPI_CS_N
+Text HLabel 1250 3350 0    50   Input ~ 0
+K7_CLK_P
+Text HLabel 1250 3450 0    50   Input ~ 0
+K7_CLK_N
+Text Notes 3000 1000 0    50   ~ 0
+TODO: terminating resistor for K7_CLK\n(no DIFF_TERM in 3.3V I/O banks)
 $EndSCHEMATC
