@@ -3,9 +3,9 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 6
+Sheet 1 12
 Title "MAXWELL Main Board"
-Date "2020-06-07"
+Date "2020-06-14"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
@@ -48,5 +48,35 @@ S 8500 1000 1000 1500
 U 5EE2921B
 F0 "RGMII PHY" 50
 F1 "rgmii.sch" 50
+$EndSheet
+$Sheet
+S 1000 3000 1000 1500
+U 5EEF3B79
+F0 "Clocking" 50
+F1 "clocking.sch" 50
+$EndSheet
+$Sheet
+S 2500 3000 1050 1500
+U 5EEF3BE9
+F0 "Trigger/Ref Inputs" 50
+F1 "trigger.sch" 50
+$EndSheet
+$Sheet
+S 4000 3000 1000 1500
+U 5EF1FA37
+F0 "FPGA Support" 50
+F1 "fpgasupport.sch" 50
+$EndSheet
+$Sheet
+S 5500 3000 1050 1500
+U 5F049B6D
+F0 "I/O FPGA" 50
+F1 "iofpga.sch" 50
+$EndSheet
+$Sheet
+S 7000 3000 1000 1500
+U 5F080E90
+F0 "Pod Power" 50
+F1 "podpower.sch" 50
 $EndSheet
 $EndSCHEMATC

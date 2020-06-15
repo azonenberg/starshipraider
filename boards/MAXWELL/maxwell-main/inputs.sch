@@ -1,16 +1,81 @@
 EESchema Schematic File Version 4
 EELAYER 30 0
 EELAYER END
-$Descr A4 11693 8268
+$Descr A3 16535 11693
 encoding utf-8
-Sheet 1 6
-Title ""
-Date ""
-Rev ""
-Comp ""
-Comment1 ""
+Sheet 5 12
+Title "MAXWELL Main Board"
+Date "2020-06-14"
+Rev "0.1"
+Comp "Antikernel Labs"
+Comment1 "Andrew D. Zonenberg"
 Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+$Comp
+L xilinx-azonenberg:XC7KxT-FFG676 U?
+U 4 1 5EFEA4AE
+P 2000 5700
+AR Path="/5EDD71F2/5EFEA4AE" Ref="U?"  Part="9" 
+AR Path="/5EDD723A/5EFEA4AE" Ref="U?"  Part="4" 
+F 0 "U?" H 2000 5650 50  0000 L CNN
+F 1 "XC7K160T-2FFG676C" H 2000 5550 50  0000 L CNN
+F 2 "" H 2000 5700 50  0001 C CNN
+F 3 "" H 2000 5700 50  0001 C CNN
+	4    2000 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L xilinx-azonenberg:XC7KxT-FFG676 U?
+U 5 1 5EFF6380
+P 3750 5700
+AR Path="/5EDD71F2/5EFF6380" Ref="U?"  Part="9" 
+AR Path="/5EDD723A/5EFF6380" Ref="U?"  Part="5" 
+F 0 "U?" H 3750 5650 50  0000 L CNN
+F 1 "XC7K160T-2FFG676C" H 3750 5550 50  0000 L CNN
+F 2 "" H 3750 5700 50  0001 C CNN
+F 3 "" H 3750 5700 50  0001 C CNN
+	5    3750 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L xilinx-azonenberg:XC7KxT-FFG676 U?
+U 6 1 5F002D10
+P 5350 5700
+AR Path="/5EDD71F2/5F002D10" Ref="U?"  Part="9" 
+AR Path="/5EDD723A/5F002D10" Ref="U?"  Part="6" 
+F 0 "U?" H 5350 5650 50  0000 L CNN
+F 1 "XC7K160T-2FFG676C" H 5350 5550 50  0000 L CNN
+F 2 "" H 5350 5700 50  0001 C CNN
+F 3 "" H 5350 5700 50  0001 C CNN
+	6    5350 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L xilinx-azonenberg:XC7KxT-FFG676 U?
+U 8 1 5F00F6F1
+P 7150 5700
+AR Path="/5EDD71F2/5F00F6F1" Ref="U?"  Part="9" 
+AR Path="/5EDD723A/5F00F6F1" Ref="U?"  Part="8" 
+F 0 "U?" H 7150 5650 50  0000 L CNN
+F 1 "XC7K160T-2FFG676C" H 7150 5550 50  0000 L CNN
+F 2 "" H 7150 5700 50  0001 C CNN
+F 3 "" H 7150 5700 50  0001 C CNN
+	8    7150 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L xilinx-azonenberg:XC7KxT-FFG676 U?
+U 13 1 5F019547
+P 8950 5700
+AR Path="/5EDD71F2/5F019547" Ref="U?"  Part="9" 
+AR Path="/5EDD723A/5F019547" Ref="U?"  Part="13" 
+F 0 "U?" H 8950 5650 50  0000 L CNN
+F 1 "XC7K160T-2FFG676C" H 8950 5550 50  0000 L CNN
+F 2 "" H 8950 5700 50  0001 C CNN
+F 3 "" H 8950 5700 50  0001 C CNN
+	13   8950 5700
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

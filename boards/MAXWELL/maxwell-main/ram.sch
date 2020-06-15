@@ -1,16 +1,71 @@
 EESchema Schematic File Version 4
 EELAYER 30 0
 EELAYER END
-$Descr A4 11693 8268
+$Descr A3 16535 11693
 encoding utf-8
-Sheet 1 6
-Title ""
-Date ""
-Rev ""
-Comp ""
-Comment1 ""
+Sheet 4 12
+Title "MAXWELL Main Board"
+Date "2020-06-14"
+Rev "0.1"
+Comp "Antikernel Labs"
+Comment1 "Andrew D. Zonenberg"
 Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+$Comp
+L memory-azonenberg:DDR3_SODIMM U?
+U 2 1 5EF1FB5C
+P 13400 8300
+F 0 "U?" H 13900 10975 50  0000 C CNN
+F 1 "DDR3_SODIMM" H 13900 10884 50  0000 C CNN
+F 2 "" H 13650 8250 50  0001 C CNN
+F 3 "" H 13650 8250 50  0001 C CNN
+	2    13400 8300
+	1    0    0    -1  
+$EndComp
+$Comp
+L memory-azonenberg:DDR3_SODIMM U?
+U 3 1 5EF22691
+P 13400 5550
+F 0 "U?" H 13900 10425 50  0000 C CNN
+F 1 "DDR3_SODIMM" H 13900 10334 50  0000 C CNN
+F 2 "" H 13650 5500 50  0001 C CNN
+F 3 "" H 13650 5500 50  0001 C CNN
+	3    13400 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L xilinx-azonenberg:XC7KxT-FFG676 U?
+U 11 1 5EF39C8B
+P 7900 5850
+F 0 "U?" H 7900 5800 50  0000 L CNN
+F 1 "XC7K160T-2FFG676C" H 7900 5700 50  0000 L CNN
+F 2 "" H 7900 5850 50  0001 C CNN
+F 3 "" H 7900 5850 50  0001 C CNN
+	11   7900 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L xilinx-azonenberg:XC7KxT-FFG676 U?
+U 10 1 5EF876C9
+P 5350 5850
+F 0 "U?" H 5350 5800 50  0000 L CNN
+F 1 "XC7K160T-2FFG676C" H 5350 5700 50  0000 L CNN
+F 2 "" H 5350 5850 50  0001 C CNN
+F 3 "" H 5350 5850 50  0001 C CNN
+	10   5350 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L xilinx-azonenberg:XC7KxT-FFG676 U?
+U 9 1 5EF93AD3
+P 2350 5850
+F 0 "U?" H 2350 5800 50  0000 L CNN
+F 1 "XC7K160T-2FFG676C" H 2350 5700 50  0000 L CNN
+F 2 "" H 2350 5850 50  0001 C CNN
+F 3 "" H 2350 5850 50  0001 C CNN
+	9    2350 5850
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
