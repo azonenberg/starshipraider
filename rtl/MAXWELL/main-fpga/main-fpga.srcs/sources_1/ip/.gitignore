@@ -5,3 +5,6 @@ doc
 *.tcl
 *.prj
 *.in
+*.dcp
+*.v
+*.vhdl
