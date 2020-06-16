@@ -5,7 +5,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 3 15
 Title "MAXWELL Main Board"
-Date "2020-06-15"
+Date "2020-06-16"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
@@ -27,12 +27,12 @@ $EndComp
 $Comp
 L st-azonenberg:STM32F777xx-TFBGA216 U1
 U 13 1 5EFAF0FE
-P 1450 4900
-F 0 "U1" H 1450 4850 50  0000 L CNN
-F 1 "STM32F777NIH6" H 1450 4800 50  0000 L CNN
-F 2 "" H 1450 4850 50  0001 C CNN
-F 3 "" H 1450 4850 50  0001 C CNN
-	13   1450 4900
+P 1450 4800
+F 0 "U1" H 1450 4750 50  0000 L CNN
+F 1 "STM32F777NIH6" H 1450 4700 50  0000 L CNN
+F 2 "" H 1450 4750 50  0001 C CNN
+F 3 "" H 1450 4750 50  0001 C CNN
+	13   1450 4800
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -193,4 +193,117 @@ F 3 "" H 5800 5550 50  0001 C CNN
 	11   5800 5600
 	1    0    0    -1  
 $EndComp
+Text HLabel 4200 4200 0    50   BiDi ~ 0
+K7_INIT_B
+Text HLabel 4200 4300 0    50   Output ~ 0
+K7_RST_N
+Text HLabel 4200 4400 0    50   Input ~ 0
+K7_DONE
+Text Label 1350 2950 2    50   ~ 0
+GND
+Wire Wire Line
+	1350 2950 1350 3050
+Connection ~ 1350 3050
+Wire Wire Line
+	1350 3050 1350 3150
+Connection ~ 1350 3150
+Wire Wire Line
+	1350 3150 1350 3250
+Connection ~ 1350 3250
+Wire Wire Line
+	1350 3250 1350 3350
+Connection ~ 1350 3350
+Wire Wire Line
+	1350 3350 1350 3450
+Connection ~ 1350 3450
+Wire Wire Line
+	1350 3450 1350 3550
+Connection ~ 1350 3550
+Wire Wire Line
+	1350 3550 1350 3650
+Connection ~ 1350 3650
+Wire Wire Line
+	1350 3650 1350 3750
+Connection ~ 1350 3750
+Wire Wire Line
+	1350 3750 1350 3850
+Connection ~ 1350 3850
+Wire Wire Line
+	1350 3850 1350 3950
+Connection ~ 1350 3950
+Wire Wire Line
+	1350 3950 1350 4050
+Connection ~ 1350 4050
+Wire Wire Line
+	1350 4050 1350 4150
+Connection ~ 1350 4150
+Wire Wire Line
+	1350 4150 1350 4250
+Connection ~ 1350 4250
+Wire Wire Line
+	1350 4250 1350 4350
+Connection ~ 1350 4350
+Wire Wire Line
+	1350 4350 1350 4450
+Connection ~ 1350 4450
+Wire Wire Line
+	1350 4450 1350 4550
+Connection ~ 1350 4550
+Wire Wire Line
+	1350 4550 1350 4650
+Connection ~ 1350 4650
+Wire Wire Line
+	1350 4650 1350 4750
+Text Label 1350 5850 2    50   ~ 0
+3V3
+Wire Wire Line
+	1350 5850 1350 5950
+Connection ~ 1350 5950
+Wire Wire Line
+	1350 5950 1350 6050
+Connection ~ 1350 6050
+Wire Wire Line
+	1350 6050 1350 6150
+Connection ~ 1350 6150
+Wire Wire Line
+	1350 6150 1350 6250
+Connection ~ 1350 6250
+Wire Wire Line
+	1350 6250 1350 6350
+Connection ~ 1350 6350
+Wire Wire Line
+	1350 6350 1350 6450
+Connection ~ 1350 6450
+Wire Wire Line
+	1350 6450 1350 6550
+Connection ~ 1350 6550
+Wire Wire Line
+	1350 6550 1350 6650
+Connection ~ 1350 6650
+Wire Wire Line
+	1350 6650 1350 6750
+Connection ~ 1350 6750
+Wire Wire Line
+	1350 6750 1350 6850
+Connection ~ 1350 6850
+Wire Wire Line
+	1350 6850 1350 6950
+Connection ~ 1350 6950
+Wire Wire Line
+	1350 6950 1350 7050
+Connection ~ 1350 7050
+Wire Wire Line
+	1350 7050 1350 7150
+Connection ~ 1350 7150
+Wire Wire Line
+	1350 7150 1350 7250
+Connection ~ 1350 7250
+Wire Wire Line
+	1350 7250 1350 7350
+Connection ~ 1350 7350
+Wire Wire Line
+	1350 7350 1350 7450
+Connection ~ 1350 7450
+Wire Wire Line
+	1350 7450 1350 7550
 $EndSCHEMATC

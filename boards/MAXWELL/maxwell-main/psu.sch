@@ -5,7 +5,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 15
 Title "MAXWELL Main Board"
-Date "2020-06-15"
+Date "2020-06-16"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
@@ -35,4 +35,8 @@ Text HLabel 2200 4100 0    50   Output ~ 0
 1V2
 Text HLabel 2200 4300 0    50   Output ~ 0
 1V0
+Text HLabel 3550 3100 0    50   Output ~ 0
+RAM_VREF
+Text HLabel 3500 3200 0    50   Output ~ 0
+RAM_VTT
 $EndSCHEMATC
