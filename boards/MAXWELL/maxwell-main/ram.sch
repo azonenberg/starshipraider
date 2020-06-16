@@ -76,8 +76,6 @@ Text HLabel 1600 2100 0    50   Input ~ 0
 RAM_VREF
 Text HLabel 10100 1400 0    50   Input ~ 0
 RAM_VTT
-Text Notes 2650 8050 0    50   ~ 0
-Rzq = 240 ohms\n40 ohm line impedance\nMIG wants 800 MHz input clock
 Text Notes 5350 6150 0    50   ~ 0
 Bank 33 = addr/control
 Text Notes 7900 6150 0    50   ~ 0
@@ -550,10 +548,8 @@ Text Label 13200 4500 2    50   ~ 0
 DDR_DQS3_P
 Text Label 13200 4600 2    50   ~ 0
 DDR_DQS3_N
-NoConn ~ 2150 900 
 NoConn ~ 2150 3300
 NoConn ~ 2150 4500
-NoConn ~ 2150 5800
 Wire Wire Line
 	1600 2100 2150 2100
 Text Label 2150 4700 2    50   ~ 0
@@ -562,12 +558,7 @@ Text Label 7700 4700 2    50   ~ 0
 RAM_VREF
 Text Label 7700 2100 2    50   ~ 0
 RAM_VREF
-NoConn ~ 7700 900 
 NoConn ~ 7700 4500
-NoConn ~ 7700 5800
-NoConn ~ 5150 900 
-NoConn ~ 5150 3400
-NoConn ~ 5150 3500
 NoConn ~ 5150 3600
 NoConn ~ 5150 3700
 NoConn ~ 5150 4100
@@ -587,7 +578,6 @@ NoConn ~ 5150 5400
 NoConn ~ 5150 5500
 NoConn ~ 5150 5600
 NoConn ~ 5150 5700
-NoConn ~ 5150 5800
 $Comp
 L memory-azonenberg:DDR3_SODIMM U3
 U 1 1 600B7F75
@@ -807,6 +797,765 @@ Wire Wire Line
 Connection ~ 11500 4600
 Wire Wire Line
 	11500 4600 11500 4700
-Text Notes 6200 7850 0    50   ~ 0
-TODO: decoupling for SODIMM power, Vref, Vtt
+Text Label 1600 5800 2    50   ~ 0
+GND
+Wire Wire Line
+	1600 5800 1850 5800
+Text Label 4600 5800 2    50   ~ 0
+GND
+Wire Wire Line
+	4600 5800 4850 5800
+Text Label 7150 5800 2    50   ~ 0
+GND
+Wire Wire Line
+	7150 5800 7400 5800
+Text Label 1600 900  2    50   ~ 0
+1V5
+Wire Wire Line
+	1600 900  1850 900 
+Text Label 4600 900  2    50   ~ 0
+1V5
+Wire Wire Line
+	4600 900  4850 900 
+Text Label 7150 900  2    50   ~ 0
+1V5
+Wire Wire Line
+	7150 900  7400 900 
+$Comp
+L device:R R67
+U 1 1 6010D18B
+P 7550 5800
+F 0 "R67" V 7500 5550 50  0000 C CNN
+F 1 "80" V 7550 5800 50  0000 C CNN
+F 2 "" V 7480 5800 50  0001 C CNN
+F 3 "" H 7550 5800 50  0001 C CNN
+	1    7550 5800
+	0    1    1    0   
+$EndComp
+$Comp
+L device:R R66
+U 1 1 60119CBD
+P 7550 900
+F 0 "R66" V 7500 650 50  0000 C CNN
+F 1 "80" V 7550 900 50  0000 C CNN
+F 2 "" V 7480 900 50  0001 C CNN
+F 3 "" H 7550 900 50  0001 C CNN
+	1    7550 900 
+	0    1    1    0   
+$EndComp
+$Comp
+L device:R R64
+U 1 1 60115E21
+P 5000 900
+F 0 "R64" V 4950 650 50  0000 C CNN
+F 1 "80" V 5000 900 50  0000 C CNN
+F 2 "" V 4930 900 50  0001 C CNN
+F 3 "" H 5000 900 50  0001 C CNN
+	1    5000 900 
+	0    1    1    0   
+$EndComp
+$Comp
+L device:R R65
+U 1 1 60100C3F
+P 5000 5800
+F 0 "R65" V 4950 5550 50  0000 C CNN
+F 1 "80" V 5000 5800 50  0000 C CNN
+F 2 "" V 4930 5800 50  0001 C CNN
+F 3 "" H 5000 5800 50  0001 C CNN
+	1    5000 5800
+	0    1    1    0   
+$EndComp
+$Comp
+L device:R R63
+U 1 1 600F8362
+P 2000 5800
+F 0 "R63" V 1950 5550 50  0000 C CNN
+F 1 "80" V 2000 5800 50  0000 C CNN
+F 2 "" V 1930 5800 50  0001 C CNN
+F 3 "" H 2000 5800 50  0001 C CNN
+	1    2000 5800
+	0    1    1    0   
+$EndComp
+$Comp
+L device:R R62
+U 1 1 60112B94
+P 2000 900
+F 0 "R62" V 1950 650 50  0000 C CNN
+F 1 "80" V 2000 900 50  0000 C CNN
+F 2 "" V 1930 900 50  0001 C CNN
+F 3 "" H 2000 900 50  0001 C CNN
+	1    2000 900 
+	0    1    1    0   
+$EndComp
+$Comp
+L device:C C191
+U 1 1 6013BDBA
+P 4650 6950
+F 0 "C191" H 4765 6996 50  0000 L CNN
+F 1 "0.47 uF" H 4765 6905 50  0000 L CNN
+F 2 "" H 4688 6800 50  0001 C CNN
+F 3 "" H 4650 6950 50  0001 C CNN
+	1    4650 6950
+	1    0    0    -1  
+$EndComp
+Text Label 2400 6800 2    50   ~ 0
+RAM_VREF
+Text Label 2400 7100 2    50   ~ 0
+GND
+$Comp
+L device:C C195
+U 1 1 6013D798
+P 5200 6950
+F 0 "C195" H 5315 6996 50  0000 L CNN
+F 1 "0.47 uF" H 5315 6905 50  0000 L CNN
+F 2 "" H 5238 6800 50  0001 C CNN
+F 3 "" H 5200 6950 50  0001 C CNN
+	1    5200 6950
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C178
+U 1 1 6013DB5F
+P 3500 6950
+F 0 "C178" H 3615 6996 50  0000 L CNN
+F 1 "0.47 uF" H 3615 6905 50  0000 L CNN
+F 2 "" H 3538 6800 50  0001 C CNN
+F 3 "" H 3500 6950 50  0001 C CNN
+	1    3500 6950
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C187
+U 1 1 6013FBE3
+P 4050 6950
+F 0 "C187" H 4165 6996 50  0000 L CNN
+F 1 "0.47 uF" H 4165 6905 50  0000 L CNN
+F 2 "" H 4088 6800 50  0001 C CNN
+F 3 "" H 4050 6950 50  0001 C CNN
+	1    4050 6950
+	1    0    0    -1  
+$EndComp
+Connection ~ 3500 6800
+Wire Wire Line
+	4050 6800 3500 6800
+Connection ~ 3500 7100
+Wire Wire Line
+	3500 7100 4050 7100
+$Comp
+L device:C C166
+U 1 1 60146A27
+P 2400 6950
+F 0 "C166" H 2515 6996 50  0000 L CNN
+F 1 "4.7 uF" H 2515 6905 50  0000 L CNN
+F 2 "" H 2438 6800 50  0001 C CNN
+F 3 "" H 2400 6950 50  0001 C CNN
+	1    2400 6950
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C172
+U 1 1 60146F71
+P 2950 6950
+F 0 "C172" H 3065 6996 50  0000 L CNN
+F 1 "4.7 uF" H 3065 6905 50  0000 L CNN
+F 2 "" H 2988 6800 50  0001 C CNN
+F 3 "" H 2950 6950 50  0001 C CNN
+	1    2950 6950
+	1    0    0    -1  
+$EndComp
+Text HLabel 5150 3400 0    50   Input ~ 0
+RAM_CLK_P
+Text HLabel 5150 3500 0    50   Input ~ 0
+RAM_CLK_N
+$Comp
+L device:R R68
+U 1 1 60167092
+P 10650 5250
+F 0 "R68" V 10600 5000 50  0000 C CNN
+F 1 "100" V 10650 5250 50  0000 C CNN
+F 2 "" V 10580 5250 50  0001 C CNN
+F 3 "" H 10650 5250 50  0001 C CNN
+	1    10650 5250
+	0    1    1    0   
+$EndComp
+Text Label 10250 5250 2    50   ~ 0
+RAM_CLK_P
+Wire Wire Line
+	10250 5250 10500 5250
+Text Label 10900 5250 0    50   ~ 0
+RAM_CLK_N
+Wire Wire Line
+	10900 5250 10800 5250
+Text Notes 2400 10800 0    50   ~ 0
+Route DQS and CK traces with 80 ohm impedance\nRoute DQ lines with 40 ohm impedance
+$Comp
+L device:R R69
+U 1 1 6018CCCB
+P 10650 5400
+F 0 "R69" V 10600 5150 50  0000 C CNN
+F 1 "4.7K" V 10650 5400 50  0000 C CNN
+F 2 "" V 10580 5400 50  0001 C CNN
+F 3 "" H 10650 5400 50  0001 C CNN
+	1    10650 5400
+	0    1    1    0   
+$EndComp
+Text Label 10250 5400 2    50   ~ 0
+DDR_RST_N
+Wire Wire Line
+	10250 5400 10500 5400
+Text Label 10800 5400 0    50   ~ 0
+GND
+Text Label 13200 7850 2    50   ~ 0
+GND
+Text Label 13200 7550 2    50   ~ 0
+GND
+Text Label 13200 7250 2    50   ~ 0
+GND
+Text Label 13200 7150 2    50   ~ 0
+GND
+Text Label 13200 7050 2    50   ~ 0
+GND
+Text Notes 13400 8400 0    50   ~ 0
+Dual rank SODIMMs not supported
+Text Notes 2400 7200 0    50   ~ 0
+FPGA side
+Text Notes 2400 7850 0    50   ~ 0
+SODIMM side
+$Comp
+L device:C C179
+U 1 1 601A2E58
+P 3500 7600
+F 0 "C179" H 3615 7646 50  0000 L CNN
+F 1 "0.47 uF" H 3615 7555 50  0000 L CNN
+F 2 "" H 3538 7450 50  0001 C CNN
+F 3 "" H 3500 7600 50  0001 C CNN
+	1    3500 7600
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C173
+U 1 1 601A3437
+P 2950 7600
+F 0 "C173" H 3065 7646 50  0000 L CNN
+F 1 "0.47 uF" H 3065 7555 50  0000 L CNN
+F 2 "" H 2988 7450 50  0001 C CNN
+F 3 "" H 2950 7600 50  0001 C CNN
+	1    2950 7600
+	1    0    0    -1  
+$EndComp
+Text Label 2400 7450 2    50   ~ 0
+RAM_VREF
+Connection ~ 4050 6800
+Connection ~ 4050 7100
+$Comp
+L device:C C167
+U 1 1 601AD9F0
+P 2400 7600
+F 0 "C167" H 2515 7646 50  0000 L CNN
+F 1 "4.7 uF" H 2515 7555 50  0000 L CNN
+F 2 "" H 2438 7450 50  0001 C CNN
+F 3 "" H 2400 7600 50  0001 C CNN
+	1    2400 7600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 7450 2950 7450
+Connection ~ 2950 7450
+Wire Wire Line
+	2950 7450 2400 7450
+Wire Wire Line
+	2400 7750 2950 7750
+Connection ~ 2950 7750
+Wire Wire Line
+	2950 7750 3500 7750
+Text Notes 2400 8450 0    50   ~ 0
+SODIMM side
+Text Label 2400 7750 2    50   ~ 0
+GND
+Text Label 2400 8050 2    50   ~ 0
+RAM_VTT
+$Comp
+L device:C C168
+U 1 1 601B62BC
+P 2400 8200
+F 0 "C168" H 2515 8246 50  0000 L CNN
+F 1 "100 uF" H 2515 8155 50  0000 L CNN
+F 2 "" H 2438 8050 50  0001 C CNN
+F 3 "" H 2400 8200 50  0001 C CNN
+	1    2400 8200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 6800 2950 6800
+Wire Wire Line
+	2400 7100 2950 7100
+Connection ~ 2950 6800
+Wire Wire Line
+	2950 6800 3500 6800
+Connection ~ 2950 7100
+Wire Wire Line
+	2950 7100 3500 7100
+Wire Wire Line
+	4050 6800 4650 6800
+Wire Wire Line
+	4050 7100 4650 7100
+Connection ~ 4650 6800
+Wire Wire Line
+	4650 6800 5200 6800
+Connection ~ 4650 7100
+Wire Wire Line
+	4650 7100 5200 7100
+Text Label 2400 8350 2    50   ~ 0
+GND
+$Comp
+L device:C C174
+U 1 1 601C2913
+P 2950 8200
+F 0 "C174" H 3065 8246 50  0000 L CNN
+F 1 "4.7 uF" H 3065 8155 50  0000 L CNN
+F 2 "" H 2988 8050 50  0001 C CNN
+F 3 "" H 2950 8200 50  0001 C CNN
+	1    2950 8200
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C180
+U 1 1 601C2CB5
+P 3500 8200
+F 0 "C180" H 3615 8246 50  0000 L CNN
+F 1 "4.7 uF" H 3615 8155 50  0000 L CNN
+F 2 "" H 3538 8050 50  0001 C CNN
+F 3 "" H 3500 8200 50  0001 C CNN
+	1    3500 8200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 8050 2950 8050
+Connection ~ 2950 8050
+Wire Wire Line
+	2950 8050 2400 8050
+Wire Wire Line
+	2400 8350 2950 8350
+Connection ~ 2950 8350
+Wire Wire Line
+	2950 8350 3500 8350
+Text Notes 2400 9000 0    50   ~ 0
+SODIMM side
+$Comp
+L device:C C169
+U 1 1 601CB607
+P 2400 8750
+F 0 "C169" H 2515 8796 50  0000 L CNN
+F 1 "100 uF" H 2515 8705 50  0000 L CNN
+F 2 "" H 2438 8600 50  0001 C CNN
+F 3 "" H 2400 8750 50  0001 C CNN
+	1    2400 8750
+	1    0    0    -1  
+$EndComp
+Text Label 2400 8600 2    50   ~ 0
+1V5
+Text Label 2400 8900 2    50   ~ 0
+GND
+$Comp
+L device:C C175
+U 1 1 601CFABD
+P 2950 8750
+F 0 "C175" H 3065 8796 50  0000 L CNN
+F 1 "4.7 uF" H 3065 8705 50  0000 L CNN
+F 2 "" H 2988 8600 50  0001 C CNN
+F 3 "" H 2950 8750 50  0001 C CNN
+	1    2950 8750
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C181
+U 1 1 601CFCF1
+P 3500 8750
+F 0 "C181" H 3615 8796 50  0000 L CNN
+F 1 "4.7 uF" H 3615 8705 50  0000 L CNN
+F 2 "" H 3538 8600 50  0001 C CNN
+F 3 "" H 3500 8750 50  0001 C CNN
+	1    3500 8750
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C184
+U 1 1 601CFF31
+P 4000 8750
+F 0 "C184" H 4115 8796 50  0000 L CNN
+F 1 "4.7 uF" H 4115 8705 50  0000 L CNN
+F 2 "" H 4038 8600 50  0001 C CNN
+F 3 "" H 4000 8750 50  0001 C CNN
+	1    4000 8750
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C188
+U 1 1 601D02BD
+P 4500 8750
+F 0 "C188" H 4615 8796 50  0000 L CNN
+F 1 "4.7 uF" H 4615 8705 50  0000 L CNN
+F 2 "" H 4538 8600 50  0001 C CNN
+F 3 "" H 4500 8750 50  0001 C CNN
+	1    4500 8750
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C192
+U 1 1 601D05B0
+P 5000 8750
+F 0 "C192" H 5115 8796 50  0000 L CNN
+F 1 "4.7 uF" H 5115 8705 50  0000 L CNN
+F 2 "" H 5038 8600 50  0001 C CNN
+F 3 "" H 5000 8750 50  0001 C CNN
+	1    5000 8750
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C196
+U 1 1 601D097E
+P 5500 8750
+F 0 "C196" H 5615 8796 50  0000 L CNN
+F 1 "4.7 uF" H 5615 8705 50  0000 L CNN
+F 2 "" H 5538 8600 50  0001 C CNN
+F 3 "" H 5500 8750 50  0001 C CNN
+	1    5500 8750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 8600 5000 8600
+Connection ~ 2950 8600
+Wire Wire Line
+	2950 8600 2400 8600
+Connection ~ 3500 8600
+Wire Wire Line
+	3500 8600 2950 8600
+Connection ~ 4000 8600
+Wire Wire Line
+	4000 8600 3500 8600
+Connection ~ 4500 8600
+Wire Wire Line
+	4500 8600 4000 8600
+Connection ~ 5000 8600
+Wire Wire Line
+	5000 8600 4500 8600
+Wire Wire Line
+	2400 8900 2950 8900
+Connection ~ 2950 8900
+Wire Wire Line
+	2950 8900 3500 8900
+Connection ~ 3500 8900
+Wire Wire Line
+	3500 8900 4000 8900
+Connection ~ 4000 8900
+Wire Wire Line
+	4000 8900 4500 8900
+Connection ~ 4500 8900
+Wire Wire Line
+	4500 8900 5000 8900
+Connection ~ 5000 8900
+Wire Wire Line
+	5000 8900 5500 8900
+Text Notes 2400 9550 0    50   ~ 0
+SODIMM side
+$Comp
+L device:C C170
+U 1 1 601DC7E8
+P 2400 9300
+F 0 "C170" H 2515 9346 50  0000 L CNN
+F 1 "0.47 uF" H 2515 9255 50  0000 L CNN
+F 2 "" H 2438 9150 50  0001 C CNN
+F 3 "" H 2400 9300 50  0001 C CNN
+	1    2400 9300
+	1    0    0    -1  
+$EndComp
+Text Label 2400 9150 2    50   ~ 0
+1V5
+Text Label 2400 9450 2    50   ~ 0
+GND
+$Comp
+L device:C C176
+U 1 1 601DF708
+P 2950 9300
+F 0 "C176" H 3065 9346 50  0000 L CNN
+F 1 "0.47 uF" H 3065 9255 50  0000 L CNN
+F 2 "" H 2988 9150 50  0001 C CNN
+F 3 "" H 2950 9300 50  0001 C CNN
+	1    2950 9300
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C182
+U 1 1 601E28DD
+P 3500 9300
+F 0 "C182" H 3615 9346 50  0000 L CNN
+F 1 "0.47 uF" H 3615 9255 50  0000 L CNN
+F 2 "" H 3538 9150 50  0001 C CNN
+F 3 "" H 3500 9300 50  0001 C CNN
+	1    3500 9300
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C185
+U 1 1 601E2C90
+P 4000 9300
+F 0 "C185" H 4115 9346 50  0000 L CNN
+F 1 "0.47 uF" H 4115 9255 50  0000 L CNN
+F 2 "" H 4038 9150 50  0001 C CNN
+F 3 "" H 4000 9300 50  0001 C CNN
+	1    4000 9300
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C189
+U 1 1 601E2ED0
+P 4500 9300
+F 0 "C189" H 4615 9346 50  0000 L CNN
+F 1 "0.47 uF" H 4615 9255 50  0000 L CNN
+F 2 "" H 4538 9150 50  0001 C CNN
+F 3 "" H 4500 9300 50  0001 C CNN
+	1    4500 9300
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C193
+U 1 1 601E31D2
+P 5000 9300
+F 0 "C193" H 5115 9346 50  0000 L CNN
+F 1 "0.47 uF" H 5115 9255 50  0000 L CNN
+F 2 "" H 5038 9150 50  0001 C CNN
+F 3 "" H 5000 9300 50  0001 C CNN
+	1    5000 9300
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C197
+U 1 1 601E35C1
+P 5500 9300
+F 0 "C197" H 5615 9346 50  0000 L CNN
+F 1 "0.47 uF" H 5615 9255 50  0000 L CNN
+F 2 "" H 5538 9150 50  0001 C CNN
+F 3 "" H 5500 9300 50  0001 C CNN
+	1    5500 9300
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C199
+U 1 1 601E3850
+P 6050 9300
+F 0 "C199" H 6165 9346 50  0000 L CNN
+F 1 "0.47 uF" H 6165 9255 50  0000 L CNN
+F 2 "" H 6088 9150 50  0001 C CNN
+F 3 "" H 6050 9300 50  0001 C CNN
+	1    6050 9300
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C201
+U 1 1 601E3C2F
+P 6600 9300
+F 0 "C201" H 6715 9346 50  0000 L CNN
+F 1 "0.47 uF" H 6715 9255 50  0000 L CNN
+F 2 "" H 6638 9150 50  0001 C CNN
+F 3 "" H 6600 9300 50  0001 C CNN
+	1    6600 9300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 9150 6050 9150
+Connection ~ 2950 9150
+Wire Wire Line
+	2950 9150 2400 9150
+Connection ~ 3500 9150
+Wire Wire Line
+	3500 9150 2950 9150
+Connection ~ 4000 9150
+Wire Wire Line
+	4000 9150 3500 9150
+Connection ~ 4500 9150
+Wire Wire Line
+	4500 9150 4000 9150
+Connection ~ 5000 9150
+Wire Wire Line
+	5000 9150 4500 9150
+Connection ~ 5500 9150
+Wire Wire Line
+	5500 9150 5000 9150
+Connection ~ 6050 9150
+Wire Wire Line
+	6050 9150 5500 9150
+Wire Wire Line
+	2400 9450 2950 9450
+Connection ~ 2950 9450
+Wire Wire Line
+	2950 9450 3500 9450
+Connection ~ 3500 9450
+Wire Wire Line
+	3500 9450 4000 9450
+Connection ~ 4000 9450
+Wire Wire Line
+	4000 9450 4500 9450
+Connection ~ 4500 9450
+Wire Wire Line
+	4500 9450 5000 9450
+Connection ~ 5000 9450
+Wire Wire Line
+	5000 9450 5500 9450
+Connection ~ 5500 9450
+Wire Wire Line
+	5500 9450 6050 9450
+Connection ~ 6050 9450
+Wire Wire Line
+	6050 9450 6600 9450
+Text Notes 2400 10100 0    50   ~ 0
+SODIMM side
+$Comp
+L device:C C171
+U 1 1 601EC981
+P 2400 9850
+F 0 "C171" H 2515 9896 50  0000 L CNN
+F 1 "0.47 uF" H 2515 9805 50  0000 L CNN
+F 2 "" H 2438 9700 50  0001 C CNN
+F 3 "" H 2400 9850 50  0001 C CNN
+	1    2400 9850
+	1    0    0    -1  
+$EndComp
+Text Label 2400 9700 2    50   ~ 0
+1V5
+Text Label 2400 10000 2    50   ~ 0
+GND
+$Comp
+L device:C C177
+U 1 1 601EC98D
+P 2950 9850
+F 0 "C177" H 3065 9896 50  0000 L CNN
+F 1 "0.47 uF" H 3065 9805 50  0000 L CNN
+F 2 "" H 2988 9700 50  0001 C CNN
+F 3 "" H 2950 9850 50  0001 C CNN
+	1    2950 9850
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C183
+U 1 1 601EC997
+P 3500 9850
+F 0 "C183" H 3615 9896 50  0000 L CNN
+F 1 "0.47 uF" H 3615 9805 50  0000 L CNN
+F 2 "" H 3538 9700 50  0001 C CNN
+F 3 "" H 3500 9850 50  0001 C CNN
+	1    3500 9850
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C186
+U 1 1 601EC9A1
+P 4000 9850
+F 0 "C186" H 4115 9896 50  0000 L CNN
+F 1 "0.47 uF" H 4115 9805 50  0000 L CNN
+F 2 "" H 4038 9700 50  0001 C CNN
+F 3 "" H 4000 9850 50  0001 C CNN
+	1    4000 9850
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C190
+U 1 1 601EC9AB
+P 4500 9850
+F 0 "C190" H 4615 9896 50  0000 L CNN
+F 1 "0.47 uF" H 4615 9805 50  0000 L CNN
+F 2 "" H 4538 9700 50  0001 C CNN
+F 3 "" H 4500 9850 50  0001 C CNN
+	1    4500 9850
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C194
+U 1 1 601EC9B5
+P 5000 9850
+F 0 "C194" H 5115 9896 50  0000 L CNN
+F 1 "0.47 uF" H 5115 9805 50  0000 L CNN
+F 2 "" H 5038 9700 50  0001 C CNN
+F 3 "" H 5000 9850 50  0001 C CNN
+	1    5000 9850
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C198
+U 1 1 601EC9BF
+P 5500 9850
+F 0 "C198" H 5615 9896 50  0000 L CNN
+F 1 "0.47 uF" H 5615 9805 50  0000 L CNN
+F 2 "" H 5538 9700 50  0001 C CNN
+F 3 "" H 5500 9850 50  0001 C CNN
+	1    5500 9850
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C200
+U 1 1 601EC9C9
+P 6050 9850
+F 0 "C200" H 6165 9896 50  0000 L CNN
+F 1 "0.47 uF" H 6165 9805 50  0000 L CNN
+F 2 "" H 6088 9700 50  0001 C CNN
+F 3 "" H 6050 9850 50  0001 C CNN
+	1    6050 9850
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C202
+U 1 1 601EC9D3
+P 6600 9850
+F 0 "C202" H 6715 9896 50  0000 L CNN
+F 1 "0.47 uF" H 6715 9805 50  0000 L CNN
+F 2 "" H 6638 9700 50  0001 C CNN
+F 3 "" H 6600 9850 50  0001 C CNN
+	1    6600 9850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 9700 6050 9700
+Connection ~ 2950 9700
+Wire Wire Line
+	2950 9700 2400 9700
+Connection ~ 3500 9700
+Wire Wire Line
+	3500 9700 2950 9700
+Connection ~ 4000 9700
+Wire Wire Line
+	4000 9700 3500 9700
+Connection ~ 4500 9700
+Wire Wire Line
+	4500 9700 4000 9700
+Connection ~ 5000 9700
+Wire Wire Line
+	5000 9700 4500 9700
+Connection ~ 5500 9700
+Wire Wire Line
+	5500 9700 5000 9700
+Connection ~ 6050 9700
+Wire Wire Line
+	6050 9700 5500 9700
+Wire Wire Line
+	2400 10000 2950 10000
+Connection ~ 2950 10000
+Wire Wire Line
+	2950 10000 3500 10000
+Connection ~ 3500 10000
+Wire Wire Line
+	3500 10000 4000 10000
+Connection ~ 4000 10000
+Wire Wire Line
+	4000 10000 4500 10000
+Connection ~ 4500 10000
+Wire Wire Line
+	4500 10000 5000 10000
+Connection ~ 5000 10000
+Wire Wire Line
+	5000 10000 5500 10000
+Connection ~ 5500 10000
+Wire Wire Line
+	5500 10000 6050 10000
+Connection ~ 6050 10000
+Wire Wire Line
+	6050 10000 6600 10000
 $EndSCHEMATC

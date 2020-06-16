@@ -39,4 +39,6 @@ Text HLabel 3550 3100 0    50   Output ~ 0
 RAM_VREF
 Text HLabel 3500 3200 0    50   Output ~ 0
 RAM_VTT
+Text Notes 4400 2250 0    50   ~ 0
+Vtt needs to ramp after 1V5
 $EndSCHEMATC

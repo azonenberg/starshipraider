@@ -103,4 +103,8 @@ Text HLabel 8700 4150 0    50   Input ~ 0
 GTX_TRIG_OUT_P
 Text HLabel 8700 4250 0    50   Input ~ 0
 GTX_TRIG_OUT_N
+Text HLabel 4100 5600 0    50   Output ~ 0
+RAM_CLK_P
+Text HLabel 4100 5700 0    50   Output ~ 0
+RAM_CLK_N
 $EndSCHEMATC
