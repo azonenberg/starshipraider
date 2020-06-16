@@ -1916,7 +1916,7 @@ I2C_SDA
 Text Label 4350 10700 2    50   ~ 0
 I2C_SCL
 Text Notes 4650 10900 0    50   ~ 0
-8'h8a
+8'h9a
 Text Label 4350 10400 2    50   ~ 0
 I2C_SCL
 Text Label 4350 6350 2    50   ~ 0
