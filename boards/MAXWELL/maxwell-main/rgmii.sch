@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 12 15
+Sheet 15 15
 Title "MAXWELL Main Board"
 Date "2020-06-15"
 Rev "0.1"
@@ -59,4 +59,56 @@ Text HLabel 1250 1450 0    50   BiDi ~ 0
 K7_QSPI_DQ3
 Text HLabel 1250 2150 0    50   BiDi ~ 0
 K7_QSPI_CS_N
+Text HLabel 1250 5550 0    50   Input ~ 0
+EXT_TRIG_2_P
+Text HLabel 1250 5650 0    50   Input ~ 0
+EXT_TRIG_2_N
+Text HLabel 1250 5750 0    50   Input ~ 0
+SYNC_CLK_2_P
+Text HLabel 1250 5850 0    50   Input ~ 0
+SYNC_CLK_2_N
+$Comp
+L device:R R?
+U 1 1 5F6E3E94
+P 3450 6550
+AR Path="/5EDD723A/5F6E3E94" Ref="R?"  Part="1" 
+AR Path="/5EE2921B/5F6E3E94" Ref="R?"  Part="1" 
+F 0 "R?" V 3350 6550 50  0000 C CNN
+F 1 "100" V 3450 6550 50  0000 C CNN
+F 2 "" V 3380 6550 50  0001 C CNN
+F 3 "" H 3450 6550 50  0001 C CNN
+	1    3450 6550
+	0    1    1    0   
+$EndComp
+Text Label 3300 6550 2    50   ~ 0
+EXT_TRIG_2_P
+Text Label 3600 6550 0    50   ~ 0
+EXT_TRIG_2_N
+$Comp
+L device:R R?
+U 1 1 5F6E3E9C
+P 3450 6750
+AR Path="/5EDD723A/5F6E3E9C" Ref="R?"  Part="1" 
+AR Path="/5EE2921B/5F6E3E9C" Ref="R?"  Part="1" 
+F 0 "R?" V 3350 6750 50  0000 C CNN
+F 1 "100" V 3450 6750 50  0000 C CNN
+F 2 "" V 3380 6750 50  0001 C CNN
+F 3 "" H 3450 6750 50  0001 C CNN
+	1    3450 6750
+	0    1    1    0   
+$EndComp
+Text Label 3300 6750 2    50   ~ 0
+SYNC_CLK_2_P
+Text Label 3600 6750 0    50   ~ 0
+SYNC_CLK_2_N
+Text Notes 3300 7000 0    50   ~ 0
+Need external terminators\nsince these go to a VCCO=3.3V bank
+Text HLabel 1400 6600 0    50   Input ~ 0
+ETH_REFCLK
+Text HLabel 4800 5950 0    50   Input ~ 0
+3V3
+Text HLabel 4800 6050 0    50   Input ~ 0
+1V2
+Text HLabel 4750 6150 0    50   Input ~ 0
+GND
 $EndSCHEMATC

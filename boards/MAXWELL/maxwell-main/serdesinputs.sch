@@ -1000,4 +1000,16 @@ Wire Wire Line
 	5650 4750 5650 4800
 Wire Wire Line
 	5650 4650 5650 4600
+NoConn ~ 9450 1050
+NoConn ~ 9450 1150
+NoConn ~ 9450 1350
+NoConn ~ 9450 1450
+NoConn ~ 9450 1950
+NoConn ~ 9450 2050
+NoConn ~ 9450 2550
+NoConn ~ 9450 2650
+Text HLabel 9450 3150 0    50   Output ~ 0
+GTX_TRIG_OUT_P
+Text HLabel 9450 3250 0    50   Output ~ 0
+GTX_TRIG_OUT_N
 $EndSCHEMATC

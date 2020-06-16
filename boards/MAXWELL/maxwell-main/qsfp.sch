@@ -37,4 +37,8 @@ F 3 "" H 5600 4950 60  0000 C CNN
 	1    5600 4950
 	1    0    0    -1  
 $EndComp
+Text HLabel 1400 1800 0    50   Input ~ 0
+XG_REFCLK_P
+Text HLabel 1400 1900 0    50   Input ~ 0
+XG_REFCLK_N
 $EndSCHEMATC

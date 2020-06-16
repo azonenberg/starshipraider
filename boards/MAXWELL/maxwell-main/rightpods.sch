@@ -70,6 +70,8 @@ F22 "MUX2_SEL" I R 14900 1900 50
 F23 "MUX3_SEL" I R 14900 2200 50 
 F24 "MUX3_EQ" I R 14900 2300 50 
 F25 "MUX2_EQ" I R 14900 2000 50 
+F26 "GTX_TRIG_OUT_P" O L 13500 3100 50 
+F27 "GTX_TRIG_OUT_N" O L 13500 3200 50 
 $EndSheet
 $Comp
 L special-azonenberg:CONN_SFF8087 J?
@@ -484,21 +486,21 @@ Text Label 13400 8200 2    50   ~ 0
 POD11_D2_P
 Text Label 13400 8300 2    50   ~ 0
 POD11_D2_N
-Text Label 12400 1650 2    50   ~ 0
+Text Label 13500 1000 2    50   ~ 0
 POD11_D4_P
-Text Label 12400 1750 2    50   ~ 0
+Text Label 13500 1100 2    50   ~ 0
 POD11_D4_N
-Text Label 12400 1850 2    50   ~ 0
+Text Label 13500 1300 2    50   ~ 0
 POD11_D5_P
-Text Label 12400 1950 2    50   ~ 0
+Text Label 13500 1400 2    50   ~ 0
 POD11_D5_N
-Text Label 12400 2050 2    50   ~ 0
+Text Label 13500 1600 2    50   ~ 0
 POD11_D6_P
-Text Label 12400 2150 2    50   ~ 0
+Text Label 13500 1700 2    50   ~ 0
 POD11_D6_N
-Text Label 12400 2250 2    50   ~ 0
+Text Label 13500 1900 2    50   ~ 0
 POD11_D7_P
-Text Label 12400 2350 2    50   ~ 0
+Text Label 13500 2000 2    50   ~ 0
 POD11_D7_N
 Text Label 10600 4900 2    50   ~ 0
 POD6_D2_N
@@ -532,10 +534,6 @@ Text Label 13400 6100 2    50   ~ 0
 POD10_D0_N
 Text Label 13400 6000 2    50   ~ 0
 POD10_D0_P
-NoConn ~ 13400 9200
-NoConn ~ 13400 4300
-NoConn ~ 10600 4300
-NoConn ~ 10600 9200
 Text HLabel 13400 6700 0    50   Input ~ 0
 K7_CLK_P
 Text HLabel 13400 6800 0    50   Input ~ 0
@@ -595,29 +593,29 @@ F 3 "" H 8550 5650 50  0001 C CNN
 	1    8550 5650
 	1    0    0    -1  
 $EndComp
-Text HLabel 1550 6200 0    50   Output ~ 0
+Text HLabel 1450 3900 0    50   Output ~ 0
 POD6_UART_TX
-Text HLabel 1550 6300 0    50   Input ~ 0
+Text HLabel 1450 4200 0    50   Input ~ 0
 POD6_UART_RX
-Text HLabel 1550 6500 0    50   Output ~ 0
+Text HLabel 2850 3900 0    50   Output ~ 0
 POD7_UART_TX
-Text HLabel 1550 6600 0    50   Input ~ 0
+Text HLabel 2850 4200 0    50   Input ~ 0
 POD7_UART_RX
-Text HLabel 1550 6800 0    50   Output ~ 0
+Text HLabel 4250 3900 0    50   Output ~ 0
 POD8_UART_TX
-Text HLabel 1550 6900 0    50   Input ~ 0
+Text HLabel 4250 4200 0    50   Input ~ 0
 POD8_UART_RX
-Text HLabel 1550 7100 0    50   Output ~ 0
+Text HLabel 5650 3900 0    50   Output ~ 0
 POD9_UART_TX
-Text HLabel 1550 7200 0    50   Input ~ 0
+Text HLabel 5650 4200 0    50   Input ~ 0
 POD9_UART_RX
-Text HLabel 1550 7400 0    50   Output ~ 0
+Text HLabel 7050 3900 0    50   Output ~ 0
 POD10_UART_TX
-Text HLabel 1550 7500 0    50   Input ~ 0
+Text HLabel 7050 4200 0    50   Input ~ 0
 POD10_UART_RX
-Text HLabel 1550 7700 0    50   Output ~ 0
+Text HLabel 8450 3900 0    50   Output ~ 0
 POD11_UART_TX
-Text HLabel 1550 7800 0    50   Input ~ 0
+Text HLabel 8450 4200 0    50   Input ~ 0
 POD11_UART_RX
 Text Label 1450 4500 2    50   ~ 0
 GND
@@ -653,4 +651,324 @@ Wire Wire Line
 Connection ~ 1450 5500
 Wire Wire Line
 	1450 5500 1450 5600
+Text Label 2850 4500 2    50   ~ 0
+GND
+Wire Wire Line
+	2850 4500 2850 4600
+Connection ~ 2850 4600
+Wire Wire Line
+	2850 4600 2850 4700
+Connection ~ 2850 4700
+Wire Wire Line
+	2850 4700 2850 4800
+Connection ~ 2850 4800
+Wire Wire Line
+	2850 4800 2850 4900
+Connection ~ 2850 4900
+Wire Wire Line
+	2850 4900 2850 5000
+Connection ~ 2850 5000
+Wire Wire Line
+	2850 5000 2850 5100
+Connection ~ 2850 5100
+Wire Wire Line
+	2850 5100 2850 5200
+Connection ~ 2850 5200
+Wire Wire Line
+	2850 5200 2850 5300
+Connection ~ 2850 5300
+Wire Wire Line
+	2850 5300 2850 5400
+Connection ~ 2850 5400
+Wire Wire Line
+	2850 5400 2850 5500
+Connection ~ 2850 5500
+Wire Wire Line
+	2850 5500 2850 5600
+Text Label 2350 5600 0    50   ~ 0
+GND
+Text Label 3750 5600 0    50   ~ 0
+GND
+Text Label 4250 4500 2    50   ~ 0
+GND
+Wire Wire Line
+	4250 4500 4250 4600
+Connection ~ 4250 4600
+Wire Wire Line
+	4250 4600 4250 4700
+Connection ~ 4250 4700
+Wire Wire Line
+	4250 4700 4250 4800
+Connection ~ 4250 4800
+Wire Wire Line
+	4250 4800 4250 4900
+Connection ~ 4250 4900
+Wire Wire Line
+	4250 4900 4250 5000
+Connection ~ 4250 5000
+Wire Wire Line
+	4250 5000 4250 5100
+Connection ~ 4250 5100
+Wire Wire Line
+	4250 5100 4250 5200
+Connection ~ 4250 5200
+Wire Wire Line
+	4250 5200 4250 5300
+Connection ~ 4250 5300
+Wire Wire Line
+	4250 5300 4250 5400
+Connection ~ 4250 5400
+Wire Wire Line
+	4250 5400 4250 5500
+Connection ~ 4250 5500
+Wire Wire Line
+	4250 5500 4250 5600
+Text Label 5150 5600 0    50   ~ 0
+GND
+Text Label 6550 5600 0    50   ~ 0
+GND
+Text Label 5650 4500 2    50   ~ 0
+GND
+Wire Wire Line
+	5650 4500 5650 4600
+Connection ~ 5650 4600
+Wire Wire Line
+	5650 4600 5650 4700
+Connection ~ 5650 4700
+Wire Wire Line
+	5650 4700 5650 4800
+Connection ~ 5650 4800
+Wire Wire Line
+	5650 4800 5650 4900
+Connection ~ 5650 4900
+Wire Wire Line
+	5650 4900 5650 5000
+Connection ~ 5650 5000
+Wire Wire Line
+	5650 5000 5650 5100
+Connection ~ 5650 5100
+Wire Wire Line
+	5650 5100 5650 5200
+Connection ~ 5650 5200
+Wire Wire Line
+	5650 5200 5650 5300
+Connection ~ 5650 5300
+Wire Wire Line
+	5650 5300 5650 5400
+Connection ~ 5650 5400
+Wire Wire Line
+	5650 5400 5650 5500
+Connection ~ 5650 5500
+Wire Wire Line
+	5650 5500 5650 5600
+Text Label 7050 4500 2    50   ~ 0
+GND
+Wire Wire Line
+	7050 4500 7050 4600
+Connection ~ 7050 4600
+Wire Wire Line
+	7050 4600 7050 4700
+Connection ~ 7050 4700
+Wire Wire Line
+	7050 4700 7050 4800
+Connection ~ 7050 4800
+Wire Wire Line
+	7050 4800 7050 4900
+Connection ~ 7050 4900
+Wire Wire Line
+	7050 4900 7050 5000
+Connection ~ 7050 5000
+Wire Wire Line
+	7050 5000 7050 5100
+Connection ~ 7050 5100
+Wire Wire Line
+	7050 5100 7050 5200
+Connection ~ 7050 5200
+Wire Wire Line
+	7050 5200 7050 5300
+Connection ~ 7050 5300
+Wire Wire Line
+	7050 5300 7050 5400
+Connection ~ 7050 5400
+Wire Wire Line
+	7050 5400 7050 5500
+Connection ~ 7050 5500
+Wire Wire Line
+	7050 5500 7050 5600
+Text Label 8450 4500 2    50   ~ 0
+GND
+Wire Wire Line
+	8450 4500 8450 4600
+Connection ~ 8450 4600
+Wire Wire Line
+	8450 4600 8450 4700
+Connection ~ 8450 4700
+Wire Wire Line
+	8450 4700 8450 4800
+Connection ~ 8450 4800
+Wire Wire Line
+	8450 4800 8450 4900
+Connection ~ 8450 4900
+Wire Wire Line
+	8450 4900 8450 5000
+Connection ~ 8450 5000
+Wire Wire Line
+	8450 5000 8450 5100
+Connection ~ 8450 5100
+Wire Wire Line
+	8450 5100 8450 5200
+Connection ~ 8450 5200
+Wire Wire Line
+	8450 5200 8450 5300
+Connection ~ 8450 5300
+Wire Wire Line
+	8450 5300 8450 5400
+Connection ~ 8450 5400
+Wire Wire Line
+	8450 5400 8450 5500
+Connection ~ 8450 5500
+Wire Wire Line
+	8450 5500 8450 5600
+Text Label 7950 5600 0    50   ~ 0
+GND
+Text Label 9350 5600 0    50   ~ 0
+GND
+Text HLabel 15150 1000 2    50   Input ~ 0
+2V5
+Wire Wire Line
+	15150 1000 14900 1000
+Text HLabel 15150 1100 2    50   Input ~ 0
+GND
+Wire Wire Line
+	15150 1100 14900 1100
+Text Label 14900 1300 0    50   ~ 0
+MUX0_SEL
+Text Label 14900 1400 0    50   ~ 0
+MUX0_EQ
+Text Label 14900 1600 0    50   ~ 0
+MUX1_SEL
+Text Label 14900 1700 0    50   ~ 0
+MUX1_EQ
+Text Label 14900 1900 0    50   ~ 0
+MUX2_SEL
+Text Label 14900 2000 0    50   ~ 0
+MUX2_EQ
+Text Label 14900 2200 0    50   ~ 0
+MUX3_SEL
+Text Label 14900 2300 0    50   ~ 0
+MUX3_EQ
+Text Label 13400 4300 2    50   ~ 0
+MUX0_SEL
+Text Label 13400 9200 2    50   ~ 0
+MUX0_EQ
+Text Label 10600 4300 2    50   ~ 0
+MUX1_SEL
+Text Label 10600 9200 2    50   ~ 0
+MUX1_EQ
+Text Label 13400 8800 2    50   ~ 0
+MUX2_SEL
+Text Label 13400 8900 2    50   ~ 0
+MUX2_EQ
+Text Label 13400 9000 2    50   ~ 0
+MUX3_SEL
+Text Label 13400 9100 2    50   ~ 0
+MUX3_EQ
+Text HLabel 1450 3600 0    50   Input ~ 0
+P6_12V0
+Text HLabel 2850 3600 0    50   Input ~ 0
+P7_12V0
+Text HLabel 4250 3600 0    50   Input ~ 0
+P8_12V0
+Text HLabel 5650 3600 0    50   Input ~ 0
+P9_12V0
+Text HLabel 7050 3600 0    50   Input ~ 0
+P10_12V0
+Text HLabel 8450 3600 0    50   Input ~ 0
+P11_12V0
+Text HLabel 1450 4000 0    50   Output ~ 0
+P6_PRESENT
+Text HLabel 2850 4000 0    50   Output ~ 0
+P7_PRESENT
+Text HLabel 4250 4000 0    50   Output ~ 0
+P8_PRESENT
+Text HLabel 5650 4000 0    50   Output ~ 0
+P9_PRESENT
+Text HLabel 7050 4000 0    50   Output ~ 0
+P10_PRESENT
+Text HLabel 8450 4000 0    50   Output ~ 0
+P11_PRESENT
+Wire Wire Line
+	1450 3600 1450 3700
+Connection ~ 1450 3700
+Wire Wire Line
+	1450 3700 1450 3800
+Text Label 1450 4100 2    50   ~ 0
+P6_12V0
+Text Label 1450 4300 2    50   ~ 0
+P6_12V0
+Wire Wire Line
+	2850 3600 2850 3700
+Connection ~ 2850 3700
+Wire Wire Line
+	2850 3700 2850 3800
+Connection ~ 4250 3700
+Wire Wire Line
+	4250 3700 4250 3800
+Wire Wire Line
+	5650 3600 5650 3700
+Connection ~ 5650 3700
+Wire Wire Line
+	5650 3700 5650 3800
+Wire Wire Line
+	7050 3600 7050 3700
+Connection ~ 7050 3700
+Wire Wire Line
+	7050 3700 7050 3800
+Connection ~ 8450 3700
+Wire Wire Line
+	8450 3700 8450 3800
+Wire Wire Line
+	8450 3600 8450 3700
+Wire Wire Line
+	4250 3600 4250 3700
+Text Label 2850 4100 2    50   ~ 0
+P7_12V0
+Text Label 2850 4300 2    50   ~ 0
+P7_12V0
+Text Label 4250 4100 2    50   ~ 0
+P8_12V0
+Text Label 4250 4300 2    50   ~ 0
+P8_12V0
+Text Label 5650 4100 2    50   ~ 0
+P9_12V0
+Text Label 5650 4300 2    50   ~ 0
+P9_12V0
+Text Label 7050 4100 2    50   ~ 0
+P10_12V0
+Text Label 7050 4300 2    50   ~ 0
+P10_12V0
+Text Label 8450 4100 2    50   ~ 0
+P11_12V0
+Text Label 8450 4300 2    50   ~ 0
+P11_12V0
+Text HLabel 13500 2200 0    50   Input ~ 0
+EXT_TRIG_P
+Text HLabel 13500 2300 0    50   Input ~ 0
+EXT_TRIG_N
+Text HLabel 13500 2500 0    50   Input ~ 0
+LA_REFCLK_P
+Text HLabel 13500 2600 0    50   Input ~ 0
+LA_REFCLK_N
+Text HLabel 13500 2800 0    50   Input ~ 0
+SYNC_CLK_P
+Text HLabel 13500 2900 0    50   Input ~ 0
+SYNC_CLK_N
+Text HLabel 13400 8700 0    50   Output ~ 0
+TRIG_OUT_N
+Text HLabel 13400 8600 0    50   Output ~ 0
+TRIG_OUT_P
+Text HLabel 13500 3100 0    50   Output ~ 0
+GTX_TRIG_OUT_P
+Text HLabel 13500 3200 0    50   Output ~ 0
+GTX_TRIG_OUT_N
 $EndSCHEMATC

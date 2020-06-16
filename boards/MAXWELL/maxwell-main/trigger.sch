@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 14 15
+Sheet 15 15
 Title "MAXWELL Main Board"
 Date "2020-06-15"
 Rev "0.1"
@@ -140,4 +140,8 @@ F 3 "" H 3450 5950 60  0000 C CNN
 	2    3950 6000
 	1    0    0    -1  
 $EndComp
+Text HLabel 7350 2750 0    50   Input ~ 0
+REF_OUT_P
+Text HLabel 7350 2850 0    50   Input ~ 0
+REF_OUT_N
 $EndSCHEMATC
