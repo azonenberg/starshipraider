@@ -19,8 +19,8 @@ U 7 1 5F2ECCDE
 P 10800 9250
 AR Path="/5EDD71F2/5F2ECCDE" Ref="U?"  Part="9" 
 AR Path="/5EDD723A/5F2ECCDE" Ref="U?"  Part="6" 
-AR Path="/5EDD723A/5F2BB4CD/5F2ECCDE" Ref="U?"  Part="7" 
-F 0 "U?" H 10800 9200 50  0000 L CNN
+AR Path="/5EDD723A/5F2BB4CD/5F2ECCDE" Ref="U2"  Part="7" 
+F 0 "U2" H 10800 9200 50  0000 L CNN
 F 1 "XC7K160T-2FFG676C" H 10800 9100 50  0000 L CNN
 F 2 "" H 10800 9250 50  0001 C CNN
 F 3 "" H 10800 9250 50  0001 C CNN
@@ -33,8 +33,8 @@ U 8 1 5F2ECCE4
 P 13600 9250
 AR Path="/5EDD71F2/5F2ECCE4" Ref="U?"  Part="9" 
 AR Path="/5EDD723A/5F2ECCE4" Ref="U?"  Part="8" 
-AR Path="/5EDD723A/5F2BB4CD/5F2ECCE4" Ref="U?"  Part="8" 
-F 0 "U?" H 13600 9200 50  0000 L CNN
+AR Path="/5EDD723A/5F2BB4CD/5F2ECCE4" Ref="U2"  Part="8" 
+F 0 "U2" H 13600 9200 50  0000 L CNN
 F 1 "XC7K160T-2FFG676C" H 13600 9100 50  0000 L CNN
 F 2 "" H 13600 9250 50  0001 C CNN
 F 3 "" H 13600 9250 50  0001 C CNN
@@ -74,10 +74,10 @@ F26 "GTX_TRIG_OUT_P" O L 13500 3100 50
 F27 "GTX_TRIG_OUT_N" O L 13500 3200 50 
 $EndSheet
 $Comp
-L special-azonenberg:CONN_SFF8087 J?
+L special-azonenberg:CONN_SFF8087 J3
 U 1 1 5F3DFECC
 P 1550 5650
-F 0 "J?" H 1550 5600 50  0000 L CNN
+F 0 "J3" H 1550 5600 50  0000 L CNN
 F 1 "CONN_SFF8087" H 1550 5500 50  0000 L CNN
 F 2 "" H 1550 5650 50  0001 C CNN
 F 3 "" H 1550 5650 50  0001 C CNN
@@ -85,10 +85,10 @@ F 3 "" H 1550 5650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L special-azonenberg:CONN_SFF8087 J?
+L special-azonenberg:CONN_SFF8087 J3
 U 2 1 5F3E0DC5
 P 1550 3200
-F 0 "J?" H 1550 3150 50  0000 L CNN
+F 0 "J3" H 1550 3150 50  0000 L CNN
 F 1 "CONN_SFF8087" H 1550 3050 50  0000 L CNN
 F 2 "" H 1550 3200 50  0001 C CNN
 F 3 "" H 1550 3200 50  0001 C CNN
@@ -128,10 +128,10 @@ POD6_D7_P
 Text Label 1450 3150 2    50   ~ 0
 POD6_D7_N
 $Comp
-L special-azonenberg:CONN_SFF8087 J?
+L special-azonenberg:CONN_SFF8087 J4
 U 2 1 5F3EE49C
 P 2950 3200
-F 0 "J?" H 2950 3150 50  0000 L CNN
+F 0 "J4" H 2950 3150 50  0000 L CNN
 F 1 "CONN_SFF8087" H 2950 3050 50  0000 L CNN
 F 2 "" H 2950 3200 50  0001 C CNN
 F 3 "" H 2950 3200 50  0001 C CNN
@@ -171,10 +171,10 @@ POD7_D7_P
 Text Label 2850 3150 2    50   ~ 0
 POD7_D7_N
 $Comp
-L special-azonenberg:CONN_SFF8087 J?
+L special-azonenberg:CONN_SFF8087 J5
 U 2 1 5F3F3B95
 P 4350 3200
-F 0 "J?" H 4350 3150 50  0000 L CNN
+F 0 "J5" H 4350 3150 50  0000 L CNN
 F 1 "CONN_SFF8087" H 4350 3050 50  0000 L CNN
 F 2 "" H 4350 3200 50  0001 C CNN
 F 3 "" H 4350 3200 50  0001 C CNN
@@ -214,10 +214,10 @@ POD8_D7_P
 Text Label 4250 3150 2    50   ~ 0
 POD8_D7_N
 $Comp
-L special-azonenberg:CONN_SFF8087 J?
+L special-azonenberg:CONN_SFF8087 J6
 U 2 1 5F3F3BAF
 P 5750 3200
-F 0 "J?" H 5750 3150 50  0000 L CNN
+F 0 "J6" H 5750 3150 50  0000 L CNN
 F 1 "CONN_SFF8087" H 5750 3050 50  0000 L CNN
 F 2 "" H 5750 3200 50  0001 C CNN
 F 3 "" H 5750 3200 50  0001 C CNN
@@ -256,61 +256,61 @@ Text Label 5650 3050 2    50   ~ 0
 POD9_D7_P
 Text Label 5650 3150 2    50   ~ 0
 POD9_D7_N
-Text Label 10600 5000 2    50   ~ 0
+Text Label 10600 4800 2    50   ~ 0
 POD6_D3_P
-Text Label 10600 5100 2    50   ~ 0
+Text Label 10600 4900 2    50   ~ 0
 POD6_D3_N
-Text Label 10600 5200 2    50   ~ 0
+Text Label 10600 5000 2    50   ~ 0
 POD6_D4_P
-Text Label 10600 5300 2    50   ~ 0
+Text Label 10600 5100 2    50   ~ 0
 POD6_D4_N
-Text Label 10600 5400 2    50   ~ 0
+Text Label 10600 5200 2    50   ~ 0
 POD6_D5_P
-Text Label 10600 5500 2    50   ~ 0
+Text Label 10600 5300 2    50   ~ 0
 POD6_D5_N
-Text Label 10600 5600 2    50   ~ 0
+Text Label 10600 5400 2    50   ~ 0
 POD6_D6_P
-Text Label 10600 5700 2    50   ~ 0
+Text Label 10600 5500 2    50   ~ 0
 POD6_D6_N
-Text Label 10600 5800 2    50   ~ 0
+Text Label 10600 5600 2    50   ~ 0
 POD6_D7_P
-Text Label 10600 5900 2    50   ~ 0
+Text Label 10600 5700 2    50   ~ 0
 POD6_D7_N
-Text Label 10600 6000 2    50   ~ 0
-POD7_D0_P
-Text Label 10600 6100 2    50   ~ 0
-POD7_D0_N
-Text Label 10600 6200 2    50   ~ 0
-POD7_D1_P
-Text Label 10600 6300 2    50   ~ 0
-POD7_D1_N
 Text Label 10600 6600 2    50   ~ 0
-POD7_D3_P
+POD7_D0_P
 Text Label 10600 6700 2    50   ~ 0
+POD7_D0_N
+Text Label 10600 5800 2    50   ~ 0
+POD7_D1_P
+Text Label 10600 5900 2    50   ~ 0
+POD7_D1_N
+Text Label 10600 6200 2    50   ~ 0
+POD7_D3_P
+Text Label 10600 6300 2    50   ~ 0
 POD7_D3_N
-Text Label 10600 6400 2    50   ~ 0
+Text Label 10600 6000 2    50   ~ 0
 POD7_D2_P
-Text Label 10600 6500 2    50   ~ 0
+Text Label 10600 6100 2    50   ~ 0
 POD7_D2_N
-Text Label 10600 6800 2    50   ~ 0
-POD7_D4_P
-Text Label 10600 6900 2    50   ~ 0
-POD7_D4_N
 Text Label 10600 7000 2    50   ~ 0
-POD7_D5_P
+POD7_D4_P
 Text Label 10600 7100 2    50   ~ 0
-POD7_D5_N
+POD7_D4_N
 Text Label 10600 7200 2    50   ~ 0
-POD7_D6_P
+POD7_D5_P
 Text Label 10600 7300 2    50   ~ 0
-POD7_D6_N
+POD7_D5_N
 Text Label 10600 7400 2    50   ~ 0
-POD7_D7_P
+POD7_D6_P
 Text Label 10600 7500 2    50   ~ 0
-POD7_D7_N
+POD7_D6_N
 Text Label 10600 7600 2    50   ~ 0
-POD8_D0_P
+POD7_D7_P
 Text Label 10600 7700 2    50   ~ 0
+POD7_D7_N
+Text Label 10600 6800 2    50   ~ 0
+POD8_D0_P
+Text Label 10600 6900 2    50   ~ 0
 POD8_D0_N
 Text Label 10600 7800 2    50   ~ 0
 POD8_D1_P
@@ -340,43 +340,43 @@ Text Label 10600 9000 2    50   ~ 0
 POD8_D7_P
 Text Label 10600 9100 2    50   ~ 0
 POD8_D7_N
-Text Label 13400 4400 2    50   ~ 0
+Text Label 13400 6400 2    50   ~ 0
 POD9_D0_P
-Text Label 13400 4500 2    50   ~ 0
+Text Label 13400 6500 2    50   ~ 0
 POD9_D0_N
-Text Label 13400 4600 2    50   ~ 0
+Text Label 13400 4400 2    50   ~ 0
 POD9_D1_P
-Text Label 13400 4700 2    50   ~ 0
+Text Label 13400 4500 2    50   ~ 0
 POD9_D1_N
-Text Label 13400 5000 2    50   ~ 0
-POD9_D3_P
-Text Label 13400 5100 2    50   ~ 0
-POD9_D3_N
 Text Label 13400 4800 2    50   ~ 0
-POD9_D2_P
+POD9_D3_P
 Text Label 13400 4900 2    50   ~ 0
+POD9_D3_N
+Text Label 13400 4600 2    50   ~ 0
+POD9_D2_P
+Text Label 13400 4700 2    50   ~ 0
 POD9_D2_N
-Text Label 13400 5200 2    50   ~ 0
+Text Label 13400 5000 2    50   ~ 0
 POD9_D4_P
-Text Label 13400 5300 2    50   ~ 0
+Text Label 13400 5100 2    50   ~ 0
 POD9_D4_N
-Text Label 13400 5400 2    50   ~ 0
+Text Label 13400 5200 2    50   ~ 0
 POD9_D5_P
-Text Label 13400 5500 2    50   ~ 0
+Text Label 13400 5300 2    50   ~ 0
 POD9_D5_N
-Text Label 13400 5600 2    50   ~ 0
+Text Label 13400 5400 2    50   ~ 0
 POD9_D6_P
-Text Label 13400 5700 2    50   ~ 0
+Text Label 13400 5500 2    50   ~ 0
 POD9_D6_N
-Text Label 13400 5800 2    50   ~ 0
+Text Label 13400 5600 2    50   ~ 0
 POD9_D7_P
-Text Label 13400 5900 2    50   ~ 0
+Text Label 13400 5700 2    50   ~ 0
 POD9_D7_N
 $Comp
-L special-azonenberg:CONN_SFF8087 J?
+L special-azonenberg:CONN_SFF8087 J7
 U 2 1 5F405F23
 P 7150 3200
-F 0 "J?" H 7150 3150 50  0000 L CNN
+F 0 "J7" H 7150 3150 50  0000 L CNN
 F 1 "CONN_SFF8087" H 7150 3050 50  0000 L CNN
 F 2 "" H 7150 3200 50  0001 C CNN
 F 3 "" H 7150 3200 50  0001 C CNN
@@ -416,10 +416,10 @@ POD10_D7_P
 Text Label 7050 3150 2    50   ~ 0
 POD10_D7_N
 $Comp
-L special-azonenberg:CONN_SFF8087 J?
+L special-azonenberg:CONN_SFF8087 J8
 U 2 1 5F405F3D
 P 8550 3200
-F 0 "J?" H 8550 3150 50  0000 L CNN
+F 0 "J8" H 8550 3150 50  0000 L CNN
 F 1 "CONN_SFF8087" H 8550 3050 50  0000 L CNN
 F 2 "" H 8550 3200 50  0001 C CNN
 F 3 "" H 8550 3200 50  0001 C CNN
@@ -458,21 +458,21 @@ Text Label 8450 3050 2    50   ~ 0
 POD11_D7_P
 Text Label 8450 3150 2    50   ~ 0
 POD11_D7_N
-Text Label 13400 7200 2    50   ~ 0
-POD10_D5_P
-Text Label 13400 7300 2    50   ~ 0
-POD10_D5_N
 Text Label 13400 7400 2    50   ~ 0
-POD10_D6_P
+POD10_D5_P
 Text Label 13400 7500 2    50   ~ 0
-POD10_D6_N
+POD10_D5_N
 Text Label 13400 7600 2    50   ~ 0
-POD10_D7_P
+POD10_D6_P
 Text Label 13400 7700 2    50   ~ 0
-POD10_D7_N
+POD10_D6_N
 Text Label 13400 7800 2    50   ~ 0
-POD11_D0_P
+POD10_D7_P
 Text Label 13400 7900 2    50   ~ 0
+POD10_D7_N
+Text Label 13400 7000 2    50   ~ 0
+POD11_D0_P
+Text Label 13400 7100 2    50   ~ 0
 POD11_D0_N
 Text Label 13400 8000 2    50   ~ 0
 POD11_D1_P
@@ -502,47 +502,47 @@ Text Label 13500 1900 2    50   ~ 0
 POD11_D7_P
 Text Label 13500 2000 2    50   ~ 0
 POD11_D7_N
-Text Label 10600 4900 2    50   ~ 0
-POD6_D2_N
-Text Label 10600 4800 2    50   ~ 0
-POD6_D2_P
 Text Label 10600 4700 2    50   ~ 0
-POD6_D1_N
+POD6_D2_N
 Text Label 10600 4600 2    50   ~ 0
-POD6_D1_P
+POD6_D2_P
 Text Label 10600 4500 2    50   ~ 0
-POD6_D0_N
+POD6_D1_N
 Text Label 10600 4400 2    50   ~ 0
+POD6_D1_P
+Text Label 10600 6500 2    50   ~ 0
+POD6_D0_N
+Text Label 10600 6400 2    50   ~ 0
 POD6_D0_P
-Text Label 13400 7100 2    50   ~ 0
+Text Label 13400 7300 2    50   ~ 0
 POD10_D4_N
-Text Label 13400 7000 2    50   ~ 0
+Text Label 13400 7200 2    50   ~ 0
 POD10_D4_P
-Text Label 13400 6500 2    50   ~ 0
-POD10_D2_N
-Text Label 13400 6400 2    50   ~ 0
-POD10_D2_P
-Text Label 13400 6900 2    50   ~ 0
-POD10_D3_N
-Text Label 13400 6600 2    50   ~ 0
-POD10_D3_P
-Text Label 13400 6300 2    50   ~ 0
-POD10_D1_N
-Text Label 13400 6200 2    50   ~ 0
-POD10_D1_P
 Text Label 13400 6100 2    50   ~ 0
-POD10_D0_N
+POD10_D2_N
 Text Label 13400 6000 2    50   ~ 0
+POD10_D2_P
+Text Label 13400 6300 2    50   ~ 0
+POD10_D3_N
+Text Label 13400 6200 2    50   ~ 0
+POD10_D3_P
+Text Label 13400 5900 2    50   ~ 0
+POD10_D1_N
+Text Label 13400 5800 2    50   ~ 0
+POD10_D1_P
+Text Label 13400 6900 2    50   ~ 0
+POD10_D0_N
+Text Label 13400 6800 2    50   ~ 0
 POD10_D0_P
-Text HLabel 13400 6700 0    50   Input ~ 0
+Text HLabel 13400 6600 0    50   Input ~ 0
 K7_CLK_P
-Text HLabel 13400 6800 0    50   Input ~ 0
+Text HLabel 13400 6700 0    50   Input ~ 0
 K7_CLK_N
 $Comp
-L special-azonenberg:CONN_SFF8087 J?
+L special-azonenberg:CONN_SFF8087 J4
 U 1 1 5F4F0590
 P 2950 5650
-F 0 "J?" H 2950 5600 50  0000 L CNN
+F 0 "J4" H 2950 5600 50  0000 L CNN
 F 1 "CONN_SFF8087" H 2950 5500 50  0000 L CNN
 F 2 "" H 2950 5650 50  0001 C CNN
 F 3 "" H 2950 5650 50  0001 C CNN
@@ -550,10 +550,10 @@ F 3 "" H 2950 5650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L special-azonenberg:CONN_SFF8087 J?
+L special-azonenberg:CONN_SFF8087 J5
 U 1 1 5F4F181F
 P 4350 5650
-F 0 "J?" H 4350 5600 50  0000 L CNN
+F 0 "J5" H 4350 5600 50  0000 L CNN
 F 1 "CONN_SFF8087" H 4350 5500 50  0000 L CNN
 F 2 "" H 4350 5650 50  0001 C CNN
 F 3 "" H 4350 5650 50  0001 C CNN
@@ -561,10 +561,10 @@ F 3 "" H 4350 5650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L special-azonenberg:CONN_SFF8087 J?
+L special-azonenberg:CONN_SFF8087 J6
 U 1 1 5F4F28DA
 P 5750 5650
-F 0 "J?" H 5750 5600 50  0000 L CNN
+F 0 "J6" H 5750 5600 50  0000 L CNN
 F 1 "CONN_SFF8087" H 5750 5500 50  0000 L CNN
 F 2 "" H 5750 5650 50  0001 C CNN
 F 3 "" H 5750 5650 50  0001 C CNN
@@ -572,10 +572,10 @@ F 3 "" H 5750 5650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L special-azonenberg:CONN_SFF8087 J?
+L special-azonenberg:CONN_SFF8087 J7
 U 1 1 5F4F3578
 P 7150 5650
-F 0 "J?" H 7150 5600 50  0000 L CNN
+F 0 "J7" H 7150 5600 50  0000 L CNN
 F 1 "CONN_SFF8087" H 7150 5500 50  0000 L CNN
 F 2 "" H 7150 5650 50  0001 C CNN
 F 3 "" H 7150 5650 50  0001 C CNN
@@ -583,10 +583,10 @@ F 3 "" H 7150 5650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L special-azonenberg:CONN_SFF8087 J?
+L special-azonenberg:CONN_SFF8087 J8
 U 1 1 5F4F4453
 P 8550 5650
-F 0 "J?" H 8550 5600 50  0000 L CNN
+F 0 "J8" H 8550 5600 50  0000 L CNN
 F 1 "CONN_SFF8087" H 8550 5500 50  0000 L CNN
 F 2 "" H 8550 5650 50  0001 C CNN
 F 3 "" H 8550 5650 50  0001 C CNN
