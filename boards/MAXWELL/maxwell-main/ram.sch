@@ -3,9 +3,9 @@ EELAYER 30 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
-Sheet 4 15
+Sheet 4 16
 Title "MAXWELL Main Board"
-Date "2020-06-16"
+Date "2020-06-17"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
@@ -559,8 +559,6 @@ RAM_VREF
 Text Label 7700 2100 2    50   ~ 0
 RAM_VREF
 NoConn ~ 7700 4500
-NoConn ~ 5150 3600
-NoConn ~ 5150 3700
 NoConn ~ 5150 4100
 NoConn ~ 5150 4200
 NoConn ~ 5150 4300
@@ -963,9 +961,9 @@ F 3 "" H 2950 6950 50  0001 C CNN
 	1    2950 6950
 	1    0    0    -1  
 $EndComp
-Text HLabel 5150 3400 0    50   Input ~ 0
+Text HLabel 5150 3600 0    50   Input ~ 0
 RAM_CLK_P
-Text HLabel 5150 3500 0    50   Input ~ 0
+Text HLabel 5150 3700 0    50   Input ~ 0
 RAM_CLK_N
 $Comp
 L device:R R68
@@ -1558,4 +1556,32 @@ Wire Wire Line
 Connection ~ 6050 10000
 Wire Wire Line
 	6050 10000 6600 10000
+NoConn ~ 5150 3500
+NoConn ~ 5150 3400
+Text HLabel 13200 5850 0    50   Output ~ 0
+SODIMM_SDA
+Text HLabel 13200 5950 0    50   Input ~ 0
+SODIMM_SCL
+Text Label 13200 6050 2    50   ~ 0
+GND
+Text Label 13200 6150 2    50   ~ 0
+GND
+$Comp
+L device:C C204
+U 1 1 60393E3F
+P 6500 6950
+F 0 "C204" H 6615 6996 50  0000 L CNN
+F 1 "0.47 uF" H 6615 6905 50  0000 L CNN
+F 2 "" H 6538 6800 50  0001 C CNN
+F 3 "" H 6500 6950 50  0001 C CNN
+	1    6500 6950
+	1    0    0    -1  
+$EndComp
+Text Notes 6500 7200 0    50   ~ 0
+SODIMM side
+Text Label 6500 6800 2    50   ~ 0
+3V3
+Text Label 6500 7100 2    50   ~ 0
+GND
+NoConn ~ 13200 6350
 $EndSCHEMATC

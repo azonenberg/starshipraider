@@ -3,9 +3,9 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 13 15
+Sheet 13 16
 Title "MAXWELL Main Board"
-Date "2020-06-16"
+Date "2020-06-17"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
@@ -101,7 +101,7 @@ Text Label 9250 900  2    50   ~ 0
 SYNC_CLK_2_P
 Text Label 9550 900  0    50   ~ 0
 SYNC_CLK_2_N
-Text Notes 9250 1150 0    50   ~ 0
+Text Notes 9300 1500 0    50   ~ 0
 Need external terminators\nsince these go to a VCCO=3.3V bank
 Text HLabel 7100 3550 2    50   Input ~ 0
 ETH_REFCLK
@@ -1089,4 +1089,63 @@ Text Label 2050 5100 2    50   ~ 0
 MAC_I2C_SCL
 Text Label 2050 5000 2    50   ~ 0
 MAC_I2C_SDA
+NoConn ~ 2050 1500
+NoConn ~ 2050 1800
+NoConn ~ 2050 1900
+NoConn ~ 2050 2000
+NoConn ~ 2050 2200
+NoConn ~ 2050 2300
+NoConn ~ 2050 5300
+NoConn ~ 2050 5200
+NoConn ~ 2050 3400
+NoConn ~ 2050 3200
+NoConn ~ 2050 3100
+NoConn ~ 2050 3000
+NoConn ~ 2050 2900
+NoConn ~ 2050 2400
+Text HLabel 2050 5900 0    50   Output ~ 0
+PLL_SYNC
+NoConn ~ 2050 5400
+Text HLabel 2050 2500 0    50   Input ~ 0
+PPS_IN_P
+Text HLabel 2050 2600 0    50   Input ~ 0
+PPS_IN_N
+Text HLabel 2050 2700 0    50   Input ~ 0
+GPIO_IN_P
+Text HLabel 2050 2800 0    50   Input ~ 0
+GPIO_IN_N
+$Comp
+L device:R R?
+U 1 1 605F8A40
+P 9400 1100
+AR Path="/5EDD723A/605F8A40" Ref="R?"  Part="1" 
+AR Path="/5EE2921B/605F8A40" Ref="R98"  Part="1" 
+F 0 "R98" V 9300 1100 50  0000 C CNN
+F 1 "100" V 9400 1100 50  0000 C CNN
+F 2 "" V 9330 1100 50  0001 C CNN
+F 3 "" H 9400 1100 50  0001 C CNN
+	1    9400 1100
+	0    1    1    0   
+$EndComp
+Text Label 9250 1100 2    50   ~ 0
+GPIO_IN_P
+Text Label 9550 1100 0    50   ~ 0
+GPIO_IN_P
+$Comp
+L device:R R?
+U 1 1 605F8A4C
+P 9400 1300
+AR Path="/5EDD723A/605F8A4C" Ref="R?"  Part="1" 
+AR Path="/5EE2921B/605F8A4C" Ref="R99"  Part="1" 
+F 0 "R99" V 9300 1300 50  0000 C CNN
+F 1 "100" V 9400 1300 50  0000 C CNN
+F 2 "" V 9330 1300 50  0001 C CNN
+F 3 "" H 9400 1300 50  0001 C CNN
+	1    9400 1300
+	0    1    1    0   
+$EndComp
+Text Label 9250 1300 2    50   ~ 0
+PPS_IN_P
+Text Label 9550 1300 0    50   ~ 0
+PPS_IN_P
 $EndSCHEMATC

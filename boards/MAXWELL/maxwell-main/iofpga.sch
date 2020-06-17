@@ -3,9 +3,9 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 7 15
+Sheet 7 16
 Title "MAXWELL Main Board"
-Date "2020-06-16"
+Date "2020-06-17"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
@@ -936,4 +936,5 @@ Wire Wire Line
 	5100 2600 5100 2450
 Wire Wire Line
 	5100 2450 5400 2450
+NoConn ~ 2450 7550
 $EndSCHEMATC

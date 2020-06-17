@@ -3,10 +3,10 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 9 15
+Sheet 9 16
 Title "MAXWELL Main Board"
-Date "2020-06-16"
-Rev ""
+Date "2020-06-17"
+Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
 Comment2 ""
@@ -1012,4 +1012,82 @@ Text HLabel 9450 3150 0    50   Output ~ 0
 GTX_TRIG_OUT_P
 Text HLabel 9450 3250 0    50   Output ~ 0
 GTX_TRIG_OUT_N
+Text Label 5650 2250 2    50   ~ 0
+UNUSED1_P
+Text Label 5650 2350 2    50   ~ 0
+UNUSED1_N
+Text Label 2000 6450 2    50   ~ 0
+UNUSED1_P
+Text Label 2000 6550 2    50   ~ 0
+UNUSED1_N
+Text Label 5650 4950 2    50   ~ 0
+UNUSED2_P
+Text Label 5650 5050 2    50   ~ 0
+UNUSED2_N
+Text Label 2000 6750 2    50   ~ 0
+UNUSED2_P
+Text Label 2000 6850 2    50   ~ 0
+UNUSED2_N
+Text Notes 1950 7050 0    50   ~ 0
+Tie unused inputs to constant value\nso they don't oscillate
+$Comp
+L device:R R85
+U 1 1 6041FBB0
+P 2150 6450
+F 0 "R85" V 2100 6650 50  0000 C CNN
+F 1 "200" V 2150 6450 50  0000 C CNN
+F 2 "" V 2080 6450 50  0001 C CNN
+F 3 "" H 2150 6450 50  0001 C CNN
+	1    2150 6450
+	0    1    1    0   
+$EndComp
+$Comp
+L device:R R86
+U 1 1 60420792
+P 2150 6550
+F 0 "R86" V 2100 6750 50  0000 C CNN
+F 1 "200" V 2150 6550 50  0000 C CNN
+F 2 "" V 2080 6550 50  0001 C CNN
+F 3 "" H 2150 6550 50  0001 C CNN
+	1    2150 6550
+	0    1    1    0   
+$EndComp
+Text Label 2450 6450 0    50   ~ 0
+2V5
+Wire Wire Line
+	2450 6450 2300 6450
+Text Label 2450 6550 0    50   ~ 0
+GND
+Wire Wire Line
+	2450 6550 2300 6550
+$Comp
+L device:R R87
+U 1 1 6042E9FB
+P 2150 6750
+F 0 "R87" V 2100 6950 50  0000 C CNN
+F 1 "200" V 2150 6750 50  0000 C CNN
+F 2 "" V 2080 6750 50  0001 C CNN
+F 3 "" H 2150 6750 50  0001 C CNN
+	1    2150 6750
+	0    1    1    0   
+$EndComp
+$Comp
+L device:R R88
+U 1 1 6042EA05
+P 2150 6850
+F 0 "R88" V 2100 7050 50  0000 C CNN
+F 1 "200" V 2150 6850 50  0000 C CNN
+F 2 "" V 2080 6850 50  0001 C CNN
+F 3 "" H 2150 6850 50  0001 C CNN
+	1    2150 6850
+	0    1    1    0   
+$EndComp
+Text Label 2450 6750 0    50   ~ 0
+2V5
+Wire Wire Line
+	2450 6750 2300 6750
+Text Label 2450 6850 0    50   ~ 0
+GND
+Wire Wire Line
+	2450 6850 2300 6850
 $EndSCHEMATC

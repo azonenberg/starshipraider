@@ -3,9 +3,9 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 15
+Sheet 2 16
 Title "MAXWELL Main Board"
-Date "2020-06-16"
+Date "2020-06-17"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
@@ -41,4 +41,8 @@ Text HLabel 3500 3200 0    50   Output ~ 0
 RAM_VTT
 Text Notes 4400 2250 0    50   ~ 0
 Vtt needs to ramp after 1V5
+Text HLabel 3950 2650 0    50   Output ~ 0
+5V0
+Text HLabel 3900 2800 0    50   Output ~ 0
+5V0_N
 $EndSCHEMATC
