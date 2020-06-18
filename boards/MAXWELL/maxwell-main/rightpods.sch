@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
-Sheet 8 16
+Sheet 9 15
 Title "MAXWELL Main Board"
 Date "2020-06-17"
 Rev "0.1"
@@ -971,4 +971,6 @@ Text HLabel 13500 3100 0    50   Output ~ 0
 GTX_TRIG_OUT_P
 Text HLabel 13500 3200 0    50   Output ~ 0
 GTX_TRIG_OUT_N
+Text Notes 5350 7400 0    50   ~ 0
+TODO: ESD protection
 $EndSCHEMATC

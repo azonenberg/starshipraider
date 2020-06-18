@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 11 16
+Sheet 12 15
 Title "MAXWELL Main Board"
 Date "2020-06-17"
 Rev "0.1"
@@ -26,19 +26,10 @@ F 3 "" H 2400 6000 50  0001 C CNN
 	12   2400 6000
 	1    0    0    -1  
 $EndComp
-$Comp
-L special-azonenberg:CONN_SFP_HOST J9
-U 1 1 5F02E2BD
-P 5600 4950
-F 0 "J9" H 6178 6358 60  0000 L CNN
-F 1 "CONN_SFP_HOST" H 6178 6252 60  0000 L CNN
-F 2 "" H 5600 4950 60  0000 C CNN
-F 3 "" H 5600 4950 60  0000 C CNN
-	1    5600 4950
-	1    0    0    -1  
-$EndComp
 Text HLabel 1400 1800 0    50   Input ~ 0
 XG_REFCLK_P
 Text HLabel 1400 1900 0    50   Input ~ 0
 XG_REFCLK_N
+Text Notes 7950 2250 0    50   ~ 0
+TODO: actual QSFP cage
 $EndSCHEMATC

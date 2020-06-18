@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
-Sheet 10 16
+Sheet 11 15
 Title "MAXWELL Main Board"
 Date "2020-06-17"
 Rev "0.1"
@@ -903,4 +903,6 @@ Text Label 12800 5550 2    50   ~ 0
 POD5_D7_P
 Text Label 12800 5650 2    50   ~ 0
 POD5_D7_N
+Text Notes 7450 7500 0    50   ~ 0
+TODO: ESD protection
 $EndSCHEMATC

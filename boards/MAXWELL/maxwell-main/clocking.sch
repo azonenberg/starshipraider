@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
-Sheet 14 16
+Sheet 15 15
 Title "MAXWELL Main Board"
 Date "2020-06-17"
 Rev "0.1"
@@ -27,12 +27,12 @@ $EndComp
 $Comp
 L special-azonenberg:LMK04806 U36
 U 3 1 5EFA1019
-P 5150 6400
-F 0 "U36" H 5150 7550 50  0000 L CNN
-F 1 "LMK04806B" H 5150 7450 50  0000 L CNN
-F 2 "" H 5150 6400 50  0001 C CNN
-F 3 "" H 5150 6400 50  0001 C CNN
-	3    5150 6400
+P 1800 8400
+F 0 "U36" H 1800 9550 50  0000 L CNN
+F 1 "LMK04806B" H 1800 9450 50  0000 L CNN
+F 2 "" H 1800 8400 50  0001 C CNN
+F 3 "" H 1800 8400 50  0001 C CNN
+	3    1800 8400
 	1    0    0    -1  
 $EndComp
 $Sheet
@@ -99,10 +99,6 @@ Text HLabel 3100 1650 2    50   Output ~ 0
 RAM_CLK_P
 Text HLabel 3100 1750 2    50   Output ~ 0
 RAM_CLK_N
-Text Notes 850  1150 0    50   ~ 0
-10 MHz from OCXO
-Text Notes 850  1450 0    50   ~ 0
-External ref in
 Text Notes 3800 4100 0    50   ~ 0
 25 MHz LVCMOS
 Text Notes 3800 3500 0    50   ~ 0
@@ -132,23 +128,23 @@ F 3 "" H 1800 7000 50  0001 C CNN
 	2    1800 7000
 	1    0    0    -1  
 $EndComp
-Text HLabel 5050 5450 0    50   BiDi ~ 0
+Text HLabel 1700 7450 0    50   BiDi ~ 0
 PLL_SYNC
-Text HLabel 5050 5650 0    50   Input ~ 0
+Text HLabel 1700 7650 0    50   Input ~ 0
 PLL_SPI_LE
-Text HLabel 5050 5750 0    50   Input ~ 0
+Text HLabel 1700 7750 0    50   Input ~ 0
 PLL_SPI_CLK
-Text HLabel 5050 5850 0    50   Input ~ 0
+Text HLabel 1700 7850 0    50   Input ~ 0
 PLL_SPI_DATA
-Text HLabel 5050 6050 0    50   BiDi ~ 0
+Text HLabel 1700 8050 0    50   BiDi ~ 0
 PLL_STATUS_HOLDOVER
-Text HLabel 5050 6150 0    50   BiDi ~ 0
+Text HLabel 1700 8150 0    50   BiDi ~ 0
 PLL_STATUS_LD
-Text HLabel 5050 6250 0    50   BiDi ~ 0
+Text HLabel 1700 8250 0    50   BiDi ~ 0
 PLL_STATUS_CLKIN0
-Text HLabel 5050 6350 0    50   BiDi ~ 0
+Text HLabel 1700 8350 0    50   BiDi ~ 0
 PLL_STATUS_CLKIN1
-Text HLabel 1700 6850 0    50   Output ~ 0
+Text HLabel 1700 6850 0    50   Input ~ 0
 GND
 Wire Wire Line
 	1700 6850 1700 6950
@@ -162,10 +158,10 @@ Text Label 14300 1650 2    50   ~ 0
 REF_IN_P
 Text Label 14300 1750 2    50   ~ 0
 REF_IN_N
-Text Label 1050 1950 2    50   ~ 0
-REF_IN_P
-Text Label 1050 2050 2    50   ~ 0
-REF_IN_N
+Text Label 1700 1350 2    50   ~ 0
+REF_IN_AC_P
+Text Label 1700 1450 2    50   ~ 0
+REF_IN_AC_N
 Text HLabel 14300 1950 0    50   Output ~ 0
 PPS_IN_P
 Text HLabel 14300 2050 0    50   Output ~ 0
@@ -174,10 +170,8 @@ Text HLabel 14300 3250 0    50   Output ~ 0
 GPIO_IN_P
 Text HLabel 14300 3350 0    50   Output ~ 0
 GPIO_IN_N
-Text HLabel 5550 3850 0    50   Input ~ 0
+Text HLabel 1700 5450 0    50   Input ~ 0
 3V3
-Text HLabel 5450 4050 0    50   Input ~ 0
-GND
 Text HLabel 15450 1050 2    50   Input ~ 0
 5V0
 Text HLabel 15450 1150 2    50   Input ~ 0
@@ -188,12 +182,179 @@ Text HLabel 14300 2950 0    50   Input ~ 0
 GTX_TRIG_OUT_P
 Text HLabel 14300 3050 0    50   Input ~ 0
 GTX_TRIG_OUT_N
-Text HLabel 12850 2800 0    50   Input ~ 0
+Text HLabel 13150 2650 0    50   Input ~ 0
 TRIG_OUT_N
-Text HLabel 12850 2700 0    50   Input ~ 0
+Text HLabel 13150 2550 0    50   Input ~ 0
 TRIG_OUT_P
 Text HLabel 15450 1350 2    50   Input ~ 0
 5V0_N
-Text Notes 12350 2950 0    50   ~ 0
-Diff to single conversion
+Text Notes 12650 2800 0    50   ~ 0
+TODO: Diff to single conversion
+Text Label 1700 5750 2    50   ~ 0
+3V3
+Text Label 1700 6050 2    50   ~ 0
+3V3
+Wire Wire Line
+	1700 5750 1700 5850
+Text Label 1700 6250 2    50   ~ 0
+3V3
+$Comp
+L device:C C229
+U 1 1 60796FC4
+P 3600 5700
+F 0 "C229" H 3715 5746 50  0000 L CNN
+F 1 "0.1 uF" H 3715 5655 50  0000 L CNN
+F 2 "" H 3638 5550 50  0001 C CNN
+F 3 "" H 3600 5700 50  0001 C CNN
+	1    3600 5700
+	1    0    0    -1  
+$EndComp
+Text Label 3050 5750 0    50   ~ 0
+VCP1
+Text Label 3050 5850 0    50   ~ 0
+VCP2
+Text Label 3700 9000 0    50   ~ 0
+VCP1
+Text Label 3700 9100 0    50   ~ 0
+VCP2
+Wire Wire Line
+	3050 5550 3600 5550
+$Comp
+L device:C C230
+U 1 1 60798450
+P 4150 5700
+F 0 "C230" H 4265 5746 50  0000 L CNN
+F 1 "10 uF" H 4265 5655 50  0000 L CNN
+F 2 "" H 4188 5550 50  0001 C CNN
+F 3 "" H 4150 5700 50  0001 C CNN
+	1    4150 5700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4150 5450 4150 5550
+Text Label 4600 5850 0    50   ~ 0
+GND
+Wire Wire Line
+	3600 5850 4150 5850
+Connection ~ 4150 5850
+Wire Wire Line
+	4150 5850 4600 5850
+NoConn ~ 3100 4750
+NoConn ~ 3100 4650
+NoConn ~ 3100 4950
+NoConn ~ 3100 5050
+Text Notes 3300 4850 0    50   ~ 0
+TODO: test points on OSCout?
+NoConn ~ 3100 3250
+NoConn ~ 3100 3750
+NoConn ~ 3100 3850
+NoConn ~ 3100 4150
+NoConn ~ 3100 4350
+NoConn ~ 3100 4450
+Text Notes 2450 9100 0    50   ~ 0
+TODO: LMK decoupling
+Text Notes 2450 9200 0    50   ~ 0
+TODO: PLL loop filters
+Text Notes 2450 9300 0    50   ~ 0
+TODO: External VCXO
+Wire Wire Line
+	3050 5450 4150 5450
+Text Notes 8150 5200 0    50   ~ 0
+TODO: OCXO
+Text Label 1700 1050 2    50   ~ 0
+CLK_OCXO_AC_P
+Text Label 1700 1150 2    50   ~ 0
+CLK_OCXO_AC_N
+Text Label 6450 2050 0    50   ~ 0
+REF_IN_AC_P
+Text Label 6450 2350 0    50   ~ 0
+REF_IN_AC_N
+Text Label 6450 1050 0    50   ~ 0
+CLK_OCXO_AC_P
+Text Label 6450 1350 0    50   ~ 0
+CLK_OCXO_AC_N
+$Comp
+L device:R R94
+U 1 1 607B4C8C
+P 5900 1200
+F 0 "R94" H 5970 1246 50  0000 L CNN
+F 1 "100" H 5970 1155 50  0000 L CNN
+F 2 "" V 5830 1200 50  0001 C CNN
+F 3 "" H 5900 1200 50  0001 C CNN
+	1    5900 1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 1050 5900 1050
+Wire Wire Line
+	6150 1350 5900 1350
+$Comp
+L device:C C231
+U 1 1 607BAB55
+P 6300 1050
+F 0 "C231" V 6048 1050 50  0000 C CNN
+F 1 "0.1 uF" V 6139 1050 50  0000 C CNN
+F 2 "" H 6338 900 50  0001 C CNN
+F 3 "" H 6300 1050 50  0001 C CNN
+	1    6300 1050
+	0    1    1    0   
+$EndComp
+$Comp
+L device:C C232
+U 1 1 607BB030
+P 6300 1350
+F 0 "C232" V 6450 1350 50  0000 C CNN
+F 1 "0.1 uF" V 6550 1350 50  0000 C CNN
+F 2 "" H 6338 1200 50  0001 C CNN
+F 3 "" H 6300 1350 50  0001 C CNN
+	1    6300 1350
+	0    1    1    0   
+$EndComp
+$Comp
+L device:R R95
+U 1 1 607C0356
+P 5900 2200
+F 0 "R95" H 5970 2246 50  0000 L CNN
+F 1 "100" H 5970 2155 50  0000 L CNN
+F 2 "" V 5830 2200 50  0001 C CNN
+F 3 "" H 5900 2200 50  0001 C CNN
+	1    5900 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 2050 5900 2050
+Wire Wire Line
+	6150 2350 5900 2350
+$Comp
+L device:C C233
+U 1 1 607C0362
+P 6300 2050
+F 0 "C233" V 6048 2050 50  0000 C CNN
+F 1 "0.1 uF" V 6139 2050 50  0000 C CNN
+F 2 "" H 6338 1900 50  0001 C CNN
+F 3 "" H 6300 2050 50  0001 C CNN
+	1    6300 2050
+	0    1    1    0   
+$EndComp
+$Comp
+L device:C C234
+U 1 1 607C036C
+P 6300 2350
+F 0 "C234" V 6450 2350 50  0000 C CNN
+F 1 "0.1 uF" V 6550 2350 50  0000 C CNN
+F 2 "" H 6338 2200 50  0001 C CNN
+F 3 "" H 6300 2350 50  0001 C CNN
+	1    6300 2350
+	0    1    1    0   
+$EndComp
+Text Label 5900 1050 2    50   ~ 0
+CLK_OCXO_P
+Text Label 5900 1350 2    50   ~ 0
+CLK_OCXO_N
+Text Label 5900 2050 2    50   ~ 0
+REF_IN_P
+Text Label 5900 2350 2    50   ~ 0
+REF_IN_N
+Text Notes 5850 2750 0    50   ~ 0
+Termination and AC coupling for clock inputs
 $EndSCHEMATC

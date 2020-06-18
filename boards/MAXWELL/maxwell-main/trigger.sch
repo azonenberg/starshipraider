@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
-Sheet 15 16
+Sheet 16 15
 Title "MAXWELL Main Board"
 Date "2020-06-17"
 Rev "0.1"
@@ -123,8 +123,8 @@ Text Label 3050 1350 0    50   ~ 0
 TRIG_IN_ATTEN
 Text Label 4300 2750 2    50   ~ 0
 REF_IN_AC
-Text Notes 7600 4650 0    50   ~ 0
-TODO: output terminators
+Text Notes 6850 3200 0    50   ~ 0
+TODO: PECL load resistors
 Wire Wire Line
 	5550 850  5550 950 
 Wire Wire Line
@@ -217,7 +217,7 @@ Wire Wire Line
 Wire Wire Line
 	1150 1350 1850 1350
 Text Label 4300 1450 2    50   ~ 0
-VREF_N
+GND
 Text HLabel 4300 850  0    50   Input ~ 0
 5V0
 Text HLabel 4300 950  0    50   Input ~ 0
@@ -231,14 +231,14 @@ L device:R R73
 U 1 1 602F69B4
 P 3950 1750
 F 0 "R73" V 3900 1950 50  0000 C CNN
-F 1 "20K" V 3950 1750 50  0000 C CNN
+F 1 "4.99K" V 3950 1750 50  0000 C CNN
 F 2 "" V 3880 1750 50  0001 C CNN
 F 3 "" H 3950 1750 50  0001 C CNN
 	1    3950 1750
 	0    1    1    0   
 $EndComp
 Text Notes 3850 1900 0    50   ~ 0
-5 mV hysteresis
+20 mV hysteresis
 Wire Wire Line
 	4100 1750 4300 1750
 Wire Wire Line
@@ -330,7 +330,7 @@ L device:R R74
 U 1 1 603295C3
 P 3950 3150
 F 0 "R74" V 3900 3350 50  0000 C CNN
-F 1 "20K" V 3950 3150 50  0000 C CNN
+F 1 "4.99K" V 3950 3150 50  0000 C CNN
 F 2 "" V 3880 3150 50  0001 C CNN
 F 3 "" H 3950 3150 50  0001 C CNN
 	1    3950 3150
@@ -374,8 +374,6 @@ Wire Wire Line
 	6000 3150 5850 3150
 Text Label 5550 2250 0    50   ~ 0
 2V5
-Text Notes 7600 4550 0    50   ~ 0
-TODO: ESD diodes on input
 $Comp
 L device:R R81
 U 1 1 6033BC13
@@ -443,7 +441,7 @@ L device:R R75
 U 1 1 60354743
 P 3950 4550
 F 0 "R75" V 3900 4750 50  0000 C CNN
-F 1 "20K" V 3950 4550 50  0000 C CNN
+F 1 "4.99K" V 3950 4550 50  0000 C CNN
 F 2 "" V 3880 4550 50  0001 C CNN
 F 3 "" H 3950 4550 50  0001 C CNN
 	1    3950 4550
@@ -460,7 +458,7 @@ L device:R R76
 U 1 1 60359EC0
 P 3950 5950
 F 0 "R76" V 3900 6150 50  0000 C CNN
-F 1 "20K" V 3950 5950 50  0000 C CNN
+F 1 "4.99K" V 3950 5950 50  0000 C CNN
 F 2 "" V 3880 5950 50  0001 C CNN
 F 3 "" H 3950 5950 50  0001 C CNN
 	1    3950 5950
@@ -1097,85 +1095,128 @@ Wire Wire Line
 Wire Wire Line
 	7400 1800 6900 1800
 Text Label 4300 2850 2    50   ~ 0
-VREF_AC
+GND
 Text Label 4300 4250 2    50   ~ 0
-VREF_N
+GND
 Text Label 4300 5650 2    50   ~ 0
-VREF_N
-Text Label 4500 8450 2    50   ~ 0
-VREF_AC
-Text Notes 4550 8950 0    50   ~ 0
-Input threshold is +12.4 mV\nUn-driven AC coupled inputs float at 0 so have\na well defined state
+GND
 Text Label 3400 2950 2    50   ~ 0
 REF_IN_AC
 Text Label 3400 3250 2    50   ~ 0
 GND
 $Comp
-L device:R R94
-U 1 1 60544C00
-P 4650 8450
-F 0 "R94" V 4600 8650 50  0000 C CNN
-F 1 "10K 1%" V 4500 8450 50  0000 C CNN
-F 2 "" V 4580 8450 50  0001 C CNN
-F 3 "" H 4650 8450 50  0001 C CNN
-	1    4650 8450
-	0    1    1    0   
-$EndComp
-$Comp
-L device:R R95
-U 1 1 60545358
-P 4650 8550
-F 0 "R95" V 4600 8750 50  0000 C CNN
-F 1 "49.9 1%" V 4750 8550 50  0000 C CNN
-F 2 "" V 4580 8550 50  0001 C CNN
-F 3 "" H 4650 8550 50  0001 C CNN
-	1    4650 8550
-	0    1    1    0   
+L special-azonenberg:RCLAMP0542T U41
+U 1 1 607206C7
+P 9600 1550
+F 0 "U41" H 10078 1958 60  0000 L CNN
+F 1 "RCLAMP0542T" H 10078 1852 60  0000 L CNN
+F 2 "" H 9600 1550 60  0000 C CNN
+F 3 "" H 9600 1550 60  0000 C CNN
+	1    9600 1550
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4500 8550 4500 8450
-Text Label 5000 8550 0    50   ~ 0
+	9300 900  9300 1000
+Wire Wire Line
+	9300 1100 9300 1200
+Text Label 9300 900  2    50   ~ 0
+TRIG_IN_ATTEN
+Text Label 9300 1100 2    50   ~ 0
+REF_IN_ATTEN
+Text Label 9300 1400 2    50   ~ 0
 GND
 Wire Wire Line
-	5000 8550 4800 8550
-Text Label 5000 8450 0    50   ~ 0
-2V5
-Wire Wire Line
-	5000 8450 4800 8450
-Text Label 4500 9250 2    50   ~ 0
-VREF_N
+	9300 1400 9300 1500
 $Comp
-L device:R R96
-U 1 1 605601D2
-P 4650 9250
-F 0 "R96" V 4600 9450 50  0000 C CNN
-F 1 "10K 1%" V 4500 9250 50  0000 C CNN
-F 2 "" V 4580 9250 50  0001 C CNN
-F 3 "" H 4650 9250 50  0001 C CNN
-	1    4650 9250
-	0    1    1    0   
+L special-azonenberg:RCLAMP0542T U42
+U 1 1 6074CBB0
+P 9600 2400
+F 0 "U42" H 10078 2808 60  0000 L CNN
+F 1 "RCLAMP0542T" H 10078 2702 60  0000 L CNN
+F 2 "" H 9600 2400 60  0000 C CNN
+F 3 "" H 9600 2400 60  0000 C CNN
+	1    9600 2400
+	1    0    0    -1  
 $EndComp
-$Comp
-L device:R R97
-U 1 1 605601DC
-P 4650 9350
-F 0 "R97" V 4600 9550 50  0000 C CNN
-F 1 "100 1%" V 4750 9350 50  0000 C CNN
-F 2 "" V 4580 9350 50  0001 C CNN
-F 3 "" H 4650 9350 50  0001 C CNN
-	1    4650 9350
-	0    1    1    0   
-$EndComp
-Text Label 5000 9250 0    50   ~ 0
-2V5
 Wire Wire Line
-	5000 9250 4800 9250
-Text Label 5000 9350 0    50   ~ 0
+	9300 1750 9300 1850
+Wire Wire Line
+	9300 1950 9300 2050
+Text Label 9300 2250 2    50   ~ 0
 GND
 Wire Wire Line
-	5000 9350 4800 9350
-Text Notes 4550 9700 0    50   ~ 0
-Input threshold is +24.75 mV for single ended inputs\nto provide slightly higher noise immunity
+	9300 2250 9300 2350
+Text Label 9300 1750 2    50   ~ 0
+PPS_IN_ATTEN
+Text Label 9300 1950 2    50   ~ 0
+GPIO_IN_ATTEN
+$Comp
+L special-azonenberg:RCLAMP0542T U43
+U 1 1 6075D7E1
+P 9600 3300
+F 0 "U43" H 10078 3708 60  0000 L CNN
+F 1 "RCLAMP0542T" H 10078 3602 60  0000 L CNN
+F 2 "" H 9600 3300 60  0000 C CNN
+F 3 "" H 9600 3300 60  0000 C CNN
+	1    9600 3300
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	4500 9250 4500 9350
+	9300 2650 9300 2750
+Wire Wire Line
+	9300 2850 9300 2950
+Text Label 9300 3150 2    50   ~ 0
+GND
+Wire Wire Line
+	9300 3150 9300 3250
+Text Label 9300 2650 2    50   ~ 0
+REF_OUT_P
+Text Label 9300 2850 2    50   ~ 0
+REF_OUT_N
+$Comp
+L special-azonenberg:RCLAMP0542T U44
+U 1 1 6076AAE0
+P 9600 4150
+F 0 "U44" H 10078 4558 60  0000 L CNN
+F 1 "RCLAMP0542T" H 10078 4452 60  0000 L CNN
+F 2 "" H 9600 4150 60  0000 C CNN
+F 3 "" H 9600 4150 60  0000 C CNN
+	1    9600 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9300 3500 9300 3600
+Wire Wire Line
+	9300 3700 9300 3800
+Text Label 9300 4000 2    50   ~ 0
+GND
+Wire Wire Line
+	9300 4000 9300 4100
+Text Label 9300 3500 2    50   ~ 0
+REF_OUT
+Text Label 9300 3700 2    50   ~ 0
+TRIG_OUT
+$Comp
+L special-azonenberg:RCLAMP0542T U45
+U 1 1 6076F953
+P 9600 5050
+F 0 "U45" H 10078 5458 60  0000 L CNN
+F 1 "RCLAMP0542T" H 10078 5352 60  0000 L CNN
+F 2 "" H 9600 5050 60  0000 C CNN
+F 3 "" H 9600 5050 60  0000 C CNN
+	1    9600 5050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9300 4400 9300 4500
+Wire Wire Line
+	9300 4600 9300 4700
+Text Label 9300 4900 2    50   ~ 0
+GND
+Wire Wire Line
+	9300 4900 9300 5000
+Text Label 9300 4400 2    50   ~ 0
+GTX_TRIG_OUT_P
+Text Label 9300 4600 2    50   ~ 0
+GTX_TRIG_OUT_N
 $EndSCHEMATC

@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
-Sheet 3 16
+Sheet 3 15
 Title "MAXWELL Main Board"
 Date "2020-06-17"
 Rev "0.1"
@@ -174,23 +174,23 @@ $EndComp
 $Comp
 L st-azonenberg:STM32F777xx-TFBGA216 U1
 U 10 1 5F7BFCBC
-P 3700 6700
-F 0 "U1" H 3700 6650 50  0000 L CNN
-F 1 "STM32F777NIH6" H 3700 6550 50  0000 L CNN
-F 2 "" H 3700 6650 50  0001 C CNN
-F 3 "" H 3700 6650 50  0001 C CNN
-	10   3700 6700
+P 8600 6400
+F 0 "U1" H 8600 6350 50  0000 L CNN
+F 1 "STM32F777NIH6" H 8600 6250 50  0000 L CNN
+F 2 "" H 8600 6350 50  0001 C CNN
+F 3 "" H 8600 6350 50  0001 C CNN
+	10   8600 6400
 	1    0    0    -1  
 $EndComp
 $Comp
 L st-azonenberg:STM32F777xx-TFBGA216 U1
 U 11 1 5F7C9274
-P 7150 5800
-F 0 "U1" H 7150 5750 50  0000 L CNN
-F 1 "STM32F777NIH6" H 7150 5650 50  0000 L CNN
-F 2 "" H 7150 5750 50  0001 C CNN
-F 3 "" H 7150 5750 50  0001 C CNN
-	11   7150 5800
+P 8650 7500
+F 0 "U1" H 8650 7450 50  0000 L CNN
+F 1 "STM32F777NIH6" H 8650 7350 50  0000 L CNN
+F 2 "" H 8650 7450 50  0001 C CNN
+F 3 "" H 8650 7450 50  0001 C CNN
+	11   8650 7500
 	1    0    0    -1  
 $EndComp
 Text HLabel 5000 3250 0    50   BiDi ~ 0
@@ -371,7 +371,6 @@ Text Label 4750 2050 2    50   ~ 0
 STM_TCK
 Text Label 4750 2250 2    50   ~ 0
 STM_TDI
-NoConn ~ 4750 2350
 Text Notes 850  1400 0    50   ~ 0
 SPI1 AF5
 Text Notes 2700 2500 0    50   ~ 0
@@ -391,8 +390,6 @@ $EndComp
 Text Notes 2600 1600 0    50   ~ 0
 I2C1 AF4
 NoConn ~ 3250 1550
-Text Notes 11500 2850 0    50   ~ 0
-TODO: LCD
 Text Notes 4450 3700 0    50   ~ 0
 SPI4 AF5
 Text Notes 2400 2100 0    50   ~ 0
@@ -405,10 +402,194 @@ NoConn ~ 1350 2150
 NoConn ~ 1350 2250
 Text Notes 3350 7550 0    50   ~ 0
 TODO: MCU decoupling
-$Sheet
-S 11500 1000 950  1500
-U 606F25A5
-F0 "LCD" 50
-F1 "lcd.sch" 50
-$EndSheet
+Text Label 4750 2350 2    50   ~ 0
+STM_RST_J
+Text Label 1450 8050 2    50   ~ 0
+STM_RST_J
+$Comp
+L device:R R96
+U 1 1 607F7894
+P 1600 8050
+F 0 "R96" V 1500 8050 50  0000 C CNN
+F 1 "0" V 1600 8050 50  0000 C CNN
+F 2 "" V 1530 8050 50  0001 C CNN
+F 3 "" H 1600 8050 50  0001 C CNN
+	1    1600 8050
+	0    1    1    0   
+$EndComp
+Text Label 1750 8050 0    50   ~ 0
+STM_RST_N
+Text Label 2550 5650 0    50   ~ 0
+STM_RST_N
+Text Notes 3500 7850 0    50   ~ 0
+TODO: proper reset network
+Text Notes 3500 8000 0    50   ~ 0
+TODO: reset button
+Text Label 13700 2000 2    50   ~ 0
+LCD_R0
+Text Label 13700 2100 2    50   ~ 0
+LCD_R1
+Text Label 13700 2200 2    50   ~ 0
+LCD_R2
+Text Label 13700 2300 2    50   ~ 0
+LCD_R3
+Text Label 13700 2400 2    50   ~ 0
+LCD_R4
+Text Label 13700 2500 2    50   ~ 0
+LCD_R5
+Text Label 13700 2600 2    50   ~ 0
+LCD_R6
+Text Label 13700 2700 2    50   ~ 0
+LCD_R7
+Text Label 13700 2800 2    50   ~ 0
+LCD_G0
+Text Label 13700 2900 2    50   ~ 0
+LCD_G1
+Text Label 13700 3100 2    50   ~ 0
+LCD_G3
+Text Label 13700 3200 2    50   ~ 0
+LCD_G4
+Text Label 13700 3300 2    50   ~ 0
+LCD_G5
+Text Label 13700 3400 2    50   ~ 0
+LCD_G6
+Text Label 13700 3500 2    50   ~ 0
+LCD_G7
+Text Label 13700 3000 2    50   ~ 0
+LCD_G2
+Text Label 13700 3600 2    50   ~ 0
+LCD_B0
+Text Label 13700 3700 2    50   ~ 0
+LCD_B1
+Text Label 13700 3900 2    50   ~ 0
+LCD_B3
+Text Label 13700 4000 2    50   ~ 0
+LCD_B4
+Text Label 13700 4100 2    50   ~ 0
+LCD_B5
+Text Label 13700 4200 2    50   ~ 0
+LCD_B6
+Text Label 13700 4300 2    50   ~ 0
+LCD_B7
+Text Label 13700 3800 2    50   ~ 0
+LCD_B2
+Text Label 13700 1500 2    50   ~ 0
+LCD_ON
+Text Label 13700 1400 2    50   ~ 0
+LCD_CLK
+Text Label 13700 1600 2    50   ~ 0
+LCD_HSYNC
+Text Label 13700 1700 2    50   ~ 0
+LCD_VSYNC
+Text Label 13700 1800 2    50   ~ 0
+LCD_EN
+Text Label 13700 4950 2    50   ~ 0
+TOUCH_RST_N
+Text Label 13700 5050 2    50   ~ 0
+TOUCH_INT
+Text Label 13700 5250 2    50   ~ 0
+TOUCH_I2C_SDA
+Text Label 13700 5350 2    50   ~ 0
+TOUCH_I2C_SCL
+Text Label 8500 4450 2    50   ~ 0
+LCD_R0
+Text Label 8500 4850 2    50   ~ 0
+LCD_R1
+Text Label 8500 4950 2    50   ~ 0
+LCD_R2
+Text Label 8500 5050 2    50   ~ 0
+LCD_R3
+Text Label 8500 5150 2    50   ~ 0
+LCD_R4
+Text Label 8500 5250 2    50   ~ 0
+LCD_R5
+Text Label 8500 5350 2    50   ~ 0
+LCD_R6
+Text Label 8500 5450 2    50   ~ 0
+LCD_R7
+Text Label 8500 5550 2    50   ~ 0
+LCD_G0
+Text Label 8500 5650 2    50   ~ 0
+LCD_G1
+Text Label 8500 5850 2    50   ~ 0
+LCD_G3
+Text Label 8500 5950 2    50   ~ 0
+LCD_G4
+Text Label 8500 2950 2    50   ~ 0
+LCD_G5
+Text Label 8500 3050 2    50   ~ 0
+LCD_G6
+Text Label 8500 3150 2    50   ~ 0
+LCD_G7
+Text Label 8500 5750 2    50   ~ 0
+LCD_G2
+Text Label 8500 6050 2    50   ~ 0
+LCD_B0
+Text Label 8500 6150 2    50   ~ 0
+LCD_B1
+Text Label 8500 6350 2    50   ~ 0
+LCD_B3
+Text Label 8500 3350 2    50   ~ 0
+LCD_B4
+Text Label 8500 3450 2    50   ~ 0
+LCD_B5
+Text Label 8500 3550 2    50   ~ 0
+LCD_B6
+Text Label 8500 3650 2    50   ~ 0
+LCD_B7
+Text Label 8500 6250 2    50   ~ 0
+LCD_B2
+Text Label 8550 6750 2    50   ~ 0
+LCD_ON
+Text Label 8500 4350 2    50   ~ 0
+LCD_CLK
+Text Label 8500 3950 2    50   ~ 0
+LCD_HSYNC
+Text Label 8500 3850 2    50   ~ 0
+LCD_VSYNC
+Text Label 8550 7450 2    50   ~ 0
+LCD_EN
+Text Label 7000 2450 2    50   ~ 0
+TOUCH_RST_N
+Text Label 7000 2550 2    50   ~ 0
+TOUCH_INT
+Text Label 7000 2350 2    50   ~ 0
+TOUCH_I2C_SDA
+Text Label 7000 2250 2    50   ~ 0
+TOUCH_I2C_SCL
+Text Notes 11250 2650 0    50   ~ 0
+TODO: 10K pullups on TOUCH_RST/INT\n4.7K pullups on touch I2C
+Text Notes 6550 2650 0    50   ~ 0
+I2C4 AF4
+$Comp
+L special-azonenberg:MOP-TFT480116-38G-BLH-TPC_HM_DISPLAY J9
+U 1 1 60866B6D
+P 13900 4350
+F 0 "J9" H 13900 7500 50  0000 L CNN
+F 1 "MOP-TFT480116-38G-BLH-TPC_HM_DISPLAY" H 13900 7400 50  0000 L CNN
+F 2 "" H 13900 4350 50  0001 C CNN
+F 3 "" H 13900 4350 50  0001 C CNN
+	1    13900 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L special-azonenberg:MOP-TFT480116-38G-BLH-TPC_HM_TOUCHPANEL J28
+U 1 1 60868E02
+P 13900 5400
+F 0 "J28" H 13900 5350 50  0000 L CNN
+F 1 "MOP-TFT480116-38G-BLH-TPC_HM_TOUCHPANEL" H 13900 5250 50  0000 L CNN
+F 2 "" H 13900 5400 50  0001 C CNN
+F 3 "" H 13900 5400 50  0001 C CNN
+	1    13900 5400
+	1    0    0    -1  
+$EndComp
+Text Label 13700 4750 2    50   ~ 0
+GND
+Text Label 15200 1800 0    50   ~ 0
+GND
+Wire Wire Line
+	15200 1800 15200 1900
+Connection ~ 15200 1900
+Wire Wire Line
+	15200 1900 15200 2000
 $EndSCHEMATC
