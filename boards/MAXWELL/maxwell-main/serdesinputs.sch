@@ -48,9 +48,6 @@ F 3 "" H 1950 2400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1750 950  1750 1150
-Connection ~ 1750 1150
-Wire Wire Line
 	1750 1150 1750 1250
 Text HLabel 1750 950  0    50   Input ~ 0
 2V5
@@ -68,44 +65,6 @@ Text Label 2800 2100 0    50   ~ 0
 CH0_P
 Text Label 2800 2200 0    50   ~ 0
 CH0_N
-$Comp
-L device:C C78
-U 1 1 5F33EDC6
-P 3350 2000
-F 0 "C78" V 3300 2150 50  0000 C CNN
-F 1 "0.1 uF" V 3400 2200 50  0000 C CNN
-F 2 "" H 3388 1850 50  0001 C CNN
-F 3 "" H 3350 2000 50  0001 C CNN
-	1    3350 2000
-	0    1    1    0   
-$EndComp
-$Comp
-L device:C C79
-U 1 1 5F33F69B
-P 3350 2250
-F 0 "C79" V 3300 2400 50  0000 C CNN
-F 1 "0.1 uF" V 3400 2450 50  0000 C CNN
-F 2 "" H 3388 2100 50  0001 C CNN
-F 3 "" H 3350 2250 50  0001 C CNN
-	1    3350 2250
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	2800 2100 2800 2000
-Wire Wire Line
-	2800 2000 3200 2000
-Wire Wire Line
-	2800 2200 2800 2250
-Wire Wire Line
-	2800 2250 3200 2250
-Text Label 3800 2000 0    50   ~ 0
-CH0_AC_P
-Text Label 3800 2250 0    50   ~ 0
-CH0_AC_N
-Wire Wire Line
-	3800 2000 3500 2000
-Wire Wire Line
-	3500 2250 3800 2250
 Text HLabel 2800 1250 2    50   Input ~ 0
 MUX0_EQ
 $Comp
@@ -208,15 +167,8 @@ F 3 "" H 4600 2850 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4600 2700 4100 2700
-Connection ~ 2500 2700
 Wire Wire Line
 	2500 2700 2000 2700
-Connection ~ 3050 2700
-Wire Wire Line
-	3050 2700 2500 2700
-Connection ~ 3550 2700
-Wire Wire Line
-	3550 2700 3050 2700
 Connection ~ 4100 2700
 Wire Wire Line
 	4100 2700 3550 2700
@@ -225,10 +177,6 @@ Wire Wire Line
 Connection ~ 2500 3000
 Wire Wire Line
 	2500 3000 3050 3000
-Connection ~ 3050 3000
-Wire Wire Line
-	3050 3000 3550 3000
-Connection ~ 3550 3000
 Wire Wire Line
 	3550 3000 4100 3000
 Connection ~ 4100 3000
@@ -239,9 +187,9 @@ Text Label 2000 2700 2    50   ~ 0
 Text Label 2000 3000 2    50   ~ 0
 GND
 Text Label 9450 3450 2    50   ~ 0
-CH0_AC_P
+CH0_P
 Text Label 9450 3550 2    50   ~ 0
-CH0_AC_N
+CH0_N
 Text HLabel 8500 700  0    50   Input ~ 0
 REFCLK_P
 Text HLabel 8500 900  0    50   Input ~ 0
@@ -258,9 +206,6 @@ F 3 "" H 1950 5100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1750 3650 1750 3850
-Connection ~ 1750 3850
-Wire Wire Line
 	1750 3850 1750 3950
 Wire Wire Line
 	1750 4150 1750 4250
@@ -270,44 +215,6 @@ Text Label 2800 4800 0    50   ~ 0
 CH1_P
 Text Label 2800 4900 0    50   ~ 0
 CH1_N
-$Comp
-L device:C C81
-U 1 1 5F365011
-P 3350 4700
-F 0 "C81" V 3300 4850 50  0000 C CNN
-F 1 "0.1 uF" V 3400 4900 50  0000 C CNN
-F 2 "" H 3388 4550 50  0001 C CNN
-F 3 "" H 3350 4700 50  0001 C CNN
-	1    3350 4700
-	0    1    1    0   
-$EndComp
-$Comp
-L device:C C82
-U 1 1 5F36501B
-P 3350 4950
-F 0 "C82" V 3300 5100 50  0000 C CNN
-F 1 "0.1 uF" V 3400 5150 50  0000 C CNN
-F 2 "" H 3388 4800 50  0001 C CNN
-F 3 "" H 3350 4950 50  0001 C CNN
-	1    3350 4950
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	2800 4800 2800 4700
-Wire Wire Line
-	2800 4700 3200 4700
-Wire Wire Line
-	2800 4900 2800 4950
-Wire Wire Line
-	2800 4950 3200 4950
-Text Label 3800 4700 0    50   ~ 0
-CH1_AC_P
-Text Label 3800 4950 0    50   ~ 0
-CH1_AC_N
-Wire Wire Line
-	3800 4700 3500 4700
-Wire Wire Line
-	3500 4950 3800 4950
 Text HLabel 2800 3950 2    50   Input ~ 0
 MUX1_EQ
 $Comp
@@ -410,15 +317,8 @@ F 3 "" H 4600 5550 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4600 5400 4100 5400
-Connection ~ 2500 5400
 Wire Wire Line
 	2500 5400 2000 5400
-Connection ~ 3050 5400
-Wire Wire Line
-	3050 5400 2500 5400
-Connection ~ 3550 5400
-Wire Wire Line
-	3550 5400 3050 5400
 Connection ~ 4100 5400
 Wire Wire Line
 	4100 5400 3550 5400
@@ -449,9 +349,9 @@ SYNC_CLK_P
 Text HLabel 1750 5050 0    50   Input ~ 0
 SYNC_CLK_N
 Text Label 9450 2850 2    50   ~ 0
-CH1_AC_P
+CH1_P
 Text Label 9450 2950 2    50   ~ 0
-CH1_AC_N
+CH1_N
 $Comp
 L special-azonenberg:SY56017R U32
 U 1 1 5F382186
@@ -464,9 +364,6 @@ F 3 "" H 5850 2400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5650 950  5650 1150
-Connection ~ 5650 1150
-Wire Wire Line
 	5650 1150 5650 1250
 Wire Wire Line
 	5650 1450 5650 1550
@@ -476,44 +373,6 @@ Text Label 6700 2100 0    50   ~ 0
 CH2_P
 Text Label 6700 2200 0    50   ~ 0
 CH2_N
-$Comp
-L device:C C102
-U 1 1 5F38219B
-P 7250 2000
-F 0 "C102" V 7200 2150 50  0000 C CNN
-F 1 "0.1 uF" V 7300 2200 50  0000 C CNN
-F 2 "" H 7288 1850 50  0001 C CNN
-F 3 "" H 7250 2000 50  0001 C CNN
-	1    7250 2000
-	0    1    1    0   
-$EndComp
-$Comp
-L device:C C103
-U 1 1 5F3821A5
-P 7250 2250
-F 0 "C103" V 7200 2400 50  0000 C CNN
-F 1 "0.1 uF" V 7300 2450 50  0000 C CNN
-F 2 "" H 7288 2100 50  0001 C CNN
-F 3 "" H 7250 2250 50  0001 C CNN
-	1    7250 2250
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	6700 2100 6700 2000
-Wire Wire Line
-	6700 2000 7100 2000
-Wire Wire Line
-	6700 2200 6700 2250
-Wire Wire Line
-	6700 2250 7100 2250
-Text Label 7700 2000 0    50   ~ 0
-CH2_AC_P
-Text Label 7700 2250 0    50   ~ 0
-CH2_AC_N
-Wire Wire Line
-	7700 2000 7400 2000
-Wire Wire Line
-	7400 2250 7700 2250
 Text HLabel 6700 1250 2    50   Input ~ 0
 MUX2_EQ
 $Comp
@@ -616,12 +475,8 @@ F 3 "" H 8500 2850 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	8500 2700 8000 2700
-Connection ~ 6400 2700
 Wire Wire Line
 	6400 2700 5900 2700
-Connection ~ 6950 2700
-Wire Wire Line
-	6950 2700 6400 2700
 Connection ~ 7450 2700
 Wire Wire Line
 	7450 2700 6950 2700
@@ -658,9 +513,6 @@ F 3 "" H 5850 5100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5650 3650 5650 3850
-Connection ~ 5650 3850
-Wire Wire Line
 	5650 3850 5650 3950
 Wire Wire Line
 	5650 4150 5650 4250
@@ -668,46 +520,6 @@ Text HLabel 5650 4450 0    50   Input ~ 0
 MUX3_SEL
 Text Label 6700 4800 0    50   ~ 0
 CH3_P
-Text Label 6700 4900 0    50   ~ 0
-CH3_N
-$Comp
-L device:C C105
-U 1 1 5F382232
-P 7250 4700
-F 0 "C105" V 7200 4850 50  0000 C CNN
-F 1 "0.1 uF" V 7300 4900 50  0000 C CNN
-F 2 "" H 7288 4550 50  0001 C CNN
-F 3 "" H 7250 4700 50  0001 C CNN
-	1    7250 4700
-	0    1    1    0   
-$EndComp
-$Comp
-L device:C C106
-U 1 1 5F38223C
-P 7250 4950
-F 0 "C106" V 7200 5100 50  0000 C CNN
-F 1 "0.1 uF" V 7300 5150 50  0000 C CNN
-F 2 "" H 7288 4800 50  0001 C CNN
-F 3 "" H 7250 4950 50  0001 C CNN
-	1    7250 4950
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	6700 4800 6700 4700
-Wire Wire Line
-	6700 4700 7100 4700
-Wire Wire Line
-	6700 4900 6700 4950
-Wire Wire Line
-	6700 4950 7100 4950
-Text Label 7700 4700 0    50   ~ 0
-CH3_AC_P
-Text Label 7700 4950 0    50   ~ 0
-CH3_AC_N
-Wire Wire Line
-	7700 4700 7400 4700
-Wire Wire Line
-	7400 4950 7700 4950
 Text HLabel 6700 3950 2    50   Input ~ 0
 MUX3_EQ
 $Comp
@@ -810,12 +622,8 @@ F 3 "" H 8500 5550 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	8500 5400 8000 5400
-Connection ~ 6400 5400
 Wire Wire Line
 	6400 5400 5900 5400
-Connection ~ 6950 5400
-Wire Wire Line
-	6950 5400 6400 5400
 Connection ~ 7450 5400
 Wire Wire Line
 	7450 5400 6950 5400
@@ -845,17 +653,17 @@ Text Label 5650 3650 2    50   ~ 0
 Text Label 5650 4150 2    50   ~ 0
 GND
 Text Label 9450 1650 2    50   ~ 0
-CH3_AC_P
+CH3_P
 Text Label 9450 1750 2    50   ~ 0
-CH3_AC_N
+CH3_N
 Text Label 5650 950  2    50   ~ 0
 2V5
 Text Label 5650 1450 2    50   ~ 0
 GND
 Text Label 9450 2250 2    50   ~ 0
-CH2_AC_P
+CH2_P
 Text Label 9450 2350 2    50   ~ 0
-CH2_AC_N
+CH2_N
 $Comp
 L device:C C65
 U 1 1 5F4BC32B
@@ -1124,4 +932,32 @@ Text Label 8900 700  0    50   ~ 0
 REFCLK_AC_P
 Text Label 8900 900  0    50   ~ 0
 REFCLK_AC_N
+Text Label 6700 4900 0    50   ~ 0
+CH3_N
+Text HLabel 1750 1150 0    50   Input ~ 0
+1V2
+Connection ~ 3550 3000
+Connection ~ 3050 3000
+Wire Wire Line
+	3050 3000 3550 3000
+Connection ~ 3550 2700
+Wire Wire Line
+	3550 2700 3050 2700
+Text Label 5650 1150 2    50   ~ 0
+1V2
+Text Label 6950 2700 2    50   ~ 0
+1V2
+Text Label 3050 2700 2    50   ~ 0
+1V2
+Connection ~ 3550 5400
+Wire Wire Line
+	3550 5400 3050 5400
+Text Label 3050 5400 2    50   ~ 0
+1V2
+Text Label 6950 5400 2    50   ~ 0
+1V2
+Text Label 5650 3850 2    50   ~ 0
+1V2
+Text Label 1750 3850 2    50   ~ 0
+1V2
 $EndSCHEMATC
