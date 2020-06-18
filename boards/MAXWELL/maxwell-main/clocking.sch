@@ -3,9 +3,9 @@ EELAYER 30 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
-Sheet 14 15
+Sheet 13 15
 Title "MAXWELL Main Board"
-Date "2020-06-17"
+Date "2020-06-18"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
@@ -36,7 +36,7 @@ F 3 "" H 1800 8400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Sheet
-S 14300 1000 1150 2450
+S 14300 1000 1150 2150
 U 5F303230
 F0 "Trigger and Reference Inputs" 50
 F1 "trigger.sch" 50
@@ -58,8 +58,6 @@ F16 "2V5" I R 15450 1150 50
 F17 "TRIG_OUT" I L 14300 2750 50 
 F18 "GTX_TRIG_OUT_P" I L 14300 2950 50 
 F19 "GTX_TRIG_OUT_N" I L 14300 3050 50 
-F20 "GPIO_IN_P" O L 14300 3250 50 
-F21 "GPIO_IN_N" O L 14300 3350 50 
 $EndSheet
 Text HLabel 3100 1050 2    50   Output ~ 0
 S7_CLK_P
@@ -166,10 +164,6 @@ Text HLabel 14300 1950 0    50   Output ~ 0
 PPS_IN_P
 Text HLabel 14300 2050 0    50   Output ~ 0
 PPS_IN_N
-Text HLabel 14300 3250 0    50   Output ~ 0
-GPIO_IN_P
-Text HLabel 14300 3350 0    50   Output ~ 0
-GPIO_IN_N
 Text HLabel 1700 5450 0    50   Input ~ 0
 3V3
 Text HLabel 15450 1050 2    50   Input ~ 0
@@ -213,9 +207,9 @@ Text Label 3050 5750 0    50   ~ 0
 VCP1
 Text Label 3050 5850 0    50   ~ 0
 VCP2
-Text Label 3700 9000 0    50   ~ 0
+Text Label 5700 3750 2    50   ~ 0
 VCP1
-Text Label 3700 9100 0    50   ~ 0
+Text Label 6100 5300 2    50   ~ 0
 VCP2
 Wire Wire Line
 	3050 5550 3600 5550
@@ -251,16 +245,8 @@ NoConn ~ 3100 3850
 NoConn ~ 3100 4150
 NoConn ~ 3100 4350
 NoConn ~ 3100 4450
-Text Notes 2450 9100 0    50   ~ 0
-TODO: LMK decoupling
-Text Notes 2450 9200 0    50   ~ 0
-TODO: PLL loop filters
-Text Notes 2450 9300 0    50   ~ 0
-TODO: External VCXO
 Wire Wire Line
 	3050 5450 4150 5450
-Text Notes 8150 5200 0    50   ~ 0
-TODO: OCXO
 Text Label 1700 1050 2    50   ~ 0
 CLK_OCXO_AC_P
 Text Label 1700 1150 2    50   ~ 0
@@ -357,4 +343,562 @@ Text Label 5900 2350 2    50   ~ 0
 REF_IN_N
 Text Notes 5850 2750 0    50   ~ 0
 Termination and AC coupling for clock inputs
+$Comp
+L osc-azonenberg:CCSO-914X3-xxxx U46
+U 1 1 60EB6F23
+P 2200 8850
+F 0 "U46" H 2175 9137 60  0000 C CNN
+F 1 "AOCJYR-10.000MHZ-M5625LF" H 2175 9031 60  0000 C CNN
+F 2 "" H 2200 8850 60  0000 C CNN
+F 3 "" H 2200 8850 60  0000 C CNN
+	1    2200 8850
+	1    0    0    -1  
+$EndComp
+NoConn ~ 1500 8850
+Text Label 1500 8950 2    50   ~ 0
+3V3
+$Comp
+L analog-azonenberg:LMH7322 U?
+U 2 1 60ECECA1
+P 5200 9250
+AR Path="/5EEF3BE9/60ECECA1" Ref="U?"  Part="2" 
+AR Path="/5EEF3B79/5F303230/60ECECA1" Ref="U?"  Part="2" 
+AR Path="/5EEF3B79/60ECECA1" Ref="U38"  Part="2" 
+F 0 "U38" H 5125 10397 60  0000 C CNN
+F 1 "LMH7322" H 5125 10291 60  0000 C CNN
+F 2 "" H 4700 9200 60  0000 C CNN
+F 3 "" H 4700 9200 60  0000 C CNN
+	2    5200 9250
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:R R?
+U 1 1 60ECECA7
+P 4150 9250
+AR Path="/5EEF3B79/5F303230/60ECECA7" Ref="R?"  Part="1" 
+AR Path="/5EEF3B79/60ECECA7" Ref="R83"  Part="1" 
+F 0 "R83" V 4100 9450 50  0000 C CNN
+F 1 "4.99K" V 4150 9250 50  0000 C CNN
+F 2 "" V 4080 9250 50  0001 C CNN
+F 3 "" H 4150 9250 50  0001 C CNN
+	1    4150 9250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4300 9250 4500 9250
+Wire Wire Line
+	4500 9150 4000 9150
+Wire Wire Line
+	4000 9150 4000 9250
+$Comp
+L device:R R?
+U 1 1 60ECECB0
+P 5900 9150
+AR Path="/5EEF3B79/5F303230/60ECECB0" Ref="R?"  Part="1" 
+AR Path="/5EEF3B79/60ECECB0" Ref="R92"  Part="1" 
+F 0 "R92" V 5850 9350 50  0000 C CNN
+F 1 "10K" V 5900 9150 50  0000 C CNN
+F 2 "" V 5830 9150 50  0001 C CNN
+F 3 "" H 5900 9150 50  0001 C CNN
+	1    5900 9150
+	0    1    1    0   
+$EndComp
+$Comp
+L device:R R?
+U 1 1 60ECECB6
+P 5900 9250
+AR Path="/5EEF3B79/5F303230/60ECECB6" Ref="R?"  Part="1" 
+AR Path="/5EEF3B79/60ECECB6" Ref="R131"  Part="1" 
+F 0 "R131" V 5850 9450 50  0000 C CNN
+F 1 "10K" V 5900 9250 50  0000 C CNN
+F 2 "" V 5830 9250 50  0001 C CNN
+F 3 "" H 5900 9250 50  0001 C CNN
+	1    5900 9250
+	0    1    1    0   
+$EndComp
+Text Label 6200 9150 0    50   ~ 0
+5V0_N
+Wire Wire Line
+	6200 9150 6050 9150
+Text Label 6200 9250 0    50   ~ 0
+2V5
+Wire Wire Line
+	6200 9250 6050 9250
+Text Label 4500 8350 2    50   ~ 0
+5V0
+Text Label 4500 8450 2    50   ~ 0
+5V0_N
+Text Label 5750 8350 0    50   ~ 0
+2V5
+Wire Wire Line
+	5750 8350 5750 8450
+Wire Wire Line
+	3200 8850 4500 8850
+$Comp
+L device:R R?
+U 1 1 60ECECC8
+P 3200 9000
+AR Path="/5EEF3B79/5F303230/60ECECC8" Ref="R?"  Part="1" 
+AR Path="/5EEF3B79/60ECECC8" Ref="R76"  Part="1" 
+F 0 "R76" H 3270 9046 50  0000 L CNN
+F 1 "49.9" H 3270 8955 50  0000 L CNN
+F 2 "" V 3130 9000 50  0001 C CNN
+F 3 "" H 3200 9000 50  0001 C CNN
+	1    3200 9000
+	1    0    0    -1  
+$EndComp
+Text Label 3400 9150 0    50   ~ 0
+GND
+Wire Wire Line
+	3400 9150 3200 9150
+Text Label 4500 8950 2    50   ~ 0
+GND
+Wire Wire Line
+	3200 8850 2850 8850
+Connection ~ 3200 8850
+Text Label 5750 8850 0    50   ~ 0
+CLK_OCXO_P
+Text Label 5750 8950 0    50   ~ 0
+CLK_OCXO_N
+$Comp
+L device:R R?
+U 1 1 60EE22EA
+P 5400 9850
+AR Path="/5EEF3B79/5F303230/60EE22EA" Ref="R?"  Part="1" 
+AR Path="/5EEF3B79/60EE22EA" Ref="R84"  Part="1" 
+F 0 "R84" V 5350 9600 50  0000 C CNN
+F 1 "62" V 5400 9850 50  0000 C CNN
+F 2 "" V 5330 9850 50  0001 C CNN
+F 3 "" H 5400 9850 50  0001 C CNN
+	1    5400 9850
+	0    1    1    0   
+$EndComp
+Text Label 5550 9850 0    50   ~ 0
+CLK_OCXO_P
+Wire Wire Line
+	5050 9850 5250 9850
+$Comp
+L device:R R?
+U 1 1 60EE22F2
+P 6350 9850
+AR Path="/5EEF3B79/5F303230/60EE22F2" Ref="R?"  Part="1" 
+AR Path="/5EEF3B79/60EE22F2" Ref="R132"  Part="1" 
+F 0 "R132" V 6300 9550 50  0000 C CNN
+F 1 "240" V 6350 9850 50  0000 C CNN
+F 2 "" V 6280 9850 50  0001 C CNN
+F 3 "" H 6350 9850 50  0001 C CNN
+	1    6350 9850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6200 9850 5550 9850
+$Comp
+L device:R R?
+U 1 1 60EE22F9
+P 5400 9950
+AR Path="/5EEF3B79/5F303230/60EE22F9" Ref="R?"  Part="1" 
+AR Path="/5EEF3B79/60EE22F9" Ref="R89"  Part="1" 
+F 0 "R89" V 5350 9700 50  0000 C CNN
+F 1 "62" V 5400 9950 50  0000 C CNN
+F 2 "" V 5330 9950 50  0001 C CNN
+F 3 "" H 5400 9950 50  0001 C CNN
+	1    5400 9950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5050 9950 5250 9950
+$Comp
+L device:R R?
+U 1 1 60EE2301
+P 6350 9950
+AR Path="/5EEF3B79/5F303230/60EE2301" Ref="R?"  Part="1" 
+AR Path="/5EEF3B79/60EE2301" Ref="R139"  Part="1" 
+F 0 "R139" V 6300 9650 50  0000 C CNN
+F 1 "240" V 6350 9950 50  0000 C CNN
+F 2 "" V 6280 9950 50  0001 C CNN
+F 3 "" H 6350 9950 50  0001 C CNN
+	1    6350 9950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6200 9950 5550 9950
+Wire Wire Line
+	5050 9950 5050 9850
+Wire Wire Line
+	6500 9950 6500 9850
+Text Label 5050 9850 2    50   ~ 0
+GND
+Text Label 6500 9850 0    50   ~ 0
+2V5
+Text Label 5550 9950 0    50   ~ 0
+CLK_OCXO_N
+Text Label 1500 9050 2    50   ~ 0
+GND
+Text Label 950  8800 2    50   ~ 0
+3V3
+$Comp
+L device:C C281
+U 1 1 60EE77BF
+P 950 8950
+F 0 "C281" H 1065 8996 50  0000 L CNN
+F 1 "10 uF" H 1065 8905 50  0000 L CNN
+F 2 "" H 988 8800 50  0001 C CNN
+F 3 "" H 950 8950 50  0001 C CNN
+	1    950  8950
+	1    0    0    -1  
+$EndComp
+Text Label 950  9100 2    50   ~ 0
+GND
+Text Notes 7950 3050 0    50   ~ 0
+PLL configuration\n\nPLL1_R = 1\nPLL1_N = 1\nPLL1 PFD freq = 10 MHz\nPLL1 VCXO: 100 MHz\nVCO tune slope = 60 ppm/V = 6 kHz/V\nPLL1 CP = 1.6 mA\nPLL1 loop filter:\n* R2 = 3.9K\n* C1 = 5.6 nF\n* C2 = 270 nF\nOSCout_DIV = 1\n\nPLL2_R = 2\nPLL2_N_PRE = 2\nPLL2_N = 25\nPLL2 PFD = 50 MHz\nPLL2 CP = 3.2 mA\nPLL2 loop filter:\n* C1 = 39 pF\n* C2 = 3.3 nF\n* C3 = 0.01 nF (integrated)\n* C4 = 0.01 nF (integrated)\n* R2 = 820\n* R3 = 200 (integrated)\n* R4 = 200 (integrated)\n\nPLL2 VCO = 2.5 GHz
+$Comp
+L osc-azonenberg:OSC_LVDS_VCXO U47
+U 1 1 60F4816C
+P 6000 3900
+F 0 "U47" H 6300 4697 60  0000 C CNN
+F 1 "565BAA100M000ABG" H 6300 4591 60  0000 C CNN
+F 2 "" H 6000 3900 60  0000 C CNN
+F 3 "" H 6000 3900 60  0000 C CNN
+	1    6000 3900
+	1    0    0    -1  
+$EndComp
+Text Label 5700 3350 2    50   ~ 0
+3V3
+Text Label 5700 3450 2    50   ~ 0
+GND
+Text Label 5700 3850 2    50   ~ 0
+3V3
+$Comp
+L device:C C292
+U 1 1 60F48ED2
+P 7550 3450
+F 0 "C292" V 7298 3450 50  0000 C CNN
+F 1 "0.1 uF" V 7389 3450 50  0000 C CNN
+F 2 "" H 7588 3300 50  0001 C CNN
+F 3 "" H 7550 3450 50  0001 C CNN
+	1    7550 3450
+	0    1    1    0   
+$EndComp
+$Comp
+L device:C C293
+U 1 1 60F48EDC
+P 7550 3750
+F 0 "C293" V 7700 3750 50  0000 C CNN
+F 1 "0.1 uF" V 7800 3750 50  0000 C CNN
+F 2 "" H 7588 3600 50  0001 C CNN
+F 3 "" H 7550 3750 50  0001 C CNN
+	1    7550 3750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6900 3550 6900 3450
+Wire Wire Line
+	6900 3450 7400 3450
+Wire Wire Line
+	6900 3650 6900 3750
+Wire Wire Line
+	6900 3750 7400 3750
+Text Label 6900 3450 0    50   ~ 0
+VCXO_P
+Text Label 6900 3750 0    50   ~ 0
+VCXO_N
+Text Label 7700 3450 0    50   ~ 0
+VCXO_AC_P
+Text Label 7700 3750 0    50   ~ 0
+VCXO_AC_N
+Text Label 1700 1650 2    50   ~ 0
+VCXO_AC_P
+Text Label 1700 1750 2    50   ~ 0
+VCXO_AC_N
+$Comp
+L device:C C284
+U 1 1 60F5C688
+P 6050 4300
+F 0 "C284" H 6165 4346 50  0000 L CNN
+F 1 "5.6 nF" H 6165 4255 50  0000 L CNN
+F 2 "" H 6088 4150 50  0001 C CNN
+F 3 "" H 6050 4300 50  0001 C CNN
+	1    6050 4300
+	1    0    0    -1  
+$EndComp
+Text Label 6050 4150 2    50   ~ 0
+VCP1
+Text Label 6050 4750 2    50   ~ 0
+GND
+$Comp
+L device:C C287
+U 1 1 60F5D26D
+P 6600 4300
+F 0 "C287" H 6715 4346 50  0000 L CNN
+F 1 "270 nF" H 6715 4255 50  0000 L CNN
+F 2 "" H 6638 4150 50  0001 C CNN
+F 3 "" H 6600 4300 50  0001 C CNN
+	1    6600 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:R R140
+U 1 1 60F5D6CF
+P 6600 4600
+F 0 "R140" H 6670 4646 50  0000 L CNN
+F 1 "3.9K" H 6670 4555 50  0000 L CNN
+F 2 "" V 6530 4600 50  0001 C CNN
+F 3 "" H 6600 4600 50  0001 C CNN
+	1    6600 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 4750 6600 4750
+Wire Wire Line
+	6050 4750 6050 4450
+Wire Wire Line
+	6050 4150 6600 4150
+$Comp
+L device:C C285
+U 1 1 60F5FA10
+P 6100 5450
+F 0 "C285" H 6215 5496 50  0000 L CNN
+F 1 "39 pF" H 6215 5405 50  0000 L CNN
+F 2 "" H 6138 5300 50  0001 C CNN
+F 3 "" H 6100 5450 50  0001 C CNN
+	1    6100 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C288
+U 1 1 60F5FDF2
+P 6600 5450
+F 0 "C288" H 6715 5496 50  0000 L CNN
+F 1 "3.3 nF" H 6715 5405 50  0000 L CNN
+F 2 "" H 6638 5300 50  0001 C CNN
+F 3 "" H 6600 5450 50  0001 C CNN
+	1    6600 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:R R141
+U 1 1 60F600EB
+P 6600 5750
+F 0 "R141" H 6670 5796 50  0000 L CNN
+F 1 "820" H 6670 5705 50  0000 L CNN
+F 2 "" V 6530 5750 50  0001 C CNN
+F 3 "" H 6600 5750 50  0001 C CNN
+	1    6600 5750
+	1    0    0    -1  
+$EndComp
+Text Label 6100 5900 2    50   ~ 0
+GND
+Wire Wire Line
+	6100 5900 6600 5900
+Wire Wire Line
+	6100 5900 6100 5600
+Wire Wire Line
+	6100 5300 6600 5300
+$Comp
+L device:C C286
+U 1 1 60F66D93
+P 6100 6550
+F 0 "C286" H 6215 6596 50  0000 L CNN
+F 1 "4.7 uF" H 6215 6505 50  0000 L CNN
+F 2 "" H 6138 6400 50  0001 C CNN
+F 3 "" H 6100 6550 50  0001 C CNN
+	1    6100 6550
+	1    0    0    -1  
+$EndComp
+$Comp
+L passive-azonenberg:INDUCTOR_PWROUT FB4
+U 1 1 60F6793F
+P 6400 6400
+F 0 "FB4" V 6242 6400 40  0000 C CNN
+F 1 "600R @ 100 MHz" V 6318 6400 40  0000 C CNN
+F 2 "" H 6400 6400 60  0000 C CNN
+F 3 "" H 6400 6400 60  0000 C CNN
+	1    6400 6400
+	0    1    1    0   
+$EndComp
+Text Label 6100 6400 2    50   ~ 0
+3V3
+$Comp
+L device:C C289
+U 1 1 60F6AF09
+P 6700 6550
+F 0 "C289" H 6815 6596 50  0000 L CNN
+F 1 "0.47 uF" H 6815 6505 50  0000 L CNN
+F 2 "" H 6738 6400 50  0001 C CNN
+F 3 "" H 6700 6550 50  0001 C CNN
+	1    6700 6550
+	1    0    0    -1  
+$EndComp
+Text Label 6700 6400 0    50   ~ 0
+VCC_CLK23
+Text Label 6100 6700 2    50   ~ 0
+GND
+Wire Wire Line
+	6100 6700 6700 6700
+Text Label 1700 5550 2    50   ~ 0
+VCC_CLK23
+$Comp
+L passive-azonenberg:INDUCTOR_PWROUT FB5
+U 1 1 60F6CB4F
+P 6400 6950
+F 0 "FB5" V 6242 6950 40  0000 C CNN
+F 1 "600R @ 100 MHz" V 6318 6950 40  0000 C CNN
+F 2 "" H 6400 6950 60  0000 C CNN
+F 3 "" H 6400 6950 60  0000 C CNN
+	1    6400 6950
+	0    1    1    0   
+$EndComp
+Text Label 6100 6950 2    50   ~ 0
+3V3
+$Comp
+L device:C C290
+U 1 1 60F6CB5A
+P 6700 7100
+F 0 "C290" H 6815 7146 50  0000 L CNN
+F 1 "0.47 uF" H 6815 7055 50  0000 L CNN
+F 2 "" H 6738 6950 50  0001 C CNN
+F 3 "" H 6700 7100 50  0001 C CNN
+	1    6700 7100
+	1    0    0    -1  
+$EndComp
+Text Label 6700 6950 0    50   ~ 0
+VCC_CLK89
+Text Label 6100 7250 2    50   ~ 0
+GND
+Wire Wire Line
+	6100 7250 6700 7250
+Text Label 1700 6450 2    50   ~ 0
+VCC_CLK89
+Text Label 1700 6650 2    50   ~ 0
+VCC_CLK89
+$Comp
+L passive-azonenberg:INDUCTOR_PWROUT FB6
+U 1 1 60F6FAC8
+P 6400 7500
+F 0 "FB6" V 6242 7500 40  0000 C CNN
+F 1 "600R @ 100 MHz" V 6318 7500 40  0000 C CNN
+F 2 "" H 6400 7500 60  0000 C CNN
+F 3 "" H 6400 7500 60  0000 C CNN
+	1    6400 7500
+	0    1    1    0   
+$EndComp
+Text Label 6100 7500 2    50   ~ 0
+3V3
+$Comp
+L device:C C291
+U 1 1 60F6FAD3
+P 6700 7650
+F 0 "C291" H 6815 7696 50  0000 L CNN
+F 1 "0.47 uF" H 6815 7605 50  0000 L CNN
+F 2 "" H 6738 7500 50  0001 C CNN
+F 3 "" H 6700 7650 50  0001 C CNN
+	1    6700 7650
+	1    0    0    -1  
+$EndComp
+Text Label 6700 7500 0    50   ~ 0
+VCC_CLK45
+Text Label 6100 7800 2    50   ~ 0
+GND
+Wire Wire Line
+	6100 7800 6700 7800
+Text Label 1700 5650 2    50   ~ 0
+VCC_CLK45
+$Comp
+L passive-azonenberg:INDUCTOR_PWROUT FB9
+U 1 1 60F710A9
+P 7850 6400
+F 0 "FB9" V 7692 6400 40  0000 C CNN
+F 1 "600R @ 100 MHz" V 7768 6400 40  0000 C CNN
+F 2 "" H 7850 6400 60  0000 C CNN
+F 3 "" H 7850 6400 60  0000 C CNN
+	1    7850 6400
+	0    1    1    0   
+$EndComp
+Text Label 7550 6400 2    50   ~ 0
+3V3
+$Comp
+L device:C C296
+U 1 1 60F710B4
+P 8150 6550
+F 0 "C296" H 8265 6596 50  0000 L CNN
+F 1 "0.47 uF" H 8265 6505 50  0000 L CNN
+F 2 "" H 8188 6400 50  0001 C CNN
+F 3 "" H 8150 6550 50  0001 C CNN
+	1    8150 6550
+	1    0    0    -1  
+$EndComp
+Text Label 8150 6400 0    50   ~ 0
+VCC_CLK67
+Text Label 7550 6700 2    50   ~ 0
+GND
+Wire Wire Line
+	7550 6700 8150 6700
+Text Label 1700 6350 2    50   ~ 0
+VCC_CLK67
+Text Label 1700 6550 2    50   ~ 0
+VCC_CLK67
+$Comp
+L passive-azonenberg:INDUCTOR_PWROUT FB7
+U 1 1 60F77B54
+P 7800 6950
+F 0 "FB7" V 7642 6950 40  0000 C CNN
+F 1 "600R @ 100 MHz" V 7718 6950 40  0000 C CNN
+F 2 "" H 7800 6950 60  0000 C CNN
+F 3 "" H 7800 6950 60  0000 C CNN
+	1    7800 6950
+	0    1    1    0   
+$EndComp
+Text Label 7500 6950 2    50   ~ 0
+3V3
+$Comp
+L device:C C294
+U 1 1 60F77B5F
+P 8100 7100
+F 0 "C294" H 8215 7146 50  0000 L CNN
+F 1 "0.47 uF" H 8215 7055 50  0000 L CNN
+F 2 "" H 8138 6950 50  0001 C CNN
+F 3 "" H 8100 7100 50  0001 C CNN
+	1    8100 7100
+	1    0    0    -1  
+$EndComp
+Text Label 8100 6950 0    50   ~ 0
+VCC_PLL1
+Text Label 7500 7250 2    50   ~ 0
+GND
+Wire Wire Line
+	7500 7250 8100 7250
+Text Label 1700 5950 2    50   ~ 0
+VCC_PLL1
+Text Label 1700 6150 2    50   ~ 0
+VCC_PLL2
+$Comp
+L passive-azonenberg:INDUCTOR_PWROUT FB8
+U 1 1 60F790DE
+P 7800 7500
+F 0 "FB8" V 7642 7500 40  0000 C CNN
+F 1 "600R @ 100 MHz" V 7718 7500 40  0000 C CNN
+F 2 "" H 7800 7500 60  0000 C CNN
+F 3 "" H 7800 7500 60  0000 C CNN
+	1    7800 7500
+	0    1    1    0   
+$EndComp
+Text Label 7500 7500 2    50   ~ 0
+3V3
+$Comp
+L device:C C295
+U 1 1 60F790E9
+P 8100 7650
+F 0 "C295" H 8215 7696 50  0000 L CNN
+F 1 "0.47 uF" H 8215 7605 50  0000 L CNN
+F 2 "" H 8138 7500 50  0001 C CNN
+F 3 "" H 8100 7650 50  0001 C CNN
+	1    8100 7650
+	1    0    0    -1  
+$EndComp
+Text Label 8100 7500 0    50   ~ 0
+VCC_PLL2
+Text Label 7500 7800 2    50   ~ 0
+GND
+Wire Wire Line
+	7500 7800 8100 7800
 $EndSCHEMATC

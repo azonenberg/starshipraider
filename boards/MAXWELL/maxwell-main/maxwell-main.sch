@@ -5,7 +5,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 15
 Title "MAXWELL Main Board"
-Date "2020-06-17"
+Date "2020-06-18"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
@@ -149,8 +149,6 @@ F18 "K7_SPI_SCK" I R 6250 3750 50
 F19 "PLL_SYNC" O L 4850 4850 50 
 F20 "PPS_IN_P" I R 6250 4700 50 
 F21 "PPS_IN_N" I R 6250 4800 50 
-F22 "GPIO_IN_P" I R 6250 5000 50 
-F23 "GPIO_IN_N" I R 6250 5100 50 
 F24 "SCPI_UART_TX" I R 6250 5650 50 
 F25 "SCPI_UART_RX" O R 6250 5750 50 
 $EndSheet
@@ -193,8 +191,6 @@ F32 "PLL_STATUS_CLKIN1" B R 4000 5550 50
 F33 "GND" O R 4000 4550 50 
 F34 "PPS_IN_P" O R 4000 5750 50 
 F35 "PPS_IN_N" O R 4000 5850 50 
-F36 "GPIO_IN_P" O R 4000 6050 50 
-F37 "GPIO_IN_N" O R 4000 6150 50 
 F38 "3V3" I R 4000 4350 50 
 F39 "5V0" I R 4000 4250 50 
 F40 "2V5" I R 4000 4450 50 
@@ -346,10 +342,6 @@ Text Label 4000 5750 0    50   ~ 0
 PPS_IN_P
 Text Label 4000 5850 0    50   ~ 0
 PPS_IN_N
-Text Label 4000 6050 0    50   ~ 0
-GPIO_IN_P
-Text Label 4000 6150 0    50   ~ 0
-GPIO_IN_N
 Text Label 8350 1350 0    50   ~ 0
 PLL_SPI_LE
 Text Label 8350 1450 0    50   ~ 0
@@ -368,10 +360,6 @@ Text Label 6250 4700 0    50   ~ 0
 PPS_IN_P
 Text Label 6250 4800 0    50   ~ 0
 PPS_IN_N
-Text Label 6250 5000 0    50   ~ 0
-GPIO_IN_P
-Text Label 6250 5100 0    50   ~ 0
-GPIO_IN_N
 Text Label 2000 4750 0    50   ~ 0
 5V0
 Text Label 2000 5850 0    50   ~ 0

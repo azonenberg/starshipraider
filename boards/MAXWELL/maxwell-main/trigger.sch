@@ -3,9 +3,9 @@ EELAYER 30 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
-Sheet 15 15
+Sheet 14 15
 Title "MAXWELL Main Board"
-Date "2020-06-17"
+Date "2020-06-18"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
@@ -98,19 +98,6 @@ Text HLabel 5550 4150 2    50   Output ~ 0
 PPS_IN_P
 Text HLabel 5550 4250 2    50   Output ~ 0
 PPS_IN_N
-$Comp
-L analog-azonenberg:LMH7322 U?
-U 2 1 5F0443EC
-P 5000 5950
-AR Path="/5EEF3BE9/5F0443EC" Ref="U?"  Part="2" 
-AR Path="/5EEF3B79/5F303230/5F0443EC" Ref="U38"  Part="2" 
-F 0 "U38" H 4925 7097 60  0000 C CNN
-F 1 "LMH7322" H 4925 6991 60  0000 C CNN
-F 2 "" H 4500 5900 60  0000 C CNN
-F 3 "" H 4500 5900 60  0000 C CNN
-	2    5000 5950
-	1    0    0    -1  
-$EndComp
 Text HLabel 1350 6400 2    50   Input ~ 0
 REF_OUT_P
 Text HLabel 1350 7000 2    50   Input ~ 0
@@ -123,8 +110,8 @@ Text Label 3050 1350 0    50   ~ 0
 TRIG_IN_ATTEN
 Text Label 4300 2750 2    50   ~ 0
 REF_IN_AC
-Text Notes 6850 3200 0    50   ~ 0
-TODO: PECL load resistors
+Text Notes 9350 6850 0    50   ~ 0
+PECL load resistors
 Wire Wire Line
 	5550 850  5550 950 
 Wire Wire Line
@@ -454,61 +441,6 @@ Wire Wire Line
 Wire Wire Line
 	3800 4450 3800 4550
 $Comp
-L device:R R76
-U 1 1 60359EC0
-P 3950 5950
-F 0 "R76" V 3900 6150 50  0000 C CNN
-F 1 "4.99K" V 3950 5950 50  0000 C CNN
-F 2 "" V 3880 5950 50  0001 C CNN
-F 3 "" H 3950 5950 50  0001 C CNN
-	1    3950 5950
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	4100 5950 4300 5950
-Wire Wire Line
-	4300 5850 3800 5850
-Wire Wire Line
-	3800 5850 3800 5950
-$Comp
-L device:R R83
-U 1 1 6035B046
-P 5700 5850
-F 0 "R83" V 5650 6050 50  0000 C CNN
-F 1 "10K" V 5700 5850 50  0000 C CNN
-F 2 "" V 5630 5850 50  0001 C CNN
-F 3 "" H 5700 5850 50  0001 C CNN
-	1    5700 5850
-	0    1    1    0   
-$EndComp
-$Comp
-L device:R R84
-U 1 1 6035B050
-P 5700 5950
-F 0 "R84" V 5650 6150 50  0000 C CNN
-F 1 "10K" V 5700 5950 50  0000 C CNN
-F 2 "" V 5630 5950 50  0001 C CNN
-F 3 "" H 5700 5950 50  0001 C CNN
-	1    5700 5950
-	0    1    1    0   
-$EndComp
-Text Label 6000 5850 0    50   ~ 0
-5V0_N
-Wire Wire Line
-	6000 5850 5850 5850
-Text Label 6000 5950 0    50   ~ 0
-2V5
-Wire Wire Line
-	6000 5950 5850 5950
-Text Label 4300 5050 2    50   ~ 0
-5V0
-Text Label 4300 5150 2    50   ~ 0
-5V0_N
-Text Label 5550 5050 0    50   ~ 0
-2V5
-Wire Wire Line
-	5550 5050 5550 5150
-$Comp
 L special-azonenberg:SY89835U U40
 U 1 1 60370C57
 P 6900 1650
@@ -554,7 +486,7 @@ Wire Wire Line
 	1350 8100 1150 8100
 Text Label 1350 8300 0    50   ~ 0
 GND
-Text HLabel 1350 8650 2    50   Input ~ 0
+Text HLabel 2250 8650 2    50   Input ~ 0
 GTX_TRIG_OUT_P
 $Comp
 L Connector:Conn_Coaxial J?
@@ -571,11 +503,9 @@ F 3 "" H 1000 8650 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1350 8850 1000 8850
-Wire Wire Line
-	1350 8650 1150 8650
 Text Label 1350 8850 0    50   ~ 0
 GND
-Text HLabel 1350 9200 2    50   Input ~ 0
+Text HLabel 2250 9200 2    50   Input ~ 0
 GTX_TRIG_OUT_N
 $Comp
 L Connector:Conn_Coaxial J?
@@ -592,53 +522,8 @@ F 3 "" H 1000 9200 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1350 9400 1000 9400
-Wire Wire Line
-	1350 9200 1150 9200
 Text Label 1350 9400 0    50   ~ 0
 GND
-$Comp
-L Connector:Conn_Coaxial J?
-U 1 1 604D4B86
-P 1000 5550
-AR Path="/5EEF3BE9/604D4B86" Ref="J?"  Part="1" 
-AR Path="/5EEF3B79/5F303230/604D4B86" Ref="J24"  Part="1" 
-F 0 "J24" H 953 5788 50  0000 C CNN
-F 1 "901-10511-3" H 953 5697 50  0000 C CNN
-F 2 "" H 1000 5550 50  0001 C CNN
-F 3 "" H 1000 5550 50  0001 C CNN
-	1    1000 5550
-	-1   0    0    -1  
-$EndComp
-Text Label 1350 5550 0    50   ~ 0
-GPIO_IN
-Text Label 850  5750 2    50   ~ 0
-GND
-Text Label 3050 5550 0    50   ~ 0
-GPIO_IN_ATTEN
-$Comp
-L analog-azonenberg:ATTEN_RF_PI_SMALL R89
-U 1 1 604D4B93
-P 2050 5800
-F 0 "R89" H 2425 6297 60  0000 C CNN
-F 1 "PAT1220-C-6DB-T5" H 2425 6191 60  0000 C CNN
-F 2 "" H 2050 5800 60  0001 C CNN
-F 3 "" H 2050 5800 60  0001 C CNN
-	1    2050 5800
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3000 5550 4300 5550
-Wire Wire Line
-	1150 5550 1850 5550
-Wire Wire Line
-	1000 5750 1850 5750
-Wire Wire Line
-	850  5750 1000 5750
-Connection ~ 1000 5750
-Text HLabel 5550 5550 2    50   Output ~ 0
-GPIO_IN_P
-Text HLabel 5550 5650 2    50   Output ~ 0
-GPIO_IN_N
 $Comp
 L device:C C205
 U 1 1 604EABEC
@@ -1049,22 +934,6 @@ GND
 Wire Wire Line
 	3200 4450 3000 4450
 $Comp
-L device:R R92
-U 1 1 605267E7
-P 3000 5700
-F 0 "R92" H 3070 5746 50  0000 L CNN
-F 1 "49.9" H 3070 5655 50  0000 L CNN
-F 2 "" V 2930 5700 50  0001 C CNN
-F 3 "" H 3000 5700 50  0001 C CNN
-	1    3000 5700
-	1    0    0    -1  
-$EndComp
-Connection ~ 3000 5550
-Text Label 3200 5850 0    50   ~ 0
-GND
-Wire Wire Line
-	3200 5850 3000 5850
-$Comp
 L device:C C223
 U 1 1 6052F538
 P 6900 1950
@@ -1097,8 +966,6 @@ Wire Wire Line
 Text Label 4300 2850 2    50   ~ 0
 GND
 Text Label 4300 4250 2    50   ~ 0
-GND
-Text Label 4300 5650 2    50   ~ 0
 GND
 Text Label 3400 2950 2    50   ~ 0
 REF_IN_AC
@@ -1140,16 +1007,12 @@ F 3 "" H 9600 2400 60  0000 C CNN
 $EndComp
 Wire Wire Line
 	9300 1750 9300 1850
-Wire Wire Line
-	9300 1950 9300 2050
 Text Label 9300 2250 2    50   ~ 0
 GND
 Wire Wire Line
 	9300 2250 9300 2350
 Text Label 9300 1750 2    50   ~ 0
 PPS_IN_ATTEN
-Text Label 9300 1950 2    50   ~ 0
-GPIO_IN_ATTEN
 $Comp
 L special-azonenberg:RCLAMP0542T U43
 U 1 1 6075D7E1
@@ -1219,4 +1082,236 @@ Text Label 9300 4400 2    50   ~ 0
 GTX_TRIG_OUT_P
 Text Label 9300 4600 2    50   ~ 0
 GTX_TRIG_OUT_N
+$Comp
+L device:R R125
+U 1 1 60E72EAC
+P 9450 6200
+F 0 "R125" V 9400 5950 50  0000 C CNN
+F 1 "62" V 9450 6200 50  0000 C CNN
+F 2 "" V 9380 6200 50  0001 C CNN
+F 3 "" H 9450 6200 50  0001 C CNN
+	1    9450 6200
+	0    1    1    0   
+$EndComp
+Text Label 9600 6200 0    50   ~ 0
+TRIG_IN_P
+Text Label 9100 6200 2    50   ~ 0
+GND
+Wire Wire Line
+	9100 6200 9300 6200
+$Comp
+L device:R R133
+U 1 1 60E7DB81
+P 10400 6200
+F 0 "R133" V 10350 5900 50  0000 C CNN
+F 1 "240" V 10400 6200 50  0000 C CNN
+F 2 "" V 10330 6200 50  0001 C CNN
+F 3 "" H 10400 6200 50  0001 C CNN
+	1    10400 6200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	10250 6200 9600 6200
+Text Label 10550 6200 0    50   ~ 0
+2V5
+$Comp
+L device:R R126
+U 1 1 60E8317F
+P 9450 6300
+F 0 "R126" V 9400 6050 50  0000 C CNN
+F 1 "62" V 9450 6300 50  0000 C CNN
+F 2 "" V 9380 6300 50  0001 C CNN
+F 3 "" H 9450 6300 50  0001 C CNN
+	1    9450 6300
+	0    1    1    0   
+$EndComp
+Text Label 9600 6300 0    50   ~ 0
+TRIG_IN_N
+Wire Wire Line
+	9100 6300 9300 6300
+$Comp
+L device:R R134
+U 1 1 60E8318B
+P 10400 6300
+F 0 "R134" V 10350 6000 50  0000 C CNN
+F 1 "240" V 10400 6300 50  0000 C CNN
+F 2 "" V 10330 6300 50  0001 C CNN
+F 3 "" H 10400 6300 50  0001 C CNN
+	1    10400 6300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	10250 6300 9600 6300
+$Comp
+L device:R R127
+U 1 1 60E8C7F2
+P 9450 6400
+F 0 "R127" V 9400 6150 50  0000 C CNN
+F 1 "62" V 9450 6400 50  0000 C CNN
+F 2 "" V 9380 6400 50  0001 C CNN
+F 3 "" H 9450 6400 50  0001 C CNN
+	1    9450 6400
+	0    1    1    0   
+$EndComp
+Text Label 9600 6400 0    50   ~ 0
+REF_IN_P
+Wire Wire Line
+	9100 6400 9300 6400
+$Comp
+L device:R R135
+U 1 1 60E8C7FE
+P 10400 6400
+F 0 "R135" V 10350 6100 50  0000 C CNN
+F 1 "240" V 10400 6400 50  0000 C CNN
+F 2 "" V 10330 6400 50  0001 C CNN
+F 3 "" H 10400 6400 50  0001 C CNN
+	1    10400 6400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	10250 6400 9600 6400
+$Comp
+L device:R R128
+U 1 1 60E8C809
+P 9450 6500
+F 0 "R128" V 9400 6250 50  0000 C CNN
+F 1 "62" V 9450 6500 50  0000 C CNN
+F 2 "" V 9380 6500 50  0001 C CNN
+F 3 "" H 9450 6500 50  0001 C CNN
+	1    9450 6500
+	0    1    1    0   
+$EndComp
+Text Label 9600 6500 0    50   ~ 0
+REF_IN_N
+Wire Wire Line
+	9100 6500 9300 6500
+$Comp
+L device:R R136
+U 1 1 60E8C815
+P 10400 6500
+F 0 "R136" V 10350 6200 50  0000 C CNN
+F 1 "240" V 10400 6500 50  0000 C CNN
+F 2 "" V 10330 6500 50  0001 C CNN
+F 3 "" H 10400 6500 50  0001 C CNN
+	1    10400 6500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	10250 6500 9600 6500
+$Comp
+L device:R R129
+U 1 1 60E92822
+P 9450 6600
+F 0 "R129" V 9400 6350 50  0000 C CNN
+F 1 "62" V 9450 6600 50  0000 C CNN
+F 2 "" V 9380 6600 50  0001 C CNN
+F 3 "" H 9450 6600 50  0001 C CNN
+	1    9450 6600
+	0    1    1    0   
+$EndComp
+Text Label 9600 6600 0    50   ~ 0
+PPS_IN_P
+Wire Wire Line
+	9100 6600 9300 6600
+$Comp
+L device:R R137
+U 1 1 60E9282E
+P 10400 6600
+F 0 "R137" V 10350 6300 50  0000 C CNN
+F 1 "240" V 10400 6600 50  0000 C CNN
+F 2 "" V 10330 6600 50  0001 C CNN
+F 3 "" H 10400 6600 50  0001 C CNN
+	1    10400 6600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	10250 6600 9600 6600
+$Comp
+L device:R R130
+U 1 1 60E92839
+P 9450 6700
+F 0 "R130" V 9400 6450 50  0000 C CNN
+F 1 "62" V 9450 6700 50  0000 C CNN
+F 2 "" V 9380 6700 50  0001 C CNN
+F 3 "" H 9450 6700 50  0001 C CNN
+	1    9450 6700
+	0    1    1    0   
+$EndComp
+Text Label 9600 6700 0    50   ~ 0
+PPS_IN_N
+Wire Wire Line
+	9100 6700 9300 6700
+$Comp
+L device:R R138
+U 1 1 60E92845
+P 10400 6700
+F 0 "R138" V 10350 6400 50  0000 C CNN
+F 1 "240" V 10400 6700 50  0000 C CNN
+F 2 "" V 10330 6700 50  0001 C CNN
+F 3 "" H 10400 6700 50  0001 C CNN
+	1    10400 6700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	10250 6700 9600 6700
+Connection ~ 9100 6300
+Wire Wire Line
+	9100 6300 9100 6200
+Connection ~ 9100 6400
+Wire Wire Line
+	9100 6400 9100 6300
+Connection ~ 9100 6500
+Wire Wire Line
+	9100 6500 9100 6400
+Connection ~ 9100 6600
+Wire Wire Line
+	9100 6600 9100 6500
+Wire Wire Line
+	9100 6700 9100 6600
+Connection ~ 10550 6300
+Wire Wire Line
+	10550 6300 10550 6200
+Connection ~ 10550 6400
+Wire Wire Line
+	10550 6400 10550 6300
+Connection ~ 10550 6500
+Wire Wire Line
+	10550 6500 10550 6400
+Connection ~ 10550 6600
+Wire Wire Line
+	10550 6600 10550 6500
+Wire Wire Line
+	10550 6700 10550 6600
+$Comp
+L device:C C282
+U 1 1 60F0A5F8
+P 2100 8650
+F 0 "C282" V 1848 8650 50  0000 C CNN
+F 1 "0.1 uF" V 1939 8650 50  0000 C CNN
+F 2 "" H 2138 8500 50  0001 C CNN
+F 3 "" H 2100 8650 50  0001 C CNN
+	1    2100 8650
+	0    1    1    0   
+$EndComp
+$Comp
+L device:C C283
+U 1 1 60F0B0B2
+P 2100 9200
+F 0 "C283" V 1848 9200 50  0000 C CNN
+F 1 "0.1 uF" V 1939 9200 50  0000 C CNN
+F 2 "" H 2138 9050 50  0001 C CNN
+F 3 "" H 2100 9200 50  0001 C CNN
+	1    2100 9200
+	0    1    1    0   
+$EndComp
+Text Label 1200 8650 0    50   ~ 0
+GTX_TRIG_OUT_AC_P
+Text Label 1200 9200 0    50   ~ 0
+GTX_TRIG_OUT_AC_N
+Wire Wire Line
+	1150 8650 1950 8650
+Wire Wire Line
+	1150 9200 1950 9200
+NoConn ~ 9300 1950
+NoConn ~ 9300 2050
 $EndSCHEMATC

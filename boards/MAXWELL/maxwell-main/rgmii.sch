@@ -3,9 +3,9 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 13 15
+Sheet 12 15
 Title "MAXWELL Main Board"
-Date "2020-06-17"
+Date "2020-06-18"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
@@ -1108,10 +1108,6 @@ Text HLabel 2050 2500 0    50   Input ~ 0
 PPS_IN_P
 Text HLabel 2050 2600 0    50   Input ~ 0
 PPS_IN_N
-Text HLabel 2050 2700 0    50   Input ~ 0
-GPIO_IN_P
-Text HLabel 2050 2800 0    50   Input ~ 0
-GPIO_IN_N
 $Comp
 L device:R R?
 U 1 1 605F8A40
@@ -1150,4 +1146,6 @@ Text HLabel 2050 1800 0    50   Input ~ 0
 SCPI_UART_TX
 Text HLabel 2050 1900 0    50   Output ~ 0
 SCPI_UART_RX
+NoConn ~ 2050 2700
+NoConn ~ 2050 2800
 $EndSCHEMATC
