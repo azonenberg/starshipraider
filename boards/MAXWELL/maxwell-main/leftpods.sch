@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
-Sheet 11 15
+Sheet 10 15
 Title "MAXWELL Main Board"
 Date "2020-06-17"
 Rev "0.1"
@@ -903,6 +903,544 @@ Text Label 12800 5550 2    50   ~ 0
 POD5_D7_P
 Text Label 12800 5650 2    50   ~ 0
 POD5_D7_N
-Text Notes 7450 7500 0    50   ~ 0
-TODO: ESD protection
+$Comp
+L special-azonenberg:ESD7008 D?
+U 1 1 60CAEE8F
+P 1550 7300
+AR Path="/5EDD723A/5F2BB4CD/60CAEE8F" Ref="D?"  Part="1" 
+AR Path="/5EDD723A/5F2B9784/60CAEE8F" Ref="D14"  Part="1" 
+F 0 "D14" H 1775 8575 50  0000 C CNN
+F 1 "ESD7008" H 1775 8484 50  0000 C CNN
+F 2 "" H 1550 7300 50  0001 C CNN
+F 3 "" H 1550 7300 50  0001 C CNN
+	1    1550 7300
+	1    0    0    -1  
+$EndComp
+Text Label 2200 6250 0    50   ~ 0
+GND
+Wire Wire Line
+	2200 6250 2200 6350
+Connection ~ 2200 6350
+Wire Wire Line
+	2200 6350 2200 6450
+Connection ~ 2200 6450
+Wire Wire Line
+	2200 6450 2200 6550
+Connection ~ 2200 6550
+Wire Wire Line
+	2200 6550 2200 6650
+Connection ~ 2200 6650
+Wire Wire Line
+	2200 6650 2200 6750
+$Comp
+L special-azonenberg:ESD7008 D?
+U 1 1 60CAEE9F
+P 1550 8650
+AR Path="/5EDD723A/5F2BB4CD/60CAEE9F" Ref="D?"  Part="1" 
+AR Path="/5EDD723A/5F2B9784/60CAEE9F" Ref="D15"  Part="1" 
+F 0 "D15" H 1775 9925 50  0000 C CNN
+F 1 "ESD7008" H 1775 9834 50  0000 C CNN
+F 2 "" H 1550 8650 50  0001 C CNN
+F 3 "" H 1550 8650 50  0001 C CNN
+	1    1550 8650
+	1    0    0    -1  
+$EndComp
+Text Label 2200 7600 0    50   ~ 0
+GND
+Wire Wire Line
+	2200 7600 2200 7700
+Connection ~ 2200 7700
+Wire Wire Line
+	2200 7700 2200 7800
+Connection ~ 2200 7800
+Wire Wire Line
+	2200 7800 2200 7900
+Connection ~ 2200 7900
+Wire Wire Line
+	2200 7900 2200 8000
+Connection ~ 2200 8000
+Wire Wire Line
+	2200 8000 2200 8100
+$Comp
+L special-azonenberg:ESD7008 D?
+U 1 1 60CAEEAF
+P 3050 7300
+AR Path="/5EDD723A/5F2BB4CD/60CAEEAF" Ref="D?"  Part="1" 
+AR Path="/5EDD723A/5F2B9784/60CAEEAF" Ref="D16"  Part="1" 
+F 0 "D16" H 3275 8575 50  0000 C CNN
+F 1 "ESD7008" H 3275 8484 50  0000 C CNN
+F 2 "" H 3050 7300 50  0001 C CNN
+F 3 "" H 3050 7300 50  0001 C CNN
+	1    3050 7300
+	1    0    0    -1  
+$EndComp
+Text Label 3700 6250 0    50   ~ 0
+GND
+Wire Wire Line
+	3700 6250 3700 6350
+Connection ~ 3700 6350
+Wire Wire Line
+	3700 6350 3700 6450
+Connection ~ 3700 6450
+Wire Wire Line
+	3700 6450 3700 6550
+Connection ~ 3700 6550
+Wire Wire Line
+	3700 6550 3700 6650
+Connection ~ 3700 6650
+Wire Wire Line
+	3700 6650 3700 6750
+$Comp
+L special-azonenberg:ESD7008 D?
+U 1 1 60CAEEBF
+P 3050 8650
+AR Path="/5EDD723A/5F2BB4CD/60CAEEBF" Ref="D?"  Part="1" 
+AR Path="/5EDD723A/5F2B9784/60CAEEBF" Ref="D17"  Part="1" 
+F 0 "D17" H 3275 9925 50  0000 C CNN
+F 1 "ESD7008" H 3275 9834 50  0000 C CNN
+F 2 "" H 3050 8650 50  0001 C CNN
+F 3 "" H 3050 8650 50  0001 C CNN
+	1    3050 8650
+	1    0    0    -1  
+$EndComp
+Text Label 3700 7600 0    50   ~ 0
+GND
+Wire Wire Line
+	3700 7600 3700 7700
+Connection ~ 3700 7700
+Wire Wire Line
+	3700 7700 3700 7800
+Connection ~ 3700 7800
+Wire Wire Line
+	3700 7800 3700 7900
+Connection ~ 3700 7900
+Wire Wire Line
+	3700 7900 3700 8000
+Connection ~ 3700 8000
+Wire Wire Line
+	3700 8000 3700 8100
+$Comp
+L special-azonenberg:ESD7008 D?
+U 1 1 60CAEECF
+P 4550 7300
+AR Path="/5EDD723A/5F2BB4CD/60CAEECF" Ref="D?"  Part="1" 
+AR Path="/5EDD723A/5F2B9784/60CAEECF" Ref="D18"  Part="1" 
+F 0 "D18" H 4775 8575 50  0000 C CNN
+F 1 "ESD7008" H 4775 8484 50  0000 C CNN
+F 2 "" H 4550 7300 50  0001 C CNN
+F 3 "" H 4550 7300 50  0001 C CNN
+	1    4550 7300
+	1    0    0    -1  
+$EndComp
+Text Label 5200 6250 0    50   ~ 0
+GND
+Wire Wire Line
+	5200 6250 5200 6350
+Connection ~ 5200 6350
+Wire Wire Line
+	5200 6350 5200 6450
+Connection ~ 5200 6450
+Wire Wire Line
+	5200 6450 5200 6550
+Connection ~ 5200 6550
+Wire Wire Line
+	5200 6550 5200 6650
+Connection ~ 5200 6650
+Wire Wire Line
+	5200 6650 5200 6750
+$Comp
+L special-azonenberg:ESD7008 D?
+U 1 1 60CAEEDF
+P 4550 8650
+AR Path="/5EDD723A/5F2BB4CD/60CAEEDF" Ref="D?"  Part="1" 
+AR Path="/5EDD723A/5F2B9784/60CAEEDF" Ref="D19"  Part="1" 
+F 0 "D19" H 4775 9925 50  0000 C CNN
+F 1 "ESD7008" H 4775 9834 50  0000 C CNN
+F 2 "" H 4550 8650 50  0001 C CNN
+F 3 "" H 4550 8650 50  0001 C CNN
+	1    4550 8650
+	1    0    0    -1  
+$EndComp
+Text Label 5200 7600 0    50   ~ 0
+GND
+Wire Wire Line
+	5200 7600 5200 7700
+Connection ~ 5200 7700
+Wire Wire Line
+	5200 7700 5200 7800
+Connection ~ 5200 7800
+Wire Wire Line
+	5200 7800 5200 7900
+Connection ~ 5200 7900
+Wire Wire Line
+	5200 7900 5200 8000
+Connection ~ 5200 8000
+Wire Wire Line
+	5200 8000 5200 8100
+$Comp
+L special-azonenberg:ESD7008 D?
+U 1 1 60CAEEEF
+P 6050 7300
+AR Path="/5EDD723A/5F2BB4CD/60CAEEEF" Ref="D?"  Part="1" 
+AR Path="/5EDD723A/5F2B9784/60CAEEEF" Ref="D20"  Part="1" 
+F 0 "D20" H 6275 8575 50  0000 C CNN
+F 1 "ESD7008" H 6275 8484 50  0000 C CNN
+F 2 "" H 6050 7300 50  0001 C CNN
+F 3 "" H 6050 7300 50  0001 C CNN
+	1    6050 7300
+	1    0    0    -1  
+$EndComp
+Text Label 6700 6250 0    50   ~ 0
+GND
+Wire Wire Line
+	6700 6250 6700 6350
+Connection ~ 6700 6350
+Wire Wire Line
+	6700 6350 6700 6450
+Connection ~ 6700 6450
+Wire Wire Line
+	6700 6450 6700 6550
+Connection ~ 6700 6550
+Wire Wire Line
+	6700 6550 6700 6650
+Connection ~ 6700 6650
+Wire Wire Line
+	6700 6650 6700 6750
+$Comp
+L special-azonenberg:ESD7008 D?
+U 1 1 60CAEEFF
+P 6050 8650
+AR Path="/5EDD723A/5F2BB4CD/60CAEEFF" Ref="D?"  Part="1" 
+AR Path="/5EDD723A/5F2B9784/60CAEEFF" Ref="D21"  Part="1" 
+F 0 "D21" H 6275 9925 50  0000 C CNN
+F 1 "ESD7008" H 6275 9834 50  0000 C CNN
+F 2 "" H 6050 8650 50  0001 C CNN
+F 3 "" H 6050 8650 50  0001 C CNN
+	1    6050 8650
+	1    0    0    -1  
+$EndComp
+Text Label 6700 7600 0    50   ~ 0
+GND
+Wire Wire Line
+	6700 7600 6700 7700
+Connection ~ 6700 7700
+Wire Wire Line
+	6700 7700 6700 7800
+Connection ~ 6700 7800
+Wire Wire Line
+	6700 7800 6700 7900
+Connection ~ 6700 7900
+Wire Wire Line
+	6700 7900 6700 8000
+Connection ~ 6700 8000
+Wire Wire Line
+	6700 8000 6700 8100
+$Comp
+L special-azonenberg:ESD7008 D?
+U 1 1 60CAEF0F
+P 7600 7300
+AR Path="/5EDD723A/5F2BB4CD/60CAEF0F" Ref="D?"  Part="1" 
+AR Path="/5EDD723A/5F2B9784/60CAEF0F" Ref="D22"  Part="1" 
+F 0 "D22" H 7825 8575 50  0000 C CNN
+F 1 "ESD7008" H 7825 8484 50  0000 C CNN
+F 2 "" H 7600 7300 50  0001 C CNN
+F 3 "" H 7600 7300 50  0001 C CNN
+	1    7600 7300
+	1    0    0    -1  
+$EndComp
+Text Label 8250 6250 0    50   ~ 0
+GND
+Wire Wire Line
+	8250 6250 8250 6350
+Connection ~ 8250 6350
+Wire Wire Line
+	8250 6350 8250 6450
+Connection ~ 8250 6450
+Wire Wire Line
+	8250 6450 8250 6550
+Connection ~ 8250 6550
+Wire Wire Line
+	8250 6550 8250 6650
+Connection ~ 8250 6650
+Wire Wire Line
+	8250 6650 8250 6750
+$Comp
+L special-azonenberg:ESD7008 D?
+U 1 1 60CAEF1F
+P 7600 8650
+AR Path="/5EDD723A/5F2BB4CD/60CAEF1F" Ref="D?"  Part="1" 
+AR Path="/5EDD723A/5F2B9784/60CAEF1F" Ref="D23"  Part="1" 
+F 0 "D23" H 7825 9925 50  0000 C CNN
+F 1 "ESD7008" H 7825 9834 50  0000 C CNN
+F 2 "" H 7600 8650 50  0001 C CNN
+F 3 "" H 7600 8650 50  0001 C CNN
+	1    7600 8650
+	1    0    0    -1  
+$EndComp
+Text Label 8250 7600 0    50   ~ 0
+GND
+Wire Wire Line
+	8250 7600 8250 7700
+Connection ~ 8250 7700
+Wire Wire Line
+	8250 7700 8250 7800
+Connection ~ 8250 7800
+Wire Wire Line
+	8250 7800 8250 7900
+Connection ~ 8250 7900
+Wire Wire Line
+	8250 7900 8250 8000
+Connection ~ 8250 8000
+Wire Wire Line
+	8250 8000 8250 8100
+$Comp
+L special-azonenberg:ESD7008 D?
+U 1 1 60CAEF2F
+P 9250 7300
+AR Path="/5EDD723A/5F2BB4CD/60CAEF2F" Ref="D?"  Part="1" 
+AR Path="/5EDD723A/5F2B9784/60CAEF2F" Ref="D24"  Part="1" 
+F 0 "D24" H 9475 8575 50  0000 C CNN
+F 1 "ESD7008" H 9475 8484 50  0000 C CNN
+F 2 "" H 9250 7300 50  0001 C CNN
+F 3 "" H 9250 7300 50  0001 C CNN
+	1    9250 7300
+	1    0    0    -1  
+$EndComp
+Text Label 9900 6250 0    50   ~ 0
+GND
+Wire Wire Line
+	9900 6250 9900 6350
+Connection ~ 9900 6350
+Wire Wire Line
+	9900 6350 9900 6450
+Connection ~ 9900 6450
+Wire Wire Line
+	9900 6450 9900 6550
+Connection ~ 9900 6550
+Wire Wire Line
+	9900 6550 9900 6650
+Connection ~ 9900 6650
+Wire Wire Line
+	9900 6650 9900 6750
+$Comp
+L special-azonenberg:ESD7008 D?
+U 1 1 60CAEF3F
+P 9250 8650
+AR Path="/5EDD723A/5F2BB4CD/60CAEF3F" Ref="D?"  Part="1" 
+AR Path="/5EDD723A/5F2B9784/60CAEF3F" Ref="D25"  Part="1" 
+F 0 "D25" H 9475 9925 50  0000 C CNN
+F 1 "ESD7008" H 9475 9834 50  0000 C CNN
+F 2 "" H 9250 8650 50  0001 C CNN
+F 3 "" H 9250 8650 50  0001 C CNN
+	1    9250 8650
+	1    0    0    -1  
+$EndComp
+Text Label 9900 7600 0    50   ~ 0
+GND
+Wire Wire Line
+	9900 7600 9900 7700
+Connection ~ 9900 7700
+Wire Wire Line
+	9900 7700 9900 7800
+Connection ~ 9900 7800
+Wire Wire Line
+	9900 7800 9900 7900
+Connection ~ 9900 7900
+Wire Wire Line
+	9900 7900 9900 8000
+Connection ~ 9900 8000
+Wire Wire Line
+	9900 8000 9900 8100
+Text Label 1350 6250 2    50   ~ 0
+POD0_D0_P
+Text Label 1350 6350 2    50   ~ 0
+POD0_D0_N
+Text Label 1350 6550 2    50   ~ 0
+POD0_D1_P
+Text Label 1350 6650 2    50   ~ 0
+POD0_D1_N
+Text Label 1350 7150 2    50   ~ 0
+POD0_D3_P
+Text Label 1350 7250 2    50   ~ 0
+POD0_D3_N
+Text Label 1350 6850 2    50   ~ 0
+POD0_D2_P
+Text Label 1350 6950 2    50   ~ 0
+POD0_D2_N
+Text Label 1350 7600 2    50   ~ 0
+POD0_D4_P
+Text Label 1350 7700 2    50   ~ 0
+POD0_D4_N
+Text Label 1350 7900 2    50   ~ 0
+POD0_D5_P
+Text Label 1350 8000 2    50   ~ 0
+POD0_D5_N
+Text Label 1350 8200 2    50   ~ 0
+POD0_D6_P
+Text Label 1350 8300 2    50   ~ 0
+POD0_D6_N
+Text Label 1350 8500 2    50   ~ 0
+POD0_D7_P
+Text Label 1350 8600 2    50   ~ 0
+POD0_D7_N
+Text Label 2850 6250 2    50   ~ 0
+POD1_D0_P
+Text Label 2850 6350 2    50   ~ 0
+POD1_D0_N
+Text Label 2850 6550 2    50   ~ 0
+POD1_D1_P
+Text Label 2850 6650 2    50   ~ 0
+POD1_D1_N
+Text Label 2850 7150 2    50   ~ 0
+POD1_D3_P
+Text Label 2850 7250 2    50   ~ 0
+POD1_D3_N
+Text Label 2850 6850 2    50   ~ 0
+POD1_D2_P
+Text Label 2850 6950 2    50   ~ 0
+POD1_D2_N
+Text Label 2850 7600 2    50   ~ 0
+POD1_D4_P
+Text Label 2850 7700 2    50   ~ 0
+POD1_D4_N
+Text Label 2850 7900 2    50   ~ 0
+POD1_D5_P
+Text Label 2850 8000 2    50   ~ 0
+POD1_D5_N
+Text Label 2850 8200 2    50   ~ 0
+POD1_D6_P
+Text Label 2850 8300 2    50   ~ 0
+POD1_D6_N
+Text Label 2850 8500 2    50   ~ 0
+POD1_D7_P
+Text Label 2850 8600 2    50   ~ 0
+POD1_D7_N
+Text Label 4350 6350 2    50   ~ 0
+POD2_D0_N
+Text Label 4350 6550 2    50   ~ 0
+POD2_D1_P
+Text Label 4350 6650 2    50   ~ 0
+POD2_D1_N
+Text Label 4350 7150 2    50   ~ 0
+POD2_D3_P
+Text Label 4350 7250 2    50   ~ 0
+POD2_D3_N
+Text Label 4350 6850 2    50   ~ 0
+POD2_D2_P
+Text Label 4350 6950 2    50   ~ 0
+POD2_D2_N
+Text Label 4350 7600 2    50   ~ 0
+POD2_D4_P
+Text Label 4350 7700 2    50   ~ 0
+POD2_D4_N
+Text Label 4350 7900 2    50   ~ 0
+POD2_D5_P
+Text Label 4350 8000 2    50   ~ 0
+POD2_D5_N
+Text Label 4350 8200 2    50   ~ 0
+POD2_D6_P
+Text Label 4350 8300 2    50   ~ 0
+POD2_D6_N
+Text Label 4350 8500 2    50   ~ 0
+POD2_D7_P
+Text Label 4350 8600 2    50   ~ 0
+POD2_D7_N
+Text Label 4350 6250 2    50   ~ 0
+POD2_D0_P
+Text Label 5850 6250 2    50   ~ 0
+POD3_D0_P
+Text Label 5850 6350 2    50   ~ 0
+POD3_D0_N
+Text Label 5850 6550 2    50   ~ 0
+POD3_D1_P
+Text Label 5850 6650 2    50   ~ 0
+POD3_D1_N
+Text Label 5850 7150 2    50   ~ 0
+POD3_D3_P
+Text Label 5850 7250 2    50   ~ 0
+POD3_D3_N
+Text Label 5850 6850 2    50   ~ 0
+POD3_D2_P
+Text Label 5850 6950 2    50   ~ 0
+POD3_D2_N
+Text Label 5850 7600 2    50   ~ 0
+POD3_D4_P
+Text Label 5850 7700 2    50   ~ 0
+POD3_D4_N
+Text Label 5850 7900 2    50   ~ 0
+POD3_D5_P
+Text Label 5850 8000 2    50   ~ 0
+POD3_D5_N
+Text Label 5850 8200 2    50   ~ 0
+POD3_D6_P
+Text Label 5850 8300 2    50   ~ 0
+POD3_D6_N
+Text Label 5850 8500 2    50   ~ 0
+POD3_D7_P
+Text Label 5850 8600 2    50   ~ 0
+POD3_D7_N
+Text Label 7400 6250 2    50   ~ 0
+POD4_D0_P
+Text Label 7400 6350 2    50   ~ 0
+POD4_D0_N
+Text Label 7400 6550 2    50   ~ 0
+POD4_D1_P
+Text Label 7400 6650 2    50   ~ 0
+POD4_D1_N
+Text Label 7400 7150 2    50   ~ 0
+POD4_D3_P
+Text Label 7400 7250 2    50   ~ 0
+POD4_D3_N
+Text Label 7400 6850 2    50   ~ 0
+POD4_D2_P
+Text Label 7400 6950 2    50   ~ 0
+POD4_D2_N
+Text Label 7400 7600 2    50   ~ 0
+POD4_D4_P
+Text Label 7400 7700 2    50   ~ 0
+POD4_D4_N
+Text Label 7400 7900 2    50   ~ 0
+POD4_D5_P
+Text Label 7400 8000 2    50   ~ 0
+POD4_D5_N
+Text Label 7400 8200 2    50   ~ 0
+POD4_D6_P
+Text Label 7400 8300 2    50   ~ 0
+POD4_D6_N
+Text Label 7400 8500 2    50   ~ 0
+POD4_D7_P
+Text Label 7400 8600 2    50   ~ 0
+POD4_D7_N
+Text Label 9050 6250 2    50   ~ 0
+POD5_D0_P
+Text Label 9050 6350 2    50   ~ 0
+POD5_D0_N
+Text Label 9050 6550 2    50   ~ 0
+POD5_D1_P
+Text Label 9050 6650 2    50   ~ 0
+POD5_D1_N
+Text Label 9050 7150 2    50   ~ 0
+POD5_D3_P
+Text Label 9050 7250 2    50   ~ 0
+POD5_D3_N
+Text Label 9050 6850 2    50   ~ 0
+POD5_D2_P
+Text Label 9050 6950 2    50   ~ 0
+POD5_D2_N
+Text Label 9050 7600 2    50   ~ 0
+POD5_D4_P
+Text Label 9050 7700 2    50   ~ 0
+POD5_D4_N
+Text Label 9050 7900 2    50   ~ 0
+POD5_D5_P
+Text Label 9050 8000 2    50   ~ 0
+POD5_D5_N
+Text Label 9050 8200 2    50   ~ 0
+POD5_D6_P
+Text Label 9050 8300 2    50   ~ 0
+POD5_D6_N
+Text Label 9050 8500 2    50   ~ 0
+POD5_D7_P
+Text Label 9050 8600 2    50   ~ 0
+POD5_D7_N
 $EndSCHEMATC

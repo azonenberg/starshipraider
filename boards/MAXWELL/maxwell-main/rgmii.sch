@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 14 15
+Sheet 13 15
 Title "MAXWELL Main Board"
 Date "2020-06-17"
 Rev "0.1"
@@ -1090,8 +1090,6 @@ MAC_I2C_SCL
 Text Label 2050 5000 2    50   ~ 0
 MAC_I2C_SDA
 NoConn ~ 2050 1500
-NoConn ~ 2050 1800
-NoConn ~ 2050 1900
 NoConn ~ 2050 2000
 NoConn ~ 2050 2200
 NoConn ~ 2050 2300
@@ -1148,4 +1146,8 @@ Text Label 9250 1300 2    50   ~ 0
 PPS_IN_P
 Text Label 9550 1300 0    50   ~ 0
 PPS_IN_P
+Text HLabel 2050 1800 0    50   Input ~ 0
+SCPI_UART_TX
+Text HLabel 2050 1900 0    50   Output ~ 0
+SCPI_UART_RX
 $EndSCHEMATC
