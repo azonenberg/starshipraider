@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 10 15
+Sheet 9 15
 Title "MAXWELL Main Board"
 Date "2020-06-17"
 Rev "0.1"
@@ -242,9 +242,9 @@ Text Label 9450 3450 2    50   ~ 0
 CH0_AC_P
 Text Label 9450 3550 2    50   ~ 0
 CH0_AC_N
-Text HLabel 9450 750  0    50   Input ~ 0
+Text HLabel 8500 700  0    50   Input ~ 0
 REFCLK_P
-Text HLabel 9450 850  0    50   Input ~ 0
+Text HLabel 8500 900  0    50   Input ~ 0
 REFCLK_N
 $Comp
 L special-azonenberg:SY56017R U31
@@ -1090,4 +1090,38 @@ Text Label 2450 6850 0    50   ~ 0
 GND
 Wire Wire Line
 	2450 6850 2300 6850
+$Comp
+L device:C C270
+U 1 1 60DADD6A
+P 8650 900
+F 0 "C270" V 8600 1050 50  0000 C CNN
+F 1 "0.1 uF" V 8700 1100 50  0000 C CNN
+F 2 "" H 8688 750 50  0001 C CNN
+F 3 "" H 8650 900 50  0001 C CNN
+	1    8650 900 
+	0    1    1    0   
+$EndComp
+$Comp
+L device:C C269
+U 1 1 60DAE45C
+P 8650 700
+F 0 "C269" V 8600 850 50  0000 C CNN
+F 1 "0.1 uF" V 8700 900 50  0000 C CNN
+F 2 "" H 8688 550 50  0001 C CNN
+F 3 "" H 8650 700 50  0001 C CNN
+	1    8650 700 
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9450 700  9450 750 
+Wire Wire Line
+	9450 900  9450 850 
+Wire Wire Line
+	8800 700  9450 700 
+Wire Wire Line
+	8800 900  9450 900 
+Text Label 8900 700  0    50   ~ 0
+REFCLK_AC_P
+Text Label 8900 900  0    50   ~ 0
+REFCLK_AC_N
 $EndSCHEMATC

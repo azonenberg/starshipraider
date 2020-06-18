@@ -553,8 +553,6 @@ Text Notes 4650 10850 0    50   ~ 0
 Total 10 mV p-p max on GTX rails\nNeed filter networks
 Text Label 6000 9350 0    50   ~ 0
 GTX_1V0
-Text Label 6000 9850 0    50   ~ 0
-GTX_1V2
 Text Label 6000 10350 0    50   ~ 0
 GTX_1V8
 Text HLabel 4650 9850 0    50   Input ~ 0
@@ -1374,4 +1372,6 @@ Text Label 4300 900  2    50   ~ 0
 1V8
 Wire Wire Line
 	4300 900  4300 1000
+Text HLabel 6000 9850 2    50   Output ~ 0
+GTX_1V2
 $EndSCHEMATC
