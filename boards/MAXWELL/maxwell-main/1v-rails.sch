@@ -1,0 +1,748 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 17
+Title "MAXWELL Main Board"
+Date "2020-06-19"
+Rev "0.1"
+Comp "Antikernel Labs"
+Comment1 "Andrew D. Zonenberg"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text HLabel 3400 1450 2    50   Output ~ 0
+1V0_1
+$Comp
+L power-azonenberg:IAF12020A007V-003-R U?
+U 1 1 6129FB18
+P 1500 1600
+AR Path="/5EDD7150/6129FB18" Ref="U?"  Part="1" 
+AR Path="/5EDD7150/61296AEB/6129FB18" Ref="U53"  Part="1" 
+F 0 "U53" H 1850 2575 50  0000 C CNN
+F 1 "IAF12020A007V-003-R" H 1850 2484 50  0000 C CNN
+F 2 "" H 1500 1600 50  0001 C CNN
+F 3 "" H 1500 1600 50  0001 C CNN
+	1    1500 1600
+	1    0    0    -1  
+$EndComp
+Text Label 1400 1450 2    50   ~ 0
+12V0
+Text Label 1400 1550 2    50   ~ 0
+GND
+Text Label 2400 1350 0    50   ~ 0
+1V0_1_SENSE
+$Comp
+L device:R R?
+U 1 1 6129FB21
+P 3250 1350
+AR Path="/5EDD7150/6129FB21" Ref="R?"  Part="1" 
+AR Path="/5EDD7150/61296AEB/6129FB21" Ref="R155"  Part="1" 
+F 0 "R155" V 3200 1500 50  0000 C CNN
+F 1 "0" V 3250 1350 50  0000 C CNN
+F 2 "" V 3180 1350 50  0001 C CNN
+F 3 "" H 3250 1350 50  0001 C CNN
+	1    3250 1350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3100 1350 2300 1350
+Wire Wire Line
+	2300 1450 3400 1450
+Wire Wire Line
+	3400 1450 3400 1350
+NoConn ~ 1400 850 
+Text HLabel 2300 1150 2    50   Output ~ 0
+1V0_1_GOOD
+Text HLabel 1400 950  0    50   Input ~ 0
+1V0_EN
+$Comp
+L device:R R?
+U 1 1 6129FB2D
+P 2800 850
+AR Path="/5EDD7150/6129FB2D" Ref="R?"  Part="1" 
+AR Path="/5EDD7150/61296AEB/6129FB2D" Ref="R154"  Part="1" 
+F 0 "R154" V 2750 1000 50  0000 C CNN
+F 1 "4.7K" V 2800 850 50  0000 C CNN
+F 2 "" V 2730 850 50  0001 C CNN
+F 3 "" H 2800 850 50  0001 C CNN
+	1    2800 850 
+	0    1    1    0   
+$EndComp
+Text Label 2650 850  2    50   ~ 0
+GND
+Text Label 3200 850  0    50   ~ 0
+1V0_EN
+Wire Wire Line
+	2950 850  3200 850 
+NoConn ~ 2300 1550
+$Comp
+L device:R R?
+U 1 1 6129FB37
+P 1100 1150
+AR Path="/5EDD7150/6129FB37" Ref="R?"  Part="1" 
+AR Path="/5EDD7150/61296AEB/6129FB37" Ref="R151"  Part="1" 
+F 0 "R151" V 1050 1300 50  0000 C CNN
+F 1 "22.26K" V 1200 1150 50  0000 C CNN
+F 2 "" V 1030 1150 50  0001 C CNN
+F 3 "" H 1100 1150 50  0001 C CNN
+	1    1100 1150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1250 1150 1400 1150
+Text Label 950  1150 2    50   ~ 0
+GND
+Text Label 3450 1750 2    50   ~ 0
+1V0_1
+$Comp
+L device:C C?
+U 1 1 6129FB41
+P 1050 1900
+AR Path="/5EDD7150/6129FB41" Ref="C?"  Part="1" 
+AR Path="/5EDD7150/61296AEB/6129FB41" Ref="C283"  Part="1" 
+F 0 "C283" H 1165 1946 50  0000 L CNN
+F 1 "22 uF" H 1165 1855 50  0000 L CNN
+F 2 "" H 1088 1750 50  0001 C CNN
+F 3 "" H 1050 1900 50  0001 C CNN
+	1    1050 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C?
+U 1 1 6129FB47
+P 1500 1900
+AR Path="/5EDD7150/6129FB47" Ref="C?"  Part="1" 
+AR Path="/5EDD7150/61296AEB/6129FB47" Ref="C299"  Part="1" 
+F 0 "C299" H 1615 1946 50  0000 L CNN
+F 1 "22 uF" H 1615 1855 50  0000 L CNN
+F 2 "" H 1538 1750 50  0001 C CNN
+F 3 "" H 1500 1900 50  0001 C CNN
+	1    1500 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C?
+U 1 1 6129FB4D
+P 1950 1900
+AR Path="/5EDD7150/6129FB4D" Ref="C?"  Part="1" 
+AR Path="/5EDD7150/61296AEB/6129FB4D" Ref="C302"  Part="1" 
+F 0 "C302" H 2065 1946 50  0000 L CNN
+F 1 "22 uF" H 2065 1855 50  0000 L CNN
+F 2 "" H 1988 1750 50  0001 C CNN
+F 3 "" H 1950 1900 50  0001 C CNN
+	1    1950 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C?
+U 1 1 6129FB53
+P 2400 1900
+AR Path="/5EDD7150/6129FB53" Ref="C?"  Part="1" 
+AR Path="/5EDD7150/61296AEB/6129FB53" Ref="C305"  Part="1" 
+F 0 "C305" H 2515 1946 50  0000 L CNN
+F 1 "22 uF" H 2515 1855 50  0000 L CNN
+F 2 "" H 2438 1750 50  0001 C CNN
+F 3 "" H 2400 1900 50  0001 C CNN
+	1    2400 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 1750 1950 1750
+Connection ~ 1500 1750
+Wire Wire Line
+	1500 1750 1050 1750
+Connection ~ 1950 1750
+Wire Wire Line
+	1950 1750 1500 1750
+Wire Wire Line
+	1050 2050 1500 2050
+Connection ~ 1500 2050
+Wire Wire Line
+	1500 2050 1950 2050
+Connection ~ 1950 2050
+Wire Wire Line
+	1950 2050 2400 2050
+Text Notes 1050 2150 0    50   ~ 0
+Suggested C3225X7R1C226MT or equivalent
+Text Label 1400 1050 2    50   ~ 0
+12V0
+$Comp
+L device:C C?
+U 1 1 6129FB66
+P 3450 1900
+AR Path="/5EDD7150/6129FB66" Ref="C?"  Part="1" 
+AR Path="/5EDD7150/61296AEB/6129FB66" Ref="C308"  Part="1" 
+F 0 "C308" H 3565 1946 50  0000 L CNN
+F 1 "47 uF" H 3565 1855 50  0000 L CNN
+F 2 "" H 3488 1750 50  0001 C CNN
+F 3 "" H 3450 1900 50  0001 C CNN
+	1    3450 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C?
+U 1 1 6129FB6C
+P 3900 1900
+AR Path="/5EDD7150/6129FB6C" Ref="C?"  Part="1" 
+AR Path="/5EDD7150/61296AEB/6129FB6C" Ref="C311"  Part="1" 
+F 0 "C311" H 4015 1946 50  0000 L CNN
+F 1 "47 uF" H 4015 1855 50  0000 L CNN
+F 2 "" H 3938 1750 50  0001 C CNN
+F 3 "" H 3900 1900 50  0001 C CNN
+	1    3900 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C?
+U 1 1 6129FB72
+P 4350 1900
+AR Path="/5EDD7150/6129FB72" Ref="C?"  Part="1" 
+AR Path="/5EDD7150/61296AEB/6129FB72" Ref="C314"  Part="1" 
+F 0 "C314" H 4465 1946 50  0000 L CNN
+F 1 "47 uF" H 4465 1855 50  0000 L CNN
+F 2 "" H 4388 1750 50  0001 C CNN
+F 3 "" H 4350 1900 50  0001 C CNN
+	1    4350 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C?
+U 1 1 6129FB78
+P 4800 1900
+AR Path="/5EDD7150/6129FB78" Ref="C?"  Part="1" 
+AR Path="/5EDD7150/61296AEB/6129FB78" Ref="C317"  Part="1" 
+F 0 "C317" H 4915 1946 50  0000 L CNN
+F 1 "47 uF" H 4915 1855 50  0000 L CNN
+F 2 "" H 4838 1750 50  0001 C CNN
+F 3 "" H 4800 1900 50  0001 C CNN
+	1    4800 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C?
+U 1 1 6129FB7E
+P 5250 1900
+AR Path="/5EDD7150/6129FB7E" Ref="C?"  Part="1" 
+AR Path="/5EDD7150/61296AEB/6129FB7E" Ref="C320"  Part="1" 
+F 0 "C320" H 5365 1946 50  0000 L CNN
+F 1 "0.1 uF" H 5365 1855 50  0000 L CNN
+F 2 "" H 5288 1750 50  0001 C CNN
+F 3 "" H 5250 1900 50  0001 C CNN
+	1    5250 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 1750 4800 1750
+Connection ~ 3900 1750
+Wire Wire Line
+	3900 1750 3450 1750
+Connection ~ 4350 1750
+Wire Wire Line
+	4350 1750 3900 1750
+Connection ~ 4800 1750
+Wire Wire Line
+	4800 1750 4350 1750
+Wire Wire Line
+	5250 2050 4800 2050
+Connection ~ 3900 2050
+Wire Wire Line
+	3900 2050 3450 2050
+Connection ~ 4350 2050
+Wire Wire Line
+	4350 2050 3900 2050
+Connection ~ 4800 2050
+Wire Wire Line
+	4800 2050 4350 2050
+Text Label 3450 2050 2    50   ~ 0
+GND
+Text HLabel 3400 3150 2    50   Output ~ 0
+1V0_2
+$Comp
+L power-azonenberg:IAF12020A007V-003-R U?
+U 1 1 6129FB94
+P 1500 3300
+AR Path="/5EDD7150/6129FB94" Ref="U?"  Part="1" 
+AR Path="/5EDD7150/61296AEB/6129FB94" Ref="U54"  Part="1" 
+F 0 "U54" H 1850 4275 50  0000 C CNN
+F 1 "IAF12020A007V-003-R" H 1850 4184 50  0000 C CNN
+F 2 "" H 1500 3300 50  0001 C CNN
+F 3 "" H 1500 3300 50  0001 C CNN
+	1    1500 3300
+	1    0    0    -1  
+$EndComp
+Text Label 1400 3150 2    50   ~ 0
+12V0
+Text Label 1400 3250 2    50   ~ 0
+GND
+Text Label 2400 3050 0    50   ~ 0
+1V0_2_SENSE
+$Comp
+L device:R R?
+U 1 1 6129FB9D
+P 3250 3050
+AR Path="/5EDD7150/6129FB9D" Ref="R?"  Part="1" 
+AR Path="/5EDD7150/61296AEB/6129FB9D" Ref="R156"  Part="1" 
+F 0 "R156" V 3200 3200 50  0000 C CNN
+F 1 "0" V 3250 3050 50  0000 C CNN
+F 2 "" V 3180 3050 50  0001 C CNN
+F 3 "" H 3250 3050 50  0001 C CNN
+	1    3250 3050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3100 3050 2300 3050
+Wire Wire Line
+	2300 3150 3400 3150
+Wire Wire Line
+	3400 3150 3400 3050
+NoConn ~ 1400 2550
+Text HLabel 2300 2850 2    50   Output ~ 0
+1V0_2_GOOD
+NoConn ~ 2300 3250
+$Comp
+L device:R R?
+U 1 1 6129FBAA
+P 1100 2850
+AR Path="/5EDD7150/6129FBAA" Ref="R?"  Part="1" 
+AR Path="/5EDD7150/61296AEB/6129FBAA" Ref="R152"  Part="1" 
+F 0 "R152" V 1050 3000 50  0000 C CNN
+F 1 "22.26K" V 1200 2850 50  0000 C CNN
+F 2 "" V 1030 2850 50  0001 C CNN
+F 3 "" H 1100 2850 50  0001 C CNN
+	1    1100 2850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1250 2850 1400 2850
+Text Label 950  2850 2    50   ~ 0
+GND
+Text Label 1050 3750 2    50   ~ 0
+GND
+Text Label 3450 3450 2    50   ~ 0
+1V0_2
+$Comp
+L device:C C?
+U 1 1 6129FBB4
+P 1050 3600
+AR Path="/5EDD7150/6129FBB4" Ref="C?"  Part="1" 
+AR Path="/5EDD7150/61296AEB/6129FBB4" Ref="C297"  Part="1" 
+F 0 "C297" H 1165 3646 50  0000 L CNN
+F 1 "22 uF" H 1165 3555 50  0000 L CNN
+F 2 "" H 1088 3450 50  0001 C CNN
+F 3 "" H 1050 3600 50  0001 C CNN
+	1    1050 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C?
+U 1 1 6129FBBA
+P 1500 3600
+AR Path="/5EDD7150/6129FBBA" Ref="C?"  Part="1" 
+AR Path="/5EDD7150/61296AEB/6129FBBA" Ref="C300"  Part="1" 
+F 0 "C300" H 1615 3646 50  0000 L CNN
+F 1 "22 uF" H 1615 3555 50  0000 L CNN
+F 2 "" H 1538 3450 50  0001 C CNN
+F 3 "" H 1500 3600 50  0001 C CNN
+	1    1500 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C?
+U 1 1 6129FBC0
+P 1950 3600
+AR Path="/5EDD7150/6129FBC0" Ref="C?"  Part="1" 
+AR Path="/5EDD7150/61296AEB/6129FBC0" Ref="C303"  Part="1" 
+F 0 "C303" H 2065 3646 50  0000 L CNN
+F 1 "22 uF" H 2065 3555 50  0000 L CNN
+F 2 "" H 1988 3450 50  0001 C CNN
+F 3 "" H 1950 3600 50  0001 C CNN
+	1    1950 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C?
+U 1 1 6129FBC6
+P 2400 3600
+AR Path="/5EDD7150/6129FBC6" Ref="C?"  Part="1" 
+AR Path="/5EDD7150/61296AEB/6129FBC6" Ref="C306"  Part="1" 
+F 0 "C306" H 2515 3646 50  0000 L CNN
+F 1 "22 uF" H 2515 3555 50  0000 L CNN
+F 2 "" H 2438 3450 50  0001 C CNN
+F 3 "" H 2400 3600 50  0001 C CNN
+	1    2400 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 3450 1950 3450
+Connection ~ 1500 3450
+Wire Wire Line
+	1500 3450 1050 3450
+Connection ~ 1950 3450
+Wire Wire Line
+	1950 3450 1500 3450
+Text Label 1050 3450 2    50   ~ 0
+12V0
+Wire Wire Line
+	1050 3750 1500 3750
+Connection ~ 1500 3750
+Wire Wire Line
+	1500 3750 1950 3750
+Connection ~ 1950 3750
+Wire Wire Line
+	1950 3750 2400 3750
+Text Label 1400 2750 2    50   ~ 0
+12V0
+$Comp
+L device:C C?
+U 1 1 6129FBD8
+P 3450 3600
+AR Path="/5EDD7150/6129FBD8" Ref="C?"  Part="1" 
+AR Path="/5EDD7150/61296AEB/6129FBD8" Ref="C309"  Part="1" 
+F 0 "C309" H 3565 3646 50  0000 L CNN
+F 1 "47 uF" H 3565 3555 50  0000 L CNN
+F 2 "" H 3488 3450 50  0001 C CNN
+F 3 "" H 3450 3600 50  0001 C CNN
+	1    3450 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C?
+U 1 1 6129FBDE
+P 3900 3600
+AR Path="/5EDD7150/6129FBDE" Ref="C?"  Part="1" 
+AR Path="/5EDD7150/61296AEB/6129FBDE" Ref="C312"  Part="1" 
+F 0 "C312" H 4015 3646 50  0000 L CNN
+F 1 "47 uF" H 4015 3555 50  0000 L CNN
+F 2 "" H 3938 3450 50  0001 C CNN
+F 3 "" H 3900 3600 50  0001 C CNN
+	1    3900 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C?
+U 1 1 6129FBE4
+P 4350 3600
+AR Path="/5EDD7150/6129FBE4" Ref="C?"  Part="1" 
+AR Path="/5EDD7150/61296AEB/6129FBE4" Ref="C315"  Part="1" 
+F 0 "C315" H 4465 3646 50  0000 L CNN
+F 1 "47 uF" H 4465 3555 50  0000 L CNN
+F 2 "" H 4388 3450 50  0001 C CNN
+F 3 "" H 4350 3600 50  0001 C CNN
+	1    4350 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C?
+U 1 1 6129FBEA
+P 4800 3600
+AR Path="/5EDD7150/6129FBEA" Ref="C?"  Part="1" 
+AR Path="/5EDD7150/61296AEB/6129FBEA" Ref="C318"  Part="1" 
+F 0 "C318" H 4915 3646 50  0000 L CNN
+F 1 "47 uF" H 4915 3555 50  0000 L CNN
+F 2 "" H 4838 3450 50  0001 C CNN
+F 3 "" H 4800 3600 50  0001 C CNN
+	1    4800 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C?
+U 1 1 6129FBF0
+P 5250 3600
+AR Path="/5EDD7150/6129FBF0" Ref="C?"  Part="1" 
+AR Path="/5EDD7150/61296AEB/6129FBF0" Ref="C321"  Part="1" 
+F 0 "C321" H 5365 3646 50  0000 L CNN
+F 1 "0.1 uF" H 5365 3555 50  0000 L CNN
+F 2 "" H 5288 3450 50  0001 C CNN
+F 3 "" H 5250 3600 50  0001 C CNN
+	1    5250 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 3450 4800 3450
+Connection ~ 3900 3450
+Wire Wire Line
+	3900 3450 3450 3450
+Connection ~ 4350 3450
+Wire Wire Line
+	4350 3450 3900 3450
+Connection ~ 4800 3450
+Wire Wire Line
+	4800 3450 4350 3450
+Wire Wire Line
+	5250 3750 4800 3750
+Connection ~ 3900 3750
+Wire Wire Line
+	3900 3750 3450 3750
+Connection ~ 4350 3750
+Wire Wire Line
+	4350 3750 3900 3750
+Connection ~ 4800 3750
+Wire Wire Line
+	4800 3750 4350 3750
+Text Label 3450 3750 2    50   ~ 0
+GND
+Text Notes 1050 3950 0    50   ~ 0
+Dual 1V0 rails, one for GTX and one for FPGA core
+Text HLabel 3400 4900 2    50   Output ~ 0
+1V5
+$Comp
+L power-azonenberg:IAF12020A007V-003-R U?
+U 1 1 612AEE05
+P 1500 5050
+AR Path="/5EDD7150/612AEE05" Ref="U?"  Part="1" 
+AR Path="/5EDD7150/61296AEB/612AEE05" Ref="U55"  Part="1" 
+F 0 "U55" H 1850 6025 50  0000 C CNN
+F 1 "IAF12020A007V-003-R" H 1850 5934 50  0000 C CNN
+F 2 "" H 1500 5050 50  0001 C CNN
+F 3 "" H 1500 5050 50  0001 C CNN
+	1    1500 5050
+	1    0    0    -1  
+$EndComp
+Text Label 1400 4900 2    50   ~ 0
+12V0
+Text Label 1400 5000 2    50   ~ 0
+GND
+Text Label 2400 4800 0    50   ~ 0
+1V5_SENSE
+$Comp
+L device:R R?
+U 1 1 612AEE12
+P 3250 4800
+AR Path="/5EDD7150/612AEE12" Ref="R?"  Part="1" 
+AR Path="/5EDD7150/61296AEB/612AEE12" Ref="R157"  Part="1" 
+F 0 "R157" V 3200 4950 50  0000 C CNN
+F 1 "0" V 3250 4800 50  0000 C CNN
+F 2 "" V 3180 4800 50  0001 C CNN
+F 3 "" H 3250 4800 50  0001 C CNN
+	1    3250 4800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3100 4800 2300 4800
+Wire Wire Line
+	2300 4900 3400 4900
+Wire Wire Line
+	3400 4900 3400 4800
+NoConn ~ 1400 4300
+Text HLabel 2300 4600 2    50   Output ~ 0
+1V5_GOOD
+Text HLabel 1400 4400 0    50   Input ~ 0
+1V5_EN
+NoConn ~ 2300 5000
+$Comp
+L device:R R?
+U 1 1 612AEE23
+P 1100 4600
+AR Path="/5EDD7150/612AEE23" Ref="R?"  Part="1" 
+AR Path="/5EDD7150/61296AEB/612AEE23" Ref="R153"  Part="1" 
+F 0 "R153" V 1050 4750 50  0000 C CNN
+F 1 "8.52K" V 1200 4600 50  0000 C CNN
+F 2 "" V 1030 4600 50  0001 C CNN
+F 3 "" H 1100 4600 50  0001 C CNN
+	1    1100 4600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1250 4600 1400 4600
+Text Label 950  4600 2    50   ~ 0
+GND
+Text Label 1050 5500 2    50   ~ 0
+GND
+Text Label 3450 5200 2    50   ~ 0
+1V5
+$Comp
+L device:C C?
+U 1 1 612AEE31
+P 1050 5350
+AR Path="/5EDD7150/612AEE31" Ref="C?"  Part="1" 
+AR Path="/5EDD7150/61296AEB/612AEE31" Ref="C298"  Part="1" 
+F 0 "C298" H 1165 5396 50  0000 L CNN
+F 1 "22 uF" H 1165 5305 50  0000 L CNN
+F 2 "" H 1088 5200 50  0001 C CNN
+F 3 "" H 1050 5350 50  0001 C CNN
+	1    1050 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C?
+U 1 1 612AEE3B
+P 1500 5350
+AR Path="/5EDD7150/612AEE3B" Ref="C?"  Part="1" 
+AR Path="/5EDD7150/61296AEB/612AEE3B" Ref="C301"  Part="1" 
+F 0 "C301" H 1615 5396 50  0000 L CNN
+F 1 "22 uF" H 1615 5305 50  0000 L CNN
+F 2 "" H 1538 5200 50  0001 C CNN
+F 3 "" H 1500 5350 50  0001 C CNN
+	1    1500 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C?
+U 1 1 612AEE45
+P 1950 5350
+AR Path="/5EDD7150/612AEE45" Ref="C?"  Part="1" 
+AR Path="/5EDD7150/61296AEB/612AEE45" Ref="C304"  Part="1" 
+F 0 "C304" H 2065 5396 50  0000 L CNN
+F 1 "22 uF" H 2065 5305 50  0000 L CNN
+F 2 "" H 1988 5200 50  0001 C CNN
+F 3 "" H 1950 5350 50  0001 C CNN
+	1    1950 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C?
+U 1 1 612AEE4F
+P 2400 5350
+AR Path="/5EDD7150/612AEE4F" Ref="C?"  Part="1" 
+AR Path="/5EDD7150/61296AEB/612AEE4F" Ref="C307"  Part="1" 
+F 0 "C307" H 2515 5396 50  0000 L CNN
+F 1 "22 uF" H 2515 5305 50  0000 L CNN
+F 2 "" H 2438 5200 50  0001 C CNN
+F 3 "" H 2400 5350 50  0001 C CNN
+	1    2400 5350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 5200 1950 5200
+Connection ~ 1500 5200
+Wire Wire Line
+	1500 5200 1050 5200
+Connection ~ 1950 5200
+Wire Wire Line
+	1950 5200 1500 5200
+Text Label 1050 5200 2    50   ~ 0
+12V0
+Wire Wire Line
+	1050 5500 1500 5500
+Connection ~ 1500 5500
+Wire Wire Line
+	1500 5500 1950 5500
+Connection ~ 1950 5500
+Wire Wire Line
+	1950 5500 2400 5500
+Text Label 1400 4500 2    50   ~ 0
+12V0
+$Comp
+L device:C C?
+U 1 1 612AEE65
+P 3450 5350
+AR Path="/5EDD7150/612AEE65" Ref="C?"  Part="1" 
+AR Path="/5EDD7150/61296AEB/612AEE65" Ref="C310"  Part="1" 
+F 0 "C310" H 3565 5396 50  0000 L CNN
+F 1 "47 uF" H 3565 5305 50  0000 L CNN
+F 2 "" H 3488 5200 50  0001 C CNN
+F 3 "" H 3450 5350 50  0001 C CNN
+	1    3450 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C?
+U 1 1 612AEE6F
+P 3900 5350
+AR Path="/5EDD7150/612AEE6F" Ref="C?"  Part="1" 
+AR Path="/5EDD7150/61296AEB/612AEE6F" Ref="C313"  Part="1" 
+F 0 "C313" H 4015 5396 50  0000 L CNN
+F 1 "47 uF" H 4015 5305 50  0000 L CNN
+F 2 "" H 3938 5200 50  0001 C CNN
+F 3 "" H 3900 5350 50  0001 C CNN
+	1    3900 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C?
+U 1 1 612AEE79
+P 4350 5350
+AR Path="/5EDD7150/612AEE79" Ref="C?"  Part="1" 
+AR Path="/5EDD7150/61296AEB/612AEE79" Ref="C316"  Part="1" 
+F 0 "C316" H 4465 5396 50  0000 L CNN
+F 1 "47 uF" H 4465 5305 50  0000 L CNN
+F 2 "" H 4388 5200 50  0001 C CNN
+F 3 "" H 4350 5350 50  0001 C CNN
+	1    4350 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C?
+U 1 1 612AEE83
+P 4800 5350
+AR Path="/5EDD7150/612AEE83" Ref="C?"  Part="1" 
+AR Path="/5EDD7150/61296AEB/612AEE83" Ref="C319"  Part="1" 
+F 0 "C319" H 4915 5396 50  0000 L CNN
+F 1 "47 uF" H 4915 5305 50  0000 L CNN
+F 2 "" H 4838 5200 50  0001 C CNN
+F 3 "" H 4800 5350 50  0001 C CNN
+	1    4800 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C?
+U 1 1 612AEE8D
+P 5250 5350
+AR Path="/5EDD7150/612AEE8D" Ref="C?"  Part="1" 
+AR Path="/5EDD7150/61296AEB/612AEE8D" Ref="C322"  Part="1" 
+F 0 "C322" H 5365 5396 50  0000 L CNN
+F 1 "0.1 uF" H 5365 5305 50  0000 L CNN
+F 2 "" H 5288 5200 50  0001 C CNN
+F 3 "" H 5250 5350 50  0001 C CNN
+	1    5250 5350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 5200 4800 5200
+Connection ~ 3900 5200
+Wire Wire Line
+	3900 5200 3450 5200
+Connection ~ 4350 5200
+Wire Wire Line
+	4350 5200 3900 5200
+Connection ~ 4800 5200
+Wire Wire Line
+	4800 5200 4350 5200
+Wire Wire Line
+	5250 5500 4800 5500
+Connection ~ 3900 5500
+Wire Wire Line
+	3900 5500 3450 5500
+Connection ~ 4350 5500
+Wire Wire Line
+	4350 5500 3900 5500
+Connection ~ 4800 5500
+Wire Wire Line
+	4800 5500 4350 5500
+Text Label 3450 5500 2    50   ~ 0
+GND
+Text HLabel 1050 1750 0    50   Input ~ 0
+12V0
+Text HLabel 1050 2050 0    50   Input ~ 0
+GND
+Text HLabel 2400 6000 2    50   Output ~ 0
+1V8_GOOD
+$Comp
+L device:R R?
+U 1 1 612E6EA0
+P 2900 4350
+AR Path="/5EDD7150/612E6EA0" Ref="R?"  Part="1" 
+AR Path="/5EDD7150/61296AEB/612E6EA0" Ref="R158"  Part="1" 
+F 0 "R158" V 2850 4500 50  0000 C CNN
+F 1 "4.7K" V 2900 4350 50  0000 C CNN
+F 2 "" V 2830 4350 50  0001 C CNN
+F 3 "" H 2900 4350 50  0001 C CNN
+	1    2900 4350
+	0    1    1    0   
+$EndComp
+Text Label 2750 4350 2    50   ~ 0
+GND
+Text Label 3300 4350 0    50   ~ 0
+1V5_EN
+Wire Wire Line
+	3050 4350 3300 4350
+Text HLabel 2250 6000 0    50   Input ~ 0
+1V8_EN
+Text HLabel 2400 6100 2    50   Output ~ 0
+1V8
+Text Label 1400 2650 2    50   ~ 0
+1V0_EN
+$EndSCHEMATC

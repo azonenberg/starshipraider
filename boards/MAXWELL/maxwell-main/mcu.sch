@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
-Sheet 15 16
+Sheet 16 17
 Title "MAXWELL Main Board"
 Date "2020-06-19"
 Rev "0.1"
@@ -125,17 +125,6 @@ F 1 "STM32F777NIH6" H 5100 4350 50  0000 L CNN
 F 2 "" H 5100 4450 50  0001 C CNN
 F 3 "" H 5100 4450 50  0001 C CNN
 	5    5100 4500
-	1    0    0    -1  
-$EndComp
-$Comp
-L st-azonenberg:STM32F777xx-TFBGA216 U1
-U 6 1 5F7ACFD5
-P 7100 4500
-F 0 "U1" H 7100 4450 50  0000 L CNN
-F 1 "STM32F777NIH6" H 7100 4350 50  0000 L CNN
-F 2 "" H 7100 4450 50  0001 C CNN
-F 3 "" H 7100 4450 50  0001 C CNN
-	6    7100 4500
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1415,15 +1404,6 @@ NoConn ~ 7000 4150
 NoConn ~ 7000 4050
 NoConn ~ 7000 3950
 NoConn ~ 7000 3850
-NoConn ~ 7000 3750
-NoConn ~ 7000 3650
-NoConn ~ 7000 3550
-NoConn ~ 7000 3450
-NoConn ~ 7000 3350
-NoConn ~ 7000 3250
-NoConn ~ 7000 3150
-NoConn ~ 7000 3050
-NoConn ~ 7000 2950
 NoConn ~ 8500 3250
 NoConn ~ 8500 3750
 NoConn ~ 8500 4050
@@ -1517,4 +1497,33 @@ Text HLabel 5000 6450 0    50   Output ~ 0
 TRIG_OUT_MUX_SEL
 Text HLabel 5000 6350 0    50   Output ~ 0
 TRIG_OUT_MUX_EQ
+Text HLabel 7000 2950 0    50   Output ~ 0
+1V0_EN
+Text HLabel 7000 3050 0    50   Input ~ 0
+1V0_1_GOOD
+Text HLabel 7000 3150 0    50   Input ~ 0
+1V0_2_GOOD
+Text HLabel 7000 3250 0    50   Output ~ 0
+1V2_EN
+Text HLabel 7000 3450 0    50   Output ~ 0
+1V5_EN
+Text HLabel 7000 3650 0    50   Output ~ 0
+1V8_EN
+Text HLabel 7000 3350 0    50   Input ~ 0
+1V2_GOOD
+Text HLabel 7000 3550 0    50   Input ~ 0
+1V5_GOOD
+Text HLabel 7000 3750 0    50   Input ~ 0
+1V8_GOOD
+$Comp
+L st-azonenberg:STM32F777xx-TFBGA216 U1
+U 6 1 5F7ACFD5
+P 7100 4500
+F 0 "U1" H 7100 4450 50  0000 L CNN
+F 1 "STM32F777NIH6" H 7100 4350 50  0000 L CNN
+F 2 "" H 7100 4450 50  0001 C CNN
+F 3 "" H 7100 4450 50  0001 C CNN
+	6    7100 4500
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
