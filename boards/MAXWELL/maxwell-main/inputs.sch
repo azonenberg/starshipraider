@@ -3,9 +3,9 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 15
+Sheet 4 16
 Title "MAXWELL Main Board"
-Date "2020-06-18"
+Date "2020-06-19"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
@@ -341,14 +341,6 @@ Text HLabel 6600 4050 2    50   Input ~ 0
 SYNC_CLK_1_N
 Wire Wire Line
 	6600 4050 6350 4050
-Text HLabel 6600 4250 2    50   Output ~ 0
-TRIG_OUT_P
-Wire Wire Line
-	6600 4250 6350 4250
-Text HLabel 6600 4350 2    50   Output ~ 0
-TRIG_OUT_N
-Wire Wire Line
-	6600 4350 6350 4350
 NoConn ~ 9100 4850
 NoConn ~ 9100 4950
 NoConn ~ 9100 5050
@@ -446,4 +438,12 @@ Text Label 1400 2650 2    50   ~ 0
 P4_UART_RX
 Text Label 1400 2850 2    50   ~ 0
 P5_UART_RX
+Text HLabel 6600 4250 2    50   Output ~ 0
+TRIG_OUT_P
+Wire Wire Line
+	6600 4250 6350 4250
+Wire Wire Line
+	6600 4350 6350 4350
+Text HLabel 6600 4350 2    50   Output ~ 0
+TRIG_OUT_N
 $EndSCHEMATC

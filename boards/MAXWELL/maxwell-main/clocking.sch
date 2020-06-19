@@ -3,9 +3,9 @@ EELAYER 30 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
-Sheet 13 15
+Sheet 13 16
 Title "MAXWELL Main Board"
-Date "2020-06-18"
+Date "2020-06-19"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
@@ -36,7 +36,7 @@ F 3 "" H 1800 8400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Sheet
-S 14300 1000 1150 2150
+S 14300 1000 1150 1850
 U 5F303230
 F0 "Trigger and Reference Inputs" 50
 F1 "trigger.sch" 50
@@ -56,8 +56,6 @@ F14 "5V0" I R 15450 1050 50
 F15 "5V0_N" I R 15450 1350 50 
 F16 "2V5" I R 15450 1150 50 
 F17 "TRIG_OUT" I L 14300 2750 50 
-F18 "GTX_TRIG_OUT_P" I L 14300 2950 50 
-F19 "GTX_TRIG_OUT_N" I L 14300 3050 50 
 $EndSheet
 Text HLabel 3100 1050 2    50   Output ~ 0
 S7_CLK_P
@@ -172,18 +170,12 @@ Text HLabel 15450 1150 2    50   Input ~ 0
 2V5
 Text Label 15450 1250 0    50   ~ 0
 GND
-Text HLabel 14300 2950 0    50   Input ~ 0
+Text HLabel 9800 4700 0    50   Input ~ 0
 GTX_TRIG_OUT_P
-Text HLabel 14300 3050 0    50   Input ~ 0
+Text HLabel 9800 4800 0    50   Input ~ 0
 GTX_TRIG_OUT_N
-Text HLabel 13150 2650 0    50   Input ~ 0
-TRIG_OUT_N
-Text HLabel 13150 2550 0    50   Input ~ 0
-TRIG_OUT_P
 Text HLabel 15450 1350 2    50   Input ~ 0
 5V0_N
-Text Notes 12650 2800 0    50   ~ 0
-TODO: Diff to single conversion
 Text Label 1700 5750 2    50   ~ 0
 3V3
 Text Label 1700 6050 2    50   ~ 0
@@ -901,4 +893,183 @@ Text Label 7500 7800 2    50   ~ 0
 GND
 Wire Wire Line
 	7500 7800 8100 7800
+Text HLabel 9800 4400 0    50   Input ~ 0
+TRIG_OUT_P
+Text HLabel 9800 4500 0    50   Input ~ 0
+TRIG_OUT_N
+Text HLabel 9800 4200 0    50   Input ~ 0
+TRIG_OUT_SEL
+$Comp
+L special-azonenberg:SY56017R U?
+U 1 1 6110E24F
+P 10000 4850
+AR Path="/5EDD723A/5F2BB4CD/5F308105/6110E24F" Ref="U?"  Part="1" 
+AR Path="/5EEF3B79/6110E24F" Ref="U45"  Part="1" 
+F 0 "U45" H 10000 4700 50  0000 L CNN
+F 1 "SY56017R" H 10000 4800 50  0000 L CNN
+F 2 "" H 10000 4850 50  0001 C CNN
+F 3 "" H 10000 4850 50  0001 C CNN
+	1    10000 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9800 3600 9800 3700
+Wire Wire Line
+	9800 3900 9800 4000
+Text HLabel 10850 3700 2    50   Input ~ 0
+TRIG_OUT_MUX_EQ
+$Comp
+L device:C C?
+U 1 1 6110E25A
+P 10050 5300
+AR Path="/5EDD723A/5F2BB4CD/5F308105/6110E25A" Ref="C?"  Part="1" 
+AR Path="/5EEF3B79/6110E25A" Ref="C97"  Part="1" 
+F 0 "C97" H 10200 5400 50  0000 C CNN
+F 1 "0.1 uF" H 10300 5300 50  0000 C CNN
+F 2 "" H 10088 5150 50  0001 C CNN
+F 3 "" H 10050 5300 50  0001 C CNN
+	1    10050 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C?
+U 1 1 6110E260
+P 10550 5300
+AR Path="/5EDD723A/5F2BB4CD/5F308105/6110E260" Ref="C?"  Part="1" 
+AR Path="/5EEF3B79/6110E260" Ref="C98"  Part="1" 
+F 0 "C98" H 10700 5400 50  0000 C CNN
+F 1 "0.01 uF" H 10800 5300 50  0000 C CNN
+F 2 "" H 10588 5150 50  0001 C CNN
+F 3 "" H 10550 5300 50  0001 C CNN
+	1    10550 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C?
+U 1 1 6110E266
+P 11100 5300
+AR Path="/5EDD723A/5F2BB4CD/5F308105/6110E266" Ref="C?"  Part="1" 
+AR Path="/5EEF3B79/6110E266" Ref="C102"  Part="1" 
+F 0 "C102" H 11250 5400 50  0000 C CNN
+F 1 "0.1 uF" H 11350 5300 50  0000 C CNN
+F 2 "" H 11138 5150 50  0001 C CNN
+F 3 "" H 11100 5300 50  0001 C CNN
+	1    11100 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C?
+U 1 1 6110E26C
+P 11600 5300
+AR Path="/5EDD723A/5F2BB4CD/5F308105/6110E26C" Ref="C?"  Part="1" 
+AR Path="/5EEF3B79/6110E26C" Ref="C103"  Part="1" 
+F 0 "C103" H 11750 5400 50  0000 C CNN
+F 1 "0.01 uF" H 11850 5300 50  0000 C CNN
+F 2 "" H 11638 5150 50  0001 C CNN
+F 3 "" H 11600 5300 50  0001 C CNN
+	1    11600 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C?
+U 1 1 6110E272
+P 12150 5300
+AR Path="/5EDD723A/5F2BB4CD/5F308105/6110E272" Ref="C?"  Part="1" 
+AR Path="/5EEF3B79/6110E272" Ref="C104"  Part="1" 
+F 0 "C104" H 12300 5400 50  0000 C CNN
+F 1 "0.1 uF" H 12400 5300 50  0000 C CNN
+F 2 "" H 12188 5150 50  0001 C CNN
+F 3 "" H 12150 5300 50  0001 C CNN
+	1    12150 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C?
+U 1 1 6110E278
+P 12650 5300
+AR Path="/5EDD723A/5F2BB4CD/5F308105/6110E278" Ref="C?"  Part="1" 
+AR Path="/5EEF3B79/6110E278" Ref="C105"  Part="1" 
+F 0 "C105" H 12800 5400 50  0000 C CNN
+F 1 "0.01 uF" H 12900 5300 50  0000 C CNN
+F 2 "" H 12688 5150 50  0001 C CNN
+F 3 "" H 12650 5300 50  0001 C CNN
+	1    12650 5300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	12650 5150 12150 5150
+Wire Wire Line
+	10550 5150 10050 5150
+Connection ~ 11600 5150
+Wire Wire Line
+	11600 5150 11100 5150
+Connection ~ 12150 5150
+Wire Wire Line
+	12150 5150 11600 5150
+Wire Wire Line
+	10050 5450 10550 5450
+Connection ~ 10550 5450
+Wire Wire Line
+	10550 5450 11100 5450
+Connection ~ 11100 5450
+Wire Wire Line
+	11100 5450 11600 5450
+Connection ~ 11600 5450
+Wire Wire Line
+	11600 5450 12150 5450
+Connection ~ 12150 5450
+Wire Wire Line
+	12150 5450 12650 5450
+Text Label 10050 5150 2    50   ~ 0
+2V5
+Text Label 10050 5450 2    50   ~ 0
+GND
+Text Label 9800 3400 2    50   ~ 0
+2V5
+Text Label 9800 3900 2    50   ~ 0
+GND
+Text Label 11100 5150 2    50   ~ 0
+1V2
+Text Label 9800 3600 2    50   ~ 0
+1V2
+Text Label 10850 4550 0    50   ~ 0
+TRIG_OUT_MUX_P
+Text Label 10850 4650 0    50   ~ 0
+TRIG_OUT_MUX_N
+Text Label 10850 3500 0    50   ~ 0
+1V2
+$Comp
+L device:C C?
+U 1 1 6113398E
+P 10850 3250
+AR Path="/5EDD723A/5F2BB4CD/5F308105/6113398E" Ref="C?"  Part="1" 
+AR Path="/5EEF3B79/6113398E" Ref="C101"  Part="1" 
+F 0 "C101" H 11000 3350 50  0000 C CNN
+F 1 "0.1 uF" H 11100 3250 50  0000 C CNN
+F 2 "" H 10888 3100 50  0001 C CNN
+F 3 "" H 10850 3250 50  0001 C CNN
+	1    10850 3250
+	1    0    0    -1  
+$EndComp
+Text Label 10850 3100 2    50   ~ 0
+GND
+Text Label 14300 2750 2    50   ~ 0
+TRIG_OUT_MUX_P
+$Comp
+L device:R R150
+U 1 1 6113FF93
+P 11850 4650
+F 0 "R150" V 11750 4650 50  0000 C CNN
+F 1 "49.9" V 11850 4650 50  0000 C CNN
+F 2 "" V 11780 4650 50  0001 C CNN
+F 3 "" H 11850 4650 50  0001 C CNN
+	1    11850 4650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	10850 4650 11700 4650
+Text Label 12000 4650 0    50   ~ 0
+GND
+Text Notes 13600 3600 0    50   ~ 0
+TRIG_OUT_MUX is one leg of a 1.2V CML output\nDC coupled, 390 mV swing or -4 dBm\n\nREF_OUT is single ended LVCMOS33\n~~3.3V swing or +14 dBm\n\nREF_OUT_P/N is LVDS, 400 mV or -4 dBm
 $EndSCHEMATC

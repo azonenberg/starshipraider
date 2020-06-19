@@ -3,9 +3,9 @@ EELAYER 30 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
-Sheet 14 15
+Sheet 14 16
 Title "MAXWELL Main Board"
-Date "2020-06-18"
+Date "2020-06-19"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
@@ -485,44 +485,6 @@ Wire Wire Line
 Wire Wire Line
 	1350 8100 1150 8100
 Text Label 1350 8300 0    50   ~ 0
-GND
-Text HLabel 2250 8650 2    50   Input ~ 0
-GTX_TRIG_OUT_P
-$Comp
-L Connector:Conn_Coaxial J?
-U 1 1 604CD5EA
-P 1000 8650
-AR Path="/5EEF3BE9/604CD5EA" Ref="J?"  Part="1" 
-AR Path="/5EEF3B79/5F303230/604CD5EA" Ref="J26"  Part="1" 
-F 0 "J26" H 953 8888 50  0000 C CNN
-F 1 "901-10511-3" H 953 8797 50  0000 C CNN
-F 2 "" H 1000 8650 50  0001 C CNN
-F 3 "" H 1000 8650 50  0001 C CNN
-	1    1000 8650
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	1350 8850 1000 8850
-Text Label 1350 8850 0    50   ~ 0
-GND
-Text HLabel 2250 9200 2    50   Input ~ 0
-GTX_TRIG_OUT_N
-$Comp
-L Connector:Conn_Coaxial J?
-U 1 1 604CEF12
-P 1000 9200
-AR Path="/5EEF3BE9/604CEF12" Ref="J?"  Part="1" 
-AR Path="/5EEF3B79/5F303230/604CEF12" Ref="J27"  Part="1" 
-F 0 "J27" H 953 9438 50  0000 C CNN
-F 1 "901-10511-3" H 953 9347 50  0000 C CNN
-F 2 "" H 1000 9200 50  0001 C CNN
-F 3 "" H 1000 9200 50  0001 C CNN
-	1    1000 9200
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	1350 9400 1000 9400
-Text Label 1350 9400 0    50   ~ 0
 GND
 $Comp
 L device:C C205
@@ -1060,29 +1022,6 @@ REF_OUT
 Text Label 9300 3700 2    50   ~ 0
 TRIG_OUT
 $Comp
-L special-azonenberg:RCLAMP0542T U45
-U 1 1 6076F953
-P 9600 5050
-F 0 "U45" H 10078 5458 60  0000 L CNN
-F 1 "RCLAMP0542T" H 10078 5352 60  0000 L CNN
-F 2 "" H 9600 5050 60  0000 C CNN
-F 3 "" H 9600 5050 60  0000 C CNN
-	1    9600 5050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9300 4400 9300 4500
-Wire Wire Line
-	9300 4600 9300 4700
-Text Label 9300 4900 2    50   ~ 0
-GND
-Wire Wire Line
-	9300 4900 9300 5000
-Text Label 9300 4400 2    50   ~ 0
-GTX_TRIG_OUT_P
-Text Label 9300 4600 2    50   ~ 0
-GTX_TRIG_OUT_N
-$Comp
 L device:R R125
 U 1 1 60E72EAC
 P 9450 6200
@@ -1282,36 +1221,6 @@ Wire Wire Line
 	10550 6600 10550 6500
 Wire Wire Line
 	10550 6700 10550 6600
-$Comp
-L device:C C282
-U 1 1 60F0A5F8
-P 2100 8650
-F 0 "C282" V 1848 8650 50  0000 C CNN
-F 1 "0.1 uF" V 1939 8650 50  0000 C CNN
-F 2 "" H 2138 8500 50  0001 C CNN
-F 3 "" H 2100 8650 50  0001 C CNN
-	1    2100 8650
-	0    1    1    0   
-$EndComp
-$Comp
-L device:C C283
-U 1 1 60F0B0B2
-P 2100 9200
-F 0 "C283" V 1848 9200 50  0000 C CNN
-F 1 "0.1 uF" V 1939 9200 50  0000 C CNN
-F 2 "" H 2138 9050 50  0001 C CNN
-F 3 "" H 2100 9200 50  0001 C CNN
-	1    2100 9200
-	0    1    1    0   
-$EndComp
-Text Label 1200 8650 0    50   ~ 0
-GTX_TRIG_OUT_AC_P
-Text Label 1200 9200 0    50   ~ 0
-GTX_TRIG_OUT_AC_N
-Wire Wire Line
-	1150 8650 1950 8650
-Wire Wire Line
-	1150 9200 1950 9200
 NoConn ~ 9300 1950
 NoConn ~ 9300 2050
 $EndSCHEMATC
