@@ -19,19 +19,19 @@ Text HLabel 2200 750  2    50   Output ~ 0
 12V0
 Text HLabel 2200 1050 2    50   Output ~ 0
 GND
-Text HLabel 2200 4850 2    50   Output ~ 0
+Text HLabel 2200 5200 2    50   Output ~ 0
 3V3
 Text HLabel 5400 5050 0    50   Output ~ 0
 VBACKLIGHT
-Text HLabel 2200 5150 2    50   Output ~ 0
+Text HLabel 2200 5500 2    50   Output ~ 0
 2V5
-Text HLabel 2200 5450 2    50   Output ~ 0
+Text HLabel 2200 5800 2    50   Output ~ 0
 2V0
 Text HLabel 2200 2350 2    50   Output ~ 0
 1V2
-Text HLabel 2200 4250 2    50   Output ~ 0
+Text HLabel 2200 4600 2    50   Output ~ 0
 5V0
-Text HLabel 2200 4550 2    50   Output ~ 0
+Text HLabel 2200 4900 2    50   Output ~ 0
 5V0_N
 $Sheet
 S 1200 700  1000 750 
@@ -44,7 +44,7 @@ F4 "5V0_SB" O R 2200 850 50
 F5 "3V3_SB" O R 2200 950 50 
 $EndSheet
 $Sheet
-S 1200 1700 1000 2250
+S 1200 1700 1000 2600
 U 61296AEB
 F0 "1.xV rails" 50
 F1 "1v-rails.sch" 50
@@ -72,6 +72,9 @@ F22 "VTT_EN" I R 2200 3850 50
 F23 "3V3_SB" I L 1200 1950 50 
 F24 "I2C_SDA" B L 1200 2250 50 
 F25 "I2C_SCL" I L 1200 2350 50 
+F26 "0V5_GOOD" O R 2200 4250 50 
+F27 "0V5_EN" I R 2200 4150 50 
+F28 "0V5" O R 2200 4050 50 
 $EndSheet
 Text Label 1200 1750 2    50   ~ 0
 12V0
@@ -128,65 +131,65 @@ PSU_I2C_SCL
 Text Notes 7850 5400 0    50   ~ 0
 TODO: I2C temp sensors
 $Sheet
-S 1200 4200 1000 2250
+S 1200 4550 1000 2250
 U 61580EA1
 F0 "Higher voltage rails" 50
 F1 "higher-rails.sch" 50
-F2 "5V0" O R 2200 4250 50 
-F3 "5V0_N" O R 2200 4550 50 
-F4 "3V3" O R 2200 4850 50 
-F5 "2V5" O R 2200 5150 50 
-F6 "2V0" O R 2200 5450 50 
-F7 "5V0_GOOD" O R 2200 4350 50 
-F8 "5V0_N_GOOD" O R 2200 4650 50 
-F9 "3V3_GOOD" O R 2200 4950 50 
-F10 "2V5_GOOD" O R 2200 5250 50 
-F11 "2V0_GOOD" O R 2200 5550 50 
-F12 "5V0_EN" I R 2200 4450 50 
-F13 "5V0_N_EN" I R 2200 4750 50 
-F14 "3V3_EN" I R 2200 5050 50 
-F15 "2V5_EN" I R 2200 5350 50 
-F16 "2V0_EN" I R 2200 5650 50 
-F17 "12V0" I L 1200 4250 50 
-F18 "GND" I L 1200 4450 50 
-F19 "I2C_SDA" B L 1200 4650 50 
-F20 "I2C_SCL" I L 1200 4750 50 
-F21 "5V0_SB" I L 1200 4350 50 
+F2 "5V0" O R 2200 4600 50 
+F3 "5V0_N" O R 2200 4900 50 
+F4 "3V3" O R 2200 5200 50 
+F5 "2V5" O R 2200 5500 50 
+F6 "2V0" O R 2200 5800 50 
+F7 "5V0_GOOD" O R 2200 4700 50 
+F8 "5V0_N_GOOD" O R 2200 5000 50 
+F9 "3V3_GOOD" O R 2200 5300 50 
+F10 "2V5_GOOD" O R 2200 5600 50 
+F11 "2V0_GOOD" O R 2200 5900 50 
+F12 "5V0_EN" I R 2200 4800 50 
+F13 "5V0_N_EN" I R 2200 5100 50 
+F14 "3V3_EN" I R 2200 5400 50 
+F15 "2V5_EN" I R 2200 5700 50 
+F16 "2V0_EN" I R 2200 6000 50 
+F17 "12V0" I L 1200 4600 50 
+F18 "GND" I L 1200 4800 50 
+F19 "I2C_SDA" B L 1200 5000 50 
+F20 "I2C_SCL" I L 1200 5100 50 
+F21 "5V0_SB" I L 1200 4700 50 
 $EndSheet
-Text HLabel 2200 4450 2    50   Input ~ 0
+Text HLabel 2200 4800 2    50   Input ~ 0
 5V0_EN
-Text HLabel 2200 4750 2    50   Input ~ 0
+Text HLabel 2200 5100 2    50   Input ~ 0
 5V0_N_EN
-Text HLabel 2200 5050 2    50   Input ~ 0
+Text HLabel 2200 5400 2    50   Input ~ 0
 3V3_EN
-Text HLabel 2200 5350 2    50   Input ~ 0
+Text HLabel 2200 5700 2    50   Input ~ 0
 2V5_EN
-Text HLabel 2200 5650 2    50   Input ~ 0
+Text HLabel 2200 6000 2    50   Input ~ 0
 2V0_EN
-Text Label 1200 4250 2    50   ~ 0
+Text Label 1200 4600 2    50   ~ 0
 12V0
-Text Label 1200 4450 2    50   ~ 0
+Text Label 1200 4800 2    50   ~ 0
 GND
-Text HLabel 2200 4350 2    50   Output ~ 0
+Text HLabel 2200 4700 2    50   Output ~ 0
 5V0_GOOD
-Text HLabel 2200 4650 2    50   Output ~ 0
+Text HLabel 2200 5000 2    50   Output ~ 0
 5V0_N_GOOD
-Text HLabel 2200 4950 2    50   Output ~ 0
+Text HLabel 2200 5300 2    50   Output ~ 0
 3V3_GOOD
-Text HLabel 2200 5250 2    50   Output ~ 0
+Text HLabel 2200 5600 2    50   Output ~ 0
 2V5_GOOD
-Text HLabel 2200 5550 2    50   Output ~ 0
+Text HLabel 2200 5900 2    50   Output ~ 0
 2V0_GOOD
-Text Label 1200 4650 2    50   ~ 0
+Text Label 1200 5000 2    50   ~ 0
 PSU_I2C_SDA
-Text Label 1200 4750 2    50   ~ 0
+Text Label 1200 5100 2    50   ~ 0
 PSU_I2C_SCL
-Text Label 1200 4350 2    50   ~ 0
+Text Label 1200 4700 2    50   ~ 0
 5V0_SB
-Text HLabel 7150 3400 0    50   Output ~ 0
+Text HLabel 2200 4050 2    50   Output ~ 0
 0V5
-Text HLabel 7300 3150 0    50   Input ~ 0
-0V5_EN
-Text HLabel 7350 3700 0    50   Output ~ 0
+Text HLabel 2200 4250 2    50   Output ~ 0
 0V5_GOOD
+Text HLabel 2200 4150 2    50   Input ~ 0
+0V5_EN
 $EndSCHEMATC

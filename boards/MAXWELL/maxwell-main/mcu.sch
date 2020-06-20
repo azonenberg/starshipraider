@@ -1362,8 +1362,6 @@ NoConn ~ 3250 4050
 NoConn ~ 3250 4150
 NoConn ~ 3250 4250
 NoConn ~ 5000 3650
-NoConn ~ 5000 3750
-NoConn ~ 5000 3850
 NoConn ~ 7000 2150
 NoConn ~ 7000 2050
 NoConn ~ 7000 1950
@@ -1548,4 +1546,8 @@ Text HLabel 5000 4250 0    50   Input ~ 0
 5V0_GOOD
 Text HLabel 5000 4050 0    50   Input ~ 0
 5V0_N_GOOD
+Text HLabel 5000 3850 0    50   Input ~ 0
+0V5_GOOD
+Text HLabel 5000 3750 0    50   Output ~ 0
+0V5_EN
 $EndSCHEMATC
