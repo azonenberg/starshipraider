@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 8 18
+Sheet 9 18
 Title "MAXWELL Main Board"
 Date "2020-06-20"
 Rev "0.1"

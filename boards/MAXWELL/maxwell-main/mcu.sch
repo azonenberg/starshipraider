@@ -1527,7 +1527,7 @@ I2C2 ADDRESS MAP (3V3_SB)\nSPD EEPROM = A0
 Text Notes 7900 10000 0    50   ~ 0
 I2C3 ADDRESS MAP (3V3)\nQSFP ID = A0
 Text Notes 9450 10000 0    50   ~ 0
-I2C4 ADDRESS MAP (3V3)\nTouch controller = BA
+I2C4 ADDRESS MAP (3V3_SB)\nTouch controller = BA
 Text HLabel 7000 4050 0    50   Output ~ 0
 2V0_EN
 Text HLabel 7000 4250 0    50   Output ~ 0

@@ -183,4 +183,10 @@ Text Label 1200 4750 2    50   ~ 0
 PSU_I2C_SCL
 Text Label 1200 4350 2    50   ~ 0
 5V0_SB
+Text HLabel 7150 3400 0    50   Output ~ 0
+0V5
+Text HLabel 7300 3150 0    50   Input ~ 0
+0V5_EN
+Text HLabel 7350 3700 0    50   Output ~ 0
+0V5_GOOD
 $EndSCHEMATC

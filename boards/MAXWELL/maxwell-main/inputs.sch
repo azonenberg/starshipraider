@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 6 18
+Sheet 7 18
 Title "MAXWELL Main Board"
 Date "2020-06-20"
 Rev "0.1"
@@ -135,6 +135,9 @@ F37 "TRIG_OUT_N" O R 6350 4350 50
 F38 "GTX_TRIG_OUT_P" O L 5000 4250 50 
 F39 "GTX_TRIG_OUT_N" O L 5000 4350 50 
 F40 "1V2" I R 6350 1450 50 
+F41 "0V5" I L 5000 1450 50 
+F42 "5V0" I L 5000 1350 50 
+F43 "5V0_N" I L 5000 1550 50 
 $EndSheet
 Text Label 9100 1350 2    50   ~ 0
 P0_UART_TX
@@ -454,4 +457,10 @@ Wire Wire Line
 	6600 1450 6350 1450
 Text Label 1400 1350 2    50   ~ 0
 GND
+Text HLabel 5000 1350 0    50   Input ~ 0
+5V0
+Text HLabel 5000 1450 0    50   Input ~ 0
+0V5
+Text HLabel 5000 1550 0    50   Input ~ 0
+5V0_N
 $EndSCHEMATC
