@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
-Sheet 10 17
+Sheet 11 17
 Title "MAXWELL Main Board"
 Date "2020-06-19"
 Rev "0.1"
@@ -479,8 +479,6 @@ Wire Wire Line
 Connection ~ 2700 5400
 Wire Wire Line
 	2700 5400 2700 5500
-Text Label 2200 5500 0    50   ~ 0
-GND
 Text Label 3600 5500 0    50   ~ 0
 GND
 Text Label 4100 4400 2    50   ~ 0
@@ -1443,4 +1441,6 @@ Text Label 9050 8500 2    50   ~ 0
 POD5_D7_P
 Text Label 9050 8600 2    50   ~ 0
 POD5_D7_N
+Text HLabel 2200 5500 2    50   Input ~ 0
+GND
 $EndSCHEMATC

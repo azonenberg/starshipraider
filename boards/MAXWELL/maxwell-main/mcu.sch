@@ -577,8 +577,6 @@ Text Notes 13900 6100 0    50   ~ 0
 LCD decoupling
 Text HLabel 15200 1500 2    50   Input ~ 0
 VBACKLIGHT
-Text HLabel 1350 5850 0    50   Input ~ 0
-3V3
 Text HLabel 1350 2950 0    50   Input ~ 0
 GND
 Text Label 2550 5150 0    50   ~ 0
@@ -1169,10 +1167,6 @@ Text Label 2450 7900 2    50   ~ 0
 3V3
 Text Label 1350 5350 2    50   ~ 0
 VBAT
-Text Label 1350 5250 2    50   ~ 0
-3V3
-Text Label 1350 5150 2    50   ~ 0
-3V3
 $Comp
 L device:C C260
 U 1 1 609BC102
@@ -1402,8 +1396,6 @@ NoConn ~ 7000 4350
 NoConn ~ 7000 4250
 NoConn ~ 7000 4150
 NoConn ~ 7000 4050
-NoConn ~ 7000 3950
-NoConn ~ 7000 3850
 NoConn ~ 8500 3250
 NoConn ~ 8500 3750
 NoConn ~ 8500 4050
@@ -1526,4 +1518,14 @@ F 3 "" H 7100 4450 50  0001 C CNN
 	6    7100 4500
 	1    0    0    -1  
 $EndComp
+Text Label 1350 5150 2    50   ~ 0
+3V3
+Text Label 1350 5250 2    50   ~ 0
+3V3
+Text HLabel 1350 5850 0    50   Input ~ 0
+3V3
+Text HLabel 7000 3850 0    50   Output ~ 0
+VTT_EN
+Text HLabel 7000 3950 0    50   Input ~ 0
+VTT_GOOD
 $EndSCHEMATC

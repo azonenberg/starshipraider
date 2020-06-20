@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
-Sheet 13 17
+Sheet 17 17
 Title "MAXWELL Main Board"
 Date "2020-06-19"
 Rev "0.1"
@@ -460,7 +460,7 @@ Connection ~ 4300 5300
 Wire Wire Line
 	4300 5300 4300 5400
 Text HLabel 4300 1200 0    50   Input ~ 0
-1V0
+1V0_1
 Wire Wire Line
 	4300 1200 4300 1300
 Connection ~ 4300 1300
@@ -470,7 +470,7 @@ Connection ~ 4300 1400
 Wire Wire Line
 	4300 1400 4300 1500
 Text Label 4300 3300 2    50   ~ 0
-1V0
+1V0_1
 Wire Wire Line
 	4300 3300 4300 3400
 Connection ~ 4300 3400
@@ -711,7 +711,7 @@ F 3 "" H 1600 7600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 1600 7450 2    50   ~ 0
-1V0
+1V0_1
 Text Label 1600 7750 2    50   ~ 0
 GND
 Text Notes 1600 7850 0    50   ~ 0
@@ -786,7 +786,7 @@ Connection ~ 2550 8000
 Wire Wire Line
 	2550 8000 2100 8000
 Text Label 1600 8000 2    50   ~ 0
-1V0
+1V0_1
 Text Label 1600 8300 2    50   ~ 0
 GND
 Wire Wire Line
@@ -989,8 +989,6 @@ Wire Wire Line
 	5150 8650 4650 8650
 Wire Wire Line
 	4650 8950 5150 8950
-Text Label 4650 9350 2    50   ~ 0
-1V0
 $Comp
 L device:C C158
 U 1 1 5FD6307F
@@ -1374,4 +1372,6 @@ Wire Wire Line
 	4300 900  4300 1000
 Text HLabel 6000 9850 2    50   Output ~ 0
 GTX_1V2
+Text HLabel 4650 9350 0    50   Input ~ 0
+1V0_2
 $EndSCHEMATC

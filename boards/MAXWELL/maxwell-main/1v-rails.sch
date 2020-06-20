@@ -1,7 +1,7 @@
 EESchema Schematic File Version 4
 EELAYER 30 0
 EELAYER END
-$Descr A4 11693 8268
+$Descr A3 16535 11693
 encoding utf-8
 Sheet 4 17
 Title "MAXWELL Main Board"
@@ -56,7 +56,7 @@ Wire Wire Line
 NoConn ~ 1400 850 
 Text HLabel 2300 1150 2    50   Output ~ 0
 1V0_1_GOOD
-Text HLabel 1400 950  0    50   Input ~ 0
+Text HLabel 2800 7850 0    50   Input ~ 0
 1V0_EN
 $Comp
 L device:R R?
@@ -529,7 +529,7 @@ Wire Wire Line
 NoConn ~ 1400 4300
 Text HLabel 2300 4600 2    50   Output ~ 0
 1V5_GOOD
-Text HLabel 1400 4400 0    50   Input ~ 0
+Text HLabel 1200 7850 0    50   Input ~ 0
 1V5_EN
 NoConn ~ 2300 5000
 $Comp
@@ -718,7 +718,7 @@ Text HLabel 1050 1750 0    50   Input ~ 0
 12V0
 Text HLabel 1050 2050 0    50   Input ~ 0
 GND
-Text HLabel 2400 6000 2    50   Output ~ 0
+Text HLabel 8950 2350 2    50   Output ~ 0
 1V8_GOOD
 $Comp
 L device:R R?
@@ -739,10 +739,642 @@ Text Label 3300 4350 0    50   ~ 0
 1V5_EN
 Wire Wire Line
 	3050 4350 3300 4350
-Text HLabel 2250 6000 0    50   Input ~ 0
+Text HLabel 6000 7850 0    50   Input ~ 0
 1V8_EN
-Text HLabel 2400 6100 2    50   Output ~ 0
+Text HLabel 9700 2550 2    50   Output ~ 0
 1V8
 Text Label 1400 2650 2    50   ~ 0
-1V0_EN
+1V0_EN_SHIFT
+Text HLabel 4400 7850 0    50   Input ~ 0
+1V2_EN
+Text HLabel 9700 1250 2    50   Output ~ 0
+1V2
+Text HLabel 8950 1050 2    50   Output ~ 0
+1V2_GOOD
+$Comp
+L power-azonenberg:OKL-T_3-W12P-C U57
+U 1 1 6137EAAC
+P 8000 1700
+F 0 "U57" H 8375 2597 60  0000 C CNN
+F 1 "OKL-T/3-W12P-C" H 8375 2491 60  0000 C CNN
+F 2 "" H 8000 1600 60  0001 C CNN
+F 3 "" H 8000 1600 60  0001 C CNN
+	1    8000 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L special-azonenberg:SSM6N58NU_DUAL_NMOS Q1
+U 1 1 61383511
+P 1550 7850
+F 0 "Q1" H 1694 7903 60  0000 L CNN
+F 1 "SSM6N58NU" H 1694 7797 60  0000 L CNN
+F 2 "" H 1550 7850 60  0000 C CNN
+F 3 "transistors/mos/*.*" H 1694 7744 60  0001 L CNN
+	1    1550 7850
+	1    0    0    -1  
+$EndComp
+Text Notes 3850 1000 0    50   ~ 0
+TODO: shift EN signals up to higher voltage
+Text HLabel 1150 7350 0    50   Input ~ 0
+5V0_SB
+Text Notes 1250 7200 0    50   ~ 0
+Regulator enables need >3.3V to switch on fully:\n* IAFs need 4.2V min\n* OKL-T/3 needs 3.5V min\nLevel shifter inverts, drive low to enable
+Text Label 1400 4400 2    50   ~ 0
+1V5_EN_SHIFT
+Text Label 1950 7650 0    50   ~ 0
+1V5_EN_SHIFT
+Text Label 1400 950  2    50   ~ 0
+1V0_EN_SHIFT
+Text Label 3550 7650 0    50   ~ 0
+1V0_EN_SHIFT
+$Comp
+L device:R R160
+U 1 1 613939AC
+P 1650 7500
+F 0 "R160" H 1720 7546 50  0000 L CNN
+F 1 "10K" H 1720 7455 50  0000 L CNN
+F 2 "" V 1580 7500 50  0001 C CNN
+F 3 "" H 1650 7500 50  0001 C CNN
+	1    1650 7500
+	1    0    0    -1  
+$EndComp
+Text Label 1150 8050 2    50   ~ 0
+GND
+Wire Wire Line
+	1950 7650 1650 7650
+Connection ~ 1650 7650
+Wire Wire Line
+	1150 7350 1200 7350
+Wire Wire Line
+	1150 8050 1650 8050
+$Comp
+L device:R R159
+U 1 1 613A438E
+P 1200 7500
+F 0 "R159" H 1270 7546 50  0000 L CNN
+F 1 "10K" H 1270 7455 50  0000 L CNN
+F 2 "" V 1130 7500 50  0001 C CNN
+F 3 "" H 1200 7500 50  0001 C CNN
+	1    1200 7500
+	1    0    0    -1  
+$EndComp
+Connection ~ 1200 7350
+Wire Wire Line
+	1200 7350 1650 7350
+Wire Wire Line
+	1200 7650 1200 7850
+Wire Wire Line
+	1200 7850 1350 7850
+$Comp
+L special-azonenberg:SSM6N58NU_DUAL_NMOS Q1
+U 2 1 613A8859
+P 3150 7850
+F 0 "Q1" H 3294 7903 60  0000 L CNN
+F 1 "SSM6N58NU" H 3294 7797 60  0000 L CNN
+F 2 "" H 3150 7850 60  0000 C CNN
+F 3 "transistors/mos/*.*" H 3294 7744 60  0001 L CNN
+	2    3150 7850
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:R R162
+U 1 1 613A8864
+P 3250 7500
+F 0 "R162" H 3320 7546 50  0000 L CNN
+F 1 "10K" H 3320 7455 50  0000 L CNN
+F 2 "" V 3180 7500 50  0001 C CNN
+F 3 "" H 3250 7500 50  0001 C CNN
+	1    3250 7500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 7650 3250 7650
+Connection ~ 3250 7650
+$Comp
+L device:R R161
+U 1 1 613A8872
+P 2800 7500
+F 0 "R161" H 2870 7546 50  0000 L CNN
+F 1 "10K" H 2870 7455 50  0000 L CNN
+F 2 "" V 2730 7500 50  0001 C CNN
+F 3 "" H 2800 7500 50  0001 C CNN
+	1    2800 7500
+	1    0    0    -1  
+$EndComp
+Connection ~ 2800 7350
+Wire Wire Line
+	2800 7350 3250 7350
+Wire Wire Line
+	2800 7650 2800 7850
+Wire Wire Line
+	2800 7850 2950 7850
+Wire Wire Line
+	1650 7350 2800 7350
+Connection ~ 1650 7350
+Wire Wire Line
+	1650 8050 3250 8050
+Connection ~ 1650 8050
+Text Label 5150 7650 0    50   ~ 0
+1V2_EN_SHIFT
+$Comp
+L special-azonenberg:SSM6N58NU_DUAL_NMOS Q2
+U 1 1 613B0F9B
+P 4750 7850
+F 0 "Q2" H 4894 7903 60  0000 L CNN
+F 1 "SSM6N58NU" H 4894 7797 60  0000 L CNN
+F 2 "" H 4750 7850 60  0000 C CNN
+F 3 "transistors/mos/*.*" H 4894 7744 60  0001 L CNN
+	1    4750 7850
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:R R164
+U 1 1 613B0FA5
+P 4850 7500
+F 0 "R164" H 4920 7546 50  0000 L CNN
+F 1 "10K" H 4920 7455 50  0000 L CNN
+F 2 "" V 4780 7500 50  0001 C CNN
+F 3 "" H 4850 7500 50  0001 C CNN
+	1    4850 7500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5150 7650 4850 7650
+Connection ~ 4850 7650
+$Comp
+L device:R R163
+U 1 1 613B0FB1
+P 4400 7500
+F 0 "R163" H 4470 7546 50  0000 L CNN
+F 1 "10K" H 4470 7455 50  0000 L CNN
+F 2 "" V 4330 7500 50  0001 C CNN
+F 3 "" H 4400 7500 50  0001 C CNN
+	1    4400 7500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4400 7650 4400 7850
+Wire Wire Line
+	4400 7850 4550 7850
+Text Label 6750 7650 0    50   ~ 0
+1V8_EN_SHIFT
+$Comp
+L special-azonenberg:SSM6N58NU_DUAL_NMOS Q2
+U 2 1 613C2CD3
+P 6350 7850
+F 0 "Q2" H 6494 7903 60  0000 L CNN
+F 1 "SSM6N58NU" H 6494 7797 60  0000 L CNN
+F 2 "" H 6350 7850 60  0000 C CNN
+F 3 "transistors/mos/*.*" H 6494 7744 60  0001 L CNN
+	2    6350 7850
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:R R166
+U 1 1 613C2CDD
+P 6450 7500
+F 0 "R166" H 6520 7546 50  0000 L CNN
+F 1 "10K" H 6520 7455 50  0000 L CNN
+F 2 "" V 6380 7500 50  0001 C CNN
+F 3 "" H 6450 7500 50  0001 C CNN
+	1    6450 7500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6750 7650 6450 7650
+Connection ~ 6450 7650
+$Comp
+L device:R R165
+U 1 1 613C2CE9
+P 6000 7500
+F 0 "R165" H 6070 7546 50  0000 L CNN
+F 1 "10K" H 6070 7455 50  0000 L CNN
+F 2 "" V 5930 7500 50  0001 C CNN
+F 3 "" H 6000 7500 50  0001 C CNN
+	1    6000 7500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6000 7350 6450 7350
+Wire Wire Line
+	6000 7650 6000 7850
+Wire Wire Line
+	6000 7850 6150 7850
+Wire Wire Line
+	3250 7350 4400 7350
+Connection ~ 3250 7350
+Connection ~ 6000 7350
+Connection ~ 4400 7350
+Wire Wire Line
+	4400 7350 4850 7350
+Connection ~ 4850 7350
+Wire Wire Line
+	4850 7350 6000 7350
+Wire Wire Line
+	3250 8050 4850 8050
+Connection ~ 3250 8050
+Connection ~ 4850 8050
+Wire Wire Line
+	4850 8050 6450 8050
+Text Label 7800 2350 2    50   ~ 0
+1V8_EN_SHIFT
+Text Label 7800 1050 2    50   ~ 0
+1V2_EN_SHIFT
+Text Label 7050 1150 2    50   ~ 0
+12V0
+Text Label 7800 1250 2    50   ~ 0
+GND
+Wire Wire Line
+	7800 1250 7800 1350
+$Comp
+L device:R R167
+U 1 1 613E112E
+P 7500 1650
+F 0 "R167" V 7450 1400 50  0000 C CNN
+F 1 "9.7K" V 7500 1650 50  0000 C CNN
+F 2 "" V 7430 1650 50  0001 C CNN
+F 3 "" H 7500 1650 50  0001 C CNN
+	1    7500 1650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7650 1650 7800 1650
+Text Label 7050 1650 2    50   ~ 0
+GND
+Wire Wire Line
+	7050 1650 7350 1650
+$Comp
+L device:C C?
+U 1 1 613ED099
+P 7050 1300
+AR Path="/5EDD7150/613ED099" Ref="C?"  Part="1" 
+AR Path="/5EDD7150/61296AEB/613ED099" Ref="C325"  Part="1" 
+F 0 "C325" H 7165 1346 50  0000 L CNN
+F 1 "22 uF 25V" H 7165 1255 50  0000 L CNN
+F 2 "" H 7088 1150 50  0001 C CNN
+F 3 "" H 7050 1300 50  0001 C CNN
+	1    7050 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7050 1450 7050 1650
+Wire Wire Line
+	7800 1150 7050 1150
+$Comp
+L device:C C?
+U 1 1 613F8B96
+P 9250 1400
+AR Path="/5EDD7150/613F8B96" Ref="C?"  Part="1" 
+AR Path="/5EDD7150/61296AEB/613F8B96" Ref="C327"  Part="1" 
+F 0 "C327" H 9365 1446 50  0000 L CNN
+F 1 "22 uF" H 9365 1355 50  0000 L CNN
+F 2 "" H 9288 1250 50  0001 C CNN
+F 3 "" H 9250 1400 50  0001 C CNN
+	1    9250 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C?
+U 1 1 613F9AF7
+P 9700 1400
+AR Path="/5EDD7150/613F9AF7" Ref="C?"  Part="1" 
+AR Path="/5EDD7150/61296AEB/613F9AF7" Ref="C329"  Part="1" 
+F 0 "C329" H 9815 1446 50  0000 L CNN
+F 1 "DNP" H 9815 1355 50  0000 L CNN
+F 2 "" H 9738 1250 50  0001 C CNN
+F 3 "" H 9700 1400 50  0001 C CNN
+	1    9700 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9700 1250 9250 1250
+Connection ~ 9250 1250
+Wire Wire Line
+	9250 1250 8950 1250
+Text Label 9050 1550 2    50   ~ 0
+GND
+Wire Wire Line
+	9050 1550 9250 1550
+Connection ~ 9250 1550
+Wire Wire Line
+	9250 1550 9700 1550
+Text Label 7800 1550 2    50   ~ 0
+12V0
+Wire Wire Line
+	8950 1150 8950 1250
+Connection ~ 8950 1250
+$Comp
+L power-azonenberg:OKL-T_3-W12P-C U58
+U 1 1 6141C70E
+P 8000 3000
+F 0 "U58" H 8375 3897 60  0000 C CNN
+F 1 "OKL-T/3-W12P-C" H 8375 3791 60  0000 C CNN
+F 2 "" H 8000 2900 60  0001 C CNN
+F 3 "" H 8000 2900 60  0001 C CNN
+	1    8000 3000
+	1    0    0    -1  
+$EndComp
+Text Label 7050 2450 2    50   ~ 0
+12V0
+Text Label 7800 2550 2    50   ~ 0
+GND
+Wire Wire Line
+	7800 2550 7800 2650
+$Comp
+L device:R R168
+U 1 1 6141C71C
+P 7500 2950
+F 0 "R168" V 7450 2700 50  0000 C CNN
+F 1 "9.7K" V 7500 2950 50  0000 C CNN
+F 2 "" V 7430 2950 50  0001 C CNN
+F 3 "" H 7500 2950 50  0001 C CNN
+	1    7500 2950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7650 2950 7800 2950
+Text Label 7050 2950 2    50   ~ 0
+GND
+Wire Wire Line
+	7050 2950 7350 2950
+$Comp
+L device:C C?
+U 1 1 6141C729
+P 7050 2600
+AR Path="/5EDD7150/6141C729" Ref="C?"  Part="1" 
+AR Path="/5EDD7150/61296AEB/6141C729" Ref="C326"  Part="1" 
+F 0 "C326" H 7165 2646 50  0000 L CNN
+F 1 "22 uF 25V" H 7165 2555 50  0000 L CNN
+F 2 "" H 7088 2450 50  0001 C CNN
+F 3 "" H 7050 2600 50  0001 C CNN
+	1    7050 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7050 2750 7050 2950
+Wire Wire Line
+	7800 2450 7050 2450
+$Comp
+L device:C C?
+U 1 1 6141C735
+P 9250 2700
+AR Path="/5EDD7150/6141C735" Ref="C?"  Part="1" 
+AR Path="/5EDD7150/61296AEB/6141C735" Ref="C328"  Part="1" 
+F 0 "C328" H 9365 2746 50  0000 L CNN
+F 1 "22 uF" H 9365 2655 50  0000 L CNN
+F 2 "" H 9288 2550 50  0001 C CNN
+F 3 "" H 9250 2700 50  0001 C CNN
+	1    9250 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C?
+U 1 1 6141C73F
+P 9700 2700
+AR Path="/5EDD7150/6141C73F" Ref="C?"  Part="1" 
+AR Path="/5EDD7150/61296AEB/6141C73F" Ref="C330"  Part="1" 
+F 0 "C330" H 9815 2746 50  0000 L CNN
+F 1 "DNP" H 9815 2655 50  0000 L CNN
+F 2 "" H 9738 2550 50  0001 C CNN
+F 3 "" H 9700 2700 50  0001 C CNN
+	1    9700 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9700 2550 9250 2550
+Connection ~ 9250 2550
+Wire Wire Line
+	9250 2550 8950 2550
+Text Label 9050 2850 2    50   ~ 0
+GND
+Wire Wire Line
+	9050 2850 9250 2850
+Connection ~ 9250 2850
+Wire Wire Line
+	9250 2850 9700 2850
+Text Label 7800 2850 2    50   ~ 0
+12V0
+Wire Wire Line
+	8950 2450 8950 2550
+Connection ~ 8950 2550
+Text HLabel 9950 4700 2    50   Output ~ 0
+RAM_VREF
+Text HLabel 10050 4900 2    50   Output ~ 0
+RAM_VTT
+$Comp
+L power-azonenberg:RT9088A U?
+U 1 1 6149187A
+P 8900 5050
+AR Path="/5EDD7150/6149187A" Ref="U?"  Part="1" 
+AR Path="/5EDD7150/61296AEB/6149187A" Ref="U59"  Part="1" 
+F 0 "U59" H 9375 6025 50  0000 C CNN
+F 1 "RT9088A" H 9375 5934 50  0000 C CNN
+F 2 "" H 8900 5150 50  0001 C CNN
+F 3 "" H 8900 5150 50  0001 C CNN
+	1    8900 5050
+	1    0    0    -1  
+$EndComp
+Text Label 9300 5250 2    50   ~ 0
+RAM_VREF
+$Comp
+L device:C C?
+U 1 1 61491881
+P 9300 5400
+AR Path="/5EDD7150/61491881" Ref="C?"  Part="1" 
+AR Path="/5EDD7150/61296AEB/61491881" Ref="C334"  Part="1" 
+F 0 "C334" H 9415 5446 50  0000 L CNN
+F 1 "0.1 uF" H 9415 5355 50  0000 L CNN
+F 2 "" H 9338 5250 50  0001 C CNN
+F 3 "" H 9300 5400 50  0001 C CNN
+	1    9300 5400
+	1    0    0    -1  
+$EndComp
+Text Label 7750 5550 2    50   ~ 0
+GND
+Text Label 8600 4800 2    50   ~ 0
+GND
+Wire Wire Line
+	8600 4800 8800 4800
+Wire Wire Line
+	8800 4800 8800 4900
+Connection ~ 8800 4800
+Connection ~ 8800 4900
+Wire Wire Line
+	8800 4900 8800 5000
+Wire Wire Line
+	8600 4600 8800 4600
+$Comp
+L device:C C?
+U 1 1 61491890
+P 9850 5400
+AR Path="/5EDD7150/61491890" Ref="C?"  Part="1" 
+AR Path="/5EDD7150/61296AEB/61491890" Ref="C335"  Part="1" 
+F 0 "C335" H 9965 5446 50  0000 L CNN
+F 1 "10 uF" H 9965 5355 50  0000 L CNN
+F 2 "" H 9888 5250 50  0001 C CNN
+F 3 "" H 9850 5400 50  0001 C CNN
+	1    9850 5400
+	1    0    0    -1  
+$EndComp
+Text Label 9850 5250 2    50   ~ 0
+RAM_VTT
+Wire Wire Line
+	9300 5550 9850 5550
+Text HLabel 9950 4500 2    50   Output ~ 0
+VTT_GOOD
+Text Label 8800 4700 2    50   ~ 0
+1V5
+Text HLabel 8800 4300 0    50   Input ~ 0
+VTT_EN
+$Comp
+L device:R R?
+U 1 1 6149189B
+P 7850 4250
+AR Path="/5EDD7150/6149189B" Ref="R?"  Part="1" 
+AR Path="/5EDD7150/61296AEB/6149189B" Ref="R169"  Part="1" 
+F 0 "R169" H 7920 4296 50  0000 L CNN
+F 1 "10K 1%" H 7920 4205 50  0000 L CNN
+F 2 "" V 7780 4250 50  0001 C CNN
+F 3 "" H 7850 4250 50  0001 C CNN
+	1    7850 4250
+	1    0    0    -1  
+$EndComp
+Text Label 7850 4100 2    50   ~ 0
+1V5
+$Comp
+L device:R R?
+U 1 1 614918A2
+P 7850 4550
+AR Path="/5EDD7150/614918A2" Ref="R?"  Part="1" 
+AR Path="/5EDD7150/61296AEB/614918A2" Ref="R170"  Part="1" 
+F 0 "R170" H 7920 4596 50  0000 L CNN
+F 1 "10K 1%" H 7920 4505 50  0000 L CNN
+F 2 "" V 7780 4550 50  0001 C CNN
+F 3 "" H 7850 4550 50  0001 C CNN
+	1    7850 4550
+	1    0    0    -1  
+$EndComp
+Connection ~ 7850 4400
+Wire Wire Line
+	7850 4400 8800 4400
+Text Label 7850 4700 2    50   ~ 0
+GND
+$Comp
+L device:C C?
+U 1 1 614918AB
+P 7750 5400
+AR Path="/5EDD7150/614918AB" Ref="C?"  Part="1" 
+AR Path="/5EDD7150/61296AEB/614918AB" Ref="C331"  Part="1" 
+F 0 "C331" H 7865 5446 50  0000 L CNN
+F 1 "10 uF" H 7865 5355 50  0000 L CNN
+F 2 "" H 7788 5250 50  0001 C CNN
+F 3 "" H 7750 5400 50  0001 C CNN
+	1    7750 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C?
+U 1 1 614918B1
+P 8200 5400
+AR Path="/5EDD7150/614918B1" Ref="C?"  Part="1" 
+AR Path="/5EDD7150/61296AEB/614918B1" Ref="C332"  Part="1" 
+F 0 "C332" H 8315 5446 50  0000 L CNN
+F 1 "10 uF" H 8315 5355 50  0000 L CNN
+F 2 "" H 8238 5250 50  0001 C CNN
+F 3 "" H 8200 5400 50  0001 C CNN
+	1    8200 5400
+	1    0    0    -1  
+$EndComp
+Text Label 7750 5250 2    50   ~ 0
+1V5
+Wire Wire Line
+	7750 5550 8200 5550
+Wire Wire Line
+	8200 5250 7750 5250
+Text Label 8300 4400 0    50   ~ 0
+REFIN
+Text Label 8700 5250 2    50   ~ 0
+REFIN
+$Comp
+L device:C C?
+U 1 1 614918BC
+P 8700 5400
+AR Path="/5EDD7150/614918BC" Ref="C?"  Part="1" 
+AR Path="/5EDD7150/61296AEB/614918BC" Ref="C333"  Part="1" 
+F 0 "C333" H 8815 5446 50  0000 L CNN
+F 1 "1 nF" H 8815 5355 50  0000 L CNN
+F 2 "" H 8738 5250 50  0001 C CNN
+F 3 "" H 8700 5400 50  0001 C CNN
+	1    8700 5400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8700 5550 8200 5550
+Connection ~ 8200 5550
+Wire Wire Line
+	9300 5550 8700 5550
+Connection ~ 9300 5550
+Connection ~ 8700 5550
+$Comp
+L device:C C?
+U 1 1 614918C7
+P 10350 5400
+AR Path="/5EDD7150/614918C7" Ref="C?"  Part="1" 
+AR Path="/5EDD7150/61296AEB/614918C7" Ref="C336"  Part="1" 
+F 0 "C336" H 10465 5446 50  0000 L CNN
+F 1 "10 uF" H 10465 5355 50  0000 L CNN
+F 2 "" H 10388 5250 50  0001 C CNN
+F 3 "" H 10350 5400 50  0001 C CNN
+	1    10350 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C?
+U 1 1 614918CD
+P 10850 5400
+AR Path="/5EDD7150/614918CD" Ref="C?"  Part="1" 
+AR Path="/5EDD7150/61296AEB/614918CD" Ref="C337"  Part="1" 
+F 0 "C337" H 10965 5446 50  0000 L CNN
+F 1 "10 uF" H 10965 5355 50  0000 L CNN
+F 2 "" H 10888 5250 50  0001 C CNN
+F 3 "" H 10850 5400 50  0001 C CNN
+	1    10850 5400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10850 5250 10350 5250
+Connection ~ 10350 5250
+Wire Wire Line
+	10350 5250 9850 5250
+Wire Wire Line
+	9850 5550 10350 5550
+Connection ~ 9850 5550
+Connection ~ 10350 5550
+Wire Wire Line
+	10350 5550 10850 5550
+Wire Wire Line
+	10050 4900 9950 4900
+Wire Wire Line
+	9950 4900 9950 5000
+Connection ~ 9950 4900
+Text HLabel 8600 4600 0    50   Input ~ 0
+3V3_SB
+$Comp
+L device:C C?
+U 1 1 614BBE92
+P 11400 5400
+AR Path="/5EDD7150/614BBE92" Ref="C?"  Part="1" 
+AR Path="/5EDD7150/61296AEB/614BBE92" Ref="C338"  Part="1" 
+F 0 "C338" H 11515 5446 50  0000 L CNN
+F 1 "4.7 uF" H 11515 5355 50  0000 L CNN
+F 2 "" H 11438 5250 50  0001 C CNN
+F 3 "" H 11400 5400 50  0001 C CNN
+	1    11400 5400
+	1    0    0    -1  
+$EndComp
+Text Label 11400 5250 2    50   ~ 0
+3V3_SB
+Wire Wire Line
+	11400 5550 10850 5550
+Connection ~ 10850 5550
 $EndSCHEMATC
