@@ -3,9 +3,9 @@ EELAYER 30 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
-Sheet 16 17
+Sheet 17 18
 Title "MAXWELL Main Board"
-Date "2020-06-19"
+Date "2020-06-20"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
@@ -1364,12 +1364,6 @@ NoConn ~ 3250 4250
 NoConn ~ 5000 3650
 NoConn ~ 5000 3750
 NoConn ~ 5000 3850
-NoConn ~ 5000 3950
-NoConn ~ 5000 4050
-NoConn ~ 5000 4150
-NoConn ~ 5000 4250
-NoConn ~ 5000 4350
-NoConn ~ 5000 4450
 NoConn ~ 7000 2150
 NoConn ~ 7000 2050
 NoConn ~ 7000 1950
@@ -1392,10 +1386,6 @@ NoConn ~ 8300 2350
 NoConn ~ 8300 2450
 NoConn ~ 8300 2550
 NoConn ~ 7000 4450
-NoConn ~ 7000 4350
-NoConn ~ 7000 4250
-NoConn ~ 7000 4150
-NoConn ~ 7000 4050
 NoConn ~ 8500 3250
 NoConn ~ 8500 3750
 NoConn ~ 8500 4050
@@ -1538,4 +1528,24 @@ Text Notes 7900 10000 0    50   ~ 0
 I2C3 ADDRESS MAP (3V3)\nQSFP ID = A0
 Text Notes 9450 10000 0    50   ~ 0
 I2C4 ADDRESS MAP (3V3)\nTouch controller = BA
+Text HLabel 7000 4050 0    50   Output ~ 0
+2V0_EN
+Text HLabel 7000 4250 0    50   Output ~ 0
+2V5_EN
+Text HLabel 5000 4350 0    50   Output ~ 0
+3V3_EN
+Text HLabel 5000 4150 0    50   Output ~ 0
+5V0_EN
+Text HLabel 5000 3950 0    50   Output ~ 0
+5V0_N_EN
+Text HLabel 7000 4150 0    50   Input ~ 0
+2V0_GOOD
+Text HLabel 7000 4350 0    50   Input ~ 0
+2V5_GOOD
+Text HLabel 5000 4450 0    50   Input ~ 0
+3V3_GOOD
+Text HLabel 5000 4250 0    50   Input ~ 0
+5V0_GOOD
+Text HLabel 5000 4050 0    50   Input ~ 0
+5V0_N_GOOD
 $EndSCHEMATC

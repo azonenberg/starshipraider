@@ -3,9 +3,9 @@ EELAYER 30 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
-Sheet 4 17
+Sheet 4 18
 Title "MAXWELL Main Board"
-Date "2020-06-19"
+Date "2020-06-20"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
@@ -1377,4 +1377,8 @@ Text Label 11400 5250 2    50   ~ 0
 Wire Wire Line
 	11400 5550 10850 5550
 Connection ~ 10850 5550
+Text HLabel 12900 5950 0    50   BiDi ~ 0
+I2C_SDA
+Text HLabel 12900 6050 0    50   Input ~ 0
+I2C_SCL
 $EndSCHEMATC
