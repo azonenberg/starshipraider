@@ -105,7 +105,7 @@ Text HLabel 2000 950  2    50   Output ~ 0
 3V3_SB
 Text Label 1000 1850 2    50   ~ 0
 5V0_SB
-Text Notes 2050 4850 0    50   ~ 0
+Text Notes 7850 5300 0    50   ~ 0
 TODO: INA233s on all power rails?
 Text Label 2000 850  0    50   ~ 0
 5V0_SB
@@ -119,4 +119,10 @@ Text HLabel 2000 3850 2    50   Input ~ 0
 VTT_EN
 Text Label 1000 1950 2    50   ~ 0
 3V3_SB
+Text HLabel 4750 3650 0    50   BiDi ~ 0
+PSU_I2C_SDA
+Text HLabel 4750 3750 0    50   Input ~ 0
+PSU_I2C_SCL
+Text Notes 7850 5400 0    50   ~ 0
+TODO: I2C temp sensors
 $EndSCHEMATC

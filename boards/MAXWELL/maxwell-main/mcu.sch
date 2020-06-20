@@ -1528,4 +1528,14 @@ Text HLabel 7000 3850 0    50   Output ~ 0
 VTT_EN
 Text HLabel 7000 3950 0    50   Input ~ 0
 VTT_GOOD
+Text Notes 7800 2000 0    50   ~ 0
+I2C3 AF4
+Text Notes 5150 11000 0    50   ~ 0
+I2C1 ADDRESS MAP (3V3)\nINA233s on probes\nP0 = 80\nP1 = 82\nP2 = 84\nP3 = 86\nP4 = 88 \nP5 = 8a\nP6 = 8c\nP7 = 8e\nP8 = 90\nP9 = 92\nP10 = 94\nP11 = 96
+Text Notes 6450 10000 0    50   ~ 0
+I2C2 ADDRESS MAP (3V3_SB)\nSPD EEPROM = A0
+Text Notes 7900 10000 0    50   ~ 0
+I2C3 ADDRESS MAP (3V3)\nQSFP ID = A0
+Text Notes 9450 10000 0    50   ~ 0
+I2C4 ADDRESS MAP (3V3)\nTouch controller = BA
 $EndSCHEMATC
