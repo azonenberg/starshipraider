@@ -5,7 +5,7 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 15 18
 Title "MAXWELL Main Board"
-Date "2020-06-20"
+Date "2020-06-21"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
@@ -1030,8 +1030,6 @@ Text Label 9800 3900 2    50   ~ 0
 GND
 Text Label 11100 5150 2    50   ~ 0
 1V2
-Text Label 9800 3600 2    50   ~ 0
-1V2
 Text Label 10850 4550 0    50   ~ 0
 TRIG_OUT_MUX_P
 Text Label 10850 4650 0    50   ~ 0
@@ -1072,4 +1070,6 @@ Text Label 12000 4650 0    50   ~ 0
 GND
 Text Notes 13600 3600 0    50   ~ 0
 TRIG_OUT_MUX is one leg of a 1.2V CML output\nDC coupled, 390 mV swing or -4 dBm\n\nREF_OUT is single ended LVCMOS33\n~~3.3V swing or +14 dBm\n\nREF_OUT_P/N is LVDS, 400 mV or -4 dBm
+Text HLabel 9800 3600 0    50   Input ~ 0
+1V2
 $EndSCHEMATC

@@ -5,7 +5,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 18
 Title "MAXWELL Main Board"
-Date "2020-06-20"
+Date "2020-06-21"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
@@ -14,15 +14,15 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 Text Notes 8200 1950 0    50   ~ 0
-Rail design targets including safety margin\n----------------------------------------\nINPUT: 24-48V at 5A\nIntermediate rail: 12V @ 9A\n1V0: 8A\n1V2: 1.5A\n1V5: 6A\n1V8: 1A\n2V0: 500 mA\n2V5: 1A\n3V3: 3A\n5V0: 100 mA\n5V0N: 100 mA\n12V0: 4A\n19V2 for LCD: 75 mA (constant current, nominally 40 mA)\nDDR RAM Vref, Vtt: standard regulator
+Rail design targets including safety margin\n----------------------------------------\nINPUT: 24-48V at 5A\nIntermediate rail: 12V @ 9A\n1V0: 8A\n1V2: 1.5A\n1V5: 6A\n1V8: 1A\n2V0: 500 mA\n2V5: 1A\n3V3: 3A\n5V0: 100 mA\n5V0N: 100 mA\n12V0: 4A\n21V5 for LCD: Constant current, nominally 33 mA\nDDR RAM Vref, Vtt: standard regulator
 Text HLabel 2200 750  2    50   Output ~ 0
 12V0
 Text HLabel 2200 1050 2    50   Output ~ 0
 GND
 Text HLabel 2200 5200 2    50   Output ~ 0
 3V3
-Text HLabel 5400 5050 0    50   Output ~ 0
-VBACKLIGHT
+Text HLabel 2200 6200 2    50   Output ~ 0
+VBACKLIGHT_P
 Text HLabel 2200 5500 2    50   Output ~ 0
 2V5
 Text HLabel 2200 5800 2    50   Output ~ 0
@@ -110,7 +110,7 @@ Text HLabel 2200 950  2    50   Output ~ 0
 3V3_SB
 Text Label 1200 1850 2    50   ~ 0
 5V0_SB
-Text Notes 3700 2850 0    50   ~ 0
+Text Notes 7850 5300 0    50   ~ 0
 TODO: INA233s on all power rails?
 Text Label 2200 850  0    50   ~ 0
 5V0_SB
@@ -130,32 +130,6 @@ Text HLabel 1200 2350 0    50   Input ~ 0
 PSU_I2C_SCL
 Text Notes 7850 5400 0    50   ~ 0
 TODO: I2C temp sensors
-$Sheet
-S 1200 4550 1000 2250
-U 61580EA1
-F0 "Higher voltage rails" 50
-F1 "higher-rails.sch" 50
-F2 "5V0" O R 2200 4600 50 
-F3 "5V0_N" O R 2200 4900 50 
-F4 "3V3" O R 2200 5200 50 
-F5 "2V5" O R 2200 5500 50 
-F6 "2V0" O R 2200 5800 50 
-F7 "5V0_GOOD" O R 2200 4700 50 
-F8 "5V0_N_GOOD" O R 2200 5000 50 
-F9 "3V3_GOOD" O R 2200 5300 50 
-F10 "2V5_GOOD" O R 2200 5600 50 
-F11 "2V0_GOOD" O R 2200 5900 50 
-F12 "5V0_EN" I R 2200 4800 50 
-F13 "5V0_N_EN" I R 2200 5100 50 
-F14 "3V3_EN" I R 2200 5400 50 
-F15 "2V5_EN" I R 2200 5700 50 
-F16 "2V0_EN" I R 2200 6000 50 
-F17 "12V0" I L 1200 4600 50 
-F18 "GND" I L 1200 4800 50 
-F19 "I2C_SDA" B L 1200 5000 50 
-F20 "I2C_SCL" I L 1200 5100 50 
-F21 "5V0_SB" I L 1200 4700 50 
-$EndSheet
 Text HLabel 2200 4800 2    50   Input ~ 0
 5V0_EN
 Text HLabel 2200 5100 2    50   Input ~ 0
@@ -168,22 +142,18 @@ Text HLabel 2200 6000 2    50   Input ~ 0
 2V0_EN
 Text Label 1200 4600 2    50   ~ 0
 12V0
-Text Label 1200 4800 2    50   ~ 0
+Text Label 1200 4900 2    50   ~ 0
 GND
 Text HLabel 2200 4700 2    50   Output ~ 0
 5V0_GOOD
-Text HLabel 2200 5000 2    50   Output ~ 0
-5V0_N_GOOD
 Text HLabel 2200 5300 2    50   Output ~ 0
 3V3_GOOD
 Text HLabel 2200 5600 2    50   Output ~ 0
 2V5_GOOD
 Text HLabel 2200 5900 2    50   Output ~ 0
 2V0_GOOD
-Text Label 1200 5000 2    50   ~ 0
-PSU_I2C_SDA
 Text Label 1200 5100 2    50   ~ 0
-PSU_I2C_SCL
+PSU_I2C_SDA
 Text Label 1200 4700 2    50   ~ 0
 5V0_SB
 Text HLabel 2200 4050 2    50   Output ~ 0
@@ -192,4 +162,44 @@ Text HLabel 2200 4250 2    50   Output ~ 0
 0V5_GOOD
 Text HLabel 2200 4150 2    50   Input ~ 0
 0V5_EN
+$Sheet
+S 1200 4550 1000 2250
+U 61580EA1
+F0 "Higher voltage rails" 50
+F1 "higher-rails.sch" 50
+F2 "5V0" O R 2200 4600 50 
+F3 "5V0_N" O R 2200 4900 50 
+F4 "3V3" O R 2200 5200 50 
+F5 "2V5" O R 2200 5500 50 
+F6 "2V0" O R 2200 5800 50 
+F7 "5V0_GOOD" O R 2200 4700 50 
+F9 "3V3_GOOD" O R 2200 5300 50 
+F10 "2V5_GOOD" O R 2200 5600 50 
+F11 "2V0_GOOD" O R 2200 5900 50 
+F12 "5V0_EN" I R 2200 4800 50 
+F13 "5V0_N_EN" I R 2200 5100 50 
+F14 "3V3_EN" I R 2200 5400 50 
+F15 "2V5_EN" I R 2200 5700 50 
+F16 "2V0_EN" I R 2200 6000 50 
+F17 "12V0" I L 1200 4600 50 
+F18 "GND" I L 1200 4900 50 
+F19 "I2C_SDA" B L 1200 5100 50 
+F20 "I2C_SCL" I L 1200 5200 50 
+F21 "5V0_SB" I L 1200 4700 50 
+F22 "VBACKLIGHT_P" O R 2200 6200 50 
+F23 "VBACKLIGHT_EN" I R 2200 6300 50 
+F24 "VBACKLIGHT_N" O R 2200 6400 50 
+F25 "BACKLIGHT_PWM" I R 2200 6500 50 
+F26 "3V3_SB" I L 1200 4800 50 
+$EndSheet
+Text HLabel 2200 6400 2    50   Output ~ 0
+VBACKLIGHT_N
+Text HLabel 2200 6300 2    50   Input ~ 0
+VBACKLIGHT_EN
+Text HLabel 2200 6500 2    50   Input ~ 0
+BACKLIGHT_PWM
+Text Label 1200 5200 2    50   ~ 0
+PSU_I2C_SCL
+Text Label 1200 4800 2    50   ~ 0
+3V3_SB
 $EndSCHEMATC

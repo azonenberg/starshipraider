@@ -5,7 +5,7 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 17 18
 Title "MAXWELL Main Board"
-Date "2020-06-20"
+Date "2020-06-21"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
@@ -319,7 +319,7 @@ Text Label 4750 1250 2    50   ~ 0
 3V3
 Text Label 2750 1350 2    50   ~ 0
 STM_TDO
-Text Label 3250 1450 2    50   ~ 0
+Text Label 2750 1450 2    50   ~ 0
 3V3
 Text Label 4750 1350 2    50   ~ 0
 GND
@@ -567,16 +567,12 @@ Wire Wire Line
 Connection ~ 15200 1900
 Wire Wire Line
 	15200 1900 15200 2000
-Text Label 15200 1400 0    50   ~ 0
-GND
 Text Label 15200 1700 0    50   ~ 0
 3V3
 Text Label 13700 4650 2    50   ~ 0
 3V3
 Text Notes 13900 6100 0    50   ~ 0
 LCD decoupling
-Text HLabel 15200 1500 2    50   Input ~ 0
-VBACKLIGHT
 Text HLabel 1350 2950 0    50   Input ~ 0
 GND
 Text Label 2550 5150 0    50   ~ 0
@@ -1356,7 +1352,6 @@ NoConn ~ 3250 3250
 NoConn ~ 3250 3350
 NoConn ~ 3250 3450
 NoConn ~ 3250 3750
-NoConn ~ 3250 3850
 NoConn ~ 3250 3950
 NoConn ~ 3250 4050
 NoConn ~ 3250 4150
@@ -1383,7 +1378,6 @@ NoConn ~ 8300 2250
 NoConn ~ 8300 2350
 NoConn ~ 8300 2450
 NoConn ~ 8300 2550
-NoConn ~ 7000 4450
 NoConn ~ 8500 3250
 NoConn ~ 8500 3750
 NoConn ~ 8500 4050
@@ -1544,10 +1538,32 @@ Text HLabel 5000 4450 0    50   Input ~ 0
 3V3_GOOD
 Text HLabel 5000 4250 0    50   Input ~ 0
 5V0_GOOD
-Text HLabel 5000 4050 0    50   Input ~ 0
-5V0_N_GOOD
 Text HLabel 5000 3850 0    50   Input ~ 0
 0V5_GOOD
 Text HLabel 5000 3750 0    50   Output ~ 0
 0V5_EN
+Text HLabel 7000 4450 0    50   Output ~ 0
+VBACKLIGHT_EN
+Text HLabel 3250 3850 0    50   Output ~ 0
+BACKLIGHT_PWM
+Text HLabel 15200 1400 2    50   Input ~ 0
+VBACKLIGHT_P
+Text HLabel 15200 1500 2    50   Input ~ 0
+VBACKLIGHT_N
+Text Notes 2150 3850 0    50   ~ 0
+TIM8_CH4
+$Comp
+L device:R R191
+U 1 1 618E1320
+P 2900 1450
+F 0 "R191" V 2850 1650 50  0000 C CNN
+F 1 "10K" V 2900 1450 50  0000 C CNN
+F 2 "" V 2830 1450 50  0001 C CNN
+F 3 "" H 2900 1450 50  0001 C CNN
+	1    2900 1450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3050 1450 3250 1450
+NoConn ~ 5000 4050
 $EndSCHEMATC
