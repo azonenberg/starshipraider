@@ -42,6 +42,8 @@ F2 "GND" O R 2200 1050 50
 F3 "12V0" O R 2200 750 50 
 F4 "5V0_SB" O R 2200 850 50 
 F5 "3V3_SB" O R 2200 950 50 
+F6 "I2C_SDA" B L 1200 750 50 
+F7 "I2C_SCL" I L 1200 850 50 
 $EndSheet
 $Sheet
 S 1200 1700 1000 2600
@@ -110,8 +112,6 @@ Text HLabel 2200 950  2    50   Output ~ 0
 3V3_SB
 Text Label 1200 1850 2    50   ~ 0
 5V0_SB
-Text Notes 7850 5300 0    50   ~ 0
-TODO: INA233s on all power rails?
 Text Label 2200 850  0    50   ~ 0
 5V0_SB
 Text HLabel 2200 3550 2    50   Output ~ 0
@@ -202,4 +202,8 @@ Text Label 1200 5200 2    50   ~ 0
 PSU_I2C_SCL
 Text Label 1200 4800 2    50   ~ 0
 3V3_SB
+Text Label 1200 750  2    50   ~ 0
+PSU_I2C_SDA
+Text Label 1200 850  2    50   ~ 0
+PSU_I2C_SCL
 $EndSCHEMATC

@@ -231,7 +231,7 @@ Text Label 1300 3450 2    50   ~ 0
 12V0
 Text HLabel 3250 3450 2    50   Output ~ 0
 5V0_SB
-Text HLabel 3850 4650 2    50   Output ~ 0
+Text HLabel 5350 4650 2    50   Output ~ 0
 3V3_SB
 $Comp
 L power-azonenberg:OKL-T_3-W12P-C U?
@@ -334,9 +334,6 @@ Wire Wire Line
 	3400 4950 3850 4950
 Text Label 1950 4950 2    50   ~ 0
 12V0
-Wire Wire Line
-	3100 4550 3100 4650
-Connection ~ 3100 4650
 Text Label 1200 4550 2    50   ~ 0
 12V0
 Text Label 1950 4450 2    50   ~ 0
@@ -375,4 +372,84 @@ Wire Wire Line
 	3750 4450 3850 4450
 Text Label 3750 4150 2    50   ~ 0
 5V0_SB
+$Comp
+L special-azonenberg:INA226 U?
+U 1 1 61C7EC99
+P 8650 4400
+AR Path="/5EDD723A/5F0BA462/61C7EC99" Ref="U?"  Part="1" 
+AR Path="/5EDD7150/61580EA1/61C7EC99" Ref="U?"  Part="1" 
+AR Path="/5EDD7150/61296AEB/61C7EC99" Ref="U?"  Part="1" 
+AR Path="/5EDD7150/611CBEBF/61C7EC99" Ref="U79"  Part="1" 
+F 0 "U79" H 8550 4050 60  0000 C CNN
+F 1 "INA233" H 8950 4050 60  0000 C CNN
+F 2 "" H 8650 4400 60  0000 C CNN
+F 3 "" H 8650 4400 60  0000 C CNN
+	1    8650 4400
+	1    0    0    -1  
+$EndComp
+Text Label 9400 4500 0    50   ~ 0
+GND
+Text Label 9400 4600 0    50   ~ 0
+3V3_SB
+Text Label 7850 4200 2    50   ~ 0
+I2C_SDA
+Text Label 7850 4300 2    50   ~ 0
+I2C_SDA
+Text Label 7850 4400 2    50   ~ 0
+P0_ALERT
+Text HLabel 7850 4500 0    50   BiDi ~ 0
+I2C_SDA
+Text HLabel 7850 4600 0    50   Input ~ 0
+I2C_SCL
+Text Notes 8150 4800 0    50   ~ 0
+8'h94
+Text Notes 6450 4300 0    50   ~ 0
+12 mR = 18 mV @ 1.5A\n208.333 uA/LSB
+Text Label 9400 4200 0    50   ~ 0
+3V3_SB_SENSE_HI
+Text Label 9400 4300 0    50   ~ 0
+3V3_SB_SENSE_LO
+Text Label 9400 4400 0    50   ~ 0
+3V3_SB
+$Comp
+L passive-azonenberg:R-4TERM R?
+U 1 1 61C8039F
+P 5050 4600
+AR Path="/5EDD7150/61580EA1/61C8039F" Ref="R?"  Part="1" 
+AR Path="/5EDD7150/611CBEBF/61C8039F" Ref="R205"  Part="1" 
+F 0 "R205" V 4764 4600 50  0000 C CNN
+F 1 "LVK12R012FER" V 4855 4600 50  0000 C CNN
+F 2 "" H 5050 4600 60  0000 C CNN
+F 3 "" H 5050 4600 60  0000 C CNN
+	1    5050 4600
+	0    1    1    0   
+$EndComp
+$Comp
+L device:C C?
+U 1 1 61C862C2
+P 10600 4350
+AR Path="/5EDD7150/61C862C2" Ref="C?"  Part="1" 
+AR Path="/5EDD7150/611CBEBF/61C862C2" Ref="C403"  Part="1" 
+F 0 "C403" H 10715 4396 50  0000 L CNN
+F 1 "0.47 uF" H 10715 4305 50  0000 L CNN
+F 2 "" H 10638 4200 50  0001 C CNN
+F 3 "" H 10600 4350 50  0001 C CNN
+	1    10600 4350
+	1    0    0    -1  
+$EndComp
+Text Label 10600 4200 0    50   ~ 0
+3V3_SB
+Text Label 10600 4500 0    50   ~ 0
+GND
+Text Label 3100 4550 0    50   ~ 0
+3V3_SB
+Wire Wire Line
+	4750 4650 3850 4650
+Connection ~ 3850 4650
+Text Label 4750 4250 0    50   ~ 0
+3V3_SB_SENSE_HI
+Wire Wire Line
+	4750 4250 4750 4550
+Text Label 5350 4550 0    50   ~ 0
+3V3_SB_SENSE_LO
 $EndSCHEMATC

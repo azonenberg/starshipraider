@@ -647,6 +647,31 @@ X 2 2 0 -300 100 U 70 70 1 1 P
 ENDDRAW
 ENDDEF
 #
+# passive-azonenberg_R-4TERM
+#
+DEF passive-azonenberg_R-4TERM R 0 0 N Y 1 F N
+F0 "R" 80 0 50 V V C CNN
+F1 "passive-azonenberg_R-4TERM" 0 0 50 V V C CNN
+F2 "" 0 0 60 H V C CNN
+F3 "" 0 0 60 H V C CNN
+$FPLIST
+ R?
+ SM0603
+ SM0805
+ R?-*
+$ENDFPLIST
+DRAW
+S -40 150 40 -150 0 1 12 N
+P 2 0 1 0 -50 -200 50 -200 N
+P 2 0 1 0 0 -200 0 -150 N
+P 5 0 1 0 -50 200 0 200 0 150 0 200 50 200 N
+X Ilo 1 -50 300 100 D 60 60 1 1 w
+X Vo 2 50 300 100 D 60 60 1 1 w
+X Ihi 3 -50 -300 100 U 60 60 1 1 w
+X Vi 4 50 -300 100 U 60 60 1 1 W
+ENDDRAW
+ENDDEF
+#
 # power-azonenberg_E36SC12009NRFA
 #
 DEF power-azonenberg_E36SC12009NRFA U 0 40 Y Y 1 F N
