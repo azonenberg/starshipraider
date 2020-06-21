@@ -50,8 +50,6 @@ Text HLabel 7250 2000 0    50   Input ~ 0
 GND
 Text Label 7700 2200 2    50   ~ 0
 P0_PWREN
-Text HLabel 10200 1500 2    50   Output ~ 0
-P0_12V0
 Wire Wire Line
 	9400 1500 9250 1500
 Wire Wire Line
@@ -2337,4 +2335,6 @@ Wire Wire Line
 	2100 7950 2100 7850
 Text Notes 8850 8250 0    50   ~ 0
 TODO: EMI filters on output 12V lines
+Text HLabel 10200 1500 2    50   Output ~ 0
+P0_12V0
 $EndSCHEMATC

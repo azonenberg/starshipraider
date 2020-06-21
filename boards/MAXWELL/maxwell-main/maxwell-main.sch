@@ -219,7 +219,7 @@ Text Label 6300 2300 0    50   ~ 0
 Text Label 6300 2400 0    50   ~ 0
 1V8
 Text Label 6300 2600 0    50   ~ 0
-1V0
+1V0_1
 Text Label 6300 2800 0    50   ~ 0
 GND
 Wire Wire Line
