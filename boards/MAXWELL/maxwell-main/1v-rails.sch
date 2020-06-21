@@ -1574,8 +1574,6 @@ Text Label 12600 1100 2    50   ~ 0
 3V3_SB
 Text Label 12600 1200 2    50   ~ 0
 3V3_SB
-Text Label 12600 1300 2    50   ~ 0
-P0_ALERT
 Text HLabel 12600 1400 0    50   BiDi ~ 0
 I2C_SDA
 Text HLabel 12600 1500 0    50   Input ~ 0
@@ -1674,8 +1672,6 @@ Text Label 12600 1950 2    50   ~ 0
 3V3_SB
 Text Label 12600 2050 2    50   ~ 0
 I2C_SDA
-Text Label 12600 2150 2    50   ~ 0
-P0_ALERT
 Text Notes 12900 2550 0    50   ~ 0
 8'h8c
 $Comp
@@ -1730,8 +1726,6 @@ Text Label 12600 2800 2    50   ~ 0
 3V3_SB
 Text Label 12600 2900 2    50   ~ 0
 I2C_SCL
-Text Label 12600 3000 2    50   ~ 0
-P0_ALERT
 Text Notes 12900 3400 0    50   ~ 0
 8'h8e
 $Comp
@@ -1813,8 +1807,6 @@ Text Label 12600 3650 2    50   ~ 0
 I2C_SDA
 Text Label 12600 3750 2    50   ~ 0
 GND
-Text Label 12600 3850 2    50   ~ 0
-P0_ALERT
 Text Notes 12900 4250 0    50   ~ 0
 8'h90
 $Comp
@@ -1923,8 +1915,6 @@ Text Label 12600 4500 2    50   ~ 0
 I2C_SDA
 Text Label 12600 4600 2    50   ~ 0
 3V3_SB
-Text Label 12600 4700 2    50   ~ 0
-P0_ALERT
 Text Notes 12900 5100 0    50   ~ 0
 8'h92
 $Comp
@@ -1957,4 +1947,9 @@ Text Label 12600 4800 2    50   ~ 0
 I2C_SDA
 Text Label 12600 4900 2    50   ~ 0
 I2C_SCL
+NoConn ~ 12600 1300
+NoConn ~ 12600 2150
+NoConn ~ 12600 3000
+NoConn ~ 12600 3850
+NoConn ~ 12600 4700
 $EndSCHEMATC

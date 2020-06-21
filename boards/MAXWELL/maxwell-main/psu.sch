@@ -128,8 +128,6 @@ Text HLabel 1200 2250 0    50   BiDi ~ 0
 PSU_I2C_SDA
 Text HLabel 1200 2350 0    50   Input ~ 0
 PSU_I2C_SCL
-Text Notes 7850 5400 0    50   ~ 0
-TODO: I2C temp sensors
 Text HLabel 2200 4800 2    50   Input ~ 0
 5V0_EN
 Text HLabel 2200 5100 2    50   Input ~ 0
@@ -206,4 +204,180 @@ Text Label 1200 750  2    50   ~ 0
 PSU_I2C_SDA
 Text Label 1200 850  2    50   ~ 0
 PSU_I2C_SCL
+$Comp
+L special-azonenberg:AT30TS74_UDFN U80
+U 1 1 61CA6312
+P 4600 2250
+F 0 "U80" H 4900 2925 50  0000 C CNN
+F 1 "AT30TS74_UDFN" H 4900 2834 50  0000 C CNN
+F 2 "" H 4600 2250 50  0001 C CNN
+F 3 "" H 4600 2250 50  0001 C CNN
+	1    4600 2250
+	1    0    0    -1  
+$EndComp
+Text Label 4500 1800 2    50   ~ 0
+3V3_SB
+Text Label 4500 1900 2    50   ~ 0
+GND
+Text Label 4500 2100 2    50   ~ 0
+PSU_I2C_SDA
+Text Label 4500 2200 2    50   ~ 0
+PSU_I2C_SCL
+Text HLabel 5300 2200 2    50   Output ~ 0
+TEMP1_ALERT
+Text Label 5300 2000 0    50   ~ 0
+3V3_SB
+Text Notes 4600 2350 0    50   ~ 0
+Addr = 8'h98
+$Comp
+L device:C C404
+U 1 1 61CB0CF8
+P 6400 2000
+F 0 "C404" H 6515 2046 50  0000 L CNN
+F 1 "0.47 uF" H 6515 1955 50  0000 L CNN
+F 2 "" H 6438 1850 50  0001 C CNN
+F 3 "" H 6400 2000 50  0001 C CNN
+	1    6400 2000
+	1    0    0    -1  
+$EndComp
+Text Label 6400 1850 2    50   ~ 0
+3V3_SB
+Text Label 6400 2150 2    50   ~ 0
+GND
+Text Label 5300 1800 0    50   ~ 0
+GND
+Text Label 5300 1900 0    50   ~ 0
+GND
+$Comp
+L special-azonenberg:AT30TS74_UDFN U81
+U 1 1 61CC9F8C
+P 4600 3200
+F 0 "U81" H 4900 3875 50  0000 C CNN
+F 1 "AT30TS74_UDFN" H 4900 3784 50  0000 C CNN
+F 2 "" H 4600 3200 50  0001 C CNN
+F 3 "" H 4600 3200 50  0001 C CNN
+	1    4600 3200
+	1    0    0    -1  
+$EndComp
+Text Label 4500 2750 2    50   ~ 0
+3V3_SB
+Text Label 4500 2850 2    50   ~ 0
+GND
+Text Label 4500 3050 2    50   ~ 0
+PSU_I2C_SDA
+Text Label 4500 3150 2    50   ~ 0
+PSU_I2C_SCL
+Text HLabel 5300 3150 2    50   Output ~ 0
+TEMP2_ALERT
+Text Label 5300 2950 0    50   ~ 0
+3V3_SB
+Text Notes 4600 3300 0    50   ~ 0
+Addr = 8'h9a
+$Comp
+L device:C C405
+U 1 1 61CC9F9D
+P 6400 2950
+F 0 "C405" H 6515 2996 50  0000 L CNN
+F 1 "0.47 uF" H 6515 2905 50  0000 L CNN
+F 2 "" H 6438 2800 50  0001 C CNN
+F 3 "" H 6400 2950 50  0001 C CNN
+	1    6400 2950
+	1    0    0    -1  
+$EndComp
+Text Label 6400 2800 2    50   ~ 0
+3V3_SB
+Text Label 6400 3100 2    50   ~ 0
+GND
+Text Label 5300 2850 0    50   ~ 0
+GND
+Text Label 5300 2750 0    50   ~ 0
+3V3_SB
+$Comp
+L special-azonenberg:AT30TS74_UDFN U82
+U 1 1 61CCABD4
+P 4600 4100
+F 0 "U82" H 4900 4775 50  0000 C CNN
+F 1 "AT30TS74_UDFN" H 4900 4684 50  0000 C CNN
+F 2 "" H 4600 4100 50  0001 C CNN
+F 3 "" H 4600 4100 50  0001 C CNN
+	1    4600 4100
+	1    0    0    -1  
+$EndComp
+Text Label 4500 3650 2    50   ~ 0
+3V3_SB
+Text Label 4500 3750 2    50   ~ 0
+GND
+Text Label 4500 3950 2    50   ~ 0
+PSU_I2C_SDA
+Text Label 4500 4050 2    50   ~ 0
+PSU_I2C_SCL
+Text HLabel 5300 4050 2    50   Output ~ 0
+TEMP3_ALERT
+Text Label 5300 3850 0    50   ~ 0
+3V3_SB
+Text Notes 4600 4200 0    50   ~ 0
+Addr = 8'h9c
+$Comp
+L device:C C406
+U 1 1 61CCABE5
+P 6400 3850
+F 0 "C406" H 6515 3896 50  0000 L CNN
+F 1 "0.47 uF" H 6515 3805 50  0000 L CNN
+F 2 "" H 6438 3700 50  0001 C CNN
+F 3 "" H 6400 3850 50  0001 C CNN
+	1    6400 3850
+	1    0    0    -1  
+$EndComp
+Text Label 6400 3700 2    50   ~ 0
+3V3_SB
+Text Label 6400 4000 2    50   ~ 0
+GND
+Text Label 5300 3650 0    50   ~ 0
+GND
+$Comp
+L special-azonenberg:AT30TS74_UDFN U83
+U 1 1 61CCABF3
+P 4600 5050
+F 0 "U83" H 4900 5725 50  0000 C CNN
+F 1 "AT30TS74_UDFN" H 4900 5634 50  0000 C CNN
+F 2 "" H 4600 5050 50  0001 C CNN
+F 3 "" H 4600 5050 50  0001 C CNN
+	1    4600 5050
+	1    0    0    -1  
+$EndComp
+Text Label 4500 4600 2    50   ~ 0
+3V3_SB
+Text Label 4500 4700 2    50   ~ 0
+GND
+Text Label 4500 4900 2    50   ~ 0
+PSU_I2C_SDA
+Text Label 4500 5000 2    50   ~ 0
+PSU_I2C_SCL
+Text HLabel 5300 5000 2    50   Output ~ 0
+TEMP4_ALERT
+Text Label 5300 4800 0    50   ~ 0
+3V3_SB
+Text Notes 4600 5150 0    50   ~ 0
+Addr = 8'h9e
+$Comp
+L device:C C407
+U 1 1 61CCAC04
+P 6400 4800
+F 0 "C407" H 6515 4846 50  0000 L CNN
+F 1 "0.47 uF" H 6515 4755 50  0000 L CNN
+F 2 "" H 6438 4650 50  0001 C CNN
+F 3 "" H 6400 4800 50  0001 C CNN
+	1    6400 4800
+	1    0    0    -1  
+$EndComp
+Text Label 6400 4650 2    50   ~ 0
+3V3_SB
+Text Label 6400 4950 2    50   ~ 0
+GND
+Text Label 5300 4600 0    50   ~ 0
+3V3_SB
+Text Label 5300 3750 0    50   ~ 0
+3V3_SB
+Text Label 5300 4700 0    50   ~ 0
+3V3_SB
 $EndSCHEMATC

@@ -1341,10 +1341,6 @@ NoConn ~ 5000 5750
 NoConn ~ 5000 5650
 NoConn ~ 5000 5550
 NoConn ~ 5000 5450
-NoConn ~ 5000 5350
-NoConn ~ 5000 5250
-NoConn ~ 5000 5150
-NoConn ~ 5000 5050
 NoConn ~ 3250 2950
 NoConn ~ 3250 3050
 NoConn ~ 3250 3150
@@ -1512,13 +1508,11 @@ Text HLabel 7000 3950 0    50   Input ~ 0
 VTT_GOOD
 Text Notes 7800 2000 0    50   ~ 0
 I2C3 AF4
-Text Notes 7600 9200 0    50   ~ 0
-I2C1 ADDRESS MAP (3V3)\nINA233s on probes\nP0 = 80\nP1 = 82\nP2 = 84\nP3 = 86\nP4 = 88 \nP5 = 8a\nP6 = 8c\nP7 = 8e\nP8 = 90\nP9 = 92\nP10 = 94\nP11 = 96
-Text Notes 8900 9350 0    50   ~ 0
-I2C2 ADDRESS MAP (3V3_SB)\n\nINA233s\n2V5 = 80\n2V0 = 82\n3V3 = 84\nBacklight = 86\n5V0 = 88\n1V2 = 8A\n1V8 = 8C\n1V5 = 8E\n1V0_1 = 90\n1V0_2 = 92\n3V3_SB = 94\n\nSPD EEPROM = A0
-Text Notes 10350 8200 0    50   ~ 0
+Text Notes 8850 9950 0    50   ~ 0
+I2C2 ADDRESS MAP (3V3_SB)\n\nINA233s\n2V5 = 80\n2V0 = 82\n3V3 = 84\nBacklight = 86\n5V0 = 88\n1V2 = 8A\n1V8 = 8C\n1V5 = 8E\n1V0_1 = 90\n1V0_2 = 92\n3V3_SB = 94\n12V0 = 96\n\nTemp sensors\nTEMP1 = 98\nTEMP2 = 9A\nTEMP3 = 9C\nTEMP4 = 9E\n\nSPD EEPROM = A0
+Text Notes 10350 8250 0    50   ~ 0
 I2C3 ADDRESS MAP (3V3)\nQSFP ID = A0
-Text Notes 11900 8200 0    50   ~ 0
+Text Notes 11900 8250 0    50   ~ 0
 I2C4 ADDRESS MAP (3V3_SB)\nTouch controller = BA
 Text HLabel 7000 4050 0    50   Output ~ 0
 2V0_EN
@@ -1566,4 +1560,14 @@ $EndComp
 Wire Wire Line
 	3050 1450 3250 1450
 NoConn ~ 5000 4050
+Text HLabel 5000 5050 0    50   Input ~ 0
+TEMP1_ALERT
+Text HLabel 5000 5150 0    50   Input ~ 0
+TEMP2_ALERT
+Text HLabel 5000 5250 0    50   Input ~ 0
+TEMP3_ALERT
+Text HLabel 5000 5350 0    50   Input ~ 0
+TEMP4_ALERT
+Text Notes 7600 9250 0    50   ~ 0
+I2C1 ADDRESS MAP (3V3)\nINA233s on probes\nP0 = 80\nP1 = 82\nP2 = 84\nP3 = 86\nP4 = 88 \nP5 = 8a\nP6 = 8c\nP7 = 8e\nP8 = 90\nP9 = 92\nP10 = 94\nP11 = 96
 $EndSCHEMATC

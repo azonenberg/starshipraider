@@ -87,7 +87,7 @@ Text Label 4200 1600 0    50   ~ 0
 VIN_FILT
 Text HLabel 4200 1900 2    50   Output ~ 0
 GND
-Text HLabel 6900 1600 2    50   Output ~ 0
+Text HLabel 7500 1600 2    50   Output ~ 0
 12V0
 $Comp
 L power-azonenberg:E36SC12009NRFA U52
@@ -107,10 +107,8 @@ GND
 Text Label 6400 2000 0    50   ~ 0
 GND
 Wire Wire Line
-	6400 1600 6400 1700
-Wire Wire Line
 	6400 1900 6400 2000
-Text Notes 5350 1200 0    50   ~ 0
+Text Notes 5350 900  0    50   ~ 0
 Expected efficiency @ 48V in is ~~93%.\nAssuming 7.3A load, we'll dissipate a bit under 7W in this module.\nOvercurrent shutdown at around 11A
 Text Label 4550 2000 0    50   ~ 0
 GND
@@ -165,7 +163,6 @@ F 3 "" H 6900 1750 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6900 1600 6400 1600
-Connection ~ 6400 1600
 Wire Wire Line
 	6400 1900 6900 1900
 Connection ~ 6400 1900
@@ -395,8 +392,6 @@ Text Label 7850 4200 2    50   ~ 0
 I2C_SDA
 Text Label 7850 4300 2    50   ~ 0
 I2C_SDA
-Text Label 7850 4400 2    50   ~ 0
-P0_ALERT
 Text HLabel 7850 4500 0    50   BiDi ~ 0
 I2C_SDA
 Text HLabel 7850 4600 0    50   Input ~ 0
@@ -452,4 +447,82 @@ Wire Wire Line
 	4750 4250 4750 4550
 Text Label 5350 4550 0    50   ~ 0
 3V3_SB_SENSE_LO
+$Comp
+L special-azonenberg:INA226 U?
+U 1 1 61CB85B9
+P 8650 3250
+AR Path="/5EDD723A/5F0BA462/61CB85B9" Ref="U?"  Part="1" 
+AR Path="/5EDD7150/61580EA1/61CB85B9" Ref="U?"  Part="1" 
+AR Path="/5EDD7150/61296AEB/61CB85B9" Ref="U?"  Part="1" 
+AR Path="/5EDD7150/611CBEBF/61CB85B9" Ref="U84"  Part="1" 
+F 0 "U84" H 8550 2900 60  0000 C CNN
+F 1 "INA233" H 8950 2900 60  0000 C CNN
+F 2 "" H 8650 3250 60  0000 C CNN
+F 3 "" H 8650 3250 60  0000 C CNN
+	1    8650 3250
+	1    0    0    -1  
+$EndComp
+Text Label 9400 3350 0    50   ~ 0
+GND
+Text Label 9400 3450 0    50   ~ 0
+3V3_SB
+Text Label 7850 3050 2    50   ~ 0
+I2C_SDA
+Text Label 7850 3150 2    50   ~ 0
+I2C_SCL
+Text HLabel 7850 3350 0    50   BiDi ~ 0
+I2C_SDA
+Text HLabel 7850 3450 0    50   Input ~ 0
+I2C_SCL
+Text Notes 8150 3650 0    50   ~ 0
+8'h96
+Text Label 9400 3050 0    50   ~ 0
+12V0_SENSE_HI
+Text Label 9400 3150 0    50   ~ 0
+12V0_SENSE_LO
+Text Label 9400 3250 0    50   ~ 0
+12V0
+$Comp
+L device:C C?
+U 1 1 61CB85CF
+P 10600 3200
+AR Path="/5EDD7150/61CB85CF" Ref="C?"  Part="1" 
+AR Path="/5EDD7150/611CBEBF/61CB85CF" Ref="C408"  Part="1" 
+F 0 "C408" H 10715 3246 50  0000 L CNN
+F 1 "0.47 uF" H 10715 3155 50  0000 L CNN
+F 2 "" H 10638 3050 50  0001 C CNN
+F 3 "" H 10600 3200 50  0001 C CNN
+	1    10600 3200
+	1    0    0    -1  
+$EndComp
+Text Label 10600 3050 0    50   ~ 0
+3V3_SB
+Text Label 10600 3350 0    50   ~ 0
+GND
+Text Notes 6450 3150 0    50   ~ 0
+2 mR = 16 mV @ 8A\n1.25 mA/LSB
+$Comp
+L passive-azonenberg:R-4TERM R?
+U 1 1 61CBB686
+P 7200 1550
+AR Path="/5EDD7150/61580EA1/61CBB686" Ref="R?"  Part="1" 
+AR Path="/5EDD7150/611CBEBF/61CBB686" Ref="R206"  Part="1" 
+F 0 "R206" V 6914 1550 50  0000 C CNN
+F 1 "LVK25R002FER" V 7005 1550 50  0000 C CNN
+F 2 "" H 7200 1550 60  0000 C CNN
+F 3 "" H 7200 1550 60  0000 C CNN
+	1    7200 1550
+	0    1    1    0   
+$EndComp
+Text Label 6400 1700 0    50   ~ 0
+12V0
+Connection ~ 6900 1600
+Text Label 6900 1100 0    50   ~ 0
+12V0_SENSE_HI
+Wire Wire Line
+	6900 1100 6900 1500
+Text Label 7500 1500 0    50   ~ 0
+12V0_SENSE_LO
+NoConn ~ 7850 4400
+NoConn ~ 7850 3250
 $EndSCHEMATC

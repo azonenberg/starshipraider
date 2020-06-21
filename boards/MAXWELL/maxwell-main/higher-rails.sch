@@ -1029,8 +1029,6 @@ Text Label 11500 3850 2    50   ~ 0
 GND
 Text Label 11500 3950 2    50   ~ 0
 GND
-Text Label 11500 4050 2    50   ~ 0
-P0_ALERT
 Text HLabel 11500 4150 0    50   BiDi ~ 0
 I2C_SDA
 Text HLabel 11500 4250 0    50   Input ~ 0
@@ -1102,8 +1100,6 @@ Text Label 11500 4700 2    50   ~ 0
 GND
 Text Label 11500 4800 2    50   ~ 0
 3V3_SB
-Text Label 11500 4900 2    50   ~ 0
-P0_ALERT
 Text Notes 11800 5300 0    50   ~ 0
 8'h82
 Text Label 13050 4900 0    50   ~ 0
@@ -1175,8 +1171,6 @@ Text Label 11500 5550 2    50   ~ 0
 GND
 Text Label 11500 5650 2    50   ~ 0
 I2C_SDA
-Text Label 11500 5750 2    50   ~ 0
-P0_ALERT
 Text Notes 11800 6150 0    50   ~ 0
 8'h84
 Text Label 13050 5750 0    50   ~ 0
@@ -1250,8 +1244,6 @@ Text Label 11500 6400 2    50   ~ 0
 GND
 Text Label 11500 6500 2    50   ~ 0
 I2C_SCL
-Text Label 11500 6600 2    50   ~ 0
-P0_ALERT
 Text Notes 11800 7000 0    50   ~ 0
 8'h86
 Text Label 13050 6600 0    50   ~ 0
@@ -1323,8 +1315,6 @@ Text Label 11500 7350 2    50   ~ 0
 GND
 Text Label 11500 7250 2    50   ~ 0
 3V3_SB
-Text Label 11500 7450 2    50   ~ 0
-P0_ALERT
 Text Notes 11800 7850 0    50   ~ 0
 8'h88
 Text Label 13050 7450 0    50   ~ 0
@@ -1363,4 +1353,9 @@ Text Notes 9950 7350 0    50   ~ 0
 100 mR = 10 mV @ 100 mA\n25 uA/LSB
 Text Notes 11800 3650 0    50   ~ 0
 16 bits signed, 81.92 mV full scale\n2.5 uV/LSB
+NoConn ~ 11500 4050
+NoConn ~ 11500 4900
+NoConn ~ 11500 5750
+NoConn ~ 11500 6600
+NoConn ~ 11500 7450
 $EndSCHEMATC
