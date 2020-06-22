@@ -1533,7 +1533,7 @@ Text HLabel 5000 6450 0    50   Output ~ 0
 RMII_TXD1
 Text HLabel 5000 5850 0    50   Output ~ 0
 ETH_PPS_OUT
-Text HLabel 1350 1750 0    50   Output ~ 0
+Text HLabel 1350 1750 0    50   Input ~ 0
 RMII_CRS_DV
 Text HLabel 1350 1150 0    50   Output ~ 0
 RMII_REFCLK

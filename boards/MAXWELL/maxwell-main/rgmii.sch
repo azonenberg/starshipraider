@@ -35,20 +35,6 @@ F 3 "" H 9750 3950 60  0000 C CNN
 	1    9750 3950
 	1    0    0    -1  
 $EndComp
-$Comp
-L xilinx-azonenberg:XC7KxT-FFG676 U?
-U 6 1 5F47F363
-P 2250 5950
-AR Path="/5EDD71F2/5F47F363" Ref="U?"  Part="9" 
-AR Path="/5EF1FA37/5F47F363" Ref="U?"  Part="7" 
-AR Path="/5EE2921B/5F47F363" Ref="U2"  Part="6" 
-F 0 "U2" H 2250 5900 50  0000 L CNN
-F 1 "XC7K160T-2FFG676C" H 2250 5800 50  0000 L CNN
-F 2 "" H 2250 5950 50  0001 C CNN
-F 3 "" H 2250 5950 50  0001 C CNN
-	6    2250 5950
-	1    0    0    -1  
-$EndComp
 Text HLabel 2050 1100 0    50   BiDi ~ 0
 K7_QSPI_DQ0
 Text HLabel 2050 1200 0    50   BiDi ~ 0
@@ -1090,16 +1076,10 @@ MAC_I2C_SCL
 Text Label 2050 5000 2    50   ~ 0
 MAC_I2C_SDA
 NoConn ~ 2050 2000
-NoConn ~ 2050 2200
-NoConn ~ 2050 2300
 NoConn ~ 2050 5300
 NoConn ~ 2050 5200
 NoConn ~ 2050 3400
 NoConn ~ 2050 3200
-NoConn ~ 2050 3100
-NoConn ~ 2050 3000
-NoConn ~ 2050 2900
-NoConn ~ 2050 2400
 Text HLabel 2050 5900 0    50   Output ~ 0
 PLL_SYNC
 NoConn ~ 2050 5400
@@ -1145,8 +1125,6 @@ Text HLabel 2050 1800 0    50   Input ~ 0
 SCPI_UART_TX
 Text HLabel 2050 1900 0    50   Output ~ 0
 SCPI_UART_RX
-NoConn ~ 2050 2700
-NoConn ~ 2050 2800
 $Comp
 L device:R R213
 U 1 1 61DFD9AC
@@ -1162,4 +1140,34 @@ Wire Wire Line
 	1450 1500 2050 1500
 Text Label 1150 1500 2    50   ~ 0
 3V3
+Text HLabel 2050 2200 0    50   Output ~ 0
+RMII_CRS_DV
+Text HLabel 2050 2300 0    50   Output ~ 0
+RMII_RXD0
+Text HLabel 2050 2400 0    50   Output ~ 0
+RMII_RXD1
+$Comp
+L xilinx-azonenberg:XC7KxT-FFG676 U?
+U 6 1 5F47F363
+P 2250 5950
+AR Path="/5EDD71F2/5F47F363" Ref="U?"  Part="9" 
+AR Path="/5EF1FA37/5F47F363" Ref="U?"  Part="7" 
+AR Path="/5EE2921B/5F47F363" Ref="U2"  Part="6" 
+F 0 "U2" H 2250 5900 50  0000 L CNN
+F 1 "XC7K160T-2FFG676C" H 2250 5800 50  0000 L CNN
+F 2 "" H 2250 5950 50  0001 C CNN
+F 3 "" H 2250 5950 50  0001 C CNN
+	6    2250 5950
+	1    0    0    -1  
+$EndComp
+Text HLabel 2050 3100 0    50   Output ~ 0
+RMII_REFCLK
+Text HLabel 2050 2700 0    50   Input ~ 0
+RMII_TX_EN
+Text HLabel 2050 2800 0    50   Input ~ 0
+RMII_TXD0
+Text HLabel 2050 2900 0    50   Input ~ 0
+RMII_TXD1
+Text HLabel 2050 3000 0    50   Input ~ 0
+ETH_PPS_OUT
 $EndSCHEMATC
