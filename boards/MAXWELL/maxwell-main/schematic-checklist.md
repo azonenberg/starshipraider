@@ -36,11 +36,11 @@ off as invalid.
         * [x] Ground
         * [x] Power
         * [x] Config
-        * [ ] Bank 12
-        * [ ] Bank 13
-        * [ ] Bank 14
-        * [ ] Bank 15
-        * [ ] Bank 16
+        * [x] Bank 12
+        * [x] Bank 13
+        * [x] Bank 14
+        * [x] Bank 15
+        * [x] Bank 16
         * [ ] Bank 32
         * [ ] Bank 33
         * [ ] Bank 34

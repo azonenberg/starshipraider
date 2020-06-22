@@ -61,7 +61,7 @@ Text HLabel 1350 1450 0    50   Output ~ 0
 S7_SPI_CS_N
 Text HLabel 1350 1550 0    50   Output ~ 0
 S7_SPI_SCK
-Text HLabel 1350 1750 0    50   Output ~ 0
+Text HLabel 3250 1550 0    50   Output ~ 0
 S7_SPI_MOSI
 Text HLabel 1350 1650 0    50   Input ~ 0
 S7_SPI_MISO
@@ -169,17 +169,6 @@ F 1 "STM32F777NIH6" H 8600 6250 50  0000 L CNN
 F 2 "" H 8600 6350 50  0001 C CNN
 F 3 "" H 8600 6350 50  0001 C CNN
 	10   8600 6400
-	1    0    0    -1  
-$EndComp
-$Comp
-L st-azonenberg:STM32F777xx-TFBGA216 U1
-U 11 1 5F7C9274
-P 8650 7500
-F 0 "U1" H 8650 7450 50  0000 L CNN
-F 1 "STM32F777NIH6" H 8650 7350 50  0000 L CNN
-F 2 "" H 8650 7450 50  0001 C CNN
-F 3 "" H 8650 7450 50  0001 C CNN
-	11   8650 7500
 	1    0    0    -1  
 $EndComp
 Text HLabel 5000 3250 0    50   BiDi ~ 0
@@ -305,9 +294,9 @@ Text HLabel 3250 1850 0    50   BiDi ~ 0
 PLL_STATUS_LD
 Text HLabel 3250 1950 0    50   BiDi ~ 0
 PLL_STATUS_CLKIN0
-Text HLabel 3250 1050 0    50   BiDi ~ 0
+Text HLabel 5000 5650 0    50   BiDi ~ 0
 PLL_STATUS_CLKIN1
-Text HLabel 3250 1150 0    50   BiDi ~ 0
+Text HLabel 5000 5750 0    50   BiDi ~ 0
 PLL_STATUS_HOLDOVER
 Text Label 1350 2350 2    50   ~ 0
 STM_TMS
@@ -356,7 +345,7 @@ Text Label 4750 2050 2    50   ~ 0
 STM_TCK
 Text Label 4750 2250 2    50   ~ 0
 STM_TDI
-Text Notes 850  1400 0    50   ~ 0
+Text Notes 700  1400 0    50   ~ 0
 SPI1 AF5
 Text Notes 2700 2500 0    50   ~ 0
 SPI2 AF5
@@ -372,17 +361,13 @@ F 3 "" H 3100 2550 50  0001 C CNN
 	1    3100 2550
 	0    1    1    0   
 $EndComp
-Text Notes 2600 1600 0    50   ~ 0
+Text Notes 2250 1700 0    50   ~ 0
 I2C1 AF4
-NoConn ~ 3250 1550
-Text Notes 4450 3700 0    50   ~ 0
-SPI4 AF5
 Text Notes 2400 2100 0    50   ~ 0
 I2C2 AF4
 NoConn ~ 3250 1250
 NoConn ~ 1350 1350
 NoConn ~ 1350 1250
-NoConn ~ 1350 1150
 Text Label 4750 2350 2    50   ~ 0
 STM_RST_J
 Text Label 1450 8050 2    50   ~ 0
@@ -492,11 +477,11 @@ Text Label 8500 5850 2    50   ~ 0
 LCD_G3
 Text Label 8500 5950 2    50   ~ 0
 LCD_G4
-Text Label 8500 2950 2    50   ~ 0
+Text Label 8550 6750 2    50   ~ 0
 LCD_G5
-Text Label 8500 3050 2    50   ~ 0
+Text Label 8550 6850 2    50   ~ 0
 LCD_G6
-Text Label 8500 3150 2    50   ~ 0
+Text Label 8550 6950 2    50   ~ 0
 LCD_G7
 Text Label 8500 5750 2    50   ~ 0
 LCD_G2
@@ -506,17 +491,17 @@ Text Label 8500 6150 2    50   ~ 0
 LCD_B1
 Text Label 8500 6350 2    50   ~ 0
 LCD_B3
-Text Label 8500 3350 2    50   ~ 0
+Text Label 8550 7050 2    50   ~ 0
 LCD_B4
-Text Label 8500 3450 2    50   ~ 0
+Text Label 8550 7150 2    50   ~ 0
 LCD_B5
-Text Label 8500 3550 2    50   ~ 0
+Text Label 8550 7250 2    50   ~ 0
 LCD_B6
-Text Label 8500 3650 2    50   ~ 0
+Text Label 8550 7350 2    50   ~ 0
 LCD_B7
 Text Label 8500 6250 2    50   ~ 0
 LCD_B2
-Text Label 8550 6750 2    50   ~ 0
+Text Label 8300 1050 2    50   ~ 0
 LCD_ON
 Text Label 8500 4350 2    50   ~ 0
 LCD_CLK
@@ -1325,28 +1310,10 @@ Wire Wire Line
 	5800 9300 6100 9300
 Wire Wire Line
 	6100 9600 5100 9600
-NoConn ~ 8550 7350
-NoConn ~ 8550 7250
-NoConn ~ 8550 7150
-NoConn ~ 8550 7050
-NoConn ~ 8550 6950
-NoConn ~ 8550 6850
-NoConn ~ 5000 6550
-NoConn ~ 5000 6250
-NoConn ~ 5000 6150
-NoConn ~ 5000 6050
-NoConn ~ 5000 5950
-NoConn ~ 5000 5850
-NoConn ~ 5000 5750
-NoConn ~ 5000 5650
-NoConn ~ 5000 5550
-NoConn ~ 5000 5450
 NoConn ~ 3250 2950
 NoConn ~ 3250 3050
 NoConn ~ 3250 3150
 NoConn ~ 3250 3250
-NoConn ~ 3250 3350
-NoConn ~ 3250 3450
 NoConn ~ 3250 3750
 NoConn ~ 3250 3950
 NoConn ~ 3250 4050
@@ -1365,7 +1332,6 @@ NoConn ~ 7000 1350
 NoConn ~ 7000 1250
 NoConn ~ 7000 1150
 NoConn ~ 7000 1050
-NoConn ~ 8300 1050
 NoConn ~ 8300 1150
 NoConn ~ 8300 1950
 NoConn ~ 8300 2050
@@ -1463,9 +1429,9 @@ Wire Wire Line
 Wire Wire Line
 	10350 1400 10350 1300
 Connection ~ 10350 1300
-Text HLabel 5000 6450 0    50   Output ~ 0
+Text HLabel 5000 5550 0    50   Output ~ 0
 TRIG_OUT_MUX_SEL
-Text HLabel 5000 6350 0    50   Output ~ 0
+Text HLabel 5000 5450 0    50   Output ~ 0
 TRIG_OUT_MUX_EQ
 Text HLabel 7000 2950 0    50   Output ~ 0
 1V0_EN
@@ -1518,24 +1484,10 @@ Text HLabel 7000 4050 0    50   Output ~ 0
 2V0_EN
 Text HLabel 7000 4250 0    50   Output ~ 0
 2V5_EN
-Text HLabel 5000 4350 0    50   Output ~ 0
-3V3_EN
-Text HLabel 5000 4150 0    50   Output ~ 0
-5V0_EN
-Text HLabel 5000 3950 0    50   Output ~ 0
-5V0_N_EN
 Text HLabel 7000 4150 0    50   Input ~ 0
 2V0_GOOD
 Text HLabel 7000 4350 0    50   Input ~ 0
 2V5_GOOD
-Text HLabel 5000 4450 0    50   Input ~ 0
-3V3_GOOD
-Text HLabel 5000 4250 0    50   Input ~ 0
-5V0_GOOD
-Text HLabel 5000 3850 0    50   Input ~ 0
-0V5_GOOD
-Text HLabel 5000 3750 0    50   Output ~ 0
-0V5_EN
 Text HLabel 7000 4450 0    50   Output ~ 0
 VBACKLIGHT_EN
 Text HLabel 3250 3850 0    50   Output ~ 0
@@ -1559,7 +1511,6 @@ F 3 "" H 2900 1450 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	3050 1450 3250 1450
-NoConn ~ 5000 4050
 Text HLabel 5000 5050 0    50   Input ~ 0
 TEMP1_ALERT
 Text HLabel 5000 5150 0    50   Input ~ 0
@@ -1570,4 +1521,357 @@ Text HLabel 5000 5350 0    50   Input ~ 0
 TEMP4_ALERT
 Text Notes 7600 9250 0    50   ~ 0
 I2C1 ADDRESS MAP (3V3)\nINA233s on probes\nP0 = 80\nP1 = 82\nP2 = 84\nP3 = 86\nP4 = 88 \nP5 = 8a\nP6 = 8c\nP7 = 8e\nP8 = 90\nP9 = 92\nP10 = 94\nP11 = 96
+Text HLabel 3250 3350 0    50   Input ~ 0
+RMII_RXD0
+Text HLabel 3250 3450 0    50   Input ~ 0
+RMII_RXD1
+Text Notes 2150 3400 0    50   ~ 0
+RMII AF11
+Text Notes 4000 6200 0    50   ~ 0
+RMII AF11
+Text HLabel 5000 6150 0    50   Output ~ 0
+RMII_TX_EN
+Text HLabel 5000 6350 0    50   Output ~ 0
+RMII_TXD0
+Text HLabel 5000 6450 0    50   Output ~ 0
+RMII_TXD1
+Text HLabel 5000 5850 0    50   Output ~ 0
+ETH_PPS_OUT
+Text HLabel 1350 1750 0    50   Output ~ 0
+RMII_CRS_DV
+Text HLabel 1350 1150 0    50   Output ~ 0
+RMII_REFCLK
+Text Notes 2250 1600 0    50   ~ 0
+SPI1 AF5
+Text Label 5000 3850 2    50   ~ 0
+FAN0_PWM
+Text Label 5000 4050 2    50   ~ 0
+FAN1_PWM
+Text Label 9700 7100 2    50   ~ 0
+FAN0_PWM
+Text HLabel 3250 1050 0    50   Output ~ 0
+0V5_EN
+Text HLabel 3250 1150 0    50   Input ~ 0
+0V5_GOOD
+Text HLabel 5000 6050 0    50   Input ~ 0
+5V0_GOOD
+Text HLabel 5000 4450 0    50   Input ~ 0
+3V3_GOOD
+Text HLabel 5000 6250 0    50   Output ~ 0
+5V0_N_EN
+Text HLabel 5000 5950 0    50   Output ~ 0
+5V0_EN
+Text HLabel 5000 6550 0    50   Output ~ 0
+3V3_EN
+Text Notes 4450 3700 0    50   ~ 0
+SPI4 AF5
+Text Notes 4200 3850 0    50   ~ 0
+TIM1 AF1
+NoConn ~ 5000 3750
+Text Label 5000 4250 2    50   ~ 0
+FAN2_PWM
+Text Label 5000 4350 2    50   ~ 0
+FAN3_PWM
+NoConn ~ 5000 4150
+NoConn ~ 5000 3950
+$Comp
+L st-azonenberg:STM32F777xx-TFBGA216 U1
+U 11 1 5F7C9274
+P 8650 7500
+F 0 "U1" H 8650 7450 50  0000 L CNN
+F 1 "STM32F777NIH6" H 8650 7350 50  0000 L CNN
+F 2 "" H 8650 7450 50  0001 C CNN
+F 3 "" H 8650 7450 50  0001 C CNN
+	11   8650 7500
+	1    0    0    -1  
+$EndComp
+Text Label 8500 3150 2    50   ~ 0
+FAN3_TACHO
+NoConn ~ 8500 3050
+NoConn ~ 8500 2950
+NoConn ~ 8500 3350
+Text Label 8500 3450 2    50   ~ 0
+FAN0_TACHO
+Text Label 8500 3550 2    50   ~ 0
+FAN1_TACHO
+Text Label 8500 3650 2    50   ~ 0
+FAN2_TACHO
+Text Notes 7650 3150 0    50   ~ 0
+TIM8 AF3
+Text Label 10450 3150 2    50   ~ 0
+FAN0_TACHO
+$Comp
+L special-azonenberg:PCFAN_4WIRE J27
+U 1 1 620E74D2
+P 10650 3300
+F 0 "J27" H 10978 3551 50  0000 L CNN
+F 1 "PCFAN_4WIRE" H 10978 3460 50  0000 L CNN
+F 2 "" H 10650 3300 50  0001 C CNN
+F 3 "" H 10650 3300 50  0001 C CNN
+	1    10650 3300
+	1    0    0    -1  
+$EndComp
+Text HLabel 10450 3050 0    50   Input ~ 0
+12V0
+Text Label 10450 2950 2    50   ~ 0
+GND
+$Comp
+L device:R R214
+U 1 1 620EEEA6
+P 9800 3150
+F 0 "R214" V 9700 3150 50  0000 C CNN
+F 1 "10K" V 9800 3150 50  0000 C CNN
+F 2 "" V 9730 3150 50  0001 C CNN
+F 3 "" H 9800 3150 50  0001 C CNN
+	1    9800 3150
+	0    1    1    0   
+$EndComp
+Text Label 9650 3150 2    50   ~ 0
+3V3
+Wire Wire Line
+	9950 3150 10450 3150
+$Comp
+L special-azonenberg:SSM6N58NU_DUAL_NMOS Q4
+U 2 1 620FC815
+P 9900 7100
+F 0 "Q4" H 10044 7153 60  0000 L CNN
+F 1 "SSM6N58NU" H 10044 7047 60  0000 L CNN
+F 2 "" H 9900 7100 60  0000 C CNN
+F 3 "transistors/mos/*.*" H 10044 6994 60  0001 L CNN
+	2    9900 7100
+	1    0    0    -1  
+$EndComp
+Text Notes 10650 2850 0    50   ~ 0
+Fan PWM is inverted by level shifter\nSo 100% PWM = off\n0% PWM = full throttle
+Text Label 9700 7300 2    50   ~ 0
+GND
+Wire Wire Line
+	9700 7300 10000 7300
+$Comp
+L device:R R218
+U 1 1 6210A295
+P 10000 6650
+F 0 "R218" V 9900 6650 50  0000 C CNN
+F 1 "1K" V 10000 6650 50  0000 C CNN
+F 2 "" V 9930 6650 50  0001 C CNN
+F 3 "" H 10000 6650 50  0001 C CNN
+	1    10000 6650
+	-1   0    0    1   
+$EndComp
+Text HLabel 9700 6500 0    50   Input ~ 0
+5V0_SB
+Wire Wire Line
+	10000 6800 10000 6900
+Text Label 10000 6850 0    50   ~ 0
+FAN0_PWM_SHIFTED
+Text Label 10450 3250 2    50   ~ 0
+FAN0_PWM_SHIFTED
+Wire Wire Line
+	9700 6500 10000 6500
+$Comp
+L special-azonenberg:SSM6N58NU_DUAL_NMOS Q5
+U 1 1 621239E1
+P 10950 7100
+F 0 "Q5" H 11094 7153 60  0000 L CNN
+F 1 "SSM6N58NU" H 11094 7047 60  0000 L CNN
+F 2 "" H 10950 7100 60  0000 C CNN
+F 3 "transistors/mos/*.*" H 11094 6994 60  0001 L CNN
+	1    10950 7100
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:R R219
+U 1 1 621239EC
+P 11050 6650
+F 0 "R219" V 10950 6650 50  0000 C CNN
+F 1 "1K" V 11050 6650 50  0000 C CNN
+F 2 "" V 10980 6650 50  0001 C CNN
+F 3 "" H 11050 6650 50  0001 C CNN
+	1    11050 6650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	11050 6800 11050 6900
+Text Label 11050 6850 0    50   ~ 0
+FAN1_PWM_SHIFTED
+$Comp
+L special-azonenberg:SSM6N58NU_DUAL_NMOS Q5
+U 2 1 621291A1
+P 12000 7100
+F 0 "Q5" H 12144 7153 60  0000 L CNN
+F 1 "SSM6N58NU" H 12144 7047 60  0000 L CNN
+F 2 "" H 12000 7100 60  0000 C CNN
+F 3 "transistors/mos/*.*" H 12144 6994 60  0001 L CNN
+	2    12000 7100
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:R R220
+U 1 1 621291AC
+P 12100 6650
+F 0 "R220" V 12000 6650 50  0000 C CNN
+F 1 "1K" V 12100 6650 50  0000 C CNN
+F 2 "" V 12030 6650 50  0001 C CNN
+F 3 "" H 12100 6650 50  0001 C CNN
+	1    12100 6650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	12100 6800 12100 6900
+Text Label 12100 6850 0    50   ~ 0
+FAN2_PWM_SHIFTED
+$Comp
+L special-azonenberg:SSM6N58NU_DUAL_NMOS Q6
+U 1 1 62133AA5
+P 13050 7100
+F 0 "Q6" H 13194 7153 60  0000 L CNN
+F 1 "SSM6N58NU" H 13194 7047 60  0000 L CNN
+F 2 "" H 13050 7100 60  0000 C CNN
+F 3 "transistors/mos/*.*" H 13194 6994 60  0001 L CNN
+	1    13050 7100
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:R R221
+U 1 1 62133AB0
+P 13150 6650
+F 0 "R221" V 13050 6650 50  0000 C CNN
+F 1 "1K" V 13150 6650 50  0000 C CNN
+F 2 "" V 13080 6650 50  0001 C CNN
+F 3 "" H 13150 6650 50  0001 C CNN
+	1    13150 6650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	13150 6800 13150 6900
+Text Label 13150 6850 0    50   ~ 0
+FAN3_PWM_SHIFTED
+Wire Wire Line
+	12100 6500 13150 6500
+Connection ~ 12100 6500
+Wire Wire Line
+	11050 6500 12100 6500
+Connection ~ 11050 6500
+Connection ~ 10000 6500
+Wire Wire Line
+	10000 7300 11050 7300
+Connection ~ 10000 7300
+Wire Wire Line
+	11050 7300 12100 7300
+Connection ~ 11050 7300
+Wire Wire Line
+	12100 7300 13150 7300
+Connection ~ 12100 7300
+Wire Wire Line
+	10000 6500 11050 6500
+Text Label 10750 7100 2    50   ~ 0
+FAN1_PWM
+Text Label 11800 7100 2    50   ~ 0
+FAN2_PWM
+Text Label 12850 7100 2    50   ~ 0
+FAN3_PWM
+Text Label 10450 3700 2    50   ~ 0
+FAN1_TACHO
+$Comp
+L special-azonenberg:PCFAN_4WIRE J31
+U 1 1 6216669E
+P 10650 3850
+F 0 "J31" H 10978 4101 50  0000 L CNN
+F 1 "PCFAN_4WIRE" H 10978 4010 50  0000 L CNN
+F 2 "" H 10650 3850 50  0001 C CNN
+F 3 "" H 10650 3850 50  0001 C CNN
+	1    10650 3850
+	1    0    0    -1  
+$EndComp
+Text Label 10450 3500 2    50   ~ 0
+GND
+$Comp
+L device:R R215
+U 1 1 621666AA
+P 9800 3700
+F 0 "R215" V 9700 3700 50  0000 C CNN
+F 1 "10K" V 9800 3700 50  0000 C CNN
+F 2 "" V 9730 3700 50  0001 C CNN
+F 3 "" H 9800 3700 50  0001 C CNN
+	1    9800 3700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9950 3700 10450 3700
+Text Label 10450 3800 2    50   ~ 0
+FAN1_PWM_SHIFTED
+Text Label 10450 3600 2    50   ~ 0
+12V0
+Text Label 10450 4250 2    50   ~ 0
+FAN2_TACHO
+$Comp
+L special-azonenberg:PCFAN_4WIRE J32
+U 1 1 6216FE7F
+P 10650 4400
+F 0 "J32" H 10978 4651 50  0000 L CNN
+F 1 "PCFAN_4WIRE" H 10978 4560 50  0000 L CNN
+F 2 "" H 10650 4400 50  0001 C CNN
+F 3 "" H 10650 4400 50  0001 C CNN
+	1    10650 4400
+	1    0    0    -1  
+$EndComp
+Text Label 10450 4050 2    50   ~ 0
+GND
+$Comp
+L device:R R216
+U 1 1 6216FE8A
+P 9800 4250
+F 0 "R216" V 9700 4250 50  0000 C CNN
+F 1 "10K" V 9800 4250 50  0000 C CNN
+F 2 "" V 9730 4250 50  0001 C CNN
+F 3 "" H 9800 4250 50  0001 C CNN
+	1    9800 4250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9950 4250 10450 4250
+Text Label 10450 4350 2    50   ~ 0
+FAN2_PWM_SHIFTED
+Text Label 10450 4150 2    50   ~ 0
+12V0
+Text Label 10450 4800 2    50   ~ 0
+FAN3_TACHO
+$Comp
+L special-azonenberg:PCFAN_4WIRE J33
+U 1 1 62179CF1
+P 10650 4950
+F 0 "J33" H 10978 5201 50  0000 L CNN
+F 1 "PCFAN_4WIRE" H 10978 5110 50  0000 L CNN
+F 2 "" H 10650 4950 50  0001 C CNN
+F 3 "" H 10650 4950 50  0001 C CNN
+	1    10650 4950
+	1    0    0    -1  
+$EndComp
+Text Label 10450 4600 2    50   ~ 0
+GND
+$Comp
+L device:R R217
+U 1 1 62179CFC
+P 9800 4800
+F 0 "R217" V 9700 4800 50  0000 C CNN
+F 1 "10K" V 9800 4800 50  0000 C CNN
+F 2 "" V 9730 4800 50  0001 C CNN
+F 3 "" H 9800 4800 50  0001 C CNN
+	1    9800 4800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9950 4800 10450 4800
+Text Label 10450 4900 2    50   ~ 0
+FAN3_PWM_SHIFTED
+Text Label 10450 4700 2    50   ~ 0
+12V0
+Wire Wire Line
+	9650 3150 9650 3700
+Connection ~ 9650 3700
+Wire Wire Line
+	9650 3700 9650 4250
+Connection ~ 9650 4250
+Wire Wire Line
+	9650 4250 9650 4800
 $EndSCHEMATC
