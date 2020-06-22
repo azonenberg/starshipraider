@@ -34,7 +34,7 @@ off as invalid.
     * [x] VES180_MINIFITJR
     * [ ] XC7KxT-FFG676
         * [x] Ground
-        * [ ] Power
+        * [x] Power
         * [x] Config
         * [ ] Bank 12
         * [ ] Bank 13
@@ -53,7 +53,9 @@ off as invalid.
         * [x] Bank 34
 * [ ] Schematic symbol matches chosen component package
 * [ ] Thermal pads are connected to correct power rail (may not always be ground)
-* [ ] Debug interfaces are not power gated in sleep mode
+* [x] Debug interfaces are not power gated in sleep mode
+    * FPGAs are completely shut down when in soft powerdown
+    * STM32 JTAG runs in 3V3_SB power domain
 
 ## Passive components
 * [ ] Power/voltage/tolerance ratings specified as required
