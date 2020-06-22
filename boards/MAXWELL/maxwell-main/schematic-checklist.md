@@ -8,16 +8,19 @@ off as invalid.
     * U1 C1: VBAT is driven by a Schottky and resistor, not a PSU directly
 * [ ] Verify pin numbers of all schematic symbols against datasheet or external interface specification document (if not yet board proven).
     * [x] ADCMP582
-    * [ ] BNX003-11
+    * [x] BNX003-11
     * [x] CONN_QSFP_HOST
     * [ ] DDR3_SODIMM
-    * [ ] E36SC12009NRFA
+        [x] Power
+        [ ] DQ
+        [x] Control / address
+    * [x] E36SC12009NRFA
     * [x] ESD7008
     * [ ] IAF12020A007V-003-R
     * [x] INA233
     * [ ] LM27761
     * [x] LMK04806B
-    * [ ] MCP1755S
+    * [x] MCP1755S
     * [x] NCP4225IMNTWG-H
     * [x] OSC_LVDS_VCXO
     * [x] RCLAMP0542T
@@ -61,7 +64,7 @@ off as invalid.
 
 ### System power input
 
-* [ ] Fusing and/or reverse voltage protection at system power inlet
+* [x] Fusing and/or reverse voltage protection at system power inlet
 * [ ] Check total input capacitance and add inrush limiter if needed
 
 ### Regulators

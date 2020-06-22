@@ -1540,9 +1540,9 @@ Text HLabel 7000 4450 0    50   Output ~ 0
 VBACKLIGHT_EN
 Text HLabel 3250 3850 0    50   Output ~ 0
 BACKLIGHT_PWM
-Text HLabel 15200 1400 2    50   Input ~ 0
-VBACKLIGHT_P
 Text HLabel 15200 1500 2    50   Input ~ 0
+VBACKLIGHT_P
+Text HLabel 15200 1400 2    50   Input ~ 0
 VBACKLIGHT_N
 Text Notes 2150 3850 0    50   ~ 0
 TIM8_CH4

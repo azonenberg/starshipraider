@@ -108,8 +108,8 @@ Text Label 6400 2000 0    50   ~ 0
 GND
 Wire Wire Line
 	6400 1900 6400 2000
-Text Notes 5350 900  0    50   ~ 0
-Expected efficiency @ 48V in is ~~93%.\nAssuming 7.3A load, we'll dissipate a bit under 7W in this module.\nOvercurrent shutdown at around 11A
+Text Notes 5350 950  0    50   ~ 0
+Expected efficiency @ 48V in is ~~93%.\nAssuming 7.3A load, we'll dissipate a bit under 7W in this module.\nOvercurrent shutdown at around 11A\nConverter is isolated, but in/out ground are connected\nsince we don't actually need isolation.
 Text Label 4550 2000 0    50   ~ 0
 GND
 NoConn ~ 5250 1900
