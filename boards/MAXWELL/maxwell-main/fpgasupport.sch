@@ -79,7 +79,7 @@ F 3 "" H 1600 6850 50  0001 C CNN
 	3    1600 6850
 	1    0    0    -1  
 $EndComp
-Text HLabel 1400 900  0    50   Input ~ 0
+Text HLabel 1400 800  0    50   Input ~ 0
 GND
 Wire Wire Line
 	1400 900  1400 1000
@@ -257,10 +257,8 @@ Wire Wire Line
 Connection ~ 1400 6700
 Wire Wire Line
 	1400 6700 1400 6800
-Text Label 3000 900  0    50   ~ 0
+Text Label 3000 800  0    50   ~ 0
 GND
-Wire Wire Line
-	3000 900  3000 1000
 Connection ~ 3000 1000
 Wire Wire Line
 	3000 1000 3000 1100
@@ -1374,4 +1372,9 @@ Text HLabel 6000 9850 2    50   Output ~ 0
 GTX_1V2
 Text HLabel 4650 9350 0    50   Input ~ 0
 1V0_2
+Wire Wire Line
+	1400 800  1400 900 
+Connection ~ 1400 900 
+Wire Wire Line
+	3000 800  3000 1000
 $EndSCHEMATC

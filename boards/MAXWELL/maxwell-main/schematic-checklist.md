@@ -33,7 +33,7 @@ off as invalid.
     * [x] TSCR421
     * [x] VES180_MINIFITJR
     * [ ] XC7KxT-FFG676
-        * [ ] Ground
+        * [x] Ground
         * [ ] Power
         * [x] Config
         * [ ] Bank 12
@@ -46,7 +46,7 @@ off as invalid.
         * [ ] Bank 34
         * [x] Bank 115
         * [x] Bank 116
-    * [ ] XC7Sx-FTGB196
+    * [x] XC7Sx-FTGB196
         * [x] Power/ground
         * [x] Config
         * [x] Bank 14
