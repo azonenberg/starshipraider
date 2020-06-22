@@ -769,7 +769,7 @@ F 3 "" H 3700 6650 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Text Label 3850 6650 0    50   ~ 0
-GND
+5V0_N
 Text Label 1650 7750 2    50   ~ 0
 GND
 $Comp
@@ -997,7 +997,7 @@ F 3 "" H 6850 6650 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Text Label 7000 6650 0    50   ~ 0
-GND
+5V0_N
 Text Label 4800 7750 2    50   ~ 0
 GND
 $Comp
@@ -1219,7 +1219,7 @@ F 3 "" H 10000 6650 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Text Label 10150 6650 0    50   ~ 0
-GND
+5V0_N
 Text Label 7950 7750 2    50   ~ 0
 GND
 $Comp
@@ -1441,7 +1441,7 @@ F 3 "" H 13150 6650 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Text Label 13300 6650 0    50   ~ 0
-GND
+5V0_N
 Text Label 11100 7750 2    50   ~ 0
 GND
 $Comp

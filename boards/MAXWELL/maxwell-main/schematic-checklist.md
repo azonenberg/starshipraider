@@ -7,18 +7,47 @@ off as invalid.
     * FL1.4 - U52.4: using isolated DC-DC as non-isolated so connecting both grounds
     * U1 C1: VBAT is driven by a Schottky and resistor, not a PSU directly
 * [ ] Verify pin numbers of all schematic symbols against datasheet or external interface specification document (if not yet board proven).
+    * [x] ADCMP582
+    * [ ] BNX003-11
     * [x] CONN_QSFP_HOST
     * [ ] DDR3_SODIMM
+    * [ ] E36SC12009NRFA
+    * [x] ESD7008
+    * [ ] IAF12020A007V-003-R
+    * [x] INA233
+    * [ ] LM27761
     * [x] LMK04806B
+    * [ ] MCP1755S
+    * [x] NCP4225IMNTWG-H
     * [x] OSC_LVDS_VCXO
     * [x] RCLAMP0542T
+    * [x] MIC2605
+    * [ ] MOP-TFT480116-38G-BLH-TPC_HM
+    * [ ] RPM5.0-2.0
+    * [x] RT9088A
     * [x] SY56017RMG
     * [x] SY89835U
+    * [x] TSCR421
+    * [ ] VES180_MINIFITJR
     * [ ] XC7KxT-FFG676
+        * [ ] Ground
+        * [ ] Power
+        * [x] Config
+        * [ ] Bank 12
+        * [ ] Bank 13
+        * [ ] Bank 14
+        * [ ] Bank 15
+        * [ ] Bank 16
         * [ ] Bank 32
         * [ ] Bank 33
         * [ ] Bank 34
         * [x] Bank 115
+        * [x] Bank 116
+    * [ ] XC7Sx-FTGB196
+        * [ ] Power/ground
+        * [x] Config
+        * [ ] Bank 14
+        * [ ] Bank 34
 * [ ] Schematic symbol matches chosen component package
 * [ ] Thermal pads are connected to correct power rail (may not always be ground)
 * [ ] Debug interfaces are not power gated in sleep mode
