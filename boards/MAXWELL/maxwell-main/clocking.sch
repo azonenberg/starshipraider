@@ -229,8 +229,6 @@ NoConn ~ 3100 4750
 NoConn ~ 3100 4650
 NoConn ~ 3100 4950
 NoConn ~ 3100 5050
-Text Notes 3300 4850 0    50   ~ 0
-TODO: test points on OSCout?
 NoConn ~ 3100 3250
 NoConn ~ 3100 3750
 NoConn ~ 3100 3850

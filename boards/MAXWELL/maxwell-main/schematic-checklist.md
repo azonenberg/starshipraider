@@ -3,10 +3,22 @@
 ## General
 
 * [x] CAD ERC 100% clean. If some errors are invalid due to toolchain quirks, each exception must be inspected and signed
-off as invalid.\
+off as invalid.
     * FL1.4 - U52.4: using isolated DC-DC as non-isolated so connecting both grounds
     * U1 C1: VBAT is driven by a Schottky and resistor, not a PSU directly
 * [ ] Verify pin numbers of all schematic symbols against datasheet or external interface specification document (if not yet board proven).
+    * [x] CONN_QSFP_HOST
+    * [ ] DDR3_SODIMM
+    * [x] LMK04806B
+    * [x] OSC_LVDS_VCXO
+    * [x] RCLAMP0542T
+    * [x] SY56017RMG
+    * [x] SY89835U
+    * [ ] XC7KxT-FFG676
+        * [ ] Bank 32
+        * [ ] Bank 33
+        * [ ] Bank 34
+        * [x] Bank 115
 * [ ] Schematic symbol matches chosen component package
 * [ ] Thermal pads are connected to correct power rail (may not always be ground)
 * [ ] Debug interfaces are not power gated in sleep mode

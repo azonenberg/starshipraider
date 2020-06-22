@@ -2333,8 +2333,6 @@ Wire Wire Line
 Connection ~ 2100 7950
 Wire Wire Line
 	2100 7950 2100 7850
-Text Notes 8850 8250 0    50   ~ 0
-TODO: EMI filters on output 12V lines
 Text HLabel 10200 1500 2    50   Output ~ 0
 P0_12V0
 $EndSCHEMATC

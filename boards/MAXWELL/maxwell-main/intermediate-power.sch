@@ -14,7 +14,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 Text Notes 1200 1100 0    50   ~ 0
-Input is 24V @ 4A or 48V @ 8A.\nUse 10A fuse to provide some headroom\nSupply recommends more like 20 for inrush though?
+Input is 24V @ 4A or 48V @ 2A.\nUse 10A fuse to provide some headroom\nSupply recommends more like 20 for inrush though?
 $Comp
 L power-azonenberg:VES180_MINIFITJR J?
 U 1 1 611CD68D
