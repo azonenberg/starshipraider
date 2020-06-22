@@ -5,7 +5,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 14 18
 Title "MAXWELL Main Board"
-Date "2020-06-21"
+Date "2020-06-22"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
@@ -1089,7 +1089,6 @@ Text Label 2050 5100 2    50   ~ 0
 MAC_I2C_SCL
 Text Label 2050 5000 2    50   ~ 0
 MAC_I2C_SDA
-NoConn ~ 2050 1500
 NoConn ~ 2050 2000
 NoConn ~ 2050 2200
 NoConn ~ 2050 2300
@@ -1148,4 +1147,19 @@ Text HLabel 2050 1900 0    50   Output ~ 0
 SCPI_UART_RX
 NoConn ~ 2050 2700
 NoConn ~ 2050 2800
+$Comp
+L device:R R213
+U 1 1 61DFD9AC
+P 1300 1500
+F 0 "R213" V 1200 1500 50  0000 C CNN
+F 1 "1K" V 1300 1500 50  0000 C CNN
+F 2 "" V 1230 1500 50  0001 C CNN
+F 3 "" H 1300 1500 50  0001 C CNN
+	1    1300 1500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1450 1500 2050 1500
+Text Label 1150 1500 2    50   ~ 0
+3V3
 $EndSCHEMATC

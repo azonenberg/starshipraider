@@ -5,7 +5,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 7 18
 Title "MAXWELL Main Board"
-Date "2020-06-21"
+Date "2020-06-22"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
@@ -81,7 +81,7 @@ F11 "S7_RST_N" I L 5000 5300 50
 F12 "S7_INIT_B" B L 5000 5400 50 
 F13 "S7_DONE" O L 5000 5500 50 
 $EndSheet
-Text Label 9100 1950 2    50   ~ 0
+Text Label 9100 2150 2    50   ~ 0
 S7_QSPI_CS_N
 Text Label 9100 950  2    50   ~ 0
 S7_QSPI_DQ0
@@ -139,17 +139,17 @@ F41 "0V5" I L 5000 1450 50
 F42 "5V0" I L 5000 1350 50 
 F43 "5V0_N" I L 5000 1550 50 
 $EndSheet
-Text Label 9100 1350 2    50   ~ 0
+Text Label 9100 1550 2    50   ~ 0
 P0_UART_TX
-Text Label 9100 1450 2    50   ~ 0
+Text Label 9100 1650 2    50   ~ 0
 P0_UART_RX
 Text HLabel 9100 3150 0    50   Input ~ 0
 S7_CLK_P
 Text HLabel 9100 3250 0    50   Input ~ 0
 S7_CLK_N
-Text Label 9100 1550 2    50   ~ 0
+Text Label 9100 1750 2    50   ~ 0
 P1_UART_TX
-Text Label 9100 1650 2    50   ~ 0
+Text Label 9100 1850 2    50   ~ 0
 P1_UART_RX
 Text HLabel 9100 3450 0    50   Input ~ 0
 S7_SPI_CS_N
@@ -159,45 +159,45 @@ Text HLabel 9100 3550 0    50   Input ~ 0
 S7_SPI_MOSI
 Text HLabel 9100 3050 0    50   Output ~ 0
 S7_SPI_MISO
-Text Label 9100 1750 2    50   ~ 0
+Text Label 9100 1950 2    50   ~ 0
 P2_UART_TX
-Text Label 9100 1850 2    50   ~ 0
-P2_UART_RX
 Text Label 9100 2050 2    50   ~ 0
-P3_UART_TX
-Text Label 9100 2150 2    50   ~ 0
-P3_UART_RX
+P2_UART_RX
 Text Label 9100 2250 2    50   ~ 0
-P4_UART_TX
+P3_UART_TX
 Text Label 9100 2350 2    50   ~ 0
-P4_UART_RX
+P3_UART_RX
 Text Label 9100 2450 2    50   ~ 0
-P5_UART_TX
+P4_UART_TX
 Text Label 9100 2550 2    50   ~ 0
-P5_UART_RX
+P4_UART_RX
 Text Label 9100 2650 2    50   ~ 0
-P6_UART_TX
+P5_UART_TX
 Text Label 9100 2750 2    50   ~ 0
-P6_UART_RX
+P5_UART_RX
 Text Label 9100 2850 2    50   ~ 0
-P7_UART_TX
+P6_UART_TX
 Text Label 9100 2950 2    50   ~ 0
-P7_UART_RX
+P6_UART_RX
 Text Label 9100 3650 2    50   ~ 0
-P8_UART_TX
+P7_UART_TX
 Text Label 9100 3750 2    50   ~ 0
-P8_UART_RX
+P7_UART_RX
 Text Label 9100 3850 2    50   ~ 0
-P9_UART_TX
+P8_UART_TX
 Text Label 9100 3950 2    50   ~ 0
-P9_UART_RX
+P8_UART_RX
 Text Label 9100 4050 2    50   ~ 0
-P10_UART_TX
+P9_UART_TX
 Text Label 9100 4150 2    50   ~ 0
-P10_UART_RX
+P9_UART_RX
 Text Label 9100 4250 2    50   ~ 0
-P11_UART_TX
+P10_UART_TX
 Text Label 9100 4350 2    50   ~ 0
+P10_UART_RX
+Text Label 9100 4450 2    50   ~ 0
+P11_UART_TX
+Text Label 9100 4550 2    50   ~ 0
 P11_UART_RX
 Text HLabel 6600 3050 2    50   Input ~ 0
 K7_CLK_P
@@ -332,8 +332,6 @@ NoConn ~ 9100 5550
 NoConn ~ 9100 5650
 NoConn ~ 9100 5750
 NoConn ~ 9100 850 
-NoConn ~ 9100 4450
-NoConn ~ 9100 4550
 NoConn ~ 9100 4650
 NoConn ~ 9100 4750
 Text HLabel 5000 4250 0    50   Output ~ 0
@@ -571,4 +569,20 @@ F 3 "" H 2750 2150 60  0000 C CNN
 	1    2750 2150
 	-1   0    0    1   
 $EndComp
+NoConn ~ 9100 1450
+$Comp
+L device:R R212
+U 1 1 61DE8149
+P 8350 1350
+F 0 "R212" V 8250 1350 50  0000 C CNN
+F 1 "1K" V 8350 1350 50  0000 C CNN
+F 2 "" V 8280 1350 50  0001 C CNN
+F 3 "" H 8350 1350 50  0001 C CNN
+	1    8350 1350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8500 1350 9100 1350
+Text Label 8200 1350 2    50   ~ 0
+3V3
 $EndSCHEMATC

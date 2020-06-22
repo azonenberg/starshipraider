@@ -10,28 +10,28 @@ off as invalid.
     * [x] ADCMP582
     * [x] BNX003-11
     * [x] CONN_QSFP_HOST
-    * [ ] DDR3_SODIMM
+    * [x] DDR3_SODIMM
         [x] Power
-        [ ] DQ
+        [x] DQ
         [x] Control / address
     * [x] E36SC12009NRFA
     * [x] ESD7008
-    * [ ] IAF12020A007V-003-R
+    * [x] IAF12020A007V-003-R
     * [x] INA233
-    * [ ] LM27761
+    * [x] LM27761
     * [x] LMK04806B
     * [x] MCP1755S
     * [x] NCP4225IMNTWG-H
     * [x] OSC_LVDS_VCXO
     * [x] RCLAMP0542T
     * [x] MIC2605
-    * [ ] MOP-TFT480116-38G-BLH-TPC_HM
-    * [ ] RPM5.0-2.0
+    * [x] MOP-TFT480116-38G-BLH-TPC_HM
+    * [x] RPM5.0-2.0
     * [x] RT9088A
     * [x] SY56017RMG
     * [x] SY89835U
     * [x] TSCR421
-    * [ ] VES180_MINIFITJR
+    * [x] VES180_MINIFITJR
     * [ ] XC7KxT-FFG676
         * [ ] Ground
         * [ ] Power
@@ -47,10 +47,10 @@ off as invalid.
         * [x] Bank 115
         * [x] Bank 116
     * [ ] XC7Sx-FTGB196
-        * [ ] Power/ground
+        * [x] Power/ground
         * [x] Config
-        * [ ] Bank 14
-        * [ ] Bank 34
+        * [x] Bank 14
+        * [x] Bank 34
 * [ ] Schematic symbol matches chosen component package
 * [ ] Thermal pads are connected to correct power rail (may not always be ground)
 * [ ] Debug interfaces are not power gated in sleep mode
