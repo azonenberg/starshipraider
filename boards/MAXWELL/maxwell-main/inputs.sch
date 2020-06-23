@@ -5,7 +5,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 7 18
 Title "MAXWELL Main Board"
-Date "2020-06-22"
+Date "2020-06-23"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
@@ -576,7 +576,7 @@ U 1 1 61DE8149
 P 8350 1350
 F 0 "R212" V 8250 1350 50  0000 C CNN
 F 1 "1K" V 8350 1350 50  0000 C CNN
-F 2 "" V 8280 1350 50  0001 C CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 8280 1350 50  0001 C CNN
 F 3 "" H 8350 1350 50  0001 C CNN
 	1    8350 1350
 	0    1    1    0   
