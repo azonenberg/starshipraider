@@ -6,7 +6,7 @@
 off as invalid.
     * FL1.4 - U52.4: using isolated DC-DC as non-isolated so connecting both grounds
     * U1 C1: VBAT is driven by a Schottky and resistor, not a PSU directly
-* [ ] Verify pin numbers of all schematic symbols against datasheet or external interface specification document (if not yet board proven).
+* [x] Verify pin numbers of all schematic symbols against datasheet or external interface specification document (if not yet board proven).
     * [x] ADCMP582
     * [x] BNX003-11
     * [x] CONN_QSFP_HOST
@@ -32,7 +32,7 @@ off as invalid.
     * [x] SY89835U
     * [x] TSCR421
     * [x] VES180_MINIFITJR
-    * [ ] XC7KxT-FFG676
+    * [x] XC7KxT-FFG676
         * [x] Ground
         * [x] Power
         * [x] Config
@@ -41,9 +41,9 @@ off as invalid.
         * [x] Bank 14
         * [x] Bank 15
         * [x] Bank 16
-        * [ ] Bank 32
-        * [ ] Bank 33
-        * [ ] Bank 34
+        * [x] Bank 32
+        * [x] Bank 33
+        * [x] Bank 34
         * [x] Bank 115
         * [x] Bank 116
     * [x] XC7Sx-FTGB196
