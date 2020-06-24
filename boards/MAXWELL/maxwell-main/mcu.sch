@@ -1992,4 +1992,23 @@ Text Label 8300 2450 2    50   ~ 0
 LED2
 Text Label 8300 2550 2    50   ~ 0
 LED3
+$Comp
+L Connector:Conn_01x02 J26
+U 1 1 628A0423
+P 5650 8450
+F 0 "J26" H 5730 8442 50  0000 L CNN
+F 1 "Conn_01x02" H 5730 8351 50  0000 L CNN
+F 2 "azonenberg_pcb:CONN_HEADER_2.54MM_1x2" H 5650 8450 50  0001 C CNN
+F 3 "~" H 5650 8450 50  0001 C CNN
+	1    5650 8450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 8450 5450 8450
+Connection ~ 4700 8450
+Wire Wire Line
+	4700 8750 5450 8750
+Wire Wire Line
+	5450 8750 5450 8550
+Connection ~ 4700 8750
 $EndSCHEMATC
