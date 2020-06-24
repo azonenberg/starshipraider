@@ -1,4 +1,4 @@
-421526966704118
+423223577669118
 azonenberg_pcb
 ATC_AT_0603
 
@@ -1120,6 +1120,13 @@ EIA_1206_CAP_NOSILK
 2
 2
 azonenberg_pcb
+EIA_1206_FUSE_NOSILK
+
+
+0
+2
+2
+azonenberg_pcb
 EIA_1210_CAP_NOSILK
 
 
@@ -1153,7 +1160,7 @@ FIDUCIAL_1MM
 
 0
 1
-0
+1
 azonenberg_pcb
 FILTER_MINICIRCUITS_LFCN
 
