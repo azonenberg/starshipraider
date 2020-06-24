@@ -5,7 +5,7 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 15 18
 Title "MAXWELL Main Board"
-Date "2020-06-23"
+Date "2020-06-24"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
@@ -425,20 +425,16 @@ Wire Wire Line
 $Comp
 L device:R R?
 U 1 1 60ECECC8
-P 3600 9000
+P 3100 8850
 AR Path="/5EEF3B79/5F303230/60ECECC8" Ref="R?"  Part="1" 
 AR Path="/5EEF3B79/60ECECC8" Ref="R76"  Part="1" 
-F 0 "R76" H 3670 9046 50  0000 L CNN
-F 1 "49.9" H 3670 8955 50  0000 L CNN
-F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 3530 9000 50  0001 C CNN
-F 3 "" H 3600 9000 50  0001 C CNN
-	1    3600 9000
-	1    0    0    -1  
+F 0 "R76" V 2893 8850 50  0000 C CNN
+F 1 "33" V 2984 8850 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 3030 8850 50  0001 C CNN
+F 3 "" H 3100 8850 50  0001 C CNN
+	1    3100 8850
+	0    1    1    0   
 $EndComp
-Text Label 3800 9150 0    50   ~ 0
-GND
-Wire Wire Line
-	3800 9150 3600 9150
 Text Label 4500 8950 2    50   ~ 0
 GND
 Text Label 5750 8850 0    50   ~ 0
@@ -1080,9 +1076,8 @@ F 3 "" H 3450 8850 50  0001 C CNN
 	1    3450 8850
 	0    1    1    0   
 $EndComp
-Connection ~ 3600 8850
 Wire Wire Line
-	3300 8850 2850 8850
-Text Label 2850 8850 0    50   ~ 0
-CLK_OCXO
+	3300 8850 3250 8850
+Wire Wire Line
+	2950 8850 2850 8850
 $EndSCHEMATC
