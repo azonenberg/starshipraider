@@ -422,30 +422,25 @@ Text Label 5750 8350 0    50   ~ 0
 2V5
 Wire Wire Line
 	5750 8350 5750 8450
-Wire Wire Line
-	3200 8850 4500 8850
 $Comp
 L device:R R?
 U 1 1 60ECECC8
-P 3200 9000
+P 3600 9000
 AR Path="/5EEF3B79/5F303230/60ECECC8" Ref="R?"  Part="1" 
 AR Path="/5EEF3B79/60ECECC8" Ref="R76"  Part="1" 
-F 0 "R76" H 3270 9046 50  0000 L CNN
-F 1 "49.9" H 3270 8955 50  0000 L CNN
-F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 3130 9000 50  0001 C CNN
-F 3 "" H 3200 9000 50  0001 C CNN
-	1    3200 9000
+F 0 "R76" H 3670 9046 50  0000 L CNN
+F 1 "49.9" H 3670 8955 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 3530 9000 50  0001 C CNN
+F 3 "" H 3600 9000 50  0001 C CNN
+	1    3600 9000
 	1    0    0    -1  
 $EndComp
-Text Label 3400 9150 0    50   ~ 0
+Text Label 3800 9150 0    50   ~ 0
 GND
 Wire Wire Line
-	3400 9150 3200 9150
+	3800 9150 3600 9150
 Text Label 4500 8950 2    50   ~ 0
 GND
-Wire Wire Line
-	3200 8850 2850 8850
-Connection ~ 3200 8850
 Text Label 5750 8850 0    50   ~ 0
 CLK_OCXO_P
 Text Label 5750 8950 0    50   ~ 0
@@ -1070,4 +1065,24 @@ Text Notes 13600 3600 0    50   ~ 0
 TRIG_OUT_MUX is one leg of a 1.2V CML output\nDC coupled, 390 mV swing or -4 dBm\n\nREF_OUT is single ended LVCMOS33\n~~3.3V swing or +14 dBm\n\nREF_OUT_P/N is LVDS, 400 mV or -4 dBm
 Text HLabel 9800 3600 0    50   Input ~ 0
 1V2
+Wire Wire Line
+	3600 8850 4500 8850
+Text Label 3850 8850 0    50   ~ 0
+CLK_OCXO_AC
+$Comp
+L device:C C409
+U 1 1 625DCCAC
+P 3450 8850
+F 0 "C409" V 3198 8850 50  0000 C CNN
+F 1 "0.1 uF" V 3289 8850 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_CAP_NOSILK" H 3488 8700 50  0001 C CNN
+F 3 "" H 3450 8850 50  0001 C CNN
+	1    3450 8850
+	0    1    1    0   
+$EndComp
+Connection ~ 3600 8850
+Wire Wire Line
+	3300 8850 2850 8850
+Text Label 2850 8850 0    50   ~ 0
+CLK_OCXO
 $EndSCHEMATC
