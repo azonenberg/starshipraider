@@ -89,9 +89,9 @@ Connection ~ 4200 3000
 Wire Wire Line
 	4200 3000 4200 3100
 Text HLabel 5400 1700 2    50   BiDi ~ 0
-QSFP_SDA
+I2C3_SDA
 Text HLabel 5400 1600 2    50   Input ~ 0
-QSFP_SCL
+I2C3_SCL
 Text Label 5400 3300 0    50   ~ 0
 QSFP_RX1_P
 Text Label 5400 3400 0    50   ~ 0

@@ -1575,9 +1575,9 @@ Text Label 12600 1100 2    50   ~ 0
 Text Label 12600 1200 2    50   ~ 0
 3V3_SB
 Text HLabel 12600 1400 0    50   BiDi ~ 0
-I2C_SDA
+I2C2_SDA
 Text HLabel 12600 1500 0    50   Input ~ 0
-I2C_SCL
+I2C2_SCL
 Text Notes 12900 1700 0    50   ~ 0
 8'h8a
 $Comp
@@ -1671,7 +1671,7 @@ Text Label 14150 2350 0    50   ~ 0
 Text Label 12600 1950 2    50   ~ 0
 3V3_SB
 Text Label 12600 2050 2    50   ~ 0
-I2C_SDA
+I2C2_SDA
 Text Notes 12900 2550 0    50   ~ 0
 8'h8c
 $Comp
@@ -1701,9 +1701,9 @@ Text Label 14150 2050 0    50   ~ 0
 Text Label 14150 2150 0    50   ~ 0
 1V8
 Text Label 12600 2250 2    50   ~ 0
-I2C_SDA
+I2C2_SDA
 Text Label 12600 2350 2    50   ~ 0
-I2C_SCL
+I2C2_SCL
 $Comp
 L special-azonenberg:INA226 U?
 U 1 1 61B8A3D1
@@ -1725,7 +1725,7 @@ Text Label 14150 3200 0    50   ~ 0
 Text Label 12600 2800 2    50   ~ 0
 3V3_SB
 Text Label 12600 2900 2    50   ~ 0
-I2C_SCL
+I2C2_SCL
 Text Notes 12900 3400 0    50   ~ 0
 8'h8e
 $Comp
@@ -1755,9 +1755,9 @@ Text Label 14150 2900 0    50   ~ 0
 Text Label 14150 3000 0    50   ~ 0
 1V5
 Text Label 12600 3100 2    50   ~ 0
-I2C_SDA
+I2C2_SDA
 Text Label 12600 3200 2    50   ~ 0
-I2C_SCL
+I2C2_SCL
 $Comp
 L passive-azonenberg:R-4TERM R?
 U 1 1 61B988FC
@@ -1804,7 +1804,7 @@ GND
 Text Label 14150 4050 0    50   ~ 0
 3V3_SB
 Text Label 12600 3650 2    50   ~ 0
-I2C_SDA
+I2C2_SDA
 Text Label 12600 3750 2    50   ~ 0
 GND
 Text Notes 12900 4250 0    50   ~ 0
@@ -1836,9 +1836,9 @@ Text Label 14150 3750 0    50   ~ 0
 Text Label 14150 3850 0    50   ~ 0
 1V0_1
 Text Label 12600 3950 2    50   ~ 0
-I2C_SDA
+I2C2_SDA
 Text Label 12600 4050 2    50   ~ 0
-I2C_SCL
+I2C2_SCL
 Wire Wire Line
 	2300 3050 2950 3050
 Text Label 3400 3050 0    50   ~ 0
@@ -1912,7 +1912,7 @@ GND
 Text Label 14150 4900 0    50   ~ 0
 3V3_SB
 Text Label 12600 4500 2    50   ~ 0
-I2C_SDA
+I2C2_SDA
 Text Label 12600 4600 2    50   ~ 0
 3V3_SB
 Text Notes 12900 5100 0    50   ~ 0
@@ -1944,9 +1944,9 @@ Text Label 14150 4600 0    50   ~ 0
 Text Label 14150 4700 0    50   ~ 0
 1V0_2
 Text Label 12600 4800 2    50   ~ 0
-I2C_SDA
+I2C2_SDA
 Text Label 12600 4900 2    50   ~ 0
-I2C_SCL
+I2C2_SCL
 NoConn ~ 12600 1300
 NoConn ~ 12600 2150
 NoConn ~ 12600 3000

@@ -1497,9 +1497,9 @@ GND
 Text Label 4350 1150 2    50   ~ 0
 P0_ALERT
 Text HLabel 4350 1250 0    50   BiDi ~ 0
-I2C_SDA
+I2C1_SDA
 Text HLabel 4350 1350 0    50   Input ~ 0
-I2C_SCL
+I2C1_SCL
 Text Notes 4650 1550 0    50   ~ 0
 8'h80
 Text Label 1400 3900 2    50   ~ 0
@@ -1532,9 +1532,9 @@ Text Label 4350 1900 2    50   ~ 0
 Text Label 4350 2000 2    50   ~ 0
 P1_ALERT
 Text Label 4350 2100 2    50   ~ 0
-I2C_SDA
+I2C1_SDA
 Text Label 4350 2200 2    50   ~ 0
-I2C_SCL
+I2C1_SCL
 Text Notes 4650 2400 0    50   ~ 0
 8'h82
 Text Label 1400 4000 2    50   ~ 0
@@ -1595,15 +1595,15 @@ GND
 Text Label 4350 2850 2    50   ~ 0
 P2_ALERT
 Text Label 4350 2950 2    50   ~ 0
-I2C_SDA
+I2C1_SDA
 Text Label 4350 3050 2    50   ~ 0
-I2C_SCL
+I2C1_SCL
 Text Notes 4650 3250 0    50   ~ 0
 8'h84
 Text Label 1400 4100 2    50   ~ 0
 P2_ALERT
 Text Label 4350 2750 2    50   ~ 0
-I2C_SDA
+I2C1_SDA
 Text Label 1400 4200 2    50   ~ 0
 P3_ALERT
 Text Label 1400 4300 2    50   ~ 0
@@ -1648,13 +1648,13 @@ GND
 Text Label 4350 3700 2    50   ~ 0
 P3_ALERT
 Text Label 4350 3800 2    50   ~ 0
-I2C_SDA
+I2C1_SDA
 Text Label 4350 3900 2    50   ~ 0
-I2C_SCL
+I2C1_SCL
 Text Notes 4650 4100 0    50   ~ 0
 8'h86
 Text Label 4350 3600 2    50   ~ 0
-I2C_SCL
+I2C1_SCL
 Text Notes 7900 1300 0    98   ~ 20
 Load Switches
 Text Notes 4650 700  0    98   ~ 20
@@ -1685,9 +1685,9 @@ Text Label 4350 4350 2    50   ~ 0
 Text Label 4350 4550 2    50   ~ 0
 P4_ALERT
 Text Label 4350 4650 2    50   ~ 0
-I2C_SDA
+I2C1_SDA
 Text Label 4350 4750 2    50   ~ 0
-I2C_SCL
+I2C1_SCL
 Text Notes 4650 4950 0    50   ~ 0
 8'h88
 Text Label 4350 4450 2    50   ~ 0
@@ -1718,9 +1718,9 @@ Text Label 4350 5200 2    50   ~ 0
 Text Label 4350 5400 2    50   ~ 0
 P5_ALERT
 Text Label 4350 5500 2    50   ~ 0
-I2C_SDA
+I2C1_SDA
 Text Label 4350 5600 2    50   ~ 0
-I2C_SCL
+I2C1_SCL
 Text Notes 4650 5800 0    50   ~ 0
 8'h8a
 Text Label 4350 5300 2    50   ~ 0
@@ -1749,7 +1749,7 @@ Text Label 5900 6450 0    50   ~ 0
 Text Label 4350 6050 2    50   ~ 0
 3V3
 Text Label 4350 6150 2    50   ~ 0
-I2C_SDA
+I2C1_SDA
 Text Label 4350 6250 2    50   ~ 0
 P6_ALERT
 Text Notes 4650 6650 0    50   ~ 0
@@ -1778,13 +1778,13 @@ Text Label 5900 7300 0    50   ~ 0
 Text Label 4350 6900 2    50   ~ 0
 3V3
 Text Label 4350 7000 2    50   ~ 0
-I2C_SCL
+I2C1_SCL
 Text Label 4350 7100 2    50   ~ 0
 P7_ALERT
 Text Label 4350 7200 2    50   ~ 0
-I2C_SDA
+I2C1_SDA
 Text Label 4350 7300 2    50   ~ 0
-I2C_SCL
+I2C1_SCL
 Text Notes 4650 7500 0    50   ~ 0
 8'h8e
 $Comp
@@ -1809,13 +1809,13 @@ GND
 Text Label 5900 8150 0    50   ~ 0
 3V3
 Text Label 4350 7750 2    50   ~ 0
-I2C_SDA
+I2C1_SDA
 Text Label 4350 7950 2    50   ~ 0
 P8_ALERT
 Text Label 4350 8050 2    50   ~ 0
-I2C_SDA
+I2C1_SDA
 Text Label 4350 8150 2    50   ~ 0
-I2C_SCL
+I2C1_SCL
 Text Notes 4650 8350 0    50   ~ 0
 8'h90
 Text Label 4350 7850 2    50   ~ 0
@@ -1842,13 +1842,13 @@ GND
 Text Label 5900 9000 0    50   ~ 0
 3V3
 Text Label 4350 8600 2    50   ~ 0
-I2C_SDA
+I2C1_SDA
 Text Label 4350 8800 2    50   ~ 0
 P9_ALERT
 Text Label 4350 8900 2    50   ~ 0
-I2C_SDA
+I2C1_SDA
 Text Label 4350 9000 2    50   ~ 0
-I2C_SCL
+I2C1_SCL
 Text Notes 4650 9200 0    50   ~ 0
 8'h92
 $Comp
@@ -1873,17 +1873,17 @@ GND
 Text Label 5900 9850 0    50   ~ 0
 3V3
 Text Label 4350 9450 2    50   ~ 0
-I2C_SDA
+I2C1_SDA
 Text Label 4350 9650 2    50   ~ 0
 P10_ALERT
 Text Label 4350 9750 2    50   ~ 0
-I2C_SDA
+I2C1_SDA
 Text Label 4350 9850 2    50   ~ 0
-I2C_SCL
+I2C1_SCL
 Text Notes 4650 10050 0    50   ~ 0
 8'h94
 Text Label 4350 9550 2    50   ~ 0
-I2C_SDA
+I2C1_SDA
 $Comp
 L special-azonenberg:INA226 U16
 U 1 1 5F229BE1
@@ -1906,21 +1906,21 @@ GND
 Text Label 5900 10700 0    50   ~ 0
 3V3
 Text Label 4350 10300 2    50   ~ 0
-I2C_SDA
+I2C1_SDA
 Text Label 4350 10500 2    50   ~ 0
 P11_ALERT
 Text Label 4350 10600 2    50   ~ 0
-I2C_SDA
+I2C1_SDA
 Text Label 4350 10700 2    50   ~ 0
-I2C_SCL
+I2C1_SCL
 Text Notes 4650 10900 0    50   ~ 0
 8'h9a
 Text Label 4350 10400 2    50   ~ 0
-I2C_SCL
+I2C1_SCL
 Text Label 4350 6350 2    50   ~ 0
-I2C_SDA
+I2C1_SDA
 Text Label 4350 6450 2    50   ~ 0
-I2C_SCL
+I2C1_SCL
 Text Label 4350 8700 2    50   ~ 0
 3V3
 $Comp

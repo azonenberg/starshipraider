@@ -1551,9 +1551,9 @@ Wire Wire Line
 NoConn ~ 5150 3500
 NoConn ~ 5150 3400
 Text HLabel 13200 5850 0    50   Output ~ 0
-SODIMM_SDA
+I2C2_SDA
 Text HLabel 13200 5950 0    50   Input ~ 0
-SODIMM_SCL
+I2C2_SCL
 Text Label 13200 6050 2    50   ~ 0
 GND
 Text Label 13200 6150 2    50   ~ 0

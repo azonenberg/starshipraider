@@ -389,13 +389,9 @@ GND
 Text Label 9400 4600 0    50   ~ 0
 3V3_SB
 Text Label 7850 4200 2    50   ~ 0
-I2C_SDA
+I2C2_SDA
 Text Label 7850 4300 2    50   ~ 0
-I2C_SDA
-Text HLabel 7850 4500 0    50   BiDi ~ 0
-I2C_SDA
-Text HLabel 7850 4600 0    50   Input ~ 0
-I2C_SCL
+I2C2_SDA
 Text Notes 8150 4800 0    50   ~ 0
 8'h94
 Text Notes 6450 4300 0    50   ~ 0
@@ -467,13 +463,13 @@ GND
 Text Label 9400 3450 0    50   ~ 0
 3V3_SB
 Text Label 7850 3050 2    50   ~ 0
-I2C_SDA
+I2C2_SDA
 Text Label 7850 3150 2    50   ~ 0
-I2C_SCL
+I2C2_SCL
 Text HLabel 7850 3350 0    50   BiDi ~ 0
-I2C_SDA
+I2C2_SDA
 Text HLabel 7850 3450 0    50   Input ~ 0
-I2C_SCL
+I2C2_SCL
 Text Notes 8150 3650 0    50   ~ 0
 8'h96
 Text Label 9400 3050 0    50   ~ 0
@@ -525,4 +521,8 @@ Text Label 7500 1500 0    50   ~ 0
 12V0_SENSE_LO
 NoConn ~ 7850 4400
 NoConn ~ 7850 3250
+Text Label 7850 4500 2    50   ~ 0
+I2C2_SDA
+Text Label 7850 4600 2    50   ~ 0
+I2C2_SCL
 $EndSCHEMATC

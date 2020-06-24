@@ -1030,9 +1030,9 @@ GND
 Text Label 11500 3950 2    50   ~ 0
 GND
 Text HLabel 11500 4150 0    50   BiDi ~ 0
-I2C_SDA
+I2C2_SDA
 Text HLabel 11500 4250 0    50   Input ~ 0
-I2C_SCL
+I2C2_SCL
 Text Notes 11800 4450 0    50   ~ 0
 8'h80
 Text Label 13050 4050 0    50   ~ 0
@@ -1123,9 +1123,9 @@ Text Label 14250 4700 2    50   ~ 0
 Text Label 14250 5000 2    50   ~ 0
 GND
 Text Label 11500 5000 2    50   ~ 0
-I2C_SDA
+I2C2_SDA
 Text Label 11500 5100 2    50   ~ 0
-I2C_SCL
+I2C2_SCL
 $Comp
 L passive-azonenberg:R-4TERM R202
 U 1 1 61A96FB2
@@ -1170,7 +1170,7 @@ Text Label 13050 5950 0    50   ~ 0
 Text Label 11500 5550 2    50   ~ 0
 GND
 Text Label 11500 5650 2    50   ~ 0
-I2C_SDA
+I2C2_SDA
 Text Notes 11800 6150 0    50   ~ 0
 8'h84
 Text Label 13050 5750 0    50   ~ 0
@@ -1194,9 +1194,9 @@ Text Label 14250 5550 2    50   ~ 0
 Text Label 14250 5850 2    50   ~ 0
 GND
 Text Label 11500 5850 2    50   ~ 0
-I2C_SDA
+I2C2_SDA
 Text Label 11500 5950 2    50   ~ 0
-I2C_SCL
+I2C2_SCL
 $Comp
 L passive-azonenberg:R-4TERM R203
 U 1 1 61AA4B58
@@ -1243,7 +1243,7 @@ Text Label 13050 6800 0    50   ~ 0
 Text Label 11500 6400 2    50   ~ 0
 GND
 Text Label 11500 6500 2    50   ~ 0
-I2C_SCL
+I2C2_SCL
 Text Notes 11800 7000 0    50   ~ 0
 8'h86
 Text Label 13050 6600 0    50   ~ 0
@@ -1267,9 +1267,9 @@ Text Label 14250 6400 2    50   ~ 0
 Text Label 14250 6700 2    50   ~ 0
 GND
 Text Label 11500 6700 2    50   ~ 0
-I2C_SDA
+I2C2_SDA
 Text Label 11500 6800 2    50   ~ 0
-I2C_SCL
+I2C2_SCL
 $Comp
 L passive-azonenberg:R-4TERM R204
 U 1 1 61ABC39B
@@ -1338,9 +1338,9 @@ Text Label 14250 7250 2    50   ~ 0
 Text Label 14250 7550 2    50   ~ 0
 GND
 Text Label 11500 7550 2    50   ~ 0
-I2C_SDA
+I2C2_SDA
 Text Label 11500 7650 2    50   ~ 0
-I2C_SCL
+I2C2_SCL
 Text Notes 9950 3950 0    50   ~ 0
 12 mR = 12 mV @ 1A\n208.333 uA/LSB
 Text Notes 9950 4800 0    50   ~ 0

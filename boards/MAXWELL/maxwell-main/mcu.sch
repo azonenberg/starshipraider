@@ -74,9 +74,9 @@ K7_SPI_MOSI
 Text HLabel 5000 3450 0    50   Input ~ 0
 K7_SPI_MISO
 Text HLabel 3250 1750 0    50   BiDi ~ 0
-PROBE_I2C_SDA
+I2C1_SDA
 Text HLabel 3250 1650 0    50   Output ~ 0
-PROBE_I2C_SCL
+I2C1_SCL
 Text HLabel 1350 1850 0    50   Output ~ 0
 S7_RST_N
 Text HLabel 1350 1950 0    50   BiDi ~ 0
@@ -281,9 +281,9 @@ Connection ~ 1350 7450
 Wire Wire Line
 	1350 7450 1350 7550
 Text HLabel 3250 2150 0    50   BiDi ~ 0
-RAM_SDA
+I2C2_SDA
 Text HLabel 3250 2050 0    50   Output ~ 0
-RAM_SCL
+I2C2_SCL
 Text HLabel 3250 2250 0    50   Output ~ 0
 PLL_SPI_LE
 Text HLabel 3250 2350 0    50   Output ~ 0
@@ -450,9 +450,9 @@ TOUCH_RST_N
 Text Label 13700 5050 2    50   ~ 0
 TOUCH_INT
 Text Label 13700 5250 2    50   ~ 0
-TOUCH_I2C_SDA
+I2C4_SDA
 Text Label 13700 5350 2    50   ~ 0
-TOUCH_I2C_SCL
+I2C4_SCL
 Text Label 8500 4450 2    50   ~ 0
 LCD_R0
 Text Label 8500 4850 2    50   ~ 0
@@ -516,9 +516,9 @@ TOUCH_RST_N
 Text Label 7000 2550 2    50   ~ 0
 TOUCH_INT
 Text Label 7000 2350 2    50   ~ 0
-TOUCH_I2C_SDA
+I2C4_SDA
 Text Label 7000 2250 2    50   ~ 0
-TOUCH_I2C_SCL
+I2C4_SCL
 Text Notes 6550 2650 0    50   ~ 0
 I2C4 AF4
 $Comp
@@ -1016,9 +1016,9 @@ F 3 "" H 14000 900 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Text Label 13850 900  2    50   ~ 0
-TOUCH_I2C_SDA
+I2C4_SDA
 Text Label 13850 1000 2    50   ~ 0
-TOUCH_I2C_SCL
+I2C4_SCL
 $Comp
 L device:R R116
 U 1 1 6096DF7F
@@ -1342,9 +1342,9 @@ NoConn ~ 8500 4050
 NoConn ~ 8500 4150
 NoConn ~ 8500 4250
 Text HLabel 8300 1850 0    50   BiDi ~ 0
-QSFP_SDA
+I2C3_SDA
 Text HLabel 8300 1750 0    50   Output ~ 0
-QSFP_SCL
+I2C3_SCL
 Text HLabel 8300 1250 0    50   Input ~ 0
 QSFP_INT_N
 Text HLabel 8300 1350 0    50   Input ~ 0
@@ -1390,7 +1390,7 @@ Wire Wire Line
 Text Label 9850 1200 2    50   ~ 0
 QSFP_INT_N
 Text Label 9850 1300 2    50   ~ 0
-QSFP_SDA
+I2C3_SDA
 $Comp
 L device:R R123
 U 1 1 60E59194
@@ -1419,7 +1419,7 @@ F 3 "" H 10000 1400 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Text Label 9850 1400 2    50   ~ 0
-QSFP_SCL
+I2C3_SCL
 Wire Wire Line
 	10150 1400 10350 1400
 Wire Wire Line
