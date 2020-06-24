@@ -2337,4 +2337,6 @@ Wire Wire Line
 	2100 7950 2100 7850
 Text HLabel 10200 1500 2    50   Output ~ 0
 P0_12V0
+Text Notes 9950 1300 0    50   ~ 0
+50m @ 1A = 50 mW\nKDV06FR050ET is rated for 200
 $EndSCHEMATC

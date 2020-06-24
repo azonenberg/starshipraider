@@ -1358,4 +1358,6 @@ NoConn ~ 11500 4900
 NoConn ~ 11500 5750
 NoConn ~ 11500 6600
 NoConn ~ 11500 7450
+Text Notes 5650 4150 0    50   ~ 0
+All rails here are max 3A\nLVK12 is rated for 500 mW\n3A through 12 mR is 108 mW
 $EndSCHEMATC

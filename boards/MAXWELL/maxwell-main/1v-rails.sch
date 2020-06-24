@@ -1952,4 +1952,6 @@ NoConn ~ 12600 2150
 NoConn ~ 12600 3000
 NoConn ~ 12600 3850
 NoConn ~ 12600 4700
+Text Notes 6500 4050 0    50   ~ 0
+1.xV rails are max 6A\nLVK25 are rated for 2W\n6A through 5 mR = 180 mW max
 $EndSCHEMATC

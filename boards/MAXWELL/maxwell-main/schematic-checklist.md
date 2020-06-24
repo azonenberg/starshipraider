@@ -72,9 +72,9 @@ off as invalid.
     * STM32 JTAG runs in 3V3_SB power domain
 
 ## Passive components
-* [ ] Power/voltage/tolerance ratings specified as required
-* [ ] Ceramic capacitors appropriately de-rated for C/V curve
-* [ ] Polarized components specified in schematic if using electrolytic caps etc
+* [x] Power/voltage/tolerance ratings specified as required
+* [x] Ceramic capacitors appropriately de-rated for C/V curve
+* [x] Polarized components specified in schematic if using electrolytic caps etc
 
 ## Power supply
 
