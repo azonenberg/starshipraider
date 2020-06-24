@@ -51,8 +51,22 @@ off as invalid.
         * [x] Config
         * [x] Bank 14
         * [x] Bank 34
-* [ ] Schematic symbol matches chosen component package
-* [ ] Thermal pads are connected to correct power rail (may not always be ground)
+* [x] Schematic symbol matches chosen component package
+* [x] Thermal pads are connected to correct power rail (may not always be ground)
+    * NCP45525: pad is Vin
+    * S25FL128: pad is not mentioned in datasheet at all, assuming it's NC
+    * SY56017R: pad is ground
+    * KSZ9031: pad is ground
+    * AT24MAC402: pad is not mentioned in datasheet at all, assuming it's NC
+    * SY89835: pad is ground
+    * LMH7322: pad is Vee
+    * ADCMP582: pad is NC
+    * MCP1755: pad is ground
+    * RT9088: pad is not internally connected but should be soldered to ground for heatsinking
+    * MIC2605: pad is "for thermal cooling", no electrical functionality mentioned.\
+    Connecting to ground plane for heatsinking.
+    * LM27761: pad is ground
+    * AT30TS74: pad is not mentioned in datasheet at all, assuming it's NC
 * [x] Debug interfaces are not power gated in sleep mode
     * FPGAs are completely shut down when in soft powerdown
     * STM32 JTAG runs in 3V3_SB power domain
