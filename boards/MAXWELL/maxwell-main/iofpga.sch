@@ -5,7 +5,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 9 18
 Title "MAXWELL Main Board"
-Date "2020-06-24"
+Date "2020-06-25"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
@@ -937,4 +937,56 @@ Wire Wire Line
 Wire Wire Line
 	5100 2450 5400 2450
 NoConn ~ 2450 7550
+$Comp
+L device:R R248
+U 1 1 62C79BAD
+P 8050 3200
+F 0 "R248" V 8000 2950 50  0000 C CNN
+F 1 "4.7K" V 8050 3200 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 7980 3200 50  0001 C CNN
+F 3 "" H 8050 3200 50  0001 C CNN
+	1    8050 3200
+	0    1    1    0   
+$EndComp
+Text Label 7650 3200 2    50   ~ 0
+S7_QSPI_CS_N
+Wire Wire Line
+	7650 3200 7900 3200
+$Comp
+L device:R R249
+U 1 1 62C7F795
+P 8050 3300
+F 0 "R249" V 8000 3050 50  0000 C CNN
+F 1 "4.7K" V 8050 3300 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 7980 3300 50  0001 C CNN
+F 3 "" H 8050 3300 50  0001 C CNN
+	1    8050 3300
+	0    1    1    0   
+$EndComp
+Text Label 7650 3300 2    50   ~ 0
+S7_QSPI_DQ2
+Wire Wire Line
+	7650 3300 7900 3300
+$Comp
+L device:R R250
+U 1 1 62C85809
+P 8050 3400
+F 0 "R250" V 8000 3150 50  0000 C CNN
+F 1 "4.7K" V 8050 3400 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 7980 3400 50  0001 C CNN
+F 3 "" H 8050 3400 50  0001 C CNN
+	1    8050 3400
+	0    1    1    0   
+$EndComp
+Text Label 7650 3400 2    50   ~ 0
+S7_QSPI_DQ3
+Wire Wire Line
+	7650 3400 7900 3400
+Text Label 8200 3200 0    50   ~ 0
+3V3
+Wire Wire Line
+	8200 3200 8200 3300
+Connection ~ 8200 3300
+Wire Wire Line
+	8200 3300 8200 3400
 $EndSCHEMATC

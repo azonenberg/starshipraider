@@ -5,7 +5,7 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 18 18
 Title "MAXWELL Main Board"
-Date "2020-06-24"
+Date "2020-06-25"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
@@ -1254,7 +1254,7 @@ $Comp
 L device:R R56
 U 1 1 5FEE98C8
 P 8850 5250
-F 0 "R56" V 8750 5400 50  0000 C CNN
+F 0 "R56" V 8800 5450 50  0000 C CNN
 F 1 "4.7K" V 8850 5250 50  0000 C CNN
 F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 8780 5250 50  0001 C CNN
 F 3 "" H 8850 5250 50  0001 C CNN
@@ -1263,13 +1263,13 @@ F 3 "" H 8850 5250 50  0001 C CNN
 $EndComp
 Text Label 8700 5250 2    50   ~ 0
 K7_INIT_B
-Text Label 9000 5250 0    50   ~ 0
+Text Label 9300 5250 0    50   ~ 0
 3V3
 $Comp
 L device:R R57
 U 1 1 5FEECA55
 P 8850 5400
-F 0 "R57" V 8750 5550 50  0000 C CNN
+F 0 "R57" V 8800 5600 50  0000 C CNN
 F 1 "33" V 8850 5400 50  0000 C CNN
 F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 8780 5400 50  0001 C CNN
 F 3 "" H 8850 5400 50  0001 C CNN
@@ -1278,8 +1278,6 @@ F 3 "" H 8850 5400 50  0001 C CNN
 $EndComp
 Text Label 8700 5400 2    50   ~ 0
 K7_RST_N
-Text Label 9000 5400 0    50   ~ 0
-3V3
 $Comp
 L device:C C164
 U 1 1 5FF158E2
@@ -1377,4 +1375,57 @@ Wire Wire Line
 Connection ~ 1400 900 
 Wire Wire Line
 	3000 800  3000 1000
+$Comp
+L device:R R245
+U 1 1 62C5B6A4
+P 8850 5550
+F 0 "R245" V 8800 5700 50  0000 C CNN
+F 1 "4.7K" V 8850 5550 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 8780 5550 50  0001 C CNN
+F 3 "" H 8850 5550 50  0001 C CNN
+	1    8850 5550
+	0    1    1    0   
+$EndComp
+Text Label 8700 5550 2    50   ~ 0
+K7_QSPI_CS_N
+$Comp
+L device:R R246
+U 1 1 62C5D0A3
+P 8850 5700
+F 0 "R246" V 8800 5850 50  0000 C CNN
+F 1 "4.7K" V 8850 5700 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 8780 5700 50  0001 C CNN
+F 3 "" H 8850 5700 50  0001 C CNN
+	1    8850 5700
+	0    1    1    0   
+$EndComp
+Text Label 8700 5700 2    50   ~ 0
+K7_QSPI_DQ2
+$Comp
+L device:R R247
+U 1 1 62C5D576
+P 8850 5850
+F 0 "R247" V 8800 6000 50  0000 C CNN
+F 1 "4.7K" V 8850 5850 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 8780 5850 50  0001 C CNN
+F 3 "" H 8850 5850 50  0001 C CNN
+	1    8850 5850
+	0    1    1    0   
+$EndComp
+Text Label 8700 5850 2    50   ~ 0
+K7_QSPI_DQ3
+Wire Wire Line
+	9000 5850 9000 5700
+Wire Wire Line
+	9000 5250 9300 5250
+Connection ~ 9000 5250
+Connection ~ 9000 5400
+Wire Wire Line
+	9000 5400 9000 5250
+Connection ~ 9000 5550
+Wire Wire Line
+	9000 5550 9000 5400
+Connection ~ 9000 5700
+Wire Wire Line
+	9000 5700 9000 5550
 $EndSCHEMATC

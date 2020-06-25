@@ -5,7 +5,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 14 18
 Title "MAXWELL Main Board"
-Date "2020-06-24"
+Date "2020-06-25"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
@@ -230,7 +230,7 @@ RGMII_TXD2
 Text Label 7100 1850 0    50   ~ 0
 RGMII_TXD3
 Text Label 7100 1950 0    50   ~ 0
-RGMII_TXD_CLK
+RGMII_TX_CLK
 Text Label 7100 2050 0    50   ~ 0
 RGMII_TX_EN
 $Comp
@@ -413,7 +413,7 @@ RGMII_TXD2
 Text Label 2050 4400 2    50   ~ 0
 RGMII_TXD3
 Text Label 2050 4500 2    50   ~ 0
-RGMII_TXD_CLK
+RGMII_TX_CLK
 Text Label 2050 4600 2    50   ~ 0
 RGMII_TX_EN
 Text Label 2050 3700 2    50   ~ 0

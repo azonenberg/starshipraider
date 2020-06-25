@@ -155,7 +155,7 @@ off as invalid.
     * JTAG polarity checked
     * 40G GTX OK
 * [x] Differential pair polarity / pairing correct
-* [ ] Active high/low enable signal polarity correct
+* [x] Active high/low enable signal polarity correct
     * E36SC12009NRFA is negative
     * OKL-T/3-W12P is positive
     * IAF12020 is negative
@@ -175,12 +175,12 @@ same gain across the whole range.
 ### Clocks
 
 * [x] All oscillators meet required jitter / frequency tolerance. Be extra cautious with MEMS oscillators as these tend to have higher jitter.
-* [ ] Correct load caps provided for discrete crystals
+* [x] Correct load caps provided for discrete crystals
 * [x] Crystals only used if IC has an integrated crystal driver
-* [ ] Banking / clock capable input rules met for clocks going to FPGAs
+* [x] Banking / clock capable input rules met for clocks going to FPGAs
 
 ### Strap/init pins
-* [ ] Pullup/pulldowns on all signals that need defined state at boot
+* [x] Pullup/pulldowns on all signals that need defined state at boot
 * [ ] Strap pins connected to correct rail for desired state
 * [x] JTAG/ICSP connector provided for all programmable devices
 * [x] Config/boot flash provided for all FPGAs or MPUs without internal flash
