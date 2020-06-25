@@ -134,12 +134,26 @@ off as invalid.
     [x] I2C2
     [x] I2C3
     [x] I2C4
-* [ ] Pulldowns on all PECL outputs
-* [ ] Termination on all high-speed signals
-* [ ] AC coupling caps on gigabit transceivers
-* [ ] TX/RX paired correctly for UART, SPI, MGT, etc
+* [x] Pulldowns on all PECL outputs
+    * ADCMP582 outputs are terminated by VT0 on SY56017 inputs
+    * LMH7322 outputs use Thevenin termination to 0.5V equivalent
+* [x] Termination on all high-speed signals
+    [x] RAM DQ/A lines are all terminated on the SODIMM
+    [x] Series termination on QSPI
+    [x] FPGA LVDS input has ODT
+    [x] SY89835U input has ODT
+    [x] SY56017 input has ODT
+    [x] RGMII RX are series terminated
+    [x] FPGA LVCMOS33 outputs can get close enough with drive strength tuning
+    [x] STM32 outputs are slow enough to not matter
+* [x] AC coupling caps on gigabit transceivers
+    [x] QSFP caps are in the module, nothing needed host side
+    [x] Refclks OK
+* [x] TX/RX paired correctly for UART, SPI, MGT, etc
     * SPI buses all go to FPGA pins, freely reassignable
     * MCU UART goes to FPGA pins
+    * JTAG polarity checked
+    * 40G GTX OK
 * [ ] Differential pair polarity / pairing correct
 * [ ] Active high/low enable signal polarity correct
 * [ ] I/O banking rules met on FPGAs etc
