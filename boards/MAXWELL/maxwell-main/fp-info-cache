@@ -1,4 +1,4 @@
-423223577669118
+426409700597118
 azonenberg_pcb
 ATC_AT_0603
 
@@ -1155,6 +1155,13 @@ ESD7008
 21
 19
 azonenberg_pcb
+FAN_DELTA_EFB0412VHD-SP05
+
+
+0
+1
+0
+azonenberg_pcb
 FIDUCIAL_1MM
 
 
@@ -1224,6 +1231,13 @@ JUMPER_2.54MM_2POS
 0
 2
 2
+azonenberg_pcb
+LCD_MATRIX_MOP-TFT480116-38G-BLH-TPC
+
+
+0
+1
+0
 azonenberg_pcb
 LED_INDICATOR_2.54MM_5MM_RG_RA
 
