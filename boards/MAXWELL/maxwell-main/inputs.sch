@@ -81,7 +81,7 @@ F11 "S7_RST_N" I L 5000 5300 50
 F12 "S7_INIT_B" B L 5000 5400 50 
 F13 "S7_DONE" O L 5000 5500 50 
 $EndSheet
-Text Label 9100 2150 2    50   ~ 0
+Text Label 9100 1950 2    50   ~ 0
 S7_QSPI_CS_N
 Text Label 9100 950  2    50   ~ 0
 S7_QSPI_DQ0
@@ -159,9 +159,9 @@ Text HLabel 9100 3550 0    50   Input ~ 0
 S7_SPI_MOSI
 Text HLabel 9100 3050 0    50   Output ~ 0
 S7_SPI_MISO
-Text Label 9100 1950 2    50   ~ 0
-P2_UART_TX
 Text Label 9100 2050 2    50   ~ 0
+P2_UART_TX
+Text Label 9100 2150 2    50   ~ 0
 P2_UART_RX
 Text Label 9100 2250 2    50   ~ 0
 P3_UART_TX

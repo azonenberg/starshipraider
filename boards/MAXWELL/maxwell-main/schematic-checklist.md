@@ -181,14 +181,21 @@ same gain across the whole range.
 
 ### Strap/init pins
 * [x] Pullup/pulldowns on all signals that need defined state at boot
-* [ ] Strap pins connected to correct rail for desired state
-* [x] JTAG/ICSP connector provided for all programmable devices
-* [x] Config/boot flash provided for all FPGAs or MPUs without internal flash
-* [ ] Reference resistors correct value and reference rail
-    * FPGA DCI VRP/VRN are 80 ohms per Xilinx AR41590
+* [x] Strap pins connected to correct rail for desired state
     * Kintex CFGBVS is 3V3, banks 0 and 14 are 3V3
     * Both FPGA mode pins = 3'b001, master SPI mode (UG470 table 2-1)
     * Both FPGA PUDC_B = high, no pullups during config
+    * All PHY straps verified against KSZ9031 datasheet
+* [x] JTAG/ICSP connector provided for all programmable devices
+* [x] Config/boot flash provided for all FPGAs or MPUs without internal flash
+* [x] Reference resistors correct value and reference rail
+    * FPGA DCI VRP/VRN are 80 ohms per Xilinx AR41590
+    * KSZ9031 ISET is 12.1K per datasheet page 11
+    * 3V3 / 3V3_SB is 2.2K, nominal is 2.18K
+    * 2V0 is 4.22K, nominal is 4.19K
+    * 2V5 is 3.09K, nominal is 3.1K
+    * 5V0_N is 287/100K, -4.7214V
+    * VBACKLIGHT is 16.2K/1K, 21.5V
 
 ### External interface protection
 
@@ -197,11 +204,14 @@ same gain across the whole range.
 
 ### Debugging / reworkability
 
-* [ ] Use 0-ohm resistors vs direct hard-wiring for strap pins when possible
-* [ ] Provide multiple ground clips/points for scope probes
-* [ ] Dedicated ground in close proximity to analog test points
-* [ ] Test points on all power rails
-* [ ] Test points on interesting signals which may need probing for bringup/debug
+* [x] Use 0-ohm resistors vs direct hard-wiring for strap pins when possible
+    * Board is massive already, used less than I normally would.
+    * Triple checked FPGA boot mode straps
+    * Most other straps are already resistors other than INA233 addresses which are hard to screw up
+* [x] Provide multiple ground clips/points for scope probes
+* [x] Dedicated ground in close proximity to analog test points
+* [x] Test points on all power rails
+* [x] Test points on interesting signals which may need probing for bringup/debug
 
 ## Thermal
 
