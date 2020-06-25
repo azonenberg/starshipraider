@@ -1306,4 +1306,15 @@ Wire Wire Line
 Connection ~ 7300 10150
 Wire Wire Line
 	7300 10150 7850 10150
+$Comp
+L device:R R?
+U 1 1 62B817A8
+P 7700 3600
+F 0 "R?" H 7770 3646 50  0000 L CNN
+F 1 "100" H 7770 3555 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 7630 3600 50  0001 C CNN
+F 3 "" H 7700 3600 50  0001 C CNN
+	1    7700 3600
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
