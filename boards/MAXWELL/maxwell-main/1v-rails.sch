@@ -50,7 +50,7 @@ $EndComp
 NoConn ~ 1400 850 
 Text HLabel 2300 1150 2    50   Output ~ 0
 1V0_1_GOOD
-Text HLabel 2900 10600 0    50   Input ~ 0
+Text HLabel 2700 10500 0    50   Input ~ 0
 1V0_EN
 NoConn ~ 2300 1550
 $Comp
@@ -492,7 +492,7 @@ $EndComp
 NoConn ~ 1400 4300
 Text HLabel 2300 4600 2    50   Output ~ 0
 1V5_GOOD
-Text HLabel 1300 10600 0    50   Input ~ 0
+Text HLabel 1150 10500 0    50   Input ~ 0
 1V5_EN
 NoConn ~ 2300 5000
 $Comp
@@ -720,7 +720,7 @@ $EndComp
 Text HLabel 1250 10100 0    50   Input ~ 0
 5V0_SB
 Text Notes 1350 9950 0    50   ~ 0
-Regulator enables need >3.3V to switch on fully:\n* IAFs need 4.2V min\n* OKL-T/3 needs 3.5V min\nLevel shifter inverts, drive low to enable
+Regulator enables need >3.3V to switch on fully:\n* IAFs need 4.2V min\n* OKL-T/3 needs 3.5V min\nLevel shifter inverts, drive low to enable 1V2 or 1V8\n1V5/1V0 are negative enable so after inversion, drive high to enable
 Text Label 1400 4400 2    50   ~ 0
 1V5_EN_SHIFT
 Text Label 2050 10400 0    50   ~ 0
@@ -740,33 +740,22 @@ F 3 "" H 1750 10250 50  0001 C CNN
 	1    1750 10250
 	1    0    0    -1  
 $EndComp
-Text Label 1250 10800 2    50   ~ 0
+Text Label 1050 10800 2    50   ~ 0
 GND
 Wire Wire Line
 	2050 10400 1750 10400
 Connection ~ 1750 10400
-Wire Wire Line
-	1250 10100 1300 10100
-Wire Wire Line
-	1250 10800 1750 10800
 $Comp
 L device:R R159
 U 1 1 613A438E
-P 1300 10250
-F 0 "R159" H 1370 10296 50  0000 L CNN
-F 1 "10K" H 1370 10205 50  0000 L CNN
-F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 1230 10250 50  0001 C CNN
-F 3 "" H 1300 10250 50  0001 C CNN
-	1    1300 10250
+P 1150 10650
+F 0 "R159" H 1220 10696 50  0000 L CNN
+F 1 "10K" H 1220 10605 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 1080 10650 50  0001 C CNN
+F 3 "" H 1150 10650 50  0001 C CNN
+	1    1150 10650
 	1    0    0    -1  
 $EndComp
-Connection ~ 1300 10100
-Wire Wire Line
-	1300 10100 1750 10100
-Wire Wire Line
-	1300 10400 1300 10600
-Wire Wire Line
-	1300 10600 1450 10600
 $Comp
 L special-azonenberg:SSM6N58NU_DUAL_NMOS Q1
 U 2 1 613A8859
@@ -795,26 +784,17 @@ Connection ~ 3350 10400
 $Comp
 L device:R R161
 U 1 1 613A8872
-P 2900 10250
-F 0 "R161" H 2970 10296 50  0000 L CNN
-F 1 "10K" H 2970 10205 50  0000 L CNN
-F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 2830 10250 50  0001 C CNN
-F 3 "" H 2900 10250 50  0001 C CNN
-	1    2900 10250
+P 2700 10650
+F 0 "R161" H 2770 10696 50  0000 L CNN
+F 1 "10K" H 2770 10605 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 2630 10650 50  0001 C CNN
+F 3 "" H 2700 10650 50  0001 C CNN
+	1    2700 10650
 	1    0    0    -1  
 $EndComp
-Connection ~ 2900 10100
-Wire Wire Line
-	2900 10100 3350 10100
-Wire Wire Line
-	2900 10400 2900 10600
-Wire Wire Line
-	2900 10600 3050 10600
-Wire Wire Line
-	1750 10100 2900 10100
 Connection ~ 1750 10100
 Wire Wire Line
-	1750 10800 3350 10800
+	1750 10800 2700 10800
 Connection ~ 1750 10800
 Text Label 5250 10400 0    50   ~ 0
 1V2_EN_SHIFT
@@ -1916,4 +1896,54 @@ NoConn ~ 12600 3850
 NoConn ~ 12600 4700
 Text Notes 6500 4050 0    50   ~ 0
 1.xV rails are max 6A\nLVK25 are rated for 2W\n6A through 5 mR = 180 mW max
+Wire Wire Line
+	1750 10100 3350 10100
+Connection ~ 2700 10800
+Wire Wire Line
+	2700 10800 3350 10800
+Wire Wire Line
+	2700 10500 3050 10500
+Wire Wire Line
+	3050 10500 3050 10600
+Wire Wire Line
+	1250 10100 1750 10100
+Wire Wire Line
+	1050 10800 1150 10800
+Connection ~ 1150 10800
+Wire Wire Line
+	1150 10800 1750 10800
+Wire Wire Line
+	1150 10500 1450 10500
+Wire Wire Line
+	1450 10500 1450 10600
+$Comp
+L device:R R239
+U 1 1 62BE47A2
+P 6300 8850
+F 0 "R239" V 6200 8850 50  0000 C CNN
+F 1 "10K" V 6300 8850 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 6230 8850 50  0001 C CNN
+F 3 "" H 6300 8850 50  0001 C CNN
+	1    6300 8850
+	0    1    1    0   
+$EndComp
+Text Label 6150 8850 2    50   ~ 0
+VTT_EN
+$Comp
+L device:R R240
+U 1 1 62BE5848
+P 6300 9050
+F 0 "R240" V 6200 9050 50  0000 C CNN
+F 1 "10K" V 6300 9050 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 6230 9050 50  0001 C CNN
+F 3 "" H 6300 9050 50  0001 C CNN
+	1    6300 9050
+	0    1    1    0   
+$EndComp
+Text Label 6150 9050 2    50   ~ 0
+0V5_EN
+Wire Wire Line
+	6450 8850 6450 9050
+Text Label 6450 8850 0    50   ~ 0
+GND
 $EndSCHEMATC

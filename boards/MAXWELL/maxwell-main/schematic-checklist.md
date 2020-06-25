@@ -154,9 +154,16 @@ off as invalid.
     * MCU UART goes to FPGA pins
     * JTAG polarity checked
     * 40G GTX OK
-* [ ] Differential pair polarity / pairing correct
+* [x] Differential pair polarity / pairing correct
 * [ ] Active high/low enable signal polarity correct
-* [ ] I/O banking rules met on FPGAs etc
+    * E36SC12009NRFA is negative
+    * OKL-T/3-W12P is positive
+    * IAF12020 is negative
+    * RT9088 is positive
+    * LM27761 is active high
+    * MIC2605 is active high
+    * RPM5.0 is active high
+* [x] I/O banking rules met on FPGAs etc
 
 ### Analog
 

@@ -527,7 +527,7 @@ F 3 "" H 2150 5650 50  0001 C CNN
 	1    2150 5650
 	1    0    0    -1  
 $EndComp
-Text HLabel 2000 4950 0    50   Input ~ 0
+Text HLabel 1700 4950 0    50   Input ~ 0
 VBACKLIGHT_EN
 Text Label 1000 5150 2    50   ~ 0
 12V0
@@ -1360,4 +1360,60 @@ NoConn ~ 11500 6600
 NoConn ~ 11500 7450
 Text Notes 5650 4150 0    50   ~ 0
 All rails here are max 3A\nLVK12 is rated for 500 mW\n3A through 12 mR is 108 mW
+$Comp
+L device:R R?
+U 1 1 62BEF1E0
+P 10900 2150
+AR Path="/5EDD7150/61296AEB/62BEF1E0" Ref="R?"  Part="1" 
+AR Path="/5EDD7150/61580EA1/62BEF1E0" Ref="R242"  Part="1" 
+F 0 "R242" V 11000 2150 50  0000 C CNN
+F 1 "10K" V 10900 2150 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 10830 2150 50  0001 C CNN
+F 3 "" H 10900 2150 50  0001 C CNN
+	1    10900 2150
+	0    1    1    0   
+$EndComp
+Text Label 10750 2150 2    50   ~ 0
+5V0_N_EN
+Text Label 11050 2150 0    50   ~ 0
+GND
+Text Label 1550 4700 2    50   ~ 0
+GND
+$Comp
+L device:R R?
+U 1 1 62BF560E
+P 1700 4700
+AR Path="/5EDD7150/61296AEB/62BF560E" Ref="R?"  Part="1" 
+AR Path="/5EDD7150/61580EA1/62BF560E" Ref="R241"  Part="1" 
+F 0 "R241" V 1800 4700 50  0000 C CNN
+F 1 "10K" V 1700 4700 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 1630 4700 50  0001 C CNN
+F 3 "" H 1700 4700 50  0001 C CNN
+	1    1700 4700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1700 4950 1850 4950
+Wire Wire Line
+	1850 4700 1850 4950
+Connection ~ 1850 4950
+Wire Wire Line
+	1850 4950 2000 4950
+$Comp
+L device:R R?
+U 1 1 62C15C23
+P 10900 2350
+AR Path="/5EDD7150/61296AEB/62C15C23" Ref="R?"  Part="1" 
+AR Path="/5EDD7150/61580EA1/62C15C23" Ref="R243"  Part="1" 
+F 0 "R243" V 11000 2350 50  0000 C CNN
+F 1 "10K" V 10900 2350 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 10830 2350 50  0001 C CNN
+F 3 "" H 10900 2350 50  0001 C CNN
+	1    10900 2350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	11050 2150 11050 2350
+Text Label 10750 2350 2    50   ~ 0
+5V0_EN
 $EndSCHEMATC

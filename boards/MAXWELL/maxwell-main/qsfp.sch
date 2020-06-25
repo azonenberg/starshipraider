@@ -109,7 +109,7 @@ QSFP_RX4_P
 Text Label 5400 4300 0    50   ~ 0
 QSFP_RX4_N
 Text Notes 4400 4700 0    50   ~ 0
-TODO: extra ESD protection needed here?\nModule is grounded long before signal contacts mate.
+No extra ESD protection needed here?\nModule is grounded long before signal contacts mate.
 Text Label 4200 3300 2    50   ~ 0
 QSFP_TX1_P
 Text Label 4200 3400 2    50   ~ 0
