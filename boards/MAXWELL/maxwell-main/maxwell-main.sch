@@ -921,4 +921,6 @@ F 3 "~" H 2500 10350 50  0001 C CNN
 $EndComp
 Text Label 2700 10350 0    50   ~ 0
 GND
+Text Notes 3700 9150 0    50   ~ 0
+HEATSINKS\nFPGA: Wakefield 658-60ABT3\nPLL: Assmann V2016B
 $EndSCHEMATC

@@ -156,7 +156,22 @@ same gain across the whole range.
 
 ## Thermal
 
-* [ ] Power estimates for all large / high power ICs
-* [ ] Thermal calculations for all large / high power ICs
-* [ ] Specify heatsinks as needed
+* [x] Power estimates for all large / high power ICs
+    * DCDC modules are within operating limits, so should be fine
+    * RAM could be up to 8W instantaneous, likely not sustained
+    * Big FPGA is ~11W dissipation
+    * Small FPGA is barely going to get warm
+    * STM32 is 1W
+    * QSFP+ is 3W max
+    * PLL is 2W
+    * Everything else should be <1W per chip
+* [x] Thermal calculations for all large / high power ICs
+    * Not much we can do for RAM or DCDCs
+    * FPGA is 11.7C/W so 129C rise with no heatsink!!
+    * STM32 is 29C/W so max 29C rise, should be OK
+    * No good data for QSFP+ but 3W over a fairly large area shoooould be ok? Not a dense array of them
+    * PLL is 25.2C/W Ja, 6.9 Jc. 50W rise with no heatsink is borderline
+* [x] Specify heatsinks as needed
+    * FPGA needs heatsink for sure. Wakefield 658-60ABT3 is 2C/W @ 500LFM so total ~22C rise
+    * Put one on PLL to be safe. Assmann V2016B should be good.
 
