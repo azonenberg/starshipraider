@@ -1,0 +1,74 @@
+Part number:		NAXWELL v0.1
+
+General fabrication notes
+
+	* Boards are be individually routed.
+	* Board material is Rogers RO4350B
+	* Blue solder mask on both sides of board. All vias to be tented on back side.
+	* White LPI text (Taiyo PSR-4100WL or equivalent) on both sides of board.
+	* Pad finish is immersion silver.
+	* Finished board thickness is 1.6 mm.
+	* Place UL mark and date code in the area marked on the "F. Fab" gerber layer.
+
+Impedances
+
+	Control to within 10%.
+
+	Layer 1 coplanar waveguide (ref to layer 1 and 2 ground, no soldermask).
+	Layer 8 coplanar waveguide (ref to layer 8 and 7 ground, no soldermask).
+		xx μm trace = 50 ohm
+
+	Layer 1 microstrip (ref to layer 2 ground).
+	Layer 8 microstrip (ref to layer 7 ground).
+		200 μm trace = 50 ohm
+		290 μm trace = 40 ohm
+
+	Layer 1 differential microstrip (ref to layer 2 ground).
+	Layer 8 differential microstrip (ref to layer 7 ground).
+		150 μm trace / 100 μm space = 100 ohm
+		240 μm trace / 100 μm space = 80 ohm
+
+	Layer 3 stripline (ref to layer 2 ground).
+	Layer 6 stripline (ref to layer 7 ground).
+		160 μm trace = 50 ohm
+		220 μm trace = 40 ohm
+
+	Layer 3 differential stripline (ref to layer 2 ground).
+	Layer 6 differential stripline (ref to layer 7 ground).
+		120 μm trace / 100 μm space = 100 ohm
+		180 μm trace / 100 μm space = 80 ohm
+
+Suggested stackup
+	1	 35 μm (1 oz) copper			Signal
+		100 μm RO4350B core/prepreg
+	2	 35 μm (1 oz) copper			Ground
+		100 μm RO4350B core/prepreg
+	3	 35 μm (1 oz) copper			Signal
+		254 μm RO4350B core/prepreg
+	4	 35 μm (1 oz) copper			Power
+		372 μm Isola FR408HR prepreg (3x 2116) or equivalent to reach 1.6mm finished thickness
+	5	 35 μm (1 oz) copper			Power
+		254 μm RO4350B core/prepreg
+	6	 35 μm (1 oz) copper			Signal
+		100 μm RO4350B core/prepreg
+	7	 35 μm (1 oz) copper			Ground
+		100 μm RO4350B core/prepreg
+	8	 35 μm (1 oz) copper			Signal
+
+File naming
+	maxwell-Edge_Cuts.gbr	Board outline
+	maxwell.drl				Through-board plated holes
+	maxwell-F_SilkS.gbr		Front silkscreen
+	maxwell-F.Fab.gbr		Shows requested location of date code and UL marking
+	maxwell-F_Mask.gbr		Front solder mask
+	maxwell-F_Cu.gbr		Layer 1 copper
+	maxwell-In1_Cu.gbr		Layer 2 copper
+	maxwell-In2_Cu.gbr		Layer 3 copper
+	maxwell-In3_Cu.gbr		Layer 4 copper
+	maxwell-In4_Cu.gbr		Layer 5 copper
+	maxwell-In5_Cu.gbr		Layer 6 copper
+	maxwell-In6_Cu.gbr		Layer 7 copper
+	maxwell-B_Cu.gbr		Layer 8 copper
+	maxwell-B_Mask.gbr		Back solder mask
+	maxwell-B_SilkS.gbr		Back silkscreen
+
