@@ -110,7 +110,22 @@ off as invalid.
 
 ### Digital
 
-* [ ] Signals are correct logic level for input pin
+* [x] Signals are correct logic level for input pin
+    * NCP45525 is 2V Vih, fed by LVCMOS33
+    * ADCMP582 is VCCO-0.94 to VCCO-1.33V, so 390 mV single ended swing / 780 mV differential
+    * SY56017 needs 200 mV single / 400 mV differential swing
+    * SY56017 has 390 mV single ended / 780 mV differential output swing below 1.2V VCCO.\
+    This is 1.0V common mode
+    * GTX needs 150 mV differential, ideal 720 mV common mode (no range specified though). Terminate to AVTT
+    * LVDS inputs need 100 mV differential, 0.3 - 1.5V common mode
+    * iAF12020 is 4.2V Vih, LVCMOS33 won't work. Use 5V NMOS level shifter
+    * RT9088 is 1.7V Vih
+    * OKL-T/3 is 3.5V Vih, need to level shift
+    * LM27761 is 1.2V Vih
+    * RPM5.0 is 0.9V Vih
+    * MIC2605 is 1.5V Vih
+    * TSCR421 is weird and analog between 1-2V, but fully on after around 2V
+    * Everything else has same VCC on both ends of the link
 * [ ] Pullups on all open-drain outputs
 * [ ] Pulldowns on all PECL outputs
 * [ ] Termination on all high-speed signals
@@ -122,10 +137,10 @@ off as invalid.
 
 ### Analog
 
-* [ ] RC time constant for attenuators sane given ADC sampling frequency
-* [ ] Verify frequency response of RF components across entire operating range. Don't assume a "1-100 MHz" amplifier has the
+* [x] RC time constant for attenuators sane given ADC sampling frequency
+* [x] Verify frequency response of RF components across entire operating range. Don't assume a "1-100 MHz" amplifier has the
 same gain across the whole range.
-* [ ] Verify polarity of op-amp feedback
+* [x] Verify polarity of op-amp feedback
 
 ### Clocks
 
