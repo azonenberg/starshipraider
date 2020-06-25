@@ -185,6 +185,10 @@ same gain across the whole range.
 * [x] JTAG/ICSP connector provided for all programmable devices
 * [x] Config/boot flash provided for all FPGAs or MPUs without internal flash
 * [ ] Reference resistors correct value and reference rail
+    * FPGA DCI VRP/VRN are 80 ohms per Xilinx AR41590
+    * Kintex CFGBVS is 3V3, banks 0 and 14 are 3V3
+    * Both FPGA mode pins = 3'b001, master SPI mode (UG470 table 2-1)
+    * Both FPGA PUDC_B = high, no pullups during config
 
 ### External interface protection
 

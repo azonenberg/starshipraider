@@ -217,9 +217,9 @@ Wire Wire Line
 	7800 850  7800 950 
 Text Label 9450 2050 2    50   ~ 0
 ETH_LED1_N
-Text Label 9450 1950 2    50   ~ 0
+Text Label 9150 1950 2    50   ~ 0
 3V3
-Text Label 9450 2150 2    50   ~ 0
+Text Label 9150 2150 2    50   ~ 0
 3V3
 Text Label 7100 1550 0    50   ~ 0
 RGMII_TXD0
@@ -1153,4 +1153,30 @@ Text HLabel 2050 2900 0    50   Input ~ 0
 RMII_TXD1
 Text HLabel 2050 3000 0    50   Input ~ 0
 ETH_PPS_OUT
+$Comp
+L device:R R?
+U 1 1 62D70AB3
+P 9300 1950
+AR Path="/5EDD723A/62D70AB3" Ref="R?"  Part="1" 
+AR Path="/5EE2921B/62D70AB3" Ref="R251"  Part="1" 
+F 0 "R251" V 9250 2100 50  0000 C CNN
+F 1 "220" V 9300 1950 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 9230 1950 50  0001 C CNN
+F 3 "" H 9300 1950 50  0001 C CNN
+	1    9300 1950
+	0    1    1    0   
+$EndComp
+$Comp
+L device:R R?
+U 1 1 62D71190
+P 9300 2150
+AR Path="/5EDD723A/62D71190" Ref="R?"  Part="1" 
+AR Path="/5EE2921B/62D71190" Ref="R252"  Part="1" 
+F 0 "R252" V 9250 2300 50  0000 C CNN
+F 1 "220" V 9300 2150 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 9230 2150 50  0001 C CNN
+F 3 "" H 9300 2150 50  0001 C CNN
+	1    9300 2150
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
