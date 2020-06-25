@@ -52,25 +52,6 @@ Text HLabel 2300 1150 2    50   Output ~ 0
 1V0_1_GOOD
 Text HLabel 2900 10600 0    50   Input ~ 0
 1V0_EN
-$Comp
-L device:R R?
-U 1 1 6129FB2D
-P 2800 850
-AR Path="/5EDD7150/6129FB2D" Ref="R?"  Part="1" 
-AR Path="/5EDD7150/61296AEB/6129FB2D" Ref="R154"  Part="1" 
-F 0 "R154" V 2750 1000 50  0000 C CNN
-F 1 "4.7K" V 2800 850 50  0000 C CNN
-F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 2730 850 50  0001 C CNN
-F 3 "" H 2800 850 50  0001 C CNN
-	1    2800 850 
-	0    1    1    0   
-$EndComp
-Text Label 2650 850  2    50   ~ 0
-GND
-Text Label 3200 850  0    50   ~ 0
-1V0_EN
-Wire Wire Line
-	2950 850  3200 850 
 NoConn ~ 2300 1550
 $Comp
 L device:R R?
@@ -702,25 +683,6 @@ Text HLabel 1050 2050 0    50   Input ~ 0
 GND
 Text HLabel 8950 2350 2    50   Output ~ 0
 1V8_GOOD
-$Comp
-L device:R R?
-U 1 1 612E6EA0
-P 2900 4350
-AR Path="/5EDD7150/612E6EA0" Ref="R?"  Part="1" 
-AR Path="/5EDD7150/61296AEB/612E6EA0" Ref="R158"  Part="1" 
-F 0 "R158" V 2850 4500 50  0000 C CNN
-F 1 "4.7K" V 2900 4350 50  0000 C CNN
-F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 2830 4350 50  0001 C CNN
-F 3 "" H 2900 4350 50  0001 C CNN
-	1    2900 4350
-	0    1    1    0   
-$EndComp
-Text Label 2750 4350 2    50   ~ 0
-GND
-Text Label 3300 4350 0    50   ~ 0
-1V5_EN
-Wire Wire Line
-	3050 4350 3300 4350
 Text HLabel 6100 10600 0    50   Input ~ 0
 1V8_EN
 Text HLabel 10300 2550 2    50   Output ~ 0
