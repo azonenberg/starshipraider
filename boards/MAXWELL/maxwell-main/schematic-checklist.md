@@ -188,8 +188,8 @@ same gain across the whole range.
 
 ### External interface protection
 
-* [ ] Power outputs (USB etc) current limited
-* [ ] ESD protection on data lines going off board
+* [x] Power outputs (USB etc) current limited
+* [x] ESD protection on data lines going off board
 
 ### Debugging / reworkability
 

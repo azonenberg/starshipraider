@@ -1495,4 +1495,133 @@ Text HLabel 14900 1000 2    50   Input ~ 0
 5V0
 Text HLabel 14900 1500 2    50   Input ~ 0
 5V0_N
+$Comp
+L special-azonenberg:ESD7008 D?
+U 1 1 62D44C76
+P 2700 10200
+AR Path="/5EDD723A/5F0BA462/62D44C76" Ref="D?"  Part="1" 
+AR Path="/5EDD723A/5F2BB4CD/62D44C76" Ref="D30"  Part="1" 
+F 0 "D30" H 2925 11475 50  0000 C CNN
+F 1 "ESD7008" H 2925 11384 50  0000 C CNN
+F 2 "" H 2700 10200 50  0001 C CNN
+F 3 "" H 2700 10200 50  0001 C CNN
+	1    2700 10200
+	1    0    0    -1  
+$EndComp
+Text Label 2500 9150 2    50   ~ 0
+P6_PRESENT
+Text Label 2500 9250 2    50   ~ 0
+P7_PRESENT
+Text Label 3350 9150 0    50   ~ 0
+GND
+Wire Wire Line
+	3350 9150 3350 9250
+Connection ~ 3350 9250
+Wire Wire Line
+	3350 9250 3350 9350
+Connection ~ 3350 9350
+Wire Wire Line
+	3350 9350 3350 9450
+Connection ~ 3350 9450
+Wire Wire Line
+	3350 9450 3350 9550
+Connection ~ 3350 9550
+Wire Wire Line
+	3350 9550 3350 9650
+Text Label 2500 9450 2    50   ~ 0
+POD6_UART_TX
+Text Label 2500 9550 2    50   ~ 0
+POD6_UART_RX
+Text Label 2500 9750 2    50   ~ 0
+POD7_UART_TX
+Text Label 2500 9850 2    50   ~ 0
+POD7_UART_RX
+NoConn ~ 2500 10050
+NoConn ~ 2500 10150
+$Comp
+L special-azonenberg:ESD7008 D?
+U 1 1 62D44C8E
+P 5700 10200
+AR Path="/5EDD723A/5F0BA462/62D44C8E" Ref="D?"  Part="1" 
+AR Path="/5EDD723A/5F2BB4CD/62D44C8E" Ref="D31"  Part="1" 
+F 0 "D31" H 5925 11475 50  0000 C CNN
+F 1 "ESD7008" H 5925 11384 50  0000 C CNN
+F 2 "" H 5700 10200 50  0001 C CNN
+F 3 "" H 5700 10200 50  0001 C CNN
+	1    5700 10200
+	1    0    0    -1  
+$EndComp
+Text Label 5500 9150 2    50   ~ 0
+P8_PRESENT
+Text Label 5500 9250 2    50   ~ 0
+P9_PRESENT
+Text Label 6350 9150 0    50   ~ 0
+GND
+Wire Wire Line
+	6350 9150 6350 9250
+Connection ~ 6350 9250
+Wire Wire Line
+	6350 9250 6350 9350
+Connection ~ 6350 9350
+Wire Wire Line
+	6350 9350 6350 9450
+Connection ~ 6350 9450
+Wire Wire Line
+	6350 9450 6350 9550
+Connection ~ 6350 9550
+Wire Wire Line
+	6350 9550 6350 9650
+Text Label 5500 9450 2    50   ~ 0
+POD8_UART_TX
+Text Label 5500 9550 2    50   ~ 0
+POD8_UART_RX
+Text Label 5500 9750 2    50   ~ 0
+POD9_UART_TX
+Text Label 5500 9850 2    50   ~ 0
+POD9_UART_RX
+NoConn ~ 5500 10050
+NoConn ~ 5500 10150
+$Comp
+L special-azonenberg:ESD7008 D?
+U 1 1 62D44CA6
+P 8750 10200
+AR Path="/5EDD723A/5F0BA462/62D44CA6" Ref="D?"  Part="1" 
+AR Path="/5EDD723A/5F2BB4CD/62D44CA6" Ref="D32"  Part="1" 
+F 0 "D32" H 8975 11475 50  0000 C CNN
+F 1 "ESD7008" H 8975 11384 50  0000 C CNN
+F 2 "" H 8750 10200 50  0001 C CNN
+F 3 "" H 8750 10200 50  0001 C CNN
+	1    8750 10200
+	1    0    0    -1  
+$EndComp
+Text Label 8550 9150 2    50   ~ 0
+P10_PRESENT
+Text Label 8550 9250 2    50   ~ 0
+P11_PRESENT
+Text Label 9400 9150 0    50   ~ 0
+GND
+Wire Wire Line
+	9400 9150 9400 9250
+Connection ~ 9400 9250
+Wire Wire Line
+	9400 9250 9400 9350
+Connection ~ 9400 9350
+Wire Wire Line
+	9400 9350 9400 9450
+Connection ~ 9400 9450
+Wire Wire Line
+	9400 9450 9400 9550
+Connection ~ 9400 9550
+Wire Wire Line
+	9400 9550 9400 9650
+Text Label 8550 9450 2    50   ~ 0
+POD10_UART_TX
+Text Label 8550 9550 2    50   ~ 0
+POD10_UART_RX
+Text Label 8550 9750 2    50   ~ 0
+POD11_UART_TX
+Text Label 8550 9850 2    50   ~ 0
+POD11_UART_RX
+NoConn ~ 8550 10050
+NoConn ~ 8550 10150
 $EndSCHEMATC

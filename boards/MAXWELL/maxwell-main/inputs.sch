@@ -585,6 +585,4 @@ Wire Wire Line
 	8500 1350 9100 1350
 Text Label 8200 1350 2    50   ~ 0
 3V3
-Text Notes 1450 4300 0    50   ~ 0
-TODO: ESD protection on UARTs and presence detection
 $EndSCHEMATC
