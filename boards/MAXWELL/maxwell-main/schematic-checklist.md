@@ -126,11 +126,20 @@ off as invalid.
     * MIC2605 is 1.5V Vih
     * TSCR421 is weird and analog between 1-2V, but fully on after around 2V
     * Everything else has same VCC on both ends of the link
-* [ ] Pullups on all open-drain outputs
+* [x] Pullups on all open-drain outputs
+    [x] QSFP status lines
+    [x] Pod present
+    [x] Power rail PGOOD pins (using on die MCU pullups)
+    [x] I2C1
+    [x] I2C2
+    [x] I2C3
+    [x] I2C4
 * [ ] Pulldowns on all PECL outputs
 * [ ] Termination on all high-speed signals
 * [ ] AC coupling caps on gigabit transceivers
 * [ ] TX/RX paired correctly for UART, SPI, MGT, etc
+    * SPI buses all go to FPGA pins, freely reassignable
+    * MCU UART goes to FPGA pins
 * [ ] Differential pair polarity / pairing correct
 * [ ] Active high/low enable signal polarity correct
 * [ ] I/O banking rules met on FPGAs etc
@@ -144,16 +153,16 @@ same gain across the whole range.
 
 ### Clocks
 
-* [ ] All oscillators meet required jitter / frequency tolerance. Be extra cautious with MEMS oscillators as these tend to have higher jitter.
+* [x] All oscillators meet required jitter / frequency tolerance. Be extra cautious with MEMS oscillators as these tend to have higher jitter.
 * [ ] Correct load caps provided for discrete crystals
-* [ ] Crystals only used if IC has an integrated crystal driver
+* [x] Crystals only used if IC has an integrated crystal driver
 * [ ] Banking / clock capable input rules met for clocks going to FPGAs
 
 ### Strap/init pins
 * [ ] Pullup/pulldowns on all signals that need defined state at boot
 * [ ] Strap pins connected to correct rail for desired state
-* [ ] JTAG/ICSP connector provided for all programmable devices
-* [ ] Config/boot flash provided for all FPGAs or MPUs without internal flash
+* [x] JTAG/ICSP connector provided for all programmable devices
+* [x] Config/boot flash provided for all FPGAs or MPUs without internal flash
 * [ ] Reference resistors correct value and reference rail
 
 ### External interface protection
