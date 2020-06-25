@@ -81,21 +81,25 @@ off as invalid.
 ### System power input
 
 * [x] Fusing and/or reverse voltage protection at system power inlet
-* [ ] Check total input capacitance and add inrush limiter if needed
+* [x] Check total input capacitance and add inrush limiter if needed
+    * VIN: 100 uF plus U52, 1 A2S. Fuse is rated for 15
+    * 12V0: 788.9 uF, supply is rated for 2000
 
 ### Regulators
 
-* [ ] Under/overvoltage protection configured correctly if used
-* [ ] Verify estimated power usage per rail against regulator rating
-* [ ] Current-sense resistors on power rails after regulator output caps, not in switching loop
-* [ ] Remote sense used on low voltage or high current rails
-* [ ] Linear regulators and voltage reference ICs are stable with selected output cap ESR
-* [ ] Confirm power rail sequencing against device datasheets
+* [x] Under/overvoltage protection configured correctly if used
+* [x] Verify estimated power usage per rail against regulator rating
+* [x] Current-sense resistors on power rails after regulator output caps, not in switching loop
+* [x] Remote sense used on low voltage or high current rails
+* [x] Linear regulators and voltage reference ICs are stable with selected output cap ESR
+* [x] Confirm power rail sequencing against device datasheets
+    * During standby, 12V0, 5V0_SB, and 3V3_SB are only active rails
+    * Everything else is switched on command from the STM32
 
 ### Decoupling
-* [ ] Decoupling present for all ICs
-* [ ] Decoupling meets/exceeds vendor recommendations if specified
-* [ ] Bulk decoupling present at PSU
+* [x] Decoupling present for all ICs
+* [x] Decoupling meets/exceeds vendor recommendations if specified
+* [x] Bulk decoupling present at PSU
 
 ### General
 * [ ] All power inputs fed by correct voltage

@@ -14,7 +14,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 Text Notes 8200 1950 0    50   ~ 0
-Rail design targets including safety margin\n----------------------------------------\nINPUT: 24-48V at 5A\nIntermediate rail: 12V @ 9A\n1V0: 8A\n1V2: 1.5A\n1V5: 6A\n1V8: 1A\n2V0: 500 mA\n2V5: 1A\n3V3: 3A\n5V0: 100 mA\n5V0N: 100 mA\n12V0: 4A\n21V5 for LCD: Constant current, nominally 33 mA\nDDR RAM Vref, Vtt: standard regulator
+Rail design targets including safety margin\n----------------------------------------\nINPUT: 24-48V at 5A\nIntermediate rail: 12V @ 9A\n1V0: 8A\n1V2: 1.5A\n1V5: 6A\n1V8: 1A\n2V0: 500 mA\n2V5: 1A\n3V3: 3A\n5V0: 100 mA\n5V0N: 100 mA\n12V0: 4A plus regulator inputs\n21V5 for LCD: Constant current, nominally 33 mA\nDDR RAM Vref, Vtt: standard regulator
 Text HLabel 2200 750  2    50   Output ~ 0
 12V0
 Text HLabel 2200 1050 2    50   Output ~ 0
