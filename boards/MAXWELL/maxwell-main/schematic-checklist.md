@@ -102,9 +102,9 @@ off as invalid.
 * [x] Bulk decoupling present at PSU
 
 ### General
-* [ ] All power inputs fed by correct voltage
-* [ ] Check high-power discrete semiconductors and passives to confirm they can handle expected load
-* [ ] Analog rails filtered/isolated from digital circuitry as needed
+* [x] All power inputs fed by correct voltage
+* [x] Check high-power discrete semiconductors and passives to confirm they can handle expected load
+* [x] Analog rails filtered/isolated from digital circuitry as needed
 
 ## Signals
 
