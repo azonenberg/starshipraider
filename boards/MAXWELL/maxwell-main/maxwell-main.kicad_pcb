@@ -2,8 +2,8 @@
 
   (general
     (thickness 1.6)
-    (drawings 12)
-    (tracks 526)
+    (drawings 16)
+    (tracks 694)
     (zones 0)
     (modules 992)
     (nets 923)
@@ -2689,7 +2689,7 @@
   )
 
   (module azonenberg_pcb:TESTPOINT_SMT_KEYSTONE_5016 (layer F.Cu) (tedit 5ED1D6C0) (tstamp 5F002679)
-    (at -63.9 167.89)
+    (at -61.4 116.89)
     (path /5EEF3B79/5F303230/62EB5A43)
     (fp_text reference TP48 (at 0 3) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -2707,7 +2707,7 @@
   )
 
   (module azonenberg_pcb:TESTPOINT_SMT_KEYSTONE_5016 (layer F.Cu) (tedit 5ED1D6C0) (tstamp 5F002674)
-    (at -63.9 172.32)
+    (at -61.4 121.32)
     (path /5EEF3B79/5F303230/62EB561F)
     (fp_text reference TP47 (at 0 3) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -2725,7 +2725,7 @@
   )
 
   (module azonenberg_pcb:TESTPOINT_SMT_KEYSTONE_5016 (layer F.Cu) (tedit 5ED1D6C0) (tstamp 5F00266F)
-    (at -58.2 167.89)
+    (at -56.7 102.89)
     (path /5EEF3B79/5F303230/62EB4AEE)
     (fp_text reference TP46 (at 0 3) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -2743,7 +2743,7 @@
   )
 
   (module azonenberg_pcb:TESTPOINT_SMT_KEYSTONE_5016 (layer F.Cu) (tedit 5ED1D6C0) (tstamp 5F00266A)
-    (at -58.2 172.32)
+    (at -56.7 107.32)
     (path /5EEF3B79/5F303230/62EB41B6)
     (fp_text reference TP45 (at 0 3) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -2761,7 +2761,7 @@
   )
 
   (module azonenberg_pcb:TESTPOINT_SMT_0.5MM (layer F.Cu) (tedit 53C661B2) (tstamp 5F002665)
-    (at -73.39 154.005)
+    (at -70.89 103.005)
     (path /5EEF3B79/62E9F8B7)
     (fp_text reference TP44 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -2774,7 +2774,7 @@
   )
 
   (module azonenberg_pcb:TESTPOINT_SMT_KEYSTONE_5016 (layer F.Cu) (tedit 5ED1D6C0) (tstamp 5F002660)
-    (at -82.69 155.47)
+    (at -80.19 104.47)
     (path /5EEF3B79/62E9D225)
     (fp_text reference TP43 (at 0 3) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -2792,7 +2792,7 @@
   )
 
   (module azonenberg_pcb:TESTPOINT_SMT_KEYSTONE_5016 (layer F.Cu) (tedit 5ED1D6C0) (tstamp 5F00265B)
-    (at -76.99 151.04)
+    (at -74.49 100.04)
     (path /5EEF3B79/62E9CE6E)
     (fp_text reference TP42 (at 0 3) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -2810,7 +2810,7 @@
   )
 
   (module azonenberg_pcb:TESTPOINT_SMT_KEYSTONE_5016 (layer F.Cu) (tedit 5ED1D6C0) (tstamp 5F002656)
-    (at -82.69 151.04)
+    (at -80.19 100.04)
     (path /5EEF3B79/62E9CC1F)
     (fp_text reference TP41 (at 0 3) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -2828,7 +2828,7 @@
   )
 
   (module azonenberg_pcb:TESTPOINT_SMT_KEYSTONE_5016 (layer F.Cu) (tedit 5ED1D6C0) (tstamp 5F002651)
-    (at -82.69 159.9)
+    (at -80.19 108.9)
     (path /5EEF3B79/62E9C230)
     (fp_text reference TP40 (at 0 3) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -2846,7 +2846,7 @@
   )
 
   (module azonenberg_pcb:TESTPOINT_SMT_KEYSTONE_5016 (layer F.Cu) (tedit 5ED1D6C0) (tstamp 5F00264C)
-    (at -76.99 155.47)
+    (at -74.49 104.47)
     (path /5EEF3B79/62E9FD00)
     (fp_text reference TP39 (at 0 3) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -2864,7 +2864,7 @@
   )
 
   (module azonenberg_pcb:TESTPOINT_SMT_0.5MM (layer F.Cu) (tedit 53C661B2) (tstamp 5F002647)
-    (at -67.69 149.575)
+    (at -50.69 126.575)
     (path /5EEF3B79/62E9BDB1)
     (fp_text reference TP38 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -2877,7 +2877,7 @@
   )
 
   (module azonenberg_pcb:TESTPOINT_SMT_0.5MM (layer F.Cu) (tedit 53C661B2) (tstamp 5F002642)
-    (at -73.39 155.505)
+    (at -70.89 104.505)
     (path /5EEF3B79/62E9BB23)
     (fp_text reference TP37 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -2890,7 +2890,7 @@
   )
 
   (module azonenberg_pcb:TESTPOINT_SMT_0.5MM (layer F.Cu) (tedit 53C661B2) (tstamp 5F00263D)
-    (at -66.19 149.575)
+    (at -49.19 126.575)
     (path /5EEF3B79/62E9B8AC)
     (fp_text reference TP36 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -2903,7 +2903,7 @@
   )
 
   (module azonenberg_pcb:TESTPOINT_SMT_0.5MM (layer F.Cu) (tedit 53C661B2) (tstamp 5F002638)
-    (at -67.69 151.075)
+    (at -50.69 128.075)
     (path /5EEF3B79/62E9B4B6)
     (fp_text reference TP35 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -2916,7 +2916,7 @@
   )
 
   (module azonenberg_pcb:TESTPOINT_SMT_0.5MM (layer F.Cu) (tedit 53C661B2) (tstamp 5F002633)
-    (at -71.89 154.005)
+    (at -69.39 103.005)
     (path /5EEF3B79/62E98E1C)
     (fp_text reference TP34 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -2929,7 +2929,7 @@
   )
 
   (module azonenberg_pcb:TESTPOINT_SMT_0.5MM (layer F.Cu) (tedit 53C661B2) (tstamp 5F00262E)
-    (at -70.39 154.005)
+    (at -67.89 103.005)
     (path /5EEF3B79/62E9772F)
     (fp_text reference TP33 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -2942,7 +2942,7 @@
   )
 
   (module azonenberg_pcb:TESTPOINT_SMT_KEYSTONE_5016 (layer F.Cu) (tedit 5ED1D6C0) (tstamp 5F002629)
-    (at -71.29 151.04)
+    (at -68.79 100.04)
     (path /5EEF3B79/62E93B95)
     (fp_text reference TP32 (at 0 3) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -2960,7 +2960,7 @@
   )
 
   (module azonenberg_pcb:TESTPOINT_SMT_KEYSTONE_5016 (layer F.Cu) (tedit 5ED1D6C0) (tstamp 5F002624)
-    (at -76.99 159.9)
+    (at -74.49 108.9)
     (path /5EEF3B79/62E98254)
     (fp_text reference TP31 (at 0 3) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -3074,9 +3074,9 @@
   )
 
   (module azonenberg_pcb:TESTPOINT_SMT_KEYSTONE_5016 (layer F.Cu) (tedit 5ED1D6C0) (tstamp 5F0025FC)
-    (at 208.9 72.55)
+    (at 236.5 51.5)
     (path /5EDDB439/62D972F6)
-    (fp_text reference TP23 (at 0 3) (layer F.SilkS)
+    (fp_text reference TP23 (at 0 3) (layer F.SilkS) hide
       (effects (font (size 0.75 0.75) (thickness 0.1)))
     )
     (fp_text value TESTCLIP (at 0 4.6) (layer F.SilkS) hide
@@ -3092,9 +3092,9 @@
   )
 
   (module azonenberg_pcb:TESTPOINT_SMT_KEYSTONE_5016 (layer F.Cu) (tedit 5ED1D6C0) (tstamp 5F0025F7)
-    (at 208 65.45)
+    (at 229.5 55)
     (path /5EDDB439/62D96ACE)
-    (fp_text reference TP22 (at 0 3) (layer F.SilkS)
+    (fp_text reference TP22 (at 0 3) (layer F.SilkS) hide
       (effects (font (size 0.75 0.75) (thickness 0.1)))
     )
     (fp_text value TESTCLIP (at 0 4.6) (layer F.SilkS) hide
@@ -3110,9 +3110,9 @@
   )
 
   (module azonenberg_pcb:TESTPOINT_SMT_KEYSTONE_5016 (layer F.Cu) (tedit 5ED1D6C0) (tstamp 5F0025F2)
-    (at 215.55 72.55)
+    (at 229.5 48)
     (path /5EDDB439/62D96120)
-    (fp_text reference TP21 (at 0 3) (layer F.SilkS)
+    (fp_text reference TP21 (at 0 3) (layer F.SilkS) hide
       (effects (font (size 0.75 0.75) (thickness 0.1)))
     )
     (fp_text value TESTCLIP (at 0 4.6) (layer F.SilkS) hide
@@ -3128,9 +3128,9 @@
   )
 
   (module azonenberg_pcb:TESTPOINT_SMT_KEYSTONE_5016 (layer F.Cu) (tedit 5ED1D6C0) (tstamp 5F0025ED)
-    (at 216.65 65.5)
+    (at 236.5 58.5)
     (path /5EDDB439/62D95D24)
-    (fp_text reference TP20 (at 0 3) (layer F.SilkS)
+    (fp_text reference TP20 (at 0 3) (layer F.SilkS) hide
       (effects (font (size 0.75 0.75) (thickness 0.1)))
     )
     (fp_text value TESTCLIP (at 0 4.6) (layer F.SilkS) hide
@@ -3211,7 +3211,7 @@
   )
 
   (module azonenberg_pcb:TESTPOINT_SMT_0.5MM (layer F.Cu) (tedit 53C661B2) (tstamp 5F0025D1)
-    (at -66 180.045)
+    (at -63.5 129.045)
     (path /5EDD723A/5F297DD1/62EF891B)
     (fp_text reference TP14 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -3224,7 +3224,7 @@
   )
 
   (module azonenberg_pcb:TESTPOINT_SMT_0.5MM (layer F.Cu) (tedit 53C661B2) (tstamp 5F0025CC)
-    (at -66 178.545)
+    (at -63.5 127.545)
     (path /5EDD723A/5F297DD1/62EF8608)
     (fp_text reference TP13 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -3237,7 +3237,7 @@
   )
 
   (module azonenberg_pcb:TESTPOINT_SMT_0.5MM (layer F.Cu) (tedit 53C661B2) (tstamp 5F0025C7)
-    (at -64.5 178.545)
+    (at -62 127.545)
     (path /5EDD723A/5F297DD1/62EF7BAE)
     (fp_text reference TP12 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -3250,7 +3250,7 @@
   )
 
   (module azonenberg_pcb:TESTPOINT_SMT_0.5MM (layer F.Cu) (tedit 53C661B2) (tstamp 5F0025C2)
-    (at -64.5 180.045)
+    (at -62 129.045)
     (path /5EDD723A/5F297DD1/62EF70E0)
     (fp_text reference TP11 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -3326,7 +3326,7 @@
   )
 
   (module azonenberg_pcb:TESTPOINT_SMT_KEYSTONE_5016 (layer F.Cu) (tedit 5ED1D6C0) (tstamp 5F0025A7)
-    (at -82.45 178.15)
+    (at -79.95 127.15)
     (path /5EDD71F2/62DA4EC4)
     (fp_text reference TP7 (at 0 3) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -3344,7 +3344,7 @@
   )
 
   (module azonenberg_pcb:TESTPOINT_SMT_KEYSTONE_5016 (layer F.Cu) (tedit 5ED1D6C0) (tstamp 5F0025A2)
-    (at -73.3 173)
+    (at -70.8 122)
     (path /5EDD71F2/62DA4A7E)
     (fp_text reference TP6 (at 0 3) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -3362,7 +3362,7 @@
   )
 
   (module azonenberg_pcb:TESTPOINT_SMT_KEYSTONE_5016 (layer F.Cu) (tedit 5ED1D6C0) (tstamp 5F00259D)
-    (at -76.75 177.43)
+    (at -74.25 126.43)
     (path /5EDD71F2/62DA480A)
     (fp_text reference TP5 (at 0 3) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -3398,7 +3398,7 @@
   )
 
   (module azonenberg_pcb:TESTPOINT_SMT_KEYSTONE_5016 (layer F.Cu) (tedit 5ED1D6C0) (tstamp 5F002593)
-    (at -79 173)
+    (at -76.5 122)
     (path /5EDD71F2/62DA00AF)
     (fp_text reference TP3 (at 0 3) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -4010,7 +4010,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EFDDEA4)
-    (at 377.69 142.81493)
+    (at -39.31 127.81493)
     (path /5EDD7150/62B1C0EC)
     (fp_text reference R237 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -4030,7 +4030,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EFDDE9E)
-    (at 377.69 144.31493)
+    (at -39.31 129.31493)
     (path /5EDD7150/62B1B875)
     (fp_text reference R236 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -4050,7 +4050,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EFDDE98)
-    (at 385.19 144.31493)
+    (at -31.81 129.31493)
     (path /5EDD7150/62B1B86A)
     (fp_text reference R235 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -4070,7 +4070,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EFDDE92)
-    (at 382.69 145.81493)
+    (at -54.31 128.81493)
     (path /5EDD7150/62B1AEE7)
     (fp_text reference R234 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -4090,7 +4090,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EFDDE8C)
-    (at 385.19 142.81493)
+    (at -31.81 127.81493)
     (path /5EDD7150/62B1AEDC)
     (fp_text reference R233 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -4110,7 +4110,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EFDDE86)
-    (at 382.69 144.31493)
+    (at -34.31 129.31493)
     (path /5EDD7150/62B1A7A1)
     (fp_text reference R232 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -4130,7 +4130,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EFDDE80)
-    (at 380.19 145.81493)
+    (at -56.81 128.81493)
     (path /5EDD7150/62B1A796)
     (fp_text reference R231 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -4150,7 +4150,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EFDDE7A)
-    (at 382.69 142.81493)
+    (at -34.31 127.81493)
     (path /5EDD7150/62B19E2B)
     (fp_text reference R230 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -4170,7 +4170,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EFDDE74)
-    (at 380.19 144.31493)
+    (at -36.81 129.31493)
     (path /5EDD7150/62B19E20)
     (fp_text reference R229 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -4190,7 +4190,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EFDDE6E)
-    (at 377.69 145.81493)
+    (at -59.31 128.81493)
     (path /5EDD7150/62B19BFB)
     (fp_text reference R228 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -4210,7 +4210,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EFDDE68)
-    (at 380.19 142.81493)
+    (at -36.81 127.81493)
     (path /5EDD7150/62B14643)
     (fp_text reference R227 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -4471,7 +4471,7 @@
   )
 
   (module azonenberg_pcb:EIA_1206_FUSE_NOSILK (layer F.Cu) (tedit 5EF3DA81) (tstamp 5EFAEB29)
-    (at 340.8 196.1)
+    (at -66.7 52.6)
     (path /5EDD71A3/62A0E6E6)
     (fp_text reference F17 (at 0.2 2.1) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -4491,7 +4491,7 @@
   )
 
   (module azonenberg_pcb:EIA_1206_FUSE_NOSILK (layer F.Cu) (tedit 5EF3DA81) (tstamp 5EFAEB23)
-    (at 340.8 193.2)
+    (at -66.7 49.7)
     (path /5EDD71A3/62A0E410)
     (fp_text reference F16 (at 0.2 2.1) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -4511,7 +4511,7 @@
   )
 
   (module azonenberg_pcb:EIA_1206_FUSE_NOSILK (layer F.Cu) (tedit 5EF3DA81) (tstamp 5EFAEB1D)
-    (at 335.8 196.1)
+    (at -71.7 52.6)
     (path /5EDD71A3/62A0DF72)
     (fp_text reference F15 (at 0.2 2.1) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -4531,7 +4531,7 @@
   )
 
   (module azonenberg_pcb:EIA_1206_FUSE_NOSILK (layer F.Cu) (tedit 5EF3DA81) (tstamp 5EFAEB17)
-    (at 335.8 193.2)
+    (at -71.7 49.7)
     (path /5EDD71A3/62A08D02)
     (fp_text reference F14 (at 0.2 2.1) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -5096,7 +5096,7 @@
   )
 
   (module azonenberg_pcb:EIA_1206_FUSE_NOSILK (layer F.Cu) (tedit 5EF3DA81) (tstamp 5EF63B51)
-    (at -45 132.50507)
+    (at -28 109.50507)
     (path /5EDD7150/611CBEBF/611CD699)
     (fp_text reference F13 (at 0.2 2.1) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -5136,7 +5136,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF640CC)
-    (at -15.62 189.03)
+    (at 6.38 158.53)
     (path /5EDD723A/5F0BA462/5F0AF6C3)
     (fp_text reference R2 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -5156,7 +5156,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF640D2)
-    (at -22.7 195.63)
+    (at -0.7 165.13)
     (path /5EDD723A/5F0BA462/5F0B1DDC)
     (fp_text reference R3 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -5216,7 +5216,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF634F6)
-    (at 353.01 154.88)
+    (at 2.51 207.88)
     (path /5EDD71A3/6099F2A8)
     (fp_text reference C258 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -5235,18 +5235,18 @@
     )
   )
 
-  (module azonenberg_pcb:EIA_0805_INDUCTOR_NOSILK (layer F.Cu) (tedit 53D26553) (tstamp 5EF6401B)
-    (at 234.3 70.1)
+  (module azonenberg_pcb:EIA_0805_INDUCTOR_NOSILK (layer B.Cu) (tedit 53D26553) (tstamp 5EF6401B)
+    (at 243.6 58 180)
     (path /5EDDB439/60DE3353)
-    (fp_text reference L4 (at -0.25 1.25) (layer F.SilkS)
-      (effects (font (size 0.75 0.75) (thickness 0.1)))
+    (fp_text reference L4 (at 2.2 0) (layer B.SilkS)
+      (effects (font (size 0.75 0.75) (thickness 0.1)) (justify mirror))
     )
-    (fp_text value "1 uH" (at 0.25 2) (layer F.SilkS) hide
-      (effects (font (size 0.508 0.457) (thickness 0.11)))
+    (fp_text value "1 uH" (at 0.25 -2) (layer B.SilkS) hide
+      (effects (font (size 0.508 0.457) (thickness 0.11)) (justify mirror))
     )
-    (pad 2 smd rect (at 0.9 0) (size 0.8 1.2) (layers F.Cu F.Paste F.Mask)
+    (pad 2 smd rect (at 0.9 0 180) (size 0.8 1.2) (layers B.Cu B.Paste B.Mask)
       (net 2 /3V3))
-    (pad 1 smd rect (at -0.9 0) (size 0.8 1.2) (layers F.Cu F.Paste F.Mask)
+    (pad 1 smd rect (at -0.9 0 180) (size 0.8 1.2) (layers B.Cu B.Paste B.Mask)
       (net 66 /QSFP+/QSFP_VCC_RX))
     (model /nfs4/home/azonenberg/kicad-libs/3rdparty/walter/smd_inductors/inductor_smd_0805.wrl
       (at (xyz 0 0 0))
@@ -5255,18 +5255,18 @@
     )
   )
 
-  (module azonenberg_pcb:EIA_0805_INDUCTOR_NOSILK (layer F.Cu) (tedit 53D26553) (tstamp 5EF64021)
-    (at 225.45 69.35)
+  (module azonenberg_pcb:EIA_0805_INDUCTOR_NOSILK (layer B.Cu) (tedit 53D26553) (tstamp 5EF64021)
+    (at 243.6 54.4 180)
     (path /5EDDB439/60DE6993)
-    (fp_text reference L5 (at -0.25 1.25) (layer F.SilkS)
-      (effects (font (size 0.75 0.75) (thickness 0.1)))
+    (fp_text reference L5 (at 2.2 0) (layer B.SilkS)
+      (effects (font (size 0.75 0.75) (thickness 0.1)) (justify mirror))
     )
-    (fp_text value "1 uH" (at 0.25 2) (layer F.SilkS) hide
-      (effects (font (size 0.508 0.457) (thickness 0.11)))
+    (fp_text value "1 uH" (at 0.25 -2) (layer B.SilkS) hide
+      (effects (font (size 0.508 0.457) (thickness 0.11)) (justify mirror))
     )
-    (pad 2 smd rect (at 0.9 0) (size 0.8 1.2) (layers F.Cu F.Paste F.Mask)
+    (pad 2 smd rect (at 0.9 0 180) (size 0.8 1.2) (layers B.Cu B.Paste B.Mask)
       (net 2 /3V3))
-    (pad 1 smd rect (at -0.9 0) (size 0.8 1.2) (layers F.Cu F.Paste F.Mask)
+    (pad 1 smd rect (at -0.9 0 180) (size 0.8 1.2) (layers B.Cu B.Paste B.Mask)
       (net 67 /QSFP+/QSFP_VCC_TX))
     (model /nfs4/home/azonenberg/kicad-libs/3rdparty/walter/smd_inductors/inductor_smd_0805.wrl
       (at (xyz 0 0 0))
@@ -5276,7 +5276,7 @@
   )
 
   (module azonenberg_pcb:CAP_SEIKO_CPH3225A (layer F.Cu) (tedit 5BE683D8) (tstamp 5EF63502)
-    (at 334.795001 153.105001)
+    (at -15.704999 206.105001)
     (path /5EDD71A3/60A31C7A)
     (fp_text reference C259 (at 0 4.35) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -5297,7 +5297,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF6349C)
-    (at 350.51 154.88)
+    (at 0.01 207.88)
     (path /5EDD71A3/608EF355)
     (fp_text reference C243 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -5317,7 +5317,7 @@
   )
 
   (module azonenberg_pcb:EIA_0603_CAP_NOSILK (layer F.Cu) (tedit 53C52A1B) (tstamp 5EF634A2)
-    (at 337.61 155.98)
+    (at -12.89 208.98)
     (path /5EDD71A3/608D15B9)
     (fp_text reference C244 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -5337,7 +5337,7 @@
   )
 
   (module azonenberg_pcb:EIA_0603_CAP_NOSILK (layer F.Cu) (tedit 53C52A1B) (tstamp 5EF634A8)
-    (at 334.31 155.98)
+    (at -16.19 208.98)
     (path /5EDD71A3/608D5D13)
     (fp_text reference C245 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -5357,7 +5357,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF62FAE)
-    (at -17.7 194.25)
+    (at 4.3 163.75)
     (path /5EDD723A/5F0BA462/5F0E0F4D)
     (fp_text reference C34 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -5417,7 +5417,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF6347E)
-    (at 347.72 153.38)
+    (at -2.78 206.38)
     (path /5EDD71A3/608EF349)
     (fp_text reference C238 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -5549,7 +5549,7 @@
   )
 
   (module azonenberg_pcb:EIA_0603_CAP_NOSILK (layer F.Cu) (tedit 53C52A1B) (tstamp 5EF6381C)
-    (at -16.15 175.78)
+    (at -70.15 155.78)
     (path /5EDD7150/61580EA1/61979949)
     (fp_text reference C390 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -5569,7 +5569,7 @@
   )
 
   (module azonenberg_pcb:EIA_0603_CAP_NOSILK (layer F.Cu) (tedit 53C52A1B) (tstamp 5EF63822)
-    (at 2.39 170.43)
+    (at -51.61 150.43)
     (path /5EDD7150/61580EA1/6196D103)
     (fp_text reference C391 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -5589,7 +5589,7 @@
   )
 
   (module azonenberg_pcb:EIA_0603_CAP_NOSILK (layer F.Cu) (tedit 53C52A1B) (tstamp 5EF63828)
-    (at 6.52 164.9)
+    (at -47.48 144.9)
     (path /5EDD7150/61580EA1/6196C9E2)
     (fp_text reference C392 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -5769,7 +5769,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF62F12)
-    (at -15.2 195.75)
+    (at 6.8 165.25)
     (path /5EDD723A/5F0BA462/5F258F0E)
     (fp_text reference C8 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -6246,7 +6246,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF63888)
-    (at -53.67 139.37)
+    (at -36.67 116.37)
     (path /5EDD7150/611CBEBF/61CB85CF)
     (fp_text reference C408 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -6342,7 +6342,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF62FA8)
-    (at -29.6 206.1)
+    (at -7.6 175.6)
     (path /5EDD723A/5F0BA462/5F0E0F13)
     (fp_text reference C33 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -6944,7 +6944,7 @@
   )
 
   (module azonenberg_pcb:EIA_1812_CAP_NOSILK (layer F.Cu) (tedit 5EF1EE7A) (tstamp 5EF62F4E)
-    (at -57.125 201.03)
+    (at -35.125 170.53)
     (path /5EDD723A/5F0BA462/5F0DB186)
     (fp_text reference C18 (at -0.05 2.65) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -7176,7 +7176,7 @@
   )
 
   (module azonenberg_pcb:EIA_1812_CAP_NOSILK (layer F.Cu) (tedit 5EF1EE7A) (tstamp 5EF62F48)
-    (at -43.225 189.03)
+    (at -21.225 158.53)
     (path /5EDD723A/5F0BA462/5F0D5D0C)
     (fp_text reference C17 (at -0.05 2.65) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -7308,7 +7308,7 @@
   )
 
   (module azonenberg_pcb:CONN_MOLEX_KK_22-23-2041 (layer F.Cu) (tedit 5EF1A77B) (tstamp 5EF64015)
-    (at 325.395001 149.855001)
+    (at -25.104999 202.855001)
     (path /5EDD71A3/62179CF1)
     (fp_text reference J33 (at 0 6.25) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -7764,7 +7764,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF6428B)
-    (at 375.61 184.92)
+    (at 157.61 44.92)
     (path /5EEF3B79/60ECECC8)
     (fp_text reference R76 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -7991,7 +7991,7 @@
   )
 
   (module azonenberg_pcb:EIA_1812_CAP_NOSILK (layer F.Cu) (tedit 5EF1EE7A) (tstamp 5EF62F30)
-    (at -50.175 189.03)
+    (at -28.175 158.53)
     (path /5EDD723A/5F0BA462/5F09F5DF)
     (fp_text reference C13 (at -0.05 2.65) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -8171,7 +8171,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF63B4B)
-    (at -29.52 203.1)
+    (at -7.52 172.6)
     (path /5EDD723A/5F0BA462/5F16AF0C)
     (fp_text reference F12 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -8382,7 +8382,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF63140)
-    (at 368.02 193.37)
+    (at 150.02 53.37)
     (path /5EEF3B79/6113398E)
     (fp_text reference C101 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -8402,7 +8402,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF63146)
-    (at 380.61 184.62)
+    (at 162.61 44.62)
     (path /5EEF3B79/6110E266)
     (fp_text reference C102 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -8588,7 +8588,7 @@
   )
 
   (module azonenberg_pcb:EIA_0603_CAP_NOSILK (layer F.Cu) (tedit 53C52A1B) (tstamp 5EF635AC)
-    (at 372.71 183.57)
+    (at 154.71 43.57)
     (path /5EEF3B79/60F66D93)
     (fp_text reference C286 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -8608,7 +8608,7 @@
   )
 
   (module azonenberg_pcb:EIA_0603_CAP_NOSILK (layer F.Cu) (tedit 53C52A1B) (tstamp 5EF635B2)
-    (at 359.21 195.57)
+    (at 141.21 55.57)
     (path /5EEF3B79/60F5D26D)
     (fp_text reference C287 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -8688,7 +8688,7 @@
   )
 
   (module azonenberg_pcb:OHMITE_LVK25 (layer F.Cu) (tedit 56440006) (tstamp 5EF645A9)
-    (at -62.12 138.09)
+    (at -45.12 115.09)
     (path /5EDD7150/611CBEBF/61CBB686)
     (fp_text reference R206 (at 0 7) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -8852,7 +8852,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF645D9)
-    (at 343.01 155.18)
+    (at -7.49 208.18)
     (path /5EDD71A3/620EEEA6)
     (fp_text reference R214 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -8872,7 +8872,7 @@
   )
 
   (module azonenberg_pcb:QFN_24_0.5MM_4x4MM (layer F.Cu) (tedit 5E1D93C8) (tstamp 5EF64F15)
-    (at 360.395001 191.595001)
+    (at 142.395001 51.595001)
     (path /5EEF3B79/60ECECA1)
     (solder_mask_margin 0.05)
     (solder_paste_ratio -0.1)
@@ -8999,7 +8999,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF635A0)
-    (at 381.62 186.12)
+    (at 163.62 46.12)
     (path /5EEF3B79/60F5C688)
     (fp_text reference C284 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -9019,7 +9019,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF635A6)
-    (at 378.11 182.22)
+    (at 160.11 42.22)
     (path /5EEF3B79/60F5FA10)
     (fp_text reference C285 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -9039,7 +9039,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF635E2)
-    (at 370.41 195.57)
+    (at 152.41 55.57)
     (path /5EEF3B79/60F790E9)
     (fp_text reference C295 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -9058,18 +9058,18 @@
     )
   )
 
-  (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF6356E)
-    (at 238.2 69.2)
+  (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer B.Cu) (tedit 53C529C4) (tstamp 5EF6356E)
+    (at 258.2 65.45 270)
     (path /5EDDB439/60DE69A7)
-    (fp_text reference C277 (at 0.05 1.4) (layer F.SilkS)
-      (effects (font (size 0.75 0.75) (thickness 0.1)))
+    (fp_text reference C277 (at 2.25 0.05 90) (layer B.SilkS)
+      (effects (font (size 0.75 0.75) (thickness 0.1)) (justify mirror))
     )
-    (fp_text value "0.1 uF" (at 0.05 3.1) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
+    (fp_text value "0.1 uF" (at 0.05 -3.1 90) (layer B.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
-    (pad 2 smd rect (at 0.5 0) (size 0.5 0.5) (layers F.Cu F.Paste F.Mask)
+    (pad 2 smd rect (at 0.5 0 270) (size 0.5 0.5) (layers B.Cu B.Paste B.Mask)
       (net 1 /GND))
-    (pad 1 smd rect (at -0.5 0) (size 0.5 0.5) (layers F.Cu F.Paste F.Mask)
+    (pad 1 smd rect (at -0.5 0 270) (size 0.5 0.5) (layers B.Cu B.Paste B.Mask)
       (net 67 /QSFP+/QSFP_VCC_TX))
     (model /nfs4/home/azonenberg/kicad-libs/3rdparty/walter/smd_cap/c_0402.wrl
       (at (xyz 0 0 0))
@@ -9078,18 +9078,18 @@
     )
   )
 
-  (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF63574)
-    (at 233.8 73.9)
+  (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer B.Cu) (tedit 53C529C4) (tstamp 5EF63574)
+    (at 259 65.45 270)
     (path /5EDDB439/60DE96F2)
-    (fp_text reference C278 (at 0.05 1.4) (layer F.SilkS)
-      (effects (font (size 0.75 0.75) (thickness 0.1)))
+    (fp_text reference C278 (at 2.25 -0.05 90) (layer B.SilkS)
+      (effects (font (size 0.75 0.75) (thickness 0.1)) (justify mirror))
     )
-    (fp_text value "0.1 uF" (at 0.05 3.1) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
+    (fp_text value "0.1 uF" (at 0.05 -3.1 90) (layer B.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
-    (pad 2 smd rect (at 0.5 0) (size 0.5 0.5) (layers F.Cu F.Paste F.Mask)
+    (pad 2 smd rect (at 0.5 0 270) (size 0.5 0.5) (layers B.Cu B.Paste B.Mask)
       (net 1 /GND))
-    (pad 1 smd rect (at -0.5 0) (size 0.5 0.5) (layers F.Cu F.Paste F.Mask)
+    (pad 1 smd rect (at -0.5 0 270) (size 0.5 0.5) (layers B.Cu B.Paste B.Mask)
       (net 68 /QSFP+/QSFP_VCC1))
     (model /nfs4/home/azonenberg/kicad-libs/3rdparty/walter/smd_cap/c_0402.wrl
       (at (xyz 0 0 0))
@@ -9379,7 +9379,7 @@
   )
 
   (module azonenberg_pcb:SOP_10_0.5MM_3MM (layer F.Cu) (tedit 53E953A2) (tstamp 5EF651E6)
-    (at -19.629999 153.43)
+    (at -73.629999 133.43)
     (path /5EDD7150/61580EA1/61A68DDA)
     (fp_text reference U74 (at 1.4 4.1) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -9419,7 +9419,7 @@
   )
 
   (module azonenberg_pcb:SOP_10_0.5MM_3MM (layer F.Cu) (tedit 53E953A2) (tstamp 5EF651F9)
-    (at -7.229999 162.43)
+    (at -61.229999 142.43)
     (path /5EDD7150/61580EA1/61A80AFC)
     (fp_text reference U75 (at 1.4 4.1) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -9539,7 +9539,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF6411A)
-    (at -29.9 204.6)
+    (at -7.9 174.1)
     (path /5EDD723A/5F0BA462/5F0E0F1F)
     (fp_text reference R15 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -9559,7 +9559,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF64120)
-    (at -16.5 191.25)
+    (at 5.5 160.75)
     (path /5EDD723A/5F0BA462/5F0E0F59)
     (fp_text reference R16 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -9579,7 +9579,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF64126)
-    (at -27.02 203.1)
+    (at -5.02 172.6)
     (path /5EDD723A/5F0BA462/5F0E0F93)
     (fp_text reference R17 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -9599,7 +9599,7 @@
   )
 
   (module azonenberg_pcb:EIA_0603_CAP_NOSILK (layer F.Cu) (tedit 53C52A1B) (tstamp 5EF63484)
-    (at 339.02 152.03)
+    (at -11.48 205.03)
     (path /5EDD71A3/608CDC79)
     (fp_text reference C239 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -9619,7 +9619,7 @@
   )
 
   (module azonenberg_pcb:EIA_0603_CAP_NOSILK (layer F.Cu) (tedit 53C52A1B) (tstamp 5EF6348A)
-    (at 342.32 152.03)
+    (at -8.18 205.03)
     (path /5EDD71A3/608D57D7)
     (fp_text reference C240 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -9679,7 +9679,7 @@
   )
 
   (module azonenberg_pcb:EIA_0805_CAP_NOSILK (layer F.Cu) (tedit 54A4E5F3) (tstamp 5EF6368A)
-    (at -42 129.92)
+    (at -25 106.92)
     (path /5EDD7150/611CBEBF/61463DA2)
     (fp_text reference C323 (at -0.25 1.25) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -9699,7 +9699,7 @@
   )
 
   (module azonenberg_pcb:EIA_0603_CAP_NOSILK (layer F.Cu) (tedit 53C52A1B) (tstamp 5EF63690)
-    (at -63.47 143.29)
+    (at -46.47 120.29)
     (path /5EDD7150/611CBEBF/61463DAD)
     (fp_text reference C324 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -9838,7 +9838,7 @@
   )
 
   (module azonenberg_pcb:OHMITE_LVK12 (layer F.Cu) (tedit 5642E860) (tstamp 5EF64579)
-    (at -34.25 177.8)
+    (at -21.25 143.8)
     (path /5EDD7150/61580EA1/61A4367F)
     (fp_text reference R200 (at 0 4.25) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -9862,7 +9862,7 @@
   )
 
   (module azonenberg_pcb:OHMITE_LVK12 (layer F.Cu) (tedit 5642E860) (tstamp 5EF64581)
-    (at -6.58 167.48)
+    (at -60.58 147.48)
     (path /5EDD7150/61580EA1/61A7A70D)
     (fp_text reference R201 (at 0 4.25) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -9886,7 +9886,7 @@
   )
 
   (module azonenberg_pcb:OHMITE_LVK12 (layer F.Cu) (tedit 5642E860) (tstamp 5EF64589)
-    (at -45.25 177.8)
+    (at -32.25 143.8)
     (path /5EDD7150/61580EA1/61A96FB2)
     (fp_text reference R202 (at 0 4.25) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -9948,7 +9948,7 @@
   )
 
   (module azonenberg_pcb:OHMITE_LVK12 (layer F.Cu) (tedit 5642E860) (tstamp 5EF64591)
-    (at -21.01 165.08)
+    (at -75.01 145.08)
     (path /5EDD7150/61580EA1/61AA4B58)
     (fp_text reference R203 (at 0 4.25) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -9972,7 +9972,7 @@
   )
 
   (module azonenberg_pcb:OHMITE_LVK12 (layer F.Cu) (tedit 5642E860) (tstamp 5EF64599)
-    (at -39.75 177.8)
+    (at -26.75 143.8)
     (path /5EDD7150/61580EA1/61ABC39B)
     (fp_text reference R204 (at 0 4.25) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -9996,7 +9996,7 @@
   )
 
   (module azonenberg_pcb:OHMITE_LVK12 (layer F.Cu) (tedit 5642E860) (tstamp 5EF645A1)
-    (at -50.25 132.97)
+    (at -33.25 109.97)
     (path /5EDD7150/611CBEBF/61C8039F)
     (fp_text reference R205 (at 0 4.25) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -10020,7 +10020,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF644D1)
-    (at -5.16 177.78)
+    (at 7.84 143.78)
     (path /5EDD7150/61580EA1/615D980D)
     (fp_text reference R174 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -10040,7 +10040,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF644D7)
-    (at 0.29 174.18)
+    (at -53.71 154.18)
     (path /5EDD7150/61580EA1/615D7A58)
     (fp_text reference R175 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -10060,7 +10060,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF644DD)
-    (at -3.01 175.98)
+    (at -57.01 155.98)
     (path /5EDD7150/61580EA1/615F3326)
     (fp_text reference R176 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -10080,7 +10080,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF644E3)
-    (at -5.16 179.28)
+    (at 7.84 145.28)
     (path /5EDD7150/61580EA1/61606B59)
     (fp_text reference R177 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -10100,7 +10100,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF644E9)
-    (at 6.12 168.05)
+    (at -47.88 148.05)
     (path /5EDD7150/61580EA1/615F58C5)
     (fp_text reference R178 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -10120,7 +10120,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF644EF)
-    (at -9.25 184.83)
+    (at 12.75 154.33)
     (path /5EDD7150/61580EA1/615F58B7)
     (fp_text reference R179 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -10140,7 +10140,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF644F5)
-    (at -0.51 175.98)
+    (at -54.51 155.98)
     (path /5EDD7150/61580EA1/616028A9)
     (fp_text reference R180 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -10160,7 +10160,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF644FB)
-    (at -16.55 178.93)
+    (at -3.55 144.93)
     (path /5EDD7150/61580EA1/6160289D)
     (fp_text reference R181 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -10351,7 +10351,7 @@
   )
 
   (module azonenberg_pcb:EIA_1812_CAP_NOSILK (layer F.Cu) (tedit 5EF1EE7A) (tstamp 5EF62F7E)
-    (at -57.125 205.03)
+    (at -35.125 174.53)
     (path /5EDD723A/5F0BA462/5F0E0EF3)
     (fp_text reference C26 (at -0.05 2.65) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -11073,7 +11073,7 @@
   )
 
   (module azonenberg_pcb:SOT23_6 (layer F.Cu) (tedit 594DAAAD) (tstamp 5EF6513E)
-    (at 6.945001 161.43)
+    (at -47.054999 141.43)
     (path /5EDD7150/61580EA1/6186613D)
     (fp_text reference U66 (at 0 3.1) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -11102,7 +11102,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF64327)
-    (at -19 192.75)
+    (at 3 162.25)
     (path /5EDD723A/5F0BA462/6091F61A)
     (fp_text reference R103 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -11122,7 +11122,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF6432D)
-    (at -32.4 203.46)
+    (at -10.4 172.96)
     (path /5EDD723A/5F0BA462/6091F626)
     (fp_text reference R104 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -11142,7 +11142,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF64333)
-    (at -37.1 207.33)
+    (at -15.1 176.83)
     (path /5EDD723A/5F0BA462/609278DA)
     (fp_text reference R105 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -11162,7 +11162,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF64339)
-    (at -44 198.38)
+    (at -22 167.88)
     (path /5EDD723A/5F0BA462/609278E6)
     (fp_text reference R106 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -11182,7 +11182,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF6433F)
-    (at -41.25 191.78)
+    (at -19.25 161.28)
     (path /5EDD723A/5F0BA462/609278F2)
     (fp_text reference R107 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -11202,7 +11202,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF64345)
-    (at -48.2 195.78)
+    (at -26.2 165.28)
     (path /5EDD723A/5F0BA462/609278FE)
     (fp_text reference R108 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -11222,7 +11222,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF6434B)
-    (at -15.2 194.25)
+    (at 6.8 163.75)
     (path /5EDD723A/5F0BA462/609317AE)
     (fp_text reference R109 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -11242,7 +11242,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF64351)
-    (at -34.6 208.83)
+    (at -12.6 178.33)
     (path /5EDD723A/5F0BA462/609317BA)
     (fp_text reference R110 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -11262,7 +11262,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF64357)
-    (at -32.1 206.46)
+    (at -10.1 175.96)
     (path /5EDD723A/5F0BA462/609317C6)
     (fp_text reference R111 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -11342,7 +11342,7 @@
   )
 
   (module azonenberg_pcb:SOP_10_0.5MM_3MM (layer F.Cu) (tedit 53E953A2) (tstamp 5EF64C11)
-    (at -51.549999 204.93)
+    (at -29.549999 174.43)
     (path /5EDD723A/5F0BA462/5F229B8D)
     (fp_text reference U12 (at 1.4 4.1) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -11383,7 +11383,7 @@
   )
 
   (module azonenberg_pcb:SOP_10_0.5MM_3MM (layer F.Cu) (tedit 53E953A2) (tstamp 5EF64C24)
-    (at -30.699999 186.33)
+    (at -8.699999 155.83)
     (path /5EDD723A/5F0BA462/5F229BA2)
     (fp_text reference U13 (at 1.4 4.1) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -11424,7 +11424,7 @@
   )
 
   (module azonenberg_pcb:SOP_10_0.5MM_3MM (layer F.Cu) (tedit 53E953A2) (tstamp 5EF64C37)
-    (at -37.649999 190.33)
+    (at -15.649999 159.83)
     (path /5EDD723A/5F0BA462/5F229BB7)
     (fp_text reference U14 (at 1.4 4.1) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -11465,7 +11465,7 @@
   )
 
   (module azonenberg_pcb:SOP_10_0.5MM_3MM (layer F.Cu) (tedit 53E953A2) (tstamp 5EF64C4A)
-    (at -44.599999 194.33)
+    (at -22.599999 163.83)
     (path /5EDD723A/5F0BA462/5F229BCC)
     (fp_text reference U15 (at 1.4 4.1) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -11506,7 +11506,7 @@
   )
 
   (module azonenberg_pcb:SOP_10_0.5MM_3MM (layer F.Cu) (tedit 53E953A2) (tstamp 5EF64C5D)
-    (at -51.549999 198.33)
+    (at -29.549999 167.83)
     (path /5EDD723A/5F0BA462/5F229BE1)
     (fp_text reference U16 (at 1.4 4.1) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -11547,7 +11547,7 @@
   )
 
   (module azonenberg_pcb:DFN_8_0.5MM_2x2MM (layer F.Cu) (tedit 54A5D49E) (tstamp 5EF64C71)
-    (at -47.6 206.105001)
+    (at -25.6 175.605001)
     (path /5EDD723A/5F0BA462/5F08A13F)
     (fp_text reference U17 (at 0 2) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -11659,7 +11659,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF63158)
-    (at 378.11 183.72)
+    (at 160.11 43.72)
     (path /5EEF3B79/6110E278)
     (fp_text reference C105 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -11727,7 +11727,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF62F18)
-    (at -24.6 206.1)
+    (at -2.6 175.6)
     (path /5EDD723A/5F0BA462/5F247B7D)
     (fp_text reference C9 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -11747,7 +11747,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF62EF4)
-    (at -29.6 209.1)
+    (at -7.6 178.6)
     (path /5EDD723A/5F0BA462/5F258EDC)
     (fp_text reference C3 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -11787,7 +11787,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF62EFA)
-    (at -18.69 198.75)
+    (at 3.31 168.25)
     (path /5EDD723A/5F0BA462/5F258F02)
     (fp_text reference C4 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -12158,9 +12158,9 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF63550)
-    (at 240.5 64.55)
+    (at 241.9 49)
     (path /5EDDB439/60DE1396)
-    (fp_text reference C272 (at 0.05 1.4) (layer F.SilkS)
+    (fp_text reference C272 (at -2.5 0) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
     )
     (fp_text value "0.1 uF" (at 0.05 3.1) (layer F.SilkS) hide
@@ -12178,17 +12178,17 @@
   )
 
   (module azonenberg_pcb:EIA_1210_CAP_NOSILK (layer F.Cu) (tedit 54A4E4D1) (tstamp 5F0A490F)
-    (at 366.08 115.75507)
+    (at 243 58.5 180)
     (path /5EDDB439/60DE4423)
-    (fp_text reference C273 (at 0.2 2.1) (layer F.SilkS)
+    (fp_text reference C273 (at 2.75 0 90) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
     )
     (fp_text value "22 uF" (at 0 3.7) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (pad 2 smd rect (at 1.55 0.01493) (size 0.9 2.9) (layers F.Cu F.Paste F.Mask)
+    (pad 2 smd rect (at 1.55 0.01493 180) (size 0.9 2.9) (layers F.Cu F.Paste F.Mask)
       (net 1 /GND))
-    (pad 1 smd rect (at -1.55 0.01493) (size 0.9 2.9) (layers F.Cu F.Paste F.Mask)
+    (pad 1 smd rect (at -1.55 0.01493 180) (size 0.9 2.9) (layers F.Cu F.Paste F.Mask)
       (net 66 /QSFP+/QSFP_VCC_RX))
     (model /nfs4/home/azonenberg/kicad-libs/3rdparty/walter/smd_cap/c_1210.wrl
       (at (xyz 0 0 0))
@@ -12448,7 +12448,7 @@
   )
 
   (module azonenberg_pcb:DFN_8_0.5MM_2x3MM_TALL (layer F.Cu) (tedit 5EF1E0CE) (tstamp 5EF65087)
-    (at -38.049999 124.22)
+    (at -21.049999 101.22)
     (path /5EDD7150/611CBEBF/61463D9C)
     (solder_mask_margin 0.05)
     (solder_paste_ratio -0.1)
@@ -12880,7 +12880,7 @@
   )
 
   (module azonenberg_pcb:EIA_0603_LED (layer F.Cu) (tedit 53C52A72) (tstamp 5EF63AF5)
-    (at 327.295001 157.455001)
+    (at -23.204999 210.455001)
     (path /5EDD71A3/621AC5F1)
     (fp_text reference D27 (at 0 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -12901,7 +12901,7 @@
   )
 
   (module azonenberg_pcb:EIA_0603_LED (layer F.Cu) (tedit 53C52A72) (tstamp 5EF63AFC)
-    (at 334.085001 141.805001)
+    (at -16.414999 194.805001)
     (path /5EDD71A3/621B753D)
     (fp_text reference D28 (at 0 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -12922,7 +12922,7 @@
   )
 
   (module azonenberg_pcb:EIA_0603_LED (layer F.Cu) (tedit 53C52A72) (tstamp 5EF63B03)
-    (at 331.015001 156.255001)
+    (at -19.484999 209.255001)
     (path /5EDD71A3/621B7554)
     (fp_text reference D29 (at 0 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -12943,7 +12943,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF63B09)
-    (at -27.4 204.6)
+    (at -5.4 174.1)
     (path /5EDD723A/5F0BA462/5F114CFF)
     (fp_text reference F1 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -13177,7 +13177,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF63B2D)
-    (at -18.69 197.25)
+    (at 3.31 166.75)
     (path /5EDD723A/5F0BA462/5F14F3B9)
     (fp_text reference F7 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -13197,7 +13197,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF63B33)
-    (at -17.7 195.75)
+    (at 4.3 165.25)
     (path /5EDD723A/5F0BA462/5F15692F)
     (fp_text reference F8 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -13217,7 +13217,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF63B39)
-    (at -29.6 207.6)
+    (at -7.6 177.1)
     (path /5EDD723A/5F0BA462/5F15BB6C)
     (fp_text reference F9 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -13237,7 +13237,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF63B3F)
-    (at -27.1 206.1)
+    (at -5.1 175.6)
     (path /5EDD723A/5F0BA462/5F160ACF)
     (fp_text reference F10 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -13257,7 +13257,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF63B45)
-    (at -22.02 200.88)
+    (at -0.02 170.38)
     (path /5EDD723A/5F0BA462/5F165D26)
     (fp_text reference F11 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -13349,7 +13349,7 @@
   )
 
   (module azonenberg_pcb:CONN_HEADER_2.54MM_1x4 (layer F.Cu) (tedit 594B5D58) (tstamp 5EF64641)
-    (at 325.895001 143.205001)
+    (at -24.604999 196.205001)
     (path /5EDD71A3/6089DD84)
     (fp_text reference TP1 (at -3 4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -13378,7 +13378,7 @@
   )
 
   (module azonenberg_pcb:TESTPOINT_SMT_0.5MM (layer F.Cu) (tedit 53C661B2) (tstamp 5EF64646)
-    (at -55.87 141.14)
+    (at -38.87 118.14)
     (path /5EDD7150/611CBEBF/6160F22C)
     (fp_text reference TP2 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -13802,7 +13802,7 @@
   )
 
   (module azonenberg_pcb:EIA_0603_RES_NOSILK (layer F.Cu) (tedit 53C52A47) (tstamp 5EF640EA)
-    (at -55.2315 209.162)
+    (at -33.2315 178.662)
     (path /5EDD723A/5F0BA462/5F12A5D5)
     (fp_text reference R7 (at 0 1.6) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -13822,7 +13822,7 @@
   )
 
   (module azonenberg_pcb:EIA_0603_RES_NOSILK (layer F.Cu) (tedit 53C52A47) (tstamp 5EF640F0)
-    (at -51.9015 209.162)
+    (at -29.9015 178.662)
     (path /5EDD723A/5F0BA462/5F13860B)
     (fp_text reference R8 (at 0 1.6) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -13842,7 +13842,7 @@
   )
 
   (module azonenberg_pcb:EIA_0603_RES_NOSILK (layer F.Cu) (tedit 53C52A47) (tstamp 5EF640F6)
-    (at -32.4315 198.062)
+    (at -10.4315 167.562)
     (path /5EDD723A/5F0BA462/5F13C7F6)
     (fp_text reference R9 (at 0 1.6) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -13862,7 +13862,7 @@
   )
 
   (module azonenberg_pcb:EIA_0603_RES_NOSILK (layer F.Cu) (tedit 53C52A47) (tstamp 5EF640FC)
-    (at -32.4315 199.922)
+    (at -10.4315 169.422)
     (path /5EDD723A/5F0BA462/5F140D35)
     (fp_text reference R10 (at 0 1.6) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -13882,7 +13882,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF642B5)
-    (at 380.41 180.12)
+    (at 162.41 40.12)
     (path /5EEF3B79/60ECECA7)
     (fp_text reference R83 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -13902,7 +13902,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF642BB)
-    (at 372.31 187.02)
+    (at 154.31 47.02)
     (path /5EEF3B79/60EE22EA)
     (fp_text reference R84 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -14002,7 +14002,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF642D9)
-    (at 370.52 192.57)
+    (at 152.52 52.57)
     (path /5EEF3B79/60EE22F9)
     (fp_text reference R89 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -14062,7 +14062,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF642EB)
-    (at 378.11 185.22)
+    (at 160.11 45.22)
     (path /5EEF3B79/60ECECB0)
     (fp_text reference R92 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -14082,7 +14082,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF6435D)
-    (at -20.2 195.75)
+    (at 1.8 165.25)
     (path /5EDD723A/5F0BA462/609317D2)
     (fp_text reference R112 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -14102,7 +14102,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF64363)
-    (at 341.92 153.68)
+    (at -8.58 206.68)
     (path /5EDD71A3/60954F9C)
     (fp_text reference R113 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -14162,7 +14162,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF64375)
-    (at 348.01 154.88)
+    (at -2.49 207.88)
     (path /5EDD71A3/6096DF7F)
     (fp_text reference R116 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -14182,7 +14182,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF6437B)
-    (at 350.22 151.88)
+    (at -0.28 204.88)
     (path /5EDD71A3/609A4A5D)
     (fp_text reference R117 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -14202,7 +14202,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF64381)
-    (at 346.41 156.38)
+    (at -4.09 209.38)
     (path /5EDD71A3/609ED767)
     (fp_text reference R118 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -14242,7 +14242,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF6438D)
-    (at 350.88 159.72)
+    (at 0.38 212.72)
     (path /5EDDB439/60E03197)
     (fp_text reference R120 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -14262,7 +14262,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF64393)
-    (at 347.72 151.88)
+    (at -2.78 204.88)
     (path /5EDD71A3/60E4C937)
     (fp_text reference R121 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -14282,7 +14282,7 @@
   )
 
   (module azonenberg_pcb:DFN_6_0.65MM_2x2MM_GDS (layer F.Cu) (tedit 58C5FA5C) (tstamp 5EF6408D)
-    (at -17.084999 173.005001)
+    (at -71.084999 153.005001)
     (path /5EDD7150/61580EA1/615D9805)
     (solder_mask_margin 0.05)
     (solder_paste_ratio -0.15)
@@ -14322,7 +14322,7 @@
   )
 
   (module azonenberg_pcb:EIA_0603_INDUCTOR_NOSILK (layer F.Cu) (tedit 53CD20DE) (tstamp 5EF63B81)
-    (at 368.72 189.42)
+    (at 150.72 49.42)
     (path /5EEF3B79/60F790DE)
     (fp_text reference FB8 (at 0 1) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -14342,7 +14342,7 @@
   )
 
   (module azonenberg_pcb:EIA_0603_INDUCTOR_NOSILK (layer F.Cu) (tedit 53CD20DE) (tstamp 5EF63B87)
-    (at 365.12 192.02)
+    (at 147.12 52.02)
     (path /5EEF3B79/60F710A9)
     (fp_text reference FB9 (at 0 1) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -14764,7 +14764,7 @@
   )
 
   (module azonenberg_pcb:EIA_1812_CAP_NOSILK (layer F.Cu) (tedit 5EF1EE7A) (tstamp 5EF62F78)
-    (at -57.125 185.03)
+    (at -35.125 154.53)
     (path /5EDD723A/5F0BA462/5F0E0EB9)
     (fp_text reference C25 (at -0.05 2.65) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -14904,7 +14904,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF642F7)
-    (at 374.12 188.52)
+    (at 156.12 48.52)
     (path /5EEF3B79/607B4C8C)
     (fp_text reference R94 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -14924,7 +14924,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF642FD)
-    (at 375.61 186.42)
+    (at 157.61 46.42)
     (path /5EEF3B79/607C0356)
     (fp_text reference R95 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -14944,7 +14944,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF64303)
-    (at 345.22 153.38)
+    (at -5.28 206.38)
     (path /5EDD71A3/607F7894)
     (fp_text reference R96 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -15004,7 +15004,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF64315)
-    (at 340.51 155.48)
+    (at -9.99 208.48)
     (path /5EDD71A3/6062A358)
     (fp_text reference R100 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -15024,7 +15024,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF6431B)
-    (at 345.22 151.88)
+    (at -5.28 204.88)
     (path /5EDD71A3/6064B6A3)
     (fp_text reference R101 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -15224,7 +15224,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF64441)
-    (at 371.62 189.27)
+    (at 153.62 49.27)
     (path /5EEF3B79/6113FF93)
     (fp_text reference R150 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -15355,7 +15355,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF6453D)
-    (at 5.29 170.13)
+    (at -48.71 150.13)
     (path /5EDD7150/61580EA1/61914A59)
     (fp_text reference R192 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -15375,7 +15375,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF64543)
-    (at 1.99 172.08)
+    (at -52.01 152.08)
     (path /5EDD7150/61580EA1/61982161)
     (fp_text reference R193 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -15395,7 +15395,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF64549)
-    (at -16.55 177.43)
+    (at -3.55 143.43)
     (path /5EDD7150/61580EA1/619833B5)
     (fp_text reference R194 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -15620,7 +15620,7 @@
   )
 
   (module azonenberg_pcb:XILINX_JTAG_PTH_MOLEX_0878311420 (layer F.Cu) (tedit 5DE10E60) (tstamp 5EF63C20)
-    (at 328.470001 136.980001)
+    (at -22.029999 189.980001)
     (path /5EDD71A3/5EFC91BD)
     (fp_text reference J1 (at 0 -4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -15666,7 +15666,7 @@
   )
 
   (module azonenberg_pcb:DFN_8_0.5MM_2x2MM (layer F.Cu) (tedit 54A5D49E) (tstamp 5EF65133)
-    (at -19.65 176.755001)
+    (at -6.65 142.755001)
     (path /5EDD7150/61580EA1/617FA7F1)
     (fp_text reference U65 (at 0 2) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -15807,7 +15807,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF63454)
-    (at 375.61 183.42)
+    (at 157.61 43.42)
     (path /5EEF3B79/607BAB55)
     (fp_text reference C231 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -15827,7 +15827,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF6345A)
-    (at 358.57 187.77)
+    (at 140.57 47.77)
     (path /5EEF3B79/607BB030)
     (fp_text reference C232 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -15847,7 +15847,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF63460)
-    (at 364.72 193.67)
+    (at 146.72 53.67)
     (path /5EEF3B79/607C0362)
     (fp_text reference C233 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -16086,7 +16086,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF62F60)
-    (at -37.1 208.83)
+    (at -15.1 178.33)
     (path /5EDD723A/5F0BA462/5F0B1DD0)
     (fp_text reference C21 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -16126,7 +16126,7 @@
   )
 
   (module azonenberg_pcb:EIA_1206_CAP_NOSILK (layer F.Cu) (tedit 53C61E7C) (tstamp 5EF637EC)
-    (at -2.63 164.31507)
+    (at -56.63 144.31507)
     (path /5EDD7150/61580EA1/61813406)
     (fp_text reference C382 (at 0.2 2.1) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -16146,7 +16146,7 @@
   )
 
   (module azonenberg_pcb:EIA_0603_CAP_NOSILK (layer F.Cu) (tedit 53C52A1B) (tstamp 5EF637F2)
-    (at -28.6 162.8)
+    (at -82.6 142.8)
     (path /5EDD7150/61580EA1/617FB390)
     (fp_text reference C383 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -16166,7 +16166,7 @@
   )
 
   (module azonenberg_pcb:EIA_0603_CAP_NOSILK (layer F.Cu) (tedit 53C52A1B) (tstamp 5EF637F8)
-    (at -2.61 174.33)
+    (at -56.61 154.33)
     (path /5EDD7150/61580EA1/617FDC2D)
     (fp_text reference C384 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -16186,7 +16186,7 @@
   )
 
   (module azonenberg_pcb:EIA_1206_CAP_NOSILK (layer F.Cu) (tedit 53C61E7C) (tstamp 5EF637FE)
-    (at 2.37 164.31507)
+    (at -51.63 144.31507)
     (path /5EDD7150/61580EA1/61802C64)
     (fp_text reference C385 (at 0.2 2.1) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -16246,7 +16246,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF635CA)
-    (at 367.91 194.87)
+    (at 149.91 54.87)
     (path /5EEF3B79/60F6FAD3)
     (fp_text reference C291 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -16266,7 +16266,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF635D0)
-    (at 373.02 193.77)
+    (at 155.02 53.77)
     (path /5EEF3B79/60F48ED2)
     (fp_text reference C292 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -16286,7 +16286,7 @@
   )
 
   (module azonenberg_pcb:EIA_1210_CAP_NOSILK (layer F.Cu) (tedit 54A4E4D1) (tstamp 5EF63804)
-    (at -24 177.98507)
+    (at -11 143.98507)
     (path /5EDD7150/61580EA1/619266F4)
     (fp_text reference C386 (at 0.2 2.1) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -16306,7 +16306,7 @@
   )
 
   (module azonenberg_pcb:EIA_1210_CAP_NOSILK (layer F.Cu) (tedit 54A4E4D1) (tstamp 5EF6380A)
-    (at -1.76 171.46507)
+    (at -55.76 151.46507)
     (path /5EDD7150/61580EA1/6191D244)
     (fp_text reference C387 (at 0.2 2.1) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -16326,7 +16326,7 @@
   )
 
   (module azonenberg_pcb:EIA_1210_CAP_NOSILK (layer F.Cu) (tedit 54A4E4D1) (tstamp 5EF63810)
-    (at -2.63 161.06507)
+    (at -56.63 141.06507)
     (path /5EDD7150/61580EA1/6191DAC5)
     (fp_text reference C388 (at 0.2 2.1) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -16346,7 +16346,7 @@
   )
 
   (module azonenberg_pcb:EIA_0603_CAP_NOSILK (layer F.Cu) (tedit 53C52A1B) (tstamp 5EF63816)
-    (at -9.76 181.68)
+    (at 3.24 147.68)
     (path /5EDD7150/61580EA1/61966C1F)
     (fp_text reference C389 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -16386,7 +16386,7 @@
   )
 
   (module azonenberg_pcb:EIA_1210_CAP_NOSILK (layer F.Cu) (tedit 54A4E4D1) (tstamp 5EF636FC)
-    (at -29 177.98507)
+    (at -16 143.98507)
     (path /5EDD7150/61580EA1/615D7A61)
     (fp_text reference C342 (at 0.2 2.1) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -16406,7 +16406,7 @@
   )
 
   (module azonenberg_pcb:EIA_1210_CAP_NOSILK (layer F.Cu) (tedit 54A4E4D1) (tstamp 5EF63702)
-    (at -21.26 168.76507)
+    (at -75.26 148.76507)
     (path /5EDD7150/61580EA1/615F3333)
     (fp_text reference C343 (at 0.2 2.1) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -16426,7 +16426,7 @@
   )
 
   (module azonenberg_pcb:EIA_1210_CAP_NOSILK (layer F.Cu) (tedit 54A4E4D1) (tstamp 5EF63708)
-    (at -11.76 174.26507)
+    (at -65.76 154.26507)
     (path /5EDD7150/61580EA1/61606B66)
     (fp_text reference C344 (at 0.2 2.1) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -16986,7 +16986,7 @@
   )
 
   (module azonenberg_pcb:EIA_1210_CAP_NOSILK (layer F.Cu) (tedit 54A4E4D1) (tstamp 5EF636EA)
-    (at -52.42 136.65507)
+    (at -35.42 113.65507)
     (path /5EDD7150/611CBEBF/6160EA07)
     (fp_text reference C339 (at 0.2 2.1) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -17006,7 +17006,7 @@
   )
 
   (module azonenberg_pcb:EIA_0805_CAP_NOSILK (layer F.Cu) (tedit 54A4E5F3) (tstamp 5EF636F0)
-    (at -48.12 136.02)
+    (at -31.12 113.02)
     (path /5EDD7150/611CBEBF/6160EA0F)
     (fp_text reference C340 (at -0.25 1.25) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -17026,7 +17026,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF6384C)
-    (at 2.79 173.58)
+    (at -51.21 153.58)
     (path /5EDD7150/61580EA1/61A7193D)
     (fp_text reference C398 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -17046,7 +17046,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF63852)
-    (at -25.7 162.65)
+    (at -79.7 142.65)
     (path /5EDD7150/61580EA1/61A80B0F)
     (fp_text reference C399 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -17066,7 +17066,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF63858)
-    (at 5.29 171.63)
+    (at -48.71 151.63)
     (path /5EDD7150/61580EA1/61A9B1A0)
     (fp_text reference C400 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -17086,7 +17086,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF6385E)
-    (at -2.66 178.98)
+    (at 10.34 144.98)
     (path /5EDD7150/61580EA1/61AB3885)
     (fp_text reference C401 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -17106,7 +17106,7 @@
   )
 
   (module azonenberg_pcb:SOP_10_0.5MM_3MM (layer F.Cu) (tedit 53E953A2) (tstamp 5EF64B8C)
-    (at -47.349999 200.93)
+    (at -25.349999 170.43)
     (path /5EDD723A/5F0BA462/5F128C64)
     (fp_text reference U5 (at 1.4 4.1) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -17198,7 +17198,7 @@
   )
 
   (module azonenberg_pcb:DFN_8_0.5MM_2x2MM (layer F.Cu) (tedit 54A5D49E) (tstamp 5EF65174)
-    (at 3.02 167.505001)
+    (at -50.98 147.505001)
     (path /5EDD7150/61580EA1/6195A9FA)
     (fp_text reference U68 (at 0 2) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -17687,7 +17687,7 @@
   )
 
   (module azonenberg_pcb:QFN_64_0.5MM_9x9MM (layer F.Cu) (tedit 55A6D655) (tstamp 5EF64EBF)
-    (at 365.735001 183.195001)
+    (at 147.735001 43.195001)
     (path /5EEF3B79/5EF9E8C0)
     (solder_mask_margin 0.05)
     (solder_paste_ratio -0.1)
@@ -17902,7 +17902,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF645DF)
-    (at 345.51 154.88)
+    (at -4.99 207.88)
     (path /5EDD71A3/621666AA)
     (fp_text reference R215 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -17922,7 +17922,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF645E5)
-    (at 338.91 157.63)
+    (at -11.59 210.63)
     (path /5EDD71A3/6216FE8A)
     (fp_text reference R216 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -17962,7 +17962,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF645F1)
-    (at 351.41 156.38)
+    (at 0.91 209.38)
     (path /5EDD71A3/6210A295)
     (fp_text reference R218 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -18042,7 +18042,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF64609)
-    (at 333.91 157.63)
+    (at -16.59 210.63)
     (path /5EDD71A3/6219872F)
     (fp_text reference R222 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -18062,7 +18062,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF6460F)
-    (at 346.41 157.88)
+    (at -4.09 210.88)
     (path /5EDD71A3/621AC5E7)
     (fp_text reference R223 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -18102,7 +18102,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF62F0C)
-    (at -16.19 197.25)
+    (at 5.81 166.75)
     (path /5EDD723A/5F0BA462/5F258EE8)
     (fp_text reference C7 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -18122,7 +18122,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF62EEE)
-    (at -20.2 194.25)
+    (at 1.8 163.75)
     (path /5EDD723A/5F0BA462/5F252B53)
     (fp_text reference C2 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -18142,7 +18142,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF62F6C)
-    (at -29.52 201.6)
+    (at -7.52 171.1)
     (path /5EDD723A/5F0BA462/5F0D5CF2)
     (fp_text reference C23 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -18162,7 +18162,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF62F00)
-    (at -22.02 202.38)
+    (at -0.02 171.88)
     (path /5EDD723A/5F0BA462/5F1A59A6)
     (fp_text reference C5 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -18222,7 +18222,7 @@
   )
 
   (module azonenberg_pcb:CAP_AL_6.3MM_SMT (layer F.Cu) (tedit 53E96031) (tstamp 5EF63594)
-    (at -48.399999 126.620001)
+    (at -31.399999 103.620001)
     (path /5EDD7150/611CBEBF/61210D30)
     (fp_text reference C282 (at 0 6) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -18250,7 +18250,7 @@
   )
 
   (module azonenberg_pcb:DFN_6_0.65MM_2x2MM_GDS (layer F.Cu) (tedit 58C5FA5C) (tstamp 5EF640C0)
-    (at 339.295001 135.205001)
+    (at -11.204999 188.205001)
     (path /5EDD71A3/620FC815)
     (solder_mask_margin 0.05)
     (solder_paste_ratio -0.15)
@@ -18329,18 +18329,18 @@
     )
   )
 
-  (module azonenberg_pcb:EIA_0805_INDUCTOR_NOSILK (layer F.Cu) (tedit 53D26553) (tstamp 5EF64027)
-    (at 224.8 73.8)
+  (module azonenberg_pcb:EIA_0805_INDUCTOR_NOSILK (layer B.Cu) (tedit 53D26553) (tstamp 5EF64027)
+    (at 243.6 51 180)
     (path /5EDDB439/60DE96DE)
-    (fp_text reference L6 (at -0.25 1.25) (layer F.SilkS)
-      (effects (font (size 0.75 0.75) (thickness 0.1)))
+    (fp_text reference L6 (at 2.2 0 180) (layer B.SilkS)
+      (effects (font (size 0.75 0.75) (thickness 0.1)) (justify mirror))
     )
-    (fp_text value "1 uH" (at 0.25 2) (layer F.SilkS) hide
-      (effects (font (size 0.508 0.457) (thickness 0.11)))
+    (fp_text value "1 uH" (at 0.25 -2) (layer B.SilkS) hide
+      (effects (font (size 0.508 0.457) (thickness 0.11)) (justify mirror))
     )
-    (pad 2 smd rect (at 0.9 0) (size 0.8 1.2) (layers F.Cu F.Paste F.Mask)
+    (pad 2 smd rect (at 0.9 0 180) (size 0.8 1.2) (layers B.Cu B.Paste B.Mask)
       (net 2 /3V3))
-    (pad 1 smd rect (at -0.9 0) (size 0.8 1.2) (layers F.Cu F.Paste F.Mask)
+    (pad 1 smd rect (at -0.9 0 180) (size 0.8 1.2) (layers B.Cu B.Paste B.Mask)
       (net 68 /QSFP+/QSFP_VCC1))
     (model /nfs4/home/azonenberg/kicad-libs/3rdparty/walter/smd_inductors/inductor_smd_0805.wrl
       (at (xyz 0 0 0))
@@ -18350,7 +18350,7 @@
   )
 
   (module azonenberg_pcb:EIA_0805_INDUCTOR_NOSILK (layer F.Cu) (tedit 53D26553) (tstamp 5EF6402D)
-    (at -32.05 163)
+    (at -38.5 136)
     (path /5EDD7150/61580EA1/6182EA24)
     (fp_text reference L7 (at -0.25 1.25) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -18406,7 +18406,7 @@
   )
 
   (module azonenberg_pcb:EIA_0603_LED (layer F.Cu) (tedit 53C52A72) (tstamp 5EF63AEE)
-    (at 327.295001 155.105001)
+    (at -23.204999 208.105001)
     (path /5EDD71A3/6219B30A)
     (fp_text reference D26 (at 0 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -18567,7 +18567,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF644BF)
-    (at -60.57 143.14)
+    (at -43.57 120.14)
     (path /5EDD7150/611CBEBF/6160E9FE)
     (fp_text reference R171 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -18607,7 +18607,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF644CB)
-    (at -2.66 177.48)
+    (at 10.34 143.48)
     (path /5EDD7150/61580EA1/615D9818)
     (fp_text reference R173 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -18667,7 +18667,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF6314C)
-    (at 370.52 191.07)
+    (at 152.52 51.07)
     (path /5EEF3B79/6110E26C)
     (fp_text reference C103 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -18687,7 +18687,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF63152)
-    (at 365.41 195.17)
+    (at 147.41 55.17)
     (path /5EEF3B79/6110E272)
     (fp_text reference C104 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -18727,7 +18727,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF63B15)
-    (at -21.19 198.75)
+    (at 0.81 168.25)
     (path /5EDD723A/5F0BA462/5F13C7EC)
     (fp_text reference F3 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -18747,7 +18747,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF63B1B)
-    (at -32.1 209.46)
+    (at -10.1 178.96)
     (path /5EDD723A/5F0BA462/5F140D2B)
     (fp_text reference F4 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -18767,7 +18767,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF63B21)
-    (at -24.52 202.38)
+    (at -2.52 171.88)
     (path /5EDD723A/5F0BA462/5F1458B6)
     (fp_text reference F5 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -18787,7 +18787,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF63B27)
-    (at -23.69 199.38)
+    (at -1.69 168.88)
     (path /5EDD723A/5F0BA462/5F14A732)
     (fp_text reference F6 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -18978,17 +18978,17 @@
   )
 
   (module azonenberg_pcb:EIA_1210_CAP_NOSILK (layer F.Cu) (tedit 54A4E4D1) (tstamp 5EF6355C)
-    (at 224 65.1)
+    (at 243 55 180)
     (path /5EDDB439/60DE699D)
-    (fp_text reference C274 (at 0.2 2.1) (layer F.SilkS)
+    (fp_text reference C274 (at 2.75 0 90) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
     )
     (fp_text value "22 uF" (at 0 3.7) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (pad 2 smd rect (at 1.55 0.01493) (size 0.9 2.9) (layers F.Cu F.Paste F.Mask)
+    (pad 2 smd rect (at 1.55 0.01493 180) (size 0.9 2.9) (layers F.Cu F.Paste F.Mask)
       (net 1 /GND))
-    (pad 1 smd rect (at -1.55 0.01493) (size 0.9 2.9) (layers F.Cu F.Paste F.Mask)
+    (pad 1 smd rect (at -1.55 0.01493 180) (size 0.9 2.9) (layers F.Cu F.Paste F.Mask)
       (net 67 /QSFP+/QSFP_VCC_TX))
     (model /nfs4/home/azonenberg/kicad-libs/3rdparty/walter/smd_cap/c_1210.wrl
       (at (xyz 0 0 0))
@@ -18998,17 +18998,17 @@
   )
 
   (module azonenberg_pcb:EIA_1210_CAP_NOSILK (layer F.Cu) (tedit 54A4E4D1) (tstamp 5EF63562)
-    (at 229.55 74.4)
+    (at 243 51.5 180)
     (path /5EDDB439/60DE96E8)
-    (fp_text reference C275 (at 0.2 2.1) (layer F.SilkS)
+    (fp_text reference C275 (at 2.8 0.1 90) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
     )
     (fp_text value "22 uF" (at 0 3.7) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (pad 2 smd rect (at 1.55 0.01493) (size 0.9 2.9) (layers F.Cu F.Paste F.Mask)
+    (pad 2 smd rect (at 1.55 0.01493 180) (size 0.9 2.9) (layers F.Cu F.Paste F.Mask)
       (net 1 /GND))
-    (pad 1 smd rect (at -1.55 0.01493) (size 0.9 2.9) (layers F.Cu F.Paste F.Mask)
+    (pad 1 smd rect (at -1.55 0.01493 180) (size 0.9 2.9) (layers F.Cu F.Paste F.Mask)
       (net 68 /QSFP+/QSFP_VCC1))
     (model /nfs4/home/azonenberg/kicad-libs/3rdparty/walter/smd_cap/c_1210.wrl
       (at (xyz 0 0 0))
@@ -19017,18 +19017,18 @@
     )
   )
 
-  (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF63568)
-    (at 231.2 64.1)
+  (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer B.Cu) (tedit 53C529C4) (tstamp 5EF63568)
+    (at 257.8 61.1 90)
     (path /5EDDB439/60DE495B)
-    (fp_text reference C276 (at 0.05 1.4) (layer F.SilkS)
-      (effects (font (size 0.75 0.75) (thickness 0.1)))
+    (fp_text reference C276 (at 2.35 0 90) (layer B.SilkS)
+      (effects (font (size 0.75 0.75) (thickness 0.1)) (justify mirror))
     )
-    (fp_text value "0.1 uF" (at 0.05 3.1) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
+    (fp_text value "0.1 uF" (at 0.05 -3.1 90) (layer B.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
-    (pad 2 smd rect (at 0.5 0) (size 0.5 0.5) (layers F.Cu F.Paste F.Mask)
+    (pad 2 smd rect (at 0.5 0 90) (size 0.5 0.5) (layers B.Cu B.Paste B.Mask)
       (net 1 /GND))
-    (pad 1 smd rect (at -0.5 0) (size 0.5 0.5) (layers F.Cu F.Paste F.Mask)
+    (pad 1 smd rect (at -0.5 0 90) (size 0.5 0.5) (layers B.Cu B.Paste B.Mask)
       (net 66 /QSFP+/QSFP_VCC_RX))
     (model /nfs4/home/azonenberg/kicad-libs/3rdparty/walter/smd_cap/c_0402.wrl
       (at (xyz 0 0 0))
@@ -19038,7 +19038,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF635D6)
-    (at 379.12 186.72)
+    (at 161.12 46.72)
     (path /5EEF3B79/60F48EDC)
     (fp_text reference C293 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -19058,7 +19058,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF640C6)
-    (at -26.19 199.38)
+    (at -4.19 168.88)
     (path /5EDD723A/5F0BA462/5F099850)
     (fp_text reference R1 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -19097,18 +19097,18 @@
     )
   )
 
-  (module azonenberg_pcb:EIA_1210_CAP_NOSILK (layer F.Cu) (tedit 54A4E4D1) (tstamp 5EF6354A)
-    (at 235.8 64.3)
+  (module azonenberg_pcb:EIA_1210_CAP_NOSILK (layer F.Cu) (tedit 54A4E4D1) (tstamp 5F0B2FBC)
+    (at 241.2 46.8 180)
     (path /5EDDB439/60DE0DFB)
-    (fp_text reference C271 (at 0.2 2.1) (layer F.SilkS)
+    (fp_text reference C271 (at 0 2.1) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
     )
     (fp_text value "22 uF" (at 0 3.7) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (pad 2 smd rect (at 1.55 0.01493) (size 0.9 2.9) (layers F.Cu F.Paste F.Mask)
+    (pad 2 smd rect (at 1.55 0.01493 180) (size 0.9 2.9) (layers F.Cu F.Paste F.Mask)
       (net 1 /GND))
-    (pad 1 smd rect (at -1.55 0.01493) (size 0.9 2.9) (layers F.Cu F.Paste F.Mask)
+    (pad 1 smd rect (at -1.55 0.01493 180) (size 0.9 2.9) (layers F.Cu F.Paste F.Mask)
       (net 2 /3V3))
     (model /nfs4/home/azonenberg/kicad-libs/3rdparty/walter/smd_cap/c_1210.wrl
       (at (xyz 0 0 0))
@@ -19118,7 +19118,7 @@
   )
 
   (module azonenberg_pcb:EIA_0603_CAP_NOSILK (layer F.Cu) (tedit 53C52A1B) (tstamp 5EF63526)
-    (at 337.38 141.73)
+    (at -13.12 194.73)
     (path /5EDD71A3/6098605C)
     (fp_text reference C265 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -19138,7 +19138,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF6352C)
-    (at 336.41 157.63)
+    (at -14.09 210.63)
     (path /5EDD71A3/6098697E)
     (fp_text reference C266 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -19158,7 +19158,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF635DC)
-    (at 376.62 189.42)
+    (at 158.62 49.42)
     (path /5EEF3B79/60F77B5F)
     (fp_text reference C294 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -19218,7 +19218,7 @@
   )
 
   (module azonenberg_pcb:EIA_0603_CAP_NOSILK (layer F.Cu) (tedit 53C52A1B) (tstamp 5EF635B8)
-    (at 377.51 178.77)
+    (at 159.51 38.77)
     (path /5EEF3B79/60F5FDF2)
     (fp_text reference C288 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -19238,7 +19238,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF635E8)
-    (at 373.02 192.27)
+    (at 155.02 52.27)
     (path /5EEF3B79/60F710B4)
     (fp_text reference C296 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -19258,7 +19258,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF635BE)
-    (at 372.91 195.57)
+    (at 154.91 55.57)
     (path /5EEF3B79/60F6AF09)
     (fp_text reference C289 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -19278,7 +19278,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF635C4)
-    (at 375.52 190.92)
+    (at 157.52 50.92)
     (path /5EEF3B79/60F6CB5A)
     (fp_text reference C290 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -19378,7 +19378,7 @@
   )
 
   (module azonenberg_pcb:EIA_0603_INDUCTOR_NOSILK (layer F.Cu) (tedit 53CD20DE) (tstamp 5EF63B69)
-    (at 372.71 185.37)
+    (at 154.71 45.37)
     (path /5EEF3B79/60F6793F)
     (fp_text reference FB4 (at 0 1) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -19398,7 +19398,7 @@
   )
 
   (module azonenberg_pcb:EIA_0603_INDUCTOR_NOSILK (layer F.Cu) (tedit 53CD20DE) (tstamp 5EF63B6F)
-    (at 362.51 195.57)
+    (at 144.51 55.57)
     (path /5EEF3B79/60F6CB4F)
     (fp_text reference FB5 (at 0 1) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -19418,7 +19418,7 @@
   )
 
   (module azonenberg_pcb:EIA_0603_INDUCTOR_NOSILK (layer F.Cu) (tedit 53CD20DE) (tstamp 5EF63B75)
-    (at 355.91 195.57)
+    (at 137.91 55.57)
     (path /5EEF3B79/60F6FAC8)
     (fp_text reference FB6 (at 0 1) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -19438,7 +19438,7 @@
   )
 
   (module azonenberg_pcb:EIA_0603_INDUCTOR_NOSILK (layer F.Cu) (tedit 53CD20DE) (tstamp 5EF63B7B)
-    (at 377.51 180.57)
+    (at 159.51 40.57)
     (path /5EEF3B79/60F77B54)
     (fp_text reference FB7 (at 0 1) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -19458,7 +19458,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF63466)
-    (at 368.02 191.87)
+    (at 150.02 51.87)
     (path /5EEF3B79/607C036C)
     (fp_text reference C234 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -19478,7 +19478,7 @@
   )
 
   (module azonenberg_pcb:EIA_0603_CAP_NOSILK (layer F.Cu) (tedit 53C52A1B) (tstamp 5EF6346C)
-    (at 339.02 153.83)
+    (at -11.48 206.83)
     (path /5EDD71A3/608D3B09)
     (fp_text reference C235 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -19498,7 +19498,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF634C0)
-    (at 352.72 153.38)
+    (at 2.22 206.38)
     (path /5EDD71A3/608DC197)
     (fp_text reference C249 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -19598,7 +19598,7 @@
   )
 
   (module azonenberg_pcb:DFN_6_0.65MM_2x2MM_GDS (layer F.Cu) (tedit 58C5FA5C) (tstamp 5EF6409E)
-    (at -8.084999 178.905001)
+    (at 4.915001 144.905001)
     (path /5EDD7150/61580EA1/61602892)
     (solder_mask_margin 0.05)
     (solder_paste_ratio -0.15)
@@ -19634,7 +19634,7 @@
   )
 
   (module azonenberg_pcb:DFN_6_0.65MM_2x2MM_GDS (layer F.Cu) (tedit 58C5FA5C) (tstamp 5EF640AF)
-    (at 339.295001 138.955001)
+    (at -11.204999 191.955001)
     (path /5EDD71A3/621239E1)
     (solder_mask_margin 0.05)
     (solder_paste_ratio -0.15)
@@ -19942,7 +19942,7 @@
   )
 
   (module azonenberg_pcb:SOP_10_0.5MM_3MM (layer F.Cu) (tedit 53E953A2) (tstamp 5EF64B9F)
-    (at -40.399999 196.93)
+    (at -18.399999 166.43)
     (path /5EDD723A/5F0BA462/5F19A8E5)
     (fp_text reference U6 (at 1.4 4.1) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -19983,7 +19983,7 @@
   )
 
   (module azonenberg_pcb:SOP_10_0.5MM_3MM (layer F.Cu) (tedit 53E953A2) (tstamp 5EF64BB2)
-    (at -33.449999 192.93)
+    (at -11.449999 162.43)
     (path /5EDD723A/5F0BA462/5F1AF74E)
     (fp_text reference U7 (at 1.4 4.1) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -20024,7 +20024,7 @@
   )
 
   (module azonenberg_pcb:SOP_10_0.5MM_3MM (layer F.Cu) (tedit 53E953A2) (tstamp 5EF64BC5)
-    (at -22.299999 186.33)
+    (at -0.299999 155.83)
     (path /5EDD723A/5F0BA462/5F1CA9E3)
     (fp_text reference U8 (at 1.4 4.1) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -20065,7 +20065,7 @@
   )
 
   (module azonenberg_pcb:SOP_10_0.5MM_3MM (layer F.Cu) (tedit 53E953A2) (tstamp 5EF64BD8)
-    (at -26.499999 186.33)
+    (at -4.499999 155.83)
     (path /5EDD723A/5F0BA462/5F1FD3BE)
     (fp_text reference U9 (at 1.4 4.1) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -20106,7 +20106,7 @@
   )
 
   (module azonenberg_pcb:SOP_10_0.5MM_3MM (layer F.Cu) (tedit 53E953A2) (tstamp 5EF64BEB)
-    (at -43.149999 203.53)
+    (at -21.149999 173.03)
     (path /5EDD723A/5F0BA462/5F2074DF)
     (fp_text reference U10 (at 1.4 4.1) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -20147,7 +20147,7 @@
   )
 
   (module azonenberg_pcb:SOP_10_0.5MM_3MM (layer F.Cu) (tedit 53E953A2) (tstamp 5EF64BFE)
-    (at -36.199999 199.53)
+    (at -14.199999 169.03)
     (path /5EDD723A/5F0BA462/5F229B78)
     (fp_text reference U11 (at 1.4 4.1) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -20562,7 +20562,7 @@
   )
 
   (module azonenberg_pcb:CRYSTAL_1.6x1.0MM (layer F.Cu) (tedit 5EF1EFB6) (tstamp 5EF652AE)
-    (at 340.33 141.83)
+    (at -10.17 194.83)
     (path /5EDD71A3/60A4BA3C)
     (fp_text reference Y1 (at 0 3.35) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -20582,7 +20582,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF64399)
-    (at 341.41 156.98)
+    (at -9.09 209.98)
     (path /5EDD71A3/60E52F52)
     (fp_text reference R122 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -20602,7 +20602,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF6439F)
-    (at 343.91 156.68)
+    (at -6.59 209.68)
     (path /5EDD71A3/60E59194)
     (fp_text reference R123 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -20762,7 +20762,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF643CF)
-    (at 370.52 194.07)
+    (at 152.52 54.07)
     (path /5EEF3B79/60ECECB6)
     (fp_text reference R131 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -20862,7 +20862,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF64525)
-    (at -6.86 181.53)
+    (at 6.14 147.53)
     (path /5EDD7150/61580EA1/617FFB09)
     (fp_text reference R188 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -20882,7 +20882,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF6452B)
-    (at -9.25 183.33)
+    (at 3.75 149.33)
     (path /5EDD7150/61580EA1/618000EA)
     (fp_text reference R189 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -20902,7 +20902,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF64531)
-    (at 6.12 166.55)
+    (at -47.88 146.55)
     (path /5EDD7150/61580EA1/61876F13)
     (fp_text reference R190 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -21114,7 +21114,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF62F24)
-    (at -37.05 194.38)
+    (at -15.05 163.88)
     (path /5EDD723A/5F0BA462/5F258EF4)
     (fp_text reference C11 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -21185,7 +21185,7 @@
   )
 
   (module azonenberg_pcb:EIA_0603_RES_NOSILK (layer F.Cu) (tedit 53C52A47) (tstamp 5EF64102)
-    (at -18.5315 187.712)
+    (at 3.4685 157.212)
     (path /5EDD723A/5F0BA462/5F1458C0)
     (fp_text reference R11 (at 0 1.6) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -21205,7 +21205,7 @@
   )
 
   (module azonenberg_pcb:EIA_0603_RES_NOSILK (layer F.Cu) (tedit 53C52A47) (tstamp 5EF64108)
-    (at -29.1015 198.062)
+    (at -7.1015 167.562)
     (path /5EDD723A/5F0BA462/5F14A73C)
     (fp_text reference R12 (at 0 1.6) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -21225,7 +21225,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF6410E)
-    (at -23.69 197.88)
+    (at -1.69 167.38)
     (path /5EDD723A/5F0BA462/5F0E0EAB)
     (fp_text reference R13 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -21245,7 +21245,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF64114)
-    (at -27.02 201.6)
+    (at -5.02 171.1)
     (path /5EDD723A/5F0BA462/5F0E0EE5)
     (fp_text reference R14 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -21265,7 +21265,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF640D8)
-    (at -32.4 204.96)
+    (at -10.4 174.46)
     (path /5EDD723A/5F0BA462/5F0C5ABD)
     (fp_text reference R4 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -21285,7 +21285,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF640DE)
-    (at -34.6 207.33)
+    (at -12.6 176.83)
     (path /5EDD723A/5F0BA462/5F0D5CFE)
     (fp_text reference R5 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -21305,7 +21305,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF640E4)
-    (at -19 191.25)
+    (at 3 160.75)
     (path /5EDD723A/5F0BA462/5F0DB178)
     (fp_text reference R6 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -21425,7 +21425,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF62F66)
-    (at -26.19 197.88)
+    (at -4.19 167.38)
     (path /5EDD723A/5F0BA462/5F0C5AB1)
     (fp_text reference C22 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -21556,7 +21556,7 @@
   )
 
   (module azonenberg_pcb:EIA_1812_CAP_NOSILK (layer F.Cu) (tedit 5EF1EE7A) (tstamp 5EF62F42)
-    (at -50.175 193.03)
+    (at -28.175 162.53)
     (path /5EDD723A/5F0BA462/5F0C5ACB)
     (fp_text reference C16 (at -0.05 2.65) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -21636,7 +21636,7 @@
   )
 
   (module azonenberg_pcb:EIA_1812_CAP_NOSILK (layer F.Cu) (tedit 5EF1EE7A) (tstamp 5EF62F36)
-    (at -43.225 185.03)
+    (at -21.225 154.53)
     (path /5EDD723A/5F0BA462/5F0AF6D1)
     (fp_text reference C14 (at -0.05 2.65) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -21676,7 +21676,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF62F72)
-    (at -24.52 200.88)
+    (at -2.52 170.38)
     (path /5EDD723A/5F0BA462/5F0DB16C)
     (fp_text reference C24 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -21696,7 +21696,7 @@
   )
 
   (module azonenberg_pcb:EIA_1812_CAP_NOSILK (layer F.Cu) (tedit 5EF1EE7A) (tstamp 5EF62F8A)
-    (at -57.125 193.03)
+    (at -35.125 162.53)
     (path /5EDD723A/5F0BA462/5F0E0F67)
     (fp_text reference C28 (at -0.05 2.65) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -22338,7 +22338,7 @@
   )
 
   (module azonenberg_pcb:EIA_1812_CAP_NOSILK (layer F.Cu) (tedit 5EF1EE7A) (tstamp 5EF62F96)
-    (at -50.175 185.03)
+    (at -28.175 154.53)
     (path /5EDD723A/5F0BA462/5F0E0FDB)
     (fp_text reference C30 (at -0.05 2.65) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -22378,7 +22378,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF62F1E)
-    (at -19.52 200.25)
+    (at 2.48 169.75)
     (path /5EDD723A/5F0BA462/5F252B6B)
     (fp_text reference C10 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -22549,7 +22549,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF62EE8)
-    (at -24.9 204.6)
+    (at -2.9 174.1)
     (path /5EDD723A/5F0BA462/5F1A5463)
     (fp_text reference C1 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -22569,7 +22569,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF62F9C)
-    (at -32.1 207.96)
+    (at -10.1 177.46)
     (path /5EDD723A/5F0BA462/5F0E0E9F)
     (fp_text reference C31 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -22669,7 +22669,7 @@
   )
 
   (module azonenberg_pcb:EIA_0603_RES_NOSILK (layer F.Cu) (tedit 53C52A47) (tstamp 5EF64144)
-    (at -48.5715 209.162)
+    (at -26.5715 178.662)
     (path /5EDD723A/5F0BA462/5F160AD9)
     (fp_text reference R22 (at 0 1.6) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -22689,7 +22689,7 @@
   )
 
   (module azonenberg_pcb:EIA_0603_RES_NOSILK (layer F.Cu) (tedit 53C52A47) (tstamp 5EF6414A)
-    (at -18.5315 189.572)
+    (at 3.4685 159.072)
     (path /5EDD723A/5F0BA462/5F165D30)
     (fp_text reference R23 (at 0 1.6) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -22709,7 +22709,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF63864)
-    (at -6.75 183.03)
+    (at 6.25 149.03)
     (path /5EDD7150/61580EA1/61AC7A70)
     (fp_text reference C402 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -22729,7 +22729,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF6386A)
-    (at -57.87 141.14)
+    (at -40.87 118.14)
     (path /5EDD7150/611CBEBF/61C862C2)
     (fp_text reference C403 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -22789,7 +22789,7 @@
   )
 
   (module azonenberg_pcb:EIA_1210_CAP_NOSILK (layer F.Cu) (tedit 54A4E4D1) (tstamp 5EF6370E)
-    (at -1.33 167.56507)
+    (at -55.33 147.56507)
     (path /5EDD7150/61580EA1/615D7A69)
     (fp_text reference C345 (at 0.2 2.1) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -22809,7 +22809,7 @@
   )
 
   (module azonenberg_pcb:EIA_1210_CAP_NOSILK (layer F.Cu) (tedit 54A4E4D1) (tstamp 5EF63714)
-    (at -21.26 172.66507)
+    (at -75.26 152.66507)
     (path /5EDD7150/61580EA1/615F333F)
     (fp_text reference C346 (at 0.2 2.1) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -22829,7 +22829,7 @@
   )
 
   (module azonenberg_pcb:EIA_1210_CAP_NOSILK (layer F.Cu) (tedit 54A4E4D1) (tstamp 5EF6371A)
-    (at -16.26 169.16507)
+    (at -70.26 149.16507)
     (path /5EDD7150/61580EA1/61606B72)
     (fp_text reference C347 (at 0.2 2.1) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -22849,7 +22849,7 @@
   )
 
   (module azonenberg_pcb:EIA_1210_CAP_NOSILK (layer F.Cu) (tedit 54A4E4D1) (tstamp 5EF63720)
-    (at -6.76 171.16507)
+    (at -60.76 151.16507)
     (path /5EDD7150/61580EA1/615D7A6F)
     (fp_text reference C348 (at 0.2 2.1) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -23321,7 +23321,7 @@
   )
 
   (module azonenberg_pcb:EIA_1812_CAP_NOSILK (layer F.Cu) (tedit 5EF1EE7A) (tstamp 5EF62F90)
-    (at -57.125 189.03)
+    (at -35.125 158.53)
     (path /5EDD723A/5F0BA462/5F0E0FA1)
     (fp_text reference C29 (at -0.05 2.65) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -23381,7 +23381,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF6357A)
-    (at 353.38 159.72)
+    (at 2.88 212.72)
     (path /5EDDB439/60DC4B1A)
     (fp_text reference C279 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -23421,7 +23421,7 @@
   )
 
   (module azonenberg_pcb:EIA_1206_CAP_NOSILK (layer F.Cu) (tedit 53C61E7C) (tstamp 5EF63586)
-    (at 351.76 195.12507)
+    (at 133.76 55.12507)
     (path /5EEF3B79/60EE77BF)
     (fp_text reference C281 (at 0.2 2.1) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -23745,7 +23745,7 @@
   )
 
   (module azonenberg_pcb:CONN_MOLEX_KK_22-23-2041 (layer F.Cu) (tedit 5EF1A77B) (tstamp 5EF63F98)
-    (at 350.235001 147.055001)
+    (at -51.764999 58.055001)
     (path /5EDD71A3/620E74D2)
     (fp_text reference J27 (at 0 6.25) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -23796,7 +23796,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF63448)
-    (at 380.41 178.62)
+    (at 162.41 38.62)
     (path /5EEF3B79/60796FC4)
     (fp_text reference C229 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -23816,7 +23816,7 @@
   )
 
   (module azonenberg_pcb:EIA_0805_CAP_NOSILK (layer F.Cu) (tedit 54A4E5F3) (tstamp 5EF6344E)
-    (at 365.27 189.82)
+    (at 147.27 49.82)
     (path /5EEF3B79/60798450)
     (fp_text reference C230 (at -0.25 1.25) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -24043,7 +24043,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF62F54)
-    (at -22.7 194.13)
+    (at -0.7 163.63)
     (path /5EDD723A/5F0BA462/5F09418A)
     (fp_text reference C19 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -24163,7 +24163,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF62FA2)
-    (at -16.5 192.75)
+    (at 5.5 162.25)
     (path /5EDD723A/5F0BA462/5F0E0ED9)
     (fp_text reference C32 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -24223,7 +24223,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF643D5)
-    (at 376.62 187.92)
+    (at 158.62 47.92)
     (path /5EEF3B79/60EE22F2)
     (fp_text reference R132 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -24363,7 +24363,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF643FF)
-    (at 373.02 190.77)
+    (at 155.02 50.77)
     (path /5EEF3B79/60EE2301)
     (fp_text reference R139 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -24383,7 +24383,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF64405)
-    (at 380.61 183.12)
+    (at 162.61 43.12)
     (path /5EEF3B79/60F5D6CF)
     (fp_text reference R140 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -24403,7 +24403,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF6440B)
-    (at 380.61 181.62)
+    (at 162.61 41.62)
     (path /5EEF3B79/60F600EB)
     (fp_text reference R141 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -24423,7 +24423,7 @@
   )
 
   (module azonenberg_pcb:CONN_MOLEX_KK_22-23-2041 (layer F.Cu) (tedit 5EF1A77B) (tstamp 5EF63FF7)
-    (at 362.245001 133.105001)
+    (at -52 49)
     (path /5EDD71A3/6216669E)
     (fp_text reference J31 (at 0 6.25) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -24454,7 +24454,7 @@
   )
 
   (module azonenberg_pcb:CONN_MOLEX_KK_22-23-2041 (layer F.Cu) (tedit 5EF1A77B) (tstamp 5EF64006)
-    (at 338.085001 147.055001)
+    (at -12.414999 200.055001)
     (path /5EDD71A3/6216FE7F)
     (fp_text reference J32 (at 0 6.25) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -24485,7 +24485,7 @@
   )
 
   (module azonenberg_pcb:SOP_10_0.5MM_3MM (layer F.Cu) (tedit 53E953A2) (tstamp 5EF6520C)
-    (at -11.429999 169.03)
+    (at -65.429999 149.03)
     (path /5EDD7150/61580EA1/61A9B18F)
     (fp_text reference U76 (at 1.4 4.1) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -24525,7 +24525,7 @@
   )
 
   (module azonenberg_pcb:SOP_10_0.5MM_3MM (layer F.Cu) (tedit 53E953A2) (tstamp 5EF6521F)
-    (at -19.629999 160.03)
+    (at -73.629999 140.03)
     (path /5EDD7150/61580EA1/61AB3874)
     (fp_text reference U77 (at 1.4 4.1) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -24585,7 +24585,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF62F06)
-    (at -27.1 207.6)
+    (at -5.1 177.1)
     (path /5EDD723A/5F0BA462/5F252B5F)
     (fp_text reference C6 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -24605,7 +24605,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF62F2A)
-    (at -39.8 200.98)
+    (at -17.8 170.48)
     (path /5EDD723A/5F0BA462/5F258F1A)
     (fp_text reference C12 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -24625,7 +24625,7 @@
   )
 
   (module azonenberg_pcb:EIA_1812_CAP_NOSILK (layer F.Cu) (tedit 5EF1EE7A) (tstamp 5EF62F3C)
-    (at -57.125 197.03)
+    (at -35.125 166.53)
     (path /5EDD723A/5F0BA462/5F0B1DEA)
     (fp_text reference C15 (at -0.05 2.65) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -24645,7 +24645,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF63490)
-    (at 352.72 151.88)
+    (at 2.22 204.88)
     (path /5EDD71A3/608DBBE0)
     (fp_text reference C241 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -24665,7 +24665,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF63496)
-    (at 350.22 153.38)
+    (at -0.28 206.38)
     (path /5EDD71A3/608E12B9)
     (fp_text reference C242 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -24725,7 +24725,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF63128)
-    (at 375.52 192.42)
+    (at 157.52 52.42)
     (path /5EEF3B79/6110E25A)
     (fp_text reference C97 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -24745,7 +24745,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF6312E)
-    (at 379.12 188.22)
+    (at 161.12 48.22)
     (path /5EEF3B79/6110E260)
     (fp_text reference C98 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -24907,7 +24907,7 @@
   )
 
   (module azonenberg_pcb:SOP_10_0.5MM_3MM (layer F.Cu) (tedit 53E953A2) (tstamp 5EF652A8)
-    (at -57.019999 137.09)
+    (at -40.019999 114.09)
     (path /5EDD7150/611CBEBF/61CB85B9)
     (fp_text reference U84 (at 1.4 4.1) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -24947,7 +24947,7 @@
   )
 
   (module azonenberg_pcb:SOP_10_0.5MM_3MM (layer F.Cu) (tedit 53E953A2) (tstamp 5EF65232)
-    (at -11.429999 162.43)
+    (at -65.429999 142.43)
     (path /5EDD7150/61580EA1/61AC7A5F)
     (fp_text reference U78 (at 1.4 4.1) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -24987,7 +24987,7 @@
   )
 
   (module azonenberg_pcb:SOP_10_0.5MM_3MM (layer F.Cu) (tedit 53E953A2) (tstamp 5EF65245)
-    (at -41.699999 125.32)
+    (at -24.699999 102.32)
     (path /5EDD7150/611CBEBF/61C7EC99)
     (fp_text reference U79 (at 1.4 4.1) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -25067,7 +25067,7 @@
   )
 
   (module azonenberg_pcb:EIA_0603_RES_NOSILK (layer F.Cu) (tedit 53C52A47) (tstamp 5EF64150)
-    (at -29.1015 199.922)
+    (at -7.1015 169.422)
     (path /5EDD723A/5F0BA462/5F16AF16)
     (fp_text reference R24 (at 0 1.6) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -25147,7 +25147,7 @@
   )
 
   (module azonenberg_pcb:DFN_8_0.5MM_2x2MM (layer F.Cu) (tedit 54A5D49E) (tstamp 5EF64C85)
-    (at -29.5 191.505001)
+    (at -7.5 161.005001)
     (path /5EDD723A/5F0BA462/5F0AF6A4)
     (fp_text reference U18 (at 0 2) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -25188,7 +25188,7 @@
   )
 
   (module azonenberg_pcb:DFN_8_0.5MM_2x2MM (layer F.Cu) (tedit 54A5D49E) (tstamp 5EF64C99)
-    (at -22.1 191.505001)
+    (at -0.1 161.005001)
     (path /5EDD723A/5F0BA462/5F0B1DBD)
     (fp_text reference U19 (at 0 2) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -25293,7 +25293,7 @@
   )
 
   (module azonenberg_pcb:DFN_8_0.5MM_2x2MM (layer F.Cu) (tedit 54A5D49E) (tstamp 5EF64CAD)
-    (at -58.75 208.905001)
+    (at -36.75 178.405001)
     (path /5EDD723A/5F0BA462/5F0C5A9E)
     (fp_text reference U20 (at 0 2) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -25398,7 +25398,7 @@
   )
 
   (module azonenberg_pcb:DFN_8_0.5MM_2x2MM (layer F.Cu) (tedit 54A5D49E) (tstamp 5EF64CC1)
-    (at -39.2 204.705001)
+    (at -17.2 174.205001)
     (path /5EDD723A/5F0BA462/5F0D5CDF)
     (fp_text reference U21 (at 0 2) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -25503,7 +25503,7 @@
   )
 
   (module azonenberg_pcb:DFN_8_0.5MM_2x2MM (layer F.Cu) (tedit 54A5D49E) (tstamp 5EF64CD5)
-    (at -25.8 191.505001)
+    (at -3.8 161.005001)
     (path /5EDD723A/5F0BA462/5F0DB159)
     (fp_text reference U22 (at 0 2) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -25544,7 +25544,7 @@
   )
 
   (module azonenberg_pcb:OSCILLATOR_LVDS_7.0x5.0 (layer F.Cu) (tedit 5E86F341) (tstamp 5EF64FA5)
-    (at 353.485001 190.22)
+    (at 135.485001 50.22)
     (path /5EEF3B79/60F4816C)
     (solder_mask_margin 0.05)
     (solder_paste_ratio -0.1)
@@ -25577,7 +25577,7 @@
   )
 
   (module azonenberg_pcb:DFN_8_0.5MM_2x2MM (layer F.Cu) (tedit 54A5D49E) (tstamp 5EF64CE9)
-    (at -29.5 195.255001)
+    (at -7.5 164.755001)
     (path /5EDD723A/5F0BA462/5F0E0E8C)
     (fp_text reference U23 (at 0 2) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -25618,7 +25618,7 @@
   )
 
   (module azonenberg_pcb:DFN_8_0.5MM_2x2MM (layer F.Cu) (tedit 54A5D49E) (tstamp 5EF64CFD)
-    (at -18.35 184.905001)
+    (at 3.65 154.405001)
     (path /5EDD723A/5F0BA462/5F0E0EC6)
     (fp_text reference U24 (at 0 2) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -25984,7 +25984,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF634D2)
-    (at 348.91 156.38)
+    (at -1.59 209.38)
     (path /5EDD71A3/608DC453)
     (fp_text reference C252 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -26004,7 +26004,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF634D8)
-    (at 348.91 157.88)
+    (at -1.59 210.88)
     (path /5EDD71A3/608E12D7)
     (fp_text reference C253 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -26135,7 +26135,7 @@
   )
 
   (module azonenberg_pcb:OSC_ABRACON_AOCJYR (layer F.Cu) (tedit 5EF1F2E8) (tstamp 5EF64F98)
-    (at 354.835001 182.445001)
+    (at 136.835001 42.445001)
     (path /5EEF3B79/60EB6F23)
     (fp_text reference U46 (at 0 7.1) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -26163,7 +26163,7 @@
   )
 
   (module azonenberg_pcb:DFN_8_0.5MM_2x2MM (layer F.Cu) (tedit 54A5D49E) (tstamp 5EF64D11)
-    (at -40.2 208.705001)
+    (at -18.2 178.205001)
     (path /5EDD723A/5F0BA462/5F0E0F00)
     (fp_text reference U25 (at 0 2) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -26204,7 +26204,7 @@
   )
 
   (module azonenberg_pcb:QFN_16_0.5MM_3x3MM (layer F.Cu) (tedit 54AFBA37) (tstamp 5EF64F8B)
-    (at 373.46 180.27)
+    (at 155.46 40.27)
     (path /5EEF3B79/6110E24F)
     (solder_mask_margin 0.05)
     (solder_paste_ratio -0.1)
@@ -26271,7 +26271,7 @@
   )
 
   (module azonenberg_pcb:DFN_8_0.5MM_2x2MM (layer F.Cu) (tedit 54A5D49E) (tstamp 5EF64D25)
-    (at -35.5 204.705001)
+    (at -13.5 174.205001)
     (path /5EDD723A/5F0BA462/5F0E0F3A)
     (fp_text reference U26 (at 0 2) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -26312,7 +26312,7 @@
   )
 
   (module azonenberg_pcb:DFN_8_0.5MM_2x2MM (layer F.Cu) (tedit 54A5D49E) (tstamp 5EF64D39)
-    (at -25.8 195.255001)
+    (at -3.8 164.755001)
     (path /5EDD723A/5F0BA462/5F0E0F74)
     (fp_text reference U27 (at 0 2) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -26353,7 +26353,7 @@
   )
 
   (module azonenberg_pcb:DFN_8_0.5MM_2x2MM (layer F.Cu) (tedit 54A5D49E) (tstamp 5EF64D4D)
-    (at -43.9 208.705001)
+    (at -21.9 178.205001)
     (path /5EDD723A/5F0BA462/5F0E0FAE)
     (fp_text reference U28 (at 0 2) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -26478,7 +26478,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF6350E)
-    (at 351.41 157.88)
+    (at 0.91 210.88)
     (path /5EDD71A3/609C3581)
     (fp_text reference C261 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -26549,7 +26549,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5EF6412C)
-    (at -34.3 187.78)
+    (at -12.3 157.28)
     (path /5EDD723A/5F0BA462/5F0E0FCD)
     (fp_text reference R18 (at 0 1.5) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -26589,7 +26589,7 @@
   )
 
   (module azonenberg_pcb:EIA_0603_RES_NOSILK (layer F.Cu) (tedit 53C52A47) (tstamp 5EF64138)
-    (at -32.4315 201.782)
+    (at -10.4315 171.282)
     (path /5EDD723A/5F0BA462/5F156939)
     (fp_text reference R20 (at 0 1.6) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -26629,7 +26629,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF62FB4)
-    (at -21.19 197.25)
+    (at 0.81 166.75)
     (path /5EDD723A/5F0BA462/5F0E0F87)
     (fp_text reference C35 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -26669,7 +26669,7 @@
   )
 
   (module azonenberg_pcb:EIA_1812_CAP_NOSILK (layer F.Cu) (tedit 5EF1EE7A) (tstamp 5EF62F84)
-    (at -36.275 185.03)
+    (at -14.275 154.53)
     (path /5EDD723A/5F0BA462/5F0E0F2D)
     (fp_text reference C27 (at -0.05 2.65) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -26809,7 +26809,7 @@
   )
 
   (module azonenberg_pcb:EIA_1210_CAP_NOSILK (layer F.Cu) (tedit 54A4E4D1) (tstamp 5EF63726)
-    (at -6.76 175.06507)
+    (at -60.76 155.06507)
     (path /5EDD7150/61580EA1/615F3349)
     (fp_text reference C349 (at 0.2 2.1) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -26829,7 +26829,7 @@
   )
 
   (module azonenberg_pcb:EIA_1210_CAP_NOSILK (layer F.Cu) (tedit 54A4E4D1) (tstamp 5EF6372C)
-    (at 2.37 161.06507)
+    (at -51.63 141.06507)
     (path /5EDD7150/61580EA1/61606B7C)
     (fp_text reference C350 (at 0.2 2.1) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -28724,7 +28724,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_CAP_NOSILK (layer F.Cu) (tedit 53C529C4) (tstamp 5EF62F5A)
-    (at -15.62 187.53)
+    (at 6.38 157.03)
     (path /5EDD723A/5F0BA462/5F0AF6B7)
     (fp_text reference C20 (at 0.05 1.4) (layer F.SilkS)
       (effects (font (size 0.75 0.75) (thickness 0.1)))
@@ -28863,6 +28863,18 @@
     )
   )
 
+  (gr_text VCC_RX (at 231.5 58.5) (layer F.SilkS) (tstamp 5F0B066B)
+    (effects (font (size 0.75 0.75) (thickness 0.1)))
+  )
+  (gr_text VCC_TX (at 224.75 55) (layer F.SilkS) (tstamp 5F0B0667)
+    (effects (font (size 0.75 0.75) (thickness 0.1)))
+  )
+  (gr_text VCC1 (at 232.5 51.75) (layer F.SilkS) (tstamp 5F0B0663)
+    (effects (font (size 0.75 0.75) (thickness 0.1)))
+  )
+  (gr_text GND (at 225.75 48) (layer F.SilkS) (tstamp 5F0B0660)
+    (effects (font (size 0.75 0.75) (thickness 0.1)))
+  )
   (gr_text 1V2 (at 287.25 65.2) (layer F.SilkS) (tstamp 5F087E00)
     (effects (font (size 0.75 0.75) (thickness 0.1)))
   )
@@ -28898,7 +28910,6 @@
   (segment (start 289.065 27.82) (end 292.18 27.82) (width 0.1) (layer In1.Cu) (net 1) (status 10))
   (segment (start 296 52) (end 293 55) (width 0.1) (layer In1.Cu) (net 1))
   (segment (start 272.28 55) (end 266.5 49.22) (width 0.1) (layer In1.Cu) (net 1) (status 20))
-  (segment (start 247.5 26.8) (end 247.5 53.8) (width 0.1) (layer In1.Cu) (net 1) (status 30))
   (segment (start 266.2 44.8) (end 266.5 44.5) (width 0.1) (layer In1.Cu) (net 1))
   (segment (start 247.5 44.8) (end 266.2 44.8) (width 0.1) (layer In1.Cu) (net 1) (status 10))
   (segment (start 266.5 22.22) (end 266.5 44.5) (width 0.1) (layer In1.Cu) (net 1) (status 10))
@@ -29072,7 +29083,6 @@
   (segment (start 260.27 59.92) (end 262.62 59.92) (width 0.1) (layer In1.Cu) (net 1))
   (segment (start 255.4 59.99) (end 255.47 59.92) (width 0.1) (layer In1.Cu) (net 1))
   (segment (start 255.4 62) (end 255.4 59.99) (width 0.1) (layer In1.Cu) (net 1))
-  (segment (start 255.47 59.92) (end 260.27 59.92) (width 0.1) (layer In1.Cu) (net 1))
   (segment (start 253 59.95) (end 253.03 59.92) (width 0.1) (layer In1.Cu) (net 1))
   (segment (start 253 62) (end 253 59.95) (width 0.1) (layer In1.Cu) (net 1))
   (segment (start 250.78 59.92) (end 253.03 59.92) (width 0.1) (layer In1.Cu) (net 1))
@@ -29085,7 +29095,6 @@
   (segment (start 260.6 67.4) (end 260.58 67.42) (width 0.1) (layer In1.Cu) (net 1))
   (segment (start 260.6 64.51) (end 260.6 67.4) (width 0.1) (layer In1.Cu) (net 1))
   (segment (start 262 67.42) (end 260.58 67.42) (width 0.1) (layer In1.Cu) (net 1) (status 10))
-  (segment (start 260.58 67.42) (end 254.8 67.42) (width 0.1) (layer In1.Cu) (net 1) (status 20))
   (via (at 263 64.51) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 1) (status 30))
   (segment (start 262.999999 66.420001) (end 262 67.42) (width 0.1) (layer In1.Cu) (net 1) (status 20))
   (segment (start 263 64.51) (end 262.999999 66.420001) (width 0.1) (layer In1.Cu) (net 1))
@@ -29095,6 +29104,64 @@
   (via (at 255.8 64.51) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 1) (status 30))
   (segment (start 255.799999 66.420001) (end 254.8 67.42) (width 0.1) (layer In1.Cu) (net 1) (status 20))
   (segment (start 255.8 64.51) (end 255.799999 66.420001) (width 0.1) (layer In1.Cu) (net 1))
+  (via (at 258.2 65.95) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 1))
+  (via (at 259 65.95) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 1))
+  (segment (start 259 67.4) (end 259.02 67.42) (width 0.1) (layer In1.Cu) (net 1))
+  (segment (start 260.58 67.42) (end 259.02 67.42) (width 0.1) (layer In1.Cu) (net 1))
+  (segment (start 259 65.95) (end 259 67.4) (width 0.1) (layer In1.Cu) (net 1))
+  (segment (start 259.02 67.42) (end 258.22 67.42) (width 0.1) (layer In1.Cu) (net 1))
+  (segment (start 258.2 65.95) (end 258.2 67.39) (width 0.1) (layer In1.Cu) (net 1))
+  (segment (start 258.22 67.42) (end 258.17 67.42) (width 0.1) (layer In1.Cu) (net 1))
+  (segment (start 258.2 67.39) (end 258.17 67.42) (width 0.1) (layer In1.Cu) (net 1))
+  (segment (start 258.17 67.42) (end 254.8 67.42) (width 0.1) (layer In1.Cu) (net 1))
+  (via (at 257.8 60.6) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 1))
+  (segment (start 257.8 59.95) (end 257.77 59.92) (width 0.1) (layer In1.Cu) (net 1))
+  (segment (start 257.8 60.6) (end 257.8 59.95) (width 0.1) (layer In1.Cu) (net 1))
+  (segment (start 255.47 59.92) (end 257.77 59.92) (width 0.1) (layer In1.Cu) (net 1))
+  (segment (start 257.77 59.92) (end 260.27 59.92) (width 0.1) (layer In1.Cu) (net 1))
+  (via (at 241.5 51.5) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 1))
+  (segment (start 241.45 51.48507) (end 241.48507 51.48507) (width 0.1) (layer F.Cu) (net 1))
+  (segment (start 241.48507 51.48507) (end 241.5 51.5) (width 0.1) (layer F.Cu) (net 1))
+  (segment (start 241.45 58.23507) (end 241.45 57.55) (width 0.1) (layer F.Cu) (net 1))
+  (via (at 241.5 57.5) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 1))
+  (segment (start 241.45 57.55) (end 241.5 57.5) (width 0.1) (layer F.Cu) (net 1))
+  (via (at 241.5 52.5) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 1))
+  (segment (start 241.5 51.5) (end 241.5 52.5) (width 0.1) (layer In1.Cu) (net 1))
+  (via (at 241.5 54) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 1))
+  (segment (start 241.5 52.5) (end 241.5 54) (width 0.1) (layer In1.Cu) (net 1))
+  (via (at 241.5 55) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 1))
+  (segment (start 241.5 54) (end 241.5 55) (width 0.1) (layer In1.Cu) (net 1))
+  (via (at 241.5 56) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 1))
+  (segment (start 241.5 55) (end 241.5 56) (width 0.1) (layer F.Cu) (net 1))
+  (segment (start 241.5 56) (end 241.5 55) (width 0.1) (layer In1.Cu) (net 1))
+  (segment (start 241.5 56) (end 241.5 57.5) (width 0.1) (layer In1.Cu) (net 1))
+  (via (at 241.5 58.5) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 1))
+  (segment (start 241.5 57.5) (end 241.5 58.5) (width 0.1) (layer In1.Cu) (net 1))
+  (via (at 241.5 59.5) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 1))
+  (segment (start 241.5 58.5) (end 241.5 59.5) (width 0.1) (layer In1.Cu) (net 1))
+  (segment (start 247.5 26.8) (end 247.5 48) (width 0.1) (layer In1.Cu) (net 1))
+  (segment (start 247.5 48) (end 247.5 53.8) (width 0.1) (layer In1.Cu) (net 1))
+  (via (at 241.5 50.5) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 1))
+  (segment (start 229.685 50) (end 241 50) (width 0.1) (layer In1.Cu) (net 1))
+  (segment (start 241 50) (end 241.5 50.5) (width 0.1) (layer In1.Cu) (net 1))
+  (via (at 229.5 48) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 1))
+  (segment (start 241.5 51.5) (end 241.5 50.5) (width 0.1) (layer In1.Cu) (net 1))
+  (segment (start 229.5 49.815) (end 229.685 50) (width 0.1) (layer In1.Cu) (net 1))
+  (segment (start 229.5 48) (end 229.5 49.815) (width 0.1) (layer In1.Cu) (net 1))
+  (via (at 242.4 49) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 1))
+  (segment (start 242.4 49.6) (end 241.5 50.5) (width 0.1) (layer In1.Cu) (net 1))
+  (segment (start 242.4 49) (end 242.4 49.6) (width 0.1) (layer In1.Cu) (net 1))
+  (segment (start 242.4 49) (end 242.5 49) (width 0.1) (layer In1.Cu) (net 1))
+  (via (at 239.75 47.75) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 1))
+  (segment (start 239.8 47.8) (end 239.75 47.75) (width 0.1) (layer In1.Cu) (net 1))
+  (segment (start 242.5 49) (end 241.3 47.8) (width 0.1) (layer In1.Cu) (net 1))
+  (segment (start 241.3 47.8) (end 239.8 47.8) (width 0.1) (layer In1.Cu) (net 1))
+  (via (at 239.75 47) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 1))
+  (segment (start 239.75 47.75) (end 239.75 47) (width 0.1) (layer In1.Cu) (net 1))
+  (via (at 239.75 46.25) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 1))
+  (segment (start 239.75 47) (end 239.75 46.25) (width 0.1) (layer F.Cu) (net 1))
+  (via (at 239.75 45.5) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 1))
+  (segment (start 239.75 45.5) (end 239.75 47.75) (width 0.1) (layer In1.Cu) (net 1))
   (via (at 287.1 53.7) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 2) (status 30))
   (via (at 277.45 53.7) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 2) (status 30))
   (via (at 277.6 59.75) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 2) (status 30))
@@ -29137,7 +29204,6 @@
   (segment (start 282.150002 64.4) (end 281.700001 63.949999) (width 0.1) (layer In3.Cu) (net 2))
   (via (at 291.95 59.5) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 2) (status 30))
   (segment (start 291.95 59.5) (end 291.95 60) (width 0.1) (layer In3.Cu) (net 2))
-  (segment (start 278.35 65.85) (end 278.35 66.4) (width 0.1) (layer In3.Cu) (net 2))
   (via (at 270.5 62.4) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 2) (status 30))
   (segment (start 272.65 59.75) (end 277.6 59.75) (width 0.1) (layer In3.Cu) (net 2))
   (segment (start 270.5 61.9) (end 272.65 59.75) (width 0.1) (layer In3.Cu) (net 2))
@@ -29147,12 +29213,49 @@
   (segment (start 286.15 61.1) (end 286.15 61.75) (width 0.1) (layer In3.Cu) (net 2))
   (segment (start 287.05 60.2) (end 286.15 61.1) (width 0.1) (layer In3.Cu) (net 2))
   (via (at 277 66.4) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 2) (status 30))
-  (segment (start 277 66.4) (end 278.35 66.4) (width 0.1) (layer In3.Cu) (net 2))
-  (segment (start 278.35 66.4) (end 278.35 75.15) (width 0.1) (layer In3.Cu) (net 2))
   (via (at 284.8 66.85) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 2) (status 30))
   (segment (start 282.975 64.4) (end 282.75 64.4) (width 0.1) (layer In3.Cu) (net 2))
   (segment (start 284.8 66.225) (end 282.975 64.4) (width 0.1) (layer In3.Cu) (net 2))
   (segment (start 284.8 66.85) (end 284.8 66.225) (width 0.1) (layer In3.Cu) (net 2))
+  (segment (start 242.7 54.4) (end 242.7 54.05) (width 0.1) (layer B.Cu) (net 2))
+  (via (at 242.75 54) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 2))
+  (segment (start 242.7 54.05) (end 242.75 54) (width 0.1) (layer B.Cu) (net 2))
+  (via (at 242.75 54.75) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 2))
+  (segment (start 242.75 54) (end 242.75 54.75) (width 0.1) (layer In3.Cu) (net 2))
+  (segment (start 242.7 51) (end 242.7 50.55) (width 0.1) (layer B.Cu) (net 2))
+  (via (at 242.75 50.5) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 2))
+  (segment (start 242.7 50.55) (end 242.75 50.5) (width 0.1) (layer B.Cu) (net 2))
+  (via (at 242.75 51.25) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 2))
+  (segment (start 242.75 50.5) (end 242.75 51.25) (width 0.1) (layer In3.Cu) (net 2))
+  (segment (start 242.75 51.25) (end 242.75 54) (width 0.1) (layer In3.Cu) (net 2))
+  (via (at 242.75 57.75) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 2))
+  (segment (start 242.75 54.75) (end 242.75 57.75) (width 0.1) (layer In3.Cu) (net 2))
+  (via (at 242.75 58.5) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 2))
+  (segment (start 242.75 57.75) (end 242.75 58.5) (width 0.1) (layer B.Cu) (net 2))
+  (segment (start 242.75 58.5) (end 242.75 57.75) (width 0.1) (layer In3.Cu) (net 2))
+  (segment (start 260.75 61.5) (end 265.055002 61.5) (width 0.1) (layer In3.Cu) (net 2))
+  (segment (start 258.125001 58.875001) (end 260.75 61.5) (width 0.1) (layer In3.Cu) (net 2))
+  (segment (start 265.955002 62.4) (end 270.5 62.4) (width 0.1) (layer In3.Cu) (net 2))
+  (segment (start 265.055002 61.5) (end 265.955002 62.4) (width 0.1) (layer In3.Cu) (net 2))
+  (segment (start 242.75 58.5) (end 243.125001 58.875001) (width 0.1) (layer In3.Cu) (net 2))
+  (segment (start 243.125001 58.875001) (end 258.125001 58.875001) (width 0.1) (layer In3.Cu) (net 2))
+  (segment (start 277.55 65.85) (end 278.35 65.85) (width 0.1) (layer In3.Cu) (net 2))
+  (segment (start 277 66.4) (end 277.55 65.85) (width 0.1) (layer In3.Cu) (net 2))
+  (via (at 241.4 49) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 2))
+  (segment (start 242.55 50.5) (end 242.75 50.5) (width 0.1) (layer In3.Cu) (net 2))
+  (segment (start 241.4 49.35) (end 242.55 50.5) (width 0.1) (layer In3.Cu) (net 2))
+  (segment (start 241.4 49) (end 241.4 49.35) (width 0.1) (layer In3.Cu) (net 2))
+  (via (at 242.75 47.75) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 2))
+  (segment (start 242.3 47.75) (end 242.75 47.75) (width 0.1) (layer In3.Cu) (net 2))
+  (segment (start 241.4 49) (end 241.4 48.65) (width 0.1) (layer In3.Cu) (net 2))
+  (segment (start 241.4 48.65) (end 242.3 47.75) (width 0.1) (layer In3.Cu) (net 2))
+  (via (at 242.75 47) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 2))
+  (segment (start 242.75 47.75) (end 242.75 47) (width 0.1) (layer F.Cu) (net 2))
+  (segment (start 242.75 47) (end 242.75 47.75) (width 0.1) (layer In3.Cu) (net 2))
+  (via (at 242.75 46.25) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 2))
+  (segment (start 242.75 47) (end 242.75 46.25) (width 0.1) (layer In3.Cu) (net 2))
+  (via (at 242.75 45.5) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 2))
+  (segment (start 242.75 46.25) (end 242.75 45.5) (width 0.1) (layer In3.Cu) (net 2))
   (via (at 277.6 58.75) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 22) (status 30))
   (via (at 277.6 60.75) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 22) (status 30))
   (via (at 277.6 63.25) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 22) (status 30))
@@ -29239,6 +29342,60 @@
   (segment (start 275.925 46.24) (end 274.61 46.24) (width 0.1) (layer B.Cu) (net 30) (status 30))
   (segment (start 273.755 48.78) (end 273.75 48.775) (width 0.1) (layer B.Cu) (net 31) (status 30))
   (segment (start 274.905 48.78) (end 273.755 48.78) (width 0.1) (layer B.Cu) (net 31) (status 30))
+  (via (at 257.8 62) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 66))
+  (segment (start 257.8 62) (end 257.8 61.6) (width 0.1) (layer B.Cu) (net 66))
+  (via (at 244.5 58.5) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 66))
+  (segment (start 244.55 58.48507) (end 244.51493 58.48507) (width 0.1) (layer F.Cu) (net 66))
+  (segment (start 244.51493 58.48507) (end 244.5 58.5) (width 0.1) (layer F.Cu) (net 66))
+  (via (at 244.5 57.5) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 66))
+  (segment (start 244.55 58.48507) (end 244.55 59.45) (width 0.1) (layer F.Cu) (net 66))
+  (via (at 244.5 59.5) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 66))
+  (segment (start 244.55 59.45) (end 244.5 59.5) (width 0.1) (layer F.Cu) (net 66))
+  (via (at 236.5 58.5) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 66))
+  (segment (start 244.275001 58.724999) (end 244.5 58.5) (width 0.1) (layer In4.Cu) (net 66))
+  (segment (start 244.124999 58.875001) (end 244.275001 58.724999) (width 0.1) (layer In4.Cu) (net 66))
+  (segment (start 239.325001 58.875001) (end 244.124999 58.875001) (width 0.1) (layer In4.Cu) (net 66))
+  (segment (start 238.95 58.5) (end 239.325001 58.875001) (width 0.1) (layer In4.Cu) (net 66))
+  (segment (start 236.5 58.5) (end 238.95 58.5) (width 0.1) (layer In4.Cu) (net 66))
+  (segment (start 244.5 57.5) (end 244.5 59.5) (width 0.1) (layer In4.Cu) (net 66))
+  (segment (start 255.3 59.5) (end 257.8 62) (width 0.1) (layer In4.Cu) (net 66))
+  (segment (start 244.5 59.5) (end 255.3 59.5) (width 0.1) (layer In4.Cu) (net 66))
+  (via (at 258.2 64.51) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 67))
+  (segment (start 258.2 64.95) (end 258.2 64.51) (width 0.1) (layer B.Cu) (net 67))
+  (segment (start 244.55 54.98507) (end 244.55 55.95) (width 0.1) (layer F.Cu) (net 67))
+  (via (at 244.5 56) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 67))
+  (segment (start 244.55 55.95) (end 244.5 56) (width 0.1) (layer F.Cu) (net 67))
+  (via (at 244.5 55) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 67))
+  (via (at 244.5 54) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 67))
+  (via (at 229.5 55) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 67))
+  (segment (start 244.275001 55.224999) (end 244.5 55) (width 0.1) (layer In4.Cu) (net 67))
+  (segment (start 244.124999 55.375001) (end 244.275001 55.224999) (width 0.1) (layer In4.Cu) (net 67))
+  (segment (start 241.319999 55.375001) (end 244.124999 55.375001) (width 0.1) (layer In4.Cu) (net 67))
+  (segment (start 240.944998 55) (end 241.319999 55.375001) (width 0.1) (layer In4.Cu) (net 67))
+  (segment (start 229.5 55) (end 240.944998 55) (width 0.1) (layer In4.Cu) (net 67))
+  (segment (start 244.5 54) (end 244.5 56) (width 0.1) (layer In4.Cu) (net 67))
+  (segment (start 244.5 55) (end 246.25 55) (width 0.1) (layer In4.Cu) (net 67))
+  (segment (start 246.25 55) (end 246.5 55.25) (width 0.1) (layer In4.Cu) (net 67))
+  (segment (start 246.5 55.25) (end 255.75 55.25) (width 0.1) (layer In4.Cu) (net 67))
+  (segment (start 258.2 57.7) (end 258.2 64.51) (width 0.1) (layer In4.Cu) (net 67))
+  (segment (start 255.75 55.25) (end 258.2 57.7) (width 0.1) (layer In4.Cu) (net 67))
+  (via (at 259 64.51) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 68))
+  (segment (start 259 64.95) (end 259 64.51) (width 0.1) (layer B.Cu) (net 68))
+  (via (at 244.5 52.5) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 68))
+  (segment (start 244.55 51.48507) (end 244.55 52.45) (width 0.1) (layer F.Cu) (net 68))
+  (segment (start 244.55 52.45) (end 244.5 52.5) (width 0.1) (layer F.Cu) (net 68))
+  (via (at 244.5 51.5) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 68))
+  (via (at 244.5 50.5) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 68))
+  (via (at 236.5 51.5) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 68))
+  (segment (start 244.124999 51.875001) (end 244.275001 51.724999) (width 0.1) (layer In4.Cu) (net 68))
+  (segment (start 244.275001 51.724999) (end 244.5 51.5) (width 0.1) (layer In4.Cu) (net 68))
+  (segment (start 239.325001 51.875001) (end 244.124999 51.875001) (width 0.1) (layer In4.Cu) (net 68))
+  (segment (start 238.95 51.5) (end 239.325001 51.875001) (width 0.1) (layer In4.Cu) (net 68))
+  (segment (start 236.5 51.5) (end 238.95 51.5) (width 0.1) (layer In4.Cu) (net 68))
+  (segment (start 244.5 50.5) (end 244.5 52.5) (width 0.1) (layer In4.Cu) (net 68))
+  (segment (start 244.5 51.5) (end 256 51.5) (width 0.1) (layer In4.Cu) (net 68))
+  (segment (start 259 54.5) (end 259 64.51) (width 0.1) (layer In4.Cu) (net 68))
+  (segment (start 256 51.5) (end 259 54.5) (width 0.1) (layer In4.Cu) (net 68))
   (segment (start 277.6 59.25) (end 276.55 59.25) (width 0.1) (layer F.Cu) (net 383) (status 10))
   (via (at 276.15 58.05) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 383))
   (segment (start 276.55 59.25) (end 276.15 58.85) (width 0.1) (layer F.Cu) (net 383))
@@ -29317,6 +29474,16 @@
   (segment (start 254.2 64.51) (end 254.495 64.805) (width 0.11) (layer F.Cu) (net 423) (status 10))
   (segment (start 254.495 65.256506) (end 252.445 67.306506) (width 0.11) (layer F.Cu) (net 423))
   (segment (start 252.445 67.306506) (end 252.445 70.6) (width 0.11) (layer F.Cu) (net 423))
+  (via (at 256.6 64.51) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 424))
+  (segment (start 256.6 64.51) (end 255.14 63.05) (width 0.1) (layer In2.Cu) (net 424))
+  (segment (start 255.14 63.05) (end 243.15 63.05) (width 0.1) (layer In2.Cu) (net 424))
+  (via (at 257.4 64.51) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 425))
+  (segment (start 257.4 64.51) (end 255.64 62.75) (width 0.1) (layer In2.Cu) (net 425))
+  (segment (start 255.64 62.75) (end 249.35 62.75) (width 0.1) (layer In2.Cu) (net 425))
+  (segment (start 249.35 62.75) (end 243.1 62.75) (width 0.1) (layer In2.Cu) (net 425))
+  (via (at 259.8 64.51) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 426))
+  (segment (start 257.79 62.5) (end 243.2 62.5) (width 0.1) (layer In2.Cu) (net 426))
+  (segment (start 259.8 64.51) (end 257.79 62.5) (width 0.1) (layer In2.Cu) (net 426))
   (segment (start 261.4 64.51) (end 261.695 64.805) (width 0.11) (layer F.Cu) (net 427))
   (segment (start 261.695 64.805) (end 261.695 65.256506) (width 0.11) (layer F.Cu) (net 427))
   (segment (start 261.695 65.256506) (end 260.245 66.706506) (width 0.11) (layer F.Cu) (net 427))
@@ -29353,6 +29520,13 @@
   (segment (start 254.305 62.295) (end 254.305 62.793494) (width 0.11) (layer B.Cu) (net 434))
   (segment (start 254.305 62.793494) (end 252.205 64.893494) (width 0.11) (layer B.Cu) (net 434))
   (segment (start 252.205 64.893494) (end 252.205 71.6) (width 0.11) (layer B.Cu) (net 434))
+  (via (at 258.6 62) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 435))
+  (segment (start 258.6 62) (end 257.65 61.05) (width 0.1) (layer In2.Cu) (net 435))
+  (segment (start 257.65 61.05) (end 243.25 61.05) (width 0.1) (layer In2.Cu) (net 435))
+  (via (at 259.4 62) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 436))
+  (segment (start 258.624999 60.224999) (end 243.325001 60.224999) (width 0.1) (layer In2.Cu) (net 436))
+  (segment (start 259.4 62) (end 259.4 61) (width 0.1) (layer In2.Cu) (net 436))
+  (segment (start 259.4 61) (end 258.624999 60.224999) (width 0.1) (layer In2.Cu) (net 436))
   (via (at 261 62) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 437))
   (segment (start 261 62) (end 261.295 62.295) (width 0.11) (layer B.Cu) (net 437))
   (segment (start 261.295 62.295) (end 261.295 65.106506) (width 0.11) (layer B.Cu) (net 437))
@@ -29411,6 +29585,12 @@
   (segment (start 284.4 59.25) (end 287.9 59.25) (width 0.2) (layer F.Cu) (net 903) (status 10))
   (segment (start 287.9 59.25) (end 290.5 61.85) (width 0.2) (layer F.Cu) (net 903))
   (segment (start 290.5 61.85) (end 290.5 67.1) (width 0.2) (layer F.Cu) (net 903))
+  (via (at 256.2 62) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 914))
+  (segment (start 255.824999 61.624999) (end 243.174999 61.624999) (width 0.1) (layer In2.Cu) (net 914))
+  (segment (start 256.2 62) (end 255.824999 61.624999) (width 0.1) (layer In2.Cu) (net 914))
+  (via (at 257 62) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 915))
+  (segment (start 257 62) (end 256.35 61.35) (width 0.1) (layer In2.Cu) (net 915))
+  (segment (start 256.35 61.35) (end 243.167142 61.35) (width 0.1) (layer In2.Cu) (net 915))
   (segment (start 277.6 63.75) (end 276.4 63.75) (width 0.2) (layer F.Cu) (net 920) (status 10))
   (segment (start 276.4 63.75) (end 275.4 64.75) (width 0.2) (layer F.Cu) (net 920))
   (segment (start 275.4 64.75) (end 275.4 66.8) (width 0.2) (layer F.Cu) (net 920))
