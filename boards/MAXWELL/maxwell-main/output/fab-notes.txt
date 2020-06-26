@@ -13,30 +13,31 @@ General fabrication notes
 Impedances
 
 	Control to within 10%.
+	(Multech assumes Er=3.70, not 3.66 like Sonnet has)
 
 	Layer 1 coplanar waveguide (ref to layer 1 and 2 ground, no soldermask).
 	Layer 8 coplanar waveguide (ref to layer 8 and 7 ground, no soldermask).
-		180 μm trace / 100 μm trace = 50 ohm
+		180 μm trace / 100 μm space = 50 ohm
 
 	Layer 1 microstrip (ref to layer 2 ground).
 	Layer 8 microstrip (ref to layer 7 ground).
-		200 μm trace = 50 ohm
-		290 μm trace = 40 ohm
+		180 μm trace = 50 ohm
+		270 μm trace = 40 ohm
 
 	Layer 1 differential microstrip (ref to layer 2 ground).
 	Layer 8 differential microstrip (ref to layer 7 ground).
-		110 μm trace / 100 μm space = 100 ohm
-		190 μm trace / 100 μm space = 80 ohm
+		100 μm trace / 100 μm space = 100 ohm
+		180 μm trace / 100 μm space = 80 ohm
 
 	Layer 3 stripline (ref to layer 2 ground).
 	Layer 6 stripline (ref to layer 7 ground).
-		160 μm trace = 50 ohm
-		220 μm trace = 40 ohm
+		89 μm trace = 50 ohm
+		140 μm trace = 40 ohm
 
 	Layer 3 differential stripline (ref to layer 2 ground).
 	Layer 6 differential stripline (ref to layer 7 ground).
-		100 μm trace / 200 μm space = 100 ohm
-		130 μm trace / 100 μm space = 80 ohm
+		80 μm trace / 200 μm space = 100 ohm
+		100 μm trace / 100 μm space = 80 ohm
 
 	Vias (for reference)
 		0.45mm pad, 0.25mm drill, 0.72mm antipad (0.135mm internal plane clearance) = 50 ohm
