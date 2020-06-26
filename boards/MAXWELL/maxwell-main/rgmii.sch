@@ -159,17 +159,17 @@ Text Label 9450 2450 2    50   ~ 0
 ETH_A_P
 Text Label 9450 2650 2    50   ~ 0
 ETH_A_N
-Text Label 9450 2850 2    50   ~ 0
-ETH_B_P
 Text Label 9450 3050 2    50   ~ 0
+ETH_B_P
+Text Label 9450 2850 2    50   ~ 0
 ETH_B_N
 Text Label 9450 3250 2    50   ~ 0
 ETH_C_P
 Text Label 9450 3450 2    50   ~ 0
 ETH_C_N
-Text Label 9450 3850 2    50   ~ 0
-ETH_D_N
 Text Label 9450 3650 2    50   ~ 0
+ETH_D_N
+Text Label 9450 3850 2    50   ~ 0
 ETH_D_P
 Text Label 9450 4050 2    50   ~ 0
 GND
@@ -651,8 +651,8 @@ L device:C C121
 U 1 1 5FA504ED
 P 6050 5000
 F 0 "C121" H 6165 5046 50  0000 L CNN
-F 1 "4.7 uF" H 6165 4955 50  0000 L CNN
-F 2 "azonenberg_pcb:EIA_0603_CAP_NOSILK" H 6088 4850 50  0001 C CNN
+F 1 "0.47 uF" H 6165 4955 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0402_CAP_NOSILK" H 6088 4850 50  0001 C CNN
 F 3 "" H 6050 5000 50  0001 C CNN
 	1    6050 5000
 	1    0    0    -1  
@@ -1270,4 +1270,23 @@ F 3 "~" H 4000 4100 50  0001 C CNN
 $EndComp
 Text Label 4200 4100 0    50   ~ 0
 RGMII_TX_CLK
+Text Notes 9350 1800 0    50   ~ 0
+Swap pairs for routability\nKSZ9031 autocorrects
+$Comp
+L device:C C439
+U 1 1 6322FEEC
+P 7100 5000
+F 0 "C439" H 7215 5046 50  0000 L CNN
+F 1 "0.47 uF" H 7215 4955 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0402_CAP_NOSILK" H 7138 4850 50  0001 C CNN
+F 3 "" H 7100 5000 50  0001 C CNN
+	1    7100 5000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7100 4850 6550 4850
+Connection ~ 6550 4850
+Wire Wire Line
+	6550 5150 7100 5150
+Connection ~ 6550 5150
 $EndSCHEMATC
