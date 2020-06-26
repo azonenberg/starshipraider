@@ -1079,21 +1079,21 @@ Text Label 5500 6900 2    50   ~ 0
 POD9_D2_P
 Text Label 5500 7000 2    50   ~ 0
 POD9_D2_N
-Text Label 5500 7650 2    50   ~ 0
-POD9_D4_P
-Text Label 5500 7750 2    50   ~ 0
-POD9_D4_N
-Text Label 5500 7950 2    50   ~ 0
-POD9_D5_P
-Text Label 5500 8050 2    50   ~ 0
-POD9_D5_N
-Text Label 5500 8250 2    50   ~ 0
-POD9_D6_P
-Text Label 5500 8350 2    50   ~ 0
-POD9_D6_N
-Text Label 5500 8550 2    50   ~ 0
-POD9_D7_P
 Text Label 5500 8650 2    50   ~ 0
+POD9_D4_P
+Text Label 5500 8550 2    50   ~ 0
+POD9_D4_N
+Text Label 5500 8350 2    50   ~ 0
+POD9_D5_P
+Text Label 5500 8250 2    50   ~ 0
+POD9_D5_N
+Text Label 5500 8050 2    50   ~ 0
+POD9_D6_P
+Text Label 5500 7950 2    50   ~ 0
+POD9_D6_N
+Text Label 5500 7750 2    50   ~ 0
+POD9_D7_P
+Text Label 5500 7650 2    50   ~ 0
 POD9_D7_N
 Text Label 7050 6300 2    50   ~ 0
 POD10_D0_P
@@ -1111,21 +1111,21 @@ Text Label 7050 6900 2    50   ~ 0
 POD10_D2_P
 Text Label 7050 7000 2    50   ~ 0
 POD10_D2_N
-Text Label 7050 7650 2    50   ~ 0
-POD10_D4_P
-Text Label 7050 7750 2    50   ~ 0
-POD10_D4_N
-Text Label 7050 7950 2    50   ~ 0
-POD10_D5_P
-Text Label 7050 8050 2    50   ~ 0
-POD10_D5_N
-Text Label 7050 8250 2    50   ~ 0
-POD10_D6_P
-Text Label 7050 8350 2    50   ~ 0
-POD10_D6_N
-Text Label 7050 8550 2    50   ~ 0
-POD10_D7_P
 Text Label 7050 8650 2    50   ~ 0
+POD10_D4_P
+Text Label 7050 8550 2    50   ~ 0
+POD10_D4_N
+Text Label 7050 8350 2    50   ~ 0
+POD10_D5_P
+Text Label 7050 8250 2    50   ~ 0
+POD10_D5_N
+Text Label 7050 8050 2    50   ~ 0
+POD10_D6_P
+Text Label 7050 7950 2    50   ~ 0
+POD10_D6_N
+Text Label 7050 7750 2    50   ~ 0
+POD10_D7_P
+Text Label 7050 7650 2    50   ~ 0
 POD10_D7_N
 Text Label 8700 6300 2    50   ~ 0
 POD11_D0_P
@@ -1143,21 +1143,19 @@ Text Label 8700 6900 2    50   ~ 0
 POD11_D2_P
 Text Label 8700 7000 2    50   ~ 0
 POD11_D2_N
-Text Label 8700 7650 2    50   ~ 0
-POD11_D4_P
-Text Label 8700 7750 2    50   ~ 0
-POD11_D4_N
-Text Label 8700 7950 2    50   ~ 0
-POD11_D5_P
-Text Label 8700 8050 2    50   ~ 0
-POD11_D5_N
-Text Label 8700 8250 2    50   ~ 0
-POD11_D6_P
-Text Label 8700 8350 2    50   ~ 0
-POD11_D6_N
-Text Label 8700 8550 2    50   ~ 0
-POD11_D7_P
 Text Label 8700 8650 2    50   ~ 0
+POD11_D4_P
+Text Label 8700 8550 2    50   ~ 0
+POD11_D4_N
+Text Label 8700 8350 2    50   ~ 0
+POD11_D5_P
+Text Label 8700 8250 2    50   ~ 0
+POD11_D5_N
+Text Label 8700 7950 2    50   ~ 0
+POD11_D6_N
+Text Label 8700 7750 2    50   ~ 0
+POD11_D7_P
+Text Label 8700 7650 2    50   ~ 0
 POD11_D7_N
 $Comp
 L special-azonenberg:ESD7008 D2
@@ -1624,4 +1622,6 @@ Text Label 8550 9850 2    50   ~ 0
 POD11_UART_RX
 NoConn ~ 8550 10050
 NoConn ~ 8550 10150
+Text Label 8700 8050 2    50   ~ 0
+POD11_D6_P
 $EndSCHEMATC
