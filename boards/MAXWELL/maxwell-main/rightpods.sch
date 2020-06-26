@@ -1015,21 +1015,21 @@ Text Label 2500 6900 2    50   ~ 0
 POD7_D2_P
 Text Label 2500 7000 2    50   ~ 0
 POD7_D2_N
-Text Label 2500 7650 2    50   ~ 0
-POD7_D4_P
-Text Label 2500 7750 2    50   ~ 0
-POD7_D4_N
-Text Label 2500 7950 2    50   ~ 0
-POD7_D5_P
-Text Label 2500 8050 2    50   ~ 0
-POD7_D5_N
-Text Label 2500 8250 2    50   ~ 0
-POD7_D6_P
-Text Label 2500 8350 2    50   ~ 0
-POD7_D6_N
-Text Label 2500 8550 2    50   ~ 0
-POD7_D7_P
 Text Label 2500 8650 2    50   ~ 0
+POD7_D4_P
+Text Label 2500 8550 2    50   ~ 0
+POD7_D4_N
+Text Label 2500 8350 2    50   ~ 0
+POD7_D5_P
+Text Label 2500 8250 2    50   ~ 0
+POD7_D5_N
+Text Label 2500 8050 2    50   ~ 0
+POD7_D6_P
+Text Label 2500 7950 2    50   ~ 0
+POD7_D6_N
+Text Label 2500 7750 2    50   ~ 0
+POD7_D7_P
+Text Label 2500 7650 2    50   ~ 0
 POD7_D7_N
 Text Label 4000 6300 2    50   ~ 0
 POD8_D0_P
@@ -1047,21 +1047,21 @@ Text Label 4000 6900 2    50   ~ 0
 POD8_D2_P
 Text Label 4000 7000 2    50   ~ 0
 POD8_D2_N
-Text Label 4000 7650 2    50   ~ 0
-POD8_D4_P
-Text Label 4000 7750 2    50   ~ 0
-POD8_D4_N
-Text Label 4000 7950 2    50   ~ 0
-POD8_D5_P
-Text Label 4000 8050 2    50   ~ 0
-POD8_D5_N
-Text Label 4000 8250 2    50   ~ 0
-POD8_D6_P
-Text Label 4000 8350 2    50   ~ 0
-POD8_D6_N
-Text Label 4000 8550 2    50   ~ 0
-POD8_D7_P
 Text Label 4000 8650 2    50   ~ 0
+POD8_D4_P
+Text Label 4000 8550 2    50   ~ 0
+POD8_D4_N
+Text Label 4000 8350 2    50   ~ 0
+POD8_D5_P
+Text Label 4000 8250 2    50   ~ 0
+POD8_D5_N
+Text Label 4000 8050 2    50   ~ 0
+POD8_D6_P
+Text Label 4000 7950 2    50   ~ 0
+POD8_D6_N
+Text Label 4000 7750 2    50   ~ 0
+POD8_D7_P
+Text Label 4000 7650 2    50   ~ 0
 POD8_D7_N
 Text Label 5500 6300 2    50   ~ 0
 POD9_D0_P
