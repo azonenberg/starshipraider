@@ -398,21 +398,21 @@ Wire Wire Line
 	2450 6850 2450 6950
 NoConn ~ 2450 7050
 Text Label 2450 7150 2    50   ~ 0
-S6_TMS
+S7_TMS
 Text Label 2450 7250 2    50   ~ 0
-S6_TCK
+S7_TCK
 Text Label 2450 7350 2    50   ~ 0
-S6_TDO
+S7_TDO
 Text Label 2450 7450 2    50   ~ 0
-S6_TDI
+S7_TDI
 Text Label 5400 2050 2    50   ~ 0
-S6_TMS
+S7_TMS
 Text Label 5400 2150 2    50   ~ 0
-S6_TCK
+S7_TCK
 Text Label 4850 1950 2    50   ~ 0
-S6_TDO
+S7_TDO
 Text Label 5400 1850 2    50   ~ 0
-S6_TDI
+S7_TDI
 $Comp
 L device:R R26
 U 1 1 5F5E6111
