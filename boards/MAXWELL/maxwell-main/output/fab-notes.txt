@@ -16,7 +16,7 @@ Impedances
 
 	Layer 1 coplanar waveguide (ref to layer 1 and 2 ground, no soldermask).
 	Layer 8 coplanar waveguide (ref to layer 8 and 7 ground, no soldermask).
-		xx μm trace = 50 ohm
+		180 μm trace / 100 μm trace = 50 ohm
 
 	Layer 1 microstrip (ref to layer 2 ground).
 	Layer 8 microstrip (ref to layer 7 ground).
@@ -25,8 +25,8 @@ Impedances
 
 	Layer 1 differential microstrip (ref to layer 2 ground).
 	Layer 8 differential microstrip (ref to layer 7 ground).
-		150 μm trace / 100 μm space = 100 ohm
-		240 μm trace / 100 μm space = 80 ohm
+		110 μm trace / 100 μm space = 100 ohm
+		190 μm trace / 100 μm space = 80 ohm
 
 	Layer 3 stripline (ref to layer 2 ground).
 	Layer 6 stripline (ref to layer 7 ground).
@@ -35,8 +35,8 @@ Impedances
 
 	Layer 3 differential stripline (ref to layer 2 ground).
 	Layer 6 differential stripline (ref to layer 7 ground).
-		120 μm trace / 100 μm space = 100 ohm
-		180 μm trace / 100 μm space = 80 ohm
+		100 μm trace / 200 μm space = 100 ohm
+		130 μm trace / 100 μm space = 80 ohm
 
 Suggested stackup
 	1	 35 μm (1 oz) copper			Signal
