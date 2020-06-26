@@ -38,6 +38,13 @@ Impedances
 		100 μm trace / 200 μm space = 100 ohm
 		130 μm trace / 100 μm space = 80 ohm
 
+	Vias (for reference)
+		0.45mm pad, 0.25mm drill, 0.72mm antipad (0.135mm internal plane clearance) = 50 ohm
+		0.65mm pad, 0.25mm drill, 0.92mm antipad (0.135mm internal plane clearance) = 40 ohm
+		0.45mm pad, 0.25mm drill, 1.2mm antipad (0.475mm internal plane clearance), 0.75mm spacing = 100 ohm diff
+		0.45mm pad, 0.25mm drill, 0.72mm antipad (0.135mm internal plane clearance), 0.75mm spacing = 80 ohm diff
+		1.5 milliohms, 2A max
+
 Suggested stackup
 	1	 35 μm (1 oz) copper			Signal
 		100 μm RO4350B core/prepreg
