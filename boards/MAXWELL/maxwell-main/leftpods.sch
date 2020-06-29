@@ -5,7 +5,7 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 12 18
 Title "MAXWELL Main Board"
-Date "2020-06-25"
+Date "2020-06-29"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
@@ -1265,21 +1265,21 @@ Text Label 1350 6850 2    50   ~ 0
 POD0_D2_P
 Text Label 1350 6950 2    50   ~ 0
 POD0_D2_N
-Text Label 1350 7600 2    50   ~ 0
-POD0_D4_P
-Text Label 1350 7700 2    50   ~ 0
-POD0_D4_N
-Text Label 1350 7900 2    50   ~ 0
-POD0_D5_P
-Text Label 1350 8000 2    50   ~ 0
-POD0_D5_N
-Text Label 1350 8200 2    50   ~ 0
-POD0_D6_P
-Text Label 1350 8300 2    50   ~ 0
-POD0_D6_N
-Text Label 1350 8500 2    50   ~ 0
-POD0_D7_P
 Text Label 1350 8600 2    50   ~ 0
+POD0_D4_P
+Text Label 1350 8500 2    50   ~ 0
+POD0_D4_N
+Text Label 1350 8300 2    50   ~ 0
+POD0_D5_P
+Text Label 1350 8200 2    50   ~ 0
+POD0_D5_N
+Text Label 1350 8000 2    50   ~ 0
+POD0_D6_P
+Text Label 1350 7900 2    50   ~ 0
+POD0_D6_N
+Text Label 1350 7700 2    50   ~ 0
+POD0_D7_P
+Text Label 1350 7600 2    50   ~ 0
 POD0_D7_N
 Text Label 2850 6250 2    50   ~ 0
 POD1_D0_P
@@ -1297,21 +1297,21 @@ Text Label 2850 6850 2    50   ~ 0
 POD1_D2_P
 Text Label 2850 6950 2    50   ~ 0
 POD1_D2_N
-Text Label 2850 7600 2    50   ~ 0
-POD1_D4_P
-Text Label 2850 7700 2    50   ~ 0
-POD1_D4_N
-Text Label 2850 7900 2    50   ~ 0
-POD1_D5_P
-Text Label 2850 8000 2    50   ~ 0
-POD1_D5_N
-Text Label 2850 8200 2    50   ~ 0
-POD1_D6_P
-Text Label 2850 8300 2    50   ~ 0
-POD1_D6_N
-Text Label 2850 8500 2    50   ~ 0
-POD1_D7_P
 Text Label 2850 8600 2    50   ~ 0
+POD1_D4_P
+Text Label 2850 8500 2    50   ~ 0
+POD1_D4_N
+Text Label 2850 8300 2    50   ~ 0
+POD1_D5_P
+Text Label 2850 8200 2    50   ~ 0
+POD1_D5_N
+Text Label 2850 8000 2    50   ~ 0
+POD1_D6_P
+Text Label 2850 7900 2    50   ~ 0
+POD1_D6_N
+Text Label 2850 7700 2    50   ~ 0
+POD1_D7_P
+Text Label 2850 7600 2    50   ~ 0
 POD1_D7_N
 Text Label 4350 6350 2    50   ~ 0
 POD2_D0_N
@@ -1327,21 +1327,21 @@ Text Label 4350 6850 2    50   ~ 0
 POD2_D2_P
 Text Label 4350 6950 2    50   ~ 0
 POD2_D2_N
-Text Label 4350 7600 2    50   ~ 0
-POD2_D4_P
-Text Label 4350 7700 2    50   ~ 0
-POD2_D4_N
-Text Label 4350 7900 2    50   ~ 0
-POD2_D5_P
-Text Label 4350 8000 2    50   ~ 0
-POD2_D5_N
-Text Label 4350 8200 2    50   ~ 0
-POD2_D6_P
-Text Label 4350 8300 2    50   ~ 0
-POD2_D6_N
-Text Label 4350 8500 2    50   ~ 0
-POD2_D7_P
 Text Label 4350 8600 2    50   ~ 0
+POD2_D4_P
+Text Label 4350 8500 2    50   ~ 0
+POD2_D4_N
+Text Label 4350 8300 2    50   ~ 0
+POD2_D5_P
+Text Label 4350 8200 2    50   ~ 0
+POD2_D5_N
+Text Label 4350 8000 2    50   ~ 0
+POD2_D6_P
+Text Label 4350 7900 2    50   ~ 0
+POD2_D6_N
+Text Label 4350 7700 2    50   ~ 0
+POD2_D7_P
+Text Label 4350 7600 2    50   ~ 0
 POD2_D7_N
 Text Label 4350 6250 2    50   ~ 0
 POD2_D0_P
@@ -1361,21 +1361,21 @@ Text Label 5850 6850 2    50   ~ 0
 POD3_D2_P
 Text Label 5850 6950 2    50   ~ 0
 POD3_D2_N
-Text Label 5850 7600 2    50   ~ 0
-POD3_D4_P
-Text Label 5850 7700 2    50   ~ 0
-POD3_D4_N
-Text Label 5850 7900 2    50   ~ 0
-POD3_D5_P
-Text Label 5850 8000 2    50   ~ 0
-POD3_D5_N
-Text Label 5850 8200 2    50   ~ 0
-POD3_D6_P
-Text Label 5850 8300 2    50   ~ 0
-POD3_D6_N
-Text Label 5850 8500 2    50   ~ 0
-POD3_D7_P
 Text Label 5850 8600 2    50   ~ 0
+POD3_D4_P
+Text Label 5850 8500 2    50   ~ 0
+POD3_D4_N
+Text Label 5850 8300 2    50   ~ 0
+POD3_D5_P
+Text Label 5850 8200 2    50   ~ 0
+POD3_D5_N
+Text Label 5850 8000 2    50   ~ 0
+POD3_D6_P
+Text Label 5850 7900 2    50   ~ 0
+POD3_D6_N
+Text Label 5850 7700 2    50   ~ 0
+POD3_D7_P
+Text Label 5850 7600 2    50   ~ 0
 POD3_D7_N
 Text Label 7400 6250 2    50   ~ 0
 POD4_D0_P
@@ -1393,21 +1393,21 @@ Text Label 7400 6850 2    50   ~ 0
 POD4_D2_P
 Text Label 7400 6950 2    50   ~ 0
 POD4_D2_N
-Text Label 7400 7600 2    50   ~ 0
-POD4_D4_P
-Text Label 7400 7700 2    50   ~ 0
-POD4_D4_N
-Text Label 7400 7900 2    50   ~ 0
-POD4_D5_P
-Text Label 7400 8000 2    50   ~ 0
-POD4_D5_N
-Text Label 7400 8200 2    50   ~ 0
-POD4_D6_P
-Text Label 7400 8300 2    50   ~ 0
-POD4_D6_N
-Text Label 7400 8500 2    50   ~ 0
-POD4_D7_P
 Text Label 7400 8600 2    50   ~ 0
+POD4_D4_P
+Text Label 7400 8500 2    50   ~ 0
+POD4_D4_N
+Text Label 7400 8300 2    50   ~ 0
+POD4_D5_P
+Text Label 7400 8200 2    50   ~ 0
+POD4_D5_N
+Text Label 7400 8000 2    50   ~ 0
+POD4_D6_P
+Text Label 7400 7900 2    50   ~ 0
+POD4_D6_N
+Text Label 7400 7700 2    50   ~ 0
+POD4_D7_P
+Text Label 7400 7600 2    50   ~ 0
 POD4_D7_N
 Text Label 9050 6250 2    50   ~ 0
 POD5_D0_P
@@ -1425,21 +1425,19 @@ Text Label 9050 6850 2    50   ~ 0
 POD5_D2_P
 Text Label 9050 6950 2    50   ~ 0
 POD5_D2_N
-Text Label 9050 7600 2    50   ~ 0
-POD5_D4_P
-Text Label 9050 7700 2    50   ~ 0
-POD5_D4_N
-Text Label 9050 7900 2    50   ~ 0
-POD5_D5_P
-Text Label 9050 8000 2    50   ~ 0
-POD5_D5_N
-Text Label 9050 8200 2    50   ~ 0
-POD5_D6_P
-Text Label 9050 8300 2    50   ~ 0
-POD5_D6_N
-Text Label 9050 8500 2    50   ~ 0
-POD5_D7_P
 Text Label 9050 8600 2    50   ~ 0
+POD5_D4_P
+Text Label 9050 8500 2    50   ~ 0
+POD5_D4_N
+Text Label 9050 8200 2    50   ~ 0
+POD5_D5_N
+Text Label 9050 8000 2    50   ~ 0
+POD5_D6_P
+Text Label 9050 7900 2    50   ~ 0
+POD5_D6_N
+Text Label 9050 7700 2    50   ~ 0
+POD5_D7_P
+Text Label 9050 7600 2    50   ~ 0
 POD5_D7_N
 Text HLabel 2200 5500 2    50   Input ~ 0
 GND
@@ -1617,4 +1615,6 @@ F 3 "~" H 11000 7300 50  0001 C CNN
 $EndComp
 Text Label 11200 7500 0    50   ~ 0
 GND
+Text Label 9050 8300 2    50   ~ 0
+POD5_D5_P
 $EndSCHEMATC

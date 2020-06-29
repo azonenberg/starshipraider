@@ -5,7 +5,7 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 10 18
 Title "MAXWELL Main Board"
-Date "2020-06-25"
+Date "2020-06-29"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
@@ -983,21 +983,21 @@ Text Label 1000 6900 2    50   ~ 0
 POD6_D2_P
 Text Label 1000 7000 2    50   ~ 0
 POD6_D2_N
-Text Label 1000 7650 2    50   ~ 0
-POD6_D4_P
-Text Label 1000 7750 2    50   ~ 0
-POD6_D4_N
-Text Label 1000 7950 2    50   ~ 0
-POD6_D5_P
-Text Label 1000 8050 2    50   ~ 0
-POD6_D5_N
-Text Label 1000 8250 2    50   ~ 0
-POD6_D6_P
-Text Label 1000 8350 2    50   ~ 0
-POD6_D6_N
-Text Label 1000 8550 2    50   ~ 0
-POD6_D7_P
 Text Label 1000 8650 2    50   ~ 0
+POD6_D4_P
+Text Label 1000 8550 2    50   ~ 0
+POD6_D4_N
+Text Label 1000 8350 2    50   ~ 0
+POD6_D5_P
+Text Label 1000 8250 2    50   ~ 0
+POD6_D5_N
+Text Label 1000 8050 2    50   ~ 0
+POD6_D6_P
+Text Label 1000 7950 2    50   ~ 0
+POD6_D6_N
+Text Label 1000 7750 2    50   ~ 0
+POD6_D7_P
+Text Label 1000 7650 2    50   ~ 0
 POD6_D7_N
 Text Label 2500 6300 2    50   ~ 0
 POD7_D0_P
@@ -1549,9 +1549,9 @@ F 3 "" H 5700 10200 50  0001 C CNN
 	1    5700 10200
 	1    0    0    -1  
 $EndComp
-Text Label 5500 9150 2    50   ~ 0
+Text Label 5500 9450 2    50   ~ 0
 P8_PRESENT
-Text Label 5500 9250 2    50   ~ 0
+Text Label 5500 10150 2    50   ~ 0
 P9_PRESENT
 Text Label 6350 9150 0    50   ~ 0
 GND
@@ -1569,16 +1569,14 @@ Wire Wire Line
 Connection ~ 6350 9550
 Wire Wire Line
 	6350 9550 6350 9650
-Text Label 5500 9450 2    50   ~ 0
+Text Label 5500 9250 2    50   ~ 0
 POD8_UART_TX
-Text Label 5500 9550 2    50   ~ 0
+Text Label 5500 9150 2    50   ~ 0
 POD8_UART_RX
-Text Label 5500 9750 2    50   ~ 0
+Text Label 5500 10050 2    50   ~ 0
 POD9_UART_TX
 Text Label 5500 9850 2    50   ~ 0
 POD9_UART_RX
-NoConn ~ 5500 10050
-NoConn ~ 5500 10150
 $Comp
 L special-azonenberg:ESD7008 D?
 U 1 1 62D44CA6
@@ -1592,9 +1590,9 @@ F 3 "" H 8750 10200 50  0001 C CNN
 	1    8750 10200
 	1    0    0    -1  
 $EndComp
-Text Label 8550 9150 2    50   ~ 0
+Text Label 8550 9450 2    50   ~ 0
 P10_PRESENT
-Text Label 8550 9250 2    50   ~ 0
+Text Label 8550 10150 2    50   ~ 0
 P11_PRESENT
 Text Label 9400 9150 0    50   ~ 0
 GND
@@ -1612,16 +1610,18 @@ Wire Wire Line
 Connection ~ 9400 9550
 Wire Wire Line
 	9400 9550 9400 9650
-Text Label 8550 9450 2    50   ~ 0
+Text Label 8550 9250 2    50   ~ 0
 POD10_UART_TX
-Text Label 8550 9550 2    50   ~ 0
+Text Label 8550 9150 2    50   ~ 0
 POD10_UART_RX
-Text Label 8550 9750 2    50   ~ 0
+Text Label 8550 10050 2    50   ~ 0
 POD11_UART_TX
 Text Label 8550 9850 2    50   ~ 0
 POD11_UART_RX
-NoConn ~ 8550 10050
-NoConn ~ 8550 10150
 Text Label 8700 8050 2    50   ~ 0
 POD11_D6_P
+NoConn ~ 8550 9550
+NoConn ~ 8550 9750
+NoConn ~ 5500 9750
+NoConn ~ 5500 9550
 $EndSCHEMATC
