@@ -1506,9 +1506,9 @@ F 3 "" H 2700 10200 50  0001 C CNN
 	1    2700 10200
 	1    0    0    -1  
 $EndComp
-Text Label 2500 9150 2    50   ~ 0
+Text Label 2500 9450 2    50   ~ 0
 P6_PRESENT
-Text Label 2500 9250 2    50   ~ 0
+Text Label 2500 10150 2    50   ~ 0
 P7_PRESENT
 Text Label 3350 9150 0    50   ~ 0
 GND
@@ -1526,16 +1526,14 @@ Wire Wire Line
 Connection ~ 3350 9550
 Wire Wire Line
 	3350 9550 3350 9650
-Text Label 2500 9450 2    50   ~ 0
+Text Label 2500 9250 2    50   ~ 0
 POD6_UART_TX
-Text Label 2500 9550 2    50   ~ 0
+Text Label 2500 9150 2    50   ~ 0
 POD6_UART_RX
-Text Label 2500 9750 2    50   ~ 0
+Text Label 2500 10050 2    50   ~ 0
 POD7_UART_TX
 Text Label 2500 9850 2    50   ~ 0
 POD7_UART_RX
-NoConn ~ 2500 10050
-NoConn ~ 2500 10150
 $Comp
 L special-azonenberg:ESD7008 D?
 U 1 1 62D44C8E
@@ -1624,4 +1622,6 @@ NoConn ~ 8550 9550
 NoConn ~ 8550 9750
 NoConn ~ 5500 9750
 NoConn ~ 5500 9550
+NoConn ~ 2500 9550
+NoConn ~ 2500 9750
 $EndSCHEMATC
