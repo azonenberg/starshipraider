@@ -28,13 +28,13 @@ F 3 "" H 13100 3650 50  0001 C CNN
 	13   13100 3650
 	1    0    0    -1  
 $EndComp
-Text HLabel 1650 6950 0    50   Input ~ 0
-IN0_P
 Text HLabel 1650 7050 0    50   Input ~ 0
+IN0_P
+Text HLabel 1650 6950 0    50   Input ~ 0
 IN0_N
-Text HLabel 4800 6950 0    50   Input ~ 0
-IN1_P
 Text HLabel 4800 7050 0    50   Input ~ 0
+IN1_P
+Text HLabel 4800 6950 0    50   Input ~ 0
 IN1_N
 $Comp
 L special-azonenberg:SY56017R U30
@@ -540,13 +540,13 @@ Text Label 12900 2300 2    50   ~ 0
 CH2_P
 Text Label 12900 2400 2    50   ~ 0
 CH2_N
-Text HLabel 11100 6950 0    50   Input ~ 0
-IN3_P
 Text HLabel 11100 7050 0    50   Input ~ 0
+IN3_P
+Text HLabel 11100 6950 0    50   Input ~ 0
 IN3_N
-Text HLabel 7950 6950 0    50   Input ~ 0
-IN2_P
 Text HLabel 7950 7050 0    50   Input ~ 0
+IN2_P
+Text HLabel 7950 6950 0    50   Input ~ 0
 IN2_N
 NoConn ~ 12900 1100
 NoConn ~ 12900 1200
@@ -716,9 +716,9 @@ Text Label 5650 1950 2    50   ~ 0
 IN2_BUF_P
 Text Label 5650 2050 2    50   ~ 0
 IN2_BUF_N
-Text Label 3550 6950 0    50   ~ 0
-IN0_BUF_P
 Text Label 3550 7050 0    50   ~ 0
+IN0_BUF_P
+Text Label 3550 6950 0    50   ~ 0
 IN0_BUF_N
 Text Notes 12600 5400 0    50   ~ 0
 SY56017 @ VCCO=1V2\nOutput swing 780 mV differential below 1V2\nInput 400 - 2000 mV\nInput to Vt max 1280 mV\n\nGTX:\ninputs terminated with 50 ohms per leg to Avtt\nSE input range -200 to +1200 mV\nInput voltage 150 to 1250 differential
@@ -726,17 +726,17 @@ Text Label 6700 3350 0    50   ~ 0
 2V5
 Text Label 2800 3350 0    50   ~ 0
 2V5
-Text Label 6700 6950 0    50   ~ 0
-IN1_BUF_P
 Text Label 6700 7050 0    50   ~ 0
+IN1_BUF_P
+Text Label 6700 6950 0    50   ~ 0
 IN1_BUF_N
-Text Label 9850 6950 0    50   ~ 0
-IN2_BUF_P
 Text Label 9850 7050 0    50   ~ 0
+IN2_BUF_P
+Text Label 9850 6950 0    50   ~ 0
 IN2_BUF_N
-Text Label 13000 6950 0    50   ~ 0
-IN3_BUF_P
 Text Label 13000 7050 0    50   ~ 0
+IN3_BUF_P
+Text Label 13000 6950 0    50   ~ 0
 IN3_BUF_N
 $Comp
 L analog-azonenberg:ADCMP582 U48
