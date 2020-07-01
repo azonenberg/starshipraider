@@ -1005,16 +1005,12 @@ F 3 "" H 9600 4150 60  0000 C CNN
 $EndComp
 Wire Wire Line
 	9300 3500 9300 3600
-Wire Wire Line
-	9300 3700 9300 3800
 Text Label 9300 4000 2    50   ~ 0
 GND
 Wire Wire Line
 	9300 4000 9300 4100
 Text Label 9300 3500 2    50   ~ 0
 REF_OUT
-Text Label 9300 3700 2    50   ~ 0
-TRIG_OUT
 $Comp
 L device:R R125
 U 1 1 60E72EAC
@@ -1275,4 +1271,27 @@ Wire Wire Line
 	9300 1950 9300 2050
 NoConn ~ 9300 1000
 NoConn ~ 9300 900 
+$Comp
+L special-azonenberg:RCLAMP0542T U?
+U 1 1 63DED99E
+P 9600 5000
+F 0 "U?" H 10078 5408 60  0000 L CNN
+F 1 "RCLAMP0542T" H 10078 5302 60  0000 L CNN
+F 2 "azonenberg_pcb:DFN_6_0.5MM_1.6x1.0MM" H 9600 5000 60  0001 C CNN
+F 3 "" H 9600 5000 60  0000 C CNN
+	1    9600 5000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9300 4350 9300 4450
+Text Label 9300 4850 2    50   ~ 0
+GND
+Wire Wire Line
+	9300 4850 9300 4950
+Text Label 9300 4350 2    50   ~ 0
+TRIG_OUT
+NoConn ~ 9300 4650
+NoConn ~ 9300 4550
+NoConn ~ 9300 3800
+NoConn ~ 9300 3700
 $EndSCHEMATC
