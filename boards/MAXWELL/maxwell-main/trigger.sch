@@ -98,9 +98,9 @@ Text HLabel 5550 4150 2    50   Output ~ 0
 PPS_IN_P
 Text HLabel 5550 4250 2    50   Output ~ 0
 PPS_IN_N
-Text HLabel 1350 6400 2    50   Input ~ 0
-REF_OUT_P
 Text HLabel 1350 7000 2    50   Input ~ 0
+REF_OUT_P
+Text HLabel 1350 6400 2    50   Input ~ 0
 REF_OUT_N
 Text Label 3050 1350 0    50   ~ 0
 TRIG_IN_ATTEN
@@ -988,9 +988,9 @@ Text Label 9300 3150 2    50   ~ 0
 GND
 Wire Wire Line
 	9300 3150 9300 3250
-Text Label 9300 2650 2    50   ~ 0
-REF_OUT_P
 Text Label 9300 2850 2    50   ~ 0
+REF_OUT_P
+Text Label 9300 2650 2    50   ~ 0
 REF_OUT_N
 $Comp
 L special-azonenberg:RCLAMP0542T U44

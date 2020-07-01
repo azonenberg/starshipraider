@@ -154,9 +154,9 @@ Text Label 14300 1650 2    50   ~ 0
 REF_IN_P
 Text Label 14300 1750 2    50   ~ 0
 REF_IN_N
-Text Label 1700 1350 2    50   ~ 0
-REF_IN_AC_P
 Text Label 1700 1450 2    50   ~ 0
+REF_IN_AC_P
+Text Label 1700 1350 2    50   ~ 0
 REF_IN_AC_N
 Text HLabel 14300 1950 0    50   Output ~ 0
 PPS_IN_P
@@ -549,44 +549,6 @@ Text Label 5250 3650 2    50   ~ 0
 GND
 Text Label 5700 3850 2    50   ~ 0
 3V3
-$Comp
-L device:C C292
-U 1 1 60F48ED2
-P 7550 3450
-F 0 "C292" V 7298 3450 50  0000 C CNN
-F 1 "0.1 uF" V 7389 3450 50  0000 C CNN
-F 2 "azonenberg_pcb:EIA_0402_CAP_NOSILK" H 7588 3300 50  0001 C CNN
-F 3 "" H 7550 3450 50  0001 C CNN
-	1    7550 3450
-	0    1    1    0   
-$EndComp
-$Comp
-L device:C C293
-U 1 1 60F48EDC
-P 7550 3750
-F 0 "C293" V 7700 3750 50  0000 C CNN
-F 1 "0.1 uF" V 7800 3750 50  0000 C CNN
-F 2 "azonenberg_pcb:EIA_0402_CAP_NOSILK" H 7588 3600 50  0001 C CNN
-F 3 "" H 7550 3750 50  0001 C CNN
-	1    7550 3750
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	6900 3550 6900 3450
-Wire Wire Line
-	6900 3450 7400 3450
-Wire Wire Line
-	6900 3650 6900 3750
-Wire Wire Line
-	6900 3750 7400 3750
-Text Label 6900 3450 0    50   ~ 0
-VCXO_P
-Text Label 6900 3750 0    50   ~ 0
-VCXO_N
-Text Label 7700 3450 0    50   ~ 0
-VCXO_AC_P
-Text Label 7700 3750 0    50   ~ 0
-VCXO_AC_N
 Text Label 1700 1650 2    50   ~ 0
 VCXO_AC_P
 Text Label 1700 1750 2    50   ~ 0
@@ -1238,17 +1200,6 @@ Text Label 6800 10150 2    50   ~ 0
 2V5
 Connection ~ 5750 10450
 $Comp
-L device:R R238
-U 1 1 62B817A8
-P 7700 3600
-F 0 "R238" H 7770 3646 50  0000 L CNN
-F 1 "100" H 7770 3555 50  0000 L CNN
-F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 7630 3600 50  0001 C CNN
-F 3 "" H 7700 3600 50  0001 C CNN
-	1    7700 3600
-	1    0    0    -1  
-$EndComp
-$Comp
 L device:R R244
 U 1 1 62C711DD
 P 3400 7600
@@ -1449,4 +1400,53 @@ Wire Wire Line
 	5750 10450 6800 10450
 Wire Wire Line
 	4700 10450 5750 10450
+Text Notes 1100 750  0    50   ~ 0
+Swap ext refclk polarity for routing\nThis just introduces a 180 deg phase shift\nIf we need ultra precise sync we can correct
+$Comp
+L device:R R238
+U 1 1 62B817A8
+P 8200 3600
+F 0 "R238" H 8270 3646 50  0000 L CNN
+F 1 "100" H 8270 3555 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 8130 3600 50  0001 C CNN
+F 3 "" H 8200 3600 50  0001 C CNN
+	1    8200 3600
+	1    0    0    -1  
+$EndComp
+Text Label 8200 3750 0    50   ~ 0
+VCXO_AC_N
+Text Label 8200 3450 0    50   ~ 0
+VCXO_AC_P
+Text Label 7900 3750 2    50   ~ 0
+VCXO_N
+Text Label 7900 3450 2    50   ~ 0
+VCXO_P
+$Comp
+L device:C C293
+U 1 1 60F48EDC
+P 8050 3750
+F 0 "C293" V 8200 3750 50  0000 C CNN
+F 1 "0.1 uF" V 8300 3750 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_CAP_NOSILK" H 8088 3600 50  0001 C CNN
+F 3 "" H 8050 3750 50  0001 C CNN
+	1    8050 3750
+	0    1    1    0   
+$EndComp
+$Comp
+L device:C C292
+U 1 1 60F48ED2
+P 8050 3450
+F 0 "C292" V 7798 3450 50  0000 C CNN
+F 1 "0.1 uF" V 7889 3450 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_CAP_NOSILK" H 8088 3300 50  0001 C CNN
+F 3 "" H 8050 3450 50  0001 C CNN
+	1    8050 3450
+	0    1    1    0   
+$EndComp
+Text Label 6900 3650 0    50   ~ 0
+VCXO_P
+Text Label 6900 3550 0    50   ~ 0
+VCXO_N
+Text Notes 7150 4350 0    50   ~ 0
+Flip polarity of VCXO output for routability\nThis introduces a constant 180 deg phase shift,\nwhich the PLL won't care about.
 $EndSCHEMATC
