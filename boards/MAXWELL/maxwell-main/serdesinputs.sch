@@ -5,7 +5,7 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 11 18
 Title "MAXWELL Main Board"
-Date "2020-06-29"
+Date "2020-07-01"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
@@ -968,8 +968,6 @@ Wire Wire Line
 	1950 9650 2400 9650
 Wire Wire Line
 	2400 9350 1950 9350
-Text Notes 7800 1550 0    50   ~ 0
-TODO: VTT decoupling for SY56017s
 $Comp
 L analog-azonenberg:ADCMP582 U49
 U 1 1 6174C926
@@ -1636,4 +1634,124 @@ Text Label 13000 6350 0    50   ~ 0
 2V5
 Text Label 11100 7650 2    50   ~ 0
 5V0_N
+$Comp
+L device:C C440
+U 1 1 63CBBD13
+P 3550 2300
+F 0 "C440" H 3700 2400 50  0000 C CNN
+F 1 "0.47 uF" H 3800 2300 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_CAP_NOSILK" H 3588 2150 50  0001 C CNN
+F 3 "" H 3550 2300 50  0001 C CNN
+	1    3550 2300
+	1    0    0    -1  
+$EndComp
+Text Label 3550 2150 2    50   ~ 0
+0V5
+$Comp
+L device:C C442
+U 1 1 63CBED11
+P 4100 2300
+F 0 "C442" H 4250 2400 50  0000 C CNN
+F 1 "0.47 uF" H 4350 2300 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_CAP_NOSILK" H 4138 2150 50  0001 C CNN
+F 3 "" H 4100 2300 50  0001 C CNN
+	1    4100 2300
+	1    0    0    -1  
+$EndComp
+Text Label 4100 2150 2    50   ~ 0
+2V5
+Text Label 3550 2450 2    50   ~ 0
+GND
+Wire Wire Line
+	3550 2450 4100 2450
+$Comp
+L device:C C444
+U 1 1 63CC5A11
+P 7450 2300
+F 0 "C444" H 7600 2400 50  0000 C CNN
+F 1 "0.47 uF" H 7700 2300 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_CAP_NOSILK" H 7488 2150 50  0001 C CNN
+F 3 "" H 7450 2300 50  0001 C CNN
+	1    7450 2300
+	1    0    0    -1  
+$EndComp
+Text Label 7450 2150 2    50   ~ 0
+0V5
+$Comp
+L device:C C446
+U 1 1 63CC5A1C
+P 8000 2300
+F 0 "C446" H 8150 2400 50  0000 C CNN
+F 1 "0.47 uF" H 8250 2300 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_CAP_NOSILK" H 8038 2150 50  0001 C CNN
+F 3 "" H 8000 2300 50  0001 C CNN
+	1    8000 2300
+	1    0    0    -1  
+$EndComp
+Text Label 8000 2150 2    50   ~ 0
+2V5
+Text Label 7450 2450 2    50   ~ 0
+GND
+Wire Wire Line
+	7450 2450 8000 2450
+$Comp
+L device:C C445
+U 1 1 63CCB755
+P 7450 4550
+F 0 "C445" H 7600 4650 50  0000 C CNN
+F 1 "0.47 uF" H 7700 4550 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_CAP_NOSILK" H 7488 4400 50  0001 C CNN
+F 3 "" H 7450 4550 50  0001 C CNN
+	1    7450 4550
+	1    0    0    -1  
+$EndComp
+Text Label 7450 4400 2    50   ~ 0
+0V5
+$Comp
+L device:C C447
+U 1 1 63CCB760
+P 8000 4550
+F 0 "C447" H 8150 4650 50  0000 C CNN
+F 1 "0.47 uF" H 8250 4550 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_CAP_NOSILK" H 8038 4400 50  0001 C CNN
+F 3 "" H 8000 4550 50  0001 C CNN
+	1    8000 4550
+	1    0    0    -1  
+$EndComp
+Text Label 8000 4400 2    50   ~ 0
+2V5
+Text Label 7450 4700 2    50   ~ 0
+GND
+Wire Wire Line
+	7450 4700 8000 4700
+$Comp
+L device:C C441
+U 1 1 63CD1DC5
+P 3550 4550
+F 0 "C441" H 3700 4650 50  0000 C CNN
+F 1 "0.47 uF" H 3800 4550 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_CAP_NOSILK" H 3588 4400 50  0001 C CNN
+F 3 "" H 3550 4550 50  0001 C CNN
+	1    3550 4550
+	1    0    0    -1  
+$EndComp
+Text Label 3550 4400 2    50   ~ 0
+0V5
+$Comp
+L device:C C443
+U 1 1 63CD1DD0
+P 4100 4550
+F 0 "C443" H 4250 4650 50  0000 C CNN
+F 1 "0.47 uF" H 4350 4550 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_CAP_NOSILK" H 4138 4400 50  0001 C CNN
+F 3 "" H 4100 4550 50  0001 C CNN
+	1    4100 4550
+	1    0    0    -1  
+$EndComp
+Text Label 4100 4400 2    50   ~ 0
+2V5
+Text Label 3550 4700 2    50   ~ 0
+GND
+Wire Wire Line
+	3550 4700 4100 4700
 $EndSCHEMATC

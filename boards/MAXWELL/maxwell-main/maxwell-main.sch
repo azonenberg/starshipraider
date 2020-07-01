@@ -5,7 +5,7 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 1 18
 Title "MAXWELL Main Board"
-Date "2020-06-29"
+Date "2020-07-01"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"

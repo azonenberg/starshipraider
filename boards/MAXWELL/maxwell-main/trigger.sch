@@ -5,7 +5,7 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 16 18
 Title "MAXWELL Main Board"
-Date "2020-06-29"
+Date "2020-07-01"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
@@ -35,27 +35,27 @@ REFCLK_IN
 $Comp
 L analog-azonenberg:LMH7322 U?
 U 1 1 5F039E67
-P 5000 1750
+P 5000 4550
 AR Path="/5EEF3BE9/5F039E67" Ref="U?"  Part="1" 
 AR Path="/5EEF3B79/5F303230/5F039E67" Ref="U37"  Part="1" 
-F 0 "U37" H 4925 2897 60  0000 C CNN
-F 1 "LMH7322" H 4925 2791 60  0000 C CNN
-F 2 "azonenberg_pcb:QFN_24_0.5MM_4x4MM" H 4500 1700 60  0001 C CNN
-F 3 "" H 4500 1700 60  0000 C CNN
-	1    5000 1750
+F 0 "U37" H 4925 5697 60  0000 C CNN
+F 1 "LMH7322" H 4925 5591 60  0000 C CNN
+F 2 "azonenberg_pcb:QFN_24_0.5MM_4x4MM" H 4500 4500 60  0001 C CNN
+F 3 "" H 4500 4500 60  0000 C CNN
+	1    5000 4550
 	1    0    0    -1  
 $EndComp
 $Comp
 L analog-azonenberg:LMH7322 U?
 U 2 1 5F03A9B1
-P 5000 3150
+P 5000 1750
 AR Path="/5EEF3BE9/5F03A9B1" Ref="U?"  Part="2" 
 AR Path="/5EEF3B79/5F303230/5F03A9B1" Ref="U37"  Part="2" 
-F 0 "U37" H 4925 4297 60  0000 C CNN
-F 1 "LMH7322" H 4925 4191 60  0000 C CNN
-F 2 "azonenberg_pcb:QFN_24_0.5MM_4x4MM" H 4500 3100 60  0001 C CNN
-F 3 "" H 4500 3100 60  0000 C CNN
-	2    5000 3150
+F 0 "U37" H 4925 2897 60  0000 C CNN
+F 1 "LMH7322" H 4925 2791 60  0000 C CNN
+F 2 "azonenberg_pcb:QFN_24_0.5MM_4x4MM" H 4500 1700 60  0001 C CNN
+F 3 "" H 4500 1700 60  0000 C CNN
+	2    5000 1750
 	1    0    0    -1  
 $EndComp
 Text HLabel 7800 1200 2    50   Output ~ 0
@@ -84,14 +84,14 @@ PPS_IN
 $Comp
 L analog-azonenberg:LMH7322 U?
 U 1 1 5F04094A
-P 5000 4550
+P 5000 3150
 AR Path="/5EEF3BE9/5F04094A" Ref="U?"  Part="1" 
 AR Path="/5EEF3B79/5F303230/5F04094A" Ref="U38"  Part="1" 
-F 0 "U38" H 4925 5697 60  0000 C CNN
-F 1 "LMH7322" H 4925 5591 60  0000 C CNN
-F 2 "azonenberg_pcb:QFN_24_0.5MM_4x4MM" H 4500 4500 60  0001 C CNN
-F 3 "" H 4500 4500 60  0000 C CNN
-	1    5000 4550
+F 0 "U38" H 4925 4297 60  0000 C CNN
+F 1 "LMH7322" H 4925 4191 60  0000 C CNN
+F 2 "azonenberg_pcb:QFN_24_0.5MM_4x4MM" H 4500 3100 60  0001 C CNN
+F 3 "" H 4500 3100 60  0000 C CNN
+	1    5000 3150
 	1    0    0    -1  
 $EndComp
 Text HLabel 5550 4150 2    50   Output ~ 0
@@ -102,10 +102,6 @@ Text HLabel 1350 6400 2    50   Input ~ 0
 REF_OUT_P
 Text HLabel 1350 7000 2    50   Input ~ 0
 REF_OUT_N
-Wire Wire Line
-	4300 950  4300 1050
-Wire Wire Line
-	4300 3750 4300 3850
 Text Label 3050 1350 0    50   ~ 0
 TRIG_IN_ATTEN
 Text Label 4300 2750 2    50   ~ 0
@@ -945,10 +941,8 @@ F 3 "" H 9600 1550 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9300 900  9300 1000
-Wire Wire Line
 	9300 1100 9300 1200
-Text Label 9300 900  2    50   ~ 0
+Text Label 9300 1950 2    50   ~ 0
 TRIG_IN_ATTEN
 Text Label 9300 1100 2    50   ~ 0
 REF_IN_ATTEN
@@ -1221,8 +1215,6 @@ Wire Wire Line
 	10550 6600 10550 6500
 Wire Wire Line
 	10550 6700 10550 6600
-NoConn ~ 9300 1950
-NoConn ~ 9300 2050
 $Comp
 L Connector:Conn_01x01 TP45
 U 1 1 62EB41B6
@@ -1275,4 +1267,12 @@ F 3 "~" H 7050 3600 50  0001 C CNN
 $EndComp
 Text Label 7250 3600 0    50   ~ 0
 2V5
+Wire Wire Line
+	4300 2350 4300 2450
+Wire Wire Line
+	4300 3750 4300 3850
+Wire Wire Line
+	9300 1950 9300 2050
+NoConn ~ 9300 1000
+NoConn ~ 9300 900 
 $EndSCHEMATC
