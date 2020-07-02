@@ -291,7 +291,7 @@ GND
 Text Label 1050 3750 2    50   ~ 0
 GND
 Text Label 3450 3450 2    50   ~ 0
-1V0_2
+1V0_2_RAW
 $Comp
 L device:C C?
 U 1 1 6129FBB4
@@ -515,7 +515,7 @@ GND
 Text Label 1050 5500 2    50   ~ 0
 GND
 Text Label 3450 5200 2    50   ~ 0
-1V5
+1V5_RAW
 $Comp
 L device:C C?
 U 1 1 612AEE31
@@ -1946,4 +1946,8 @@ Wire Wire Line
 	6450 8850 6450 9050
 Text Label 6450 8850 0    50   ~ 0
 GND
+Text Label 3100 4900 0    50   ~ 0
+1V5_RAW
+Text Label 2900 3150 2    50   ~ 0
+1V0_2_RAW
 $EndSCHEMATC

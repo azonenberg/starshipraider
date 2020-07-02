@@ -570,7 +570,7 @@ $EndComp
 Text Label 8300 3800 0    50   ~ 0
 2V0_GOOD
 Text Label 7700 2800 2    50   ~ 0
-3V3
+3V3_SB
 Wire Wire Line
 	7700 2800 8000 2800
 Wire Wire Line
