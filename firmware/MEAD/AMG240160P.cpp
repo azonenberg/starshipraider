@@ -28,85 +28,70 @@
 ***********************************************************************************************************************/
 
 #include <stm32fxxx.h>
-#include <peripheral/UART.h>
-#include <peripheral/GPIO.h>
-#include <peripheral/SPI.h>
-#include <peripheral/I2C.h>
-#include <peripheral/Timer.h>
-#include "AT30TS74.h"
 #include "AMG240160P.h"
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Entry point
-
-//UART stuff
-UART* g_uart;
-
-//When possible, long-lived stuff here should be declared static.
-//This puts them in .bss instead of stack, and enables better accounting of memory usage
-int main()
+AMG240160P::AMG240160P(SPI* spi, GPIOPin* csn, GPIOPin* rstn, GPIOPin* ctlData, Timer* usTimer)
+	: m_spi(spi)
+	, m_csn(csn)
+	, m_rstn(rstn)
+	, m_ctlData(ctlData)
+	, m_usTimer(usTimer)
 {
-	//Initialize the PLL
-	//CPU clock = AHB clock = APB clock = 48 MHz
-	RCCHelper::InitializePLLFromInternalOscillator(2, 12, 1, 1);
+	//Initialize pins
+	csn->Set(1);
+	rstn->Set(1);
+	ctlData->Set(0);
 
-	//Initialize the UART
-	static GPIOPin uart_tx(&GPIOA, 9,	GPIOPin::MODE_PERIPHERAL, 1);
-	static GPIOPin uart_rx(&GPIOA, 10, GPIOPin::MODE_PERIPHERAL, 1);
-	static UART uart(&USART1, &USART1, 417);
-	g_uart = &uart;
+	//Reset LCD. 10ms low, 10ms high before sending writes
+	rstn->Set(0);
+	usTimer->Sleep(10000, true);
+	rstn->Set(1);
+	usTimer->Sleep(10000, true);
+}
 
-	//Enable RXNE interrupt vector (IRQ27)
-	//TODO: better contants here
-	volatile uint32_t* NVIC_ISER0 = (volatile uint32_t*)(0xe000e100);
-	*NVIC_ISER0 = 0x8000000;
+void AMG240160P::Initialize()
+{
+	SendCommand(0xe2);	//Soft reset
+	SendCommand(0x2b);	//Power control
+	SendCommand(0x25);	//Temp compensation
+	SendCommand(0xc2);	//LCD mapping control
+	SendCommand(0x8b);	//RAM control
+	SendCommand(0xd0);	//Color pattern
+	SendCommand(0xd6);	//Color mode
+	SendCommand(0xdd);	//COM scan function
+	SendCommand(0xa1);	//Line rate
+	SendCommand(0xeb);	//Bias ratio 1/12
 
-	//Set up SPI bus at 12 MHz (APB/4)
-	static GPIOPin spi_sck( &GPIOB, 3, GPIOPin::MODE_PERIPHERAL, 0);
-	static GPIOPin spi_miso(&GPIOB, 4, GPIOPin::MODE_PERIPHERAL, 0);
-	static GPIOPin spi_mosi(&GPIOB, 5, GPIOPin::MODE_PERIPHERAL, 0);
-	static SPI spi(&SPI1, true, 4);
+	SendCommand(0x81);	//VBIAS pot
+	SendCommand(35);
 
-	//Set up timer with 1us ticks
-	static Timer timer(&TIM1, Timer::FEATURE_ADVANCED, 48);
+	SendCommand(0xf1);	//COM End
+	SendCommand(159);
 
-	//Set up DAC
-	static GPIOPin dac_cs_n(&GPIOA, 15, GPIOPin::MODE_OUTPUT);
-	dac_cs_n.Set(1);
+	SendCommand(0xC8);	//N-line inversion
+	SendCommand(0);
 
-	//Set up I2C.
-	//Prescale divide by 8 (6 MHz, 166.6 ns/tick)
-	//Divide I2C clock by 16 after that to get 375 kHz
-	static GPIOPin i2c_sda( &GPIOB, 7, GPIOPin::MODE_PERIPHERAL, 1);
-	static GPIOPin i2c_scl( &GPIOB, 6, GPIOPin::MODE_PERIPHERAL, 1);
-	static I2C i2c(&I2C1, 8, 8);
+	SendCommand(0x84);	//No partial display
+	SendCommand(0xa6);	//No inverse display
+	SendCommand(0xad);	//Enable display
+}
 
-	//Set up temperature sensors
-	AT30TS74 temp_right(&i2c, 0x90);
-	AT30TS74 temp_left(&i2c, 0x92);
+void AMG240160P::SendCommand(uint8_t cmd)
+{
+	m_ctlData->Set(0);
 
-	//Set up LCD
-	static GPIOPin lcd_cs_n(&GPIOA, 0, GPIOPin::MODE_OUTPUT);
-	static GPIOPin lcd_rst_n(&GPIOA, 2, GPIOPin::MODE_OUTPUT);
-	static GPIOPin lcd_ctl_data(&GPIOA, 3, GPIOPin::MODE_OUTPUT);
-	AMG240160P lcd(&spi, &lcd_cs_n, &lcd_rst_n, &lcd_ctl_data, &timer);
-	g_uart->Printf("a");
-	lcd.Initialize();
+	m_csn->Set(0);
+	m_spi->BlockingWrite(cmd);
+	m_spi->WaitForWrites();
+	m_csn->Set(1);
+}
 
+void AMG240160P::SendData(uint8_t data)
+{
+	m_ctlData->Set(1);
 
-	/*
-	//Read the current temperatures
-	uint8_t temp;
-	uint8_t temp_frac;
-	temp_left.GetTemperature(temp, temp_frac);
-	g_uart->Printf("Left:  %d.%02d C\n", temp, temp_frac * 100 / 256);
-	temp_right.GetTemperature(temp, temp_frac);
-	g_uart->Printf("Right: %d.%02d C\n", temp, temp_frac * 100 / 256);
-	*/
-
-	//Wait forever
-	while(1)
-	{}
-
-	return 0;
+	m_csn->Set(0);
+	m_spi->BlockingWrite(cmd);
+	m_spi->WaitForWrites();
+	m_csn->Set(1);
 }

@@ -28,85 +28,25 @@
 ***********************************************************************************************************************/
 
 #include <stm32fxxx.h>
-#include <peripheral/UART.h>
-#include <peripheral/GPIO.h>
-#include <peripheral/SPI.h>
-#include <peripheral/I2C.h>
-#include <peripheral/Timer.h>
 #include "AT30TS74.h"
-#include "AMG240160P.h"
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Entry point
-
-//UART stuff
-UART* g_uart;
-
-//When possible, long-lived stuff here should be declared static.
-//This puts them in .bss instead of stack, and enables better accounting of memory usage
-int main()
+AT30TS74::AT30TS74(I2C* i2c, uint8_t addr)
+	: m_i2c(i2c)
+	, m_addr(addr)
 {
-	//Initialize the PLL
-	//CPU clock = AHB clock = APB clock = 48 MHz
-	RCCHelper::InitializePLLFromInternalOscillator(2, 12, 1, 1);
+	//12 bit resolution, active high alert output
+	uint8_t temp_config[3] = {0x01, 0x64, 0x00};
+	m_i2c->BlockingWrite(m_addr, temp_config, sizeof(temp_config));
 
-	//Initialize the UART
-	static GPIOPin uart_tx(&GPIOA, 9,	GPIOPin::MODE_PERIPHERAL, 1);
-	static GPIOPin uart_rx(&GPIOA, 10, GPIOPin::MODE_PERIPHERAL, 1);
-	static UART uart(&USART1, &USART1, 417);
-	g_uart = &uart;
+	//Select temperature register now so we can just do a read in the future to get the temp
+	//without any address overhead
+	m_i2c->BlockingWrite8(m_addr, 0x00);
+}
 
-	//Enable RXNE interrupt vector (IRQ27)
-	//TODO: better contants here
-	volatile uint32_t* NVIC_ISER0 = (volatile uint32_t*)(0xe000e100);
-	*NVIC_ISER0 = 0x8000000;
-
-	//Set up SPI bus at 12 MHz (APB/4)
-	static GPIOPin spi_sck( &GPIOB, 3, GPIOPin::MODE_PERIPHERAL, 0);
-	static GPIOPin spi_miso(&GPIOB, 4, GPIOPin::MODE_PERIPHERAL, 0);
-	static GPIOPin spi_mosi(&GPIOB, 5, GPIOPin::MODE_PERIPHERAL, 0);
-	static SPI spi(&SPI1, true, 4);
-
-	//Set up timer with 1us ticks
-	static Timer timer(&TIM1, Timer::FEATURE_ADVANCED, 48);
-
-	//Set up DAC
-	static GPIOPin dac_cs_n(&GPIOA, 15, GPIOPin::MODE_OUTPUT);
-	dac_cs_n.Set(1);
-
-	//Set up I2C.
-	//Prescale divide by 8 (6 MHz, 166.6 ns/tick)
-	//Divide I2C clock by 16 after that to get 375 kHz
-	static GPIOPin i2c_sda( &GPIOB, 7, GPIOPin::MODE_PERIPHERAL, 1);
-	static GPIOPin i2c_scl( &GPIOB, 6, GPIOPin::MODE_PERIPHERAL, 1);
-	static I2C i2c(&I2C1, 8, 8);
-
-	//Set up temperature sensors
-	AT30TS74 temp_right(&i2c, 0x90);
-	AT30TS74 temp_left(&i2c, 0x92);
-
-	//Set up LCD
-	static GPIOPin lcd_cs_n(&GPIOA, 0, GPIOPin::MODE_OUTPUT);
-	static GPIOPin lcd_rst_n(&GPIOA, 2, GPIOPin::MODE_OUTPUT);
-	static GPIOPin lcd_ctl_data(&GPIOA, 3, GPIOPin::MODE_OUTPUT);
-	AMG240160P lcd(&spi, &lcd_cs_n, &lcd_rst_n, &lcd_ctl_data, &timer);
-	g_uart->Printf("a");
-	lcd.Initialize();
-
-
-	/*
-	//Read the current temperatures
-	uint8_t temp;
-	uint8_t temp_frac;
-	temp_left.GetTemperature(temp, temp_frac);
-	g_uart->Printf("Left:  %d.%02d C\n", temp, temp_frac * 100 / 256);
-	temp_right.GetTemperature(temp, temp_frac);
-	g_uart->Printf("Right: %d.%02d C\n", temp, temp_frac * 100 / 256);
-	*/
-
-	//Wait forever
-	while(1)
-	{}
-
-	return 0;
+void AT30TS74::GetTemperature(uint8_t& temp, uint8_t& temp_frac)
+{
+	uint8_t reply[2];
+	m_i2c->BlockingRead(m_addr, reply, 2);
+	temp = reply[0];
+	temp_frac = reply[1];
 }
