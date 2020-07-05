@@ -34,6 +34,9 @@
 #include <peripheral/GPIO.h>
 #include <peripheral/Timer.h>
 
+#define AMG240160P_FRAMEBUFFER_ROWS 16
+#define AMG240160P_FRAMEBUFFER_COLS 20
+
 /**
 	@brief Driver for an AMG240160P-W6WFDW LCD
  */
@@ -41,12 +44,17 @@ class AMG240160P
 {
 public:
 	AMG240160P(SPI* spi, GPIOPin* csn, GPIOPin* rstn, GPIOPin* ctlData, Timer* usTimer);
-	void Initialize();
 
 	void SendCommand(uint8_t cmd);
 	void SendData(uint8_t data);
+	void ClearScreen();
+	void UpdateScreen();
+
+	//The framebuffer
+	char m_framebuffer[AMG240160P_FRAMEBUFFER_ROWS][AMG240160P_FRAMEBUFFER_COLS];
 
 protected:
+	bool GetPixel(unsigned int x, unsigned int y);
 
 	SPI* 		m_spi;
 	GPIOPin*	m_csn;

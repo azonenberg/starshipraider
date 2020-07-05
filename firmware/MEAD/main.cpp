@@ -90,9 +90,6 @@ int main()
 	static GPIOPin lcd_rst_n(&GPIOA, 2, GPIOPin::MODE_OUTPUT);
 	static GPIOPin lcd_ctl_data(&GPIOA, 3, GPIOPin::MODE_OUTPUT);
 	AMG240160P lcd(&spi, &lcd_cs_n, &lcd_rst_n, &lcd_ctl_data, &timer);
-	g_uart->Printf("a");
-	lcd.Initialize();
-
 
 	/*
 	//Read the current temperatures
