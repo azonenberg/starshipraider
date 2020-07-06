@@ -33,6 +33,7 @@
 #include <peripheral/SPI.h>
 #include <peripheral/GPIO.h>
 #include <peripheral/Timer.h>
+#include <util/CharacterDevice.h>
 
 #define AMG240160P_FRAMEBUFFER_ROWS 16
 #define AMG240160P_FRAMEBUFFER_COLS 20
@@ -40,7 +41,7 @@
 /**
 	@brief Driver for an AMG240160P-W6WFDW LCD
  */
-class AMG240160P
+class AMG240160P : public CharacterDevice
 {
 public:
 	AMG240160P(SPI* spi, GPIOPin* csn, GPIOPin* rstn, GPIOPin* ctlData, Timer* usTimer);
@@ -50,8 +51,12 @@ public:
 	void ClearScreen();
 	void UpdateScreen();
 
-	//The framebuffer
+	//Raw framebuffer access
 	char m_framebuffer[AMG240160P_FRAMEBUFFER_ROWS][AMG240160P_FRAMEBUFFER_COLS];
+
+	//Printing
+	void MoveTo(unsigned int x, unsigned int y);
+	virtual void PrintBinary(char ch);
 
 protected:
 	bool GetPixel(unsigned int x, unsigned int y);
@@ -61,6 +66,10 @@ protected:
 	GPIOPin*	m_rstn;
 	GPIOPin*	m_ctlData;
 	Timer*		m_usTimer;
+
+	//Current write position
+	unsigned int	m_writeX;
+	unsigned int	m_writeY;
 };
 
 #endif
