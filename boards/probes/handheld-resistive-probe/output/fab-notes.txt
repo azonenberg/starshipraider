@@ -1,0 +1,42 @@
+Part number:		handheld-resistive-probe v1.0
+
+General fabrication notes
+
+	* Boards are be individually routed.
+	* Board material is Rogers RO4350B
+	* Blue solder mask on both sides of board.
+	* White LPI legend on both sides of board.
+	* Pad finish is immersion silver.
+	* Finished board thickness is 1.6 mm.
+	* Place UL mark and date code in the area marked on the "F. Fab" gerber layer.
+
+Impedances
+
+	Control to within 10%.
+
+	Layer 1 coplanar waveguide (ref to layer 1 and 2 ground).
+	Note that there is NO SOLDERMASK over these signals.
+		300 μm trace = 50 ohm
+
+Suggested stackup
+	1	35 μm (1 oz) copper			Signal with ground fill
+		160 μm RO4350B core
+	2	35 μm (1 oz) copper			Ground
+		Core(s) and prepregs as needed for 1.6mm finished PCB thickness. Rogers not required.
+	3	35 μm (1 oz) copper			Unused
+		160 μm core. Rogers not required.
+	4	35 μm (1 oz) copper			Unused
+
+File naming
+	handheld-resistive-probe-Edge_Cuts.gbr	Board outline
+	handheld-resistive-probe.drl			Through-board plated holes
+	handheld-resistive-probe-F_SilkS.gbr	Front silkscreen
+	handheld-resistive-probe-F.Fab.gbr		Shows requested location of date code and UL marking
+	handheld-resistive-probe-F_Mask.gbr		Front solder mask
+	handheld-resistive-probe-F_Cu.gbr		Layer 1 copper
+	handheld-resistive-probe-In1_Cu.gbr		Layer 2 copper
+	handheld-resistive-probe-In2_Cu.gbr		Layer 3 copper (BLANK)
+	handheld-resistive-probe-B_Cu.gbr		Layer 4 copper (BLANK)
+	handheld-resistive-probe-B_Mask.gbr		Back solder mask (BLANK)
+	handheld-resistive-probe-B_SilkS.gbr	Back silkscreen
+

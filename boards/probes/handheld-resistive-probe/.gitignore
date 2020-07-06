@@ -1,2 +1,5 @@
-output
+output/*.gbr
+output/*.drl
+output/sim-dxf
+output/*.zip
 *bak
