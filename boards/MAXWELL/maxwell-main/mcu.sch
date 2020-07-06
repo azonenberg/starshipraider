@@ -5,7 +5,7 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 17 18
 Title "MAXWELL Main Board"
-Date "2020-07-01"
+Date "2020-07-05"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
@@ -65,7 +65,7 @@ Text HLabel 3250 1550 0    50   Output ~ 0
 S7_SPI_MOSI
 Text HLabel 1350 1650 0    50   Input ~ 0
 S7_SPI_MISO
-Text HLabel 5000 3350 0    50   Output ~ 0
+Text HLabel 3250 4250 0    50   Output ~ 0
 K7_SPI_CS_N
 Text HLabel 5000 3150 0    50   Output ~ 0
 K7_SPI_SCK
@@ -77,11 +77,11 @@ Text HLabel 3250 1750 0    50   BiDi ~ 0
 I2C1_SDA
 Text HLabel 3250 1650 0    50   Output ~ 0
 I2C1_SCL
-Text HLabel 1350 1850 0    50   Output ~ 0
+Text HLabel 1350 1250 0    50   Output ~ 0
 S7_RST_N
-Text HLabel 1350 1950 0    50   BiDi ~ 0
+Text HLabel 1350 1350 0    50   BiDi ~ 0
 S7_INIT_B
-Text HLabel 1350 2050 0    50   Input ~ 0
+Text HLabel 1350 1050 0    50   Input ~ 0
 S7_DONE
 $Comp
 L st-azonenberg:STM32F777xx-TFBGA216 U1
@@ -171,11 +171,11 @@ F 3 "" H 8600 6350 50  0001 C CNN
 	10   8600 6400
 	1    0    0    -1  
 $EndComp
-Text HLabel 7000 2550 0    50   BiDi ~ 0
+Text HLabel 5000 4150 0    50   BiDi ~ 0
 K7_INIT_B
 Text HLabel 7000 2450 0    50   Output ~ 0
 K7_RST_N
-Text HLabel 7000 1050 0    50   Input ~ 0
+Text HLabel 7000 3450 0    50   Input ~ 0
 K7_DONE
 Wire Wire Line
 	1350 2950 1350 3050
@@ -290,9 +290,9 @@ Text HLabel 3250 2350 0    50   Output ~ 0
 PLL_SPI_SCK
 Text HLabel 2950 2550 0    50   Output ~ 0
 PLL_SPI_DATA
-Text HLabel 3250 1850 0    50   BiDi ~ 0
+Text HLabel 1350 1850 0    50   BiDi ~ 0
 PLL_STATUS_LD
-Text HLabel 3250 1950 0    50   BiDi ~ 0
+Text HLabel 8300 2150 0    50   BiDi ~ 0
 PLL_STATUS_CLKIN0
 Text HLabel 5000 5650 0    50   BiDi ~ 0
 PLL_STATUS_CLKIN1
@@ -345,11 +345,10 @@ Text Label 4750 2050 2    50   ~ 0
 STM_TCK
 Text Label 4750 2250 2    50   ~ 0
 STM_TDI
-Text Notes 700  1400 0    50   ~ 0
+Text Notes 500  1600 0    50   ~ 0
 SPI1 AF5
 Text Notes 2700 2500 0    50   ~ 0
 SPI2 AF5
-NoConn ~ 3250 2450
 $Comp
 L device:R R101
 U 1 1 6064B6A3
@@ -366,8 +365,6 @@ I2C1 AF4
 Text Notes 2400 2100 0    50   ~ 0
 I2C2 AF4
 NoConn ~ 3250 1250
-NoConn ~ 1350 1350
-NoConn ~ 1350 1250
 Text Label 4750 2350 2    50   ~ 0
 STM_RST_J
 Text Label 1450 8050 2    50   ~ 0
@@ -1220,7 +1217,6 @@ Text Label 2550 5750 0    50   ~ 0
 GND
 Text Label 2550 5850 0    50   ~ 0
 3V3
-NoConn ~ 1350 1050
 Text Label 3750 7850 2    50   ~ 0
 3V3
 $Comp
@@ -1314,24 +1310,13 @@ NoConn ~ 3250 2950
 NoConn ~ 3250 3050
 NoConn ~ 3250 3150
 NoConn ~ 3250 3250
-NoConn ~ 3250 3750
-NoConn ~ 3250 4050
-NoConn ~ 3250 4250
 NoConn ~ 5000 3650
 NoConn ~ 7000 2150
-NoConn ~ 7000 2050
-NoConn ~ 7000 1950
-NoConn ~ 7000 1850
-NoConn ~ 7000 1550
 NoConn ~ 7000 1450
 NoConn ~ 7000 1350
 NoConn ~ 7000 1250
 NoConn ~ 7000 1150
 NoConn ~ 8300 1150
-NoConn ~ 8300 1950
-NoConn ~ 8300 2050
-NoConn ~ 8300 2150
-NoConn ~ 8500 3250
 NoConn ~ 8500 3750
 NoConn ~ 8500 4050
 NoConn ~ 8500 4150
@@ -1424,23 +1409,23 @@ Text HLabel 5000 5550 0    50   Output ~ 0
 TRIG_OUT_MUX_SEL
 Text HLabel 5000 5450 0    50   Output ~ 0
 TRIG_OUT_MUX_EQ
-Text HLabel 7000 2950 0    50   Output ~ 0
+Text HLabel 7000 1850 0    50   Output ~ 0
 1V0_EN
-Text HLabel 7000 3050 0    50   Input ~ 0
+Text HLabel 7000 2050 0    50   Input ~ 0
 1V0_1_GOOD
-Text HLabel 7000 3150 0    50   Input ~ 0
+Text HLabel 7000 1950 0    50   Input ~ 0
 1V0_2_GOOD
 Text HLabel 7000 3250 0    50   Output ~ 0
 1V2_EN
-Text HLabel 7000 3450 0    50   Output ~ 0
+Text HLabel 7000 1050 0    50   Output ~ 0
 1V5_EN
-Text HLabel 7000 3650 0    50   Output ~ 0
+Text HLabel 7000 1550 0    50   Output ~ 0
 1V8_EN
 Text HLabel 7000 3350 0    50   Input ~ 0
 1V2_GOOD
 Text HLabel 7000 1650 0    50   Input ~ 0
 1V5_GOOD
-Text HLabel 7000 3750 0    50   Input ~ 0
+Text HLabel 3250 4050 0    50   Input ~ 0
 1V8_GOOD
 $Comp
 L st-azonenberg:STM32F777xx-TFBGA216 U1
@@ -1544,15 +1529,15 @@ Text HLabel 3250 1050 0    50   Output ~ 0
 0V5_EN
 Text HLabel 3250 1150 0    50   Input ~ 0
 0V5_GOOD
-Text HLabel 5000 6050 0    50   Input ~ 0
+Text HLabel 8500 2950 0    50   Input ~ 0
 5V0_GOOD
 Text HLabel 5000 4450 0    50   Input ~ 0
 3V3_GOOD
-Text HLabel 5000 6250 0    50   Output ~ 0
+Text HLabel 3250 3950 0    50   Output ~ 0
 5V0_N_EN
-Text HLabel 5000 5950 0    50   Output ~ 0
+Text HLabel 8500 3050 0    50   Output ~ 0
 5V0_EN
-Text HLabel 5000 6550 0    50   Output ~ 0
+Text HLabel 1350 2050 0    50   Output ~ 0
 3V3_EN
 Text Notes 4450 3700 0    50   ~ 0
 SPI4 AF5
@@ -1563,7 +1548,6 @@ Text Label 5000 4250 2    50   ~ 0
 FAN2_PWM
 Text Label 5000 4350 2    50   ~ 0
 FAN3_PWM
-NoConn ~ 5000 4150
 NoConn ~ 5000 3950
 $Comp
 L st-azonenberg:STM32F777xx-TFBGA216 U1
@@ -1578,8 +1562,6 @@ F 3 "" H 8650 7450 50  0001 C CNN
 $EndComp
 Text Label 8500 3150 2    50   ~ 0
 FAN3_TACHO
-NoConn ~ 8500 3050
-NoConn ~ 8500 2950
 NoConn ~ 8500 3350
 Text Label 8500 3450 2    50   ~ 0
 FAN0_TACHO
@@ -1975,11 +1957,11 @@ Wire Wire Line
 	10650 5900 10650 5650
 Text Label 8300 2250 2    50   ~ 0
 LED0
-Text Label 8300 2350 2    50   ~ 0
+Text Label 3250 2450 2    50   ~ 0
 LED1
-Text Label 8300 2450 2    50   ~ 0
+Text Label 8300 2050 2    50   ~ 0
 LED2
-Text Label 8300 2550 2    50   ~ 0
+Text Label 8300 1950 2    50   ~ 0
 LED3
 $Comp
 L Connector:Conn_01x02 J26
@@ -2283,6 +2265,24 @@ VBACKLIGHT_N
 NoConn ~ 8300 1050
 NoConn ~ 7000 4450
 NoConn ~ 5000 5050
-NoConn ~ 3250 3950
 NoConn ~ 7000 3550
+NoConn ~ 5000 6250
+NoConn ~ 7000 3750
+NoConn ~ 7000 3650
+NoConn ~ 5000 5950
+NoConn ~ 5000 3350
+NoConn ~ 5000 6550
+NoConn ~ 5000 6050
+NoConn ~ 3250 1850
+NoConn ~ 7000 3150
+NoConn ~ 7000 3050
+NoConn ~ 7000 2950
+NoConn ~ 3250 1950
+NoConn ~ 1350 1950
+NoConn ~ 8500 3250
+NoConn ~ 8300 2450
+NoConn ~ 8300 2550
+NoConn ~ 8300 2350
+NoConn ~ 3250 3750
+NoConn ~ 7000 2550
 $EndSCHEMATC
