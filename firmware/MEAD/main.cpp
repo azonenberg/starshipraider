@@ -33,6 +33,7 @@
 #include <peripheral/SPI.h>
 #include <peripheral/I2C.h>
 #include <peripheral/Timer.h>
+#include <util/StringBuffer.h>
 #include "AT30TS74.h"
 #include "AMG240160P.h"
 
@@ -41,6 +42,8 @@
 
 //UART stuff
 UART* g_uart;
+
+void UpdateSensors(AT30TS74* left, AT30TS74* right, AMG240160P* display);
 
 //When possible, long-lived stuff here should be declared static.
 //This puts them in .bss instead of stack, and enables better accounting of memory usage
@@ -91,19 +94,40 @@ int main()
 	static GPIOPin lcd_ctl_data(&GPIOA, 3, GPIOPin::MODE_OUTPUT);
 	AMG240160P lcd(&spi, &lcd_cs_n, &lcd_rst_n, &lcd_ctl_data, &timer);
 
-	/*
-	//Read the current temperatures
-	uint8_t temp;
-	uint8_t temp_frac;
-	temp_left.GetTemperature(temp, temp_frac);
-	g_uart->Printf("Left:  %d.%02d C\n", temp, temp_frac * 100 / 256);
-	temp_right.GetTemperature(temp, temp_frac);
-	g_uart->Printf("Right: %d.%02d C\n", temp, temp_frac * 100 / 256);
-	*/
+	//Add initial channel names
+	for(int i=0; i<8; i++)
+	{
+		lcd.MoveTo(0, i*2);
+		lcd.Printf("CH%d", i);
+	}
 
-	//Wait forever
-	while(1)
-	{}
+	//Read the current temperature
+	while(true)
+	{
+		//Refresh sensors and push to the display
+		UpdateSensors(&temp_left, &temp_right, &lcd);
+		lcd.UpdateScreen();
+
+		//Wait 500ms
+		for(int i=0; i<500; i++)
+			timer.Sleep(1000, true);
+	}
 
 	return 0;
+}
+
+void UpdateSensors(AT30TS74* left, AT30TS74* right, AMG240160P* display)
+{
+	uint8_t temp;
+	uint8_t temp_frac;
+
+	//Left side
+	display->MoveTo(13, 1);
+	left->GetTemperature(temp, temp_frac);
+	display->Printf("%d.%02d C", temp, temp_frac * 100 / 256);
+
+	//Right side
+	display->MoveTo(13, 13);
+	right->GetTemperature(temp, temp_frac);
+	display->Printf("%d.%02d C", temp, temp_frac * 100 / 256);
 }
