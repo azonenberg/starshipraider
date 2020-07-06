@@ -1778,21 +1778,4 @@ F 3 "~" H 8500 8300 50  0001 C CNN
 $EndComp
 Text Label 8700 8300 0    50   ~ 0
 RAM_VTT
-$Comp
-L Connector:Conn_01x03 TP8
-U 1 1 62DC5193
-P 9900 6900
-F 0 "TP8" H 9980 6942 50  0000 L CNN
-F 1 "Conn_01x03" H 9980 6851 50  0000 L CNN
-F 2 "azonenberg_pcb:CONN_HEADER_2.54MM_1x3" H 9900 6900 50  0001 C CNN
-F 3 "~" H 9900 6900 50  0001 C CNN
-	1    9900 6900
-	1    0    0    -1  
-$EndComp
-Text Label 9700 6800 2    50   ~ 0
-I2C2_SDA
-Text Label 9700 6900 2    50   ~ 0
-I2C2_SCL
-Text Label 9700 7000 2    50   ~ 0
-GND
 $EndSCHEMATC

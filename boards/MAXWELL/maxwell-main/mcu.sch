@@ -171,8 +171,6 @@ F 3 "" H 8600 6350 50  0001 C CNN
 	10   8600 6400
 	1    0    0    -1  
 $EndComp
-Text HLabel 5000 4150 0    50   BiDi ~ 0
-K7_INIT_B
 Text HLabel 7000 2450 0    50   Output ~ 0
 K7_RST_N
 Text HLabel 7000 3450 0    50   Input ~ 0
@@ -1060,17 +1058,6 @@ F 3 "" H 14400 5850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:C C267
-U 1 1 6098761A
-P 14950 5850
-F 0 "C267" H 15065 5896 50  0000 L CNN
-F 1 "0.47 uF" H 15065 5805 50  0000 L CNN
-F 2 "azonenberg_pcb:EIA_0402_CAP_NOSILK" H 14988 5700 50  0001 C CNN
-F 3 "" H 14950 5850 50  0001 C CNN
-	1    14950 5850
-	1    0    0    -1  
-$EndComp
-$Comp
 L device:C C268
 U 1 1 60987C12
 P 15500 5850
@@ -1081,22 +1068,12 @@ F 3 "" H 15500 5850 50  0001 C CNN
 	1    15500 5850
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	15500 6000 14950 6000
 Connection ~ 14400 6000
 Wire Wire Line
 	14400 6000 13900 6000
-Connection ~ 14950 6000
-Wire Wire Line
-	14950 6000 14400 6000
 Wire Wire Line
 	13900 5700 14400 5700
 Connection ~ 14400 5700
-Wire Wire Line
-	14400 5700 14950 5700
-Connection ~ 14950 5700
-Wire Wire Line
-	14950 5700 15500 5700
 Text Label 13900 5700 2    50   ~ 0
 3V3
 Text Label 13900 6000 2    50   ~ 0
@@ -2284,5 +2261,27 @@ NoConn ~ 8300 2450
 NoConn ~ 8300 2550
 NoConn ~ 8300 2350
 NoConn ~ 3250 3750
-NoConn ~ 7000 2550
+Text HLabel 7000 2550 0    50   BiDi ~ 0
+K7_INIT_B
+Wire Wire Line
+	14400 5700 15000 5700
+Wire Wire Line
+	14400 6000 15000 6000
+$Comp
+L device:C C267
+U 1 1 651B7B86
+P 15000 5850
+F 0 "C267" H 15115 5896 50  0000 L CNN
+F 1 "4.7 uF" H 15115 5805 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0603_CAP_NOSILK" H 15038 5700 50  0001 C CNN
+F 3 "" H 15000 5850 50  0001 C CNN
+	1    15000 5850
+	1    0    0    -1  
+$EndComp
+Connection ~ 15000 5700
+Wire Wire Line
+	15000 5700 15500 5700
+Connection ~ 15000 6000
+Wire Wire Line
+	15000 6000 15500 6000
 $EndSCHEMATC
