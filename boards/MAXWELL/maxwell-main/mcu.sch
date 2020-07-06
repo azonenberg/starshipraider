@@ -171,11 +171,11 @@ F 3 "" H 8600 6350 50  0001 C CNN
 	10   8600 6400
 	1    0    0    -1  
 $EndComp
-Text HLabel 5000 3250 0    50   BiDi ~ 0
+Text HLabel 7000 2550 0    50   BiDi ~ 0
 K7_INIT_B
-Text HLabel 5000 2950 0    50   Output ~ 0
+Text HLabel 7000 2450 0    50   Output ~ 0
 K7_RST_N
-Text HLabel 5000 3050 0    50   Input ~ 0
+Text HLabel 7000 1050 0    50   Input ~ 0
 K7_DONE
 Wire Wire Line
 	1350 2950 1350 3050
@@ -501,7 +501,7 @@ Text Label 8550 7350 2    50   ~ 0
 LCD_B7
 Text Label 8500 6250 2    50   ~ 0
 LCD_B2
-Text Label 8300 1050 2    50   ~ 0
+Text Label 5000 3250 2    50   ~ 0
 LCD_ON
 Text Label 8500 4350 2    50   ~ 0
 LCD_CLK
@@ -511,15 +511,15 @@ Text Label 8500 3850 2    50   ~ 0
 LCD_VSYNC
 Text Label 8550 7450 2    50   ~ 0
 LCD_EN
-Text Label 7000 2450 2    50   ~ 0
+Text Label 5000 2950 2    50   ~ 0
 TOUCH_RST_N
-Text Label 7000 2550 2    50   ~ 0
+Text Label 5000 3050 2    50   ~ 0
 TOUCH_INT
 Text Label 7000 2350 2    50   ~ 0
 I2C4_SDA
 Text Label 7000 2250 2    50   ~ 0
 I2C4_SCL
-Text Notes 6550 2650 0    50   ~ 0
+Text Notes 6500 2250 2    50   ~ 0
 I2C4 AF4
 $Comp
 L special-azonenberg:MOP-TFT480116-38G-BLH-TPC_HM_DISPLAY J9
@@ -1315,23 +1315,18 @@ NoConn ~ 3250 3050
 NoConn ~ 3250 3150
 NoConn ~ 3250 3250
 NoConn ~ 3250 3750
-NoConn ~ 3250 3950
 NoConn ~ 3250 4050
-NoConn ~ 3250 4150
 NoConn ~ 3250 4250
 NoConn ~ 5000 3650
 NoConn ~ 7000 2150
 NoConn ~ 7000 2050
 NoConn ~ 7000 1950
 NoConn ~ 7000 1850
-NoConn ~ 7000 1750
-NoConn ~ 7000 1650
 NoConn ~ 7000 1550
 NoConn ~ 7000 1450
 NoConn ~ 7000 1350
 NoConn ~ 7000 1250
 NoConn ~ 7000 1150
-NoConn ~ 7000 1050
 NoConn ~ 8300 1150
 NoConn ~ 8300 1950
 NoConn ~ 8300 2050
@@ -1443,7 +1438,7 @@ Text HLabel 7000 3650 0    50   Output ~ 0
 1V8_EN
 Text HLabel 7000 3350 0    50   Input ~ 0
 1V2_GOOD
-Text HLabel 7000 3550 0    50   Input ~ 0
+Text HLabel 7000 1650 0    50   Input ~ 0
 1V5_GOOD
 Text HLabel 7000 3750 0    50   Input ~ 0
 1V8_GOOD
@@ -1484,7 +1479,7 @@ Text HLabel 7000 4150 0    50   Input ~ 0
 2V0_GOOD
 Text HLabel 7000 4350 0    50   Input ~ 0
 2V5_GOOD
-Text HLabel 7000 4450 0    50   Output ~ 0
+Text HLabel 3250 4150 0    50   Output ~ 0
 VBACKLIGHT_EN
 Text HLabel 3250 3850 0    50   Output ~ 0
 BACKLIGHT_PWM
@@ -1507,7 +1502,7 @@ F 3 "" H 2900 1450 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	3050 1450 3250 1450
-Text HLabel 5000 5050 0    50   Input ~ 0
+Text HLabel 7000 1750 0    50   Input ~ 0
 TEMP1_ALERT
 Text HLabel 5000 5150 0    50   Input ~ 0
 TEMP2_ALERT
@@ -2285,4 +2280,9 @@ F 3 "~" H 10700 9650 50  0001 C CNN
 $EndComp
 Text Label 10900 9650 0    50   ~ 0
 VBACKLIGHT_N
+NoConn ~ 8300 1050
+NoConn ~ 7000 4450
+NoConn ~ 5000 5050
+NoConn ~ 3250 3950
+NoConn ~ 7000 3550
 $EndSCHEMATC

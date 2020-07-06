@@ -554,11 +554,11 @@ Text Label 6300 4250 0    50   ~ 0
 K7_QSPI_DQ2
 Text Label 6300 4350 0    50   ~ 0
 K7_QSPI_DQ3
-Text Label 8450 3400 0    50   ~ 0
+Text Label 8450 3600 0    50   ~ 0
 K7_INIT_B
 Text Label 8450 3500 0    50   ~ 0
 K7_RST_N
-Text Label 8450 3600 0    50   ~ 0
+Text Label 8450 3400 0    50   ~ 0
 K7_DONE
 Text Label 1150 5250 2    50   ~ 0
 K7_DONE
