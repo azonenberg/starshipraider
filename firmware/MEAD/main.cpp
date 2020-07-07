@@ -222,6 +222,7 @@ void ProcessCommand(const char* cmd)
 			SetThreshold(channel_num, atoi(cmd+2));
 			UpdateChannelInfoText(channel_num);
 			g_display->UpdateScreen();
+			break;
 
 		//Read temperature sensor
 		case 't':
@@ -235,6 +236,7 @@ void ProcessCommand(const char* cmd)
 
 				g_uart->Printf("%d.%02d\n", temp, temp_frac * 100 / 256);
 			}
+			break;
 
 		//ignore unknown commands
 		default:
