@@ -51,6 +51,12 @@ public:
 	void ClearScreen();
 	void UpdateScreen();
 
+	void ClearRow(uint8_t row)
+	{
+		for(int i=0; i<AMG240160P_FRAMEBUFFER_COLS; i++)
+			m_framebuffer[row][i] = ' ';
+	}
+
 	//Raw framebuffer access
 	char m_framebuffer[AMG240160P_FRAMEBUFFER_ROWS][AMG240160P_FRAMEBUFFER_COLS];
 
