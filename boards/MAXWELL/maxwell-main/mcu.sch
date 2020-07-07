@@ -292,9 +292,9 @@ Text HLabel 1350 1850 0    50   BiDi ~ 0
 PLL_STATUS_LD
 Text HLabel 8300 2150 0    50   BiDi ~ 0
 PLL_STATUS_CLKIN0
-Text HLabel 5000 5650 0    50   BiDi ~ 0
+Text HLabel 8300 2250 0    50   BiDi ~ 0
 PLL_STATUS_CLKIN1
-Text HLabel 5000 5750 0    50   BiDi ~ 0
+Text HLabel 3250 2450 0    50   BiDi ~ 0
 PLL_STATUS_HOLDOVER
 Text Label 1350 2350 2    50   ~ 0
 STM_TMS
@@ -1932,9 +1932,9 @@ Wire Wire Line
 Connection ~ 10650 5900
 Wire Wire Line
 	10650 5900 10650 5650
-Text Label 8300 2250 2    50   ~ 0
+Text Label 5000 5650 2    50   ~ 0
 LED0
-Text Label 3250 2450 2    50   ~ 0
+Text Label 5000 5750 2    50   ~ 0
 LED1
 Text Label 8300 2050 2    50   ~ 0
 LED2

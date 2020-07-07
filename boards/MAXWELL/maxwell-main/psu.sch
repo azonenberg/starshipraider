@@ -503,23 +503,6 @@ Text Label 8300 3400 0    50   ~ 0
 0V5_GOOD
 $Comp
 L device:R R?
-U 1 1 62B1AEE7
-P 8150 3500
-AR Path="/5EDD7150/61296AEB/62B1AEE7" Ref="R?"  Part="1" 
-AR Path="/5EDD7150/61580EA1/62B1AEE7" Ref="R?"  Part="1" 
-AR Path="/5EDD7150/611CBEBF/62B1AEE7" Ref="R?"  Part="1" 
-AR Path="/5EDD7150/62B1AEE7" Ref="R234"  Part="1" 
-F 0 "R234" V 8100 3250 50  0000 C CNN
-F 1 "DNP" V 8150 3500 50  0000 C CNN
-F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 8080 3500 50  0001 C CNN
-F 3 "" H 8150 3500 50  0001 C CNN
-	1    8150 3500
-	0    1    1    0   
-$EndComp
-Text Label 8300 3500 0    50   ~ 0
-5V0_GOOD
-$Comp
-L device:R R?
 U 1 1 62B1B86A
 P 8150 3600
 AR Path="/5EDD7150/61296AEB/62B1B86A" Ref="R?"  Part="1" 
@@ -592,15 +575,12 @@ Connection ~ 8000 3300
 Wire Wire Line
 	8000 3300 8000 3400
 Connection ~ 8000 3400
-Wire Wire Line
-	8000 3400 8000 3500
-Connection ~ 8000 3500
-Wire Wire Line
-	8000 3500 8000 3600
 Connection ~ 8000 3600
 Wire Wire Line
 	8000 3600 8000 3700
 Connection ~ 8000 3700
 Wire Wire Line
 	8000 3700 8000 3800
+Wire Wire Line
+	8000 3400 8000 3600
 $EndSCHEMATC
