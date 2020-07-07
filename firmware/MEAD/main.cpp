@@ -36,6 +36,7 @@
 #include <util/StringBuffer.h>
 #include "AT30TS74.h"
 #include "AMG240160P.h"
+#include "DAC60508.h"
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Entry point
@@ -73,10 +74,6 @@ int main()
 	//Set up timer with 1us ticks
 	static Timer timer(&TIM1, Timer::FEATURE_ADVANCED, 48);
 
-	//Set up DAC
-	static GPIOPin dac_cs_n(&GPIOA, 15, GPIOPin::MODE_OUTPUT);
-	dac_cs_n.Set(1);
-
 	//Set up I2C.
 	//Prescale divide by 8 (6 MHz, 166.6 ns/tick)
 	//Divide I2C clock by 16 after that to get 375 kHz
@@ -84,9 +81,16 @@ int main()
 	static GPIOPin i2c_scl( &GPIOB, 6, GPIOPin::MODE_PERIPHERAL, 1);
 	static I2C i2c(&I2C1, 8, 8);
 
+	//Wait 50ms for peripherals to fully power up before talking to them
+	timer.Sleep(50000, true);
+
 	//Set up temperature sensors
 	AT30TS74 temp_right(&i2c, 0x90);
 	AT30TS74 temp_left(&i2c, 0x92);
+
+	//Set up DAC
+	static GPIOPin dac_cs_n(&GPIOA, 15, GPIOPin::MODE_OUTPUT);
+	DAC60508 dac(&spi, &dac_cs_n);
 
 	//Set up LCD
 	static GPIOPin lcd_cs_n(&GPIOA, 0, GPIOPin::MODE_OUTPUT);
@@ -99,9 +103,15 @@ int main()
 	{
 		lcd.MoveTo(0, i*2);
 		lcd.Printf("CH%d", i);
+
+		lcd.MoveTo(0, i*2 + 1);
+		lcd.Printf("  1.65V x10");
 	}
 
-	//Read the current temperature
+	//Initialize the DAC
+	dac.SetVoltage(7, 500);
+
+	//Main loop
 	while(true)
 	{
 		//Refresh sensors and push to the display
@@ -122,12 +132,12 @@ void UpdateSensors(AT30TS74* left, AT30TS74* right, AMG240160P* display)
 	uint8_t temp_frac;
 
 	//Left side
-	display->MoveTo(13, 1);
+	display->MoveTo(13, 0);
 	left->GetTemperature(temp, temp_frac);
 	display->Printf("%d.%02d C", temp, temp_frac * 100 / 256);
 
 	//Right side
-	display->MoveTo(13, 13);
+	display->MoveTo(13, 15);
 	right->GetTemperature(temp, temp_frac);
 	display->Printf("%d.%02d C", temp, temp_frac * 100 / 256);
 }
