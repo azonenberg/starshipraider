@@ -44,8 +44,8 @@
 UART* 		g_uart;
 DAC60508*	g_dac;
 AMG240160P*	g_display;
-
-void UpdateSensors(AT30TS74* left, AT30TS74* right, AMG240160P* display);
+AT30TS74*	g_leftTemp;
+AT30TS74*	g_rightTemp;
 
 //Channel configuration
 uint8_t		g_channelAttenuations[8];
@@ -102,6 +102,8 @@ int main()
 	//Set up temperature sensors
 	static AT30TS74 temp_right(&i2c, 0x90);
 	static AT30TS74 temp_left(&i2c, 0x92);
+	g_leftTemp = &temp_left;
+	g_rightTemp = &temp_right;
 
 	//Set up DAC
 	static GPIOPin dac_cs_n(&GPIOA, 15, GPIOPin::MODE_OUTPUT);
@@ -178,7 +180,8 @@ int main()
 	Opcodes:
 		n		Set display name of channel 	(argument = up to 20 chars of display name)
 		a		Set channel attenuation 		(argument = attenuation)
-		t		Set channel voltage threshold	(argument = threshold in mV)
+		v		Set channel voltage threshold	(argument = threshold in mV)
+		t		Read temperature sensor			(ch0 = left, ch1 = right)
  */
 void ProcessCommand(const char* cmd)
 {
@@ -215,10 +218,23 @@ void ProcessCommand(const char* cmd)
 			break;
 
 		//Set channel voltage threshold
-		case 't':
+		case 'v':
 			SetThreshold(channel_num, atoi(cmd+2));
 			UpdateChannelInfoText(channel_num);
 			g_display->UpdateScreen();
+
+		//Read temperature sensor
+		case 't':
+			{
+				uint8_t temp;
+				uint8_t temp_frac;
+				if(channel_num == 0)
+					g_leftTemp->GetTemperature(temp, temp_frac);
+				else
+					g_rightTemp->GetTemperature(temp, temp_frac);
+
+				g_uart->Printf("%d.%02d\n", temp, temp_frac * 100 / 256);
+			}
 
 		//ignore unknown commands
 		default:
@@ -279,21 +295,4 @@ void SetThreshold(uint8_t channel, uint16_t threshold)
 	channel = dac_channel_mapping[channel];
 
 	g_dac->SetVoltage(channel, threshold);
-}
-
-//TODO: remove this since it's not being used?
-void UpdateSensors(AT30TS74* left, AT30TS74* right, AMG240160P* display)
-{
-	uint8_t temp;
-	uint8_t temp_frac;
-
-	//Left side
-	display->MoveTo(13, 0);
-	left->GetTemperature(temp, temp_frac);
-	display->Printf("%d.%02d C", temp, temp_frac * 100 / 256);
-
-	//Right side
-	display->MoveTo(13, 15);
-	right->GetTemperature(temp, temp_frac);
-	display->Printf("%d.%02d C", temp, temp_frac * 100 / 256);
 }
