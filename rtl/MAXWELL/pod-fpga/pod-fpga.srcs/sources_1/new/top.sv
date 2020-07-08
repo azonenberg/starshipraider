@@ -137,6 +137,8 @@ module top(
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// QSPI interface to boot flash
 
+	wire[15:0]	flash_capacity_mbits;
+
 	QuadSPIFlashController #(
 		.SFDP_ADDRESS_32B(0)
 	) flash_ctrl(
@@ -159,7 +161,7 @@ module top(
 		.write_ready(),
 		.busy(),
 
-		.capacity_mbits(),
+		.capacity_mbits(flash_capacity_mbits),
 		.sfdp_bad()
 	);
 
@@ -214,7 +216,9 @@ module top(
 		OP_NOP			= 8'h0,		//Nothing
 		OP_UART_WRITE	= 8'h1,		//Write to UART FIFO (arbitrarily many bytes)
 		OP_UART_RSIZE	= 8'h2,		//Read number of bytes ready in UART FIFO
-		OP_UART_READ	= 8'h3		//Read data from UART FIFO  (one byte at a time)
+		OP_UART_READ	= 8'h3,		//Read data from UART FIFO  (one byte at a time)
+		OP_FLASH_SIZE	= 8'h4,		//Read 2-byte flash capacity, in Mbits
+		OP_READ_ALERT	= 8'h5		//Read pod alert status
 
 		//TODO: allow querying write fifo capacity
 		//TODO: allow querying/forcing channel power state
@@ -232,6 +236,7 @@ module top(
 
 	logic[7:0]	opcode		= 0;
 	logic[7:0]	channel		= 0;
+	logic[7:0]	count		= 0;
 
 	always_ff @(posedge sysclk) begin
 
@@ -251,6 +256,7 @@ module top(
 			SPI_STATE_IDLE: begin
 
 				spi_tx_data	<= 0;
+				count		<= 0;
 
 				if(spi_rx_data_valid) begin
 					opcode		<= spi_rx_data;
@@ -286,6 +292,8 @@ module top(
 
 			SPI_STATE_DISPATCH: begin
 
+				count		<= count + 1;
+
 				//Reply to the incoming request
 				case(opcode)
 
@@ -305,6 +313,35 @@ module top(
 						end
 
 					end	//end OP_UART_READ
+
+					OP_FLASH_SIZE: begin
+
+						case(count)
+							0:			spi_tx_data	<= flash_capacity_mbits[15:8];
+							1:			spi_tx_data	<= flash_capacity_mbits[7:0];
+
+							default:	spi_tx_data	<= 0;
+						endcase
+
+						spi_tx_data_valid	<= 1;
+						spi_state			<= SPI_STATE_DATA;
+
+
+					end	//end OP_FLASH_SIZE
+
+					OP_READ_ALERT: begin
+
+						case(count)
+							0:			spi_tx_data	<= pod_power_alert[11:8];
+							1:			spi_tx_data	<= pod_power_alert[7:0];
+
+							default:	spi_tx_data	<= 0;
+						endcase
+
+						spi_tx_data_valid	<= 1;
+						spi_state			<= SPI_STATE_DATA;
+
+					end	//end OP_READ_ALERT
 
 					default:
 						spi_state		<= SPI_STATE_DATA;
