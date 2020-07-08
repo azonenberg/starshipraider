@@ -19,6 +19,16 @@ module top(
 	assign uart_tx = 1'bz;
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// Clock generation
+
+	wire	clk_200mhz;
+
+	clk_wiz_0 clkwiz(
+		.clk_25mhz(clk_25mhz),
+		.clk_200mhz(clk_200mhz)
+	);
+
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// Input buffers
 
 	wire[7:0]	probe;
@@ -97,5 +107,20 @@ module top(
 		endcase
 
 	end
+
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// ILA on the probe inputs
+
+	ila_0 ila(
+		.clk(clk_200mhz),
+		.probe0(probe[0]),
+		.probe1(probe[1]),
+		.probe2(probe[2]),
+		.probe3(probe[3]),
+		.probe4(probe[4]),
+		.probe5(probe[5]),
+		.probe6(probe[6]),
+		.probe7(probe[7])
+	);
 
 endmodule
