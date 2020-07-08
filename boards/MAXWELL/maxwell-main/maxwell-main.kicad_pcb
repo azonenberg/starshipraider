@@ -5,7 +5,7 @@
     (drawings 87)
     (tracks 13034)
     (zones 0)
-    (modules 995)
+    (modules 996)
     (nets 922)
   )
 
@@ -2150,6 +2150,26 @@
     (add_net "Net-(U84-Pad3)")
     (add_net "Net-(U85-Pad2)")
     (add_net "Net-(U85-Pad5)")
+  )
+
+  (module azonenberg_pcb:EIA_0402_RES_NOSILK (layer F.Cu) (tedit 5C85B125) (tstamp 5F794AC5)
+    (at 168.9 162.5)
+    (path /5EDD723A/6565B132)
+    (fp_text reference R234 (at 0 1.5) (layer F.SilkS)
+      (effects (font (size 0.75 0.75) (thickness 0.1)))
+    )
+    (fp_text value 100 (at 0 3.5) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad 2 smd rect (at 0.5 0) (size 0.5 0.5) (layers F.Cu F.Paste F.Mask)
+      (net 858 /Clocking/S7_CLK_P))
+    (pad 1 smd rect (at -0.5 0) (size 0.5 0.5) (layers F.Cu F.Paste F.Mask)
+      (net 859 /Clocking/S7_CLK_N))
+    (model /nfs4/home/azonenberg/kicad-libs/3rdparty/walter/smd_resistors/r_0402.wrl
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module azonenberg_pcb:EIA_0603_CAP_NOSILK (layer B.Cu) (tedit 53C52A1B) (tstamp 5F69E8AA)

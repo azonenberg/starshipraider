@@ -585,4 +585,19 @@ Wire Wire Line
 	8500 1350 9100 1350
 Text Label 8200 1350 2    50   ~ 0
 3V3
+$Comp
+L device:R R234
+U 1 1 6565B132
+P 7700 5900
+F 0 "R234" V 7600 5900 50  0000 C CNN
+F 1 "100" V 7700 5900 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 7630 5900 50  0001 C CNN
+F 3 "" H 7700 5900 50  0001 C CNN
+	1    7700 5900
+	0    1    1    0   
+$EndComp
+Text Label 7550 5900 2    50   ~ 0
+S7_CLK_P
+Text Label 7850 5900 0    50   ~ 0
+S7_CLK_N
 $EndSCHEMATC
