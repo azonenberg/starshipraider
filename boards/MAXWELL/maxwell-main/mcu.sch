@@ -171,9 +171,9 @@ F 3 "" H 8600 6350 50  0001 C CNN
 	10   8600 6400
 	1    0    0    -1  
 $EndComp
-Text HLabel 7000 2450 0    50   Output ~ 0
+Text HLabel 5000 3950 0    50   Output ~ 0
 K7_RST_N
-Text HLabel 7000 3450 0    50   Input ~ 0
+Text HLabel 5000 5050 0    50   Input ~ 0
 K7_DONE
 Wire Wire Line
 	1350 2950 1350 3050
@@ -282,7 +282,7 @@ Text HLabel 3250 2150 0    50   BiDi ~ 0
 I2C2_SDA
 Text HLabel 3250 2050 0    50   Output ~ 0
 I2C2_SCL
-Text HLabel 3250 2250 0    50   Output ~ 0
+Text HLabel 5000 4450 0    50   Output ~ 0
 PLL_SPI_LE
 Text HLabel 3250 2350 0    50   Output ~ 0
 PLL_SPI_SCK
@@ -292,7 +292,7 @@ Text HLabel 1350 1850 0    50   BiDi ~ 0
 PLL_STATUS_LD
 Text HLabel 8300 2150 0    50   BiDi ~ 0
 PLL_STATUS_CLKIN0
-Text HLabel 8300 2250 0    50   BiDi ~ 0
+Text HLabel 8300 1950 0    50   BiDi ~ 0
 PLL_STATUS_CLKIN1
 Text HLabel 3250 2450 0    50   BiDi ~ 0
 PLL_STATUS_HOLDOVER
@@ -1288,7 +1288,6 @@ NoConn ~ 3250 3050
 NoConn ~ 3250 3150
 NoConn ~ 3250 3250
 NoConn ~ 5000 3650
-NoConn ~ 7000 2150
 NoConn ~ 7000 1450
 NoConn ~ 7000 1350
 NoConn ~ 7000 1250
@@ -1382,17 +1381,17 @@ Wire Wire Line
 Wire Wire Line
 	10350 1400 10350 1300
 Connection ~ 10350 1300
-Text HLabel 5000 5550 0    50   Output ~ 0
+Text HLabel 7000 2150 0    50   Output ~ 0
 TRIG_OUT_MUX_SEL
 Text HLabel 5000 5450 0    50   Output ~ 0
 TRIG_OUT_MUX_EQ
-Text HLabel 7000 1850 0    50   Output ~ 0
+Text HLabel 7000 1950 0    50   Output ~ 0
 1V0_EN
-Text HLabel 7000 2050 0    50   Input ~ 0
+Text HLabel 8300 2050 0    50   Input ~ 0
 1V0_1_GOOD
-Text HLabel 7000 1950 0    50   Input ~ 0
+Text HLabel 5000 4150 0    50   Input ~ 0
 1V0_2_GOOD
-Text HLabel 7000 3250 0    50   Output ~ 0
+Text HLabel 8300 2250 0    50   Output ~ 0
 1V2_EN
 Text HLabel 7000 1050 0    50   Output ~ 0
 1V5_EN
@@ -1425,7 +1424,7 @@ Text HLabel 7000 3850 0    50   Output ~ 0
 VTT_EN
 Text HLabel 7000 3950 0    50   Input ~ 0
 VTT_GOOD
-Text Notes 7800 2000 0    50   ~ 0
+Text Notes 7500 1800 0    50   ~ 0
 I2C3 AF4
 Text Notes 8850 9950 0    50   ~ 0
 I2C2 ADDRESS MAP (3V3_SB)\n\nINA233s\n2V5 = 80\n2V0 = 82\n3V3 = 84\nBacklight = 86\n5V0 = 88\n1V2 = 8A\n1V8 = 8C\n1V5 = 8E\n1V0_1 = 90\n1V0_2 = 92\n3V3_SB = 94\n12V0 = 96\n\nTemp sensors\nTEMP1 = 98\nTEMP2 = 9A\nTEMP3 = 9C\nTEMP4 = 9E\n\nSPD EEPROM = A0
@@ -1508,7 +1507,7 @@ Text HLabel 3250 1150 0    50   Input ~ 0
 0V5_GOOD
 Text HLabel 8500 2950 0    50   Input ~ 0
 5V0_GOOD
-Text HLabel 5000 4450 0    50   Input ~ 0
+Text HLabel 5000 3750 0    50   Input ~ 0
 3V3_GOOD
 Text HLabel 3250 3950 0    50   Output ~ 0
 5V0_N_EN
@@ -1520,12 +1519,10 @@ Text Notes 4450 3700 0    50   ~ 0
 SPI4 AF5
 Text Notes 4200 3850 0    50   ~ 0
 TIM1 AF1
-NoConn ~ 5000 3750
 Text Label 5000 4250 2    50   ~ 0
 FAN2_PWM
 Text Label 5000 4350 2    50   ~ 0
 FAN3_PWM
-NoConn ~ 5000 3950
 $Comp
 L st-azonenberg:STM32F777xx-TFBGA216 U1
 U 11 1 5F7C9274
@@ -1936,9 +1933,9 @@ Text Label 5000 5650 2    50   ~ 0
 LED0
 Text Label 5000 5750 2    50   ~ 0
 LED1
-Text Label 8300 2050 2    50   ~ 0
+Text Label 7000 2050 2    50   ~ 0
 LED2
-Text Label 8300 1950 2    50   ~ 0
+Text Label 7000 1850 2    50   ~ 0
 LED3
 $Comp
 L Connector:Conn_01x02 J26
@@ -2241,7 +2238,6 @@ Text Label 10900 9650 0    50   ~ 0
 VBACKLIGHT_N
 NoConn ~ 8300 1050
 NoConn ~ 7000 4450
-NoConn ~ 5000 5050
 NoConn ~ 7000 3550
 NoConn ~ 5000 6250
 NoConn ~ 7000 3750
@@ -2261,7 +2257,7 @@ NoConn ~ 8300 2450
 NoConn ~ 8300 2550
 NoConn ~ 8300 2350
 NoConn ~ 3250 3750
-Text HLabel 7000 2550 0    50   BiDi ~ 0
+Text HLabel 7000 3250 0    50   BiDi ~ 0
 K7_INIT_B
 Wire Wire Line
 	14400 5700 15000 5700
@@ -2284,4 +2280,9 @@ Wire Wire Line
 Connection ~ 15000 6000
 Wire Wire Line
 	15000 6000 15500 6000
+NoConn ~ 7000 2550
+NoConn ~ 7000 2450
+NoConn ~ 3250 2250
+NoConn ~ 7000 3450
+NoConn ~ 5000 5550
 $EndSCHEMATC
