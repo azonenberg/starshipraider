@@ -5,7 +5,7 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 1 18
 Title "MAXWELL Main Board"
-Date "2020-07-05"
+Date "2020-07-07"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
@@ -14,7 +14,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Sheet
-S 8900 3800 1350 2600
+S 8900 3800 1350 2700
 U 5EDD7150
 F0 "Power Supply" 50
 F1 "psu.sch" 50
@@ -66,6 +66,7 @@ F46 "TEMP3_ALERT" O R 10250 5950 50
 F47 "TEMP4_ALERT" O R 10250 6050 50 
 F48 "I2C2_SDA" B R 10250 6350 50 
 F49 "I2C2_SCL" I R 10250 6250 50 
+F50 "5V0_SB" O L 8900 6450 50 
 $EndSheet
 $Sheet
 S 1050 2850 1050 1150
@@ -983,4 +984,6 @@ F 3 "~" H 2500 9050 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 NoConn ~ 2700 9050
+Text Label 8900 6450 2    50   ~ 0
+5V0_SB
 $EndSCHEMATC
