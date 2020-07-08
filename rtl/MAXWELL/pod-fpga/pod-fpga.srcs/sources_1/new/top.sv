@@ -169,9 +169,9 @@ module top(
 	logic[11:0]	uart_tx_fifo_push_en	= 0;
 	logic[7:0]	uart_tx_fifo_push_data	= 0;
 
-	logic[7:0]	uart_rx_fifo_rd_en		= 0;
-	wire[7:0]	uart_rx_fifo_rd_data[7:0];
-	wire[5:0]	uart_rx_fifo_rd_size[7:0];
+	logic[11:0]	uart_rx_fifo_rd_en		= 0;
+	wire[7:0]	uart_rx_fifo_rd_data[11:0];
+	wire[5:0]	uart_rx_fifo_rd_size[11:0];
 
 	for(genvar g=0; g<12; g++) begin
 
@@ -191,7 +191,7 @@ module top(
 			.pod_uart_rx(pod_uart_rx[g]),
 
 			.tx_fifo_push_en(uart_tx_fifo_push_en[g]),
-			.tx_fifo_push_data(uart_tx_fifo_push_data[g]),
+			.tx_fifo_push_data(uart_tx_fifo_push_data),
 
 			.rx_fifo_rd_en(uart_rx_fifo_rd_en[g]),
 			.rx_fifo_rd_data(uart_rx_fifo_rd_data[g]),
@@ -218,6 +218,7 @@ module top(
 
 		//TODO: allow querying write fifo capacity
 		//TODO: allow querying/forcing channel power state
+		//TODO: flash programming
 	} opcode_t;
 
 	enum logic[3:0]

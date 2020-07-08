@@ -57,9 +57,6 @@ module UartBlock(
 
 	wire[7:0]	tx_fifo_rdata;
 
-	wire		uart_rx_en;
-	wire[7:0]	uart_rx_data;
-
 	UART uart(
 		.clk(sysclk),
 		.clkdiv(16'd1356),	//115.2 Kbps @ 156.25 MHz
