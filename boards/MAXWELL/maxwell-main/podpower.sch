@@ -3,9 +3,9 @@ EELAYER 30 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
-Sheet 8 18
+Sheet 12 18
 Title "MAXWELL Main Board"
-Date "2020-07-07"
+Date "2020-07-08"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
@@ -1045,11 +1045,11 @@ Text Label 1400 2200 2    50   ~ 0
 P7_PWREN
 Text Label 1400 2300 2    50   ~ 0
 P8_PWREN
-Text Label 1400 2400 2    50   ~ 0
+Text Label 1400 3000 2    50   ~ 0
 P9_PWREN
-Text Label 1400 2500 2    50   ~ 0
+Text Label 1400 4100 2    50   ~ 0
 P10_PWREN
-Text Label 1400 2600 2    50   ~ 0
+Text Label 1400 4000 2    50   ~ 0
 P11_PWREN
 Text HLabel 1400 2700 0    50   Input ~ 0
 P0_PRESENT
@@ -1057,9 +1057,9 @@ Text HLabel 1400 2800 0    50   Input ~ 0
 P1_PRESENT
 Text HLabel 1400 2900 0    50   Input ~ 0
 P2_PRESENT
-Text HLabel 1400 3000 0    50   Input ~ 0
+Text HLabel 1400 2400 0    50   Input ~ 0
 P3_PRESENT
-Text HLabel 1400 3100 0    50   Input ~ 0
+Text HLabel 1400 5200 0    50   Input ~ 0
 P4_PRESENT
 Text HLabel 1400 3200 0    50   Input ~ 0
 P5_PRESENT
@@ -1071,9 +1071,7 @@ Text HLabel 1400 3500 0    50   Input ~ 0
 P8_PRESENT
 Text HLabel 1400 3600 0    50   Input ~ 0
 P9_PRESENT
-Text HLabel 1400 3700 0    50   Input ~ 0
-P10_PRESENT
-Text HLabel 1400 3800 0    50   Input ~ 0
+Text HLabel 1400 4700 0    50   Input ~ 0
 P11_PRESENT
 $Comp
 L power-azonenberg:FUSE_PWROUT F1
@@ -1502,7 +1500,7 @@ Text HLabel 4350 1350 0    50   Input ~ 0
 I2C1_SCL
 Text Notes 4650 1550 0    50   ~ 0
 8'h80
-Text Label 1400 3900 2    50   ~ 0
+Text Label 1400 5000 2    50   ~ 0
 P0_ALERT
 $Comp
 L special-azonenberg:INA226 U6
@@ -1537,7 +1535,7 @@ Text Label 4350 2200 2    50   ~ 0
 I2C1_SCL
 Text Notes 4650 2400 0    50   ~ 0
 8'h82
-Text Label 1400 4000 2    50   ~ 0
+Text Label 1400 2600 2    50   ~ 0
 P1_ALERT
 $Comp
 L device:C C1
@@ -1600,28 +1598,26 @@ Text Label 4350 3050 2    50   ~ 0
 I2C1_SCL
 Text Notes 4650 3250 0    50   ~ 0
 8'h84
-Text Label 1400 4100 2    50   ~ 0
+Text Label 1400 2500 2    50   ~ 0
 P2_ALERT
 Text Label 4350 2750 2    50   ~ 0
 I2C1_SDA
 Text Label 1400 4200 2    50   ~ 0
 P3_ALERT
-Text Label 1400 4300 2    50   ~ 0
+Text Label 1400 5300 2    50   ~ 0
 P4_ALERT
 Text Label 1400 4400 2    50   ~ 0
 P5_ALERT
-Text Label 1400 4500 2    50   ~ 0
+Text Label 1400 5400 2    50   ~ 0
 P6_ALERT
-Text Label 1400 4600 2    50   ~ 0
+Text Label 1400 5100 2    50   ~ 0
 P7_ALERT
-Text Label 1400 4700 2    50   ~ 0
+Text Label 1400 3700 2    50   ~ 0
 P8_ALERT
-Text Label 1400 4800 2    50   ~ 0
+Text Label 1400 3100 2    50   ~ 0
 P9_ALERT
-Text Label 1400 4900 2    50   ~ 0
+Text Label 1400 3800 2    50   ~ 0
 P10_ALERT
-Text Label 1400 5000 2    50   ~ 0
-P11_ALERT
 $Comp
 L special-azonenberg:INA226 U8
 U 1 1 5F1CA9E3
@@ -1907,8 +1903,6 @@ Text Label 5900 10700 0    50   ~ 0
 3V3
 Text Label 4350 10300 2    50   ~ 0
 I2C1_SDA
-Text Label 4350 10500 2    50   ~ 0
-P11_ALERT
 Text Label 4350 10600 2    50   ~ 0
 I2C1_SDA
 Text Label 4350 10700 2    50   ~ 0
@@ -2083,10 +2077,6 @@ Wire Wire Line
 Connection ~ 12650 9650
 Text Notes 12100 9750 0    50   ~ 0
 INA233 decoupling
-NoConn ~ 1400 5100
-NoConn ~ 1400 5200
-NoConn ~ 1400 5300
-NoConn ~ 1400 5400
 NoConn ~ 1400 5500
 NoConn ~ 1400 5600
 NoConn ~ 1400 5700
@@ -2557,4 +2547,18 @@ F 3 "~" H 7400 8350 50  0001 C CNN
 $EndComp
 Text Label 7600 8350 0    50   ~ 0
 12V0
+Text Label 4350 10500 2    50   ~ 0
+P11_ALERT
+Text Label 1400 3900 2    50   ~ 0
+P11_ALERT
+Text HLabel 1400 4600 0    50   Output ~ 0
+P11_UART_TX
+Text HLabel 1400 4500 0    50   Input ~ 0
+P11_UART_RX
+Text HLabel 1400 4800 0    50   Output ~ 0
+P10_UART_TX
+Text HLabel 1400 4900 0    50   Input ~ 0
+P10_PRESENT
+Text HLabel 1400 4300 0    50   Input ~ 0
+P10_UART_RX
 $EndSCHEMATC
