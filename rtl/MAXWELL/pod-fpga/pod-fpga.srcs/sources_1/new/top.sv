@@ -57,7 +57,7 @@ module top(
 	//Pod power control
 	input wire[11:0]	pod_present_n,
 	input wire[11:0]	pod_power_alert,
-	output logic[11:0]	pod_power_en	= 0
+	output wire[11:0]	pod_power_en
 	);
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -91,7 +91,8 @@ module top(
 	DifferentialInputBuffer #(
 		.WIDTH(1),
 		.IOSTANDARD("LVDS_25"),
-		.ODT(1),
+		.ODT(0),					//ODT = 1 requires VCCO = 2.5V
+									//but we run both banks at 3.3V
 		.OPTIMIZE("SPEED")
 	) sysclk_ibuf (
 		.pad_in_p(sysclk_p),
@@ -112,6 +113,13 @@ module top(
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// SPI interface to STM32
 
+	wire		spi_cs_falling;
+	logic[7:0]	spi_tx_data			= 0;
+	logic		spi_tx_data_valid	= 0;
+
+	wire		spi_rx_data_valid;
+	wire[7:0]	spi_rx_data;
+
 	SPIDeviceInterface mcu_spi (
 		.clk(sysclk),
 		.spi_cs_n(mgmt_cs_n),
@@ -119,11 +127,11 @@ module top(
 		.spi_mosi(mgmt_mosi),
 		.spi_miso(mgmt_miso),
 
-		.cs_falling(),
-		.tx_data(8'h0),
-		.tx_data_valid(1'b1),
-		.rx_data(),
-		.rx_data_valid()
+		.cs_falling(spi_cs_falling),
+		.tx_data(spi_tx_data),
+		.tx_data_valid(spi_tx_data_valid),
+		.rx_data(spi_rx_data),
+		.rx_data_valid(spi_rx_data_valid)
 	);
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -156,98 +164,181 @@ module top(
 	);
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	// Hotswap power control
+	// Input channel controls
+
+	logic[11:0]	uart_tx_fifo_push_en	= 0;
+	logic[7:0]	uart_tx_fifo_push_data	= 0;
+
+	logic[7:0]	uart_rx_fifo_rd_en		= 0;
+	wire[7:0]	uart_rx_fifo_rd_data[7:0];
+	wire[5:0]	uart_rx_fifo_rd_size[7:0];
 
 	for(genvar g=0; g<12; g++) begin
 
-		//Synchronize presence-detect signal
-		wire	present_n;
+		//Hotswap power control
+		PowerControl power(
+			.sysclk(sysclk),
 
-		ThreeStageSynchronizer #(
-			.INIT(0),
-			.IN_REG(0)
-		) sync_present(
-			.clk_in(sysclk),
-			.din(pod_present_n),
-			.clk_out(sysclk),
-			.dout(present_n)
+			.pod_present_n(pod_present_n[g]),
+			.pod_power_en(pod_power_en[g])
 		);
 
-		//Wait about 850ms after mate before applying power
-		logic[26:0]	count = 0;
+		//UARTs and FIFOs
+		UartBlock uart(
+			.sysclk(sysclk),
 
-		enum logic[1:0]
-		{
-			STATE_OFF,
-			STATE_TURNING_ON,
-			STATE_ON
-		} state = STATE_OFF;
+			.pod_uart_tx(pod_uart_tx[g]),
+			.pod_uart_rx(pod_uart_rx[g]),
 
-		//Main power control state machine
-		always_ff @(posedge sysclk) begin
+			.tx_fifo_push_en(uart_tx_fifo_push_en[g]),
+			.tx_fifo_push_data(uart_tx_fifo_push_data[g]),
 
-			case(state)
-
-				STATE_OFF: begin
-
-					if(!present_n) begin
-						count	<= 1;
-						state	<= STATE_TURNING_ON;
-					end
-
-				end	//end STATE_OFF
-
-				STATE_TURNING_ON: begin
-					count	<= count + 1;
-
-					if(count == 0) begin
-						pod_power_en[g]	<= 1;
-						state			<= STATE_ON;
-					end
-
-				end	//end STATE_TURNING_ON
-
-				STATE_ON: begin
-					if(present_n) begin
-						pod_power_en[g]	<= 0;
-						state			<= STATE_OFF;
-					end
-				end	//end STATE_ON
-
-			endcase
-
-		end
-
-	end
-
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	// UARTs and FIFOs
-
-	for(genvar g=0; g<12; g++) begin
-
-		wire		uart_rx_en;
-		wire[7:0]	uart_rx_data;
-
-		//The UART itself
-		UART uart(
-			.clk(sysclk),
-			.clkdiv(16'd1356),	//115.2 Kbps @ 156.25 MHz
-
-			.rx(pod_uart_rx[g]),
-			.rxactive(),
-			.rx_data(),
-			.rx_en(),
-
-			.tx(pod_uart_tx[g]),
-			.tx_data(),
-			.tx_en(),
-			.txactive(),
-			.tx_done()
+			.rx_fifo_rd_en(uart_rx_fifo_rd_en[g]),
+			.rx_fifo_rd_data(uart_rx_fifo_rd_data[g]),
+			.rx_fifo_rd_size(uart_rx_fifo_rd_size[g])
 		);
 
 	end
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// SPI interface logic
+
+	/*
+		First byte is opcode
+		Second byte is channel number
+		Anything after that is command specific
+	 */
+
+	typedef enum logic[7:0]
+	{
+		OP_NOP			= 8'h0,		//Nothing
+		OP_UART_WRITE	= 8'h1,		//Write to UART FIFO (arbitrarily many bytes)
+		OP_UART_RSIZE	= 8'h2,		//Read number of bytes ready in UART FIFO
+		OP_UART_READ	= 8'h3		//Read data from UART FIFO  (one byte at a time)
+
+		//TODO: allow querying write fifo capacity
+		//TODO: allow querying/forcing channel power state
+	} opcode_t;
+
+	enum logic[3:0]
+	{
+		SPI_STATE_IDLE		= 0,
+		SPI_STATE_CHANNEL	= 1,
+		SPI_STATE_DISPATCH	= 2,
+		SPI_STATE_DATA		= 3
+
+	} spi_state = SPI_STATE_IDLE;
+
+	logic[7:0]	opcode		= 0;
+	logic[7:0]	channel		= 0;
+
+	always_ff @(posedge sysclk) begin
+
+		uart_tx_fifo_push_en	<= 0;
+		uart_rx_fifo_rd_en		<= 0;
+		spi_tx_data_valid		<= 0;
+
+		//Reset when CS# falls
+		if(spi_cs_falling)
+			spi_state	<= SPI_STATE_IDLE;
+
+		case(spi_state)
+
+			////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+			// Read inbound headers
+
+			SPI_STATE_IDLE: begin
+
+				spi_tx_data	<= 0;
+
+				if(spi_rx_data_valid) begin
+					opcode		<= spi_rx_data;
+					spi_state	<= SPI_STATE_CHANNEL;
+
+				end
+
+			end	//end SPI_STATE_IDLE
+
+			SPI_STATE_CHANNEL: begin
+
+				spi_tx_data	<= 0;
+
+				if(spi_rx_data_valid) begin
+
+					//Clip channel number to valid range
+					if(spi_rx_data <= 11)
+						channel	<= spi_rx_data;
+					else
+						channel	<= 11;
+
+					//Dispatch the read request if needed
+					if(opcode == OP_UART_READ)
+						uart_rx_fifo_rd_en[spi_rx_data]	<= 1;
+
+					spi_state	<= SPI_STATE_DISPATCH;
+				end
+
+			end	//end SPI_STATE_CHANNEL
+
+			////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+			// Process data coming in from the host
+
+			SPI_STATE_DISPATCH: begin
+
+				//Reply to the incoming request
+				case(opcode)
+
+					OP_UART_RSIZE: begin
+						spi_tx_data_valid	<= 1;
+						spi_tx_data			<= uart_rx_fifo_rd_size[channel];
+						spi_state			<= SPI_STATE_DATA;
+					end	//end OP_UART_RSIZE
+
+					OP_UART_READ: begin
+
+						//Delay by a cycle so the read has time to execute
+						if(!uart_rx_fifo_rd_en) begin
+							spi_tx_data_valid	<= 1;
+							spi_tx_data			<= uart_rx_fifo_rd_data[channel];
+							spi_state			<= SPI_STATE_DATA;
+						end
+
+					end	//end OP_UART_READ
+
+					default:
+						spi_state		<= SPI_STATE_DATA;
+
+				endcase
+
+			end	//end SPI_STATE_DISPATCH
+
+			SPI_STATE_DATA: begin
+
+				if(spi_rx_data_valid) begin
+
+					case(opcode)
+
+						//Write data to the UART (can write arbitrarily many bytes until the fifo fills up)
+						OP_UART_WRITE: begin
+
+							uart_tx_fifo_push_en[channel]	<= 1;
+							uart_tx_fifo_push_data			<= spi_rx_data;
+						end
+
+						default: begin
+						end
+
+					endcase
+
+					//Get ready to send the next byte, if any
+					spi_state	<= SPI_STATE_DISPATCH;
+
+				end
+
+			end	//end SPI_STATE_DATA
+
+		endcase
+
+	end
 
 endmodule

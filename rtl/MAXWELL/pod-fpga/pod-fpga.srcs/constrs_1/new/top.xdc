@@ -73,3 +73,5 @@ set_property IOSTANDARD LVCMOS33 [get_ports mgmt_mosi]
 set_property IOSTANDARD LVCMOS33 [get_ports mgmt_sck]
 set_property PACKAGE_PIN G11 [get_ports sysclk_p]
 set_property PACKAGE_PIN C11 [get_ports flash_cs_n]
+
+create_clock -period 6.400 -name sysclk_p -waveform {0.000 3.200} [get_ports sysclk_p]
