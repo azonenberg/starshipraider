@@ -71,7 +71,7 @@ Wire Wire Line
 Text Label 950  1150 2    50   ~ 0
 GND
 Text Label 3450 1750 2    50   ~ 0
-1V0_1
+1V0_1_RAW
 $Comp
 L device:C C?
 U 1 1 6129FB41
@@ -1944,4 +1944,6 @@ Wire Wire Line
 	3350 10100 4950 10100
 Text Label 4500 10300 2    50   ~ 0
 3V3_SB
+Text Label 3250 1450 0    50   ~ 0
+1V0_1_RAW
 $EndSCHEMATC

@@ -1292,7 +1292,6 @@ NoConn ~ 7000 1450
 NoConn ~ 7000 1350
 NoConn ~ 7000 1250
 NoConn ~ 7000 1150
-NoConn ~ 8300 1150
 NoConn ~ 8500 3750
 NoConn ~ 8500 4050
 NoConn ~ 8500 4150
@@ -1301,11 +1300,11 @@ Text HLabel 8300 1850 0    50   BiDi ~ 0
 I2C3_SDA
 Text HLabel 8300 1750 0    50   Output ~ 0
 I2C3_SCL
-Text HLabel 8300 1250 0    50   Input ~ 0
+Text HLabel 7000 3150 0    50   Input ~ 0
 QSFP_INT_N
-Text HLabel 8300 1350 0    50   Input ~ 0
+Text HLabel 8300 1150 0    50   Input ~ 0
 QSFP_PRESENT_N
-Text HLabel 8300 1450 0    50   Output ~ 0
+Text HLabel 8300 1050 0    50   Output ~ 0
 QSFP_MODSEL_N
 Text HLabel 8300 1550 0    50   Output ~ 0
 QSFP_LP_MODE
@@ -1397,7 +1396,7 @@ Text HLabel 7000 1050 0    50   Output ~ 0
 1V5_EN
 Text HLabel 7000 1550 0    50   Output ~ 0
 1V8_EN
-Text HLabel 7000 3350 0    50   Input ~ 0
+Text HLabel 5000 5250 0    50   Input ~ 0
 1V2_GOOD
 Text HLabel 7000 1650 0    50   Input ~ 0
 1V5_GOOD
@@ -1467,7 +1466,7 @@ Text HLabel 7000 1750 0    50   Input ~ 0
 TEMP1_ALERT
 Text HLabel 5000 5150 0    50   Input ~ 0
 TEMP2_ALERT
-Text HLabel 5000 5250 0    50   Input ~ 0
+Text HLabel 7000 3350 0    50   Input ~ 0
 TEMP3_ALERT
 Text HLabel 5000 5350 0    50   Input ~ 0
 TEMP4_ALERT
@@ -2236,7 +2235,6 @@ F 3 "~" H 10700 9650 50  0001 C CNN
 $EndComp
 Text Label 10900 9650 0    50   ~ 0
 VBACKLIGHT_N
-NoConn ~ 8300 1050
 NoConn ~ 7000 4450
 NoConn ~ 7000 3550
 NoConn ~ 5000 6250
@@ -2247,7 +2245,6 @@ NoConn ~ 5000 3350
 NoConn ~ 5000 6550
 NoConn ~ 5000 6050
 NoConn ~ 3250 1850
-NoConn ~ 7000 3150
 NoConn ~ 7000 3050
 NoConn ~ 7000 2950
 NoConn ~ 3250 1950
@@ -2285,4 +2282,7 @@ NoConn ~ 7000 2450
 NoConn ~ 3250 2250
 NoConn ~ 7000 3450
 NoConn ~ 5000 5550
+NoConn ~ 8300 1350
+NoConn ~ 8300 1450
+NoConn ~ 8300 1250
 $EndSCHEMATC
