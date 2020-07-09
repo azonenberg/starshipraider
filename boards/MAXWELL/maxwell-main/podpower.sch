@@ -5,7 +5,7 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 12 18
 Title "MAXWELL Main Board"
-Date "2020-07-08"
+Date "2020-07-09"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
@@ -48,8 +48,6 @@ Wire Wire Line
 	7700 1700 7700 1800
 Text HLabel 7250 2000 0    50   Input ~ 0
 GND
-Text Label 7700 2200 2    50   ~ 0
-P0_PWREN
 Wire Wire Line
 	9400 1500 9250 1500
 Wire Wire Line
@@ -134,8 +132,6 @@ Wire Wire Line
 	7700 2750 7700 2850
 Text Label 7250 3050 2    50   ~ 0
 GND
-Text Label 7700 3250 2    50   ~ 0
-P1_PWREN
 Wire Wire Line
 	9400 2550 9250 2550
 Wire Wire Line
@@ -197,10 +193,6 @@ Wire Wire Line
 Connection ~ 7700 2750
 Wire Wire Line
 	7700 3050 7250 3050
-Text Label 1400 5400 2    50   ~ 0
-P1_PWREN
-Text Label 1400 1500 2    50   ~ 0
-P0_PWREN
 $Comp
 L power-azonenberg:NCP45525 U?
 U 1 1 5F0B1DBD
@@ -222,8 +214,6 @@ Wire Wire Line
 	7700 3800 7700 3900
 Text Label 7250 4100 2    50   ~ 0
 GND
-Text Label 7700 4300 2    50   ~ 0
-P2_PWREN
 Wire Wire Line
 	9400 3600 9250 3600
 Wire Wire Line
@@ -284,8 +274,6 @@ Wire Wire Line
 Connection ~ 7700 3800
 Wire Wire Line
 	7700 4100 7250 4100
-Text Label 1400 5800 2    50   ~ 0
-P2_PWREN
 $Comp
 L power-azonenberg:NCP45525 U?
 U 1 1 5F0C5A9E
@@ -307,8 +295,6 @@ Wire Wire Line
 	7700 4850 7700 4950
 Text Label 7250 5150 2    50   ~ 0
 GND
-Text Label 7700 5350 2    50   ~ 0
-P3_PWREN
 Wire Wire Line
 	9400 4650 9250 4650
 Wire Wire Line
@@ -369,8 +355,6 @@ Wire Wire Line
 Connection ~ 7700 4850
 Wire Wire Line
 	7700 5150 7250 5150
-Text Label 1400 5900 2    50   ~ 0
-P3_PWREN
 $Comp
 L power-azonenberg:NCP45525 U?
 U 1 1 5F0D5CDF
@@ -392,8 +376,6 @@ Wire Wire Line
 	7700 5900 7700 6000
 Text Label 7250 6200 2    50   ~ 0
 GND
-Text Label 7700 6400 2    50   ~ 0
-P4_PWREN
 Wire Wire Line
 	9400 5700 9250 5700
 Wire Wire Line
@@ -454,8 +436,6 @@ Wire Wire Line
 Connection ~ 7700 5900
 Wire Wire Line
 	7700 6200 7250 6200
-Text Label 1400 5100 2    50   ~ 0
-P4_PWREN
 $Comp
 L power-azonenberg:NCP45525 U?
 U 1 1 5F0DB159
@@ -477,8 +457,6 @@ Wire Wire Line
 	7700 6950 7700 7050
 Text Label 7250 7250 2    50   ~ 0
 GND
-Text Label 7700 7450 2    50   ~ 0
-P5_PWREN
 Wire Wire Line
 	9400 6750 9250 6750
 Wire Wire Line
@@ -539,8 +517,6 @@ Wire Wire Line
 Connection ~ 7700 6950
 Wire Wire Line
 	7700 7250 7250 7250
-Text Label 1400 5600 2    50   ~ 0
-P5_PWREN
 $Comp
 L power-azonenberg:NCP45525 U?
 U 1 1 5F0E0E8C
@@ -1037,7 +1013,7 @@ Wire Wire Line
 Connection ~ 12200 6950
 Wire Wire Line
 	12200 7250 11750 7250
-Text Label 1400 2200 2    50   ~ 0
+Text Label 1400 5800 2    50   ~ 0
 P6_PWREN
 Text Label 12200 3250 2    50   ~ 0
 P7_PWREN
@@ -1488,7 +1464,7 @@ Text HLabel 4350 1350 0    50   Input ~ 0
 I2C1_SCL
 Text Notes 4650 1550 0    50   ~ 0
 8'h80
-Text Label 1400 5000 2    50   ~ 0
+Text Label 1400 2300 2    50   ~ 0
 P0_ALERT
 $Comp
 L special-azonenberg:INA226 U6
@@ -1523,7 +1499,7 @@ Text Label 4350 2200 2    50   ~ 0
 I2C1_SCL
 Text Notes 4650 2400 0    50   ~ 0
 8'h82
-Text Label 1400 2600 2    50   ~ 0
+Text Label 1400 1500 2    50   ~ 0
 P1_ALERT
 $Comp
 L device:C C1
@@ -1586,15 +1562,15 @@ Text Label 4350 3050 2    50   ~ 0
 I2C1_SCL
 Text Notes 4650 3250 0    50   ~ 0
 8'h84
-Text Label 1400 5500 2    50   ~ 0
+Text Label 1400 2200 2    50   ~ 0
 P2_ALERT
 Text Label 4350 2750 2    50   ~ 0
 I2C1_SDA
-Text Label 1400 2300 2    50   ~ 0
+Text Label 1400 2600 2    50   ~ 0
 P3_ALERT
-Text Label 1400 5300 2    50   ~ 0
+Text Label 1400 2700 2    50   ~ 0
 P4_ALERT
-Text Label 1400 5700 2    50   ~ 0
+Text Label 1400 2900 2    50   ~ 0
 P5_ALERT
 Text Label 1400 1600 2    50   ~ 0
 P6_ALERT
@@ -2417,8 +2393,6 @@ Text HLabel 1400 2800 0    50   Output ~ 0
 P8_UART_TX
 Text HLabel 1400 3600 0    50   Input ~ 0
 P8_UART_RX
-NoConn ~ 1400 2900
-NoConn ~ 1400 2700
 NoConn ~ 1400 5200
 Text HLabel 1400 2400 0    50   Output ~ 0
 P7_UART_TX
@@ -2443,4 +2417,24 @@ Text HLabel 1400 2000 0    50   Output ~ 0
 P6_UART_TX
 Text HLabel 1400 1800 0    50   Input ~ 0
 P6_UART_RX
+NoConn ~ 1400 5700
+NoConn ~ 1400 5300
+Text HLabel 7700 2200 0    50   Input ~ 0
+P0_PWREN
+Text HLabel 7700 3250 0    50   Input ~ 0
+P1_PWREN
+Text HLabel 7700 4300 0    50   Input ~ 0
+P2_PWREN
+Text HLabel 7700 5350 0    50   Input ~ 0
+P3_PWREN
+Text HLabel 7700 6400 0    50   Input ~ 0
+P4_PWREN
+Text HLabel 7700 7450 0    50   Input ~ 0
+P5_PWREN
+NoConn ~ 1400 5000
+NoConn ~ 1400 5100
+NoConn ~ 1400 5600
+NoConn ~ 1400 5900
+NoConn ~ 1400 5500
+NoConn ~ 1400 5400
 $EndSCHEMATC

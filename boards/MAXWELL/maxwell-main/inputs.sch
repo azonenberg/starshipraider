@@ -5,7 +5,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 7 18
 Title "MAXWELL Main Board"
-Date "2020-07-08"
+Date "2020-07-09"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
@@ -528,7 +528,7 @@ S7_CLK_P
 Text Label 7850 5900 0    50   ~ 0
 S7_CLK_N
 $Sheet
-S 3050 1300 1350 4000
+S 3050 1300 1350 4750
 U 5F0BA462
 F0 "Pod Power" 50
 F1 "podpower.sch" 50
@@ -567,9 +567,13 @@ F33 "P7_UART_TX" O L 3050 4550 50
 F34 "P7_UART_RX" I L 3050 4650 50 
 F35 "P6_UART_TX" O L 3050 4850 50 
 F36 "P6_UART_RX" I L 3050 4950 50 
+F37 "P0_PWREN" I L 3050 5150 50 
+F38 "P1_PWREN" I L 3050 5250 50 
+F39 "P2_PWREN" I L 3050 5350 50 
+F40 "P3_PWREN" I L 3050 5450 50 
+F41 "P4_PWREN" I L 3050 5550 50 
+F42 "P5_PWREN" I L 3050 5650 50 
 $EndSheet
-NoConn ~ 9100 4550
-NoConn ~ 9100 4450
 $Comp
 L passive-azonenberg:FERRITE_SMALL FB11
 U 1 1 619C130A
@@ -620,8 +624,6 @@ F 3 "" H 9300 5800 50  0001 C CNN
 	3    9300 5800
 	1    0    0    -1  
 $EndComp
-NoConn ~ 9100 4250
-NoConn ~ 9100 4350
 $Comp
 L device:R R?
 U 1 1 65A30572
@@ -737,6 +739,28 @@ Wire Wire Line
 Wire Wire Line
 	1600 4000 1800 4000
 Connection ~ 1600 4000
-NoConn ~ 9100 4150
-NoConn ~ 9100 4050
+Text Label 3050 5150 2    50   ~ 0
+P0_PWREN
+Text Label 3050 5250 2    50   ~ 0
+P1_PWREN
+Text Label 3050 5350 2    50   ~ 0
+P2_PWREN
+Text Label 3050 5450 2    50   ~ 0
+P3_PWREN
+Text Label 3050 5550 2    50   ~ 0
+P4_PWREN
+Text Label 3050 5650 2    50   ~ 0
+P5_PWREN
+Text Label 9100 4050 2    50   ~ 0
+P0_PWREN
+Text Label 9100 4150 2    50   ~ 0
+P1_PWREN
+Text Label 9100 4250 2    50   ~ 0
+P2_PWREN
+Text Label 9100 4350 2    50   ~ 0
+P3_PWREN
+Text Label 9100 4450 2    50   ~ 0
+P4_PWREN
+Text Label 9100 4550 2    50   ~ 0
+P5_PWREN
 $EndSCHEMATC
