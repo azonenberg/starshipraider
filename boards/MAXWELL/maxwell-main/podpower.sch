@@ -197,7 +197,7 @@ Wire Wire Line
 Connection ~ 7700 2750
 Wire Wire Line
 	7700 3050 7250 3050
-Text Label 1400 1600 2    50   ~ 0
+Text Label 1400 5400 2    50   ~ 0
 P1_PWREN
 Text Label 1400 1500 2    50   ~ 0
 P0_PWREN
@@ -284,7 +284,7 @@ Wire Wire Line
 Connection ~ 7700 3800
 Wire Wire Line
 	7700 4100 7250 4100
-Text Label 1400 1700 2    50   ~ 0
+Text Label 1400 5800 2    50   ~ 0
 P2_PWREN
 $Comp
 L power-azonenberg:NCP45525 U?
@@ -369,7 +369,7 @@ Wire Wire Line
 Connection ~ 7700 4850
 Wire Wire Line
 	7700 5150 7250 5150
-Text Label 1400 1800 2    50   ~ 0
+Text Label 1400 5900 2    50   ~ 0
 P3_PWREN
 $Comp
 L power-azonenberg:NCP45525 U?
@@ -454,7 +454,7 @@ Wire Wire Line
 Connection ~ 7700 5900
 Wire Wire Line
 	7700 6200 7250 6200
-Text Label 1400 1900 2    50   ~ 0
+Text Label 1400 5100 2    50   ~ 0
 P4_PWREN
 $Comp
 L power-azonenberg:NCP45525 U?
@@ -539,7 +539,7 @@ Wire Wire Line
 Connection ~ 7700 6950
 Wire Wire Line
 	7700 7250 7250 7250
-Text Label 1400 2000 2    50   ~ 0
+Text Label 1400 5600 2    50   ~ 0
 P5_PWREN
 $Comp
 L power-azonenberg:NCP45525 U?
@@ -1037,13 +1037,13 @@ Wire Wire Line
 Connection ~ 12200 6950
 Wire Wire Line
 	12200 7250 11750 7250
-Text Label 1400 2100 2    50   ~ 0
+Text Label 1400 2200 2    50   ~ 0
 P6_PWREN
 Text Label 12200 3250 2    50   ~ 0
 P7_PWREN
-Text Label 1400 2200 2    50   ~ 0
+Text Label 1400 3700 2    50   ~ 0
 P7_PWREN
-Text Label 1400 2300 2    50   ~ 0
+Text Label 1400 2500 2    50   ~ 0
 P8_PWREN
 Text Label 1400 3000 2    50   ~ 0
 P9_PWREN
@@ -1051,25 +1051,13 @@ Text Label 1400 4100 2    50   ~ 0
 P10_PWREN
 Text Label 1400 4000 2    50   ~ 0
 P11_PWREN
-Text HLabel 1400 2700 0    50   Input ~ 0
-P0_PRESENT
-Text HLabel 1400 2800 0    50   Input ~ 0
-P1_PRESENT
-Text HLabel 1400 2900 0    50   Input ~ 0
-P2_PRESENT
-Text HLabel 1400 2400 0    50   Input ~ 0
-P3_PRESENT
-Text HLabel 1400 5200 0    50   Input ~ 0
-P4_PRESENT
-Text HLabel 1400 3200 0    50   Input ~ 0
-P5_PRESENT
-Text HLabel 1400 3300 0    50   Input ~ 0
+Text HLabel 1400 1900 0    50   Input ~ 0
 P6_PRESENT
-Text HLabel 1400 3400 0    50   Input ~ 0
+Text HLabel 1400 2100 0    50   Input ~ 0
 P7_PRESENT
-Text HLabel 1400 3500 0    50   Input ~ 0
+Text HLabel 1400 3300 0    50   Input ~ 0
 P8_PRESENT
-Text HLabel 1400 3600 0    50   Input ~ 0
+Text HLabel 1400 4400 0    50   Input ~ 0
 P9_PRESENT
 Text HLabel 1400 4700 0    50   Input ~ 0
 P11_PRESENT
@@ -1598,21 +1586,21 @@ Text Label 4350 3050 2    50   ~ 0
 I2C1_SCL
 Text Notes 4650 3250 0    50   ~ 0
 8'h84
-Text Label 1400 2500 2    50   ~ 0
+Text Label 1400 5500 2    50   ~ 0
 P2_ALERT
 Text Label 4350 2750 2    50   ~ 0
 I2C1_SDA
-Text Label 1400 4200 2    50   ~ 0
+Text Label 1400 2300 2    50   ~ 0
 P3_ALERT
 Text Label 1400 5300 2    50   ~ 0
 P4_ALERT
-Text Label 1400 4400 2    50   ~ 0
+Text Label 1400 5700 2    50   ~ 0
 P5_ALERT
-Text Label 1400 5400 2    50   ~ 0
+Text Label 1400 1600 2    50   ~ 0
 P6_ALERT
-Text Label 1400 5100 2    50   ~ 0
+Text Label 1400 3500 2    50   ~ 0
 P7_ALERT
-Text Label 1400 3700 2    50   ~ 0
+Text Label 1400 3400 2    50   ~ 0
 P8_ALERT
 Text Label 1400 3100 2    50   ~ 0
 P9_ALERT
@@ -2077,135 +2065,13 @@ Wire Wire Line
 Connection ~ 12650 9650
 Text Notes 12100 9750 0    50   ~ 0
 INA233 decoupling
-NoConn ~ 1400 5500
-NoConn ~ 1400 5600
-NoConn ~ 1400 5700
-NoConn ~ 1400 5800
-NoConn ~ 1400 5900
 NoConn ~ 1400 6000
 NoConn ~ 1400 6100
 NoConn ~ 1400 6200
 NoConn ~ 1400 6300
 NoConn ~ 1400 6400
-$Comp
-L device:R R?
-U 1 1 6090497E
-P 1750 6950
-AR Path="/5F080E90/6090497E" Ref="R?"  Part="1" 
-AR Path="/5EDD723A/5F0BA462/6090497E" Ref="R97"  Part="1" 
-F 0 "R97" V 1700 7150 50  0000 C CNN
-F 1 "100K" V 1750 6950 50  0000 C CNN
-F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 1680 6950 50  0001 C CNN
-F 3 "" H 1750 6950 50  0001 C CNN
-	1    1750 6950
-	0    1    1    0   
-$EndComp
-Text Label 1600 6950 2    50   ~ 0
-P0_PRESENT
-Text Label 2100 6950 0    50   ~ 0
+Text Label 2100 7550 0    50   ~ 0
 3V3
-Wire Wire Line
-	1900 6950 2100 6950
-$Comp
-L device:R R?
-U 1 1 609181DF
-P 1750 7050
-AR Path="/5F080E90/609181DF" Ref="R?"  Part="1" 
-AR Path="/5EDD723A/5F0BA462/609181DF" Ref="R102"  Part="1" 
-F 0 "R102" V 1700 7250 50  0000 C CNN
-F 1 "100K" V 1750 7050 50  0000 C CNN
-F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 1680 7050 50  0001 C CNN
-F 3 "" H 1750 7050 50  0001 C CNN
-	1    1750 7050
-	0    1    1    0   
-$EndComp
-Text Label 1600 7050 2    50   ~ 0
-P1_PRESENT
-Wire Wire Line
-	1900 7050 2100 7050
-$Comp
-L device:R R?
-U 1 1 6091F61A
-P 1750 7150
-AR Path="/5F080E90/6091F61A" Ref="R?"  Part="1" 
-AR Path="/5EDD723A/5F0BA462/6091F61A" Ref="R103"  Part="1" 
-F 0 "R103" V 1700 7350 50  0000 C CNN
-F 1 "100K" V 1750 7150 50  0000 C CNN
-F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 1680 7150 50  0001 C CNN
-F 3 "" H 1750 7150 50  0001 C CNN
-	1    1750 7150
-	0    1    1    0   
-$EndComp
-Text Label 1600 7150 2    50   ~ 0
-P2_PRESENT
-Wire Wire Line
-	1900 7150 2100 7150
-$Comp
-L device:R R?
-U 1 1 6091F626
-P 1750 7250
-AR Path="/5F080E90/6091F626" Ref="R?"  Part="1" 
-AR Path="/5EDD723A/5F0BA462/6091F626" Ref="R104"  Part="1" 
-F 0 "R104" V 1700 7450 50  0000 C CNN
-F 1 "100K" V 1750 7250 50  0000 C CNN
-F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 1680 7250 50  0001 C CNN
-F 3 "" H 1750 7250 50  0001 C CNN
-	1    1750 7250
-	0    1    1    0   
-$EndComp
-Text Label 1600 7250 2    50   ~ 0
-P3_PRESENT
-Wire Wire Line
-	1900 7250 2100 7250
-$Comp
-L device:R R?
-U 1 1 609278DA
-P 1750 7350
-AR Path="/5F080E90/609278DA" Ref="R?"  Part="1" 
-AR Path="/5EDD723A/5F0BA462/609278DA" Ref="R105"  Part="1" 
-F 0 "R105" V 1700 7550 50  0000 C CNN
-F 1 "100K" V 1750 7350 50  0000 C CNN
-F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 1680 7350 50  0001 C CNN
-F 3 "" H 1750 7350 50  0001 C CNN
-	1    1750 7350
-	0    1    1    0   
-$EndComp
-Text Label 1600 7350 2    50   ~ 0
-P4_PRESENT
-Wire Wire Line
-	1900 7350 2100 7350
-$Comp
-L device:R R?
-U 1 1 609278E6
-P 1750 7450
-AR Path="/5F080E90/609278E6" Ref="R?"  Part="1" 
-AR Path="/5EDD723A/5F0BA462/609278E6" Ref="R106"  Part="1" 
-F 0 "R106" V 1700 7650 50  0000 C CNN
-F 1 "100K" V 1750 7450 50  0000 C CNN
-F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 1680 7450 50  0001 C CNN
-F 3 "" H 1750 7450 50  0001 C CNN
-	1    1750 7450
-	0    1    1    0   
-$EndComp
-Text Label 1600 7450 2    50   ~ 0
-P5_PRESENT
-Wire Wire Line
-	1900 7450 2100 7450
-$Comp
-L device:R R?
-U 1 1 609278F2
-P 1750 7550
-AR Path="/5F080E90/609278F2" Ref="R?"  Part="1" 
-AR Path="/5EDD723A/5F0BA462/609278F2" Ref="R107"  Part="1" 
-F 0 "R107" V 1700 7750 50  0000 C CNN
-F 1 "100K" V 1750 7550 50  0000 C CNN
-F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 1680 7550 50  0001 C CNN
-F 3 "" H 1750 7550 50  0001 C CNN
-	1    1750 7550
-	0    1    1    0   
-$EndComp
-Text Label 1600 7550 2    50   ~ 0
-P6_PRESENT
 Wire Wire Line
 	1900 7550 2100 7550
 $Comp
@@ -2295,24 +2161,6 @@ Wire Wire Line
 	1900 8050 2100 8050
 Wire Wire Line
 	2100 8050 2100 7950
-Connection ~ 2100 7050
-Wire Wire Line
-	2100 7050 2100 6950
-Connection ~ 2100 7150
-Wire Wire Line
-	2100 7150 2100 7050
-Connection ~ 2100 7250
-Wire Wire Line
-	2100 7250 2100 7150
-Connection ~ 2100 7350
-Wire Wire Line
-	2100 7350 2100 7250
-Connection ~ 2100 7450
-Wire Wire Line
-	2100 7450 2100 7350
-Connection ~ 2100 7550
-Wire Wire Line
-	2100 7550 2100 7450
 Connection ~ 2100 7650
 Wire Wire Line
 	2100 7650 2100 7550
@@ -2561,4 +2409,38 @@ Text HLabel 1400 4900 0    50   Input ~ 0
 P10_PRESENT
 Text HLabel 1400 4300 0    50   Input ~ 0
 P10_UART_RX
+Text HLabel 1400 4200 0    50   Output ~ 0
+P9_UART_TX
+Text HLabel 1400 3200 0    50   Input ~ 0
+P9_UART_RX
+Text HLabel 1400 2800 0    50   Output ~ 0
+P8_UART_TX
+Text HLabel 1400 3600 0    50   Input ~ 0
+P8_UART_RX
+NoConn ~ 1400 2900
+NoConn ~ 1400 2700
+NoConn ~ 1400 5200
+Text HLabel 1400 2400 0    50   Output ~ 0
+P7_UART_TX
+Text HLabel 1400 1700 0    50   Input ~ 0
+P7_UART_RX
+$Comp
+L device:R R?
+U 1 1 65A35483
+P 1750 7550
+AR Path="/5F080E90/65A35483" Ref="R?"  Part="1" 
+AR Path="/5EDD723A/5F0BA462/65A35483" Ref="R107"  Part="1" 
+F 0 "R107" V 1700 7750 50  0000 C CNN
+F 1 "100K" V 1750 7550 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 1680 7550 50  0001 C CNN
+F 3 "" H 1750 7550 50  0001 C CNN
+	1    1750 7550
+	0    1    1    0   
+$EndComp
+Text Label 1600 7550 2    50   ~ 0
+P6_PRESENT
+Text HLabel 1400 2000 0    50   Output ~ 0
+P6_UART_TX
+Text HLabel 1400 1800 0    50   Input ~ 0
+P6_UART_RX
 $EndSCHEMATC
