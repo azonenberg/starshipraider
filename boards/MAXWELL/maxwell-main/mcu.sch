@@ -173,7 +173,7 @@ F 3 "" H 8600 6350 50  0001 C CNN
 $EndComp
 Text HLabel 5000 3950 0    50   Output ~ 0
 K7_RST_N
-Text HLabel 5000 5050 0    50   Input ~ 0
+Text HLabel 7000 4350 0    50   Input ~ 0
 K7_DONE
 Wire Wire Line
 	1350 2950 1350 3050
@@ -1433,11 +1433,11 @@ Text Notes 11900 8250 0    50   ~ 0
 I2C4 ADDRESS MAP (3V3_SB)\nTouch controller = BA
 Text HLabel 7000 4050 0    50   Output ~ 0
 2V0_EN
-Text HLabel 7000 4250 0    50   Output ~ 0
+Text HLabel 5000 5350 0    50   Output ~ 0
 2V5_EN
-Text HLabel 7000 4150 0    50   Input ~ 0
+Text HLabel 5000 5050 0    50   Input ~ 0
 2V0_GOOD
-Text HLabel 7000 4350 0    50   Input ~ 0
+Text HLabel 7000 4150 0    50   Input ~ 0
 2V5_GOOD
 Text HLabel 3250 4150 0    50   Output ~ 0
 VBACKLIGHT_EN
@@ -1468,7 +1468,7 @@ Text HLabel 5000 5150 0    50   Input ~ 0
 TEMP2_ALERT
 Text HLabel 7000 3350 0    50   Input ~ 0
 TEMP3_ALERT
-Text HLabel 5000 5350 0    50   Input ~ 0
+Text HLabel 7000 4250 0    50   Input ~ 0
 TEMP4_ALERT
 Text Notes 7600 9250 0    50   ~ 0
 I2C1 ADDRESS MAP (3V3)\nINA233s on probes\nP0 = 80\nP1 = 82\nP2 = 84\nP3 = 86\nP4 = 88 \nP5 = 8a\nP6 = 8c\nP7 = 8e\nP8 = 90\nP9 = 92\nP10 = 94\nP11 = 96
