@@ -212,57 +212,57 @@ Text Label 2150 5600 2    50   ~ 0
 DDR_DQ62
 Text Label 2150 5700 2    50   ~ 0
 DDR_DQ63
-Text Label 5150 1000 2    50   ~ 0
+Text Label 5150 4000 2    50   ~ 0
 DDR_A15
-Text Label 5150 1100 2    50   ~ 0
+Text Label 5150 4200 2    50   ~ 0
 DDR_A14
-Text Label 5150 1200 2    50   ~ 0
-DDR_A13
-Text Label 5150 1300 2    50   ~ 0
-DDR_A12
-Text Label 5150 1600 2    50   ~ 0
-DDR_A11
-Text Label 5150 1700 2    50   ~ 0
-DDR_A10
-Text Label 5150 1800 2    50   ~ 0
-DDR_A9
-Text Label 5150 1900 2    50   ~ 0
-DDR_A8
-Text Label 5150 2000 2    50   ~ 0
-DDR_A7
-Text Label 5150 2100 2    50   ~ 0
-DDR_A6
-Text Label 5150 2200 2    50   ~ 0
-DDR_A5
 Text Label 5150 2300 2    50   ~ 0
+DDR_A13
+Text Label 5150 4300 2    50   ~ 0
+DDR_A12
+Text Label 5150 3800 2    50   ~ 0
+DDR_A11
+Text Label 5150 5700 2    50   ~ 0
+DDR_A10
+Text Label 5150 5100 2    50   ~ 0
+DDR_A9
+Text Label 5150 4600 2    50   ~ 0
+DDR_A8
+Text Label 5150 3900 2    50   ~ 0
+DDR_A7
+Text Label 5150 3400 2    50   ~ 0
+DDR_A6
+Text Label 5150 4700 2    50   ~ 0
+DDR_A5
+Text Label 5150 3500 2    50   ~ 0
 DDR_A4
-Text Label 5150 2400 2    50   ~ 0
+Text Label 5150 5600 2    50   ~ 0
 DDR_A3
-Text Label 5150 2500 2    50   ~ 0
+Text Label 5150 4800 2    50   ~ 0
 DDR_A2
-Text Label 5150 2600 2    50   ~ 0
+Text Label 5150 4900 2    50   ~ 0
 DDR_A1
-Text Label 5150 2700 2    50   ~ 0
-DDR_A0
-Text Label 5150 2800 2    50   ~ 0
-DDR_BA2
-Text Label 5150 2900 2    50   ~ 0
-DDR_BA1
-Text Label 5150 3000 2    50   ~ 0
-DDR_BA0
-Text Label 5150 3100 2    50   ~ 0
-DDR_RAS_N
-Text Label 5150 3200 2    50   ~ 0
-DDR_CAS_N
 Text Label 5150 3300 2    50   ~ 0
+DDR_A0
+Text Label 5150 5500 2    50   ~ 0
+DDR_BA2
+Text Label 5150 2600 2    50   ~ 0
+DDR_BA1
+Text Label 5150 5200 2    50   ~ 0
+DDR_BA0
+Text Label 5150 2700 2    50   ~ 0
+DDR_RAS_N
+Text Label 5150 2200 2    50   ~ 0
+DDR_CAS_N
+Text Label 5150 5300 2    50   ~ 0
 DDR_WE_N
 Text Label 7700 3300 2    50   ~ 0
 DDR_RST_N
-Text Label 5150 3900 2    50   ~ 0
+Text Label 5150 5400 2    50   ~ 0
 DDR_CKE_0
-Text Label 5150 4000 2    50   ~ 0
+Text Label 5150 2900 2    50   ~ 0
 DDR_ODT_0
-Text Label 5150 3800 2    50   ~ 0
+Text Label 5150 2800 2    50   ~ 0
 DDR_CS_N_0
 Text Label 7700 1000 2    50   ~ 0
 DDR_DM0
@@ -552,22 +552,9 @@ Text Label 7700 2100 2    50   ~ 0
 RAM_VREF
 NoConn ~ 7700 4500
 NoConn ~ 5150 4100
-NoConn ~ 5150 4200
-NoConn ~ 5150 4300
 NoConn ~ 5150 4400
 NoConn ~ 5150 4500
-NoConn ~ 5150 4600
-NoConn ~ 5150 4700
-NoConn ~ 5150 4800
-NoConn ~ 5150 4900
 NoConn ~ 5150 5000
-NoConn ~ 5150 5100
-NoConn ~ 5150 5200
-NoConn ~ 5150 5300
-NoConn ~ 5150 5400
-NoConn ~ 5150 5500
-NoConn ~ 5150 5600
-NoConn ~ 5150 5700
 $Comp
 L memory-azonenberg:DDR3_SODIMM U3
 U 1 1 600B7F75
@@ -1530,8 +1517,6 @@ Wire Wire Line
 Connection ~ 6050 10000
 Wire Wire Line
 	6050 10000 6600 10000
-NoConn ~ 5150 3500
-NoConn ~ 5150 3400
 Text HLabel 13200 5850 0    50   Output ~ 0
 I2C2_SDA
 Text HLabel 13200 5950 0    50   Input ~ 0
@@ -1778,4 +1763,19 @@ Text Label 14600 5500 0    50   ~ 0
 DDR_DQ0
 Text Label 14600 5100 0    50   ~ 0
 DDR_DQ1
+NoConn ~ 5150 3000
+NoConn ~ 5150 1700
+NoConn ~ 5150 2400
+NoConn ~ 5150 1300
+NoConn ~ 5150 1900
+NoConn ~ 5150 1800
+NoConn ~ 5150 3100
+NoConn ~ 5150 2500
+NoConn ~ 5150 3200
+NoConn ~ 5150 1200
+NoConn ~ 5150 2100
+NoConn ~ 5150 2000
+NoConn ~ 5150 1600
+NoConn ~ 5150 1100
+NoConn ~ 5150 1000
 $EndSCHEMATC
