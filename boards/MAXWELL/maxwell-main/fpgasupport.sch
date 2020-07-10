@@ -5,7 +5,7 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 18 18
 Title "MAXWELL Main Board"
-Date "2020-07-09"
+Date "2020-07-10"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
@@ -1688,4 +1688,10 @@ F 3 "~" H 8950 7750 50  0001 C CNN
 $EndComp
 Text Label 9150 7750 0    50   ~ 0
 K7_DONE
+Text Label 4650 10650 2    50   ~ 0
+GND
+Text Label 4650 10150 2    50   ~ 0
+GND
+Text Label 4650 9650 2    50   ~ 0
+GND
 $EndSCHEMATC
