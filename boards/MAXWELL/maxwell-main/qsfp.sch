@@ -126,9 +126,9 @@ Text Label 4200 4200 2    50   ~ 0
 QSFP_TX4_P
 Text Label 4200 4300 2    50   ~ 0
 QSFP_TX4_N
-Text Label 9400 3500 2    50   ~ 0
+Text Label 9400 1700 2    50   ~ 0
 QSFP_TX1_P
-Text Label 9400 3600 2    50   ~ 0
+Text Label 9400 1800 2    50   ~ 0
 QSFP_TX1_N
 Text Label 9400 2900 2    50   ~ 0
 QSFP_TX2_P
@@ -138,25 +138,25 @@ Text Label 9400 2300 2    50   ~ 0
 QSFP_TX3_P
 Text Label 9400 2400 2    50   ~ 0
 QSFP_TX3_N
-Text Label 9400 1700 2    50   ~ 0
+Text Label 9400 3500 2    50   ~ 0
 QSFP_TX4_P
-Text Label 9400 1800 2    50   ~ 0
+Text Label 9400 3600 2    50   ~ 0
 QSFP_TX4_N
-Text Label 9400 3800 2    50   ~ 0
-QSFP_RX1_P
 Text Label 9400 3900 2    50   ~ 0
+QSFP_RX1_P
+Text Label 9400 3800 2    50   ~ 0
 QSFP_RX1_N
-Text Label 9400 3200 2    50   ~ 0
-QSFP_RX2_P
-Text Label 9400 3300 2    50   ~ 0
-QSFP_RX2_N
-Text Label 9400 2600 2    50   ~ 0
-QSFP_RX3_P
 Text Label 9400 2700 2    50   ~ 0
+QSFP_RX2_P
+Text Label 9400 2600 2    50   ~ 0
+QSFP_RX2_N
+Text Label 9400 3300 2    50   ~ 0
+QSFP_RX3_P
+Text Label 9400 3200 2    50   ~ 0
 QSFP_RX3_N
-Text Label 9400 2000 2    50   ~ 0
-QSFP_RX4_P
 Text Label 9400 2100 2    50   ~ 0
+QSFP_RX4_P
+Text Label 9400 2000 2    50   ~ 0
 QSFP_RX4_N
 Text HLabel 1250 4950 0    50   Input ~ 0
 3V3
@@ -465,4 +465,6 @@ F 3 "~" H 4300 6600 50  0001 C CNN
 $EndComp
 Text Label 4500 6600 0    50   ~ 0
 QSFP_VCC1
+Text Notes 8800 2000 2    50   ~ 0
+All RX pairs swapped for routability
 $EndSCHEMATC
