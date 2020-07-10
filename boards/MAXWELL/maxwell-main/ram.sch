@@ -458,95 +458,87 @@ Text Label 13200 6750 2    50   ~ 0
 DDR_CLK0_P
 Text Label 13200 6850 2    50   ~ 0
 DDR_CLK0_N
-Text Label 14600 1200 0    50   ~ 0
-DDR_DQ0
-Text Label 14600 1300 0    50   ~ 0
-DDR_DQ1
-Text Label 14600 1400 0    50   ~ 0
-DDR_DQ2
-Text Label 14600 1500 0    50   ~ 0
-DDR_DQ3
-Text Label 14600 1600 0    50   ~ 0
-DDR_DQ4
-Text Label 14600 1700 0    50   ~ 0
-DDR_DQ5
-Text Label 14600 1800 0    50   ~ 0
-DDR_DQ6
-Text Label 14600 1900 0    50   ~ 0
-DDR_DQ7
-Text Label 14600 2400 0    50   ~ 0
-DDR_DQ8
-Text Label 14600 2500 0    50   ~ 0
-DDR_DQ9
-Text Label 14600 2600 0    50   ~ 0
-DDR_DQ10
-Text Label 14600 2700 0    50   ~ 0
-DDR_DQ11
-Text Label 14600 2800 0    50   ~ 0
-DDR_DQ12
-Text Label 14600 2900 0    50   ~ 0
-DDR_DQ13
-Text Label 14600 3000 0    50   ~ 0
-DDR_DQ14
-Text Label 14600 3100 0    50   ~ 0
-DDR_DQ15
-Text Label 14600 3600 0    50   ~ 0
-DDR_DQ16
-Text Label 14600 3700 0    50   ~ 0
-DDR_DQ17
-Text Label 14600 3800 0    50   ~ 0
-DDR_DQ18
-Text Label 14600 3900 0    50   ~ 0
-DDR_DQ19
-Text Label 14600 4000 0    50   ~ 0
-DDR_DQ20
-Text Label 14600 4100 0    50   ~ 0
-DDR_DQ21
-Text Label 14600 4200 0    50   ~ 0
-DDR_DQ22
-Text Label 14600 4300 0    50   ~ 0
-DDR_DQ23
-Text Label 14600 4800 0    50   ~ 0
-DDR_DQ24
-Text Label 14600 4900 0    50   ~ 0
-DDR_DQ25
 Text Label 14600 5000 0    50   ~ 0
-DDR_DQ26
-Text Label 14600 5100 0    50   ~ 0
-DDR_DQ27
-Text Label 14600 5200 0    50   ~ 0
-DDR_DQ28
-Text Label 14600 5300 0    50   ~ 0
-DDR_DQ29
+DDR_DQ2
+Text Label 14600 4900 0    50   ~ 0
+DDR_DQ3
+Text Label 14600 4800 0    50   ~ 0
+DDR_DQ4
 Text Label 14600 5400 0    50   ~ 0
+DDR_DQ5
+Text Label 14600 5200 0    50   ~ 0
+DDR_DQ6
+Text Label 14600 5300 0    50   ~ 0
+DDR_DQ7
+Text Label 14600 4200 0    50   ~ 0
+DDR_DQ9
+Text Label 14600 4300 0    50   ~ 0
+DDR_DQ10
+Text Label 14600 3700 0    50   ~ 0
+DDR_DQ11
+Text Label 14600 4100 0    50   ~ 0
+DDR_DQ13
+Text Label 14600 4000 0    50   ~ 0
+DDR_DQ14
+Text Label 14600 3600 0    50   ~ 0
+DDR_DQ15
+Text Label 14600 2700 0    50   ~ 0
+DDR_DQ16
+Text Label 14600 2500 0    50   ~ 0
+DDR_DQ17
+Text Label 14600 2400 0    50   ~ 0
+DDR_DQ18
+Text Label 14600 2600 0    50   ~ 0
+DDR_DQ19
+Text Label 14600 2900 0    50   ~ 0
+DDR_DQ20
+Text Label 14600 3000 0    50   ~ 0
+DDR_DQ21
+Text Label 14600 3100 0    50   ~ 0
+DDR_DQ22
+Text Label 14600 2800 0    50   ~ 0
+DDR_DQ23
+Text Label 14600 1900 0    50   ~ 0
+DDR_DQ24
+Text Label 14600 1800 0    50   ~ 0
+DDR_DQ25
+Text Label 14600 1700 0    50   ~ 0
+DDR_DQ26
+Text Label 14600 1300 0    50   ~ 0
+DDR_DQ27
+Text Label 14600 1400 0    50   ~ 0
+DDR_DQ28
+Text Label 14600 1500 0    50   ~ 0
+DDR_DQ29
+Text Label 14600 1600 0    50   ~ 0
 DDR_DQ30
-Text Label 14600 5500 0    50   ~ 0
+Text Label 14600 1200 0    50   ~ 0
 DDR_DQ31
 Text Label 13200 6450 2    50   ~ 0
 DDR_RST_N
-Text Label 14600 1100 0    50   ~ 0
-DDR_DM0
-Text Label 14600 2300 0    50   ~ 0
-DDR_DM1
-Text Label 14600 3500 0    50   ~ 0
-DDR_DM2
 Text Label 14600 4700 0    50   ~ 0
+DDR_DM0
+Text Label 14600 3500 0    50   ~ 0
+DDR_DM1
+Text Label 14600 2300 0    50   ~ 0
+DDR_DM2
+Text Label 14600 1100 0    50   ~ 0
 DDR_DM3
-Text Label 14600 900  0    50   ~ 0
-DDR_DQS0_P
-Text Label 14600 1000 0    50   ~ 0
-DDR_DQS0_N
-Text Label 14600 2100 0    50   ~ 0
-DDR_DQS1_P
-Text Label 14600 2200 0    50   ~ 0
-DDR_DQS1_N
-Text Label 14600 3300 0    50   ~ 0
-DDR_DQS2_P
-Text Label 14600 3400 0    50   ~ 0
-DDR_DQS2_N
 Text Label 14600 4500 0    50   ~ 0
-DDR_DQS3_P
+DDR_DQS0_P
 Text Label 14600 4600 0    50   ~ 0
+DDR_DQS0_N
+Text Label 14600 3300 0    50   ~ 0
+DDR_DQS1_P
+Text Label 14600 3400 0    50   ~ 0
+DDR_DQS1_N
+Text Label 14600 2100 0    50   ~ 0
+DDR_DQS2_P
+Text Label 14600 2200 0    50   ~ 0
+DDR_DQS2_N
+Text Label 14600 900  0    50   ~ 0
+DDR_DQS3_P
+Text Label 14600 1000 0    50   ~ 0
 DDR_DQS3_N
 NoConn ~ 2150 3300
 NoConn ~ 2150 4500
@@ -1778,4 +1770,12 @@ F 3 "~" H 8500 8300 50  0001 C CNN
 $EndComp
 Text Label 8700 8300 0    50   ~ 0
 RAM_VTT
+Text Label 14600 3900 0    50   ~ 0
+DDR_DQ12
+Text Label 14600 3800 0    50   ~ 0
+DDR_DQ8
+Text Label 14600 5500 0    50   ~ 0
+DDR_DQ0
+Text Label 14600 5100 0    50   ~ 0
+DDR_DQ1
 $EndSCHEMATC
