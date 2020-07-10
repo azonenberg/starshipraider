@@ -97,7 +97,7 @@ Text HLabel 4850 1850 0    50   Input ~ 0
 1V2
 Text HLabel 4850 3000 0    50   Input ~ 0
 GND
-Text HLabel 2050 1000 0    50   Input ~ 0
+Text HLabel 2050 5200 0    50   Input ~ 0
 K7_SPI_CS_N
 Text HLabel 2050 1600 0    50   Input ~ 0
 K7_SPI_MOSI
@@ -404,13 +404,11 @@ Text Label 7600 3750 0    50   ~ 0
 GND
 Wire Wire Line
 	7600 3750 7400 3750
-Text Label 2050 4100 2    50   ~ 0
+Text Label 2050 5300 2    50   ~ 0
 RGMII_TXD0
-Text Label 2050 4200 2    50   ~ 0
-RGMII_TXD1
-Text Label 2050 4300 2    50   ~ 0
+Text Label 2050 4900 2    50   ~ 0
 RGMII_TXD2
-Text Label 2050 4400 2    50   ~ 0
+Text Label 2050 5000 2    50   ~ 0
 RGMII_TXD3
 Text Label 2050 4500 2    50   ~ 0
 RGMII_TX_CLK
@@ -418,21 +416,21 @@ Text Label 2050 4600 2    50   ~ 0
 RGMII_TX_EN
 Text Label 2050 3700 2    50   ~ 0
 RGMII_RXD3
-Text Label 2050 3800 2    50   ~ 0
+Text Label 2050 4300 2    50   ~ 0
 RGMII_RXD2
-Text Label 2050 3900 2    50   ~ 0
+Text Label 2050 4100 2    50   ~ 0
 RGMII_RXD1
-Text Label 2050 4000 2    50   ~ 0
+Text Label 2050 4200 2    50   ~ 0
 RGMII_RXD0
 Text Label 2050 3600 2    50   ~ 0
 RGMII_RX_DV
 Text Label 2050 3500 2    50   ~ 0
 RGMII_RX_CLK
-Text Label 2050 4700 2    50   ~ 0
+Text Label 2050 3800 2    50   ~ 0
 RGMII_MDC
-Text Label 2050 4800 2    50   ~ 0
+Text Label 2050 3400 2    50   ~ 0
 RGMII_MDIO
-Text Label 2050 4900 2    50   ~ 0
+Text Label 2050 3900 2    50   ~ 0
 RGMII_RST_N
 Text Label 1250 6400 2    50   ~ 0
 RGMII_RXD3
@@ -1073,16 +1071,10 @@ Wire Wire Line
 	6200 6800 6200 6700
 Text Label 2050 5100 2    50   ~ 0
 MAC_I2C_SCL
-Text Label 2050 5000 2    50   ~ 0
+Text Label 2050 4400 2    50   ~ 0
 MAC_I2C_SDA
-NoConn ~ 2050 2000
-NoConn ~ 2050 5300
-NoConn ~ 2050 5200
-NoConn ~ 2050 3400
-NoConn ~ 2050 3200
 Text HLabel 2050 5900 0    50   Output ~ 0
 PLL_SYNC
-NoConn ~ 2050 5400
 Text HLabel 2050 2500 0    50   Input ~ 0
 PPS_IN_P
 Text HLabel 2050 2600 0    50   Input ~ 0
@@ -1125,7 +1117,7 @@ Text Label 1150 1500 2    50   ~ 0
 3V3
 Text HLabel 2050 2200 0    50   Output ~ 0
 RMII_CRS_DV
-Text HLabel 2050 2300 0    50   Output ~ 0
+Text HLabel 2050 4000 0    50   Output ~ 0
 RMII_RXD0
 Text HLabel 2050 2400 0    50   Output ~ 0
 RMII_RXD1
@@ -1149,7 +1141,7 @@ Text HLabel 2050 2700 0    50   Input ~ 0
 RMII_TX_EN
 Text HLabel 2050 2800 0    50   Input ~ 0
 RMII_TXD0
-Text HLabel 2050 2900 0    50   Input ~ 0
+Text HLabel 2050 3200 0    50   Input ~ 0
 RMII_TXD1
 Text HLabel 2050 3000 0    50   Input ~ 0
 ETH_PPS_OUT
@@ -1289,4 +1281,12 @@ Connection ~ 6550 4850
 Wire Wire Line
 	6550 5150 7100 5150
 Connection ~ 6550 5150
+Text Label 2050 5400 2    50   ~ 0
+RGMII_TXD1
+NoConn ~ 2050 2900
+NoConn ~ 2050 2300
+NoConn ~ 2050 2000
+NoConn ~ 2050 4700
+NoConn ~ 2050 4800
+NoConn ~ 2050 1000
 $EndSCHEMATC
