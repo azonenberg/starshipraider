@@ -332,35 +332,35 @@ Text Label 13200 2400 2    50   ~ 0
 DDR_DQ38
 Text Label 13200 2800 2    50   ~ 0
 DDR_DQ39
-Text Label 13200 4800 2    50   ~ 0
+Text Label 13200 5300 2    50   ~ 0
 DDR_DQ40
-Text Label 13200 4900 2    50   ~ 0
+Text Label 13200 5500 2    50   ~ 0
 DDR_DQ41
-Text Label 13200 5000 2    50   ~ 0
+Text Label 13200 5400 2    50   ~ 0
 DDR_DQ42
 Text Label 13200 5100 2    50   ~ 0
 DDR_DQ43
-Text Label 13200 5200 2    50   ~ 0
+Text Label 13200 5000 2    50   ~ 0
 DDR_DQ44
-Text Label 13200 5300 2    50   ~ 0
+Text Label 13200 4900 2    50   ~ 0
 DDR_DQ45
-Text Label 13200 5400 2    50   ~ 0
+Text Label 13200 4800 2    50   ~ 0
 DDR_DQ46
-Text Label 13200 5500 2    50   ~ 0
+Text Label 13200 5200 2    50   ~ 0
 DDR_DQ47
-Text Label 13200 3600 2    50   ~ 0
-DDR_DQ56
-Text Label 13200 3700 2    50   ~ 0
-DDR_DQ57
-Text Label 13200 3800 2    50   ~ 0
-DDR_DQ58
-Text Label 13200 3900 2    50   ~ 0
-DDR_DQ59
 Text Label 13200 4000 2    50   ~ 0
+DDR_DQ56
+Text Label 13200 3900 2    50   ~ 0
+DDR_DQ57
+Text Label 13200 3700 2    50   ~ 0
+DDR_DQ58
+Text Label 13200 4200 2    50   ~ 0
+DDR_DQ59
+Text Label 13200 3800 2    50   ~ 0
 DDR_DQ60
 Text Label 13200 4100 2    50   ~ 0
 DDR_DQ61
-Text Label 13200 4200 2    50   ~ 0
+Text Label 13200 3600 2    50   ~ 0
 DDR_DQ62
 Text Label 13200 4300 2    50   ~ 0
 DDR_DQ63
