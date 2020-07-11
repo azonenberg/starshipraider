@@ -5,7 +5,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 7 18
 Title "MAXWELL Main Board"
-Date "2020-07-10"
+Date "2020-07-11"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
@@ -89,17 +89,17 @@ F41 "0V5" I L 5000 1450 50
 F42 "5V0" I L 5000 1350 50 
 F43 "5V0_N" I L 5000 1550 50 
 $EndSheet
-Text Label 9100 1550 2    50   ~ 0
+Text Label 9100 2150 2    50   ~ 0
 P0_UART_TX
-Text Label 9100 1650 2    50   ~ 0
+Text Label 9100 2750 2    50   ~ 0
 P0_UART_RX
 Text HLabel 9100 3150 0    50   Input ~ 0
 S7_CLK_P
 Text HLabel 9100 3250 0    50   Input ~ 0
 S7_CLK_N
-Text Label 9100 1750 2    50   ~ 0
+Text Label 9100 4050 2    50   ~ 0
 P1_UART_TX
-Text Label 9100 1850 2    50   ~ 0
+Text Label 9100 3850 2    50   ~ 0
 P1_UART_RX
 Text HLabel 9100 3450 0    50   Input ~ 0
 S7_SPI_CS_N
@@ -109,21 +109,21 @@ Text HLabel 9100 3550 0    50   Input ~ 0
 S7_SPI_MOSI
 Text HLabel 9100 3650 0    50   Output ~ 0
 S7_SPI_MISO
-Text Label 9100 2050 2    50   ~ 0
+Text Label 9100 4450 2    50   ~ 0
 P2_UART_TX
-Text Label 9100 2150 2    50   ~ 0
+Text Label 9100 4650 2    50   ~ 0
 P2_UART_RX
-Text Label 9100 2250 2    50   ~ 0
+Text Label 9100 4250 2    50   ~ 0
 P3_UART_TX
-Text Label 9100 2350 2    50   ~ 0
-P3_UART_RX
-Text Label 9100 2450 2    50   ~ 0
-P4_UART_TX
 Text Label 9100 2550 2    50   ~ 0
+P3_UART_RX
+Text Label 9100 2350 2    50   ~ 0
+P4_UART_TX
+Text Label 9100 2450 2    50   ~ 0
 P4_UART_RX
-Text Label 9100 2650 2    50   ~ 0
+Text Label 9100 2050 2    50   ~ 0
 P5_UART_TX
-Text Label 9100 2750 2    50   ~ 0
+Text Label 9100 1650 2    50   ~ 0
 P5_UART_RX
 Text Label 3050 4850 2    50   ~ 0
 P6_UART_TX
@@ -281,8 +281,6 @@ NoConn ~ 9100 5450
 NoConn ~ 9100 5550
 NoConn ~ 9100 5650
 NoConn ~ 9100 5750
-NoConn ~ 9100 850 
-NoConn ~ 9100 4650
 NoConn ~ 9100 4750
 Text HLabel 5000 4250 0    50   Output ~ 0
 GTX_TRIG_OUT_P
@@ -597,17 +595,17 @@ Text Label 2450 2650 0    50   ~ 0
 P4_PRESENT
 Text Label 2450 2850 0    50   ~ 0
 P5_PRESENT
-Text Label 9100 3050 2    50   ~ 0
+Text Label 9100 1550 2    50   ~ 0
 P5_PRESENT
-Text Label 9100 3750 2    50   ~ 0
+Text Label 9100 3050 2    50   ~ 0
 P4_PRESENT
-Text Label 9100 2950 2    50   ~ 0
+Text Label 9100 4150 2    50   ~ 0
 P3_PRESENT
-Text Label 9100 2850 2    50   ~ 0
+Text Label 9100 4350 2    50   ~ 0
 P2_PRESENT
 Text Label 9100 3950 2    50   ~ 0
 P1_PRESENT
-Text Label 9100 3850 2    50   ~ 0
+Text Label 9100 2850 2    50   ~ 0
 P0_PRESENT
 $Comp
 L xilinx-azonenberg:XC7Sx-FTGB196 U?
@@ -751,16 +749,18 @@ Text Label 3050 5550 2    50   ~ 0
 P4_PWREN
 Text Label 3050 5650 2    50   ~ 0
 P5_PWREN
-Text Label 9100 4050 2    50   ~ 0
+Text Label 9100 2650 2    50   ~ 0
 P0_PWREN
-Text Label 9100 4150 2    50   ~ 0
+Text Label 9100 2250 2    50   ~ 0
 P1_PWREN
-Text Label 9100 4250 2    50   ~ 0
+Text Label 9100 2950 2    50   ~ 0
 P2_PWREN
-Text Label 9100 4350 2    50   ~ 0
+Text Label 9100 850  2    50   ~ 0
 P3_PWREN
-Text Label 9100 4450 2    50   ~ 0
+Text Label 9100 1850 2    50   ~ 0
 P4_PWREN
-Text Label 9100 4550 2    50   ~ 0
+Text Label 9100 1750 2    50   ~ 0
 P5_PWREN
+NoConn ~ 9100 3750
+NoConn ~ 9100 4550
 $EndSCHEMATC
