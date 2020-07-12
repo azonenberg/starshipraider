@@ -470,10 +470,6 @@ Text Label 14600 2600 0    50   ~ 0
 DDR_DQ19
 Text Label 14600 2900 0    50   ~ 0
 DDR_DQ20
-Text Label 14600 3000 0    50   ~ 0
-DDR_DQ21
-Text Label 14600 3100 0    50   ~ 0
-DDR_DQ22
 Text Label 14600 2800 0    50   ~ 0
 DDR_DQ23
 Text Label 14600 1900 0    50   ~ 0
@@ -1778,4 +1774,8 @@ Text Label 13200 1500 2    50   ~ 0
 DDR_DQ49
 Text Label 13200 1400 2    50   ~ 0
 DDR_DQ48
+Text Label 14600 3100 0    50   ~ 0
+DDR_DQ22
+Text Label 14600 3000 0    50   ~ 0
+DDR_DQ21
 $EndSCHEMATC
