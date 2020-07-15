@@ -5,7 +5,7 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 6 18
 Title "MAXWELL Main Board"
-Date "2020-07-11"
+Date "2020-07-14"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
@@ -1664,19 +1664,6 @@ Connection ~ 4550 8050
 Wire Wire Line
 	5100 8350 4550 8350
 Connection ~ 4550 8350
-$Comp
-L Connector:Conn_01x01 TP3
-U 1 1 62DA00AF
-P 8500 6900
-F 0 "TP3" H 8418 6675 50  0000 C CNN
-F 1 "TESTCLIP" H 8418 6766 50  0000 C CNN
-F 2 "azonenberg_pcb:TESTPOINT_SMT_KEYSTONE_5016" H 8500 6900 50  0001 C CNN
-F 3 "~" H 8500 6900 50  0001 C CNN
-	1    8500 6900
-	-1   0    0    1   
-$EndComp
-Text Label 8700 6900 0    50   ~ 0
-GND
 $Comp
 L Connector:Conn_01x01 TP4
 U 1 1 62DA444D
