@@ -5,7 +5,7 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 9 18
 Title "MAXWELL Main Board"
-Date "2020-07-14"
+Date "2020-07-15"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
@@ -260,25 +260,17 @@ Text Label 5650 3050 2    50   ~ 0
 POD9_D7_P
 Text Label 5650 3150 2    50   ~ 0
 POD9_D7_N
-Text Label 10600 8400 2    50   ~ 0
-POD6_D3_P
-Text Label 10600 8500 2    50   ~ 0
-POD6_D3_N
-Text Label 10600 7400 2    50   ~ 0
-POD6_D4_P
-Text Label 10600 7500 2    50   ~ 0
-POD6_D4_N
 Text Label 10600 8200 2    50   ~ 0
 POD6_D5_P
 Text Label 10600 8300 2    50   ~ 0
 POD6_D5_N
-Text Label 10600 9000 2    50   ~ 0
+Text Label 10600 8400 2    50   ~ 0
 POD6_D6_P
-Text Label 10600 9100 2    50   ~ 0
+Text Label 10600 8500 2    50   ~ 0
 POD6_D6_N
-Text Label 10600 7600 2    50   ~ 0
+Text Label 10600 8800 2    50   ~ 0
 POD6_D7_P
-Text Label 10600 7700 2    50   ~ 0
+Text Label 10600 8900 2    50   ~ 0
 POD6_D7_N
 Text Label 10600 5000 2    50   ~ 0
 POD7_D0_P
@@ -494,17 +486,17 @@ Text Label 13500 1900 2    50   ~ 0
 POD11_D7_P
 Text Label 13500 2000 2    50   ~ 0
 POD11_D7_N
-Text Label 10600 8900 2    50   ~ 0
+Text Label 10600 7600 2    50   ~ 0
 POD6_D2_N
-Text Label 10600 8800 2    50   ~ 0
+Text Label 10600 7700 2    50   ~ 0
 POD6_D2_P
-Text Label 10600 7900 2    50   ~ 0
+Text Label 10600 7500 2    50   ~ 0
 POD6_D1_N
-Text Label 10600 7800 2    50   ~ 0
+Text Label 10600 7400 2    50   ~ 0
 POD6_D1_P
-Text Label 10600 8100 2    50   ~ 0
+Text Label 10600 7900 2    50   ~ 0
 POD6_D0_N
-Text Label 10600 8000 2    50   ~ 0
+Text Label 10600 7800 2    50   ~ 0
 POD6_D0_P
 Text Label 13400 5500 2    50   ~ 0
 POD10_D4_N
@@ -1621,9 +1613,17 @@ MUX2_SEL
 Text Label 10600 7300 2    50   ~ 0
 MUX2_EQ
 Text Notes 10800 3400 0    50   ~ 0
-Polarity swap for routability:\n* POD11_D3\n* POD11_D1\n* POD11_D0\n* POD10_D7\n* POD10_D6\n* POD10_D5\n* POD10_D2\n* POD10_D1\n* POD10_D0\n* POD9_D4\n* POD8_D4\n* POD7_D7\n* POD7_D6\n* POD7_D5\n* POD7_D1
+Polarity swap for routability:\n* POD11_D3\n* POD11_D1\n* POD11_D0\n* POD10_D7\n* POD10_D6\n* POD10_D5\n* POD10_D2\n* POD10_D1\n* POD10_D0\n* POD9_D4\n* POD8_D4\n* POD7_D7\n* POD7_D6\n* POD7_D5\n* POD7_D1\n* POD6_D3\n* POD6_D2
 Text Label 10600 8700 2    50   ~ 0
 POD10_D1_P
 Text Label 10600 8600 2    50   ~ 0
 POD10_D1_N
+Text Label 10600 9000 2    50   ~ 0
+POD6_D3_N
+Text Label 10600 9100 2    50   ~ 0
+POD6_D3_P
+Text Label 10600 8100 2    50   ~ 0
+POD6_D4_N
+Text Label 10600 8000 2    50   ~ 0
+POD6_D4_P
 $EndSCHEMATC
