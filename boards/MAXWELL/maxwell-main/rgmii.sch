@@ -428,7 +428,7 @@ Text Label 2050 3500 2    50   ~ 0
 RGMII_RX_CLK
 Text Label 2050 3800 2    50   ~ 0
 RGMII_MDC
-Text Label 2050 3400 2    50   ~ 0
+Text Label 2050 4400 2    50   ~ 0
 RGMII_MDIO
 Text Label 2050 3900 2    50   ~ 0
 RGMII_RST_N
@@ -1071,13 +1071,13 @@ Wire Wire Line
 	6200 6800 6200 6700
 Text Label 2050 5100 2    50   ~ 0
 MAC_I2C_SCL
-Text Label 2050 4400 2    50   ~ 0
+Text Label 2050 3400 2    50   ~ 0
 MAC_I2C_SDA
 Text HLabel 2050 5900 0    50   Output ~ 0
 PLL_SYNC
-Text HLabel 2050 2500 0    50   Input ~ 0
-PPS_IN_P
 Text HLabel 2050 2600 0    50   Input ~ 0
+PPS_IN_P
+Text HLabel 2050 2500 0    50   Input ~ 0
 PPS_IN_N
 $Comp
 L device:R R?
@@ -1289,4 +1289,6 @@ NoConn ~ 2050 2000
 NoConn ~ 2050 4700
 NoConn ~ 2050 4800
 NoConn ~ 2050 1000
+Text Notes 2250 900  0    50   ~ 0
+PPS in inverted for routability
 $EndSCHEMATC

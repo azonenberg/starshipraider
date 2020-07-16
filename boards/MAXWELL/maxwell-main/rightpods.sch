@@ -260,17 +260,17 @@ Text Label 5650 3050 2    50   ~ 0
 POD9_D7_P
 Text Label 5650 3150 2    50   ~ 0
 POD9_D7_N
-Text Label 10600 8200 2    50   ~ 0
-POD6_D5_P
-Text Label 10600 8300 2    50   ~ 0
-POD6_D5_N
-Text Label 10600 8400 2    50   ~ 0
-POD6_D6_P
 Text Label 10600 8500 2    50   ~ 0
+POD6_D5_P
+Text Label 10600 8400 2    50   ~ 0
+POD6_D5_N
+Text Label 10600 8000 2    50   ~ 0
+POD6_D6_P
+Text Label 10600 8100 2    50   ~ 0
 POD6_D6_N
-Text Label 10600 8800 2    50   ~ 0
+Text Label 10600 8300 2    50   ~ 0
 POD6_D7_P
-Text Label 10600 8900 2    50   ~ 0
+Text Label 10600 8200 2    50   ~ 0
 POD6_D7_N
 Text Label 10600 5000 2    50   ~ 0
 POD7_D0_P
@@ -1613,7 +1613,7 @@ MUX2_SEL
 Text Label 10600 7300 2    50   ~ 0
 MUX2_EQ
 Text Notes 10800 3400 0    50   ~ 0
-Polarity swap for routability:\n* POD11_D3\n* POD11_D1\n* POD11_D0\n* POD10_D7\n* POD10_D6\n* POD10_D5\n* POD10_D2\n* POD10_D1\n* POD10_D0\n* POD9_D4\n* POD8_D4\n* POD7_D7\n* POD7_D6\n* POD7_D5\n* POD7_D1\n* POD6_D3\n* POD6_D2
+Polarity swap for routability:\n* POD11_D3\n* POD11_D1\n* POD11_D0\n* POD10_D7\n* POD10_D6\n* POD10_D5\n* POD10_D2\n* POD10_D1\n* POD10_D0\n* POD9_D4\n* POD8_D4\n* POD7_D7\n* POD7_D6\n* POD7_D5\n* POD7_D1\n* POD6_D7\n* POD6_D5\n* POD6_D3\n* POD6_D2
 Text Label 10600 8700 2    50   ~ 0
 POD10_D1_P
 Text Label 10600 8600 2    50   ~ 0
@@ -1622,8 +1622,8 @@ Text Label 10600 9000 2    50   ~ 0
 POD6_D3_N
 Text Label 10600 9100 2    50   ~ 0
 POD6_D3_P
-Text Label 10600 8100 2    50   ~ 0
+Text Label 10600 8900 2    50   ~ 0
 POD6_D4_N
-Text Label 10600 8000 2    50   ~ 0
+Text Label 10600 8800 2    50   ~ 0
 POD6_D4_P
 $EndSCHEMATC
