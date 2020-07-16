@@ -422,15 +422,15 @@ Text Label 2050 4100 2    50   ~ 0
 RGMII_RXD1
 Text Label 2050 4200 2    50   ~ 0
 RGMII_RXD0
-Text Label 2050 3600 2    50   ~ 0
+Text Label 2050 3800 2    50   ~ 0
 RGMII_RX_DV
 Text Label 2050 3500 2    50   ~ 0
 RGMII_RX_CLK
-Text Label 2050 3800 2    50   ~ 0
+Text Label 2050 3900 2    50   ~ 0
 RGMII_MDC
 Text Label 2050 4400 2    50   ~ 0
 RGMII_MDIO
-Text Label 2050 3900 2    50   ~ 0
+Text Label 2050 3600 2    50   ~ 0
 RGMII_RST_N
 Text Label 1250 6400 2    50   ~ 0
 RGMII_RXD3
@@ -1071,7 +1071,7 @@ Wire Wire Line
 	6200 6800 6200 6700
 Text Label 2050 5100 2    50   ~ 0
 MAC_I2C_SCL
-Text Label 2050 3400 2    50   ~ 0
+Text Label 2050 3000 2    50   ~ 0
 MAC_I2C_SDA
 Text HLabel 2050 5900 0    50   Output ~ 0
 PLL_SYNC
@@ -1143,7 +1143,7 @@ Text HLabel 2050 2800 0    50   Input ~ 0
 RMII_TXD0
 Text HLabel 2050 3200 0    50   Input ~ 0
 RMII_TXD1
-Text HLabel 2050 3000 0    50   Input ~ 0
+Text HLabel 2050 3400 0    50   Input ~ 0
 ETH_PPS_OUT
 $Comp
 L device:R R?

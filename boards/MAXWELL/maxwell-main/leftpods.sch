@@ -703,171 +703,171 @@ Text Label 8300 4000 2    50   ~ 0
 P5_12V0
 Text Label 8300 4200 2    50   ~ 0
 P5_12V0
-Text Label 10300 2950 2    50   ~ 0
+Text Label 10300 3750 2    50   ~ 0
 POD0_D0_P
-Text Label 10300 3050 2    50   ~ 0
+Text Label 10300 3850 2    50   ~ 0
 POD0_D0_N
-Text Label 10300 950  2    50   ~ 0
+Text Label 10300 5650 2    50   ~ 0
 POD0_D1_P
-Text Label 10300 1050 2    50   ~ 0
+Text Label 10300 5550 2    50   ~ 0
 POD0_D1_N
-Text Label 12800 4950 2    50   ~ 0
+Text Label 10300 5450 2    50   ~ 0
 POD0_D3_P
-Text Label 12800 5050 2    50   ~ 0
+Text Label 10300 5350 2    50   ~ 0
 POD0_D3_N
-Text Label 10300 1150 2    50   ~ 0
+Text Label 10300 4750 2    50   ~ 0
 POD0_D2_P
-Text Label 10300 1250 2    50   ~ 0
+Text Label 10300 4850 2    50   ~ 0
 POD0_D2_N
-Text Label 10300 1550 2    50   ~ 0
+Text Label 12800 5350 2    50   ~ 0
 POD0_D4_P
-Text Label 10300 1650 2    50   ~ 0
+Text Label 12800 5450 2    50   ~ 0
 POD0_D4_N
-Text Label 10300 1750 2    50   ~ 0
+Text Label 12800 5550 2    50   ~ 0
 POD0_D5_P
-Text Label 10300 1850 2    50   ~ 0
+Text Label 12800 5650 2    50   ~ 0
 POD0_D5_N
-Text Label 10300 1950 2    50   ~ 0
+Text Label 12800 4750 2    50   ~ 0
 POD0_D6_P
-Text Label 10300 2050 2    50   ~ 0
+Text Label 12800 4850 2    50   ~ 0
 POD0_D6_N
-Text Label 10300 2150 2    50   ~ 0
+Text Label 10300 4350 2    50   ~ 0
 POD0_D7_P
-Text Label 10300 2250 2    50   ~ 0
+Text Label 10300 4450 2    50   ~ 0
 POD0_D7_N
 NoConn ~ 10300 850 
-Text Label 10300 3150 2    50   ~ 0
+Text Label 10300 5050 2    50   ~ 0
 POD1_D0_P
-Text Label 10300 3250 2    50   ~ 0
+Text Label 10300 4950 2    50   ~ 0
 POD1_D0_N
-Text Label 10300 2350 2    50   ~ 0
-POD1_D1_P
-Text Label 10300 2450 2    50   ~ 0
-POD1_D1_N
-Text Label 10300 2750 2    50   ~ 0
-POD1_D3_P
-Text Label 10300 2550 2    50   ~ 0
-POD1_D2_P
-Text Label 10300 2650 2    50   ~ 0
-POD1_D2_N
-Text Label 10300 3550 2    50   ~ 0
-POD1_D4_P
-Text Label 10300 3650 2    50   ~ 0
-POD1_D4_N
-Text Label 10300 3750 2    50   ~ 0
-POD1_D5_P
-Text Label 10300 3850 2    50   ~ 0
-POD1_D5_N
-Text Label 10300 3950 2    50   ~ 0
-POD1_D6_P
 Text Label 10300 4050 2    50   ~ 0
+POD1_D1_P
+Text Label 10300 3950 2    50   ~ 0
+POD1_D1_N
+Text Label 10300 2250 2    50   ~ 0
+POD1_D3_P
+Text Label 10300 2650 2    50   ~ 0
+POD1_D2_P
+Text Label 10300 2550 2    50   ~ 0
+POD1_D2_N
+Text Label 12800 4950 2    50   ~ 0
+POD1_D4_P
+Text Label 12800 5050 2    50   ~ 0
+POD1_D4_N
+Text Label 10300 5250 2    50   ~ 0
+POD1_D5_P
+Text Label 10300 5150 2    50   ~ 0
+POD1_D5_N
+Text Label 10300 4650 2    50   ~ 0
+POD1_D6_P
+Text Label 10300 4550 2    50   ~ 0
 POD1_D6_N
-Text Label 10300 4150 2    50   ~ 0
+Text Label 10300 3550 2    50   ~ 0
 POD1_D7_P
-Text Label 10300 4250 2    50   ~ 0
+Text Label 10300 3650 2    50   ~ 0
 POD1_D7_N
-Text Label 10300 2850 2    50   ~ 0
+Text Label 10300 2150 2    50   ~ 0
 POD1_D3_N
 Text Label 4100 850  2    50   ~ 0
 POD2_D0_P
-Text Label 10300 3450 2    50   ~ 0
-POD2_D0_N
-Text Label 10300 4350 2    50   ~ 0
-POD2_D1_P
-Text Label 10300 4450 2    50   ~ 0
-POD2_D1_N
-Text Label 10300 4750 2    50   ~ 0
-POD2_D3_P
-Text Label 10300 4850 2    50   ~ 0
-POD2_D3_N
-Text Label 10300 4550 2    50   ~ 0
-POD2_D2_P
-Text Label 10300 4650 2    50   ~ 0
-POD2_D2_N
-Text Label 10300 4950 2    50   ~ 0
-POD2_D4_P
-Text Label 10300 5050 2    50   ~ 0
-POD2_D4_N
-Text Label 10300 5150 2    50   ~ 0
-POD2_D5_P
-Text Label 10300 5250 2    50   ~ 0
-POD2_D5_N
-Text Label 10300 5350 2    50   ~ 0
-POD2_D6_P
-Text Label 10300 5450 2    50   ~ 0
-POD2_D6_N
-Text Label 10300 5550 2    50   ~ 0
-POD2_D7_P
-Text Label 10300 5650 2    50   ~ 0
-POD2_D7_N
 Text Label 10300 3350 2    50   ~ 0
+POD2_D0_N
+Text Label 10300 2850 2    50   ~ 0
+POD2_D1_P
+Text Label 10300 2750 2    50   ~ 0
+POD2_D1_N
+Text Label 10300 1650 2    50   ~ 0
+POD2_D3_P
+Text Label 10300 1550 2    50   ~ 0
+POD2_D3_N
+Text Label 10300 1850 2    50   ~ 0
+POD2_D2_P
+Text Label 10300 1750 2    50   ~ 0
+POD2_D2_N
+Text Label 10300 4250 2    50   ~ 0
+POD2_D4_P
+Text Label 10300 4150 2    50   ~ 0
+POD2_D4_N
+Text Label 10300 3050 2    50   ~ 0
+POD2_D5_P
+Text Label 10300 2950 2    50   ~ 0
+POD2_D5_N
+Text Label 10300 3250 2    50   ~ 0
+POD2_D6_P
+Text Label 10300 3150 2    50   ~ 0
+POD2_D6_N
+Text Label 10300 2350 2    50   ~ 0
+POD2_D7_P
+Text Label 10300 2450 2    50   ~ 0
+POD2_D7_N
+Text Label 10300 3450 2    50   ~ 0
 POD2_D0_P
 NoConn ~ 10300 5750
 NoConn ~ 12800 850 
 NoConn ~ 12800 5750
-Text Label 12800 2950 2    50   ~ 0
+Text Label 10300 1250 2    50   ~ 0
 POD3_D0_P
-Text Label 12800 3050 2    50   ~ 0
+Text Label 10300 1150 2    50   ~ 0
 POD3_D0_N
-Text Label 12800 950  2    50   ~ 0
+Text Label 12800 3850 2    50   ~ 0
 POD3_D1_P
-Text Label 12800 1050 2    50   ~ 0
+Text Label 12800 3750 2    50   ~ 0
 POD3_D1_N
-Text Label 12800 1350 2    50   ~ 0
+Text Label 12800 1550 2    50   ~ 0
 POD3_D3_P
-Text Label 12800 1450 2    50   ~ 0
+Text Label 12800 1650 2    50   ~ 0
 POD3_D3_N
 Text Label 12800 1150 2    50   ~ 0
 POD3_D2_P
 Text Label 12800 1250 2    50   ~ 0
 POD3_D2_N
-Text Label 12800 1550 2    50   ~ 0
+Text Label 10300 2050 2    50   ~ 0
 POD3_D4_P
-Text Label 12800 1650 2    50   ~ 0
+Text Label 10300 1950 2    50   ~ 0
 POD3_D4_N
-Text Label 12800 1750 2    50   ~ 0
+Text Label 10300 1050 2    50   ~ 0
 POD3_D5_P
-Text Label 12800 1850 2    50   ~ 0
+Text Label 10300 950  2    50   ~ 0
 POD3_D5_N
-Text Label 12800 1950 2    50   ~ 0
-POD3_D6_P
-Text Label 12800 2050 2    50   ~ 0
-POD3_D6_N
-Text Label 12800 5350 2    50   ~ 0
-POD3_D7_P
-Text Label 12800 5450 2    50   ~ 0
-POD3_D7_N
-Text Label 12800 3150 2    50   ~ 0
-POD4_D0_P
-Text Label 12800 3250 2    50   ~ 0
-POD4_D0_N
-Text Label 12800 2350 2    50   ~ 0
-POD4_D1_P
-Text Label 12800 2450 2    50   ~ 0
-POD4_D1_N
-Text Label 12800 2750 2    50   ~ 0
-POD4_D3_P
-Text Label 12800 2850 2    50   ~ 0
-POD4_D3_N
-Text Label 12800 4750 2    50   ~ 0
-POD4_D2_P
-Text Label 12800 4850 2    50   ~ 0
-POD4_D2_N
-Text Label 12800 3550 2    50   ~ 0
-POD4_D4_P
-Text Label 12800 3650 2    50   ~ 0
-POD4_D4_N
-Text Label 12800 3750 2    50   ~ 0
-POD4_D5_P
-Text Label 12800 3850 2    50   ~ 0
-POD4_D5_N
-Text Label 12800 5550 2    50   ~ 0
-POD4_D6_P
-Text Label 12800 5650 2    50   ~ 0
-POD4_D6_N
 Text Label 12800 4150 2    50   ~ 0
-POD4_D7_P
+POD3_D6_P
 Text Label 12800 4250 2    50   ~ 0
+POD3_D6_N
+Text Label 12800 3550 2    50   ~ 0
+POD3_D7_P
+Text Label 12800 3650 2    50   ~ 0
+POD3_D7_N
+Text Label 12800 1750 2    50   ~ 0
+POD4_D0_P
+Text Label 12800 1850 2    50   ~ 0
+POD4_D0_N
+Text Label 12800 1350 2    50   ~ 0
+POD4_D1_P
+Text Label 12800 1450 2    50   ~ 0
+POD4_D1_N
+Text Label 12800 1050 2    50   ~ 0
+POD4_D3_P
+Text Label 12800 950  2    50   ~ 0
+POD4_D3_N
+Text Label 12800 2350 2    50   ~ 0
+POD4_D2_P
+Text Label 12800 2450 2    50   ~ 0
+POD4_D2_N
+Text Label 12800 1950 2    50   ~ 0
+POD4_D4_P
+Text Label 12800 2050 2    50   ~ 0
+POD4_D4_N
+Text Label 12800 2950 2    50   ~ 0
+POD4_D5_P
+Text Label 12800 3050 2    50   ~ 0
+POD4_D5_N
+Text Label 12800 3250 2    50   ~ 0
+POD4_D6_P
+Text Label 12800 3150 2    50   ~ 0
+POD4_D6_N
+Text Label 12800 2850 2    50   ~ 0
+POD4_D7_P
+Text Label 12800 2750 2    50   ~ 0
 POD4_D7_N
 Text Label 12800 4550 2    50   ~ 0
 POD5_D0_P
@@ -1618,5 +1618,5 @@ NoConn ~ 4350 9450
 NoConn ~ 1350 9650
 NoConn ~ 1350 9450
 Text Notes 14600 3100 0    50   ~ 0
-Polarity swap for routability:\n* POD5_D7\n* POD5_D3
+Polarity swap for routability:\n* POD5_D7\n* POD5_D3\n* POD4_D7\n* POD4_D6\n* POD4_D3\n* POD3_D5\n* POD3_D4\n* POD3_D1\n* POD3_D0\n* POD2_D6\n* POD2_D5\n* POD2_D4\n* POD2_D3\n* POD2_D2\n* POD2_D1\n* POD2_D0\n* POD1_D6\n* POD1_D5\n* POD1_D3\n* POD1_D2\n* POD1_D1\n* POD1_D0\n* POD0_D3\n* POD0_D1
 $EndSCHEMATC
