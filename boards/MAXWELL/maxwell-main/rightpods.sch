@@ -5,7 +5,7 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 9 18
 Title "MAXWELL Main Board"
-Date "2020-07-15"
+Date "2020-07-16"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
@@ -833,17 +833,17 @@ Text Label 14900 2600 0    50   ~ 0
 MUX3_SEL
 Text Label 14900 2700 0    50   ~ 0
 MUX3_EQ
-Text Label 13400 4300 2    50   ~ 0
+Text Label 13400 7400 2    50   ~ 0
 MUX0_SEL
 Text Label 13400 9200 2    50   ~ 0
 MUX0_EQ
-Text Label 10600 4300 2    50   ~ 0
-MUX1_SEL
-Text Label 10600 9200 2    50   ~ 0
-MUX1_EQ
-Text Label 13400 7400 2    50   ~ 0
-MUX3_SEL
 Text Label 13400 7500 2    50   ~ 0
+MUX1_SEL
+Text Label 13400 4300 2    50   ~ 0
+MUX1_EQ
+Text Label 10600 7300 2    50   ~ 0
+MUX3_SEL
+Text Label 10600 7200 2    50   ~ 0
 MUX3_EQ
 Text HLabel 1450 3600 0    50   Input ~ 0
 P6_12V0
@@ -1608,9 +1608,9 @@ Text Label 13400 5700 2    50   ~ 0
 POD9_D7_N
 Text Label 13400 5600 2    50   ~ 0
 POD9_D7_P
-Text Label 10600 7200 2    50   ~ 0
+Text Label 10600 9200 2    50   ~ 0
 MUX2_SEL
-Text Label 10600 7300 2    50   ~ 0
+Text Label 10600 4300 2    50   ~ 0
 MUX2_EQ
 Text Notes 10800 3400 0    50   ~ 0
 Polarity swap for routability:\n* POD11_D3\n* POD11_D1\n* POD11_D0\n* POD10_D7\n* POD10_D6\n* POD10_D5\n* POD10_D2\n* POD10_D1\n* POD10_D0\n* POD9_D4\n* POD8_D4\n* POD7_D7\n* POD7_D6\n* POD7_D5\n* POD7_D1\n* POD6_D7\n* POD6_D5\n* POD6_D3\n* POD6_D2

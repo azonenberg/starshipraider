@@ -5,7 +5,7 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 18 18
 Title "MAXWELL Main Board"
-Date "2020-07-15"
+Date "2020-07-16"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
@@ -1494,19 +1494,6 @@ $EndComp
 Text Label 8450 7750 0    50   ~ 0
 GND
 $Comp
-L Connector:Conn_01x01 TP60
-U 1 1 62DEBE0F
-P 7500 8100
-F 0 "TP60" H 7418 7875 50  0000 C CNN
-F 1 "TESTCLIP" H 7418 7966 50  0000 C CNN
-F 2 "azonenberg_pcb:TESTPOINT_SMT_KEYSTONE_5016" H 7500 8100 50  0001 C CNN
-F 3 "~" H 7500 8100 50  0001 C CNN
-	1    7500 8100
-	-1   0    0    1   
-$EndComp
-Text Label 7700 8100 0    50   ~ 0
-1V5
-$Comp
 L Connector:Conn_01x01 TP61
 U 1 1 62DEC320
 P 7500 8450
@@ -1597,19 +1584,6 @@ F 3 "~" H 7500 10250 50  0001 C CNN
 $EndComp
 Text Label 7700 10250 0    50   ~ 0
 1V2
-$Comp
-L Connector:Conn_01x01 TP67
-U 1 1 62E704EC
-P 7500 10600
-F 0 "TP67" H 7418 10375 50  0000 C CNN
-F 1 "TESTCLIP" H 7418 10466 50  0000 C CNN
-F 2 "azonenberg_pcb:TESTPOINT_SMT_KEYSTONE_5016" H 7500 10600 50  0001 C CNN
-F 3 "~" H 7500 10600 50  0001 C CNN
-	1    7500 10600
-	-1   0    0    1   
-$EndComp
-Text Label 7700 10600 0    50   ~ 0
-1V8
 $Comp
 L Connector:Conn_01x01 TP72
 U 1 1 62E70800

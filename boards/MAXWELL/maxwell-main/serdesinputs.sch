@@ -5,7 +5,7 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 10 18
 Title "MAXWELL Main Board"
-Date "2020-07-15"
+Date "2020-07-16"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
@@ -156,9 +156,9 @@ Text Label 2000 2700 2    50   ~ 0
 2V5
 Text Label 2000 3000 2    50   ~ 0
 GND
-Text Label 12900 3500 2    50   ~ 0
+Text Label 12900 1700 2    50   ~ 0
 CH0_P
-Text Label 12900 3600 2    50   ~ 0
+Text Label 12900 1800 2    50   ~ 0
 CH0_N
 Text HLabel 11950 750  0    50   Input ~ 0
 REFCLK_P
@@ -282,13 +282,13 @@ Text Label 1750 3250 2    50   ~ 0
 2V5
 Text Label 1750 3750 2    50   ~ 0
 GND
-Text HLabel 1750 4550 0    50   Input ~ 0
-SYNC_CLK_P
 Text HLabel 1750 4650 0    50   Input ~ 0
+SYNC_CLK_P
+Text HLabel 1750 4550 0    50   Input ~ 0
 SYNC_CLK_N
-Text Label 12900 2900 2    50   ~ 0
+Text Label 12900 2300 2    50   ~ 0
 CH1_P
-Text Label 12900 3000 2    50   ~ 0
+Text Label 12900 2400 2    50   ~ 0
 CH1_N
 $Comp
 L special-azonenberg:SY56017R U32
@@ -528,17 +528,17 @@ Text Label 5650 3250 2    50   ~ 0
 2V5
 Text Label 5650 3750 2    50   ~ 0
 GND
-Text Label 12900 1700 2    50   ~ 0
+Text Label 12900 3500 2    50   ~ 0
 CH3_P
-Text Label 12900 1800 2    50   ~ 0
+Text Label 12900 3600 2    50   ~ 0
 CH3_N
 Text Label 5650 950  2    50   ~ 0
 2V5
 Text Label 5650 1450 2    50   ~ 0
 GND
-Text Label 12900 2300 2    50   ~ 0
+Text Label 12900 2900 2    50   ~ 0
 CH2_P
-Text Label 12900 2400 2    50   ~ 0
+Text Label 12900 3000 2    50   ~ 0
 CH2_N
 Text HLabel 11100 7050 0    50   Input ~ 0
 IN3_P
@@ -1754,4 +1754,6 @@ Text Label 3550 4700 2    50   ~ 0
 GND
 Wire Wire Line
 	3550 4700 4100 4700
+Text Notes 1000 4900 0    50   ~ 0
+Sync clk inverted\nfor routability
 $EndSCHEMATC
