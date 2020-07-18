@@ -27,14 +27,14 @@
 *                                                                                                                      *
 ***********************************************************************************************************************/
 
-`ifndef InputState_h
-`define InputState_h
+`ifndef InputState_svh
+`define InputState_svh
 
-//8x low-speed sample
-typedef logic[7:0] lssample_t;
+//4x low-speed sample
+typedef logic[3:0] lssample_t;
 
-//64x high speed sample
-typedef logic[63:0] hssample_t;
+//32x high speed sample
+typedef logic[31:0] hssample_t;
 
 //Total set of samples across all channels
 typedef struct packed
@@ -42,5 +42,8 @@ typedef struct packed
 	lssample_t[91:0]	lo;
 	hssample_t[3:0]		hi;
 } sample_t;
+
+//Channel number
+typedef logic[6:0] chnum_t;
 
 `endif

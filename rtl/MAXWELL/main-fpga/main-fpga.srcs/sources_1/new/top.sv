@@ -153,6 +153,7 @@ module top(
 	wire	clk_125mhz;
 	wire	clk_156mhz;
 	wire	clk_250mhz;
+	wire	clk_312mhz;
 	wire	clk_400mhz;
 	wire	clk_625mhz;
 
@@ -164,110 +165,32 @@ module top(
 		.clk_125mhz(clk_125mhz),
 		.clk_156mhz(clk_156mhz),
 		.clk_250mhz(clk_250mhz),
+		.clk_312mhz(clk_312mhz),
 		.clk_400mhz(clk_400mhz),
 		.clk_625mhz(clk_625mhz)
 	);
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	// I2C bus for MAC address EEPROM
+	// Ethernet stuff
 
-	`include "I2CTransceiver.svh"
-
-	i2c_in_t txvr_cin;
-	i2c_out_t txvr_cout;
-
-	I2CTransceiver i2c_txvr(
-		.clk(clk_156mhz),
-		.clkdiv(16'd391),		//400 kHz
-		.i2c_scl(mac_i2c_scl),
-		.i2c_sda(mac_i2c_sda),
-		.cin(txvr_cin),
-		.cout(txvr_cout)
-	);
-
-	localparam NUM_I2C = 1;
-
-	i2c_in_t[NUM_I2C-1:0]	i2c_driver_cin;
-	i2c_out_t[NUM_I2C-1:0]	i2c_driver_cout;
-	wire[NUM_I2C-1:0]		i2c_driver_request;
-	wire[NUM_I2C-1:0]		i2c_driver_done;
-	wire[NUM_I2C-1:0]		i2c_driver_ack;
-
-	I2CArbiter #(
-		.NUM_PORTS(NUM_I2C)
-	) i2c_arbiter(
-		.clk(clk_156mhz),
-
-		.driver_request(i2c_driver_request),
-		.driver_done(i2c_driver_done),
-		.driver_ack(i2c_driver_ack),
-		.driver_cin(i2c_driver_cin),
-		.driver_cout(i2c_driver_cout),
-
-		.txvr_cin(txvr_cin),
-		.txvr_cout(txvr_cout)
-		);
-
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	// MAC address generator
-
-	wire		mac_addr_done;
-	wire		mac_addr_ready;
-	wire		mac_addr_fail;
-	wire[47:0]	mac_addr;
-	wire[127:0]	eeprom_serial;
-
-	//Read from the EEPROM
-	I2CMACAddressReader mac_reader(
-		.clk(clk_156mhz),
-
-		.driver_req(i2c_driver_request[0]),
-		.driver_ack(i2c_driver_ack[0]),
-		.driver_done(i2c_driver_done[0]),
-		.driver_cin(i2c_driver_cin[0]),
-		.driver_cout(i2c_driver_cout[0]),
-
-		.done(mac_addr_done),
-		.ready(mac_addr_ready),
-		.fail(mac_addr_fail),
-		.mac(mac_addr),
-		.serial(eeprom_serial)
-	);
-
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	// The MAC
-
-	`include "GmiiBus.svh"
-	`include "EthernetBus.svh"
-
-	wire			mac_rx_clk;
-	EthernetRxBus	mac_rx_bus;
-	EthernetTxBus	mac_tx_bus;
-	wire			mac_tx_ready;
-
-	wire			link_up;
-	lspeed_t		link_speed;
-
-	RGMIIMACWrapper mac(
+	EthernetSubsystem network(
 		.clk_125mhz(clk_125mhz),
+		.clk_156mhz(clk_156mhz),
 		.clk_250mhz(clk_250mhz),
 
-		.rgmii_rxc(rgmii_rx_clk),
+		.rgmii_rx_clk(rgmii_rx_clk),
 		.rgmii_rxd(rgmii_rxd),
-		.rgmii_rx_ctl(rgmii_rx_dv),
-
-		.rgmii_txc(rgmii_tx_clk),
+		.rgmii_rx_dv(rgmii_rx_dv),
+		.rgmii_tx_clk(rgmii_tx_clk),
 		.rgmii_txd(rgmii_txd),
-		.rgmii_tx_ctl(rgmii_tx_en),
+		.rgmii_tx_en(rgmii_tx_en),
+		.rgmii_rst_n(rgmii_rst_n),
 
-		.mac_rx_clk(mac_rx_clk),
-		.mac_rx_bus(mac_rx_bus),
+		.scpi_uart_rx(scpi_uart_rx),
+		.scpi_uart_tx(scpi_uart_tx),
 
-		.mac_tx_bus(mac_tx_bus),
-		.mac_tx_ready(mac_tx_ready),
-
-		.link_up(link_up),
-		.link_speed(link_speed)
+		.mac_i2c_sda(mac_i2c_sda),
+		.mac_i2c_scl(mac_i2c_scl)
 	);
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -277,8 +200,8 @@ module top(
 
 	OnDieSensors_7series sensors(
 		.clk(clk_156mhz),
-		.vin_p(),
-		.vin_n(),
+		.vin_p(16'hz),
+		.vin_n(16'hz),
 
 		.die_temp(),
 		.volt_core(),
@@ -376,7 +299,7 @@ module top(
 	sample_t current_sample;
 
 	LowSpeedInputs low_in(
-		.clk_156mhz(clk_156mhz),
+		.clk_312mhz(clk_312mhz),
 		.clk_400mhz(clk_400mhz),
 		.clk_625mhz(clk_625mhz),
 
@@ -387,9 +310,20 @@ module top(
 	);
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// High-speed probe inputs
+
+	//For now, tie off the high speed inputs
+	assign current_sample.hi = 0;
+
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// Sample compression engine
+
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// Trigger system
 
 	TriggerSystem trig(
+		.clk_312mhz(clk_312mhz),
+
 		.sync_clk_p(sync_clk_p),
 		.sync_clk_n(sync_clk_n),
 

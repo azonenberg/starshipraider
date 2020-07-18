@@ -38,8 +38,8 @@
  */
 module LowSpeedInputs(
 
-	//Low speed (1/8 rate) and high speed (1/2 rate) sampling clocks
-	input wire				clk_156mhz,
+	//Low speed (1/4 rate) and high speed (1/2 rate) sampling clocks
+	input wire				clk_312mhz,
 	input wire				clk_625mhz,
 
 	//IDELAY calibration
@@ -137,7 +137,7 @@ module LowSpeedInputs(
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// SERDES
 
-	wire[7:0] probe_in_parallel[91:0];
+	lssample_t probe_in_parallel[91:0];
 
 	wire	iserdes_reset;
 
@@ -145,7 +145,7 @@ module LowSpeedInputs(
 
 		ISERDESE2 #(
 			.DATA_RATE("DDR"),
-			.DATA_WIDTH(8),
+			.DATA_WIDTH(4),
 			.DYN_CLKDIV_INV_EN("FALSE"),
 			.DYN_CLK_INV_EN("FALSE"),
 			.INTERFACE_TYPE("NETWORKING"),
@@ -162,14 +162,14 @@ module LowSpeedInputs(
 			.SRVAL_Q4(0),
 			.IOBDELAY("BOTH")
 		) iserdes (
-			.Q1(probe_in_parallel[g][7]),	//swap bit ordering so MSB is leftmost
-			.Q2(probe_in_parallel[g][6]),
-			.Q3(probe_in_parallel[g][5]),
-			.Q4(probe_in_parallel[g][4]),
-			.Q5(probe_in_parallel[g][3]),
-			.Q6(probe_in_parallel[g][2]),
-			.Q7(probe_in_parallel[g][1]),
-			.Q8(probe_in_parallel[g][0]),
+			.Q1(probe_in_parallel[g][3]),	//swap bit ordering so MSB is leftmost
+			.Q2(probe_in_parallel[g][2]),
+			.Q3(probe_in_parallel[g][1]),
+			.Q4(probe_in_parallel[g][0]),
+			.Q5(),
+			.Q6(),
+			.Q7(),
+			.Q8(),
 			.O(),
 			.SHIFTOUT1(),
 			.SHIFTOUT2(),
@@ -180,7 +180,7 @@ module LowSpeedInputs(
 			.CE1(1'b1),
 			.CE2(1'b1),
 			.RST(iserdes_reset),
-			.CLKDIV(clk_156mhz),
+			.CLKDIV(clk_312mhz),
 			.CLKDIVP(1'b0),
 			.OCLK(),
 			.OCLKB(),
@@ -200,7 +200,7 @@ module LowSpeedInputs(
 	//Bitmask of channels flipped on the PCB for layout
 	localparam CHANS_TO_INVERT = 92'hBE7_1010_E2AC_8848_337F_6F19;
 
-	always @(posedge clk_156mhz) begin
+	always @(posedge clk_312mhz) begin
 		for(integer i=0; i<92; i++) begin
 			if(CHANS_TO_INVERT[i])
 				samples[i]	<= ~probe_in_parallel[i];

@@ -9,3 +9,5 @@ doc
 *.v
 *.vhdl
 *.xdc
+*.vho
+hdl
