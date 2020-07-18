@@ -49,6 +49,9 @@ module ClockSynthesis(
 	//156.25 MHz system clock
 	output wire		clk_156mhz,
 
+	//200 MHz clock for IDELAYCTRL
+	output wire		clk_200mhz,
+
 	//250 MHz clock for RGMII
 	output wire		clk_250mhz,
 
@@ -94,8 +97,8 @@ module ClockSynthesis(
 		.OUT5_MIN_PERIOD(1.6),	//clk_625mhz
 		.ACTIVE_ON_START(1)		//start PLL automatically out of reset
 	) main_pll (
-		.clkin({1'b0, k7_clk}),
-		.clksel(1'b1),
+		.clkin({k7_clk, k7_clk}),
+		.clksel(1'b0),
 
 		.clkout({clk_625mhz, clk_312mhz, clk_250mhz, clk_156mhz, clk_125mhz, clk_50mhz}),
 		.reset(1'b0),
@@ -119,25 +122,25 @@ module ClockSynthesis(
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// Cascaded PLL used to produce the 400 MHz IDELAYCTRL clock and other even frequencies
 
-	wire[4:0] unused;
+	wire[3:0] unused;
 
 	ReconfigurablePLL #(
-		.OUTPUT_GATE(6'b000001),
-		.OUTPUT_BUF_GLOBAL(6'b000001),
+		.OUTPUT_GATE(6'b000011),
+		.OUTPUT_BUF_GLOBAL(6'b000011),
 		.IN0_PERIOD(20),
-		.IN1_PERIOD(2),
+		.IN1_PERIOD(20),
 		.OUT0_MIN_PERIOD(2.5),	//clk_400mhz
-		.OUT1_MIN_PERIOD(2.5),	//unused
+		.OUT1_MIN_PERIOD(5),	//clk_200mhz
 		.OUT2_MIN_PERIOD(2.5),	//unused
 		.OUT3_MIN_PERIOD(2.5),	//unused
 		.OUT4_MIN_PERIOD(2.5),	//unused
 		.OUT5_MIN_PERIOD(2.5),	//unused
 		.ACTIVE_ON_START(1)		//start PLL automatically out of reset
 	) even_pll (
-		.clkin({1'b0, clk_50mhz}),
-		.clksel(1'b1),
+		.clkin({clk_50mhz, clk_50mhz}),
+		.clksel(1'b0),
 
-		.clkout({unused, clk_400mhz}),
+		.clkout({unused, clk_200mhz, clk_400mhz}),
 		.reset(1'b0),
 		.locked(),
 

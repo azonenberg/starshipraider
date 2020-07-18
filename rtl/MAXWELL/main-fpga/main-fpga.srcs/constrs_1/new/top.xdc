@@ -193,3 +193,28 @@ set_property PACKAGE_PIN K23 [get_ports sync_clk_p]
 set_property PACKAGE_PIN H9 [get_ports trig_out_p]
 
 create_clock -period 8.000 -name rgmii_rx_clk -waveform {0.000 4.000} [get_ports rgmii_rx_clk]
+
+create_clock -period 6.400 -name k7_clk_p -waveform {0.000 3.200} [get_ports k7_clk_p]
+create_generated_clock -name clk_50mhz -source [get_pins clocks/main_pll/mmcm/CLKIN1] -master_clock [get_clocks k7_clk_p] [get_pins clocks/main_pll/mmcm/CLKOUT0]
+create_generated_clock -name clk_125mhz -source [get_pins clocks/main_pll/mmcm/CLKIN1] -master_clock [get_clocks k7_clk_p] [get_pins clocks/main_pll/mmcm/CLKOUT1]
+create_generated_clock -name clk_156mhz -source [get_pins clocks/main_pll/mmcm/CLKIN1] -master_clock [get_clocks k7_clk_p] [get_pins clocks/main_pll/mmcm/CLKOUT2]
+create_generated_clock -name clk_250mhz -source [get_pins clocks/main_pll/mmcm/CLKIN1] -master_clock [get_clocks k7_clk_p] [get_pins clocks/main_pll/mmcm/CLKOUT3]
+create_generated_clock -name clk_312mhz -source [get_pins clocks/main_pll/mmcm/CLKIN1] -master_clock [get_clocks k7_clk_p] [get_pins clocks/main_pll/mmcm/CLKOUT4]
+create_generated_clock -name clk_625mhz -source [get_pins clocks/main_pll/mmcm/CLKIN1] -master_clock [get_clocks k7_clk_p] [get_pins clocks/main_pll/mmcm/CLKOUT5]
+create_generated_clock -name clk_400mhz -source [get_pins clocks/even_pll/mmcm/CLKIN1] -master_clock [get_clocks clk_50mhz] [get_pins clocks/even_pll/mmcm/CLKOUT0]
+set_clock_groups -asynchronous -group [get_clocks rgmii_rx_clk] -group [get_clocks clk_125mhz]
+set_clock_groups -asynchronous -group [get_clocks clk_156mhz] -group [get_clocks clk_pll_i]
+set_clock_groups -asynchronous -group [get_clocks clk_125mhz] -group [get_clocks rgmii_rx_clk]
+set_false_path -from [get_clocks clk_156mhz] -to [get_clocks rgmii_rx_clk]
+
+set_clock_groups -asynchronous -group [get_clocks rgmii_rx_clk] -group [get_clocks clk_156mhz]
+
+create_generated_clock -name clk_200mhz -source [get_pins clocks/even_pll/mmcm/CLKIN1] -master_clock [get_clocks clk_50mhz] [get_pins clocks/even_pll/mmcm/CLKOUT1]
+
+set_max_delay -datapath_only -from [get_cells -hierarchical *reg_a_ff*] -to [get_cells -hierarchical *reg_b_reg*] 3.200
+
+set_max_delay -from [get_cells -hierarchical *dout0_reg*] -to [get_cells -hierarchical *dout1_reg*] 3.200
+set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
+set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
+set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]
+connect_debug_port dbg_hub/clk [get_nets clk_312mhz]

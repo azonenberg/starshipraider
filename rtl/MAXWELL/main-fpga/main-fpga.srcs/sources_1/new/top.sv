@@ -152,6 +152,7 @@ module top(
 	wire	clk_50mhz;
 	wire	clk_125mhz;
 	wire	clk_156mhz;
+	wire	clk_200mhz;
 	wire	clk_250mhz;
 	wire	clk_312mhz;
 	wire	clk_400mhz;
@@ -164,6 +165,7 @@ module top(
 		.clk_50mhz(clk_50mhz),
 		.clk_125mhz(clk_125mhz),
 		.clk_156mhz(clk_156mhz),
+		.clk_200mhz(clk_200mhz),
 		.clk_250mhz(clk_250mhz),
 		.clk_312mhz(clk_312mhz),
 		.clk_400mhz(clk_400mhz),
@@ -283,7 +285,7 @@ module top(
 		.sys_clk_p                      (sys_clk_p),
 		.sys_clk_n                      (sys_clk_n),
 
-		.clk_ref_i                      (clk_400mhz),
+		.clk_ref_i                      (clk_200mhz),
 		.device_temp_i                  (die_temp_native),
 		.sys_rst                        (ram_reset)
 	);
