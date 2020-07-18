@@ -8,3 +8,4 @@ doc
 *.dcp
 *.v
 *.vhdl
+*.xdc
