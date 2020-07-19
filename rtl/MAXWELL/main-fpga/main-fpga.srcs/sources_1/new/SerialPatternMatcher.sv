@@ -1,5 +1,5 @@
-`timescale 1ns/1ps
 `default_nettype none
+`timescale 1ns/1ps
 /***********************************************************************************************************************
 *                                                                                                                      *
 * STARSHIPRAIDER v0.1                                                                                                  *
@@ -29,209 +29,103 @@
 *                                                                                                                      *
 ***********************************************************************************************************************/
 
+`include "InputState.svh"
+`include "SerialPatternMatcher.svh"
+
 /**
 	@file
 	@author Andrew D. Zonenberg
-	@brief Simulation of the trigger system
+	@brief Serial pattern matching engine
  */
-module TriggerSystem_sim();
+module SerialPatternMatcher #(
+	parameter WIDTH	= 8
+)(
+	input wire				clk,
+
+	input wire sample_t		samples,
+	input wire spmeconfig_t	pconfig,
+
+	output lssample_t[3:0]	match_found
+);
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	// Clocking
+	// Input crossbar (1 cycle latency)
 
-	logic ready = 0;
-	initial begin
-		#100;
-		ready = 1;
-	end
+	lssample_t[2:0]	xbar_out;
 
-	//Input reference clock
-	logic	k7_clk	= 0;
-	always begin
-		#3.2;
-		if(ready)
-			k7_clk = !k7_clk;
-	end
-
-	wire	k7_clk_p;
-	wire	k7_clk_n;
-	OBUFDS obuf_clk(
-		.I(k7_clk),
-		.O(k7_clk_p),
-		.OB(k7_clk_n)
-	);
-
-	//Synthesize all of the clocks we need
-	wire	locked;
-	wire	clk_125mhz;
-	wire	clk_312mhz;
-	wire	clk_400mhz;
-	wire	clk_625mhz;
-	ClockSynthesis synth(
-		.k7_clk_p(k7_clk_p),
-		.k7_clk_n(k7_clk_n),
-
-		.clk_125mhz(clk_125mhz),
-		.clk_312mhz(clk_312mhz),
-		.clk_400mhz(clk_400mhz),
-		.clk_625mhz(clk_625mhz),
-
-		.locked(locked)
+	InputCrossbar #(
+		.OUTPUT_COUNT(3)
+	) xbar (
+		.clk(clk),
+		.din(samples),
+		.selects({pconfig.muxsel_data, pconfig.muxsel_clk, pconfig.muxsel_rst}),
+		.dout(xbar_out)
 	);
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	// Test signal source
+	// Detect clock/reset edges (1 cycle latency)
 
-	wire	sck;
-	wire	mosi;
-	wire	miso;
-
-	logic	cs_n			= 1;
-
-	logic		shift_en	= 0;
-	wire		shift_done;
-	logic[7:0]	tx_data		= 0;
-
-	SPIHostInterface host(
-		.clk(clk_125mhz),
-		.clkdiv(10),			//12.5 MHz
-		.spi_sck(sck),
-		.spi_mosi(mosi),
-		.spi_miso(miso),
-
-		.shift_en(shift_en),
-		.shift_done(shift_done),
-		.tx_data(tx_data)
+	//Find rising clock edges
+	lssample_t		clock_edges;
+	EdgeDetector clock_edge_detector(
+		.clk(clk),
+		.look_for_rising(pconfig.clock_match_rising),
+		.look_for_falling(pconfig.clock_match_falling),
+		.data(xbar_out[1]),
+		.edges(clock_edges)
 	);
 
-	logic[7:0] state = 0;
-	logic[7:0] count = 0;
+	//Find falling reset edges
+	lssample_t		rst_edges;
+	EdgeDetector rst_edge_detector(
+		.clk(clk),
+		.look_for_rising(pconfig.reset_match_rising),
+		.look_for_falling(pconfig.reset_match_falling),
+		.data(xbar_out[0]),
+		.edges(rst_edges)
+	);
 
-	always_ff @(posedge clk_125mhz) begin
+	//Pipeline the data by a cycle to phase align it to the edge detector output
+	lssample_t		data_pipe;
+	PipelineStage #(.WIDTH(1)) pipe_data (
+		.clk(clk),
+		.din(xbar_out[2]),
+		.dout(data_pipe)
+	);
 
-		shift_en	<= 0;
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// Deserialize the input data (1 cycle latency)
 
-		case(state)
+	//Look for edges
+	wire[7:0]	sampled;
+	lssample_t	sampled_valid;
 
-			0: begin
-				if(locked) begin
-					count	<= count + 1;
-					if(count == 8'hff)
-						state	<= 1;
-				end
-			end
+	SerialCapture #(
+		.SERDES_RATE(WIDTH)
+	) serdes (
+		.clk(clk),
+		.data(data_pipe),
+		.clock_edges(clock_edges),
+		.reset_edges(rst_edges),
+		.sampled(sampled),
+		.sampled_valid(sampled_valid)
+	);
 
-			1: begin
-				cs_n	<= 0;
-				state	<= 2;
-			end
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// Match against external constant values
 
-			2: begin
-				shift_en	<= 1;
-				tx_data		<= 8'h03;
-				state		<= 3;
-			end
+	for(genvar i=0; i<4; i++) begin
 
-			3: begin
-				if(shift_done) begin
-					shift_en	<= 1;
-					tx_data		<= 8'h12;
-					state		<= 4;
-				end
-			end
-
-			4: begin
-				if(shift_done) begin
-					shift_en	<= 1;
-					tx_data		<= 8'h34;
-					state		<= 5;
-				end
-			end
-
-			5: begin
-				if(shift_done) begin
-					shift_en	<= 1;
-					tx_data		<= 8'h56;
-					state		<= 6;
-				end
-			end
-
-			6: begin
-				cs_n	<= 1;
-				state	<= 7;
-			end
-
-		endcase
+		DigitalComparator #(
+			.WIDTH(8)
+		) match_a (
+			.clk(clk),
+			.din_valid(sampled_valid),
+			.din_a(sampled),
+			.din_b(pconfig.targets[i][WIDTH-1:0]),
+			.dout_match(match_found[i])
+		);
 
 	end
-
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	// Convert inputs to differential
-
-	wire[91:0]	low_speed_raw;
-
-	assign low_speed_raw[0] = cs_n;
-	assign low_speed_raw[1] = sck;
-	assign low_speed_raw[2] = mosi;
-	assign low_speed_raw[91:3] = 0;
-
-	wire[91:0]	low_speed_p;
-	wire[91:0]	low_speed_n;
-
-	DifferentialOutputBuffer #(
-		.WIDTH(92)
-	) obufs (
-		.pad_out_p(low_speed_p),
-		.pad_out_n(low_speed_n),
-		.fabric_in(low_speed_raw)
-	);
-
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	// Low-speed input block
-
-	`include "InputState.svh"
-
-	sample_t samples;
-
-	LowSpeedInputs #(
-		.CHANS_TO_INVERT(0)
-	) inputs (
-		.clk_312mhz(clk_312mhz),
-		.clk_400mhz(clk_400mhz),
-		.clk_625mhz(clk_625mhz),
-
-		.probe_in_p(low_speed_p),
-		.probe_in_n(low_speed_n),
-
-		.samples(samples.lo)
-	);
-
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	// Trigger logic
-
-	`include "SerialPatternMatcher.svh"
-
-	//Trigger pconfiguration
-	spmeconfig_t	pconfig;
-	assign pconfig.muxsel_clk			= 1;
-	assign pconfig.muxsel_rst 			= 0;
-	assign pconfig.muxsel_data 			= 2;
-	assign pconfig.clock_match_rising 	= 1;
-	assign pconfig.clock_match_falling 	= 0;
-	assign pconfig.reset_match_rising 	= 0;
-	assign pconfig.reset_match_falling 	= 1;
-	assign pconfig.targets[0]			= 32'h03;
-	assign pconfig.targets[1]			= 32'h12;
-	assign pconfig.targets[2]			= 32'h34;
-	assign pconfig.targets[3]			= 32'h56;
-
-	lssample_t[3:0]	match_found;
-
-	SerialPatternMatcher spme(
-		.clk(clk_312mhz),
-		.samples(samples),
-		.pconfig(pconfig),
-		.match_found(match_found)
-	);
 
 endmodule

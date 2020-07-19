@@ -14,14 +14,14 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="13843636fs"></ZoomEndTime>
-      <Cursor1Time time="4600800fs"></Cursor1Time>
+      <ZoomEndTime time="16029604fs"></ZoomEndTime>
+      <Cursor1Time time="10000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="272"></NameColumnWidth>
-      <ValueColumnWidth column_width="79"></ValueColumnWidth>
+      <ValueColumnWidth column_width="71"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="19" />
+   <WVObjectSize size="16" />
    <wvobject type="logic" fp_name="/TriggerSystem_sim/k7_clk">
       <obj_property name="ElementShortName">k7_clk</obj_property>
       <obj_property name="ObjectShortName">k7_clk</obj_property>
@@ -72,28 +72,16 @@
    </wvobject>
    <wvobject fp_name="divider63" type="divider">
    </wvobject>
-   <wvobject type="array" fp_name="/TriggerSystem_sim/xbar_out">
-      <obj_property name="ElementShortName">xbar_out[2:0][3:0]</obj_property>
-      <obj_property name="ObjectShortName">xbar_out[2:0][3:0]</obj_property>
+   <wvobject type="array" fp_name="/TriggerSystem_sim/samples">
+      <obj_property name="ElementShortName">samples</obj_property>
+      <obj_property name="ObjectShortName">samples</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/TriggerSystem_sim/clock_edges">
-      <obj_property name="ElementShortName">clock_edges[3:0]</obj_property>
-      <obj_property name="ObjectShortName">clock_edges[3:0]</obj_property>
+   <wvobject type="array" fp_name="/TriggerSystem_sim/pconfig">
+      <obj_property name="ElementShortName">pconfig</obj_property>
+      <obj_property name="ObjectShortName">pconfig</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/TriggerSystem_sim/cs_edges">
-      <obj_property name="ElementShortName">cs_edges[3:0]</obj_property>
-      <obj_property name="ObjectShortName">cs_edges[3:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/TriggerSystem_sim/data_pipe">
-      <obj_property name="ElementShortName">data_pipe[3:0]</obj_property>
-      <obj_property name="ObjectShortName">data_pipe[3:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/TriggerSystem_sim/sampled">
-      <obj_property name="ElementShortName">sampled[7:0]</obj_property>
-      <obj_property name="ObjectShortName">sampled[7:0]</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/TriggerSystem_sim/sampled_valid">
-      <obj_property name="ElementShortName">sampled_valid</obj_property>
-      <obj_property name="ObjectShortName">sampled_valid</obj_property>
+   <wvobject type="array" fp_name="/TriggerSystem_sim/match_found">
+      <obj_property name="ElementShortName">match_found[3:0][3:0]</obj_property>
+      <obj_property name="ObjectShortName">match_found[3:0][3:0]</obj_property>
    </wvobject>
 </wave_config>
