@@ -122,7 +122,8 @@ module SerialPatternMatcher #(
 			.clk(clk),
 			.din_valid(sampled_valid),
 			.din_a(sampled),
-			.din_b(pconfig.targets[i][WIDTH-1:0]),
+			.mask_a(pconfig.target_masks[i][WIDTH-1:0]),
+			.din_b(pconfig.target_values[i][WIDTH-1:0]),
 			.dout_match(match_found[i])
 		);
 

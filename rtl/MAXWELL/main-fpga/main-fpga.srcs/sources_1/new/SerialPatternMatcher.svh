@@ -48,7 +48,8 @@ typedef struct packed
 
 	//Config bits: Constant values to match against
 	//(only low WIDTH bits are used)
-	target_t[3:0]	targets;
+	target_t[3:0]	target_values;
+	target_t[3:0]	target_masks;
 
 } spmeconfig_t;
 

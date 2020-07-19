@@ -220,10 +220,14 @@ module TriggerSystem_sim();
 	assign pconfig.clock_match_falling 	= 0;
 	assign pconfig.reset_match_rising 	= 0;
 	assign pconfig.reset_match_falling 	= 1;
-	assign pconfig.targets[0]			= 32'h03;
-	assign pconfig.targets[1]			= 32'h12;
-	assign pconfig.targets[2]			= 32'h34;
-	assign pconfig.targets[3]			= 32'h56;
+	assign pconfig.target_values[0]		= 32'h03;
+	assign pconfig.target_values[1]		= 32'h12;
+	assign pconfig.target_values[2]		= 32'h34;
+	assign pconfig.target_values[3]		= 32'h56;
+	assign pconfig.target_masks[0]		= 32'hff;
+	assign pconfig.target_masks[1]		= 32'hff;
+	assign pconfig.target_masks[2]		= 32'hff;
+	assign pconfig.target_masks[3]		= 32'hff;
 
 	lssample_t[3:0]	match_found;
 

@@ -34,7 +34,7 @@
 /**
 	@file
 	@author Andrew D. Zonenberg
-	@brief Compares two inputs together.
+	@brief Compares two inputs together, applying a bitmask to the first.
 
 	At most one match per CLK cycle will be reported.
  */
@@ -43,8 +43,9 @@ module DigitalComparator #(
 ) (
 	input wire						clk,
 
-	input lssample_t				din_valid,
+	input wire lssample_t			din_valid,
 	input wire[WIDTH-1:0]			din_a,
+	input wire[WIDTH-1:0]			mask_a,
 	input wire[WIDTH-1:0]			din_b,
 
 	output lssample_t[WIDTH-1:0]	dout_match	= 0
@@ -55,7 +56,7 @@ module DigitalComparator #(
 
 	always_ff @(posedge clk) begin
 
-		if(din_a == din_b)
+		if( (din_a & mask_a) == din_b)
 			dout_match	<= din_valid;
 
 		else
