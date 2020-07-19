@@ -62,7 +62,9 @@ module ClockSynthesis(
 	output wire		clk_400mhz,
 
 	//625 MHz clock for LVDS probe inputs
-	output wire		clk_625mhz
+	output wire		clk_625mhz,
+
+	output wire		locked
 );
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -84,6 +86,8 @@ module ClockSynthesis(
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// Primary clock PLL used for all system clocks
 
+	wire	main_locked;
+
 	ReconfigurablePLL #(
 		.OUTPUT_GATE(6'b111111),
 		.OUTPUT_BUF_GLOBAL(6'b111111),
@@ -102,10 +106,10 @@ module ClockSynthesis(
 
 		.clkout({clk_625mhz, clk_312mhz, clk_250mhz, clk_156mhz, clk_125mhz, clk_50mhz}),
 		.reset(1'b0),
-		.locked(),
+		.locked(main_locked),
 
 		.busy(),
-		.reconfig_clk(1'b0),
+		.reconfig_clk(k7_clk),
 		.reconfig_start(1'b0),
 		.reconfig_finish(1'b0),
 		.reconfig_cmd_done(),
@@ -123,6 +127,8 @@ module ClockSynthesis(
 	// Cascaded PLL used to produce the 400 MHz IDELAYCTRL clock and other even frequencies
 
 	wire[3:0] unused;
+
+	wire	even_locked;
 
 	ReconfigurablePLL #(
 		.OUTPUT_GATE(6'b000011),
@@ -142,10 +148,10 @@ module ClockSynthesis(
 
 		.clkout({unused, clk_200mhz, clk_400mhz}),
 		.reset(1'b0),
-		.locked(),
+		.locked(even_locked),
 
 		.busy(),
-		.reconfig_clk(1'b0),
+		.reconfig_clk(k7_clk),
 		.reconfig_start(1'b0),
 		.reconfig_finish(1'b0),
 		.reconfig_cmd_done(),
@@ -158,5 +164,10 @@ module ClockSynthesis(
 		.reconfig_output_div(8'b0),
 		.reconfig_output_phase(9'b0)
 	);
+
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// Status output
+
+	assign locked = main_locked && even_locked;
 
 endmodule

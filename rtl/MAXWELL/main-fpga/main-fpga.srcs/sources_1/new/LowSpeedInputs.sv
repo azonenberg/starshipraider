@@ -36,7 +36,13 @@
 	@author Andrew D. Zonenberg
 	@brief Low-speed inputs (1.25 Gsps)
  */
-module LowSpeedInputs(
+module LowSpeedInputs #(
+
+	//Bitmask of channels flipped on the PCB for layout.
+	//Keep this as is for hardware. Set to 0 for simplified simulation.
+	parameter CHANS_TO_INVERT = 92'hBE7_1010_E2AC_8848_337F_6F19
+
+)(
 
 	//Low speed (1/4 rate) and high speed (1/2 rate) sampling clocks
 	input wire				clk_312mhz,
@@ -139,7 +145,7 @@ module LowSpeedInputs(
 
 	lssample_t probe_in_parallel[91:0];
 
-	wire	iserdes_reset;
+	logic	iserdes_reset = 0;
 
 	for(genvar g=0; g<92; g++) begin
 
@@ -162,10 +168,10 @@ module LowSpeedInputs(
 			.SRVAL_Q4(0),
 			.IOBDELAY("BOTH")
 		) iserdes (
-			.Q1(probe_in_parallel[g][3]),	//swap bit ordering so MSB is leftmost
-			.Q2(probe_in_parallel[g][2]),
-			.Q3(probe_in_parallel[g][1]),
-			.Q4(probe_in_parallel[g][0]),
+			.Q1(probe_in_parallel[g][0]),
+			.Q2(probe_in_parallel[g][1]),
+			.Q3(probe_in_parallel[g][2]),
+			.Q4(probe_in_parallel[g][3]),
 			.Q5(),
 			.Q6(),
 			.Q7(),
@@ -194,11 +200,25 @@ module LowSpeedInputs(
 
 	end
 
+	logic[7:0]	count = 0;
+	logic		reset_done	= 0;
+
+	always_ff @(posedge clk_312mhz) begin
+		if(!reset_done) begin
+			count	<= count + 1;
+			if(count == 8'hff) begin
+				if(!iserdes_reset)
+					iserdes_reset	<= 1;
+				else begin
+					iserdes_reset	<= 0;
+					reset_done		<= 1;
+				end
+			end
+		end
+	end
+
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// Invert channels flipped on the PCB
-
-	//Bitmask of channels flipped on the PCB for layout
-	localparam CHANS_TO_INVERT = 92'hBE7_1010_E2AC_8848_337F_6F19;
 
 	always @(posedge clk_312mhz) begin
 		for(integer i=0; i<92; i++) begin

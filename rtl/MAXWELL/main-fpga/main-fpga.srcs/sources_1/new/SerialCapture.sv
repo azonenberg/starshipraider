@@ -38,61 +38,30 @@
 
 	Samples an incoming parallel data stream representing a deserialized input capture.
 
-	Latency: 2 clocks
+	Sampled output can only be asserted once per clock. Sampled_valid is one-hot indication of edge phase.
+
+	Latency: 1 clock
  */
 module SerialCapture #(
-	parameter SERDES_RATE	= 32		//Width of the output data stream
+	parameter SERDES_RATE	= 32			//Width of the output data stream
 )(
 	input wire						clk,
 
-	input wire						sample_on_rising,
-	input wire						sample_on_falling,
-
 	input wire lssample_t			data,
-	input wire lssample_t			clock,
-
-	input wire lssample_t			reset,
+	input wire lssample_t			clock_edges,
+	input wire lssample_t			reset_edges,
 
 	output logic[SERDES_RATE-1:0]	sampled			= 0,
-	output logic					sampled_valid	= 0
+	output lssample_t				sampled_valid	= 0
 );
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	// First pipeline stage: detect edges in the clock stream
-
-	lssample_t	s1_edge				= 0;
-
-	logic		s0_clock_old		= 0;
-	logic[4:0]	s0_clock_extended;
-	assign 		s0_clock_extended	= { s0_clock_old, clock };
-
-	lssample_t	s1_data				= 0;
-	lssample_t	s1_reset			= 0;
-
-	always_ff @(posedge clk) begin
-
-		//Save the last clock input
-		s0_clock_old	<= clock[0];
-
-		//Pipeline data/reset
-		s1_data			<= data;
-		s1_reset		<= reset;
-
-		//Look at each input for each sample cycle
-		for(integer i=3; i>=0; i--) begin
-			s1_edge[i]	<= 	(s0_clock_extended[i] && !s0_clock_extended[i+1] && sample_on_rising) ||
-							(!s0_clock_extended[i] && s0_clock_extended[i+1] && sample_on_falling);
-		end
-
-	end
-
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	// Second stage: process data if edges were found
+	// Process data if edges were found
 
 	localparam INDEX_BITS = $clog2(SERDES_RATE);
 
 	//Use a one-hot counter to reduce fan-in on the critical path
-	logic[SERDES_RATE-1:0]	count 		= {1'b1, {SERDES_RATE-1{1'b0}} };
+	logic[SERDES_RATE:0]	count 		= {1'b1, {SERDES_RATE{1'b0}} };
 
 	logic[SERDES_RATE-1:0]	work_buf	= 0;
 
@@ -104,21 +73,21 @@ module SerialCapture #(
 		for(integer i=3; i>=0; i--) begin
 
 			//Sample if we're on the right edge
-			if(s1_edge[i]) begin
-				work_buf	= { work_buf[SERDES_RATE-2:0], s1_data[i] };
-				count		= {1'b0, count[SERDES_RATE-1:1]};
+			if(clock_edges[i]) begin
+				work_buf			= { work_buf[SERDES_RATE-2:0], data[i] };
+				count				= {1'b0, count[SERDES_RATE:1]};
 			end
 
 			//If we've sampled all of the bits in the word, output a word
 			if(count[0]) begin
-				sampled			<= work_buf;
-				sampled_valid	<= 1;
-				count			= {1'b1, {SERDES_RATE-1{1'b0}} };
+				sampled				<= work_buf;
+				sampled_valid[i]	<= 1;
+				count				= {1'b1, {SERDES_RATE{1'b0}} };
 			end
 
 			//Synchronous reset
-			if(s1_reset[i])
-				count = {1'b1, {SERDES_RATE-1{1'b0}} };
+			if(reset_edges[i])
+				count 				= {1'b1, {SERDES_RATE{1'b0}} };
 
 		end
 
