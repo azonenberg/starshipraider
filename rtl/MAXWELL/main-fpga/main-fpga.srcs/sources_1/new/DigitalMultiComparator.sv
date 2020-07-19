@@ -34,44 +34,49 @@
 /**
 	@file
 	@author Andrew D. Zonenberg
-	@brief Crossbar for feeding input data to trigger blocks
+	@brief Compares two inputs together, applying a bitmask to the first.
 
-	Select values:
-		0...5b		Input signals
-		5c...7d		Undefined
-		7e 			All 0s
-		7f			All 1s
-
-	Latency: 1 clock
+	Each serial bit is tested for a match separately.
  */
-module InputCrossbar #(
-	parameter INPUT_COUNT	= 92,
-	parameter OUTPUT_COUNT	= 3
+module DigitalMultiComparator #(
+	parameter WIDTH = 1
 ) (
-	input wire									clk,
+	input wire						clk,
 
-	input sample_t								din,
-	input wire chnum_t[OUTPUT_COUNT-1:0]		selects,
+	input wire lssample_t			din_valid,
+	input lssample_t[WIDTH-1:0]		din_a,
+	input wire[WIDTH-1:0]			mask_a,
+	input wire[WIDTH-1:0]			din_b,
 
-	output lssample_t[OUTPUT_COUNT-1:0]			dout
+	output lssample_t				dout_match	= 0
 );
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	// Crossbar logic
+	// Matching logic
 
 	always_ff @(posedge clk) begin
 
-		for(integer i=0; i<OUTPUT_COUNT; i++) begin
+		dout_match	<= 0;
 
-			if(selects[i] == 7'h7f)
-				dout[i]	<= 4'hf;
-			else if(selects[i] == 7'h7e)
-				dout[i]	<= 4'h0;
-			else
-				dout[i]	<= din.lo[selects[i]];
+		for(integer i=0; i<4; i++) begin
+
+			//Only check if input clock edge is valid
+			if(din_valid[i]) begin
+
+				//Assume match
+				dout_match[i]	<= 1;
+
+				//Check each bit
+				for(integer j=0; j<WIDTH; j++) begin
+					if( (din_a[j][i] & mask_a[j]) != din_b[j])
+						dout_match[i]	<= 0;
+				end
+
+			end
 
 		end
 
 	end
 
 endmodule
+

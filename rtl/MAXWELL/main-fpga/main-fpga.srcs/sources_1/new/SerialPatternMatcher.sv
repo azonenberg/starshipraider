@@ -30,12 +30,12 @@
 ***********************************************************************************************************************/
 
 `include "InputState.svh"
-`include "SerialPatternMatcher.svh"
+`include "PatternMatcher.svh"
 
 /**
 	@file
 	@author Andrew D. Zonenberg
-	@brief Serial pattern matching engine
+	@brief Serial pattern matching engine (4 cycle latency)
  */
 module SerialPatternMatcher #(
 	parameter WIDTH	= 8
@@ -65,7 +65,7 @@ module SerialPatternMatcher #(
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// Detect clock/reset edges (1 cycle latency)
 
-	//Find rising clock edges
+	//Find clock edges
 	lssample_t		clock_edges;
 	EdgeDetector clock_edge_detector(
 		.clk(clk),
@@ -75,7 +75,7 @@ module SerialPatternMatcher #(
 		.edges(clock_edges)
 	);
 
-	//Find falling reset edges
+	//Find reset edges
 	lssample_t		rst_edges;
 	EdgeDetector rst_edge_detector(
 		.clk(clk),
@@ -112,7 +112,7 @@ module SerialPatternMatcher #(
 	);
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	// Match against external constant values
+	// Match against external constant values (1 cycle latency)
 
 	for(genvar i=0; i<4; i++) begin
 

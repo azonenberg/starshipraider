@@ -80,7 +80,7 @@ module TriggerSystem_sim();
 	);
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	// Test signal source
+	// Test signal source 1 : SPI
 
 	wire	sck;
 	wire	mosi;
@@ -170,10 +170,22 @@ module TriggerSystem_sim();
 
 	wire[91:0]	low_speed_raw;
 
+	//SPI bus
 	assign low_speed_raw[0] = cs_n;
 	assign low_speed_raw[1] = sck;
 	assign low_speed_raw[2] = mosi;
-	assign low_speed_raw[91:3] = 0;
+
+	//8-bit parallel bus
+	assign low_speed_raw[3] = tx_data[0];
+	assign low_speed_raw[4] = tx_data[1];
+	assign low_speed_raw[5] = tx_data[2];
+	assign low_speed_raw[6] = tx_data[3];
+	assign low_speed_raw[7] = tx_data[4];
+	assign low_speed_raw[8] = tx_data[5];
+	assign low_speed_raw[9] = tx_data[6];
+	assign low_speed_raw[10] = tx_data[7];
+
+	assign low_speed_raw[91:11] = 0;
 
 	wire[91:0]	low_speed_p;
 	wire[91:0]	low_speed_n;
@@ -209,7 +221,7 @@ module TriggerSystem_sim();
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// Trigger logic
 
-	`include "SerialPatternMatcher.svh"
+	`include "PatternMatcher.svh"
 
 	//Trigger pconfiguration
 	spmeconfig_t	pconfig;
@@ -237,5 +249,37 @@ module TriggerSystem_sim();
 		.pconfig(pconfig),
 		.match_found(match_found)
 	);
+
+	//Parallel config
+	ppmeconfig_t	rconfig;
+	assign rconfig.muxsel_clk			= 1;
+	assign rconfig.muxsel_data[0]		= 3;
+	assign rconfig.muxsel_data[1]		= 4;
+	assign rconfig.muxsel_data[2]		= 5;
+	assign rconfig.muxsel_data[3]		= 6;
+	assign rconfig.muxsel_data[4]		= 7;
+	assign rconfig.muxsel_data[5]		= 8;
+	assign rconfig.muxsel_data[6]		= 9;
+	assign rconfig.muxsel_data[7]		= 10;
+	assign rconfig.clock_match_rising 	= 1;
+	assign rconfig.clock_match_falling 	= 0;
+	assign rconfig.target_values[0]		= 32'h03;
+	assign rconfig.target_values[1]		= 32'h12;
+	assign rconfig.target_values[2]		= 32'h34;
+	assign rconfig.target_values[3]		= 32'h56;
+	assign rconfig.target_masks[0]		= 32'hff;
+	assign rconfig.target_masks[1]		= 32'hff;
+	assign rconfig.target_masks[2]		= 32'hff;
+	assign rconfig.target_masks[3]		= 32'hff;
+
+	lssample_t[3:0] parallel_match_found;
+
+	ParallelPatternMatcher ppme(
+		.clk(clk_312mhz),
+		.samples(samples),
+		.pconfig(rconfig),
+		.match_found(parallel_match_found)
+	);
+
 
 endmodule

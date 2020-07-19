@@ -86,12 +86,12 @@ module LowSpeedInputs #(
 	wire[91:0]	probe_in_delay;
 
 	//TODO: separate delay values for each pod based on final PCB trace lengths
-	parameter integer POD_DELAYS[11:0] =
+	localparam integer POD_DELAYS[11:0] =
 	{
 		25,
-		25,
-		25,
-		25,
+		26,
+		27,
+		28,
 		25,
 		25,
 		25,

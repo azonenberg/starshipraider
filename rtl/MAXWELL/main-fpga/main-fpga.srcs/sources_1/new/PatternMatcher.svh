@@ -1,5 +1,3 @@
-`default_nettype none
-`timescale 1ns/1ps
 /***********************************************************************************************************************
 *                                                                                                                      *
 * STARSHIPRAIDER v0.1                                                                                                  *
@@ -29,49 +27,46 @@
 *                                                                                                                      *
 ***********************************************************************************************************************/
 
-`include "InputState.svh"
+`ifndef PatternMatcher_svh
+`define PatternMatcher_svh
 
-/**
-	@file
-	@author Andrew D. Zonenberg
-	@brief Crossbar for feeding input data to trigger blocks
+typedef logic[31:0]	target_t;
 
-	Select values:
-		0...5b		Input signals
-		5c...7d		Undefined
-		7e 			All 0s
-		7f			All 1s
+//Configuration for a SPME
+typedef struct packed
+{
+	//Input selection
+	chnum_t			muxsel_clk;
+	chnum_t			muxsel_rst;
+	chnum_t			muxsel_data;
 
-	Latency: 1 clock
- */
-module InputCrossbar #(
-	parameter INPUT_COUNT	= 92,
-	parameter OUTPUT_COUNT	= 3
-) (
-	input wire									clk,
+	//Clock/reset polarity
+	logic 			clock_match_rising;
+	logic 			clock_match_falling;
+	logic 			reset_match_rising;
+	logic 			reset_match_falling;
 
-	input sample_t								din,
-	input wire chnum_t[OUTPUT_COUNT-1:0]		selects,
+	//Constant values to match against (only low WIDTH bits are used)
+	target_t[3:0]	target_values;
+	target_t[3:0]	target_masks;
 
-	output lssample_t[OUTPUT_COUNT-1:0]			dout
-);
+} spmeconfig_t;
 
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	// Crossbar logic
+//Configuration for a PPME
+typedef struct packed
+{
+	//Config bits: Input selection
+	//For now, max 8 bits
+	chnum_t			muxsel_clk;
+	chnum_t[7:0]	muxsel_data;
 
-	always_ff @(posedge clk) begin
+	//Config bits: Clock polarity
+	logic 			clock_match_rising;
+	logic 			clock_match_falling;
 
-		for(integer i=0; i<OUTPUT_COUNT; i++) begin
+	//Config bits: Constant values to match against (only low WIDTH bits are used)
+	target_t[3:0]	target_values;
+	target_t[3:0]	target_masks;
+} ppmeconfig_t;
 
-			if(selects[i] == 7'h7f)
-				dout[i]	<= 4'hf;
-			else if(selects[i] == 7'h7e)
-				dout[i]	<= 4'h0;
-			else
-				dout[i]	<= din.lo[selects[i]];
-
-		end
-
-	end
-
-endmodule
+`endif
