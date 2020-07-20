@@ -41,14 +41,14 @@
 module DigitalMultiComparator #(
 	parameter WIDTH = 1
 ) (
-	input wire						clk,
+	input wire							clk,
 
-	input wire lssample_t			din_valid,
-	input lssample_t[WIDTH-1:0]		din_a,
-	input wire[WIDTH-1:0]			mask_a,
-	input wire[WIDTH-1:0]			din_b,
+	input wire lssample_t				din_valid,
+	input wire lssample_t[WIDTH-1:0]	din_a,
+	input wire[WIDTH-1:0]				mask_a,
+	input wire[WIDTH-1:0]				din_b,
 
-	output lssample_t				dout_match	= 0
+	output lssample_t					dout_match	= 0
 );
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

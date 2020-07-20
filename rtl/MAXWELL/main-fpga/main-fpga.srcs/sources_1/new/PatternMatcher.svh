@@ -32,7 +32,7 @@
 
 typedef logic[31:0]	target_t;
 
-//Configuration for a SPME
+//Configuration for a SPME (281 bits)
 typedef struct packed
 {
 	//Input selection
@@ -52,7 +52,7 @@ typedef struct packed
 
 } spmeconfig_t;
 
-//Configuration for a PPME
+//Configuration for a PPME (321 bits)
 typedef struct packed
 {
 	//Config bits: Input selection

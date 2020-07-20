@@ -30,6 +30,7 @@
 ***********************************************************************************************************************/
 
 `include "InputState.svh"
+`include "PatternMatcher.svh"
 
 /**
 	@file
@@ -37,25 +38,28 @@
 	@brief Trigger engine
  */
 module TriggerSystem(
-	input wire			clk_312mhz,
+	input wire						clk_312mhz,
 
-	input wire			sync_clk_p,
-	input wire			sync_clk_n,
+	input wire						sync_clk_p,
+	input wire						sync_clk_n,
 
-	input wire			mcu_1588_pps,
+	input wire						mcu_1588_pps,
 
-	input wire			pps_in_p,
-	input wire			pps_in_n,
+	input wire						pps_in_p,
+	input wire						pps_in_n,
 
-	input wire			ext_trig_p,
-	input wire			ext_trig_n,
+	input wire						ext_trig_p,
+	input wire						ext_trig_n,
 
-	output wire			trig_out_p,
-	output wire			trig_out_n,
+	output wire						trig_out_p,
+	output wire						trig_out_n,
 
-	output logic		trig_out	= 0,
+	output logic					trig_out	= 0,
 
-	input wire sample_t	current_sample
+	input wire spmeconfig_t[7:0]	spme_configs,
+	input wire ppmeconfig_t[1:0]	ppme_configs,
+
+	input wire sample_t				current_sample
 );
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -115,8 +119,9 @@ module TriggerSystem(
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// Pipeline delay on the input to allow for propagation across the chip to the trigger blocks
 
-	sample_t	current_sample_ff;
-	sample_t	current_sample_ff2;
+	//Don't infer shift registers, we want separate DFFs to provide more flexibility for the placer
+	(* SHREG_EXTRACT = "no" *)	sample_t	current_sample_ff;
+	(* SHREG_EXTRACT = "no" *)	sample_t	current_sample_ff2;
 
 	always_ff @(posedge clk_312mhz) begin
 		current_sample_ff	<= current_sample;
@@ -124,72 +129,84 @@ module TriggerSystem(
 	end
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	// Trigger fabric
+	// Pattern matching engines
 
-	/*
-		SERIAL DATA ENGINES
-			4x 8 bit
-			4x 16 bit
-			4x 24 bit
-			4x 32 bit
+	lssample_t[3:0]		spme_match_found[7:0];
+	lssample_t[3:0]		ppme_match_found[1:0];
 
-			Output of each one feeds into 4x
-	 */
+	//SPMEs 3:0 - 8 bits wide
+	for(genvar g=0; g<4; g++) begin
 
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	// Deserialization blocks (2 cycle latency)
-
-	/*
-	localparam NUM_SERIAL8_BLOCKS	= 2;
-
-	chnum_t[NUM_SERIAL8_BLOCKS*3 - 1 : 0]	xbar_selects;
-
-	wire[7:0]	serdes_out[NUM_SERIAL8_BLOCKS-1:0];
-	wire		serdes_out_valid[NUM_SERIAL8_BLOCKS-1:0];
-
-	for(genvar g=0; g<NUM_SERIAL8_BLOCKS; g++) begin
-
-		//Input crossbar (3 lanes per block)
-		lssample_t[2:0]	xbar_out;
-
-		InputCrossbar #(
-			.OUTPUT_COUNT(3)
-		) xbar (
+		SerialPatternMatcher #(
+			.WIDTH(8)
+		) spme (
 			.clk(clk_312mhz),
-			.din(current_sample_ff2),
-			.selects(xbar_selects[g*3 +: 3]),
-			.dout(xbar_out)
-		);
-
-		SerialCapture #(
-			.SERDES_RATE(8)
-		) serdes (
-			.clk(clk_312mhz),
-			.sample_on_rising(1),
-			.sample_on_falling(1),
-			.data(xbar_out[1]),
-			.clock(xbar_out[0]),
-			.reset(xbar_out[2]),
-			.sampled(serdes_out[g]),
-			.sampled_valid(serdes_out_valid[g])
+			.samples(current_sample_ff2),
+			.pconfig(spme_configs[g]),
+			.match_found(spme_match_found[g])
 		);
 
 	end
 
-	//For now, use a VIO to control them
+	//SPMEs 5:4 - 16 bits wide
+	for(genvar g=4; g<6; g++) begin
+
+		SerialPatternMatcher #(
+			.WIDTH(16)
+		) spme (
+			.clk(clk_312mhz),
+			.samples(current_sample_ff2),
+			.pconfig(spme_configs[g]),
+			.match_found(spme_match_found[g])
+		);
+
+	end
+
+	//SPMEs 7:6 - 32 bits wide
+	for(genvar g=6; g<7; g++) begin
+
+		SerialPatternMatcher #(
+			.WIDTH(32)
+		) spme (
+			.clk(clk_312mhz),
+			.samples(current_sample_ff2),
+			.pconfig(spme_configs[g]),
+			.match_found(spme_match_found[g])
+		);
+
+	end
+
+	//PPMEs 1:0 - 8 bits wide
+	for(genvar g=0; g<2; g++) begin
+
+		ParallelPatternMatcher #(
+			.WIDTH(8)
+		) ppme (
+			.clk(clk_312mhz),
+			.samples(current_sample_ff2),
+			.pconfig(ppme_configs[g]),
+			.match_found(ppme_match_found[g])
+		);
+
+	end
+
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// Debug VIO for keeping *PME's from getting optimized out until we finish the trigger logic
+
 	vio_0 vio(
 		.clk(clk_312mhz),
-		.probe_in0(serdes_out[0]),
-		.probe_in1(serdes_out[1]),
-		.probe_in2(serdes_out_valid[0]),
-		.probe_in3(serdes_out_valid[1]),
-		.probe_out0(xbar_selects[0]),
-		.probe_out1(xbar_selects[1]),
-		.probe_out2(xbar_selects[2]),
-		.probe_out3(xbar_selects[3]),
-		.probe_out4(xbar_selects[4]),
-		.probe_out5(xbar_selects[5])
+
+		.probe_in0(spme_match_found[0]),
+		.probe_in1(spme_match_found[1]),
+		.probe_in2(spme_match_found[2]),
+		.probe_in3(spme_match_found[3]),
+		.probe_in4(spme_match_found[4]),
+		.probe_in5(spme_match_found[5]),
+		.probe_in6(spme_match_found[6]),
+		.probe_in7(spme_match_found[7]),
+
+		.probe_in8(ppme_match_found[0]),
+		.probe_in9(ppme_match_found[1])
 	);
-	*/
 
 endmodule

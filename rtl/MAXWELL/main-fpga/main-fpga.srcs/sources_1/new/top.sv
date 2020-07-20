@@ -29,6 +29,9 @@
 *                                                                                                                      *
 ***********************************************************************************************************************/
 
+`include "InputState.svh"
+`include "PatternMatcher.svh"
+
 /**
 	@file
 	@author Andrew D. Zonenberg
@@ -173,6 +176,24 @@ module top(
 	);
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// SPI logic (configures everything else on request from the MCU)
+
+	spmeconfig_t[7:0]	spme_configs;
+	ppmeconfig_t[1:0]	ppme_configs;
+
+	SPIRegisterInterface spi_iface(
+		.clk_312mhz(clk_312mhz),
+
+		.mcu_spi_cs_n(mcu_spi_cs_n),
+		.mcu_spi_sck(mcu_spi_sck),
+		.mcu_spi_mosi(mcu_spi_mosi),
+		.mcu_spi_miso(mcu_spi_miso),
+
+		.spme_configs(spme_configs),
+		.ppme_configs(ppme_configs)
+	);
+
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// Ethernet stuff
 
 	EthernetSubsystem network(
@@ -296,8 +317,6 @@ module top(
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// Low-speed probe inputs
 
-	`include "InputState.svh"
-
 	sample_t current_sample;
 
 	LowSpeedInputs low_in(
@@ -318,12 +337,14 @@ module top(
 	assign current_sample.hi = 0;
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	// Sample compression engine
+	// Sample compression TODO
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// Trigger system
 
 	TriggerSystem trig(
+
+		//Clocking
 		.clk_312mhz(clk_312mhz),
 
 		.sync_clk_p(sync_clk_p),
@@ -334,13 +355,19 @@ module top(
 		.pps_in_p(pps_in_p),
 		.pps_in_n(pps_in_n),
 
+		//Trigger sync
 		.ext_trig_p(ext_trig_p),
 		.ext_trig_n(ext_trig_n),
 
 		.trig_out_p(trig_out_p),
 		.trig_out_n(trig_out_n),
 
-		.current_sample(current_sample)
+		//Input data
+		.current_sample(current_sample),
+
+		//Configuration registers
+		.spme_configs(spme_configs),
+		.ppme_configs(ppme_configs)
 	);
 
 endmodule
