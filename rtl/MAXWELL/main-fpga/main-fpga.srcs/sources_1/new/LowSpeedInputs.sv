@@ -220,12 +220,14 @@ module LowSpeedInputs #(
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// Invert channels flipped on the PCB
 
+	lssample_t[91:0]	current_sample;
+
 	always @(posedge clk_312mhz) begin
 		for(integer i=0; i<92; i++) begin
 			if(CHANS_TO_INVERT[i])
-				samples[i]	<= ~probe_in_parallel[i];
+				current_sample[i]	<= ~probe_in_parallel[i];
 			else
-				samples[i]	<= probe_in_parallel[i];
+				current_sample[i]	<= probe_in_parallel[i];
 		end
 	end
 
@@ -233,6 +235,20 @@ module LowSpeedInputs #(
 	// TODO: more swizzling of channels so numbers make sense left to right? or is that taken care of now?
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	// RLE compression engine
+	// Pipeline delay on the input to allow for propagation across the chip to the trigger blocks
+
+	//Don't infer shift registers, we want separate DFFs to provide more flexibility for the placer
+	(* SHREG_EXTRACT = "no" *)	sample_t	current_sample_ff;
+	(* SHREG_EXTRACT = "no" *)	sample_t	current_sample_ff2;
+
+	always_ff @(posedge clk_312mhz) begin
+		current_sample_ff	<= current_sample;
+		current_sample_ff2	<= current_sample_ff;
+	end
+
+	assign samples = current_sample_ff2;
+
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// RLE compression engine here?
 
 endmodule

@@ -1,0 +1,21 @@
+[options]
+mode prove
+depth 50
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal SPIRegisterInterface_formal.sv
+read -formal SPIHostInterface.sv
+read -formal SPIRegisterInterface.sv
+read -formal SPIDeviceInterface.sv
+read -formal ThreeStageSynchronizer.sv
+prep -top SPIRegisterInterface_formal
+
+[files]
+SPIRegisterInterface_formal.sv
+../sources_1/new/SPIRegisterInterface.sv
+../../../../antikernel-ipcores/interface/spi/SPIHostInterface.sv
+../../../../antikernel-ipcores/interface/spi/SPIDeviceInterface.sv
+../../../../antikernel-ipcores/clock/crossing/ThreeStageSynchronizer.sv

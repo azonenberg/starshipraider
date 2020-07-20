@@ -1,3 +1,94 @@
+set_max_delay -from [get_cells [list network/mac/mac/sync_link_speed/sync_ack/sync/dout0_reg \
+          network/mac/mac/sync_link_speed/sync_en/sync/dout0_reg \
+          network/mac/rgmii_bridge/sync_link_speed/sync_ack/sync/dout0_reg \
+          network/mac/rgmii_bridge/sync_link_speed/sync_en/sync/dout0_reg \
+          network/stack/mac_sync/sync_ack/sync/dout0_reg \
+          network/stack/mac_sync/sync_en/sync/dout0_reg \
+          network/stack/rx_cdc/rx_cdc_fifo/sync_head/sync_ack/sync/dout0_reg \
+          network/stack/rx_cdc/rx_cdc_fifo/sync_head/sync_en/sync/dout0_reg \
+          network/stack/rx_cdc/rx_cdc_fifo/sync_tail/sync_ack/sync/dout0_reg \
+          network/stack/rx_cdc/rx_cdc_fifo/sync_tail/sync_en/sync/dout0_reg \
+          network/stack/sync_link_up/dout0_reg \
+          network/stack/tx_arbiter/arp_header_fifo/sync_head/sync_ack/sync/dout0_reg \
+          network/stack/tx_arbiter/arp_header_fifo/sync_head/sync_en/sync/dout0_reg \
+          network/stack/tx_arbiter/arp_header_fifo/sync_tail/sync_ack/sync/dout0_reg \
+          network/stack/tx_arbiter/arp_header_fifo/sync_tail/sync_en/sync/dout0_reg \
+          network/stack/tx_arbiter/arp_payload_fifo/sync_head/sync_ack/sync/dout0_reg \
+          network/stack/tx_arbiter/arp_payload_fifo/sync_head/sync_en/sync/dout0_reg \
+          network/stack/tx_arbiter/arp_payload_fifo/sync_tail/sync_ack/sync/dout0_reg \
+          network/stack/tx_arbiter/arp_payload_fifo/sync_tail/sync_en/sync/dout0_reg \
+          network/stack/tx_arbiter/ipv4_header_fifo/sync_head/sync_ack/sync/dout0_reg \
+          network/stack/tx_arbiter/ipv4_header_fifo/sync_head/sync_en/sync/dout0_reg \
+          network/stack/tx_arbiter/ipv4_header_fifo/sync_tail/sync_ack/sync/dout0_reg \
+          network/stack/tx_arbiter/ipv4_header_fifo/sync_tail/sync_en/sync/dout0_reg \
+          network/stack/tx_arbiter/ipv4_payload_fifo/sync_head/sync_ack/sync/dout0_reg \
+          network/stack/tx_arbiter/ipv4_payload_fifo/sync_head/sync_en/sync/dout0_reg \
+          network/stack/tx_arbiter/ipv4_payload_fifo/sync_tail/sync_ack/sync/dout0_reg \
+          network/stack/tx_arbiter/ipv4_payload_fifo/sync_tail/sync_en/sync/dout0_reg \
+          network/stack/tx_buf/header_fifo/sync_head/sync_ack/sync/dout0_reg \
+          network/stack/tx_buf/header_fifo/sync_head/sync_en/sync/dout0_reg \
+          network/stack/tx_buf/header_fifo/sync_tail/sync_ack/sync/dout0_reg \
+          network/stack/tx_buf/header_fifo/sync_tail/sync_en/sync/dout0_reg \
+          network/stack/tx_buf/payload_fifo/sync_head/sync_ack/sync/dout0_reg \
+          network/stack/tx_buf/payload_fifo/sync_head/sync_en/sync/dout0_reg \
+          network/stack/tx_buf/payload_fifo/sync_tail/sync_ack/sync/dout0_reg \
+          network/stack/tx_buf/payload_fifo/sync_tail/sync_en/sync/dout0_reg \
+          network/uart_bridge/rx_fifo/sync_head/sync_ack/sync/dout0_reg \
+          network/uart_bridge/rx_fifo/sync_head/sync_en/sync/dout0_reg \
+          network/uart_bridge/rx_fifo/sync_tail/sync_ack/sync/dout0_reg \
+          network/uart_bridge/rx_fifo/sync_tail/sync_en/sync/dout0_reg \
+          network/uart_bridge/sync_flush/sync/dout0_reg \
+          network/uart_bridge/tx_fifo/fifo/sync_rd_ptr/sync_ack/sync/dout0_reg \
+          network/uart_bridge/tx_fifo/fifo/sync_rd_ptr/sync_en/sync/dout0_reg \
+          network/uart_bridge/tx_fifo/fifo/sync_wr_ptr/sync_ack/sync/dout0_reg \
+          network/uart_bridge/tx_fifo/fifo/sync_wr_ptr/sync_en/sync/dout0_reg]] -to [get_cells [list network/mac/mac/sync_link_speed/sync_ack/sync/dout1_reg \
+          network/mac/mac/sync_link_speed/sync_en/sync/dout1_reg \
+          network/mac/rgmii_bridge/sync_link_speed/sync_ack/sync/dout1_reg \
+          network/mac/rgmii_bridge/sync_link_speed/sync_en/sync/dout1_reg \
+          network/stack/mac_sync/sync_ack/sync/dout1_reg \
+          network/stack/mac_sync/sync_en/sync/dout1_reg \
+          network/stack/rx_cdc/rx_cdc_fifo/sync_head/sync_ack/sync/dout1_reg \
+          network/stack/rx_cdc/rx_cdc_fifo/sync_head/sync_en/sync/dout1_reg \
+          network/stack/rx_cdc/rx_cdc_fifo/sync_tail/sync_ack/sync/dout1_reg \
+          network/stack/rx_cdc/rx_cdc_fifo/sync_tail/sync_en/sync/dout1_reg \
+          network/stack/sync_link_up/dout1_reg \
+          network/stack/tx_arbiter/arp_header_fifo/sync_head/sync_ack/sync/dout1_reg \
+          network/stack/tx_arbiter/arp_header_fifo/sync_head/sync_en/sync/dout1_reg \
+          network/stack/tx_arbiter/arp_header_fifo/sync_tail/sync_ack/sync/dout1_reg \
+          network/stack/tx_arbiter/arp_header_fifo/sync_tail/sync_en/sync/dout1_reg \
+          network/stack/tx_arbiter/arp_payload_fifo/sync_head/sync_ack/sync/dout1_reg \
+          network/stack/tx_arbiter/arp_payload_fifo/sync_head/sync_en/sync/dout1_reg \
+          network/stack/tx_arbiter/arp_payload_fifo/sync_tail/sync_ack/sync/dout1_reg \
+          network/stack/tx_arbiter/arp_payload_fifo/sync_tail/sync_en/sync/dout1_reg \
+          network/stack/tx_arbiter/ipv4_header_fifo/sync_head/sync_ack/sync/dout1_reg \
+          network/stack/tx_arbiter/ipv4_header_fifo/sync_head/sync_en/sync/dout1_reg \
+          network/stack/tx_arbiter/ipv4_header_fifo/sync_tail/sync_ack/sync/dout1_reg \
+          network/stack/tx_arbiter/ipv4_header_fifo/sync_tail/sync_en/sync/dout1_reg \
+          network/stack/tx_arbiter/ipv4_payload_fifo/sync_head/sync_ack/sync/dout1_reg \
+          network/stack/tx_arbiter/ipv4_payload_fifo/sync_head/sync_en/sync/dout1_reg \
+          network/stack/tx_arbiter/ipv4_payload_fifo/sync_tail/sync_ack/sync/dout1_reg \
+          network/stack/tx_arbiter/ipv4_payload_fifo/sync_tail/sync_en/sync/dout1_reg \
+          network/stack/tx_buf/header_fifo/sync_head/sync_ack/sync/dout1_reg \
+          network/stack/tx_buf/header_fifo/sync_head/sync_en/sync/dout1_reg \
+          network/stack/tx_buf/header_fifo/sync_tail/sync_ack/sync/dout1_reg \
+          network/stack/tx_buf/header_fifo/sync_tail/sync_en/sync/dout1_reg \
+          network/stack/tx_buf/payload_fifo/sync_head/sync_ack/sync/dout1_reg \
+          network/stack/tx_buf/payload_fifo/sync_head/sync_en/sync/dout1_reg \
+          network/stack/tx_buf/payload_fifo/sync_tail/sync_ack/sync/dout1_reg \
+          network/stack/tx_buf/payload_fifo/sync_tail/sync_en/sync/dout1_reg \
+          network/uart_bridge/rx_fifo/sync_head/sync_ack/sync/dout1_reg \
+          network/uart_bridge/rx_fifo/sync_head/sync_en/sync/dout1_reg \
+          network/uart_bridge/rx_fifo/sync_tail/sync_ack/sync/dout1_reg \
+          network/uart_bridge/rx_fifo/sync_tail/sync_en/sync/dout1_reg \
+          network/uart_bridge/sync_flush/sync/dout1_reg \
+          network/uart_bridge/tx_fifo/fifo/sync_rd_ptr/sync_ack/sync/dout1_reg \
+          network/uart_bridge/tx_fifo/fifo/sync_rd_ptr/sync_en/sync/dout1_reg \
+          network/uart_bridge/tx_fifo/fifo/sync_wr_ptr/sync_ack/sync/dout1_reg \
+          network/uart_bridge/tx_fifo/fifo/sync_wr_ptr/sync_en/sync/dout1_reg \
+          network/uart_bridge/uart/sync_rx/dout1_reg \
+          spi_iface/iface/sync_cs_n/dout1_reg \
+          spi_iface/iface/sync_mosi/dout1_reg \
+          spi_iface/iface/sync_sck/dout1_reg]] 3.200
 set_property PACKAGE_PIN AB21 [get_ports {lsprobe_in_p[0]}]
 set_property PACKAGE_PIN AE22 [get_ports {lsprobe_in_p[1]}]
 set_property PACKAGE_PIN AF24 [get_ports {lsprobe_in_p[2]}]
@@ -214,6 +305,16 @@ create_generated_clock -name clk_200mhz -source [get_pins clocks/even_pll/mmcm/C
 set_max_delay -datapath_only -from [get_cells -hierarchical *reg_a_ff*] -to [get_cells -hierarchical *reg_b_reg*] 3.200
 
 set_max_delay -from [get_cells -hierarchical *dout0_reg*] -to [get_cells -hierarchical *dout1_reg*] 3.200
+
+create_pblock pblock_network
+add_cells_to_pblock [get_pblocks pblock_network] [get_cells -quiet [list network]]
+resize_pblock [get_pblocks pblock_network] -add {CLOCKREGION_X0Y2:CLOCKREGION_X0Y4}
+create_pblock pblock_trigger
+add_cells_to_pblock [get_pblocks pblock_trigger] [get_cells -quiet [list trig]]
+resize_pblock [get_pblocks pblock_trigger] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y1}
+create_pblock pblock_ddr
+add_cells_to_pblock [get_pblocks pblock_ddr] [get_cells -quiet [list ddr_controller]]
+resize_pblock [get_pblocks pblock_ddr] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y2}
 set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
 set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
 set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]

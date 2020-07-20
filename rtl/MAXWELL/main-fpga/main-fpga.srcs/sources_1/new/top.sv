@@ -181,6 +181,10 @@ module top(
 	spmeconfig_t[7:0]	spme_configs;
 	ppmeconfig_t[1:0]	ppme_configs;
 
+	wire 				reg_wr_en;
+	wire[15:0]			reg_wr_addr;
+	wire[31:0]			reg_wr_data;
+
 	SPIRegisterInterface spi_iface(
 		.clk_312mhz(clk_312mhz),
 
@@ -188,6 +192,18 @@ module top(
 		.mcu_spi_sck(mcu_spi_sck),
 		.mcu_spi_mosi(mcu_spi_mosi),
 		.mcu_spi_miso(mcu_spi_miso),
+
+		.reg_wr_en(reg_wr_en),
+		.reg_wr_addr(reg_wr_addr),
+		.reg_wr_data(reg_wr_data)
+	);
+
+	ControlRegisters regs (
+		.clk_312mhz(clk_312mhz),
+
+		.reg_wr_en(reg_wr_en),
+		.reg_wr_addr(reg_wr_addr),
+		.reg_wr_data(reg_wr_data),
 
 		.spme_configs(spme_configs),
 		.ppme_configs(ppme_configs)

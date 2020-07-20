@@ -29,172 +29,196 @@
 *                                                                                                                      *
 ***********************************************************************************************************************/
 
-`include "InputState.svh"
-`include "PatternMatcher.svh"
-
 /**
 	@file
 	@author Andrew D. Zonenberg
-	@brief Trigger engine
+	@brief Formal testbench for SPIRegisterInterface
  */
-module TriggerSystem(
-	input wire						clk_312mhz,
+module SPIRegisterInterface_formal(
+	input wire			clk,
 
-	input wire						sync_clk_p,
-	input wire						sync_clk_n,
-
-	input wire						mcu_1588_pps,
-
-	input wire						pps_in_p,
-	input wire						pps_in_n,
-
-	input wire						ext_trig_p,
-	input wire						ext_trig_n,
-
-	output wire						trig_out_p,
-	output wire						trig_out_n,
-
-	output logic					trig_out	= 0,
-
-	input wire spmeconfig_t[7:0]	spme_configs,
-	input wire ppmeconfig_t[1:0]	ppme_configs,
-
-	input wire sample_t				current_sample
+	input wire			wr_en,
+	input wire[15:0]	wr_addr,
+	input wire[31:0]	wr_data
 );
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	// I/O buffers
+	// Generate SPI transactions when a write happens
 
-	wire	sync_clk;
+	typedef enum logic[3:0]
+	{
+		TX_STATE_IDLE		= 0,
+		TX_STATE_ADDR_0		= 1,
+		TX_STATE_ADDR_1		= 2,
+		TX_STATE_DATA_0		= 3,
+		TX_STATE_DATA_1		= 4,
+		TX_STATE_DATA_2		= 5,
+		TX_STATE_DATA_3		= 6,
+		TX_STATE_DONE		= 7,
+		TX_STATE_WAIT		= 8
+	} txstate_t;
+	txstate_t tx_state = TX_STATE_IDLE;
 
-	DifferentialInputBuffer #(
-		.WIDTH(1),
-		.IOSTANDARD("LVDS_25"),
-		.ODT(0),
-		.OPTIMIZE("SPEED")
-	) ibuf_sync_clk (
-		.pad_in_p(sync_clk_p),
-		.pad_in_n(sync_clk_n),
-		.fabric_out(sync_clk)
-	);
+	logic		cs_n		= 1;
 
-	//inverted for routability
-	wire	pps_in_inv;
-	wire	pps_in = !pps_in_inv;
+	logic		shift_en	= 0;
+	wire		shift_done;
+	logic[7:0]	tx_data		= 0;
 
-	DifferentialInputBuffer #(
-		.WIDTH(1),
-		.IOSTANDARD("LVDS_25"),
-		.ODT(0),
-		.OPTIMIZE("SPEED")
-	) ibuf_pps_in (
-		.pad_in_p(pps_in_p),
-		.pad_in_n(pps_in_n),
-		.fabric_out(pps_in_inv)
-	);
+	logic[15:0]	wr_addr_saved	= 0;
+	logic[31:0]	wr_data_saved	= 0;
 
-	wire	ext_trig;
+	//Input constraints
+	always_comb begin
 
-	DifferentialInputBuffer #(
-		.WIDTH(1),
-		.IOSTANDARD("LVDS_25"),
-		.ODT(0),
-		.OPTIMIZE("SPEED")
-	) ibuf_ext_trig (
-		.pad_in_p(ext_trig_p),
-		.pad_in_n(ext_trig_n),
-		.fabric_out(ext_trig)
-	);
+		//Cannot start a new transaction if one is in progress
+		if(tx_state != TX_STATE_IDLE)
+			assume(!wr_en);
 
-	DifferentialOutputBuffer #(
-		.WIDTH(1),
-		.IOSTANDARD("LVDS_25"),
-		.SLEW("FAST")
-	) obuf_trig_out (
-		.pad_out_p(trig_out_p),
-		.pad_out_n(trig_out_n),
-		.fabric_in(trig_out)
+		//Don't change data when a transaction is active
+		if(!wr_en) begin
+			assume(wr_addr == wr_addr_saved);
+			assume(wr_data == wr_data_saved);
+		end
+
+	end
+
+	always_ff @(posedge clk) begin
+
+		shift_en	<= 0;
+
+		case(tx_state)
+
+			//Wait for stuff to happen
+			TX_STATE_IDLE: begin
+
+				if(wr_en) begin
+					cs_n		<= 0;
+					tx_state	<= TX_STATE_ADDR_0;
+
+					wr_data_saved	<= wr_data;
+					wr_addr_saved	<= wr_addr;
+				end
+
+			end	//end TX_STATE_IDLE
+
+			//Send the address
+			TX_STATE_ADDR_0: begin
+				shift_en		<= 1;
+				tx_data			<= wr_addr[15:8];
+				tx_state		<= TX_STATE_ADDR_1;
+			end	//end TX_STATE_ADDR_0
+
+			TX_STATE_ADDR_1: begin
+				if(shift_done) begin
+					shift_en	<= 1;
+					tx_data		<= wr_addr[7:0];
+					tx_state	<= TX_STATE_DATA_0;
+				end
+			end	//end TX_STATE_ADDR_0
+
+			//Send the data
+			TX_STATE_DATA_0: begin
+				if(shift_done) begin
+					shift_en	<= 1;
+					tx_data		<= wr_addr[31:24];
+					tx_state	<= TX_STATE_DATA_1;
+				end
+			end	//end TX_STATE_DATA_0
+
+			TX_STATE_DATA_1: begin
+				if(shift_done) begin
+					shift_en	<= 1;
+					tx_data		<= wr_addr[23:16];
+					tx_state	<= TX_STATE_DATA_2;
+				end
+			end	//end TX_STATE_DATA_1
+
+			TX_STATE_DATA_2: begin
+				if(shift_done) begin
+					shift_en	<= 1;
+					tx_data		<= wr_addr[15:8];
+					tx_state	<= TX_STATE_DATA_3;
+				end
+			end	//end TX_STATE_DATA_2
+
+			TX_STATE_DATA_3: begin
+				if(shift_done) begin
+					shift_en	<= 1;
+					tx_data		<= wr_addr[7:0];
+					tx_state	<= TX_STATE_DONE;
+				end
+			end	//end TX_STATE_DATA_3
+
+			TX_STATE_DONE: begin
+				if(shift_done) begin
+					cs_n		<= 1;
+					tx_state	<= TX_STATE_WAIT;
+				end
+			end	//end TX_STATE_DONE
+
+			//Wait for the slave to finish processing the transaction
+			TX_STATE_WAIT: begin
+				if(reg_wr_en)
+					tx_state	<= TX_STATE_IDLE;
+			end	//end TX_STATE_WAIT
+
+		endcase
+
+	end
+
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// SPI host controller for translating external native memory interface to SPI transactions
+
+	wire	sck;
+	wire	mosi;
+	wire	miso;
+
+	SPIHostInterface host(
+		.clk(clk),
+		.clkdiv(4),
+
+		.spi_sck(sck),
+		.spi_mosi(mosi),
+		.spi_miso(miso),
+
+		.shift_en(shift_en),
+		.shift_done(shift_done),
+		.tx_data(tx_data),
+		.rx_data()
 	);
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	// Pattern matching engines
+	// The actual DUT
 
-	lssample_t[3:0]		spme_match_found[7:0];
-	lssample_t[3:0]		ppme_match_found[1:0];
+	wire		reg_wr_en;
+	wire[15:0]	reg_wr_addr;
+	wire[31:0]	reg_wr_data;
 
-	//SPMEs 3:0 - 8 bits wide
-	for(genvar g=0; g<4; g++) begin
+	SPIRegisterInterface dut(
+		.clk_312mhz(clk),
 
-		SerialPatternMatcher #(
-			.WIDTH(8)
-		) spme (
-			.clk(clk_312mhz),
-			.samples(current_sample),
-			.pconfig(spme_configs[g]),
-			.match_found(spme_match_found[g])
-		);
+		.mcu_spi_cs_n(cs_n),
+		.mcu_spi_sck(sck),
+		.mcu_spi_mosi(mosi),
+		.mcu_spi_miso(miso),
 
-	end
-
-	//SPMEs 5:4 - 16 bits wide
-	for(genvar g=4; g<6; g++) begin
-
-		SerialPatternMatcher #(
-			.WIDTH(16)
-		) spme (
-			.clk(clk_312mhz),
-			.samples(current_sample),
-			.pconfig(spme_configs[g]),
-			.match_found(spme_match_found[g])
-		);
-
-	end
-
-	//SPMEs 7:6 - 32 bits wide
-	for(genvar g=6; g<7; g++) begin
-
-		SerialPatternMatcher #(
-			.WIDTH(32)
-		) spme (
-			.clk(clk_312mhz),
-			.samples(current_sample),
-			.pconfig(spme_configs[g]),
-			.match_found(spme_match_found[g])
-		);
-
-	end
-
-	//PPMEs 1:0 - 8 bits wide
-	for(genvar g=0; g<2; g++) begin
-
-		ParallelPatternMatcher #(
-			.WIDTH(8)
-		) ppme (
-			.clk(clk_312mhz),
-			.samples(current_sample),
-			.pconfig(ppme_configs[g]),
-			.match_found(ppme_match_found[g])
-		);
-
-	end
+		.reg_wr_en(reg_wr_en),
+		.reg_wr_addr(reg_wr_addr),
+		.reg_wr_data(reg_wr_data)
+	);
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	// Debug VIO for keeping *PME's from getting optimized out until we finish the trigger logic
+	// Verification logic
 
-	vio_0 vio(
-		.clk(clk_312mhz),
+	always_ff @(posedge clk) begin
 
-		.probe_in0(spme_match_found[0]),
-		.probe_in1(spme_match_found[1]),
-		.probe_in2(spme_match_found[2]),
-		.probe_in3(spme_match_found[3]),
-		.probe_in4(spme_match_found[4]),
-		.probe_in5(spme_match_found[5]),
-		.probe_in6(spme_match_found[6]),
-		.probe_in7(spme_match_found[7]),
+		//When we get a write, make sure it's correct
+		if(reg_wr_en) begin
+			assert(wr_addr == reg_wr_addr);
+			assert(wr_data == reg_wr_data);
+		end
 
-		.probe_in8(ppme_match_found[0]),
-		.probe_in9(ppme_match_found[1])
-	);
+	end
 
 endmodule
