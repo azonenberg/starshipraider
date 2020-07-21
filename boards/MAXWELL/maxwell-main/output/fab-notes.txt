@@ -2,9 +2,9 @@ Part number:		NAXWELL v0.1
 
 General fabrication notes
 
-	* Boards are be individually routed.
-	* Board material is Rogers RO4350B
-	* Blue solder mask on both sides of board. All vias to be tented on back side.
+	* Boards are be on 1-up panels with rails and fiducials.
+	* Board material is Rogers RO4350B except for Isola FR408HR between layers 4 and 5.
+	* Blue solder mask on both sides of board. All vias to be filled, plated, and tented.
 	* White LPI text (Taiyo PSR-4100WL or equivalent) on both sides of board.
 	* Pad finish is immersion silver.
 	* Finished board thickness is 1.6 mm.
