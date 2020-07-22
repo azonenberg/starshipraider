@@ -1,6 +1,6 @@
 [options]
 mode prove
-depth 50
+depth 70
 
 [engines]
 smtbmc z3

@@ -45,7 +45,7 @@ module SPIRegisterInterface_formal(
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// Generate SPI transactions when a write happens
 
-	typedef enum logic[3:0]
+	enum logic[3:0]
 	{
 		TX_STATE_IDLE		= 0,
 		TX_STATE_ADDR_0		= 1,
@@ -56,20 +56,34 @@ module SPIRegisterInterface_formal(
 		TX_STATE_DATA_3		= 6,
 		TX_STATE_DONE		= 7,
 		TX_STATE_WAIT		= 8
-	} txstate_t;
-	txstate_t tx_state = TX_STATE_IDLE;
+	} tx_state;
 
-	logic		cs_n		= 1;
+	logic		cs_n;
+
+	initial begin
+		cs_n	 = 1;
+		tx_state = TX_STATE_IDLE;
+	end
 
 	logic		shift_en	= 0;
 	wire		shift_done;
 	logic[7:0]	tx_data		= 0;
 
-	logic[15:0]	wr_addr_saved	= 0;
-	logic[31:0]	wr_data_saved	= 0;
+	wire[2:0] 	dut_spi_state;
 
-	//Input constraints
-	always_comb begin
+	wire		host_active;
+	wire		dut_spi_busy;
+
+	always_ff @(posedge clk) begin
+
+		shift_en	<= 0;
+
+		//Must always be in a valid state
+		assert(tx_state <= TX_STATE_WAIT);
+
+		//Cannot send a byte if the DUT is still proecssing the last
+		if(shift_en)
+			assert(!$past(dut_spi_busy));
 
 		//Cannot start a new transaction if one is in progress
 		if(tx_state != TX_STATE_IDLE)
@@ -77,39 +91,46 @@ module SPIRegisterInterface_formal(
 
 		//Don't change data when a transaction is active
 		if(!wr_en) begin
-			assume(wr_addr == wr_addr_saved);
-			assume(wr_data == wr_data_saved);
+			assume(wr_addr == $past(wr_addr));
+			assume(wr_data == $past(wr_data));
 		end
-
-	end
-
-	always_ff @(posedge clk) begin
-
-		shift_en	<= 0;
 
 		case(tx_state)
 
 			//Wait for stuff to happen
 			TX_STATE_IDLE: begin
 
+				//DUT should be in the idle state as no bytes have come through yet
+				assert(dut_spi_state == 0);
+
+				//CS should be high before starting anything
+				assert(cs_n == 1);
+
+				//Host shouldn't be sending anything
+				assert(!host_active);
+
 				if(wr_en) begin
 					cs_n		<= 0;
 					tx_state	<= TX_STATE_ADDR_0;
-
-					wr_data_saved	<= wr_data;
-					wr_addr_saved	<= wr_addr;
 				end
 
 			end	//end TX_STATE_IDLE
 
 			//Send the address
 			TX_STATE_ADDR_0: begin
+
+				//DUT should be in the idle state as no bytes have come through yet
+				assert(dut_spi_state == 0);
+
 				shift_en		<= 1;
 				tx_data			<= wr_addr[15:8];
 				tx_state		<= TX_STATE_ADDR_1;
 			end	//end TX_STATE_ADDR_0
 
 			TX_STATE_ADDR_1: begin
+
+				assert(dut_spi_state <= 1);
+
 				if(shift_done) begin
 					shift_en	<= 1;
 					tx_data		<= wr_addr[7:0];
@@ -119,46 +140,67 @@ module SPIRegisterInterface_formal(
 
 			//Send the data
 			TX_STATE_DATA_0: begin
+
+				assert(dut_spi_state <= 2);
+
 				if(shift_done) begin
+
 					shift_en	<= 1;
-					tx_data		<= wr_addr[31:24];
+					tx_data		<= wr_data[31:24];
 					tx_state	<= TX_STATE_DATA_1;
 				end
 			end	//end TX_STATE_DATA_0
 
 			TX_STATE_DATA_1: begin
+
+				assert(dut_spi_state <= 3);
+
 				if(shift_done) begin
 					shift_en	<= 1;
-					tx_data		<= wr_addr[23:16];
+					tx_data		<= wr_data[23:16];
 					tx_state	<= TX_STATE_DATA_2;
 				end
 			end	//end TX_STATE_DATA_1
 
 			TX_STATE_DATA_2: begin
+
+				assert(dut_spi_state <= 4);
+
 				if(shift_done) begin
 					shift_en	<= 1;
-					tx_data		<= wr_addr[15:8];
+					tx_data		<= wr_data[15:8];
 					tx_state	<= TX_STATE_DATA_3;
 				end
 			end	//end TX_STATE_DATA_2
 
 			TX_STATE_DATA_3: begin
+
+				assert(dut_spi_state <= 5);
+
 				if(shift_done) begin
 					shift_en	<= 1;
-					tx_data		<= wr_addr[7:0];
+					tx_data		<= wr_data[7:0];
 					tx_state	<= TX_STATE_DONE;
 				end
 			end	//end TX_STATE_DATA_3
 
 			TX_STATE_DONE: begin
+
+				assert(dut_spi_state <= 6);
+
 				if(shift_done) begin
 					cs_n		<= 1;
 					tx_state	<= TX_STATE_WAIT;
 				end
+
 			end	//end TX_STATE_DONE
 
 			//Wait for the slave to finish processing the transaction
 			TX_STATE_WAIT: begin
+
+				//only way to get here is from TX_STATE_DONE
+				assert(cs_n == 1);
+
 				if(reg_wr_en)
 					tx_state	<= TX_STATE_IDLE;
 			end	//end TX_STATE_WAIT
@@ -185,7 +227,9 @@ module SPIRegisterInterface_formal(
 		.shift_en(shift_en),
 		.shift_done(shift_done),
 		.tx_data(tx_data),
-		.rx_data()
+		.rx_data(),
+
+		.active(host_active)
 	);
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -194,6 +238,8 @@ module SPIRegisterInterface_formal(
 	wire		reg_wr_en;
 	wire[15:0]	reg_wr_addr;
 	wire[31:0]	reg_wr_data;
+
+	wire[7:0]	dut_rx_data;
 
 	SPIRegisterInterface dut(
 		.clk_312mhz(clk),
@@ -205,7 +251,11 @@ module SPIRegisterInterface_formal(
 
 		.reg_wr_en(reg_wr_en),
 		.reg_wr_addr(reg_wr_addr),
-		.reg_wr_data(reg_wr_data)
+		.reg_wr_data(reg_wr_data),
+
+		.spi_state(dut_spi_state),
+		.spi_busy(dut_spi_busy),
+		.rx_data(dut_rx_data)
 	);
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -213,10 +263,47 @@ module SPIRegisterInterface_formal(
 
 	always_ff @(posedge clk) begin
 
-		//When we get a write, make sure it's correct
 		if(reg_wr_en) begin
+
+			//Must have sent the last data word
+			assert( (tx_state == TX_STATE_WAIT) || (tx_state == TX_STATE_DONE) );
+
+			//When we get a write, make sure it's correct
 			assert(wr_addr == reg_wr_addr);
 			assert(wr_data == reg_wr_data);
+
+			//At the end of each read, verify it matches what we sent
+			if(shift_done) begin
+
+				//Make sure we get what we wanted
+				/*case(tx_state)
+					TX_STATE_ADDR_1:	assert(tx_data == reg_wr_addr[15:8]);
+					TX_STATE_DATA_0:	assert(tx_data == reg_wr_addr[7:0]);
+					TX_STATE_DATA_1:	assert(tx_data == reg_wr_data[31:24]);
+					TX_STATE_DATA_2:	assert(tx_data == reg_wr_data[23:16]);
+					TX_STATE_DATA_3:	assert(tx_data == reg_wr_data[15:8]);
+					TX_STATE_DONE:		assert(tx_data == reg_wr_data[7:0]);
+				endcase
+				*/
+
+				//Make sure the data received so far is correct
+				case(tx_state)
+
+					TX_STATE_DATA_0: begin
+						assert(reg_wr_addr[15:8] == wr_addr[15:8]);
+					end
+
+					TX_STATE_DATA_1: begin
+						assert(reg_wr_addr == wr_addr);
+					end
+
+				endcase
+
+				//Verify SPI link data was received correctly
+				assert(dut_rx_data == tx_data);
+
+			end
+
 		end
 
 	end

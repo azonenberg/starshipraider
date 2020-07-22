@@ -51,6 +51,12 @@ module SPIRegisterInterface(
 	output logic				reg_wr_en			= 0,
 	output logic[15:0]			reg_wr_addr			= 0,
 	output logic[31:0]			reg_wr_data			= 0
+
+	`ifdef FORMAL
+	, output logic[2:0] 		spi_state = 0
+	, output wire				spi_busy
+	, output wire[7:0]			rx_data
+	`endif
 );
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// SPI link layer
@@ -77,12 +83,22 @@ module SPIRegisterInterface(
 		.tx_data_valid(spi_tx_data_valid),
 		.rx_data(spi_rx_data),
 		.rx_data_valid(spi_rx_data_valid)
+
+		`ifdef FORMAL
+		, .busy(spi_busy)
+		`endif
 	);
+
+	`ifdef FORMAL
+	assign rx_data = spi_rx_data;
+	`endif
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// Register interface layer
 
+	`ifndef FORMAL
 	logic[2:0]	spi_state			= 0;
+	`endif
 
 	always_ff @(posedge clk_312mhz) begin
 

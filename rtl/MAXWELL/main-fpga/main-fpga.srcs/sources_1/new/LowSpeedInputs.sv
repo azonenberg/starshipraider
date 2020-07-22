@@ -85,21 +85,21 @@ module LowSpeedInputs #(
 
 	wire[91:0]	probe_in_delay;
 
-	//TODO: separate delay values for each pod based on final PCB trace lengths
+	//Delays (in ps) for each pod
 	localparam integer POD_DELAYS[11:0] =
 	{
-		25,
-		26,
-		27,
-		28,
-		25,
-		25,
-		25,
-		25,
-		25,
-		25,
-		25,
-		25
+		300,
+		356,
+		543,
+		674,
+		758,
+		711,
+		601,
+		512,
+		365,
+		258,
+		118,
+		0
 	};
 
 	for(genvar g=0; g<12; g++) begin
