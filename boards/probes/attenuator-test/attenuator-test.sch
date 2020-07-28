@@ -1,0 +1,112 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:Conn_Coaxial J2
+U 1 1 5EAC10CB
+P 6400 2500
+F 0 "J2" H 6500 2475 50  0000 L CNN
+F 1 "Conn_Coaxial" H 6500 2384 50  0000 L CNN
+F 2 "azonenberg_pcb:CONN_SMA_EDGE_AMPHENOL_901_10511_3" H 6400 2500 50  0001 C CNN
+F 3 "" H 6400 2500 50  0001 C CNN
+	1    6400 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_Coaxial J1
+U 1 1 5EAC16CE
+P 3750 2500
+F 0 "J1" H 3703 2738 50  0000 C CNN
+F 1 "Conn_Coaxial" H 3703 2647 50  0000 C CNN
+F 2 "azonenberg_pcb:CONN_SMA_EDGE_AMPHENOL_901_10511_3" H 3750 2500 50  0001 C CNN
+F 3 "" H 3750 2500 50  0001 C CNN
+	1    3750 2500
+	-1   0    0    -1  
+$EndComp
+Text Label 4050 2700 0    50   ~ 0
+GND
+Text Label 4050 2500 0    50   ~ 0
+SIGNAL
+$Comp
+L device:R R1
+U 1 1 5F20581A
+P 4600 2500
+F 0 "R1" V 4393 2500 50  0000 C CNN
+F 1 "50" V 4484 2500 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK_FLIPCHIP" V 4530 2500 50  0001 C CNN
+F 3 "" H 4600 2500 50  0001 C CNN
+	1    4600 2500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3900 2500 4450 2500
+$Comp
+L device:R R2
+U 1 1 5F205C5D
+P 4900 2500
+F 0 "R2" V 4693 2500 50  0000 C CNN
+F 1 "75" V 4784 2500 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK_FLIPCHIP" V 4830 2500 50  0001 C CNN
+F 3 "" H 4900 2500 50  0001 C CNN
+	1    4900 2500
+	0    1    1    0   
+$EndComp
+$Comp
+L device:R R3
+U 1 1 5F205EF6
+P 5200 2500
+F 0 "R3" V 4993 2500 50  0000 C CNN
+F 1 "75" V 5084 2500 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK_FLIPCHIP" V 5130 2500 50  0001 C CNN
+F 3 "" H 5200 2500 50  0001 C CNN
+	1    5200 2500
+	0    1    1    0   
+$EndComp
+$Comp
+L device:R R4
+U 1 1 5F2061D8
+P 5500 2500
+F 0 "R4" V 5293 2500 50  0000 C CNN
+F 1 "75" V 5384 2500 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK_FLIPCHIP" V 5430 2500 50  0001 C CNN
+F 3 "" H 5500 2500 50  0001 C CNN
+	1    5500 2500
+	0    1    1    0   
+$EndComp
+$Comp
+L device:R R5
+U 1 1 5F20697E
+P 5800 2500
+F 0 "R5" V 5593 2500 50  0000 C CNN
+F 1 "75" V 5684 2500 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK_FLIPCHIP" V 5730 2500 50  0001 C CNN
+F 3 "" H 5800 2500 50  0001 C CNN
+	1    5800 2500
+	0    1    1    0   
+$EndComp
+$Comp
+L device:R R6
+U 1 1 5F206D7B
+P 6100 2500
+F 0 "R6" V 5893 2500 50  0000 C CNN
+F 1 "100" V 5984 2500 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK_FLIPCHIP" V 6030 2500 50  0001 C CNN
+F 3 "" H 6100 2500 50  0001 C CNN
+	1    6100 2500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6400 2700 3750 2700
+$EndSCHEMATC
