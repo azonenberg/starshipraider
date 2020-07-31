@@ -22,10 +22,7 @@
 \begin{document}
 
 \title{AKL-PT1 2 GHz Passive Probe Operator Manual}
-\author{Antikernel Labs\\
-%https://www.antikernel.net/ \\
-%sales@antikernel.net
-}
+\author{Antikernel Labs}
 \date{\today}
 
 \maketitle
@@ -42,13 +39,13 @@ This document is the user manual for the Antikernel Labs AKL-PT1 2 GHz passive t
 
 \section{Overview}
 
-%\subsection{Manufacturer}
-%Antikernel Labs \\
-%(PO box here) \\
-%https://www.antikernel.net/ \\
-%sales@antikernel.net \\
-
-%TODO: actually set up content on website and email server!
+\subsection{Manufacturer}
+Antikernel Labs \\
+PO Box 4665 \\
+10355 NE Valley Rd \\
+Rollingbay, WA 98061-0665 \\
+\url{https://www.antikernel.net/} \\
+sales@antikernel.net \\
 
 \subsection{Warranty}
 
@@ -75,12 +72,12 @@ The most up-to-date design files for this probe may be found on GitHub under the
 \item SolveSpace enclosure model
 \end{itemize}
 
-The current location of design files as of this writing is: \\ https://www.github.com/azonenberg/starshipraider/
+The current location of design files as of this writing is: \url{https://www.github.com/azonenberg/starshipraider/}
 
 \subsection{Sponsors}
 
 Development and prototyping of this probe was made possibly by support from Symbiotic EDA
-(https://www.symbioticeda.com/)
+(\url{https://www.symbioticeda.com/})
 
 \includegraphics[height=2cm]{symbiotic-logo.png}
 
@@ -92,22 +89,21 @@ follow the warnings and specification limits in this document.
 
 \begin{itemize}
 \item Only personnel familiar with the safe use and operation of electronic test equipment should use this probe.
-\item Do not connect the ground terminal of this probe to any voltage other than earth ground. Ensure the ground terminal
-makes contact with the device under test before the signal terminal.
+\item Do not connect the ground terminal of this probe to any voltage other than earth ground.
 \item Do not exceed operating limits in the specifications section of this document.
 \item Do not over-tighten the SMA connector. Antikernel Labs recommends using a properly calibrated torque wrench to
 torque the connection to 5 lbf-in.
 \item The plastic enclosure of this probe is \emph{not} rated for insulation against hazardous voltages, and conductive
-elements are exposed at the tip. Do not use this probe on any circuits which may contain voltages exceeding 30VDC /
-30Vrms, or the touch-safe voltage limit in your organization's standard operating procedures if this is lower. Do not
-operate in damp or wet conditions.
+elements are exposed at the tip. Do not use this probe on any circuits which may contain voltages exceeding 30Vrms, or
+the touch-safe voltage limit in your organization's standard operating procedures if this is lower. Do not operate in
+damp or wet conditions.
 \item Do not operate this probe in a flammable or explosive atmosphere.
 \item The printed circuit board in this probe is plated with silver and is not intended for use in corrosive environments,
 especially those containing significant levels of sulfur compounds. Operation of this probe in a corrosive environment
 voids the warranty.
 \item  The SMA connector center terminal and tip/ground sockets contain beryllium copper (BeCu) contacts. While exposure to
 beryllium is expected to be insignificant during ordinary use of this product, hazardous dust could be generated if the
-contact material was ground or abraded.
+contact material is ground or abraded.
 \end{itemize}
 
 CA PROP 65 WARNING: This product can expose you to beryllium, which is known to the State of California to cause cancer.
@@ -145,44 +141,45 @@ remains relatively constant across the entire operating range, rather than great
 \section{Understanding Probe Effects}
 
 Transmission line probes have significantly higher DC loading than conventional passive probes, and may interact badly
-with pull-up or pull-down resistors. Consider AC coupling, using an industry standard SMA inner DC block between the
-probe and coaxial cable, in these applications.
+with pull-up or pull-down resistors. Consider AC coupling (using an industry standard SMA inner DC block between the
+probe and coaxial cable) or use of a different probe for these applications.
 
 Some power is reflected from the resistor and re-joins the original signal with a small phase shift due to the
 electrical length of the probe needle. The total path length of the unterminated stub including the tip, socket, and
 transmission line from the socket to the resistor is approximately 9 mm. This will produce a null in the system
-frequency response at around 8 GHz. (This is an inherent limitation of all oscilloscope probes, but conventional
-passive probes typically cannot reach high enough frequencies for stub length effects to become significant.)
+frequency response at around 8 GHz, which is far enough outside the operating band of the probe that it should not
+present a problem.
 
 Long, thin ground connections (such as the Z-ground or flexible ground lead) have higher inductance than short, fat
-ground connections. This inductance may be visible as ringing on fast rising edges. Always use the shortest, widest
-ground possible in a given application for best frequency response.
+ground connections. Always use the shortest, widest ground possible in a given application for best frequency response.
+The tip-mounted ground socket gives significantly better performance than the top ground socket.
 
 \section{Accessories}
 
 \subsection{Tips / Grounds}
 
-The AKL-PT1 probe will accept standard test equipment probe tips and ground accessories with 0.51 - 0.81 mm diameter
-(0.020 - 0.032 inch). Use of accessories with larger or smaller diameters may damage the socket and void your warranty.
+The AKL-PT1 probe sockets will accept standard test equipment probe tips and ground accessories with 0.51 - 0.81 mm
+diameter (0.020 - 0.032 inch), as well as 22 AWG solid wire for solder-in applications.
 
-The ground terminal is 8 mm above and 12 mm to the rear of the signal connection. The AKL-PT1 probe is designed to
-accept ground blades, leafs, and similar accessories compatible with these dimensions.
+Use of accessories with larger or smaller diameters may damage the socket and void your warranty.
 
-Antikernel Labs recommends use of PMK Tetris \textregistered series replacement probe tips and ground accessories.
+The top ground terminal is 8 mm above and 12 mm to the rear of the signal connection, and the tip-mounted ground
+terminal is 2.5mm below the signal connection.
+
+Antikernel Labs recommends use of PMK Tetris\textregistered series replacement probe tips and ground accessories.
 These may be ordered through Antikernel Labs or any PMK distributor.
 
 Standard PMK accessories supplied with the AKL-PT1 are:
 \begin{itemize}
-\item 890-800-000 solid tip (1 piece supplied standard, replacement is set of 5)
-\item 890-400-800 Z-ground (1 piece supplied standard, replacement is set of 5)
-\item 018-291-103 narrow ground blade
+\item 890-800-000 solid tip (2 piece supplied standard, replacement P/N is set of 5)
+\item 890-400-800 Z-ground (1 piece supplied standard, replacement P/N is set of 5)
+\item 018-291-105 ground leaf
 \item 890-400-808 7cm flexible ground lead
 \end{itemize}
 
-The AKL-PT1 has been tested for compatibility with the PMK 893-250-00T 2-footed probe positioner, however this is not
-included in the standard accessory kit.
+The PMK 893-250-00T 2-footed probe positioner is included with the pro edition probe.
 
-Antikernel Labs believes the AKL-PT1 is compatible with PMK's full range of Tetris \textregistered tips and ground
+Antikernel Labs believes the AKL-PT1 is compatible with PMK's full range of Tetris\textregistered tips and ground
 accessories, however testing has not been conducted with all possible accessories and Antikernel Labs assumes no
 liability for incompatibility with any accessories not listed in this document.
 
@@ -192,7 +189,7 @@ The AKL-PT1 should be connected to the host instrument via a $50 \Omega$ coaxial
 recommends use of Mini-Circuits FL086-24SM+ or similar low-loss, flexible cabling.
 
 The probe-side connector is a brass SMA (Samtec SMA-J-P-H-ST-EM1). For best results, this connection should be torqued
-to 5 in-lbf (0.565 Nm). Over-tightening may damage the connector.
+to 5 in-lbf (0.57 Nm). Over-tightening may damage the connector.
 
 \pagebreak
 \section{Electrical Specifications}
@@ -220,9 +217,9 @@ $T_{amin}$ & Minimum temperature & 0 & $ \degree C$ \\
 \thinhline
 $T_{amax}$ & Maximum temperature & 95 & $ \degree C$ \\
 \thinhline
-$I_{max}$ & Maximum current through probe & 22 & $ mA \\
+$I_{max}$ & Maximum current through probe & 22 & $ mA $ \\
 \thinhline
-$V_{max}$ & Maximum operating voltage (thermally limited) & 10 & $ Vrms \\
+$V_{max}$ & Maximum operating voltage & 10 & $ Vrms $ \\
 \thickhline
 \end{tabularx}
 
@@ -255,55 +252,88 @@ $TCR$ & Temperature coefficient of resistance & & & $\pm 25$ & ppm / \degree C \
 
 \subsection{AC Characteristics}
 
-Data in this section is subject to change based on characterization of the final PCB revision and assumes the DUT has
-$50 \Omega$ impedance.
+Data in this section is based on characterization in a $50 \Omega$ environment, using the highest performance (tip)
+ground, with cable and fixture effects de-embedded, unless otherwise stated.
 
 \begin{tabularx}{16cm}{lXrrrr}
 \thickhline
 \textbf{Parameter} & \textbf{Description} & \textbf{Min} & \textbf{Typ} & \textbf{Max} & \textbf{Units} \\
 \thickhline
-$Z_{in1}$ & Input impedance (1 GHz) & & 30 & & $\Omega$ \\
+$Z_{in1}$ & Input impedance (1 GHz) & & 35 & & $\Omega$ \\
 \thinhline
-$Z_{in2}$ & Input impedance (2 GHz) & & 75 & & $\Omega$ \\
+$Z_{in2}$ & Input impedance (2 GHz) & & 80 & & $\Omega$ \\
 \thinhline
-$C_{in}$ & Equivalent input capacitance to ground &  & TBD &  & pF \\
+$C_{in}$ & Equivalent shunt capacitance to ground &  & 1.4 &  & pF \\
 \thinhline
-$G$ & AC gain from DC - 2 GHz & -21.5 & -20.5 & 19.5 & dB \\
+$G$ & AC gain from DC - 2 GHz & -23 & -20.5 & -20 & dB \\
 \thinhline
-$BW_{0.5}$ & Bandwidth (-20.50 $\pm 0.5$ dB) &  & 0.91 & & GHz \\
+$BW_{0.5}$ & $\pm 0.5$ dB bandwidth using tip ground &  & 0.91 & & GHz \\
 \thinhline
-$BW_{1}$ & Bandwidth (-20.50 $\pm 1$ dB) &  & 1.98 &  & GHz \\
+$BW_{3}$ & -3 dB bandwidth using tip ground & 2 & 2.27 &  & GHz \\
 \thinhline
-$BW_{3}$ & Bandwidth (-23.5 dB) & 2 & 2.19 &  & GHz \\
+$BW_{flex}$ & -3 dB bandwidth using flex ground &  & 0.56 &  & GHz \\
 \thinhline
-$Rise_{90}$ & Rise time (10-90 \%) &  & 161 & 175 & ps \\
+$BW_{leaf}$ & -3 dB bandwidth using leaf ground &  & 1.46 &  & GHz \\
 \thinhline
-$Rise_{80}$ & Rise time (20-80 \%) &  & 107 & 115 & ps \\
+$BW_{z}$ & -3 dB bandwidth using Z-ground &  & 0.80 &  & GHz \\
+\thinhline
+$Rise_{90}$ & Rise time (10-90 \%) &  & 178 &  & ps \\
+\thinhline
+$Rise_{80}$ & Rise time (20-80 \%) &  & 122 &  & ps \\
 \thickhline
 \end{tabularx}
 
 \pagebreak
-\subsection{Performance Graphs}
+\section{Performance Graphs}
+
+\subsection{Insertion Loss}
+
+Measured across a $50 \Omega$ line.
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=15cm]{typical-s21.png}
-\caption{Typical $S_{21}$ (probing across terminated $50 \Omega$ line) }
-\label{typical-s21}
+\includegraphics[width=14cm]{typical-s21.png}
+\caption{Typical $S_{21}$ using tip ground (red), leaf ground (blue), Z-ground (pink), flex ground (cyan)}
 \end{figure}
 
+\subsection{Group Delay}
+
 \begin{figure}[h]
 \centering
-\includegraphics[width=15cm]{typical-groupdelay.png}
+\includegraphics[width=14cm]{typical-groupdelay.png}
 \caption{Typical Group Delay Flatness}
 \label{typical-groupdelay}
 \end{figure}
+\FloatBarrier
 
-\begin{figure}[h]
+\subsection{Input Impedance}
+
+\begin{figure}[h!]
 \centering
-\includegraphics[width=15cm]{typical-zin.png}
+\includegraphics[width=14cm]{typical-zin.png}
 \caption{Typical $Z_{in}$}
 \label{typical-zin}
 \end{figure}
+
+\FloatBarrier
+
+\pagebreak
+\section{Performance Data}
+
+If you requested full characterization at the time of your order, test measurements are available at
+\url{https://www.github.com/azonenberg/starshipraider-caldata/tree/master/handheld-resistive-probe/} under the
+directory for your probe's serial number.
+
+The following S-parameter data files are provided:
+\begin{itemize}
+\item cable.s2p - the provided cable
+\item flexground.s2p - probe across a $50 \Omega$ load using the flex ground
+\item leafground.s2p - probe across a $50 \Omega$ load using the leaf ground
+\item tipground.s2p - probe across a $50 \Omega$ load using the tip ground
+\item zground.s2p - probe across a $50 \Omega$ load using the Z-ground
+\item zin.s2p - probe across an unterminated line for input loading measurements
+\end{itemize}
+
+For all measurements, port 1 is connected to the DUT side of the probe and port 2 is connected to the instrument side.
 
 \end{document}
