@@ -1,4 +1,4 @@
-386150629393118
+426410194437118
 azonenberg_pcb
 ATC_AT_0603
 
@@ -27,6 +27,13 @@ BGA_5_1p4x1p1_0.5MM
 0
 5
 5
+azonenberg_pcb
+BGA_6_1.3x1.0_0.4MM
+
+
+0
+6
+6
 azonenberg_pcb
 BGA_6_1.5x0.9_0.5MM_TI_YZP
 
@@ -126,6 +133,13 @@ BGA_176_15x15_DEPOP7x7_0.4MM
 176
 176
 azonenberg_pcb
+BGA_196_15x15_FULLARRAY_1MM_FTGB196
+
+
+0
+196
+196
+azonenberg_pcb
 BGA_216_13x13_DEPOP3x3_0.8MM
 
 
@@ -175,12 +189,26 @@ BGA_484_22x22_FULLARRAY_1MM
 484
 484
 azonenberg_pcb
+BGA_676_27x27_FULLARRAY_1MM_FFG676
+
+
+0
+676
+676
+azonenberg_pcb
 BGA_1156_35x35_FULLARRAY_1MM
 
 
 0
 1156
 1156
+azonenberg_pcb
+BNX003-11
+
+
+0
+6
+4
 azonenberg_pcb
 BOURNS_0612_4TERM
 
@@ -252,12 +280,26 @@ CONN_FCI_USB_73725-0110BLF
 9
 5
 azonenberg_pcb
+CONN_FFC_0.5MM_1x6_H125773CT-ND
+
+
+0
+8
+7
+azonenberg_pcb
 CONN_FFC_0.5MM_1x28_MOLEX_0524352871
 
 
 0
 30
 29
+azonenberg_pcb
+CONN_FFC_0.5MM_1x40_H125755CT-ND
+
+
+0
+42
+41
 azonenberg_pcb
 CONN_HDMI_SAMTEC_HDMR_19_01_S_SM
 
@@ -497,6 +539,20 @@ CONN_MOLEX_HDMI_WM10135CT-ND
 23
 20
 azonenberg_pcb
+CONN_MOLEX_KK_22-23-2041
+
+
+0
+4
+4
+azonenberg_pcb
+CONN_MOLEX_MINIFITJR_39-30-1080
+
+
+0
+8
+8
+azonenberg_pcb
 CONN_MW_12V_VERTICAL
 
 
@@ -545,6 +601,20 @@ CONN_PCIE_X16_FCI_10018783_10203TLF
 0
 164
 164
+azonenberg_pcb
+CONN_QSFP+_TE_2110819-1
+
+
+0
+38
+38
+azonenberg_pcb
+CONN_QSFP_CAGE_TE_2110487-1
+
+
+0
+12
+1
 azonenberg_pcb
 CONN_RJ11_ASSMANN_A-2014-1-4-N-T-R
 
@@ -606,7 +676,7 @@ CONN_SFF8087_MOLEX_75783-0140
 
 
 0
-47
+44
 37
 azonenberg_pcb
 CONN_SFP+_AMPHENOL_UE76_A10_2000T
@@ -621,6 +691,13 @@ CONN_SFP_CAGE_FCI_10126909-101LF
 
 0
 42
+1
+azonenberg_pcb
+CONN_SFP_CAGE_TE_2007194-1
+
+
+0
+20
 1
 azonenberg_pcb
 CONN_SMA_EDGE_AMPHENOL_901_10511_3
@@ -643,6 +720,13 @@ CONN_SMA_PTH
 0
 5
 2
+azonenberg_pcb
+CONN_SODIMM_DDR3_TE_2013289-1
+
+
+0
+206
+205
 azonenberg_pcb
 CONN_STEWART_SS60000_009
 
@@ -678,6 +762,13 @@ CONN_USB_B_CUI_UJ2-BH-1-TH
 0
 6
 5
+azonenberg_pcb
+CRYSTAL_1.6x1.0MM
+
+
+0
+2
+2
 azonenberg_pcb
 CRYSTAL_2.5x2.0
 
@@ -725,8 +816,15 @@ DFN_4_0.65MM_1x1MM_TI_DQN
 
 
 0
+9
 5
-5
+azonenberg_pcb
+DFN_6_0.5MM_1.6x1.0MM
+
+
+0
+6
+6
 azonenberg_pcb
 DFN_6_0.5MM_1.85x1.85MM
 
@@ -782,6 +880,13 @@ DFN_8_0.5MM_2x3MM
 
 0
 9
+9
+azonenberg_pcb
+DFN_8_0.5MM_2x3MM_TALL
+
+
+0
+13
 9
 azonenberg_pcb
 DFN_8_0.5MM_3x3MM
@@ -1015,6 +1120,13 @@ EIA_1206_CAP_NOSILK
 2
 2
 azonenberg_pcb
+EIA_1206_FUSE_NOSILK
+
+
+0
+2
+2
+azonenberg_pcb
 EIA_1210_CAP_NOSILK
 
 
@@ -1029,12 +1141,33 @@ EIA_1812_CAP_NOSILK
 2
 2
 azonenberg_pcb
-FIDUCIAL_1MM
+EIA_2220_INDUCTOR
+
+
+0
+2
+2
+azonenberg_pcb
+ESD7008
+
+
+0
+21
+19
+azonenberg_pcb
+FAN_DELTA_EFB0412VHD-SP05
 
 
 0
 1
 0
+azonenberg_pcb
+FIDUCIAL_1MM
+
+
+0
+1
+1
 azonenberg_pcb
 FILTER_MINICIRCUITS_LFCN
 
@@ -1098,6 +1231,13 @@ JUMPER_2.54MM_2POS
 0
 2
 2
+azonenberg_pcb
+LCD_MATRIX_MOP-TFT480116-38G-BLH-TPC
+
+
+0
+1
+0
 azonenberg_pcb
 LED_INDICATOR_2.54MM_5MM_RG_RA
 
@@ -1190,6 +1330,27 @@ MFF2
 16
 9
 azonenberg_pcb
+MODULE_DCDC_DOSA_EIGHTHBRICK
+
+
+0
+8
+8
+azonenberg_pcb
+MODULE_DCDC_RECOM_RPM
+
+
+0
+25
+25
+azonenberg_pcb
+MODULE_DCDC_TDK_IAF
+
+
+0
+10
+10
+azonenberg_pcb
 MODULE_MURATA_OKL-T3-W12
 
 
@@ -1266,6 +1427,13 @@ OSCILLATOR_LVDS_7.0x5.0
 0
 6
 6
+azonenberg_pcb
+OSC_ABRACON_AOCJYR
+
+
+0
+4
+4
 azonenberg_pcb
 OSC_CRYSTEK_CCSO-914X3
 
@@ -1637,6 +1805,13 @@ SOT363
 0
 6
 6
+azonenberg_pcb
+SPLITTER_SUSUMU_PS1608G
+
+
+0
+4
+4
 azonenberg_pcb
 SPLITTER_SUSUMU_PS3216G
 

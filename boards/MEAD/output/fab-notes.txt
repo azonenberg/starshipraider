@@ -1,0 +1,49 @@
+Part number:        MEAD v0.2
+
+General fabrication notes
+
+    * Board material is Isola FR408HR
+    * Blue solder mask on both sides of board.
+    * All vias to be tented.
+    * White LPI legend on both sides of board.
+    * Pad finish is ENIG.
+    * Finished board thickness is 1.6 mm.
+    * Place UL mark and date code in the area marked on the "F. Fab" gerber layer.
+
+Impedances
+
+    Control to within 10%.
+
+    Layer 1 (ref to layer 2):
+    Layer 4 (ref to layer 3):
+        0.225mm / 0.125mm differential (no soldermask): 100 ohm
+        0.34mm single ended:                            50 ohm
+
+Suggested stackup
+    1   35 μm (1 oz) copper         Signal
+        170 μm Isola FR408HR
+    2   35 μm (1 oz) copper         Ground
+        Isola FR408HR core(s) and prepregs as needed for 1.6mm finished PCB thickness.
+    3   35 μm (1 oz) copper         Power/ground
+        170 μm Isola FR408HR
+    4   35 μm (1 oz) copper         Signal
+
+File naming
+    la-pod.d356             Electrical test netlist
+    la-pod-Edge_Cuts.gbr    Board outline
+    la-pod.drl              Through-board plated holes
+    la-pod-F_SilkS.gbr      Front silkscreen
+    la-pod-F.Fab.gbr        Shows requested location of date code and UL marking
+    la-pod-F_Mask.gbr       Front solder mask
+    la-pod-F_Paste.gbr      Front solder paste
+    la-pod-F_Cu.gbr         Layer 1 copper
+    la-pod-In1_Cu.gbr       Layer 2 copper
+    la-pod-In2_Cu.gbr       Layer 3 copper
+    la-pod-B_Cu.gbr         Layer 4 copper
+    la-pod-B_Mask.gbr       Back solder mask
+    la-pod-B_SilkS.gbr      Back silkscreen
+    la-pod-B_Paste.gbr      Back solder paste
+    la-pod-bom.csv          Bill of materials for assembly
+    la-pod-top-pos.csv      Placement file for front side of board
+    la-pod-bottom-pos.csv   Placement file for back side of board
+

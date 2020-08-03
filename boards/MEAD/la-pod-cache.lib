@@ -347,6 +347,20 @@ X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
+# passive-azonenberg_FERRITE_SMALL
+#
+DEF passive-azonenberg_FERRITE_SMALL FB 0 40 Y Y 1 F N
+F0 "FB" 0 100 60 H V C CNN
+F1 "passive-azonenberg_FERRITE_SMALL" 0 -100 60 H V C CNN
+F2 "" 0 0 60 H V C CNN
+F3 "" 0 0 60 H V C CNN
+DRAW
+S -150 50 150 -50 0 1 0 N
+X ~ 1 300 0 150 L 50 50 1 1 w
+X ~ 2 -300 0 150 R 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
 # passive-azonenberg_INDUCTOR_PWROUT
 #
 DEF passive-azonenberg_INDUCTOR_PWROUT L 0 40 N N 1 F N

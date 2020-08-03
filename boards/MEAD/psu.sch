@@ -6,15 +6,15 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 4 6
 Title "Logic Analyzer Pod"
-Date "2020-06-05"
-Rev "0.1"
+Date "2020-08-02"
+Rev "0.2"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
 Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text HLabel 1550 1300 0    50   Input ~ 0
+Text HLabel 900  1300 0    50   Input ~ 0
 12V0
 Text HLabel 2100 1600 0    50   Input ~ 0
 GND
@@ -52,7 +52,6 @@ Wire Wire Line
 	2100 1600 2250 1600
 Wire Wire Line
 	2250 1300 2750 1300
-Connection ~ 2250 1300
 Wire Wire Line
 	2250 1600 2750 1600
 Wire Wire Line
@@ -288,8 +287,6 @@ Wire Wire Line
 Connection ~ 2750 3300
 Wire Wire Line
 	2750 3300 3200 3300
-Text Label 2100 3000 2    50   ~ 0
-12V0_FUSED
 Text Label 2100 3300 2    50   ~ 0
 GND
 Wire Wire Line
@@ -591,18 +588,16 @@ Connection ~ 5950 5050
 $Comp
 L device:Fuse F1
 U 1 1 5ED4C408
-P 1700 1300
-F 0 "F1" V 1503 1300 50  0000 C CNN
-F 1 "1A" V 1594 1300 50  0000 C CNN
-F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 1630 1300 50  0001 C CNN
-F 3 "" H 1700 1300 50  0001 C CNN
-	1    1700 1300
+P 1050 1300
+F 0 "F1" V 853 1300 50  0000 C CNN
+F 1 "1A" V 944 1300 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 980 1300 50  0001 C CNN
+F 3 "" H 1050 1300 50  0001 C CNN
+	1    1050 1300
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	1850 1300 2250 1300
-Text Label 2250 1300 0    50   ~ 0
-12V0_FUSED
+	1200 1300 1600 1300
 $Comp
 L Connector:Conn_01x01 TP?
 U 1 1 5EDF385D
@@ -624,4 +619,22 @@ Text Label 5100 5050 2    50   ~ 0
 1V5_N_RAW
 Wire Wire Line
 	2600 5650 2600 5750
+$Comp
+L passive-azonenberg:FERRITE_SMALL FB1
+U 1 1 5F2B1C15
+P 1900 1300
+F 0 "FB1" H 1900 1547 60  0000 C CNN
+F 1 "600R @ 100 MHz" H 1900 1441 60  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0603_INDUCTOR_NOSILK" H 1900 1300 60  0001 C CNN
+F 3 "" H 1900 1300 60  0000 C CNN
+	1    1900 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 1300 2250 1300
+Connection ~ 2250 1300
+Text Label 2250 1300 0    50   ~ 0
+12V0_FUSED
+Text Label 2100 3000 2    50   ~ 0
+12V0_FUSED
 $EndSCHEMATC

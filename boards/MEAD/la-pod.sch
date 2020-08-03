@@ -6,8 +6,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 6
 Title "Logic Analyzer Pod"
-Date "2020-06-05"
-Rev "0.1"
+Date "2020-08-02"
+Rev "0.2"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
 Comment2 ""
@@ -832,4 +832,45 @@ Wire Wire Line
 Wire Wire Line
 	6050 4250 6050 4500
 Connection ~ 6050 4500
+$Comp
+L device:R R80
+U 1 1 5F2772C1
+P 3450 4250
+F 0 "R80" V 3243 4250 50  0000 C CNN
+F 1 "10" V 3334 4250 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0805_CAP_NOSILK" V 3380 4250 50  0001 C CNN
+F 3 "" H 3450 4250 50  0001 C CNN
+	1    3450 4250
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:Conn_01x01 J6
+U 1 1 5F277B5D
+P 2850 4250
+F 0 "J6" H 2768 4025 50  0000 C CNN
+F 1 "Conn_01x01" H 2768 4116 50  0000 C CNN
+F 2 "azonenberg_pcb:CONN_HEADER_2.54MM_1x1" H 2850 4250 50  0001 C CNN
+F 3 "~" H 2850 4250 50  0001 C CNN
+	1    2850 4250
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3050 4250 3300 4250
+$Comp
+L Connector:Conn_01x01 J7
+U 1 1 5F27AA79
+P 2850 4700
+F 0 "J7" H 2768 4475 50  0000 C CNN
+F 1 "Conn_01x01" H 2768 4566 50  0000 C CNN
+F 2 "azonenberg_pcb:CONN_HEADER_2.54MM_1x1" H 2850 4700 50  0001 C CNN
+F 3 "~" H 2850 4700 50  0001 C CNN
+	1    2850 4700
+	-1   0    0    1   
+$EndComp
+Text Label 3050 4700 0    50   ~ 0
+GND
+Text Label 3600 4250 0    50   ~ 0
+3V3
+Text Notes 2800 4850 0    50   ~ 0
+Backlight power
 $EndSCHEMATC
