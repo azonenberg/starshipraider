@@ -93,11 +93,12 @@ follow the warnings and specification limits in this document.
 \item Do not connect the ground terminal of this probe to any voltage other than earth ground.
 \item Do not exceed operating limits in the specifications section of this document.
 \item Do not over-tighten the SMA connector. Antikernel Labs recommends using a properly calibrated torque wrench to
-torque the connection to 5 lbf-in.
+torque the connection to 5 lbf-in (0.57 Nm)
 \item The plastic enclosure of this probe is \emph{not} rated for insulation against hazardous voltages, and conductive
-elements are exposed at the tip. Do not use this probe on any circuits which may contain voltages exceeding 30Vrms, or
-the touch-safe voltage limit in your organization's standard operating procedures if this is lower. Do not operate in
-damp or wet conditions.
+elements are exposed at the tip. Do not use this probe on any circuits which may contain voltages exceeding 30 Vrms, or
+the touch-safe voltage limit in your organization's standard operating procedures if this is lower.
+\item Do not operate in damp or wet conditions, or under temperature/humidity extremes in which condensation is
+likely.
 \item Do not operate this probe in a flammable or explosive atmosphere.
 \item The printed circuit board in this probe is plated with silver and is not intended for use in corrosive environments,
 especially those containing significant levels of sulfur compounds. Operation of this probe in a corrosive environment
@@ -105,6 +106,7 @@ voids the warranty.
 \item  The SMA connector center terminal and tip/ground sockets contain beryllium copper (BeCu) contacts. While exposure to
 beryllium is expected to be insignificant during ordinary use of this product, hazardous dust could be generated if the
 contact material is ground or abraded.
+\item Probe tips are sharp. Use caution when changing tips or ground accessories to avoid puncturing skin.
 \end{itemize}
 
 CA PROP 65 WARNING: This product can expose you to beryllium, which is known to the State of California to cause cancer.
@@ -125,19 +127,19 @@ high bandwidth digital signals, which ordinarily require expensive active probes
 
 The signal is split off from the DUT at the point of contact and travels through the probe needle, then passes through
 a precision resistor array. This array is a series string of several resistors of different values summing to
-$450 \Omega$, carefully selected to cancel out frequency-dependent effects from L/C parasitics and ensure maximal
+450 $\Omega$, carefully selected to cancel out frequency-dependent effects from L/C parasitics and ensure maximal
 flatness across the operating frequency range.
 
-The signal then travels on $50 \Omega$ transmission line through a low-loss coplanar waveguide, SMA connector, and
-coaxial cable to the oscilloscope, which terminates the signal with $50 \Omega$ to ground. The tip resistor and
+The signal then travels on 50 $\Omega$ transmission line through a low-loss coplanar waveguide, SMA connector, and
+coaxial cable to the oscilloscope, which terminates the signal with 50 $\Omega$ to ground. The tip resistor and
 termination form a 10:1 voltage divider, so the oscilloscope sees the incident signal attenuated by a factor of 10 (-20
-dB). \emph{Note that a $50 \Omega$ termination at the instrument is required. This probe cannot be used with lower-cost
-oscilloscopes that only have $1M \Omega$ terminations.}
+dB). \emph{Note that a 50 $\Omega$ termination at the instrument is required. This probe cannot be used with lower-cost
+oscilloscopes that only have 1M $\Omega$ terminations.}
 
-The tip resistor and scope-side termination in series present a total loading of $500 \Omega$ on the DUT. While this is
+The tip resistor and scope-side termination in series present a total loading of 500 $\Omega$ on the DUT. While this is
 a significantly lower DC impedance than conventional probes, the resistive input stage has extremely flat frequency
 characteristics with much less capacitance than conventional passive probes. This means that the impedance of the probe
-remains relatively constant across the entire operating range, rather than greatly decreasing at higher frequencies.
+remains comparatively constant across the entire operating range, rather than greatly decreasing at higher frequencies.
 
 \section{Understanding Probe Effects}
 
@@ -155,6 +157,36 @@ Long, thin ground connections (such as the Z-ground or flexible ground lead) hav
 ground connections. Always use the shortest, widest ground possible in a given application for best frequency response.
 The tip-mounted ground socket gives significantly better performance than the top ground socket.
 
+\section{Maintenance}
+
+Grounding accessories may be removed from the side socket by firmly grasping between two fingers and pulling. They
+should come free easily; a different accessory may then be inserted.
+
+Tips (and tip-mounted grounds) can be more difficult to remove because they are so small and difficult to grasp. Tips
+can typically be removed by placing a fine flat-head screwdriver or fingernail behind the collar on the tip and gently
+pushing it away from the probe body. Very little force is required.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=8cm]{tip-removal.jpg}
+\caption{Probe tip removal}
+\end{figure}
+
+New tips can be inserted by simply pushing them into the socket. This is best done by grasping the tip forward of the
+collar, then inserting the rear of the tip into the socket and pushing until it seats fully. It is preferred to use
+tweezers for this rather than holding the tip between your fingers, to avoid accidental injury.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=8cm]{tip-insertion.jpg}
+\caption{Inserting a tip}
+\end{figure}
+
+The probe does not require routine cleaning, however if cleaning is required for any reason it may be wiped with a damp
+cloth. Isopropyl alcohol is safe to use on the plastic shell and exposed circuit board, however repeated cleaning with
+alcohol may degrade the adhesive on the label. Do not use acetone or other strong solvents for cleaning.
+
+\pagebreak
 \section{Accessories}
 
 \subsection{Tips / Grounds}
@@ -164,8 +196,8 @@ diameter (0.020 - 0.032 inch), as well as 22 AWG solid wire for solder-in applic
 
 Use of accessories with larger or smaller diameters may damage the socket and void your warranty.
 
-The top ground terminal is 8 mm above and 12 mm to the rear of the signal connection, and the tip-mounted ground
-terminal is 2.5mm below the signal connection.
+The top ground terminal is centered 8 mm above and 12 mm to the rear of the signal connection, and the tip-mounted
+ground terminal is centered 2.5mm below the signal connection.
 
 Antikernel Labs recommends use of PMK Tetris\textsuperscript{\textregistered} series replacement probe tips and ground
 accessories. These may be ordered through Antikernel Labs or any PMK distributor.
@@ -184,6 +216,31 @@ Antikernel Labs believes the AKL-PT1 is compatible with PMK's full range of Tetr
 tips and ground accessories, however testing has not been conducted with all possible accessories and Antikernel Labs
 assumes no liability for incompatibility with any accessories not listed in this document.
 
+\begin{figure}[h!]
+\centering
+\includegraphics[width=7cm]{tip-ground-01.jpg}
+\caption{Using the tip-mounted ground pin}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=7cm]{zground-usage.jpg}
+\caption{Using the Z-ground}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=7cm]{leafground-usage.jpg}
+\caption{Using the leaf ground}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=7cm]{bipod-usage.jpg}
+\caption{Using the bipod positioner}
+\end{figure}
+
+\FloatBarrier
 \subsection{Cables}
 
 The AKL-PT1 should be connected to the host instrument via a $50 \Omega$ coaxial cable (not included). Antikernel Labs
@@ -206,9 +263,7 @@ calibration certificate.
 
 Exceeding these limits may result in permanent damage to the probe.
 
-Ratings in this section are stress ratings only and normal operation at these limits is not implied. While the probe
-will not be damaged by exposure to conditions outside the ``Recommended Operating Conditions" section, tolerances
-may be temporarily exceeded.
+Ratings in this section are stress ratings only and normal operation at these limits is not implied.
 
 \begin{tabularx}{16cm}{lXll}
 \thickhline
@@ -225,6 +280,9 @@ $V_{max}$ & Maximum operating voltage & 10 & $ Vrms $ \\
 \end{tabularx}
 
 \subsection{Recommended Operating Conditions}
+
+While the probe will not be damaged by exposure to conditions outside the values in this section (but below the
+``Absolute Maximum Ratings" limits), tolerances may be temporarily exceeded.
 
 \begin{tabularx}{16cm}{lXll}
 \thickhline
@@ -245,12 +303,15 @@ $T_{max}$ & Maximum temperature & 45 & \degree C \\
 \thickhline
 $G_{dc}$ & DC gain & 0.0997 & 0.1000 & 0.1005 & V/V \\
 \thinhline
-$R_{probe}$ & Input resistance (DC) & 448.87 & 450.00 & 452.25 & $\Omega$ \\
+$R_{25}$ & DC resistance of probe (25 \degree C) & 449.75 & 450.31 & 450.75 & $\Omega$ \\
+\thinhline
+$R_{range}$ & DC resistance of probe (15 - 45 \degree C) & 449.60 & 450.31 & 451.00 & $\Omega$ \\
 \thinhline
 $TCR$ & Temperature coefficient of resistance & & & $\pm 25$ & ppm / \degree C \\
 \thickhline
 \end{tabularx}
 
+\pagebreak
 \subsection{AC Characteristics}
 
 Data in this section is based on characterization in a $50 \Omega$ environment, using the highest performance (tip)
@@ -260,17 +321,27 @@ ground, with cable and fixture effects de-embedded, unless otherwise stated.
 \thickhline
 \textbf{Parameter} & \textbf{Description} & \textbf{Min} & \textbf{Typ} & \textbf{Max} & \textbf{Units} \\
 \thickhline
-$Z_{in1}$ & Input impedance (1 GHz) & & 35 & & $\Omega$ \\
+$Z_{in1}$ & Input impedance (1 GHz) & 82.00 & 86.05 & 88.00 & $\Omega$ \\
 \thinhline
-$Z_{in2}$ & Input impedance (2 GHz) & & 80 & & $\Omega$ \\
+$Z_{in2}$ & Input impedance (2 GHz) & 29.00 & 30.79 & 32.75 & $\Omega$ \\
 \thinhline
 $C_{in}$ & Equivalent shunt capacitance to ground &  & 1.4 &  & pF \\
 \thinhline
 $G$ & AC gain from DC - 2 GHz & -23 & -20.5 & -20 & dB \\
 \thinhline
+$G_1$ & AC gain at 1 MHz & -20.48 & -20.45 & -20.42 & dB \\
+\thinhline
+$G_{500}$ & AC gain at 0.5 GHz & -20.85 & -20.56 & -20.35 & dB \\
+\thinhline
+$G_{1000}$ & AC gain at 1.0 GHz & -21.10 & -20.81 & -20.35 & dB \\
+\thinhline
+$G_{1500}$ & AC gain at 1.5 GHz & -21.45 & -21.17 & -20.75 & dB \\
+\thinhline
+$G_{2000}$ & AC gain at 2.0 GHz & -21.60 & -22.04 & -22.45 & dB \\
+\thinhline
 $BW_{0.5}$ & $\pm 0.5$ dB bandwidth using tip ground &  & 0.91 & & GHz \\
 \thinhline
-$BW_{3}$ & -3 dB bandwidth using tip ground & 2 & 2.27 &  & GHz \\
+$BW_{3}$ & -3 dB bandwidth using tip ground & 2.25 & 2.47 & 2.60 & GHz \\
 \thinhline
 $BW_{flex}$ & -3 dB bandwidth using flex ground &  & 0.56 &  & GHz \\
 \thinhline
@@ -278,9 +349,11 @@ $BW_{leaf}$ & -3 dB bandwidth using leaf ground &  & 1.46 &  & GHz \\
 \thinhline
 $BW_{z}$ & -3 dB bandwidth using Z-ground &  & 0.80 &  & GHz \\
 \thinhline
-$Rise_{90}$ & Rise time (10-90 \%) &  & 178 &  & ps \\
+$Rise_{90}$ & Rise time (10-90 \%, including cable) & 174 & 179 & 189 & ps \\
 \thinhline
-$Rise_{80}$ & Rise time (20-80 \%) &  & 122 &  & ps \\
+$Rise_{80}$ & Rise time (20-80 \%, including cable) & 118 & 122 & 129 & ps \\
+\thinhline
+$Tpd$ & Propagation delay &  & 548 &  & ps \\
 \thickhline
 \end{tabularx}
 
@@ -289,7 +362,7 @@ $Rise_{80}$ & Rise time (20-80 \%) &  & 122 &  & ps \\
 
 \subsection{Insertion Loss}
 
-Measured across a $50 \Omega$ line.
+Measured across a $50 \Omega$ termination.
 
 \begin{figure}[h]
 \centering
@@ -297,6 +370,13 @@ Measured across a $50 \Omega$ line.
 \caption{Typical $S_{21}$ using tip ground (red), leaf ground (blue), Z-ground (pink), flex ground (cyan)}
 \end{figure}
 
+\begin{figure}[h]
+\centering
+\includegraphics[width=14cm]{s21-spread.png}
+\caption{Unit to unit variation in $S_{21}$}
+\end{figure}
+
+\pagebreak
 \subsection{Group Delay}
 
 \begin{figure}[h]
@@ -307,7 +387,6 @@ Measured across a $50 \Omega$ line.
 \end{figure}
 \FloatBarrier
 
-\pagebreak
 \subsection{Input Impedance}
 
 \begin{figure}[h!]
