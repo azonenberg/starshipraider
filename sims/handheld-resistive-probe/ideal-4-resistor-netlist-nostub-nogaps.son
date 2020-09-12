@@ -2,11 +2,11 @@ FTYP SONNETPRJ 17 ! Sonnet Netlist Project File
 VER 17.52.2
 HEADER
 LIC antikernel2.1.48685 90e2ba8817c0 havequick azonenberg
-DAT 09/11/2020 14:44:40
+DAT 09/11/2020 22:35:39
 BUILT_BY_CREATED sonnet 17.52.2 08/06/2020 22:43:05
 BUILT_BY_SAVED sonnet 17.52.2
-MDATE 09/11/2020 14:44:40
-HDATE 09/11/2020 14:44:40
+MDATE 09/11/2020 22:26:07
+HDATE 09/11/2020 22:26:07
 END HEADER
 DIM
 ANG DEG
@@ -21,12 +21,14 @@ VAR
 END VAR
 CKT
 RES 1 R=50.0 
-TLINP 1 3 Z=226.0 L=8.5 K=3.66 F=1.0 
-S2P 3 4 "../../../../../../share/datasheets/Vishay/0402/FC0402-FlipChip-200 Ohm.s2p"
-TLINP 4 5 Z=50.0 L=0.6 K=3.66 F=1.0 
-S2P 5 6 "../../../../../../share/datasheets/Vishay/0402/FC0402-FlipChip-200 Ohm.s2p"
-TLINP 6 7 Z=50.0 L=0.6 K=3.66 F=1.0 
-S2P 7 2 "../../../../../../share/datasheets/Vishay/0402/FC0402-FlipChip-50 Ohm.s2p"
+TLINP 1 3 Z=226.0 L=0.01 K=3.66 F=1.0 
+RES 3 4 R=200.0 
+TLINP 4 5 Z=50.0 L=0.01 K=3.66 F=1.0 
+RES 5 6 R=100.0 
+TLINP 6 7 Z=50.0 L=0.01 K=3.66 F=1.0 
+RES 7 8 R=100.0 
+TLINP 8 9 Z=50.0 L=0.01 K=3.66 F=1.0 
+RES 9 2 R=50.0 
 DEF2P 1 2 Net R 50.00000
 
 END CKT

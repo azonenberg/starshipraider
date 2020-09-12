@@ -1,12 +1,12 @@
 FTYP SONNETPRJ 17 ! Sonnet Netlist Project File
 VER 17.52.2
 HEADER
-LIC antikernel2.2.49648 90e2ba8817c0 havequick azonenberg
-DAT 08/29/2020 23:53:39
+LIC antikernel2.1.48685 90e2ba8817c0 havequick azonenberg
+DAT 09/11/2020 14:47:14
 BUILT_BY_CREATED sonnet 17.52.2 08/06/2020 22:43:05
 BUILT_BY_SAVED sonnet 17.52.2
-MDATE 08/29/2020 23:53:39
-HDATE 08/29/2020 23:53:39
+MDATE 09/11/2020 14:47:14
+HDATE 09/11/2020 14:47:14
 END HEADER
 DIM
 ANG DEG
@@ -21,17 +21,17 @@ VAR
 END VAR
 CKT
 RES 1 R=50.0 
-TLINP 1 3 Z=50.0 L=0.01 K=1.0 F=1.0 
+TLINP 1 3 Z=226.0 L=8.5 K=3.66 F=1.0 
 S2P 3 4 "../../../../../../share/datasheets/Vishay/0402/FC0402-FlipChip-100 Ohm.s2p"
-TLINP 4 5 Z=50.0 L=0.85 K=3.66 F=1.0 
+TLINP 4 5 Z=50.0 L=1.5 K=3.66 F=1.0 
 S2P 5 6 "../../../../../../share/datasheets/Vishay/0402/FC0402-FlipChip-75 Ohm.s2p"
-TLINP 6 7 Z=50.0 L=0.85 K=3.66 F=1.0 
+TLINP 6 7 Z=50.0 L=1.5 K=3.66 F=1.0 
 S2P 7 8 "../../../../../../share/datasheets/Vishay/0402/FC0402-FlipChip-75 Ohm.s2p"
-TLINP 8 9 Z=50.0 L=0.85 K=3.66 F=1.0 
+TLINP 8 9 Z=50.0 L=1.5 K=3.66 F=1.0 
 S2P 9 10 "../../../../../../share/datasheets/Vishay/0402/FC0402-FlipChip-75 Ohm.s2p"
-TLINP 10 11 Z=50.0 L=0.85 K=3.66 F=1.0 
+TLINP 10 11 Z=50.0 L=1.5 K=3.66 F=1.0 
 S2P 11 12 "../../../../../../share/datasheets/Vishay/0402/FC0402-FlipChip-75 Ohm.s2p"
-TLINP 12 13 Z=50.0 L=0.85 K=3.66 F=1.0 
+TLINP 12 13 Z=50.0 L=1.5 K=3.66 F=1.0 
 S2P 13 2 "../../../../../../share/datasheets/Vishay/0402/FC0402-FlipChip-50 Ohm.s2p"
 DEF2P 1 2 Net R 50.00000
 
