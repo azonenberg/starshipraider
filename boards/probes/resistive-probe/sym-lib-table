@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name resistive-probe-rescue)(type Legacy)(uri ${KIPRJMOD}/resistive-probe-rescue.lib)(options "")(descr ""))
+)
