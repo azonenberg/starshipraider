@@ -1,0 +1,94 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:Conn_Coaxial J1
+U 1 1 5F7D0783
+P 3450 3300
+F 0 "J1" H 3403 3538 50  0000 C CNN
+F 1 "U.FL" H 3403 3447 50  0000 C CNN
+F 2 "azonenberg_pcb:CONN_U.FL_TE_1909763-1" H 3450 3300 50  0001 C CNN
+F 3 "" H 3450 3300 50  0001 C CNN
+	1    3450 3300
+	-1   0    0    -1  
+$EndComp
+$Comp
+L device:R R1
+U 1 1 5F7D0AF5
+P 4100 3300
+F 0 "R1" V 3893 3300 50  0000 C CNN
+F 1 "50" V 3984 3300 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK_FLIPCHIP" V 4030 3300 50  0001 C CNN
+F 3 "" H 4100 3300 50  0001 C CNN
+	1    4100 3300
+	0    1    1    0   
+$EndComp
+$Comp
+L device:R R2
+U 1 1 5F7D0F5C
+P 4500 3300
+F 0 "R2" V 4293 3300 50  0000 C CNN
+F 1 "200" V 4384 3300 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK_FLIPCHIP" V 4430 3300 50  0001 C CNN
+F 3 "" H 4500 3300 50  0001 C CNN
+	1    4500 3300
+	0    1    1    0   
+$EndComp
+$Comp
+L device:R R3
+U 1 1 5F7D15DE
+P 4900 3300
+F 0 "R3" V 4693 3300 50  0000 C CNN
+F 1 "200" V 4784 3300 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK_FLIPCHIP" V 4830 3300 50  0001 C CNN
+F 3 "" H 4900 3300 50  0001 C CNN
+	1    4900 3300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4750 3300 4650 3300
+Wire Wire Line
+	4350 3300 4250 3300
+Wire Wire Line
+	3950 3300 3600 3300
+$Comp
+L Connector:Conn_01x01 J2
+U 1 1 5F7D1E3A
+P 5500 3300
+F 0 "J2" H 5580 3342 50  0000 L CNN
+F 1 "TIP" H 5580 3251 50  0000 L CNN
+F 2 "azonenberg_pcb:TESTPOINT_BARETRACE_150UM" H 5500 3300 50  0001 C CNN
+F 3 "~" H 5500 3300 50  0001 C CNN
+	1    5500 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01 J3
+U 1 1 5F7D2257
+P 5500 3500
+F 0 "J3" H 5580 3542 50  0000 L CNN
+F 1 "TIP" H 5580 3451 50  0000 L CNN
+F 2 "azonenberg_pcb:TESTPOINT_BARETRACE_150UM" H 5500 3500 50  0001 C CNN
+F 3 "~" H 5500 3500 50  0001 C CNN
+	1    5500 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 3500 3450 3500
+Wire Wire Line
+	5050 3300 5300 3300
+Text Label 4000 3500 0    50   ~ 0
+GND
+$EndSCHEMATC
