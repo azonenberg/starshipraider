@@ -4,13 +4,15 @@
 
 using namespace std;
 
-#define NUM_LANES 10
+#define NUM_LANES 19
 
 int main(int argc, char* argv[])
 {
 	srand(0);
 
-	size_t crc_units[NUM_LANES] = {0};
+	size_t crc_input_fifo[NUM_LANES] = {0};
+	size_t crc_packet_ids[NUM_LANES] = {0};
+	size_t crc_stream_fifo[NUM_LANES] = {0};
 
 	size_t nclocks = 1000L * 1000L * 1000L;
 
@@ -18,10 +20,14 @@ int main(int argc, char* argv[])
 
 	size_t totalUsage = 0;
 	size_t maxUsage = 0;
+	size_t totalHash = 0;
+	size_t totalOutput = 0;
 
 	//This loop runs in the XLGMII-64 clock (625 MHz)
+	size_t npacket = 0;
 	size_t current_lane = 0;
 	size_t frame_len = 0;
+	size_t next_packet = 0;
 	bool phase = false;		//Whether the XLGMII-128 (312.5 MHz) clock is also rising this cycle
 	for(size_t i=0; i<nclocks; i++)
 	{
@@ -37,7 +43,7 @@ int main(int argc, char* argv[])
 			bool found = false;
 			for(size_t j=0; j<NUM_LANES; j++)
 			{
-				if(crc_units[j] == 0)
+				if( (crc_input_fifo[j] == 0) && (crc_stream_fifo[j] == 0) )
 				{
 					/*printf(
 						"[%10zu] Starting new frame (%zu bytes including headers and FCS), assigning to CRC unit %zu\n",
@@ -51,13 +57,22 @@ int main(int argc, char* argv[])
 			{
 				printf("[%10zu] Tried to start a new frame, but no CRC unit available!\n", i);
 				for(size_t j=0; j<NUM_LANES; j++)
-					printf("        Unit %zu has %zu bytes still pending\n", j, crc_units[j]);
+				{
+					if(crc_input_fifo[j])
+						printf("        Unit %zu has %zu bytes waiting to be CRC'd\n", j, crc_input_fifo[j]);
+					else
+						printf("        Unit %zu has %zu bytes waiting to be output\n", j, crc_stream_fifo[j]);
+				}
 				return 1;
 			}
 
 			frame_active = true;
 
 			//No data for CRC engine this cycle, it's just preamble
+
+			//Save packet ID
+			crc_packet_ids[current_lane] = npacket;
+			npacket ++;
 		}
 
 		//We have a frame in progress, push data into the CRC engine
@@ -65,12 +80,14 @@ int main(int argc, char* argv[])
 		{
 			if(frame_len > 8)
 			{
-				crc_units[current_lane] += 8;
+				crc_input_fifo[current_lane] += 8;
+				crc_stream_fifo[current_lane] += 8;
 				frame_len -= 8;
 			}
 			else
 			{
-				crc_units[current_lane] += frame_len;
+				crc_input_fifo[current_lane] += frame_len;
+				crc_stream_fifo[current_lane] += frame_len;
 				frame_len = 0;
 				frame_active = false;
 			}
@@ -82,8 +99,13 @@ int main(int argc, char* argv[])
 		size_t active = 0;
 		for(size_t j=0; j<NUM_LANES; j++)
 		{
-			if(crc_units[j])
+			if( (crc_input_fifo[j]) || (crc_stream_fifo[j]) )
 				active ++;
+
+			if(crc_input_fifo[j])
+				totalHash ++;
+			if(crc_stream_fifo[j])
+				totalOutput ++;
 		}
 		totalUsage += active;
 		maxUsage = max(active, maxUsage);
@@ -93,23 +115,42 @@ int main(int argc, char* argv[])
 		{
 			for(size_t j=0; j<NUM_LANES; j++)
 			{
-				if(crc_units[j])
+				//Process input FIFO data (4 bytes per clock, in parallel)
+				if(crc_input_fifo[j])
 				{
-					if(crc_units[j] <= 4)
+					if(crc_input_fifo[j] <= 4)
 					{
-						crc_units[j] = 0;
-						//printf("[%10zu] CRC unit %zu is now free\n", i, j);
+						crc_input_fifo[j] = 0;
+						//printf("[%10zu] CRC unit %zu is done CRCing packet %zu\n", i, j, crc_packet_ids[j]);
 					}
 					else
-						crc_units[j] -= 4;
+						crc_input_fifo[j] -= 4;
+				}
+
+				//Process output FIFO data (16 bytes per clock, but in order one at a time)
+				else if(crc_stream_fifo[j])
+				{
+					if(crc_packet_ids[j] == next_packet)
+					{
+						if(crc_stream_fifo[j] <= 16)
+						{
+							crc_stream_fifo[j] = 0;
+							//printf("[%10zu] CRC unit %zu is done outputting packet %zu\n", i, j, crc_packet_ids[j]);
+							next_packet ++;
+						}
+						else
+							crc_stream_fifo[j] -= 16;
+					}
 				}
 			}
 		}
 	}
 
-	printf("Simulation completed after %zu clock cycles with no resource exhaustion\n", nclocks);
+	printf("Simulation completed after %zu clock cycles (%zu packets) with no resource exhaustion\n", nclocks, npacket);
 	printf("Max lanes used: %zu\n", maxUsage);
 	printf("Avg lanes used: %.2f\n", totalUsage * 1.0 / nclocks);
+	printf("Avg lanes in CRC state: %.2f\n", totalHash * 1.0 / nclocks);
+	printf("Avg lanes in output state: %.2f\n", totalOutput * 1.0 / nclocks);
 
 	return 0;
 }
