@@ -2,11 +2,11 @@ FTYP SONNETPRJ 18 ! Sonnet Netlist Project File
 VER 17.56
 HEADER
 LIC antikernel2.1.48685 3cfdfeabd719 havequick azonenberg Level2Basic
-DAT 11/26/2020 07:46:51
+DAT 11/26/2020 07:48:18
 BUILT_BY_CREATED sonnet 17.52.2 08/06/2020 22:43:05
 BUILT_BY_SAVED sonnet 17.56
-MDATE 11/26/2020 07:46:51
-HDATE 11/26/2020 07:46:51
+MDATE 11/26/2020 07:48:18
+HDATE 11/26/2020 07:48:18
 END HEADER
 DIM
 ANG DEG
@@ -23,12 +23,10 @@ CKT
 RES 1 R=50.0 
 TLINP 1 11 Z=240.0 L=3.21 K=1.0 F=1.0 
 TLINP 11 3 Z=200.0 L=3.88 K=3.5 F=1.0 
-S2P 3 4 "../../../../../../share/datasheets/Vishay/Resistors/FC/0402/FC0402-FlipChip-200 Ohm.s2p"
+S2P 3 4 ../../../../../../share/datasheets/Vishay/Resistors/CH/CH0402F_P/CH0402F_P_250R.s2p
 TLINP 4 5 Z=50.0 L=0.6 K=3.66 F=1.0 
-S2P 5 6 "../../../../../../share/datasheets/Vishay/Resistors/FC/0402/FC0402-FlipChip-200 Ohm.s2p"
-TLINP 6 7 Z=50.0 L=0.6 K=3.66 F=1.0 
-S2P 7 8 "../../../../../../share/datasheets/Vishay/Resistors/FC/0402/FC0402-FlipChip-50 Ohm.s2p"
-PRJ 8 9 oshpark-probe-filter-short.son 2  1 DATE 09/30/2020 15:13:06 
+S2P 5 6 ../../../../../../share/datasheets/Vishay/Resistors/CH/CH0402F_P/CH0402F_P_200R.s2p
+PRJ 6 9 oshpark-probe-filter-short.son 2  1 DATE 09/30/2020 15:13:06 
 S2P 9 10 ../../../../temp/vmware-share/experiments/old/new-thruline.s2p
 S2P 10 2 ../../../../temp/vmware-share/experiments/old/new-thruline.s2p
 DEF2P 1 2 Net R 50.00000
