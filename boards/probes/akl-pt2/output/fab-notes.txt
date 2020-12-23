@@ -1,0 +1,39 @@
+Part number:        akl-pt2 v0.5
+
+General fabrication notes
+
+    * Boards to be panelized, 10 boards per panel.
+      Left side connector will be hand soldered after depanelization.
+    * Pad finish is ENIG.
+    * Finished board thickness at left side connector area, including FR4 stiffener, not to exceed 1.6 mm.
+    * Polyimide stiffener must not overlap contacts at right side of board
+    * If possible, place UL marking and date code on bottom side of board next to "AKL-PT2" text.
+    * White silkscreen on bottom side of board only
+
+Impedances
+
+    Control to within 10%.
+
+    Top side coplanar waveguide (ref to ground on both top and bottom layers).
+        200 μm trace / 225 μm space = 50 ohm
+
+Suggested stackup
+        Shengyi SF202C coverlay
+    1   35 μm (1 oz) RA copper          Signal with ground fill
+        100 μm Panasonic Felios R-F775
+    2   35 μm (1 oz) RA copper          Ground
+        Shengyi SF202C coverlay
+        Stiffeners
+
+File naming
+    akl-pt2-Edge_Cuts.gbr           Board outline
+    akl-pt2.drl                     Through-board plated holes
+    akl-pt2-F.Fab.gbr               Shows requested location of date code and UL marking
+    akl-pt2-F_Mask.gbr              Top coverlay
+    akl-pt2-F_Paste.gbr             Top solder paste
+    akl-pt2-F_Cu.gbr                Top copper
+    akl-pt2-B_Cu.gbr                Layer 2 copper
+    akl-pt2-B_Mask.gbr              Back coverlay
+    akl-pt2-B_SilkS.gbr             Back silkscreen
+    akl-pt2-FR4Stiffener.gbr        1.4 mm FR4 stiffener
+    akl-pt2-PolyimideStiffener.gbr  0.2 mm polyimide stiffener

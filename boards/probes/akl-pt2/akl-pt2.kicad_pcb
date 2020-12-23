@@ -2,7 +2,7 @@
 
   (general
     (thickness 0.23)
-    (drawings 15)
+    (drawings 25)
     (tracks 583)
     (zones 0)
     (modules 6)
@@ -20,6 +20,8 @@
     (38 B.Mask user)
     (39 F.Mask user)
     (40 Dwgs.User user)
+    (42 Eco1.User user)
+    (43 Eco2.User user)
     (44 Edge.Cuts user)
     (45 Margin user)
     (46 B.CrtYd user)
@@ -57,7 +59,7 @@
     (aux_axis_origin 0 0)
     (visible_elements FFFFFF7F)
     (pcbplotparams
-      (layerselection 0x030f8_ffffffff)
+      (layerselection 0x03cf8_ffffffff)
       (usegerberextensions false)
       (usegerberattributes true)
       (usegerberadvancedattributes true)
@@ -221,6 +223,20 @@
     )
   )
 
+  (gr_text "Polyimide stiffener\n0.2mm thick" (at 233.7 47) (layer Eco2.User)
+    (effects (font (size 1 1) (thickness 0.05)))
+  )
+  (gr_line (start 235.9 48.8) (end 230.5 48.8) (layer Eco2.User) (width 0.05) (tstamp 5FE2ECD3))
+  (gr_line (start 235.9 51.7) (end 235.9 48.8) (layer Eco2.User) (width 0.05))
+  (gr_line (start 230.5 51.7) (end 235.9 51.7) (layer Eco2.User) (width 0.05))
+  (gr_line (start 230.5 48.8) (end 230.5 51.7) (layer Eco2.User) (width 0.05))
+  (gr_text "FR4 stiffener 1.4 mm nominal\nTotal thickness of stiffener and\nPCB not to exceed 1.6 mm" (at 91.5 44.1) (layer Eco1.User)
+    (effects (font (size 0.75 0.75) (thickness 0.05)))
+  )
+  (gr_line (start 94 46.5) (end 86.5 46.5) (layer Eco1.User) (width 0.05))
+  (gr_line (start 94 54) (end 94 46.5) (layer Eco1.User) (width 0.05))
+  (gr_line (start 86.5 54) (end 94 54) (layer Eco1.User) (width 0.05))
+  (gr_line (start 86.5 46.5) (end 86.5 54) (layer Eco1.User) (width 0.05))
   (gr_arc (start 94.75 54) (end 94.75 54.25) (angle -90) (layer Edge.Cuts) (width 0.05) (tstamp 5A20B51A))
   (gr_arc (start 94.75 46.5) (end 95 46.5) (angle -90) (layer Edge.Cuts) (width 0.05) (tstamp 5A20B514))
   (gr_arc (start 95.25 52) (end 95.25 51.75) (angle -90) (layer Edge.Cuts) (width 0.05) (tstamp 5A20B504))
@@ -230,7 +246,7 @@
   (gr_line (start 237 49) (end 237 51.5) (layer Edge.Cuts) (width 0.05))
   (gr_arc (start 236.75 49) (end 237 49) (angle -90) (layer Edge.Cuts) (width 0.05))
   (gr_line (start 95.25 48.75) (end 236.75 48.75) (layer Edge.Cuts) (width 0.05))
-  (gr_text "AKL-PT2 / A. Zonenberg / Antikernel Labs / Symbiotic EDA / v0.4 / 2020-11-26" (at 127 50.25) (layer B.SilkS) (tstamp 592A4BCD)
+  (gr_text "AKL-PT2 / A. Zonenberg / Antikernel Labs / Symbiotic EDA / v0.5 / 2020-12-22" (at 127 50.25) (layer B.SilkS) (tstamp 592A4BCD)
     (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
   )
   (gr_line (start 95 54) (end 95 52) (layer Edge.Cuts) (width 0.05))
@@ -823,7 +839,7 @@
   (via (at 236.95 49.75) (size 0.55) (drill 0.25) (layers F.Cu B.Cu) (net 3))
   (segment (start 236.45 49.75) (end 237 49.75) (width 0.125) (layer F.Cu) (net 3))
 
-  (zone (net 1) (net_name /GND) (layer B.Cu) (tstamp 5F7A9A2A) (hatch edge 0.508)
+  (zone (net 1) (net_name /GND) (layer B.Cu) (tstamp 5FE2EDA3) (hatch edge 0.508)
     (connect_pads (clearance 0.1))
     (min_thickness 0.1)
     (fill yes (arc_segments 32) (thermal_gap 0.1) (thermal_bridge_width 0.125))
@@ -850,7 +866,7 @@
       )
     )
   )
-  (zone (net 1) (net_name /GND) (layer F.Cu) (tstamp 5F7A9A27) (hatch edge 0.508)
+  (zone (net 1) (net_name /GND) (layer F.Cu) (tstamp 5FE2EDA0) (hatch edge 0.508)
     (connect_pads yes (clearance 0.225))
     (min_thickness 0.1)
     (fill yes (arc_segments 32) (thermal_gap 0.1) (thermal_bridge_width 0.125))
@@ -885,7 +901,7 @@
       )
     )
   )
-  (zone (net 0) (net_name "") (layer F.Mask) (tstamp 0) (hatch edge 0.508)
+  (zone (net 0) (net_name "") (layer F.Mask) (tstamp 5FE2ED9D) (hatch edge 0.508)
     (connect_pads yes (clearance 0.225))
     (min_thickness 0.1)
     (fill yes (arc_segments 32) (thermal_gap 0.1) (thermal_bridge_width 0.125))
@@ -897,6 +913,36 @@
     (filled_polygon
       (pts
         (xy 92.15 51.175) (xy 86.55 51.175) (xy 86.55 49.4) (xy 92.15 49.4)
+      )
+    )
+  )
+  (zone (net 0) (net_name "") (layer F.Mask) (tstamp 5FE2ED9A) (hatch edge 0.508)
+    (connect_pads (clearance 0.225))
+    (min_thickness 0.254)
+    (fill yes (arc_segments 32) (thermal_gap 0.508) (thermal_bridge_width 0.508))
+    (polygon
+      (pts
+        (xy 235.9 49.3) (xy 235.9 51.2) (xy 237 51.2) (xy 237 49.3)
+      )
+    )
+    (filled_polygon
+      (pts
+        (xy 236.873 51.073) (xy 236.027 51.073) (xy 236.027 49.427) (xy 236.873 49.427)
+      )
+    )
+  )
+  (zone (net 0) (net_name "") (layer B.Mask) (tstamp 5FE2ED97) (hatch edge 0.508)
+    (connect_pads (clearance 0.225))
+    (min_thickness 0.254)
+    (fill yes (arc_segments 32) (thermal_gap 0.508) (thermal_bridge_width 0.508))
+    (polygon
+      (pts
+        (xy 236.6 49.3) (xy 236.6 51.2) (xy 237 51.2) (xy 237 49.3)
+      )
+    )
+    (filled_polygon
+      (pts
+        (xy 236.873 51.073) (xy 236.727 51.073) (xy 236.727 49.427) (xy 236.873 49.427)
       )
     )
   )
