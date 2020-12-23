@@ -28,7 +28,6 @@ Suggested stackup
 File naming
     akl-pt2-Edge_Cuts.gbr           Board outline
     akl-pt2.drl                     Through-board plated holes
-    akl-pt2-F.Fab.gbr               Shows requested location of date code and UL marking
     akl-pt2-F_Mask.gbr              Top coverlay
     akl-pt2-F_Paste.gbr             Top solder paste
     akl-pt2-F_Cu.gbr                Top copper
