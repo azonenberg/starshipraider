@@ -1,0 +1,44 @@
+FTYP SONNETPRJ 18 ! Sonnet Netlist Project File
+VER 17.56
+HEADER
+LIC antikernel2.1.50150 3cfdfeabd719 havequick azonenberg Level2Silver
+DAT 12/23/2020 23:33:57
+BUILT_BY_CREATED xgeom 17.56 12/23/2020 09:12:10
+BUILT_BY_SAVED sonnet 17.56
+MDATE 12/23/2020 23:33:57
+HDATE 12/23/2020 23:33:57
+ANN Created by dxfgeo, Sonnet Software Inc.
+END HEADER
+DIM
+ANG DEG
+CAP PF
+CON /OH
+FREQ GHZ
+IND NH
+LNG MM
+RES OH
+END DIM
+VAR
+END VAR
+CKT
+PRJ 2 9 10 11 12 akl-pt2-full_net_s1.son 5  1 
+PRJ 9 15 10 16 11 17 12 18 akl-pt2-full_net_s2.son 8  1 
+PRJ 15 21 16 22 17 23 18 24 akl-pt2-full_net_s3.son 8  1 
+PRJ 21 27 22 28 23 29 24 30 akl-pt2-full_net_s4.son 8  1 
+PRJ 27 28 29 1 30 3 4 5 6 7 8 akl-pt2-full_net_s5.son 11  1 
+DEF2P 1 2 akl-pt2-full_net R 50.00000
+
+END CKT
+CONTROL
+ABS
+OPTIONS 
+PUSH
+SPEED 1
+CACHE_ABS 1
+Q_ACC N
+END CONTROL
+VARSWP
+ENABLED Y
+FREQ Y AY ABS_ENTRY 0.1 10.0 -1 300 
+END
+END VARSWP
