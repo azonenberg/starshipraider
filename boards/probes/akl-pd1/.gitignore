@@ -1,2 +1,5 @@
+output/*.drl
+output/*.gbr
+output/*.zip
 *-bak
 *cache*
