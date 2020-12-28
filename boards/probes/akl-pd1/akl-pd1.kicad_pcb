@@ -1,7 +1,7 @@
 (kicad_pcb (version 20171130) (host pcbnew "(5.1.4)")
 
   (general
-    (thickness 1.6)
+    (thickness 0.15)
     (drawings 21)
     (tracks 910)
     (zones 0)
@@ -1294,6 +1294,36 @@
         (xy 55.6125 72.517797) (xy 55.614253 72.5) (xy 55.607254 72.428938) (xy 55.586526 72.360606) (xy 55.552865 72.297632)
         (xy 55.507566 72.242434) (xy 55.452368 72.197135) (xy 55.389394 72.163474) (xy 55.321062 72.142746) (xy 55.267798 72.1375)
         (xy 55.25 72.135747) (xy 55.232202 72.1375) (xy 52.8625 72.1375) (xy 52.8625 70.1125) (xy 61.6375 70.1125)
+      )
+    )
+  )
+  (zone (net 0) (net_name "") (layer F.Mask) (tstamp 0) (hatch edge 0.508)
+    (connect_pads (clearance 0.508))
+    (min_thickness 0.254)
+    (fill yes (arc_segments 32) (thermal_gap 0.508) (thermal_bridge_width 0.508))
+    (polygon
+      (pts
+        (xy 199.5 75.5) (xy 199.5 77.75) (xy 200.5 77.75) (xy 200.5 75.5)
+      )
+    )
+    (filled_polygon
+      (pts
+        (xy 200.373 77.623) (xy 199.627 77.623) (xy 199.627 75.627) (xy 200.373 75.627)
+      )
+    )
+  )
+  (zone (net 0) (net_name "") (layer B.Mask) (tstamp 0) (hatch edge 0.508)
+    (connect_pads (clearance 0.508))
+    (min_thickness 0.254)
+    (fill yes (arc_segments 32) (thermal_gap 0.508) (thermal_bridge_width 0.508))
+    (polygon
+      (pts
+        (xy 199.5 75.5) (xy 199.5 77.75) (xy 200.5 77.75) (xy 200.5 75.5)
+      )
+    )
+    (filled_polygon
+      (pts
+        (xy 200.373 77.623) (xy 199.627 77.623) (xy 199.627 75.627) (xy 200.373 75.627)
       )
     )
   )
