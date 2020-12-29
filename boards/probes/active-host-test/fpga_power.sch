@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 3
+Sheet 3 5
 Title ""
 Date ""
 Rev ""
@@ -24,6 +24,7 @@ F 1 "xc7s6cpga196" H 4331 947 60  0000 L CNN
 F 2 "" H 3700 1550 60  0001 L CNN
 F 3 "" H 3700 1350 60  0001 L CNN
 F 4 "xc7s6cpga196" H 3700 1250 60  0001 L CNN "desc"
+F 5 "122-2240-ND" H 3500 1500 50  0001 C CNN "DPN"
 	4    3500 1500
 	1    0    0    -1  
 $EndComp
@@ -438,6 +439,7 @@ F 0 "U?" H 7900 3325 50  0000 C CNN
 F 1 "AP3428A" H 7900 3234 50  0000 C CNN
 F 2 "" H 7650 3050 50  0001 C CNN
 F 3 "" H 7650 3050 50  0001 C CNN
+F 4 "AP3428AKTTR-G1DICT-ND" H 7900 3050 50  0001 C CNN "DPN"
 	1    7900 3050
 	1    0    0    -1  
 $EndComp
@@ -449,6 +451,7 @@ F 0 "U?" H 7900 4575 50  0000 C CNN
 F 1 "AP3428A" H 7900 4484 50  0000 C CNN
 F 2 "" H 7650 4300 50  0001 C CNN
 F 3 "" H 7650 4300 50  0001 C CNN
+F 4 "AP3428AKTTR-G1DICT-ND" H 7900 4300 50  0001 C CNN "DPN"
 	1    7900 4300
 	1    0    0    -1  
 $EndComp
@@ -650,55 +653,140 @@ Text Label 10050 3000 0    50   ~ 0
 VCCINT
 Text Label 10050 3150 0    50   ~ 0
 VCCBRAM
-Wire Wire Line
-	9450 4250 9900 4250
 Connection ~ 9450 4250
 Text Label 9900 4250 0    50   ~ 0
 VCCAUX
-Wire Wire Line
-	7450 3000 7300 3000
-Wire Wire Line
-	7450 3100 7300 3100
-Wire Wire Line
-	7300 3100 7300 3000
-Connection ~ 7300 3000
-Wire Wire Line
-	7300 3000 6950 3000
-Wire Wire Line
-	7450 4250 7250 4250
 $Comp
 L power:+5V #PWR?
 U 1 1 600B2AED
-P 6950 4250
-F 0 "#PWR?" H 6950 4100 50  0001 C CNN
-F 1 "+5V" H 6965 4423 50  0000 C CNN
-F 2 "" H 6950 4250 50  0001 C CNN
-F 3 "" H 6950 4250 50  0001 C CNN
-	1    6950 4250
+P 6850 4100
+F 0 "#PWR?" H 6850 3950 50  0001 C CNN
+F 1 "+5V" H 6865 4273 50  0000 C CNN
+F 2 "" H 6850 4100 50  0001 C CNN
+F 3 "" H 6850 4100 50  0001 C CNN
+	1    6850 4100
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:+5V #PWR?
 U 1 1 600B2DDE
-P 6950 3000
-F 0 "#PWR?" H 6950 2850 50  0001 C CNN
-F 1 "+5V" H 6965 3173 50  0000 C CNN
-F 2 "" H 6950 3000 50  0001 C CNN
-F 3 "" H 6950 3000 50  0001 C CNN
-	1    6950 3000
+P 6850 2900
+F 0 "#PWR?" H 6850 2750 50  0001 C CNN
+F 1 "+5V" H 6865 3073 50  0000 C CNN
+F 2 "" H 6850 2900 50  0001 C CNN
+F 3 "" H 6850 2900 50  0001 C CNN
+	1    6850 2900
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	7450 4350 7250 4350
-Wire Wire Line
-	7250 4350 7250 4250
-Connection ~ 7250 4250
-Wire Wire Line
-	7250 4250 6950 4250
-Text Notes 6450 3950 0    50   ~ 0
-Not sure if we need sequencing here.\nNot sure how to simply add it, VCCINT is < 1.4V that EN needs.
 Text Notes 7850 2600 0    50   ~ 0
 VCCINT and VCCBRAM can be turned on at the same time\nif they are the same voltage - and they are.
 Text Notes 2900 1200 0    50   ~ 0
 Symbol stolen from https://github.com/xesscorp/KiCad-Schematic-Symbol-Libraries
+Text Notes 2650 4600 0    50   ~ 0
+Recommended cap sizes:\n100u & 47u - 1210\n4u7 - 0805\n0u47 - 0603
+Text HLabel 10600 4250 2    50   Input ~ 0
+VCCAUX
+Wire Wire Line
+	9450 4250 10600 4250
+$Comp
+L Device:R R?
+U 1 1 60368BBD
+P 7050 4500
+F 0 "R?" V 6843 4500 50  0000 C CNN
+F 1 "300k" V 6934 4500 50  0000 C CNN
+F 2 "" V 6980 4500 50  0001 C CNN
+F 3 "~" H 7050 4500 50  0001 C CNN
+	1    7050 4500
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 60369827
+P 7300 4700
+F 0 "C?" H 7392 4746 50  0000 L CNN
+F 1 "10n" H 7392 4655 50  0000 L CNN
+F 2 "" H 7300 4700 50  0001 C CNN
+F 3 "~" H 7300 4700 50  0001 C CNN
+	1    7300 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7200 4500 7300 4500
+Wire Wire Line
+	7300 4500 7300 4350
+Wire Wire Line
+	7300 4500 7300 4600
+Connection ~ 7300 4500
+Wire Wire Line
+	6900 4500 6850 4500
+Wire Wire Line
+	6850 4500 6850 4250
+Wire Wire Line
+	6850 3000 7450 3000
+Wire Wire Line
+	6850 2900 6850 3000
+$Comp
+L power:GND #PWR?
+U 1 1 60377F61
+P 7300 4800
+F 0 "#PWR?" H 7300 4550 50  0001 C CNN
+F 1 "GND" H 7305 4627 50  0000 C CNN
+F 2 "" H 7300 4800 50  0001 C CNN
+F 3 "" H 7300 4800 50  0001 C CNN
+	1    7300 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7300 4350 7450 4350
+Wire Wire Line
+	6850 4250 6850 4100
+Wire Wire Line
+	6850 4250 7450 4250
+Connection ~ 6850 4250
+$Comp
+L Device:R R?
+U 1 1 6039A1B6
+P 7050 3250
+F 0 "R?" V 6843 3250 50  0000 C CNN
+F 1 "100k" V 6934 3250 50  0000 C CNN
+F 2 "" V 6980 3250 50  0001 C CNN
+F 3 "~" H 7050 3250 50  0001 C CNN
+	1    7050 3250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 6039A1BC
+P 7300 3450
+F 0 "C?" H 7392 3496 50  0000 L CNN
+F 1 "10n" H 7392 3405 50  0000 L CNN
+F 2 "" H 7300 3450 50  0001 C CNN
+F 3 "~" H 7300 3450 50  0001 C CNN
+	1    7300 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7200 3250 7300 3250
+Wire Wire Line
+	7300 3250 7300 3100
+Wire Wire Line
+	7300 3250 7300 3350
+Connection ~ 7300 3250
+Wire Wire Line
+	6900 3250 6850 3250
+Wire Wire Line
+	6850 3250 6850 3000
+$Comp
+L power:GND #PWR?
+U 1 1 6039A1C8
+P 7300 3550
+F 0 "#PWR?" H 7300 3300 50  0001 C CNN
+F 1 "GND" H 7305 3377 50  0000 C CNN
+F 2 "" H 7300 3550 50  0001 C CNN
+F 3 "" H 7300 3550 50  0001 C CNN
+	1    7300 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7450 3100 7300 3100
 $EndSCHEMATC

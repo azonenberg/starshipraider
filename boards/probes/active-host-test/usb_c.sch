@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 3
+Sheet 2 5
 Title ""
 Date ""
 Rev ""
@@ -27,37 +27,38 @@ $EndComp
 $Comp
 L Interface_USB:FUSB302BMPX U?
 U 1 1 5FEADEAA
-P 4350 2000
-F 0 "U?" H 4650 1650 50  0000 C CNN
-F 1 "FUSB302BMPX" H 4850 2450 50  0000 C CNN
-F 2 "Package_DFN_QFN:WQFN-14-1EP_2.5x2.5mm_P0.5mm_EP1.45x1.45mm" H 4350 1500 50  0001 C CNN
-F 3 "http://www.onsemi.com/pub/Collateral/FUSB302B-D.PDF" H 4450 1600 50  0001 C CNN
-	1    4350 2000
+P 1750 6450
+F 0 "U?" H 2050 6100 50  0000 C CNN
+F 1 "FUSB302BMPX" H 2250 6900 50  0000 C CNN
+F 2 "Package_DFN_QFN:WQFN-14-1EP_2.5x2.5mm_P0.5mm_EP1.45x1.45mm" H 1750 5950 50  0001 C CNN
+F 3 "http://www.onsemi.com/pub/Collateral/FUSB302B-D.PDF" H 1850 6050 50  0001 C CNN
+F 4 "FUSB302BMPXCT-ND" H 1750 6450 50  0001 C CNN "DPN"
+	1    1750 6450
 	1    0    0    -1  
 $EndComp
-Text HLabel 3650 1900 0    50   Input ~ 0
+Text HLabel 1050 6350 0    50   Input ~ 0
 SDA
-Text HLabel 3650 2000 0    50   Input ~ 0
+Text HLabel 1050 6450 0    50   Input ~ 0
 SCL
-Text HLabel 3650 2100 0    50   Input ~ 0
+Text HLabel 1050 6550 0    50   Input ~ 0
 INT_N
 Wire Wire Line
-	3650 1900 3850 1900
+	1050 6350 1250 6350
 Wire Wire Line
-	3650 2000 3850 2000
+	1050 6450 1250 6450
 Wire Wire Line
-	3650 2100 3850 2100
+	1050 6550 1250 6550
 Wire Wire Line
-	4350 2400 4350 2600
+	1750 6850 1750 7050
 $Comp
 L power:GND #PWR?
 U 1 1 5FEB48CA
-P 4350 2600
-F 0 "#PWR?" H 4350 2350 50  0001 C CNN
-F 1 "GND" H 4355 2427 50  0000 C CNN
-F 2 "" H 4350 2600 50  0001 C CNN
-F 3 "" H 4350 2600 50  0001 C CNN
-	1    4350 2600
+P 1750 7050
+F 0 "#PWR?" H 1750 6800 50  0001 C CNN
+F 1 "GND" H 1755 6877 50  0000 C CNN
+F 2 "" H 1750 7050 50  0001 C CNN
+F 3 "" H 1750 7050 50  0001 C CNN
+	1    1750 7050
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -76,10 +77,6 @@ NoConn ~ 1950 1600
 NoConn ~ 1950 1700
 NoConn ~ 1950 1800
 NoConn ~ 1950 1900
-Wire Wire Line
-	1950 3300 2300 3300
-Wire Wire Line
-	1950 3400 2300 3400
 Text Label 2300 3300 0    50   ~ 0
 SBU1
 Text Label 2300 3400 0    50   ~ 0
@@ -108,9 +105,9 @@ Connection ~ 1950 2700
 Wire Wire Line
 	1950 2100 2300 2100
 Connection ~ 1950 2100
-Text HLabel 8350 4650 0    50   Input ~ 0
+Text HLabel 9850 3400 0    50   Input ~ 0
 -7V
-Text HLabel 8550 2000 1    50   Input ~ 0
+Text HLabel 9750 750  0    50   Input ~ 0
 +7V
 Wire Wire Line
 	2150 2400 2550 2400
@@ -145,145 +142,103 @@ F 3 "" H 1050 3850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Notes 650  4400 0    50   ~ 0
-I'm not 100% sure about this.\nI've heard you should only connect one shield to ground.\nI would make it the host side, and I don't know if it's valid.
+I'm not 100% sure about the shield connection.\nI've heard you should only connect one shield to ground.\nQuick searches haven't confirmed or invalidated this.
 Wire Wire Line
-	4850 1900 5050 1900
+	2250 6350 2450 6350
 Wire Wire Line
-	4850 2000 5050 2000
+	2250 6450 2450 6450
 Wire Wire Line
-	4850 2100 5050 2100
-Text Label 5050 2000 0    50   ~ 0
+	2250 6550 2450 6550
+Text Label 2450 6450 0    50   ~ 0
 CC1
-Text Label 5050 2100 0    50   ~ 0
+Text Label 2450 6550 0    50   ~ 0
 CC2
-Text Label 5050 1900 0    50   ~ 0
+Text Label 2450 6350 0    50   ~ 0
 VBUS
-Text HLabel 3600 1150 0    50   Input ~ 0
+Text HLabel 1000 5600 0    50   Input ~ 0
 +5V
 Wire Wire Line
-	4250 1600 4250 1150
+	1650 6050 1650 5600
 Wire Wire Line
-	4250 1150 3950 1150
+	1650 5600 1350 5600
 $Comp
 L Device:R R?
 U 1 1 5FEC5F38
-P 4450 1300
-F 0 "R?" H 4520 1346 50  0000 L CNN
-F 1 "0R" H 4520 1255 50  0000 L CNN
-F 2 "" V 4380 1300 50  0001 C CNN
-F 3 "~" H 4450 1300 50  0001 C CNN
-	1    4450 1300
+P 1850 5750
+F 0 "R?" H 1920 5796 50  0000 L CNN
+F 1 "0R" H 1920 5705 50  0000 L CNN
+F 2 "" V 1780 5750 50  0001 C CNN
+F 3 "~" H 1850 5750 50  0001 C CNN
+	1    1850 5750
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4250 1150 4450 1150
-Connection ~ 4250 1150
+	1650 5600 1850 5600
+Connection ~ 1650 5600
 Wire Wire Line
-	4350 1600 4350 1450
+	1750 6050 1750 5900
 Wire Wire Line
-	4350 1450 4450 1450
+	1750 5900 1850 5900
 Wire Wire Line
-	4450 1600 4450 1450
-Connection ~ 4450 1450
-Text Notes 3350 950  0    50   ~ 0
+	1850 6050 1850 5900
+Connection ~ 1850 5900
+Text Notes 750  5400 0    50   ~ 0
 Unsure if VCONN needs to be connected.\nWe won't use it, but I'm not sure if the IC works without it.
 $Comp
 L Device:C_Small C?
 U 1 1 5FEC8A7C
-P 3650 1400
-F 0 "C?" H 3742 1446 50  0000 L CNN
-F 1 "0u1" H 3742 1355 50  0000 L CNN
-F 2 "" H 3650 1400 50  0001 C CNN
-F 3 "~" H 3650 1400 50  0001 C CNN
-	1    3650 1400
+P 1050 5850
+F 0 "C?" H 1142 5896 50  0000 L CNN
+F 1 "0u1" H 1142 5805 50  0000 L CNN
+F 2 "" H 1050 5850 50  0001 C CNN
+F 3 "~" H 1050 5850 50  0001 C CNN
+	1    1050 5850
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:C_Small C?
 U 1 1 5FEC8FCB
-P 3950 1400
-F 0 "C?" H 4042 1446 50  0000 L CNN
-F 1 "1u" H 4042 1355 50  0000 L CNN
-F 2 "" H 3950 1400 50  0001 C CNN
-F 3 "~" H 3950 1400 50  0001 C CNN
-	1    3950 1400
+P 1350 5850
+F 0 "C?" H 1442 5896 50  0000 L CNN
+F 1 "1u" H 1442 5805 50  0000 L CNN
+F 2 "" H 1350 5850 50  0001 C CNN
+F 3 "~" H 1350 5850 50  0001 C CNN
+	1    1350 5850
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3650 1150 3650 1300
-Connection ~ 3650 1150
+	1050 5600 1050 5750
+Connection ~ 1050 5600
 Wire Wire Line
-	3650 1150 3600 1150
+	1050 5600 1000 5600
 Wire Wire Line
-	3950 1150 3950 1300
-Connection ~ 3950 1150
+	1350 5600 1350 5750
+Connection ~ 1350 5600
 Wire Wire Line
-	3950 1150 3650 1150
+	1350 5600 1050 5600
 Wire Wire Line
-	3950 1500 3650 1500
+	1350 5950 1050 5950
 Wire Wire Line
-	3650 1500 3650 1600
-Connection ~ 3650 1500
+	1050 5950 1050 6050
+Connection ~ 1050 5950
 $Comp
 L power:GND #PWR?
 U 1 1 5FECB406
-P 3650 1600
-F 0 "#PWR?" H 3650 1350 50  0001 C CNN
-F 1 "GND" H 3655 1427 50  0000 C CNN
-F 2 "" H 3650 1600 50  0001 C CNN
-F 3 "" H 3650 1600 50  0001 C CNN
-	1    3650 1600
+P 1050 6050
+F 0 "#PWR?" H 1050 5800 50  0001 C CNN
+F 1 "GND" H 1055 5877 50  0000 C CNN
+F 2 "" H 1050 6050 50  0001 C CNN
+F 3 "" H 1050 6050 50  0001 C CNN
+	1    1050 6050
 	1    0    0    -1  
 $EndComp
-Text HLabel 5300 3900 0    50   Input ~ 0
+Text HLabel 7900 2650 0    50   Input ~ 0
 PROBE_PWR_EN
-Text HLabel 4750 5450 0    50   Input ~ 0
+Text HLabel 7950 4100 0    50   Input ~ 0
 VBUS_~EN
-$Comp
-L Device:Q_PMOS_DGS Q?
-U 1 1 5FEE7A6A
-P 5500 5450
-F 0 "Q?" H 5705 5496 50  0000 L CNN
-F 1 "Q_PMOS_DGS" H 5705 5405 50  0000 L CNN
-F 2 "" H 5700 5550 50  0001 C CNN
-F 3 "~" H 5500 5450 50  0001 C CNN
-	1    5500 5450
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4750 5450 5000 5450
-$Comp
-L Device:R R?
-U 1 1 5FEE9120
-P 5000 5200
-F 0 "R?" H 5070 5246 50  0000 L CNN
-F 1 "10k" H 5070 5155 50  0000 L CNN
-F 2 "" V 4930 5200 50  0001 C CNN
-F 3 "~" H 5000 5200 50  0001 C CNN
-	1    5000 5200
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5000 5350 5000 5450
-Connection ~ 5000 5450
-Wire Wire Line
-	5000 5450 5300 5450
-Wire Wire Line
-	5000 5050 5000 5000
-Wire Wire Line
-	5000 5000 5600 5000
-Wire Wire Line
-	5600 5000 5600 5250
-Text HLabel 5600 4900 1    50   Input ~ 0
+Text HLabel 7950 4000 0    50   Input ~ 0
 +5V
-Wire Wire Line
-	5600 4900 5600 5000
-Connection ~ 5600 5000
-Wire Wire Line
-	5600 5650 5600 5800
-Wire Wire Line
-	5600 5800 5850 5800
-Text Label 5850 5800 0    50   ~ 0
+Text Label 9050 4000 0    50   ~ 0
 VBUS
 Text Label 2550 2400 0    50   ~ 0
 +7V_GATED
@@ -292,198 +247,274 @@ Text Label 2550 2100 0    50   ~ 0
 $Comp
 L Device:Q_PMOS_DGS Q?
 U 1 1 5FEF7D93
-P 8450 2800
-F 0 "Q?" H 8655 2846 50  0000 L CNN
-F 1 "Q_PMOS_DGS" H 8655 2755 50  0000 L CNN
-F 2 "" H 8650 2900 50  0001 C CNN
-F 3 "~" H 8450 2800 50  0001 C CNN
-	1    8450 2800
+P 9950 1550
+F 0 "Q?" H 10155 1596 50  0000 L CNN
+F 1 "Q_PMOS_DGS" H 10155 1505 50  0000 L CNN
+F 2 "" H 10150 1650 50  0001 C CNN
+F 3 "~" H 9950 1550 50  0001 C CNN
+	1    9950 1550
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R R?
 U 1 1 5FF11E9A
-P 7800 2400
-F 0 "R?" H 7870 2446 50  0000 L CNN
-F 1 "10k" H 7870 2355 50  0000 L CNN
-F 2 "" V 7730 2400 50  0001 C CNN
-F 3 "~" H 7800 2400 50  0001 C CNN
-	1    7800 2400
+P 9300 1150
+F 0 "R?" H 9370 1196 50  0000 L CNN
+F 1 "10k" H 9370 1105 50  0000 L CNN
+F 2 "" V 9230 1150 50  0001 C CNN
+F 3 "~" H 9300 1150 50  0001 C CNN
+	1    9300 1150
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8350 4650 8600 4650
+	9850 3400 10100 3400
 Wire Wire Line
-	8600 4650 8600 4400
+	10100 3400 10100 3150
 $Comp
 L Device:R R?
 U 1 1 5FF18D9C
-P 7900 4250
-F 0 "R?" H 7970 4296 50  0000 L CNN
-F 1 "10k" H 7970 4205 50  0000 L CNN
-F 2 "" V 7830 4250 50  0001 C CNN
-F 3 "~" H 7900 4250 50  0001 C CNN
-	1    7900 4250
+P 9400 3000
+F 0 "R?" H 9470 3046 50  0000 L CNN
+F 1 "10k" H 9470 2955 50  0000 L CNN
+F 2 "" V 9330 3000 50  0001 C CNN
+F 3 "~" H 9400 3000 50  0001 C CNN
+	1    9400 3000
 	1    0    0    -1  
 $EndComp
-Connection ~ 8600 4400
+Connection ~ 10100 3150
 Wire Wire Line
-	8600 4400 8600 4100
+	10100 3150 10100 2850
 Wire Wire Line
-	8550 3000 8550 3150
+	10050 1750 10050 1900
 Wire Wire Line
-	8550 3150 9050 3150
-Text Label 9050 3150 0    50   ~ 0
+	10050 1900 10550 1900
+Text Label 10550 1900 0    50   ~ 0
 +7V_GATED
 Wire Wire Line
-	8600 3700 8600 3600
+	10100 2450 10100 2350
 Wire Wire Line
-	8600 3600 9000 3600
-Text Label 9000 3600 0    50   ~ 0
+	10100 2350 10500 2350
+Text Label 10500 2350 0    50   ~ 0
 -7V_GATED
 $Comp
 L Device:Q_PNP_BCE Q?
 U 1 1 5FF2357A
-P 7450 4000
-F 0 "Q?" V 7778 4000 50  0000 C CNN
-F 1 "Q_PNP_BCE" V 7687 4000 50  0000 C CNN
-F 2 "" H 7650 4100 50  0001 C CNN
-F 3 "~" H 7450 4000 50  0001 C CNN
-	1    7450 4000
+P 8950 2750
+F 0 "Q?" V 9278 2750 50  0000 C CNN
+F 1 "Q_PNP_BCE" V 9187 2750 50  0000 C CNN
+F 2 "" H 9150 2850 50  0001 C CNN
+F 3 "~" H 8950 2750 50  0001 C CNN
+	1    8950 2750
 	0    1    -1   0   
 $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5FF24ABE
-P 7450 4350
-F 0 "#PWR?" H 7450 4100 50  0001 C CNN
-F 1 "GND" H 7455 4177 50  0000 C CNN
-F 2 "" H 7450 4350 50  0001 C CNN
-F 3 "" H 7450 4350 50  0001 C CNN
-	1    7450 4350
+P 8950 3100
+F 0 "#PWR?" H 8950 2850 50  0001 C CNN
+F 1 "GND" H 8955 2927 50  0000 C CNN
+F 2 "" H 8950 3100 50  0001 C CNN
+F 3 "" H 8950 3100 50  0001 C CNN
+	1    8950 3100
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7450 4200 7450 4350
+	8950 2950 8950 3100
 $Comp
 L Device:R R?
 U 1 1 5FF27983
-P 8050 3900
-F 0 "R?" V 7843 3900 50  0000 C CNN
-F 1 "100R" V 7934 3900 50  0000 C CNN
-F 2 "" V 7980 3900 50  0001 C CNN
-F 3 "~" H 8050 3900 50  0001 C CNN
-	1    8050 3900
+P 9550 2650
+F 0 "R?" V 9343 2650 50  0000 C CNN
+F 1 "100R" V 9434 2650 50  0000 C CNN
+F 2 "" V 9480 2650 50  0001 C CNN
+F 3 "~" H 9550 2650 50  0001 C CNN
+	1    9550 2650
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:Q_NMOS_DGS Q?
 U 1 1 5FEF8C7D
-P 8500 3900
-F 0 "Q?" H 8704 3946 50  0000 L CNN
-F 1 "Q_NMOS_DGS" H 8704 3855 50  0000 L CNN
-F 2 "" H 8700 4000 50  0001 C CNN
-F 3 "~" H 8500 3900 50  0001 C CNN
-	1    8500 3900
+P 10000 2650
+F 0 "Q?" H 10204 2696 50  0000 L CNN
+F 1 "Q_NMOS_DGS" H 10204 2605 50  0000 L CNN
+F 2 "" H 10200 2750 50  0001 C CNN
+F 3 "~" H 10000 2650 50  0001 C CNN
+	1    10000 2650
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8200 3900 8300 3900
+	9700 2650 9800 2650
 Wire Wire Line
-	7900 3900 7900 4100
+	9400 2650 9400 2850
 Wire Wire Line
-	7900 4400 8600 4400
+	9400 3150 10100 3150
 Wire Wire Line
-	7650 3900 7900 3900
-Connection ~ 7900 3900
+	9150 2650 9400 2650
+Connection ~ 9400 2650
 Wire Wire Line
-	7250 3900 7050 3900
+	8750 2650 8550 2650
 $Comp
 L Device:R R?
 U 1 1 5FF317D1
-P 6900 3900
-F 0 "R?" V 6693 3900 50  0000 C CNN
-F 1 "10k" V 6784 3900 50  0000 C CNN
-F 2 "" V 6830 3900 50  0001 C CNN
-F 3 "~" H 6900 3900 50  0001 C CNN
-	1    6900 3900
+P 8400 2650
+F 0 "R?" V 8193 2650 50  0000 C CNN
+F 1 "10k" V 8284 2650 50  0000 C CNN
+F 2 "" V 8330 2650 50  0001 C CNN
+F 3 "~" H 8400 2650 50  0001 C CNN
+	1    8400 2650
 	0    1    1    0   
 $EndComp
-Text Notes 6700 4950 0    50   ~ 0
-Modelled in LTSpice and seems to work,\nhaven't gone through and actually analysed anything but it makes sense.
+Text Notes 7250 850  0    50   ~ 0
+Modelled in LTSpice and seems to work,\nhaven't done full analysis.
 $Comp
 L Device:Q_NPN_BCE Q?
 U 1 1 5FF399E2
-P 7700 3250
-F 0 "Q?" H 7891 3296 50  0000 L CNN
-F 1 "Q_NPN_BCE" H 7891 3205 50  0000 L CNN
-F 2 "" H 7900 3350 50  0001 C CNN
-F 3 "~" H 7700 3250 50  0001 C CNN
-	1    7700 3250
+P 9200 2000
+F 0 "Q?" H 9391 2046 50  0000 L CNN
+F 1 "Q_NPN_BCE" H 9391 1955 50  0000 L CNN
+F 2 "" H 9400 2100 50  0001 C CNN
+F 3 "~" H 9200 2000 50  0001 C CNN
+	1    9200 2000
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5FF3BF1C
-P 7800 3550
-F 0 "#PWR?" H 7800 3300 50  0001 C CNN
-F 1 "GND" H 7805 3377 50  0000 C CNN
-F 2 "" H 7800 3550 50  0001 C CNN
-F 3 "" H 7800 3550 50  0001 C CNN
-	1    7800 3550
+P 9300 2300
+F 0 "#PWR?" H 9300 2050 50  0001 C CNN
+F 1 "GND" H 9305 2127 50  0000 C CNN
+F 2 "" H 9300 2300 50  0001 C CNN
+F 3 "" H 9300 2300 50  0001 C CNN
+	1    9300 2300
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R R?
 U 1 1 5FF3DDF3
-P 7050 3250
-F 0 "R?" V 6843 3250 50  0000 C CNN
-F 1 "10k" V 6934 3250 50  0000 C CNN
-F 2 "" V 6980 3250 50  0001 C CNN
-F 3 "~" H 7050 3250 50  0001 C CNN
-	1    7050 3250
+P 8550 2000
+F 0 "R?" V 8343 2000 50  0000 C CNN
+F 1 "10k" V 8434 2000 50  0000 C CNN
+F 2 "" V 8480 2000 50  0001 C CNN
+F 3 "~" H 8550 2000 50  0001 C CNN
+	1    8550 2000
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	7200 3250 7500 3250
-Text Notes 5500 2750 0    50   ~ 0
-This works fine right?\nSaturating the transistor and thus pulling everything down?
+	8700 2000 9000 2000
 Wire Wire Line
-	7800 3450 7800 3550
+	9300 2200 9300 2300
 $Comp
 L Device:R R?
 U 1 1 5FF5C1FA
-P 8000 2800
-F 0 "R?" V 7793 2800 50  0000 C CNN
-F 1 "100R" V 7884 2800 50  0000 C CNN
-F 2 "" V 7930 2800 50  0001 C CNN
-F 3 "~" H 8000 2800 50  0001 C CNN
-	1    8000 2800
+P 9500 1550
+F 0 "R?" V 9293 1550 50  0000 C CNN
+F 1 "100R" V 9384 1550 50  0000 C CNN
+F 2 "" V 9430 1550 50  0001 C CNN
+F 3 "~" H 9500 1550 50  0001 C CNN
+	1    9500 1550
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	8550 2000 8550 2250
+	10050 750  10050 1000
 Wire Wire Line
-	7800 2250 8550 2250
-Connection ~ 8550 2250
+	9300 1000 10050 1000
+Connection ~ 10050 1000
 Wire Wire Line
-	8550 2250 8550 2600
+	10050 1000 10050 1350
 Wire Wire Line
-	7800 2550 7800 2800
+	9300 1300 9300 1550
 Wire Wire Line
-	7800 2800 7850 2800
-Connection ~ 7800 2800
+	9300 1550 9350 1550
+Connection ~ 9300 1550
 Wire Wire Line
-	7800 2800 7800 3050
+	9300 1550 9300 1800
 Wire Wire Line
-	8150 2800 8250 2800
+	9650 1550 9750 1550
 Wire Wire Line
-	6900 3250 6600 3250
+	8400 2000 8100 2000
 Wire Wire Line
-	6600 3250 6600 3900
-Connection ~ 6600 3900
+	8100 2000 8100 2650
 Wire Wire Line
-	6600 3900 6750 3900
+	8100 2650 8250 2650
+$Comp
+L project:LM66100 U?
+U 1 1 5FECA27D
+P 8450 4050
+F 0 "U?" H 8475 4325 50  0000 C CNN
+F 1 "LM66100" H 8475 4234 50  0000 C CNN
+F 2 "" H 8400 4050 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/lm66100.pdf?HQS=dis-dk-null-digikeymode-dsf-pf-null-wwe&ts=1609185393082" H 8400 4050 50  0001 C CNN
+F 4 "296-53541-1-ND" H 8450 4050 50  0001 C CNN "DPN"
+	1    8450 4050
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	5300 3900 6600 3900
+	7950 4000 8150 4000
+$Comp
+L power:GND #PWR?
+U 1 1 5FED23B4
+P 8050 4550
+F 0 "#PWR?" H 8050 4300 50  0001 C CNN
+F 1 "GND" H 8055 4377 50  0000 C CNN
+F 2 "" H 8050 4550 50  0001 C CNN
+F 3 "" H 8050 4550 50  0001 C CNN
+	1    8050 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8800 4000 9050 4000
+Wire Wire Line
+	8150 4400 8050 4400
+Wire Wire Line
+	8050 4400 8050 4550
+Wire Wire Line
+	7950 4100 8150 4100
+NoConn ~ 8800 4400
+Text Notes 7550 4950 0    50   ~ 0
+Cheaper than doing it with discrete components
+Wire Wire Line
+	8100 2650 7900 2650
+Connection ~ 8100 2650
+Text Notes 7200 650  0    79   ~ 0
+Probe Power Gating\n
+Wire Wire Line
+	9750 750  10050 750 
+Wire Notes Line
+	7200 650  11050 650 
+Wire Notes Line
+	11050 650  11050 3500
+Wire Notes Line
+	11050 3500 7200 3500
+Wire Notes Line
+	7200 650  7200 3500
+Text Notes 7200 3700 0    79   ~ 0
+VBUS Gating and Backfeed Protection\n
+Wire Notes Line
+	9450 3700 9450 5150
+Wire Notes Line
+	9450 5150 7200 5150
+Wire Notes Line
+	7200 5150 7200 3700
+Wire Notes Line
+	7200 3700 9450 3700
+Text Notes 700  5200 0    79   ~ 0
+USB C Controller
+Wire Notes Line
+	3100 5200 3100 7300
+Wire Notes Line
+	3100 7300 700  7300
+Wire Notes Line
+	700  7300 700  5200
+Wire Notes Line
+	700  5200 3100 5200
+Text Notes 7550 1450 0    50   ~ 0
+TODO check base resistor values
+Text HLabel 2800 3300 2    50   Input ~ 0
+SBU1
+Text HLabel 2800 3400 2    50   Input ~ 0
+SBU2
+Wire Wire Line
+	1950 3300 2800 3300
+Wire Wire Line
+	1950 3400 2800 3400
 $EndSCHEMATC

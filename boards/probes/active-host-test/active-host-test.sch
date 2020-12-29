@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 3
+Sheet 1 5
 Title ""
 Date ""
 Rev ""
@@ -21,115 +21,575 @@ F1 "usb_c.sch" 50
 F2 "SDA" I L 8850 1200 50 
 F3 "SCL" I L 8850 1300 50 
 F4 "INT_N" I L 8850 1400 50 
-F5 "-7V" I L 8850 2300 50 
-F6 "+7V" I L 8850 2400 50 
+F5 "-7V" I L 8850 2400 50 
+F6 "+7V" I L 8850 2300 50 
 F7 "+5V" I L 8850 2100 50 
 F8 "PROBE_PWR_EN" I L 8850 1550 50 
 F9 "VBUS_~EN" I L 8850 1650 50 
+F10 "SBU1" I L 8850 1800 50 
+F11 "SBU2" I L 8850 1900 50 
 $EndSheet
-Text Notes 3350 2000 0    50   ~ 0
-Spartan 7 (xc7s6) in ftgb196 - smallest 1mm pitch package
-Text Notes 3250 2450 0    50   ~ 0
-STUSB1700 for the USB-C interface maybe?
-Text Notes 3250 2550 0    50   ~ 0
-Or FUSB302B
 $Comp
 L Connector:Barrel_Jack J?
 U 1 1 5FF78E24
-P 950 2350
-F 0 "J?" H 1007 2675 50  0000 C CNN
-F 1 "Barrel_Jack" H 1007 2584 50  0000 C CNN
-F 2 "" H 1000 2310 50  0001 C CNN
-F 3 "~" H 1000 2310 50  0001 C CNN
-	1    950  2350
+P 950 2300
+F 0 "J?" H 1007 2625 50  0000 C CNN
+F 1 "Barrel_Jack" H 1007 2534 50  0000 C CNN
+F 2 "" H 1000 2260 50  0001 C CNN
+F 3 "~" H 1000 2260 50  0001 C CNN
+	1    950  2300
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1250 2450 1350 2450
+	1250 2400 1350 2400
 Wire Wire Line
-	1350 2450 1350 2600
+	1350 2400 1350 2550
 $Comp
 L power:GND #PWR?
 U 1 1 5FF79CD6
-P 1350 2600
-F 0 "#PWR?" H 1350 2350 50  0001 C CNN
-F 1 "GND" H 1355 2427 50  0000 C CNN
-F 2 "" H 1350 2600 50  0001 C CNN
-F 3 "" H 1350 2600 50  0001 C CNN
-	1    1350 2600
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1250 2250 1550 2250
-Wire Wire Line
-	1550 2250 1550 2050
-$Comp
-L power:+12V #PWR?
-U 1 1 5FF7A6C3
-P 1550 2050
-F 0 "#PWR?" H 1550 1900 50  0001 C CNN
-F 1 "+12V" H 1565 2223 50  0000 C CNN
-F 2 "" H 1550 2050 50  0001 C CNN
-F 3 "" H 1550 2050 50  0001 C CNN
-	1    1550 2050
+P 1350 2550
+F 0 "#PWR?" H 1350 2300 50  0001 C CNN
+F 1 "GND" H 1355 2377 50  0000 C CNN
+F 2 "" H 1350 2550 50  0001 C CNN
+F 3 "" H 1350 2550 50  0001 C CNN
+	1    1350 2550
 	1    0    0    -1  
 $EndComp
 $Comp
 L Connector:Conn_01x04_Male J?
 U 1 1 5FF7C198
-P 1150 4600
-F 0 "J?" H 1258 4881 50  0000 C CNN
-F 1 "Conn_01x04_Male" H 1258 4790 50  0000 C CNN
-F 2 "" H 1150 4600 50  0001 C CNN
-F 3 "~" H 1150 4600 50  0001 C CNN
-	1    1150 4600
+P 900 3450
+F 0 "J?" H 1008 3731 50  0000 C CNN
+F 1 "Conn_01x04_Male" H 1008 3640 50  0000 C CNN
+F 2 "" H 900 3450 50  0001 C CNN
+F 3 "~" H 900 3450 50  0001 C CNN
+	1    900  3450
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1350 4800 1450 4800
+	1100 3650 1200 3650
 Wire Wire Line
-	1450 4800 1450 4950
+	1200 3650 1200 3800
 $Comp
 L power:GND #PWR?
 U 1 1 5FF7CCC8
-P 1450 4950
-F 0 "#PWR?" H 1450 4700 50  0001 C CNN
-F 1 "GND" H 1455 4777 50  0000 C CNN
-F 2 "" H 1450 4950 50  0001 C CNN
-F 3 "" H 1450 4950 50  0001 C CNN
-	1    1450 4950
+P 1200 3800
+F 0 "#PWR?" H 1200 3550 50  0001 C CNN
+F 1 "GND" H 1205 3627 50  0000 C CNN
+F 2 "" H 1200 3800 50  0001 C CNN
+F 3 "" H 1200 3800 50  0001 C CNN
+	1    1200 3800
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1350 4500 1600 4500
+	1100 3350 1350 3350
 Wire Wire Line
-	1350 4600 1600 4600
+	1100 3450 1350 3450
 Wire Wire Line
-	1350 4700 1600 4700
-Text Label 1600 4500 0    50   ~ 0
-COPI
-Text Label 1600 4600 0    50   ~ 0
-CIPO
-Text Label 1600 4700 0    50   ~ 0
-~CS
+	1100 3550 1350 3550
 $Sheet
-S 7950 3150 1550 700 
+S 8050 2650 1550 700 
 U 5FFD8F4C
 F0 "FPGA Power" 50
 F1 "fpga_power.sch" 50
+F2 "VCCAUX" I L 8050 3000 50 
 $EndSheet
+$Sheet
+S 8050 3550 1550 650 
+U 5FFBE8F7
+F0 "FPGA Support" 50
+F1 "fpga_conn.sch" 50
+F2 "JTAG_TCK" I L 8050 3800 50 
+F3 "JTAG_TDI" I L 8050 4000 50 
+F4 "JTAG_TDO" I L 8050 3900 50 
+F5 "JTAG_TMS" I L 8050 3700 50 
+$EndSheet
+Wire Wire Line
+	8850 1200 8600 1200
+Wire Wire Line
+	8850 1300 8600 1300
+Wire Wire Line
+	8850 1400 8600 1400
+Wire Wire Line
+	8850 1550 8600 1550
+Wire Wire Line
+	8850 1650 8600 1650
+Text GLabel 8600 1200 0    50   Input ~ 0
+I2C_SDA
+Text GLabel 8600 1300 0    50   Input ~ 0
+I2C_SCL
+Text GLabel 8600 1400 0    50   Input ~ 0
+I2C_INT_B
+Text GLabel 8600 1550 0    50   Input ~ 0
+PROBE_PWR_EN
+Text GLabel 8600 1650 0    50   Input ~ 0
+PROBE_VBUS_EN_B
 $Comp
-L xilinx7:xc7s6cpga196 U?
-U 1 1 600C37FE
-P 4600 4300
-F 0 "U?" H 5531 3653 60  0000 L CNN
-F 1 "xc7s6cpga196" H 5531 3547 60  0000 L CNN
-F 2 "" H 4800 4350 60  0001 L CNN
-F 3 "" H 4800 4150 60  0001 L CNN
-F 4 "xc7s6cpga196" H 4800 4050 60  0001 L CNN "desc"
-	1    4600 4300
+L project:XILINX_JTAG J?
+U 1 1 601BD59D
+P 6850 4100
+F 0 "J?" H 7188 5647 60  0000 C CNN
+F 1 "XILINX_JTAG" H 7188 5541 60  0000 C CNN
+F 2 "" H 6850 4100 60  0000 C CNN
+F 3 "" H 6850 4100 60  0000 C CNN
+	1    6850 4100
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6850 3100 6850 3200
+Connection ~ 6850 3200
+Wire Wire Line
+	6850 3200 6850 3300
+Connection ~ 6850 3300
+Wire Wire Line
+	6850 3300 6850 3400
+Connection ~ 6850 3400
+Wire Wire Line
+	6850 3400 6850 3500
+$Comp
+L power:GND #PWR?
+U 1 1 601C6BFA
+P 7250 3150
+F 0 "#PWR?" H 7250 2900 50  0001 C CNN
+F 1 "GND" H 7255 2977 50  0000 C CNN
+F 2 "" H 7250 3150 50  0001 C CNN
+F 3 "" H 7250 3150 50  0001 C CNN
+	1    7250 3150
 	1    0    0    -1  
 $EndComp
-Text Notes 2350 5100 0    50   ~ 0
-TODO:\n- SPI flash\n- JTAG interface\n- EMCCLK (100mhz DSC6102 maybe)\n- Main 12V -> 5V supply\n- 12V -> +- 7V supply\n- Finish off supply gating\n- power sequencing\n- FPGA IO connections and power sequencing
+Wire Wire Line
+	6850 3100 7250 3100
+Wire Wire Line
+	7250 3100 7250 3150
+Connection ~ 6850 3100
+Wire Wire Line
+	6850 3700 8050 3700
+Wire Wire Line
+	6850 3800 8050 3800
+Wire Wire Line
+	6850 3900 8050 3900
+Wire Wire Line
+	6850 4000 8050 4000
+Text Label 7200 3700 0    50   ~ 0
+JTAG_TMS
+Text Label 7200 3800 0    50   ~ 0
+JTAG_TCK
+Text Label 7200 3900 0    50   ~ 0
+JTAG_TDO
+Text Label 7200 4000 0    50   ~ 0
+JTAG_TDI
+NoConn ~ 6850 3600
+Wire Wire Line
+	6850 3000 8050 3000
+NoConn ~ 6850 4100
+Text Notes 6150 2400 0    79   ~ 0
+JTAG
+Wire Notes Line
+	6150 2400 7000 2400
+Wire Notes Line
+	7000 2400 7000 4250
+Wire Notes Line
+	7000 4250 6150 4250
+Wire Notes Line
+	6150 4250 6150 2400
+Text GLabel 1350 3350 2    50   Input ~ 0
+SPI_COPI
+Text GLabel 1350 3450 2    50   Input ~ 0
+SPI_CIPO
+Text GLabel 1350 3550 2    50   Input ~ 0
+SPI_CS
+$Sheet
+S 2550 2100 1850 900 
+U 601F66B0
+F0 "Power" 50
+F1 "power.sch" 50
+F2 "+12V" I L 2550 2200 50 
+F3 "+7V" I R 4400 2150 50 
+F4 "-7V" I R 4400 2250 50 
+F5 "+5V" I R 4400 2500 50 
+F6 "+3v3" I R 4400 2750 50 
+$EndSheet
+Wire Wire Line
+	4400 2500 4600 2500
+$Comp
+L power:+5V #PWR?
+U 1 1 6020786E
+P 4600 2500
+F 0 "#PWR?" H 4600 2350 50  0001 C CNN
+F 1 "+5V" V 4615 2628 50  0000 L CNN
+F 2 "" H 4600 2500 50  0001 C CNN
+F 3 "" H 4600 2500 50  0001 C CNN
+	1    4600 2500
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 60207F03
+P 4600 2750
+F 0 "#PWR?" H 4600 2600 50  0001 C CNN
+F 1 "+3V3" V 4615 2878 50  0000 L CNN
+F 2 "" H 4600 2750 50  0001 C CNN
+F 3 "" H 4600 2750 50  0001 C CNN
+	1    4600 2750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4600 2750 4400 2750
+$Comp
+L power:+5V #PWR?
+U 1 1 602089C4
+P 8500 2100
+F 0 "#PWR?" H 8500 1950 50  0001 C CNN
+F 1 "+5V" V 8515 2228 50  0000 L CNN
+F 2 "" H 8500 2100 50  0001 C CNN
+F 3 "" H 8500 2100 50  0001 C CNN
+	1    8500 2100
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8500 2100 8850 2100
+Wire Wire Line
+	4400 2150 7850 2150
+Wire Wire Line
+	7850 2150 7850 2300
+Wire Wire Line
+	7850 2300 8850 2300
+Wire Wire Line
+	4400 2250 7750 2250
+Wire Wire Line
+	7750 2250 7750 2400
+Wire Wire Line
+	7750 2400 8850 2400
+Text Label 4850 2150 0    50   ~ 0
++7V
+Text Label 4850 2250 0    50   ~ 0
+-7V
+Wire Wire Line
+	1250 2200 2550 2200
+Text Label 1800 2200 0    50   ~ 0
++12V
+Text Notes 650  3050 0    79   ~ 0
+SPI Interface\n
+Text Notes 650  1900 0    79   ~ 0
+Main Power Jack
+Wire Notes Line
+	650  2900 650  1900
+Wire Notes Line
+	650  3050 1800 3050
+Wire Notes Line
+	1800 3050 1800 4050
+Wire Notes Line
+	1800 4050 650  4050
+Wire Notes Line
+	650  4050 650  3050
+Wire Notes Line
+	1800 2900 1800 1900
+Wire Notes Line
+	650  1900 1800 1900
+Wire Notes Line
+	650  2900 1800 2900
+Text GLabel 8550 1800 0    50   Input ~ 0
+SBU1
+Text GLabel 8550 1900 0    50   Input ~ 0
+SBU2
+Wire Wire Line
+	8550 1800 8850 1800
+Wire Wire Line
+	8550 1900 8850 1900
+Text Notes 2750 1800 0    50   ~ 0
+FPGA Supply Sequencing\n    Done via RC network\n\n1. VCCINT (1V)\n2. VCCAUX (1.8V)\n3. VCCIO (3.3V)
+$Comp
+L Connector:TestPoint TP?
+U 1 1 603BE3D8
+P 1650 6600
+F 0 "TP?" V 1604 6788 50  0000 L CNN
+F 1 "TestPoint" V 1695 6788 50  0000 L CNN
+F 2 "" H 1850 6600 50  0001 C CNN
+F 3 "~" H 1850 6600 50  0001 C CNN
+	1    1650 6600
+	0    1    1    0   
+$EndComp
+Text Label 1350 6600 2    50   ~ 0
++7V
+Text Label 1350 6800 2    50   ~ 0
+-7V
+Wire Wire Line
+	1350 6600 1650 6600
+$Comp
+L Connector:TestPoint TP?
+U 1 1 603C104E
+P 1650 6800
+F 0 "TP?" V 1604 6988 50  0000 L CNN
+F 1 "TestPoint" V 1695 6988 50  0000 L CNN
+F 2 "" H 1850 6800 50  0001 C CNN
+F 3 "~" H 1850 6800 50  0001 C CNN
+	1    1650 6800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1350 6800 1650 6800
+Text Notes 550  6500 0    79   ~ 0
+Test Points
+$Comp
+L power:+5V #PWR?
+U 1 1 603C45B0
+P 1350 7000
+F 0 "#PWR?" H 1350 6850 50  0001 C CNN
+F 1 "+5V" V 1365 7128 50  0000 L CNN
+F 2 "" H 1350 7000 50  0001 C CNN
+F 3 "" H 1350 7000 50  0001 C CNN
+	1    1350 7000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 603C45B6
+P 1350 7200
+F 0 "#PWR?" H 1350 7050 50  0001 C CNN
+F 1 "+3V3" V 1365 7328 50  0000 L CNN
+F 2 "" H 1350 7200 50  0001 C CNN
+F 3 "" H 1350 7200 50  0001 C CNN
+	1    1350 7200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 603C6011
+P 1650 7000
+F 0 "TP?" V 1604 7188 50  0000 L CNN
+F 1 "TestPoint" V 1695 7188 50  0000 L CNN
+F 2 "" H 1850 7000 50  0001 C CNN
+F 3 "~" H 1850 7000 50  0001 C CNN
+	1    1650 7000
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 603C61A0
+P 1650 7200
+F 0 "TP?" V 1604 7388 50  0000 L CNN
+F 1 "TestPoint" V 1695 7388 50  0000 L CNN
+F 2 "" H 1850 7200 50  0001 C CNN
+F 3 "~" H 1850 7200 50  0001 C CNN
+	1    1650 7200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1350 7000 1650 7000
+Wire Wire Line
+	1350 7200 1650 7200
+Text GLabel 2800 6600 0    50   Input ~ 0
+I2C_SDA
+Text GLabel 2800 6800 0    50   Input ~ 0
+I2C_SCL
+Text GLabel 2800 7000 0    50   Input ~ 0
+I2C_INT_B
+Text GLabel 1350 7400 0    50   Input ~ 0
+PROBE_PWR_EN
+Text GLabel 1350 7600 0    50   Input ~ 0
+PROBE_VBUS_EN_B
+Text GLabel 2800 7200 0    50   Input ~ 0
+SBU1
+Text GLabel 2800 7400 0    50   Input ~ 0
+SBU2
+$Comp
+L Connector:TestPoint TP?
+U 1 1 603CCA41
+P 1650 7400
+F 0 "TP?" V 1604 7588 50  0000 L CNN
+F 1 "TestPoint" V 1695 7588 50  0000 L CNN
+F 2 "" H 1850 7400 50  0001 C CNN
+F 3 "~" H 1850 7400 50  0001 C CNN
+	1    1650 7400
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 603CD043
+P 1650 7600
+F 0 "TP?" V 1604 7788 50  0000 L CNN
+F 1 "TestPoint" V 1695 7788 50  0000 L CNN
+F 2 "" H 1850 7600 50  0001 C CNN
+F 3 "~" H 1850 7600 50  0001 C CNN
+	1    1650 7600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1350 7400 1650 7400
+Wire Wire Line
+	1350 7600 1650 7600
+$Comp
+L Connector:TestPoint TP?
+U 1 1 603D00FB
+P 3250 6600
+F 0 "TP?" V 3204 6788 50  0000 L CNN
+F 1 "TestPoint" V 3295 6788 50  0000 L CNN
+F 2 "" H 3450 6600 50  0001 C CNN
+F 3 "~" H 3450 6600 50  0001 C CNN
+	1    3250 6600
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 603D0101
+P 3250 6800
+F 0 "TP?" V 3204 6988 50  0000 L CNN
+F 1 "TestPoint" V 3295 6988 50  0000 L CNN
+F 2 "" H 3450 6800 50  0001 C CNN
+F 3 "~" H 3450 6800 50  0001 C CNN
+	1    3250 6800
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 603D0107
+P 3250 7000
+F 0 "TP?" V 3204 7188 50  0000 L CNN
+F 1 "TestPoint" V 3295 7188 50  0000 L CNN
+F 2 "" H 3450 7000 50  0001 C CNN
+F 3 "~" H 3450 7000 50  0001 C CNN
+	1    3250 7000
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 603D010D
+P 3250 7200
+F 0 "TP?" V 3204 7388 50  0000 L CNN
+F 1 "TestPoint" V 3295 7388 50  0000 L CNN
+F 2 "" H 3450 7200 50  0001 C CNN
+F 3 "~" H 3450 7200 50  0001 C CNN
+	1    3250 7200
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 603D0113
+P 3250 7400
+F 0 "TP?" V 3204 7588 50  0000 L CNN
+F 1 "TestPoint" V 3295 7588 50  0000 L CNN
+F 2 "" H 3450 7400 50  0001 C CNN
+F 3 "~" H 3450 7400 50  0001 C CNN
+	1    3250 7400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3250 7400 2800 7400
+Wire Wire Line
+	2800 7200 3250 7200
+Wire Wire Line
+	2800 7000 3250 7000
+Wire Wire Line
+	2800 6800 3250 6800
+Wire Wire Line
+	2800 6600 3250 6600
+Wire Notes Line
+	550  7700 550  6500
+Wire Notes Line
+	550  6500 3850 6500
+Wire Notes Line
+	3850 6500 3850 7700
+Wire Notes Line
+	3850 7700 550  7700
+$Comp
+L Device:LED D?
+U 1 1 603E9EC1
+P 4200 6550
+F 0 "D?" V 4239 6432 50  0000 R CNN
+F 1 "LED" V 4148 6432 50  0000 R CNN
+F 2 "" H 4200 6550 50  0001 C CNN
+F 3 "~" H 4200 6550 50  0001 C CNN
+	1    4200 6550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 603EA5E5
+P 4600 6550
+F 0 "D?" V 4639 6432 50  0000 R CNN
+F 1 "LED" V 4548 6432 50  0000 R CNN
+F 2 "" H 4600 6550 50  0001 C CNN
+F 3 "~" H 4600 6550 50  0001 C CNN
+	1    4600 6550
+	0    -1   -1   0   
+$EndComp
+Text Label 4200 6150 2    50   ~ 0
++12V
+Wire Wire Line
+	4200 6150 4200 6400
+$Comp
+L Device:R R?
+U 1 1 603EC0DD
+P 4200 7050
+F 0 "R?" H 4270 7096 50  0000 L CNN
+F 1 "10k" H 4270 7005 50  0000 L CNN
+F 2 "" V 4130 7050 50  0001 C CNN
+F 3 "~" H 4200 7050 50  0001 C CNN
+	1    4200 7050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 6700 4200 6900
+Wire Wire Line
+	4200 7200 4200 7400
+$Comp
+L power:GND #PWR?
+U 1 1 603EEB75
+P 4200 7400
+F 0 "#PWR?" H 4200 7150 50  0001 C CNN
+F 1 "GND" H 4205 7227 50  0000 C CNN
+F 2 "" H 4200 7400 50  0001 C CNN
+F 3 "" H 4200 7400 50  0001 C CNN
+	1    4200 7400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 603F031F
+P 4600 7050
+F 0 "R?" H 4670 7096 50  0000 L CNN
+F 1 "10k" H 4670 7005 50  0000 L CNN
+F 2 "" V 4530 7050 50  0001 C CNN
+F 3 "~" H 4600 7050 50  0001 C CNN
+	1    4600 7050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 6700 4600 6900
+Wire Wire Line
+	4600 7200 4600 7400
+$Comp
+L power:GND #PWR?
+U 1 1 603F0327
+P 4600 7400
+F 0 "#PWR?" H 4600 7150 50  0001 C CNN
+F 1 "GND" H 4605 7227 50  0000 C CNN
+F 2 "" H 4600 7400 50  0001 C CNN
+F 3 "" H 4600 7400 50  0001 C CNN
+	1    4600 7400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 6400 4600 6150
+$Comp
+L power:+5V #PWR?
+U 1 1 603F3138
+P 4600 6150
+F 0 "#PWR?" H 4600 6000 50  0001 C CNN
+F 1 "+5V" V 4615 6278 50  0000 L CNN
+F 2 "" H 4600 6150 50  0001 C CNN
+F 3 "" H 4600 6150 50  0001 C CNN
+	1    4600 6150
+	1    0    0    -1  
+$EndComp
+Text Notes 3950 5750 0    79   ~ 0
+Blinky\n
+Wire Notes Line
+	3950 5750 4900 5750
+Wire Notes Line
+	4900 5750 4900 7700
+Wire Notes Line
+	4900 7700 3950 7700
+Wire Notes Line
+	3950 7700 3950 5750
 $EndSCHEMATC

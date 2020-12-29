@@ -1,10 +1,5 @@
 EESchema-DOCLIB  Version 2.0
 #
-$CMP DSC61xx
-D Low-Power MEMS Oscillator
-F https://ww1.microchip.com/downloads/en/DeviceDoc/20005624B.pdf
-$ENDCMP
-#
 $CMP LM66100
 D Ideal Diode
 F https://www.ti.com/lit/ds/symlink/lm66100.pdf?HQS=dis-dk-null-digikeymode-dsf-pf-null-wwe&ts=1609185393082
