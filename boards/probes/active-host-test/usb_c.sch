@@ -14,10 +14,10 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Connector:USB_C_Receptacle J?
+L Connector:USB_C_Receptacle J201
 U 1 1 5FEAB244
 P 1350 2100
-F 0 "J?" H 1457 3367 50  0000 C CNN
+F 0 "J201" H 1457 3367 50  0000 C CNN
 F 1 "USB_C_Receptacle" H 1457 3276 50  0000 C CNN
 F 2 "" H 1500 2100 50  0001 C CNN
 F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 1500 2100 50  0001 C CNN
@@ -25,10 +25,10 @@ F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 1500 21
 	1    0    0    -1  
 $EndComp
 $Comp
-L Interface_USB:FUSB302BMPX U?
+L Interface_USB:FUSB302BMPX U201
 U 1 1 5FEADEAA
 P 1750 6450
-F 0 "U?" H 2050 6100 50  0000 C CNN
+F 0 "U201" H 2050 6100 50  0000 C CNN
 F 1 "FUSB302BMPX" H 2250 6900 50  0000 C CNN
 F 2 "Package_DFN_QFN:WQFN-14-1EP_2.5x2.5mm_P0.5mm_EP1.45x1.45mm" H 1750 5950 50  0001 C CNN
 F 3 "http://www.onsemi.com/pub/Collateral/FUSB302B-D.PDF" H 1850 6050 50  0001 C CNN
@@ -51,10 +51,10 @@ Wire Wire Line
 Wire Wire Line
 	1750 6850 1750 7050
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0114
 U 1 1 5FEB48CA
 P 1750 7050
-F 0 "#PWR?" H 1750 6800 50  0001 C CNN
+F 0 "#PWR0114" H 1750 6800 50  0001 C CNN
 F 1 "GND" H 1755 6877 50  0000 C CNN
 F 2 "" H 1750 7050 50  0001 C CNN
 F 3 "" H 1750 7050 50  0001 C CNN
@@ -69,17 +69,15 @@ Text Label 2200 1300 0    50   ~ 0
 CC1
 Text Label 2200 1400 0    50   ~ 0
 CC2
-Wire Wire Line
-	1950 1100 2200 1100
-Text Label 2200 1100 0    50   ~ 0
+Text Label 3400 1100 0    50   ~ 0
 VBUS
 NoConn ~ 1950 1600
 NoConn ~ 1950 1700
 NoConn ~ 1950 1800
 NoConn ~ 1950 1900
-Text Label 2300 3300 0    50   ~ 0
+Text Label 3350 3300 1    50   ~ 0
 SBU1
-Text Label 2300 3400 0    50   ~ 0
+Text Label 3350 3400 3    50   ~ 0
 SBU2
 Wire Wire Line
 	1950 2400 1950 2500
@@ -116,10 +114,10 @@ Wire Wire Line
 	2300 2100 2550 2100
 Connection ~ 2300 2100
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0115
 U 1 1 5FEBFB76
 P 1350 3850
-F 0 "#PWR?" H 1350 3600 50  0001 C CNN
+F 0 "#PWR0115" H 1350 3600 50  0001 C CNN
 F 1 "GND" H 1355 3677 50  0000 C CNN
 F 2 "" H 1350 3850 50  0001 C CNN
 F 3 "" H 1350 3850 50  0001 C CNN
@@ -131,18 +129,16 @@ Wire Wire Line
 Wire Wire Line
 	1050 3700 1050 3850
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0116
 U 1 1 5FEC192C
 P 1050 3850
-F 0 "#PWR?" H 1050 3600 50  0001 C CNN
+F 0 "#PWR0116" H 1050 3600 50  0001 C CNN
 F 1 "GND" H 1055 3677 50  0000 C CNN
 F 2 "" H 1050 3850 50  0001 C CNN
 F 3 "" H 1050 3850 50  0001 C CNN
 	1    1050 3850
 	1    0    0    -1  
 $EndComp
-Text Notes 650  4400 0    50   ~ 0
-I'm not 100% sure about the shield connection.\nI've heard you should only connect one shield to ground.\nQuick searches haven't confirmed or invalidated this.
 Wire Wire Line
 	2250 6350 2450 6350
 Wire Wire Line
@@ -162,10 +158,10 @@ Wire Wire Line
 Wire Wire Line
 	1650 5600 1350 5600
 $Comp
-L Device:R R?
+L Device:R R201
 U 1 1 5FEC5F38
 P 1850 5750
-F 0 "R?" H 1920 5796 50  0000 L CNN
+F 0 "R201" H 1920 5796 50  0000 L CNN
 F 1 "0R" H 1920 5705 50  0000 L CNN
 F 2 "" V 1780 5750 50  0001 C CNN
 F 3 "~" H 1850 5750 50  0001 C CNN
@@ -185,10 +181,10 @@ Connection ~ 1850 5900
 Text Notes 750  5400 0    50   ~ 0
 Unsure if VCONN needs to be connected.\nWe won't use it, but I'm not sure if the IC works without it.
 $Comp
-L Device:C_Small C?
+L Device:C_Small C201
 U 1 1 5FEC8A7C
 P 1050 5850
-F 0 "C?" H 1142 5896 50  0000 L CNN
+F 0 "C201" H 1142 5896 50  0000 L CNN
 F 1 "0u1" H 1142 5805 50  0000 L CNN
 F 2 "" H 1050 5850 50  0001 C CNN
 F 3 "~" H 1050 5850 50  0001 C CNN
@@ -196,10 +192,10 @@ F 3 "~" H 1050 5850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C?
+L Device:C_Small C202
 U 1 1 5FEC8FCB
 P 1350 5850
-F 0 "C?" H 1442 5896 50  0000 L CNN
+F 0 "C202" H 1442 5896 50  0000 L CNN
 F 1 "1u" H 1442 5805 50  0000 L CNN
 F 2 "" H 1350 5850 50  0001 C CNN
 F 3 "~" H 1350 5850 50  0001 C CNN
@@ -222,10 +218,10 @@ Wire Wire Line
 	1050 5950 1050 6050
 Connection ~ 1050 5950
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0117
 U 1 1 5FECB406
 P 1050 6050
-F 0 "#PWR?" H 1050 5800 50  0001 C CNN
+F 0 "#PWR0117" H 1050 5800 50  0001 C CNN
 F 1 "GND" H 1055 5877 50  0000 C CNN
 F 2 "" H 1050 6050 50  0001 C CNN
 F 3 "" H 1050 6050 50  0001 C CNN
@@ -234,10 +230,8 @@ F 3 "" H 1050 6050 50  0001 C CNN
 $EndComp
 Text HLabel 7900 2650 0    50   Input ~ 0
 PROBE_PWR_EN
-Text HLabel 7950 4100 0    50   Input ~ 0
+Text HLabel 7600 4550 0    50   Input ~ 0
 VBUS_~EN
-Text HLabel 7950 4000 0    50   Input ~ 0
-+5V
 Text Label 9050 4000 0    50   ~ 0
 VBUS
 Text Label 2550 2400 0    50   ~ 0
@@ -245,10 +239,10 @@ Text Label 2550 2400 0    50   ~ 0
 Text Label 2550 2100 0    50   ~ 0
 -7V_GATED
 $Comp
-L Device:Q_PMOS_DGS Q?
+L Device:Q_PMOS_DGS Q203
 U 1 1 5FEF7D93
 P 9950 1550
-F 0 "Q?" H 10155 1596 50  0000 L CNN
+F 0 "Q203" H 10155 1596 50  0000 L CNN
 F 1 "Q_PMOS_DGS" H 10155 1505 50  0000 L CNN
 F 2 "" H 10150 1650 50  0001 C CNN
 F 3 "~" H 9950 1550 50  0001 C CNN
@@ -256,10 +250,10 @@ F 3 "~" H 9950 1550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R206
 U 1 1 5FF11E9A
 P 9300 1150
-F 0 "R?" H 9370 1196 50  0000 L CNN
+F 0 "R206" H 9370 1196 50  0000 L CNN
 F 1 "10k" H 9370 1105 50  0000 L CNN
 F 2 "" V 9230 1150 50  0001 C CNN
 F 3 "~" H 9300 1150 50  0001 C CNN
@@ -271,10 +265,10 @@ Wire Wire Line
 Wire Wire Line
 	10100 3400 10100 3150
 $Comp
-L Device:R R?
+L Device:R R207
 U 1 1 5FF18D9C
 P 9400 3000
-F 0 "R?" H 9470 3046 50  0000 L CNN
+F 0 "R207" H 9470 3046 50  0000 L CNN
 F 1 "10k" H 9470 2955 50  0000 L CNN
 F 2 "" V 9330 3000 50  0001 C CNN
 F 3 "~" H 9400 3000 50  0001 C CNN
@@ -297,10 +291,10 @@ Wire Wire Line
 Text Label 10500 2350 0    50   ~ 0
 -7V_GATED
 $Comp
-L Device:Q_PNP_BCE Q?
+L Device:Q_PNP_BCE Q201
 U 1 1 5FF2357A
 P 8950 2750
-F 0 "Q?" V 9278 2750 50  0000 C CNN
+F 0 "Q201" V 9278 2750 50  0000 C CNN
 F 1 "Q_PNP_BCE" V 9187 2750 50  0000 C CNN
 F 2 "" H 9150 2850 50  0001 C CNN
 F 3 "~" H 8950 2750 50  0001 C CNN
@@ -308,10 +302,10 @@ F 3 "~" H 8950 2750 50  0001 C CNN
 	0    1    -1   0   
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0118
 U 1 1 5FF24ABE
 P 8950 3100
-F 0 "#PWR?" H 8950 2850 50  0001 C CNN
+F 0 "#PWR0118" H 8950 2850 50  0001 C CNN
 F 1 "GND" H 8955 2927 50  0000 C CNN
 F 2 "" H 8950 3100 50  0001 C CNN
 F 3 "" H 8950 3100 50  0001 C CNN
@@ -321,10 +315,10 @@ $EndComp
 Wire Wire Line
 	8950 2950 8950 3100
 $Comp
-L Device:R R?
+L Device:R R209
 U 1 1 5FF27983
 P 9550 2650
-F 0 "R?" V 9343 2650 50  0000 C CNN
+F 0 "R209" V 9343 2650 50  0000 C CNN
 F 1 "100R" V 9434 2650 50  0000 C CNN
 F 2 "" V 9480 2650 50  0001 C CNN
 F 3 "~" H 9550 2650 50  0001 C CNN
@@ -332,10 +326,10 @@ F 3 "~" H 9550 2650 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:Q_NMOS_DGS Q?
+L Device:Q_NMOS_DGS Q204
 U 1 1 5FEF8C7D
 P 10000 2650
-F 0 "Q?" H 10204 2696 50  0000 L CNN
+F 0 "Q204" H 10204 2696 50  0000 L CNN
 F 1 "Q_NMOS_DGS" H 10204 2605 50  0000 L CNN
 F 2 "" H 10200 2750 50  0001 C CNN
 F 3 "~" H 10000 2650 50  0001 C CNN
@@ -354,10 +348,10 @@ Connection ~ 9400 2650
 Wire Wire Line
 	8750 2650 8550 2650
 $Comp
-L Device:R R?
+L Device:R R204
 U 1 1 5FF317D1
 P 8400 2650
-F 0 "R?" V 8193 2650 50  0000 C CNN
+F 0 "R204" V 8193 2650 50  0000 C CNN
 F 1 "10k" V 8284 2650 50  0000 C CNN
 F 2 "" V 8330 2650 50  0001 C CNN
 F 3 "~" H 8400 2650 50  0001 C CNN
@@ -367,10 +361,10 @@ $EndComp
 Text Notes 7250 850  0    50   ~ 0
 Modelled in LTSpice and seems to work,\nhaven't done full analysis.
 $Comp
-L Device:Q_NPN_BCE Q?
+L Device:Q_NPN_BCE Q202
 U 1 1 5FF399E2
 P 9200 2000
-F 0 "Q?" H 9391 2046 50  0000 L CNN
+F 0 "Q202" H 9391 2046 50  0000 L CNN
 F 1 "Q_NPN_BCE" H 9391 1955 50  0000 L CNN
 F 2 "" H 9400 2100 50  0001 C CNN
 F 3 "~" H 9200 2000 50  0001 C CNN
@@ -378,10 +372,10 @@ F 3 "~" H 9200 2000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0119
 U 1 1 5FF3BF1C
 P 9300 2300
-F 0 "#PWR?" H 9300 2050 50  0001 C CNN
+F 0 "#PWR0119" H 9300 2050 50  0001 C CNN
 F 1 "GND" H 9305 2127 50  0000 C CNN
 F 2 "" H 9300 2300 50  0001 C CNN
 F 3 "" H 9300 2300 50  0001 C CNN
@@ -389,10 +383,10 @@ F 3 "" H 9300 2300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R205
 U 1 1 5FF3DDF3
 P 8550 2000
-F 0 "R?" V 8343 2000 50  0000 C CNN
+F 0 "R205" V 8343 2000 50  0000 C CNN
 F 1 "10k" V 8434 2000 50  0000 C CNN
 F 2 "" V 8480 2000 50  0001 C CNN
 F 3 "~" H 8550 2000 50  0001 C CNN
@@ -404,10 +398,10 @@ Wire Wire Line
 Wire Wire Line
 	9300 2200 9300 2300
 $Comp
-L Device:R R?
+L Device:R R208
 U 1 1 5FF5C1FA
 P 9500 1550
-F 0 "R?" V 9293 1550 50  0000 C CNN
+F 0 "R208" V 9293 1550 50  0000 C CNN
 F 1 "100R" V 9384 1550 50  0000 C CNN
 F 2 "" V 9430 1550 50  0001 C CNN
 F 3 "~" H 9500 1550 50  0001 C CNN
@@ -437,10 +431,10 @@ Wire Wire Line
 Wire Wire Line
 	8100 2650 8250 2650
 $Comp
-L project:LM66100 U?
+L project:LM66100 U202
 U 1 1 5FECA27D
 P 8450 4050
-F 0 "U?" H 8475 4325 50  0000 C CNN
+F 0 "U202" H 8475 4325 50  0000 C CNN
 F 1 "LM66100" H 8475 4234 50  0000 C CNN
 F 2 "" H 8400 4050 50  0001 C CNN
 F 3 "https://www.ti.com/lit/ds/symlink/lm66100.pdf?HQS=dis-dk-null-digikeymode-dsf-pf-null-wwe&ts=1609185393082" H 8400 4050 50  0001 C CNN
@@ -448,13 +442,11 @@ F 4 "296-53541-1-ND" H 8450 4050 50  0001 C CNN "DPN"
 	1    8450 4050
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	7950 4000 8150 4000
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0120
 U 1 1 5FED23B4
 P 8050 4550
-F 0 "#PWR?" H 8050 4300 50  0001 C CNN
+F 0 "#PWR0120" H 8050 4300 50  0001 C CNN
 F 1 "GND" H 8055 4377 50  0000 C CNN
 F 2 "" H 8050 4550 50  0001 C CNN
 F 3 "" H 8050 4550 50  0001 C CNN
@@ -467,8 +459,6 @@ Wire Wire Line
 	8150 4400 8050 4400
 Wire Wire Line
 	8050 4400 8050 4550
-Wire Wire Line
-	7950 4100 8150 4100
 NoConn ~ 8800 4400
 Text Notes 7550 4950 0    50   ~ 0
 Cheaper than doing it with discrete components
@@ -507,14 +497,212 @@ Wire Notes Line
 	700  7300 700  5200
 Wire Notes Line
 	700  5200 3100 5200
-Text Notes 7550 1450 0    50   ~ 0
-TODO check base resistor values
-Text HLabel 2800 3300 2    50   Input ~ 0
+Text HLabel 3400 3300 2    50   Input ~ 0
 SBU1
-Text HLabel 2800 3400 2    50   Input ~ 0
+Text HLabel 3400 3400 2    50   Input ~ 0
 SBU2
 Wire Wire Line
-	1950 3300 2800 3300
+	1950 3300 2300 3300
+Text Notes 2050 1800 0    50   ~ 0
+Doesn't make sense to attach these,\nwhen we have multiple ports, which one attaches?\nWhat even do you use this port for?
+$Comp
+L Device:R_Small R202
+U 1 1 5FF5E488
+P 2900 3300
+F 0 "R202" V 2704 3300 50  0000 C CNN
+F 1 "0R" V 2795 3300 50  0000 C CNN
+F 2 "" H 2900 3300 50  0001 C CNN
+F 3 "~" H 2900 3300 50  0001 C CNN
+	1    2900 3300
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R203
+U 1 1 5FF5E98B
+P 3200 3400
+F 0 "R203" V 3004 3400 50  0000 C CNN
+F 1 "0R" V 3095 3400 50  0000 C CNN
+F 2 "" H 3200 3400 50  0001 C CNN
+F 3 "~" H 3200 3400 50  0001 C CNN
+	1    3200 3400
+	0    1    1    0   
+$EndComp
 Wire Wire Line
-	1950 3400 2800 3400
+	1950 3400 3100 3400
+Wire Wire Line
+	3000 3300 3400 3300
+Wire Wire Line
+	3300 3400 3400 3400
+Text Notes 2600 3000 0    50   ~ 0
+Can't decide if I want to add some level-shifting/protection here.\nAdding the jumper resistors to bodge in a circuit and test it w/o\nanother revision if I decide to add it in later.
+Text HLabel 7400 4000 0    50   Input ~ 0
++5V
+$Comp
+L Device:R R?
+U 1 1 6008066D
+P 7650 4150
+F 0 "R?" V 7443 4150 50  0000 C CNN
+F 1 "10k" V 7534 4150 50  0000 C CNN
+F 2 "" V 7580 4150 50  0001 C CNN
+F 3 "~" H 7650 4150 50  0001 C CNN
+	1    7650 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7800 4100 7800 4550
+Wire Wire Line
+	7800 4550 7650 4550
+Wire Wire Line
+	7800 4100 8150 4100
+Wire Wire Line
+	7400 4000 7650 4000
+Connection ~ 7650 4000
+Wire Wire Line
+	7650 4000 8150 4000
+Wire Wire Line
+	7650 4300 7650 4550
+Connection ~ 7650 4550
+Wire Wire Line
+	7650 4550 7600 4550
+$Comp
+L Device:Thermistor_PTC TH?
+U 1 1 600B2B6E
+P 2800 1100
+F 0 "TH?" V 2510 1100 50  0000 C CNN
+F 1 "Thermistor_PTC" V 2601 1100 50  0000 C CNN
+F 2 "" H 2850 900 50  0001 L CNN
+F 3 "~" H 2800 1100 50  0001 C CNN
+	1    2800 1100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2950 1100 3400 1100
+Wire Wire Line
+	1950 1100 2650 1100
+Text Label 2100 1100 0    50   ~ 0
+VBUS_FUSED
+Text Notes 2500 2300 0    50   ~ 0
+Not doing current limiting here because I'm not sure what the final\npower distribution scheme will be.
+$Comp
+L project:SP4010 U?
+U 1 1 5FFA4098
+P 2400 3800
+F 0 "U?" V 2354 3988 50  0000 L CNN
+F 1 "SP4010" V 2445 3988 50  0000 L CNN
+F 2 "" H 2350 3900 50  0001 C CNN
+F 3 "" H 2350 3900 50  0001 C CNN
+	1    2400 3800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2300 3300 2300 3550
+Connection ~ 2300 3300
+Wire Wire Line
+	2300 3300 2500 3300
+Wire Wire Line
+	2500 3300 2500 3550
+Connection ~ 2500 3300
+Wire Wire Line
+	2500 3300 2800 3300
+Wire Wire Line
+	2400 3550 2400 3500
+Wire Wire Line
+	2400 3500 2950 3500
+Wire Wire Line
+	2950 3500 2950 3600
+$Comp
+L power:GND #PWR?
+U 1 1 5FFABD30
+P 2950 3600
+F 0 "#PWR?" H 2950 3350 50  0001 C CNN
+F 1 "GND" H 2955 3427 50  0000 C CNN
+F 2 "" H 2950 3600 50  0001 C CNN
+F 3 "" H 2950 3600 50  0001 C CNN
+	1    2950 3600
+	1    0    0    -1  
+$EndComp
+Text Notes 2600 4000 0    50   ~ 0
+TODO proper symbol for SP4010\n
+NoConn ~ 2300 4050
+NoConn ~ 2400 4050
+NoConn ~ 2500 4050
+$Comp
+L project:SP4010 U?
+U 1 1 5FFB81EC
+P 4000 4650
+F 0 "U?" V 3954 4838 50  0000 L CNN
+F 1 "SP4010" V 4045 4838 50  0000 L CNN
+F 2 "" H 3950 4750 50  0001 C CNN
+F 3 "" H 3950 4750 50  0001 C CNN
+	1    4000 4650
+	0    1    1    0   
+$EndComp
+Text Label 3900 4150 0    50   ~ 0
+CC1
+Text Label 4100 4150 0    50   ~ 0
+CC2
+Wire Wire Line
+	3900 4150 3900 4400
+Wire Wire Line
+	4100 4150 4100 4400
+Wire Wire Line
+	4000 4400 4000 4300
+Wire Wire Line
+	4000 4300 4350 4300
+Wire Wire Line
+	4350 4300 4350 4400
+$Comp
+L power:GND #PWR?
+U 1 1 5FFC6405
+P 4350 4400
+F 0 "#PWR?" H 4350 4150 50  0001 C CNN
+F 1 "GND" H 4355 4227 50  0000 C CNN
+F 2 "" H 4350 4400 50  0001 C CNN
+F 3 "" H 4350 4400 50  0001 C CNN
+	1    4350 4400
+	1    0    0    -1  
+$EndComp
+NoConn ~ 3900 4900
+NoConn ~ 4000 4900
+NoConn ~ 4100 4900
+$Comp
+L project:SP4010 U?
+U 1 1 5FFD71DE
+P 4750 4650
+F 0 "U?" V 4704 4838 50  0000 L CNN
+F 1 "SP4010" V 4795 4838 50  0000 L CNN
+F 2 "" H 4700 4750 50  0001 C CNN
+F 3 "" H 4700 4750 50  0001 C CNN
+	1    4750 4650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4650 4150 4650 4400
+Wire Wire Line
+	4750 4400 4750 4300
+Wire Wire Line
+	4750 4300 4850 4300
+Wire Wire Line
+	5100 4300 5100 4400
+$Comp
+L power:GND #PWR?
+U 1 1 5FFD71EB
+P 5100 4400
+F 0 "#PWR?" H 5100 4150 50  0001 C CNN
+F 1 "GND" H 5105 4227 50  0000 C CNN
+F 2 "" H 5100 4400 50  0001 C CNN
+F 3 "" H 5100 4400 50  0001 C CNN
+	1    5100 4400
+	1    0    0    -1  
+$EndComp
+NoConn ~ 4650 4900
+NoConn ~ 4750 4900
+NoConn ~ 4850 4900
+Wire Wire Line
+	4850 4400 4850 4300
+Connection ~ 4850 4300
+Wire Wire Line
+	4850 4300 5100 4300
+Text Label 4650 4150 0    50   ~ 0
+VBUS_FUSED
 $EndSCHEMATC

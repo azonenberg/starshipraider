@@ -1,5 +1,25 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP AP2114H
+D 1.8V Fixed LDO
+F https://www.diodes.com/assets/Datasheets/AP2114.pdf
+$ENDCMP
+#
+$CMP AP7366-ADJ
+D Adjustable LDO
+F https://www.diodes.com/assets/Datasheets/AP7366.pdf
+$ENDCMP
+#
+$CMP AZ1117C-FIXED
+D 3.3V Fixed LDO
+F https://www.diodes.com/assets/Datasheets/AZ1117C.pdf
+$ENDCMP
+#
+$CMP DSC61xx
+D Low-Power MEMS Oscillator
+F https://ww1.microchip.com/downloads/en/DeviceDoc/20005624B.pdf
+$ENDCMP
+#
 $CMP LM66100
 D Ideal Diode
 F https://www.ti.com/lit/ds/symlink/lm66100.pdf?HQS=dis-dk-null-digikeymode-dsf-pf-null-wwe&ts=1609185393082
