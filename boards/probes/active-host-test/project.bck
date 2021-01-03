@@ -5,6 +5,11 @@ D 1.8V Fixed LDO
 F https://www.diodes.com/assets/Datasheets/AP2114.pdf
 $ENDCMP
 #
+$CMP AP7365
+D Adjustable LDO
+F https://www.diodes.com/assets/Datasheets/AP7366.pdf
+$ENDCMP
+#
 $CMP AP7366-ADJ
 D Adjustable LDO
 F https://www.diodes.com/assets/Datasheets/AP7366.pdf
@@ -23,6 +28,11 @@ $ENDCMP
 $CMP LM66100
 D Ideal Diode
 F https://www.ti.com/lit/ds/symlink/lm66100.pdf?HQS=dis-dk-null-digikeymode-dsf-pf-null-wwe&ts=1609185393082
+$ENDCMP
+#
+$CMP TLV755
+D Adjustable LDO
+F https://www.diodes.com/assets/Datasheets/AP7366.pdf
 $ENDCMP
 #
 #End Doc Library

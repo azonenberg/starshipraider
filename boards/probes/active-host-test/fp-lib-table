@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name active-host-test)(type KiCad)(uri ${KIPRJMOD}/active-host-test.pretty)(options "")(descr ""))
+)

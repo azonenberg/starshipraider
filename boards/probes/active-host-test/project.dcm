@@ -25,4 +25,9 @@ D Ideal Diode
 F https://www.ti.com/lit/ds/symlink/lm66100.pdf?HQS=dis-dk-null-digikeymode-dsf-pf-null-wwe&ts=1609185393082
 $ENDCMP
 #
+$CMP TLV755
+D Adjustable LDO
+F https://www.diodes.com/assets/Datasheets/AP7366.pdf
+$ENDCMP
+#
 #End Doc Library
