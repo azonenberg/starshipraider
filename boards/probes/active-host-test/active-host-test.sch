@@ -183,20 +183,6 @@ Wire Wire Line
 	1350 6150 1650 6150
 Wire Wire Line
 	1350 6350 1650 6350
-Text GLabel 2800 5750 0    50   Input ~ 0
-I2C_SDA
-Text GLabel 2800 5950 0    50   Input ~ 0
-I2C_SCL
-Text GLabel 2800 6150 0    50   Input ~ 0
-I2C_INT_B
-Text GLabel 1350 6550 0    50   Input ~ 0
-PROBE_PWR_EN
-Text GLabel 1350 6750 0    50   Input ~ 0
-PROBE_VBUS_EN_B
-Text GLabel 2800 6350 0    50   Input ~ 0
-SBU1
-Text GLabel 2800 6550 0    50   Input ~ 0
-SBU2
 $Comp
 L Connector:TestPoint TP105
 U 1 1 603CCA41
@@ -285,10 +271,6 @@ F 4 "36-5016CT-ND" H 3250 6550 50  0001 C CNN "DPN"
 	1    3250 6550
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	3250 6550 2800 6550
-Wire Wire Line
-	2800 6350 3250 6350
 Wire Wire Line
 	2800 6150 3250 6150
 Wire Wire Line
@@ -525,49 +507,6 @@ F 4 "36-5016CT-ND" H 3250 6750 50  0001 C CNN "DPN"
 	1    3250 6750
 	0    1    1    0   
 $EndComp
-$Comp
-L Connector:TestPoint TP113
-U 1 1 600496BC
-P 3250 6950
-F 0 "TP113" V 3204 7138 50  0000 L CNN
-F 1 "TestPoint" V 3295 7138 50  0000 L CNN
-F 2 "active-host-test:Keystone_5016" H 3450 6950 50  0001 C CNN
-F 3 "~" H 3450 6950 50  0001 C CNN
-F 4 "36-5016CT-ND" H 3250 6950 50  0001 C CNN "DPN"
-	1    3250 6950
-	0    1    1    0   
-$EndComp
-$Comp
-L Connector:TestPoint TP114
-U 1 1 60049A2D
-P 3250 7150
-F 0 "TP114" V 3204 7338 50  0000 L CNN
-F 1 "TestPoint" V 3295 7338 50  0000 L CNN
-F 2 "active-host-test:Keystone_5016" H 3450 7150 50  0001 C CNN
-F 3 "~" H 3450 7150 50  0001 C CNN
-F 4 "36-5016CT-ND" H 3250 7150 50  0001 C CNN "DPN"
-	1    3250 7150
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	3250 6750 3250 6950
-Connection ~ 3250 6950
-Wire Wire Line
-	3250 6950 3250 7150
-Connection ~ 3250 7150
-Wire Wire Line
-	3250 7150 3250 7300
-$Comp
-L power:GND #PWR0105
-U 1 1 6004B55E
-P 3250 7300
-F 0 "#PWR0105" H 3250 7050 50  0001 C CNN
-F 1 "GND" H 3255 7127 50  0000 C CNN
-F 2 "" H 3250 7300 50  0001 C CNN
-F 3 "" H 3250 7300 50  0001 C CNN
-	1    3250 7300
-	1    0    0    -1  
-$EndComp
 Wire Notes Line
 	3850 7550 550  7550
 Wire Notes Line
@@ -660,6 +599,8 @@ F9 "SPI_COPI" I L 4800 3300 50
 F10 "SPI_CIPO" I L 4800 3400 50 
 F11 "SPI_~CS" I L 4800 3500 50 
 F12 "SPI_CLK" I L 4800 3600 50 
+F13 "UART_TX" I L 4800 3950 50 
+F14 "UART_RX" I L 4800 4050 50 
 $EndSheet
 $Sheet
 S 8850 900  800  1650
@@ -743,4 +684,63 @@ Text Label 5050 6250 1    50   ~ 0
 USRLED1
 Text Label 5450 6250 1    50   ~ 0
 USRLED2
+Wire Wire Line
+	3250 6350 3250 6550
+Connection ~ 3250 6550
+Wire Wire Line
+	3250 6550 3250 6750
+Connection ~ 3250 6750
+Wire Wire Line
+	3250 6750 3250 7000
+$Comp
+L power:GND #PWR0105
+U 1 1 601B7F7E
+P 3250 7000
+F 0 "#PWR0105" H 3250 6750 50  0001 C CNN
+F 1 "GND" H 3255 6827 50  0000 C CNN
+F 2 "" H 3250 7000 50  0001 C CNN
+F 3 "" H 3250 7000 50  0001 C CNN
+	1    3250 7000
+	1    0    0    -1  
+$EndComp
+Text Label 1350 6550 2    50   ~ 0
+PROBE_PWR_EN
+Text Label 1350 6750 2    50   ~ 0
+PROBE_VBUS_~EN
+Text Label 2800 5750 2    50   ~ 0
+I2C_SDA
+Text Label 2800 5950 2    50   ~ 0
+I2C_SCL
+Text Label 2800 6150 2    50   ~ 0
+I2C_~INT
+$Comp
+L Connector:Conn_01x03_Male J103
+U 1 1 60268E0C
+P 3800 4050
+F 0 "J103" H 3908 4331 50  0000 C CNN
+F 1 "Conn_01x03_Male" H 3908 4240 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 3800 4050 50  0001 C CNN
+F 3 "~" H 3800 4050 50  0001 C CNN
+	1    3800 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 3950 4000 3950
+Wire Wire Line
+	4800 4050 4000 4050
+Wire Wire Line
+	4000 4150 4150 4150
+Wire Wire Line
+	4150 4150 4150 4250
+$Comp
+L power:GND #PWR0113
+U 1 1 6026D2D3
+P 4150 4250
+F 0 "#PWR0113" H 4150 4000 50  0001 C CNN
+F 1 "GND" H 4155 4077 50  0000 C CNN
+F 2 "" H 4150 4250 50  0001 C CNN
+F 3 "" H 4150 4250 50  0001 C CNN
+	1    4150 4250
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
