@@ -25,6 +25,21 @@ D Ideal Diode
 F https://www.ti.com/lit/ds/symlink/lm66100.pdf?HQS=dis-dk-null-digikeymode-dsf-pf-null-wwe&ts=1609185393082
 $ENDCMP
 #
+$CMP STS232033B102
+D 2-line 3.3v TVS Diode
+F https://www.eaton.com/content/dam/eaton/products/electronic-components/resources/data-sheet/eaton-sts232xxxbxxx-tvs-diode-array-esd-suppressor-data-sheet.pdf
+$ENDCMP
+#
+$CMP STS232050B751
+D 2-line 5v TVS Diode
+F https://www.eaton.com/content/dam/eaton/products/electronic-components/resources/data-sheet/eaton-sts232xxxbxxx-tvs-diode-array-esd-suppressor-data-sheet.pdf
+$ENDCMP
+#
+$CMP STS232120B301
+D 2-line 12v TVS Diode
+F https://www.eaton.com/content/dam/eaton/products/electronic-components/resources/data-sheet/eaton-sts232xxxbxxx-tvs-diode-array-esd-suppressor-data-sheet.pdf
+$ENDCMP
+#
 $CMP TLV755
 D Adjustable LDO
 F https://www.diodes.com/assets/Datasheets/AP7366.pdf
