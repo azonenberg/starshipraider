@@ -19,7 +19,7 @@ U 1 1 5FFE8483
 P 1400 2000
 F 0 "J201" H 1507 3267 50  0000 C CNN
 F 1 "USB_C_Receptacle" H 1507 3176 50  0000 C CNN
-F 2 "active-host-test:10137062" H 1550 2000 50  0001 C CNN
+F 2 "active-probe-test:10137062" H 1550 2000 50  0001 C CNN
 F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 1550 2000 50  0001 C CNN
 F 4 "609-6109-1-ND" H 1400 2000 50  0001 C CNN "DPN"
 	1    1400 2000
@@ -70,8 +70,8 @@ Text Label 2250 1200 0    50   ~ 0
 CC1
 Text Label 2250 1300 0    50   ~ 0
 CC2
-Text Label 3600 1000 0    50   ~ 0
-VBUS
+Text Label 2300 1000 0    50   ~ 0
+VBUS_RAW
 NoConn ~ 2000 1500
 NoConn ~ 2000 1600
 NoConn ~ 2000 1700
@@ -225,7 +225,7 @@ F 4 "507-1813-1-ND" H 3000 1000 50  0001 C CNN "DPN"
 	1    3000 1000
 	0    1    1    0   
 $EndComp
-Text Label 2150 1000 0    50   ~ 0
+Text Label 3550 1000 0    50   ~ 0
 VBUS_FUSED
 Text Label 7750 1450 1    50   ~ 0
 CC1
