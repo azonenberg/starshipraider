@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name xilinx7)(type Legacy)(uri ${KIPRJMOD}/xilinx7.lib)(options "")(descr ""))
+  (lib (name project)(type Legacy)(uri ${KIPRJMOD}/project.lib)(options "")(descr ""))
+)

@@ -1,0 +1,48 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP AP2114H
+D 1.8V Fixed LDO
+F https://www.diodes.com/assets/Datasheets/AP2114.pdf
+$ENDCMP
+#
+$CMP AP7366-ADJ
+D Adjustable LDO
+F https://www.diodes.com/assets/Datasheets/AP7366.pdf
+$ENDCMP
+#
+$CMP AZ1117C-FIXED
+D 3.3V Fixed LDO
+F https://www.diodes.com/assets/Datasheets/AZ1117C.pdf
+$ENDCMP
+#
+$CMP DSC61xx
+D Low-Power MEMS Oscillator
+F https://ww1.microchip.com/downloads/en/DeviceDoc/20005624B.pdf
+$ENDCMP
+#
+$CMP LM66100
+D Ideal Diode
+F https://www.ti.com/lit/ds/symlink/lm66100.pdf?HQS=dis-dk-null-digikeymode-dsf-pf-null-wwe&ts=1609185393082
+$ENDCMP
+#
+$CMP STS232033B102
+D 2-line 3.3v TVS Diode
+F https://www.eaton.com/content/dam/eaton/products/electronic-components/resources/data-sheet/eaton-sts232xxxbxxx-tvs-diode-array-esd-suppressor-data-sheet.pdf
+$ENDCMP
+#
+$CMP STS232050B751
+D 2-line 5v TVS Diode
+F https://www.eaton.com/content/dam/eaton/products/electronic-components/resources/data-sheet/eaton-sts232xxxbxxx-tvs-diode-array-esd-suppressor-data-sheet.pdf
+$ENDCMP
+#
+$CMP STS232120B301
+D 2-line 12v TVS Diode
+F https://www.eaton.com/content/dam/eaton/products/electronic-components/resources/data-sheet/eaton-sts232xxxbxxx-tvs-diode-array-esd-suppressor-data-sheet.pdf
+$ENDCMP
+#
+$CMP TLV755
+D Adjustable LDO
+F https://www.diodes.com/assets/Datasheets/AP7366.pdf
+$ENDCMP
+#
+#End Doc Library
