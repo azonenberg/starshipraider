@@ -1,0 +1,41 @@
+FTYP SONNETPRJ 18 ! Sonnet Netlist Project File
+VER 17.56
+HEADER
+LIC antikernel2.1.50170 3cfdfeabd719 havequick azonenberg Level3Gold
+DAT 01/19/2021 07:00:40
+BUILT_BY_CREATED sonnet 17.56 01/18/2021 04:54:16
+BUILT_BY_SAVED sonnet 17.56
+MDATE 01/19/2021 07:00:40
+HDATE 01/19/2021 07:00:40
+END HEADER
+DIM
+ANG DEG
+CAP PF
+CON /OH
+FREQ GHZ
+IND NH
+LNG MM
+RES OH
+END DIM
+VAR
+END VAR
+CKT
+S2P 1 3 ../../../../misc/probes/AKL-PT2/v0p4-overmolded-across-terminator-fixture-dbed.s2p
+S4P 0 3 4 2 ../../../../../../../ceph/bulk/datasheets/Analog/Amplifier/ADL5580/ADL5580v4_p1-VinM_p2-VinP_p3-VoM_p4-VoP_Cpk3_051643rA_SN02.S4P
+RES 4 R=50.0 
+DEF2P 1 2 Net R 50.00000
+
+END CKT
+CONTROL
+VARSWP
+OPTIONS  -d
+PUSH
+SPEED 0
+CACHE_ABS 1
+Q_ACC N
+END CONTROL
+VARSWP
+ENABLED Y
+FREQ Y AY SWEEP 0.005 6.0 0.005
+END
+END VARSWP
