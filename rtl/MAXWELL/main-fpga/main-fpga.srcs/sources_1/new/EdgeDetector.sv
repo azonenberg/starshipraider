@@ -55,7 +55,7 @@ module EdgeDetector(
 	// Edge detection
 
 	logic		s0_old		= 0;
-	logic[4:0]	s0_extended;
+	logic[8:0]	s0_extended;
 	assign 		s0_extended	= { s0_old, data };
 
 	always_ff @(posedge clk) begin
@@ -64,7 +64,7 @@ module EdgeDetector(
 		s0_old	<= data[0];
 
 		//Look at each input for each sample cycle
-		for(integer i=3; i>=0; i--) begin
+		for(integer i=7; i>=0; i--) begin
 			edges[i]	<= 	(s0_extended[i] && !s0_extended[i+1] && look_for_rising) ||
 							(!s0_extended[i] && s0_extended[i+1] && look_for_falling);
 		end

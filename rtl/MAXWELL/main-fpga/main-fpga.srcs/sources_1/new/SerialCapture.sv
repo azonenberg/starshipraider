@@ -60,6 +60,45 @@ module SerialCapture #(
 
 	localparam INDEX_BITS = $clog2(SERDES_RATE);
 
+	logic[INDEX_BITS-1:0]	count[3:0];
+	logic[SERDES_RATE-1:0]	work_buf[3:0];
+	logic[1:0]				sampled_valid_adv[3:0];
+	logic[SERDES_RATE-1:0]	sampled_adv[3:0];
+
+	initial begin
+		for(integer i=0; i<4; i++) begin
+			count[i]				= 0;
+			work_buf[i] 			= 0;
+			sampled_valid_adv[i]	= 0;
+			sampled_adv[i]			= 0;
+		end
+	end
+
+	//Pipelined barrel shifter processing 2 bits per iteration. Mux/don't mux.
+	always_ff @(posedge clk) begin
+
+		sampled_valid	<= 0;
+
+		//Four stage pipeline
+		for(integer i=0; i<4; i++) begin
+			sampled_valid_adv[i]	<= 0;
+		end
+
+		//Process valid flags from any pipeline stage
+		//This assumes no more than one stage can be valid at a time,
+		//which should be true for SERDES_RATE >= 8.
+		for(integer i=0; i<4; i++) begin
+			if(sampled_valid_adv[i]) begin
+				sampled_valid[i*2 +: 2]	<= sampled_valid_adv[i];
+				sampled					<= sampled_adv[i];
+			end
+		end
+
+	end
+
+	/*
+
+
 	//Use a one-hot counter to reduce fan-in on the critical path
 	logic[SERDES_RATE:0]	count 		= {1'b1, {SERDES_RATE{1'b0}} };
 
@@ -92,5 +131,6 @@ module SerialCapture #(
 		end
 
 	end
+	*/
 
 endmodule

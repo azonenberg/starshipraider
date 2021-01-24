@@ -30,17 +30,23 @@
 `ifndef InputState_svh
 `define InputState_svh
 
-//4x low-speed sample
-typedef logic[3:0] lssample_t;
+//8x low-speed sample
+typedef logic[7:0] lssample_t;
 
 //32x high speed sample
 typedef logic[31:0] hssample_t;
 
+//All low-speed samples
+typedef lssample_t[91:0]	lssamples_t;
+
+//All high-speed samples
+typedef hssample_t[3:0]		hssamples_t;
+
 //Total set of samples across all channels
 typedef struct packed
 {
-	lssample_t[91:0]	lo;
-	hssample_t[3:0]		hi;
+	lssamples_t	lo;
+	hssamples_t	hi;
 } sample_t;
 
 //Channel number

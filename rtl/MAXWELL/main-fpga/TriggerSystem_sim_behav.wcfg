@@ -7,21 +7,20 @@
          <top_modules>
             <top_module name="TriggerSystem_sim" />
             <top_module name="\$unit_ARPCache_sv " />
-            <top_module name="\$unit_SPIHostInterface_sv " />
             <top_module name="glbl" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="12995001fs"></ZoomEndTime>
+      <ZoomStartTime time="9894625fs"></ZoomStartTime>
+      <ZoomEndTime time="10021076fs"></ZoomEndTime>
       <Cursor1Time time="10000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="269"></NameColumnWidth>
+      <NameColumnWidth column_width="265"></NameColumnWidth>
       <ValueColumnWidth column_width="66"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="19" />
+   <WVObjectSize size="31" />
    <wvobject type="logic" fp_name="/TriggerSystem_sim/k7_clk">
       <obj_property name="ElementShortName">k7_clk</obj_property>
       <obj_property name="ObjectShortName">k7_clk</obj_property>
@@ -33,6 +32,14 @@
    <wvobject type="logic" fp_name="/TriggerSystem_sim/k7_clk_n">
       <obj_property name="ElementShortName">k7_clk_n</obj_property>
       <obj_property name="ObjectShortName">k7_clk_n</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/TriggerSystem_sim/prbs_out">
+      <obj_property name="ElementShortName">prbs_out</obj_property>
+      <obj_property name="ObjectShortName">prbs_out</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/TriggerSystem_sim/clk_800mhz">
+      <obj_property name="ElementShortName">clk_800mhz</obj_property>
+      <obj_property name="ObjectShortName">clk_800mhz</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="/TriggerSystem_sim/clk_125mhz">
       <obj_property name="ElementShortName">clk_125mhz</obj_property>
@@ -72,47 +79,119 @@
    </wvobject>
    <wvobject fp_name="divider63" type="divider">
    </wvobject>
-   <wvobject type="array" fp_name="/TriggerSystem_sim/samples">
-      <obj_property name="ElementShortName">samples</obj_property>
-      <obj_property name="ObjectShortName">samples</obj_property>
+   <wvobject type="array" fp_name="/TriggerSystem_sim/inputs/probe_in_p">
+      <obj_property name="ElementShortName">probe_in_p[91:0]</obj_property>
+      <obj_property name="ObjectShortName">probe_in_p[91:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/TriggerSystem_sim/pconfig">
-      <obj_property name="ElementShortName">pconfig</obj_property>
-      <obj_property name="ObjectShortName">pconfig</obj_property>
+   <wvobject type="array" fp_name="/TriggerSystem_sim/inputs/probe_in_n">
+      <obj_property name="ElementShortName">probe_in_n[91:0]</obj_property>
+      <obj_property name="ObjectShortName">probe_in_n[91:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/TriggerSystem_sim/match_found">
-      <obj_property name="ElementShortName">match_found[3:0][3:0]</obj_property>
-      <obj_property name="ObjectShortName">match_found[3:0][3:0]</obj_property>
+   <wvobject type="array" fp_name="/TriggerSystem_sim/inputs/probe_in_se_p">
+      <obj_property name="ElementShortName">probe_in_se_p[91:0]</obj_property>
+      <obj_property name="ObjectShortName">probe_in_se_p[91:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/TriggerSystem_sim/rconfig">
-      <obj_property name="ElementShortName">rconfig</obj_property>
-      <obj_property name="ObjectShortName">rconfig</obj_property>
+   <wvobject type="array" fp_name="/TriggerSystem_sim/inputs/probe_in_se_n">
+      <obj_property name="ElementShortName">probe_in_se_n[91:0]</obj_property>
+      <obj_property name="ObjectShortName">probe_in_se_n[91:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/TriggerSystem_sim/parallel_match_found">
-      <obj_property name="ElementShortName">parallel_match_found[3:0][3:0]</obj_property>
-      <obj_property name="ObjectShortName">parallel_match_found[3:0][3:0]</obj_property>
+   <wvobject type="array" fp_name="/TriggerSystem_sim/inputs/probe_in_delay_p">
+      <obj_property name="ElementShortName">probe_in_delay_p[91:0]</obj_property>
+      <obj_property name="ObjectShortName">probe_in_delay_p[91:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TriggerSystem_sim/inputs/probe_in_delay_n">
+      <obj_property name="ElementShortName">probe_in_delay_n[91:0]</obj_property>
+      <obj_property name="ObjectShortName">probe_in_delay_n[91:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TriggerSystem_sim/inputs/probe_in_parallel_p">
+      <obj_property name="ElementShortName">probe_in_parallel_p[91:0][3:0]</obj_property>
+      <obj_property name="ObjectShortName">probe_in_parallel_p[91:0][3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TriggerSystem_sim/inputs/probe_in_parallel_n">
+      <obj_property name="ElementShortName">probe_in_parallel_n[91:0][3:0]</obj_property>
+      <obj_property name="ObjectShortName">probe_in_parallel_n[91:0][3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TriggerSystem_sim/inputs/current_sample_0">
+      <obj_property name="ElementShortName">current_sample_0[91:0][3:0]</obj_property>
+      <obj_property name="ObjectShortName">current_sample_0[91:0][3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TriggerSystem_sim/inputs/current_sample_180">
+      <obj_property name="ElementShortName">current_sample_180[91:0][3:0]</obj_property>
+      <obj_property name="ObjectShortName">current_sample_180[91:0][3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TriggerSystem_sim/inputs/current_sample">
+      <obj_property name="ElementShortName">current_sample[91:0][7:0]</obj_property>
+      <obj_property name="ObjectShortName">current_sample[91:0][7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TriggerSystem_sim/inputs/current_sample_ff">
+      <obj_property name="ElementShortName">current_sample_ff[91:0][7:0]</obj_property>
+      <obj_property name="ObjectShortName">current_sample_ff[91:0][7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TriggerSystem_sim/inputs/current_sample_ff2">
+      <obj_property name="ElementShortName">current_sample_ff2[91:0][7:0]</obj_property>
+      <obj_property name="ObjectShortName">current_sample_ff2[91:0][7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TriggerSystem_sim/inputs/samples">
+      <obj_property name="ElementShortName">samples[91:0][7:0]</obj_property>
+      <obj_property name="ObjectShortName">samples[91:0][7:0]</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group906">
+      <obj_property name="label">samples_in_use</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
       <obj_property name="isExpanded"></obj_property>
-      <wvobject type="array" fp_name="/TriggerSystem_sim/parallel_match_found[3]">
-         <obj_property name="ElementShortName">[3][3:0]</obj_property>
-         <obj_property name="ObjectShortName">[3][3:0]</obj_property>
-         <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/TriggerSystem_sim/inputs/samples[12]">
+         <obj_property name="ElementShortName">[12][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[12][7:0]</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/TriggerSystem_sim/parallel_match_found[2]">
-         <obj_property name="ElementShortName">[2][3:0]</obj_property>
-         <obj_property name="ObjectShortName">[2][3:0]</obj_property>
-         <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/TriggerSystem_sim/inputs/samples[11]">
+         <obj_property name="ElementShortName">[11][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[11][7:0]</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/TriggerSystem_sim/parallel_match_found[1]">
-         <obj_property name="ElementShortName">[1][3:0]</obj_property>
-         <obj_property name="ObjectShortName">[1][3:0]</obj_property>
-         <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/TriggerSystem_sim/inputs/samples[10]">
+         <obj_property name="ElementShortName">[10][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[10][7:0]</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/TriggerSystem_sim/parallel_match_found[0]">
-         <obj_property name="ElementShortName">[0][3:0]</obj_property>
-         <obj_property name="ObjectShortName">[0][3:0]</obj_property>
-         <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/TriggerSystem_sim/inputs/samples[9]">
+         <obj_property name="ElementShortName">[9][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[9][7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TriggerSystem_sim/inputs/samples[8]">
+         <obj_property name="ElementShortName">[8][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[8][7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TriggerSystem_sim/inputs/samples[7]">
+         <obj_property name="ElementShortName">[7][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[7][7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TriggerSystem_sim/inputs/samples[6]">
+         <obj_property name="ElementShortName">[6][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[6][7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TriggerSystem_sim/inputs/samples[5]">
+         <obj_property name="ElementShortName">[5][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[5][7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TriggerSystem_sim/inputs/samples[4]">
+         <obj_property name="ElementShortName">[4][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[4][7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TriggerSystem_sim/inputs/samples[3]">
+         <obj_property name="ElementShortName">[3][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[3][7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TriggerSystem_sim/inputs/samples[2]">
+         <obj_property name="ElementShortName">[2][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[2][7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TriggerSystem_sim/inputs/samples[1]">
+         <obj_property name="ElementShortName">[1][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[1][7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TriggerSystem_sim/inputs/samples[0]">
+         <obj_property name="ElementShortName">[0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[0][7:0]</obj_property>
       </wvobject>
    </wvobject>
-   <wvobject fp_name="divider682" type="divider">
+   <wvobject fp_name="divider921" type="divider">
    </wvobject>
 </wave_config>

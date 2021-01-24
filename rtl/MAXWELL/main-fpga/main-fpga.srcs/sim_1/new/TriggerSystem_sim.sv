@@ -166,6 +166,30 @@ module TriggerSystem_sim();
 	end
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// Test signal source 2 : 800 Mbps PRBS-31
+
+	wire	prbs_out;
+
+	logic	clk_800mhz	= 0;
+	always begin
+		#0.625;
+		clk_800mhz = 0;
+		#0.625;
+		clk_800mhz = ready;
+	end
+
+	PRBS31 #(
+		.WIDTH(1),
+		.INITIAL_SEED(1)
+	) prbs (
+		.clk(clk_800mhz),
+		.update(1'b1),
+		.init(1'b0),
+		.seed(),
+		.dout(prbs_out)
+	);
+
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// Convert inputs to differential
 
 	wire[91:0]	low_speed_raw;
@@ -184,8 +208,10 @@ module TriggerSystem_sim();
 	assign low_speed_raw[8] = tx_data[5];
 	assign low_speed_raw[9] = tx_data[6];
 	assign low_speed_raw[10] = tx_data[7];
+	assign low_speed_raw[11] = prbs_out;
+	assign low_speed_raw[12] = clk_800mhz;
 
-	assign low_speed_raw[91:11] = 0;
+	assign low_speed_raw[91:13] = 0;
 
 	wire[91:0]	low_speed_p;
 	wire[91:0]	low_speed_n;
@@ -203,10 +229,11 @@ module TriggerSystem_sim();
 
 	`include "InputState.svh"
 
-	sample_t samples;
+	lssamples_t	samples;
 
 	LowSpeedInputs #(
-		.CHANS_TO_INVERT(0)
+		.CHANS_TO_INVERT(0),
+		.REORDER_MEAD_CHANNELS(0)
 	) inputs (
 		.clk_312mhz(clk_312mhz),
 		.clk_400mhz(clk_400mhz),
@@ -215,12 +242,13 @@ module TriggerSystem_sim();
 		.probe_in_p(low_speed_p),
 		.probe_in_n(low_speed_n),
 
-		.samples(samples.lo)
+		.samples(samples)
 	);
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// Trigger logic
 
+	/*
 	`include "PatternMatcher.svh"
 
 	//Trigger pconfiguration
@@ -280,6 +308,7 @@ module TriggerSystem_sim();
 		.pconfig(rconfig),
 		.match_found(parallel_match_found)
 	);
+	*/
 
 
 endmodule

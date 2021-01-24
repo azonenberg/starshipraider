@@ -40,8 +40,10 @@ module LowSpeedInputs #(
 
 	//Bitmask of channels flipped on the PCB for layout.
 	//Keep this as is for hardware. Set to 0 for simplified simulation.
-	parameter CHANS_TO_INVERT = 92'hBE7_1010_E2AC_8848_337F_6F19
+	parameter CHANS_TO_INVERT 		= 92'hBE7_1010_E2AC_8848_337F_6F19,
 
+	//Set true to correct for MEAD pod channel ordering
+	parameter REORDER_MEAD_CHANNELS = 1
 )(
 
 	//Low speed (1/4 rate) and high speed (1/2 rate) sampling clocks
@@ -56,7 +58,7 @@ module LowSpeedInputs #(
 	input wire[91:0]		probe_in_n,
 
 	//Outputs
-	output lssample_t[91:0]	samples
+	output lssamples_t		samples
 );
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -67,23 +69,29 @@ module LowSpeedInputs #(
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// Differential input buffers
 
-	wire[91:0]	probe_in_se;
+	wire[91:0]	probe_in_se_p;
+	wire[91:0]	probe_in_se_n;
 
-	DifferentialInputBuffer #(
-		.WIDTH(92),
-		.IOSTANDARD("LVDS_25"),
-		.ODT(1),
-		.OPTIMIZE("SPEED")
-	) ibuf (
-		.pad_in_p(probe_in_p),
-		.pad_in_n(probe_in_n),
-		.fabric_out(probe_in_se)
-	);
+	for(genvar g=0; g<92; g=g+1) begin : ibufs
+
+		IBUFDS_DIFF_OUT #(
+			.IOSTANDARD("LVDS_25"),
+			.IBUF_LOW_PWR("FALSE"),
+			.DIFF_TERM("TRUE")
+		) ibuf (
+			.I(probe_in_p[g]),
+			.IB(probe_in_n[g]),
+			.O(probe_in_se_p[g]),
+			.OB(probe_in_se_n[g])
+		);
+
+	end
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// Delay lines
 
-	wire[91:0]	probe_in_delay;
+	wire[91:0]	probe_in_delay_p;
+	wire[91:0]	probe_in_delay_n;
 
 	//Delays (in ps) for each pod
 	localparam integer POD_DELAYS[11:0] =
@@ -106,36 +114,72 @@ module LowSpeedInputs #(
 
 		//Only 4 bits in the last pod
 		if(g == 11) begin
+
+			//Positive delay line
 			IODelayBlock #(
 				.WIDTH(4),
 				.CAL_FREQ(400),
 				.INPUT_DELAY(POD_DELAYS[g]),
 				.DIRECTION("IN"),
 				.IS_CLOCK(0)
-			) pod_idelay (
-				.i_pad(probe_in_se[8*g +: 4]),
-				.i_fabric(probe_in_delay[8*g +: 4]),
+			) pod_idelay_p (
+				.i_pad(probe_in_se_p[8*g +: 4]),
+				.i_fabric(probe_in_delay_p[8*g +: 4]),
 				.o_pad(),
 				.o_fabric(),
 				.input_en(1'b1)
 			);
+
+			//Negative delay line (phase shift by 400ps WRT positive)
+			IODelayBlock #(
+				.WIDTH(4),
+				.CAL_FREQ(400),
+				.INPUT_DELAY(POD_DELAYS[g] + 400),
+				.DIRECTION("IN"),
+				.IS_CLOCK(0)
+			) pod_idelay_n (
+				.i_pad(probe_in_se_n[8*g +: 4]),
+				.i_fabric(probe_in_delay_n[8*g +: 4]),
+				.o_pad(),
+				.o_fabric(),
+				.input_en(1'b1)
+			);
+
 		end
 
 		//8 bits in all others
 		else begin
+
+			//Positive delay line
 			IODelayBlock #(
 				.WIDTH(8),
 				.CAL_FREQ(400),
 				.INPUT_DELAY(POD_DELAYS[g]),
 				.DIRECTION("IN"),
 				.IS_CLOCK(0)
-			) pod_idelay (
-				.i_pad(probe_in_se[8*g +: 8]),
-				.i_fabric(probe_in_delay[8*g +: 8]),
+			) pod_idelay_p (
+				.i_pad(probe_in_se_p[8*g +: 8]),
+				.i_fabric(probe_in_delay_p[8*g +: 8]),
 				.o_pad(),
 				.o_fabric(),
 				.input_en(1'b1)
 			);
+
+			//Negative delay line (phase shift by 400ps WRT positive)
+			IODelayBlock #(
+				.WIDTH(8),
+				.CAL_FREQ(400),
+				.INPUT_DELAY(POD_DELAYS[g] + 400),
+				.DIRECTION("IN"),
+				.IS_CLOCK(0)
+			) pod_idelay_n (
+				.i_pad(probe_in_se_n[8*g +: 8]),
+				.i_fabric(probe_in_delay_n[8*g +: 8]),
+				.o_pad(),
+				.o_fabric(),
+				.input_en(1'b1)
+			);
+
 		end
 
 	end
@@ -143,7 +187,11 @@ module LowSpeedInputs #(
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// SERDES
 
-	lssample_t probe_in_parallel[91:0];
+	//4x low-speed sample (half of the block)
+	typedef logic[3:0] lhsample_t;
+
+	lhsample_t probe_in_parallel_p[91:0];
+	lhsample_t probe_in_parallel_n[91:0];
 
 	logic	iserdes_reset = 0;
 
@@ -167,11 +215,11 @@ module LowSpeedInputs #(
 			.SRVAL_Q3(0),
 			.SRVAL_Q4(0),
 			.IOBDELAY("BOTH")
-		) iserdes (
-			.Q1(probe_in_parallel[g][0]),
-			.Q2(probe_in_parallel[g][1]),
-			.Q3(probe_in_parallel[g][2]),
-			.Q4(probe_in_parallel[g][3]),
+		) iserdes_p (
+			.Q1(probe_in_parallel_p[g][0]),
+			.Q2(probe_in_parallel_p[g][1]),
+			.Q3(probe_in_parallel_p[g][2]),
+			.Q4(probe_in_parallel_p[g][3]),
 			.Q5(),
 			.Q6(),
 			.Q7(),
@@ -180,7 +228,56 @@ module LowSpeedInputs #(
 			.SHIFTOUT1(),
 			.SHIFTOUT2(),
 			.D(),
-			.DDLY(probe_in_delay[g]),
+			.DDLY(probe_in_delay_p[g]),
+			.CLK(clk_625mhz),
+			.CLKB(!clk_625mhz),
+			.CE1(1'b1),
+			.CE2(1'b1),
+			.RST(iserdes_reset),
+			.CLKDIV(clk_312mhz),
+			.CLKDIVP(1'b0),
+			.OCLK(),
+			.OCLKB(),
+			.BITSLIP(1'b0),	//no bitslip needed, we're oversampling
+			.SHIFTIN1(1'b0),
+			.SHIFTIN2(1'b0),
+			.OFB(),
+			.DYNCLKDIVSEL(1'b0),
+			.DYNCLKSEL(1'b0)
+		);
+
+		ISERDESE2 #(
+			.DATA_RATE("DDR"),
+			.DATA_WIDTH(4),
+			.DYN_CLKDIV_INV_EN("FALSE"),
+			.DYN_CLK_INV_EN("FALSE"),
+			.INTERFACE_TYPE("NETWORKING"),
+			.NUM_CE(1),
+			.OFB_USED("FALSE"),
+			.SERDES_MODE("MASTER"),
+			.INIT_Q1(0),
+			.INIT_Q2(0),
+			.INIT_Q3(0),
+			.INIT_Q4(0),
+			.SRVAL_Q1(0),
+			.SRVAL_Q2(0),
+			.SRVAL_Q3(0),
+			.SRVAL_Q4(0),
+			.IOBDELAY("BOTH")
+		) iserdes_n (
+			.Q1(probe_in_parallel_n[g][0]),
+			.Q2(probe_in_parallel_n[g][1]),
+			.Q3(probe_in_parallel_n[g][2]),
+			.Q4(probe_in_parallel_n[g][3]),
+			.Q5(),
+			.Q6(),
+			.Q7(),
+			.Q8(),
+			.O(),
+			.SHIFTOUT1(),
+			.SHIFTOUT2(),
+			.D(),
+			.DDLY(probe_in_delay_n[g]),
 			.CLK(clk_625mhz),
 			.CLKB(!clk_625mhz),
 			.CE1(1'b1),
@@ -220,26 +317,101 @@ module LowSpeedInputs #(
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// Invert channels flipped on the PCB
 
-	lssample_t[91:0]	current_sample;
+	lhsample_t[91:0]	current_sample_0;		//Main sample stream
+	lhsample_t[91:0]	current_sample_180;		//Second sample stream acquired with 400ps delay from inverted output
 
-	always @(posedge clk_312mhz) begin
+	always_ff @(posedge clk_312mhz) begin
 		for(integer i=0; i<92; i++) begin
-			if(CHANS_TO_INVERT[i])
-				current_sample[i]	<= ~probe_in_parallel[i];
-			else
-				current_sample[i]	<= probe_in_parallel[i];
+			if(CHANS_TO_INVERT[i]) begin
+				current_sample_0[i]		<= ~probe_in_parallel_p[i];
+				current_sample_180[i]	<= probe_in_parallel_n[i];
+			end
+			else begin
+				current_sample_0[i]		<= probe_in_parallel_p[i];
+				current_sample_180[i]	<= ~probe_in_parallel_n[i];
+			end
 		end
 	end
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	// TODO: more swizzling of channels so numbers make sense left to right? or is that taken care of now?
+	// Interleave even/odd sampling phases into a single serial data stream
+
+	lssamples_t			current_sample_merged;
+
+	/*
+		180 deg samples are taken with a 400ps delay.
+		This effectively moves the sampling clock 400ps *earlier* in the data stream, making it a -180 degree phase.
+	 */
+
+	//combinatorial because no actual logic, just renaming nets
+	always_comb begin
+		for(integer i=0; i<92; i++) begin
+			current_sample_merged[i] =
+			{
+				current_sample_180[i][3],
+				current_sample_0[i][3],
+				current_sample_180[i][2],
+				current_sample_0[i][2],
+				current_sample_180[i][1],
+				current_sample_0[i][1],
+				current_sample_180[i][0],
+				current_sample_0[i][0]
+			};
+		end
+	end
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	// Pipeline delay on the input to allow for propagation across the chip to the trigger blocks
+	// Within each group, swap channel numbers so they match the pods left to right.
+
+	/*
+		Our channels are numbered with 0-7 based on SFF connector pin numbering.
+		But the MEAD pods had to rearrange this due to routing.
+		Actual pin ordering from left to right is 7-6-3-2-1-0-5-4.
+	 */
+	lssamples_t			current_sample;
+
+	//combinatorial because no actual logic, just renaming nets
+	always_comb begin
+		if(REORDER_MEAD_CHANNELS) begin
+
+			for(integer i=0; i<12; i++) begin
+
+				//Special handling for last pod
+				//TODO: is this numbering right?
+				if(i == 11) begin
+					current_sample[i*8 + 3]	= current_sample_merged[i*8 + 3];
+					current_sample[i*8 + 2]	= current_sample_merged[i*8 + 2];
+					current_sample[i*8 + 1]	= current_sample_merged[i*8 + 1];
+					current_sample[i*8 + 0]	= current_sample_merged[i*8 + 0];
+				end
+
+				//Normal pods
+				else begin
+					current_sample[i*8 + 7]	= current_sample_merged[i*8 + 7];
+					current_sample[i*8 + 6]	= current_sample_merged[i*8 + 6];
+					current_sample[i*8 + 5]	= current_sample_merged[i*8 + 3];
+					current_sample[i*8 + 4]	= current_sample_merged[i*8 + 2];
+					current_sample[i*8 + 3]	= current_sample_merged[i*8 + 1];
+					current_sample[i*8 + 2]	= current_sample_merged[i*8 + 0];
+					current_sample[i*8 + 1]	= current_sample_merged[i*8 + 5];
+					current_sample[i*8 + 0]	= current_sample_merged[i*8 + 4];
+				end
+
+			end
+
+		end
+
+		else begin
+			current_sample	= current_sample_merged;
+		end
+	end
+
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// Pipeline delay on the input to allow for propagation across the chip to the trigger blocks etc
 
 	//Don't infer shift registers, we want separate DFFs to provide more flexibility for the placer
-	(* SHREG_EXTRACT = "no" *)	sample_t	current_sample_ff;
-	(* SHREG_EXTRACT = "no" *)	sample_t	current_sample_ff2;
+	(* SHREG_EXTRACT = "no" *)	lssamples_t	current_sample_ff;
+	(* SHREG_EXTRACT = "no" *)	lssamples_t	current_sample_ff2;
 
 	always_ff @(posedge clk_312mhz) begin
 		current_sample_ff	<= current_sample;
@@ -247,8 +419,5 @@ module LowSpeedInputs #(
 	end
 
 	assign samples = current_sample_ff2;
-
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	// RLE compression engine here?
 
 endmodule
