@@ -93,7 +93,7 @@ follow the warnings and specification limits in this document.
 \item Do not connect the ground terminal of this probe to any voltage other than earth ground.
 \item Do not exceed operating limits in the specifications section of this document.
 \item Do not over-tighten the SMA connector. Antikernel Labs recommends using a properly calibrated torque wrench to
-torque the connection to 5 lbf-in (0.57 Nm)
+torque the connection to 5 lbf-in (0.57 Nm) while holding the connector body across the flats with a wrench.
 \item The plastic enclosure of this probe is \emph{not} rated for insulation against hazardous voltages, and conductive
 elements are exposed at the tip. Do not use this probe on any circuits which may contain voltages exceeding 30 Vrms, or
 the touch-safe voltage limit in your organization's standard operating procedures if this is lower.
@@ -115,8 +115,8 @@ CA PROP 65 WARNING: This product can expose you to beryllium, which is known to 
 \section{Theory of Operation}
 
 Tha AKL-PT1 probe is a \emph{transmission line probe} and works very differently from high-impedance passive or active
-probes you may be familiar with. It is intended primarily for probing relatively low impedance ($50 \Omega$ range),
-high bandwidth digital signals, which ordinarily require expensive active probes to properly examine.
+probes many engineers are familiar with. It is intended primarily for probing relatively low impedance ($50 \Omega$
+range), high bandwidth digital signals, which ordinarily require expensive active probes to properly examine.
 
 \begin{figure}[h]
 \centering
@@ -162,7 +162,7 @@ The tip-mounted ground socket gives significantly better performance than the to
 Grounding accessories may be removed from the side socket by firmly grasping between two fingers and pulling. They
 should come free easily; a different accessory may then be inserted.
 
-Tips (and tip-mounted grounds) can be more difficult to remove because they are so small and difficult to grasp. Tips
+Tips (and tip-mounted grounds) can be more difficult to remove because they are so small and hard to grasp. Tips
 can typically be removed by placing a fine flat-head screwdriver or fingernail behind the collar on the tip and gently
 pushing it away from the probe body. Very little force is required.
 
@@ -243,13 +243,38 @@ assumes no liability for incompatibility with any accessories not listed in this
 \FloatBarrier
 \subsection{Cables}
 
-The AKL-PT1 should be connected to the host instrument via a $50 \Omega$ coaxial cable (not included). Antikernel Labs
-recommends use of Mini-Circuits FL086-24SM+ or similar low-loss, flexible cabling.
+The AKL-PT1 should be connected to the host instrument via a $50 \Omega$ coaxial cable. Antikernel Labs recommends use
+of Mini-Circuits FL086-24SM+ (included in the pro package) or similar low-loss, flexible cabling.
 
-The probe-side connector is a brass SMA (Samtec SMA-J-P-H-ST-EM1). For best results, this connection should be torqued
-to 5 in-lbf (0.57 Nm). Over-tightening may damage the connector.
+The probe-side connector is a brass SMA (Amphenol RF 901-10511-3). For best results, this connection should be torqued
+to 5 in-lbf (0.57 Nm). Over-tightening may damage the connector. When torquing the connector, hold the connector body
+across the flats with a wrench. Do not hold the probe by the PCB or plastic shell as this can put additional stress on
+the solder joints.
 
 \pagebreak
+
+\section{Mechanical Specifications}
+
+\begin{tabularx}{10cm}{Xrr}
+\thickhline
+\textbf{Description} & \textbf{Typ} & \textbf{Units} \\
+\thickhline
+Mass & 10.5 & g\\
+\thinhline
+Thickness & 8.1 & mm\\
+\thinhline
+Length (probe body) & 68 & mm\\
+\thinhline
+Length (exposed PCB at tip) & 10.5 & mm\\
+\thinhline
+Length (SMA connector) & 9.5 & mm\\
+\thinhline
+Length (total) & 88.0 & mm\\
+\thinhline
+Width & 17.9 & mm\\
+\thickhline
+\end{tabularx}
+
 \section{Electrical Specifications}
 
 Values in this section are typical / limit values. For measured values from a specific probe, please consult your
@@ -265,7 +290,7 @@ Exceeding these limits may result in permanent damage to the probe.
 
 Ratings in this section are stress ratings only and normal operation at these limits is not implied.
 
-\begin{tabularx}{16cm}{lXll}
+\begin{tabularx}{12cm}{lXll}
 \thickhline
 \textbf{Parameter} & \textbf{Description} & \textbf{Limit} & \textbf{Units} \\
 \thickhline
@@ -284,7 +309,7 @@ $V_{max}$ & Maximum operating voltage & 10 & $ Vrms $ \\
 While the probe will not be damaged by exposure to conditions outside the values in this section (but below the
 ``Absolute Maximum Ratings" limits), tolerances may be temporarily exceeded.
 
-\begin{tabularx}{16cm}{lXll}
+\begin{tabularx}{12cm}{lXll}
 \thickhline
 \textbf{Parameter} & \textbf{Description} & \textbf{Limit} & \textbf{Units} \\
 \thickhline
@@ -301,7 +326,7 @@ $T_{max}$ & Maximum temperature & 45 & \degree C \\
 \thickhline
 \textbf{Parameter} & \textbf{Description} & \textbf{Min} & \textbf{Typ} & \textbf{Max} & \textbf{Units} \\
 \thickhline
-$G_{dc}$ & DC gain & 0.0997 & 0.1000 & 0.1005 & V/V \\
+$G_{dc}$ & DC gain (50.0000 $\Omega$ at scope) & 0.09980 & 0.09994 & 0.10008 & V/V \\
 \thinhline
 $R_{25}$ & DC resistance of probe (25 \degree C) & 449.75 & 450.31 & 450.75 & $\Omega$ \\
 \thinhline
@@ -325,7 +350,7 @@ $Z_{in1}$ & Input impedance (1 GHz) & 82.00 & 86.05 & 88.00 & $\Omega$ \\
 \thinhline
 $Z_{in2}$ & Input impedance (2 GHz) & 29.00 & 30.79 & 32.75 & $\Omega$ \\
 \thinhline
-$C_{in}$ & Equivalent shunt capacitance to ground &  & 1.4 &  & pF \\
+$C_{in}$ & Equivalent shunt capacitance to ground &  & 1.1 &  & pF \\
 \thinhline
 $G$ & AC gain from DC - 2 GHz & -23 & -20.5 & -20 & dB \\
 \thinhline
@@ -339,19 +364,19 @@ $G_{1500}$ & AC gain at 1.5 GHz & -21.45 & -21.17 & -20.75 & dB \\
 \thinhline
 $G_{2000}$ & AC gain at 2.0 GHz & -21.60 & -22.04 & -22.45 & dB \\
 \thinhline
-$BW_{0.5}$ & $\pm 0.5$ dB bandwidth using tip ground &  & 0.91 & & GHz \\
+$BW_{0.5}$ & $\pm 0.5$ dB bandwidth w/ tip ground &  & 0.91 & & GHz \\
 \thinhline
-$BW_{3}$ & -3 dB bandwidth using tip ground & 2.25 & 2.47 & 2.60 & GHz \\
+$BW_{tip}$ & +0 / -3 dB bandwidth w/ tip ground & 2.25 & 2.47 & 2.60 & GHz \\
 \thinhline
-$BW_{flex}$ & -3 dB bandwidth using flex ground &  & 0.56 &  & GHz \\
+$BW_{flex}$ & +0 / -3 dB bandwidth w/ flex ground &  & 0.56 &  & GHz \\
 \thinhline
-$BW_{leaf}$ & -3 dB bandwidth using leaf ground &  & 1.46 &  & GHz \\
+$BW_{leaf}$ & +0 / -3 dB bandwidth w/ leaf ground &  & 1.46 &  & GHz \\
 \thinhline
-$BW_{z}$ & -3 dB bandwidth using Z-ground &  & 0.80 &  & GHz \\
+$BW_{z}$ & +0 / -3 dB bandwidth w/ Z-ground &  & 0.80 &  & GHz \\
 \thinhline
-$Rise_{90}$ & Rise time (10-90 \%, including cable) & 174 & 179 & 189 & ps \\
+$Rise_{90}$ & Rise time (10-90 \%, w/ FL086-24SM+ cable) & 174 & 179 & 189 & ps \\
 \thinhline
-$Rise_{80}$ & Rise time (20-80 \%, including cable) & 118 & 122 & 129 & ps \\
+$Rise_{80}$ & Rise time (20-80 \%, w/ FL086-24SM+ cable) & 118 & 122 & 129 & ps \\
 \thinhline
 $Tpd$ & Propagation delay &  & 548 &  & ps \\
 \thickhline
@@ -402,12 +427,11 @@ Measured across a $50 \Omega$ termination.
 \section{Performance Data}
 
 If you requested full characterization at the time of your order, test measurements are available at
-\url{https://www.github.com/azonenberg/starshipraider-caldata/tree/master/handheld-resistive-probe/} under the
-directory for your probe's serial number.
+\url{https://www.antikernel.net/downloads/AKL-PT1/caldata/} and searching for your probe's serial number.
 
 The following S-parameter data files are provided:
 \begin{itemize}
-\item cable.s2p - the provided cable
+\item cable.s2p - the provided cable (if applicable)
 \item flexground.s2p - probe across a $50 \Omega$ load using the flex ground
 \item leafground.s2p - probe across a $50 \Omega$ load using the leaf ground
 \item tipground.s2p - probe across a $50 \Omega$ load using the tip ground
