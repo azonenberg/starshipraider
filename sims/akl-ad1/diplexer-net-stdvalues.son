@@ -1,0 +1,44 @@
+FTYP SONNETPRJ 18 ! Sonnet Netlist Project File
+VER 17.56
+HEADER
+LIC antikernel2.1.50170 3cfdfeabd719 havequick azonenberg Level3Gold
+DAT 01/29/2021 21:43:52
+BUILT_BY_CREATED sonnet 17.56 01/18/2021 04:54:16
+BUILT_BY_SAVED sonnet 17.56
+MDATE 01/29/2021 21:43:52
+HDATE 01/29/2021 21:43:52
+END HEADER
+DIM
+ANG DEG
+CAP PF
+CON /OH
+FREQ GHZ
+IND NH
+LNG MM
+RES OH
+END DIM
+VAR
+END VAR
+CKT
+S2P 1 4 ../../../../../../../bulk/datasheets/TDK/Inductor/MLG1005S/MLG1005S12NJT000.s2p
+S2P 4 2 ../../../../../../../bulk/datasheets/TDK/Inductor/MHQ0603P/MHQ0603P4N0BT000.s2p
+S2P 4 0 ../../../../../../../bulk/datasheets/Samsung/Capacitor/MLCC_Precise_Sparameter/General/C0G/0402inch_1005mm/CL05C040CB5NNN_Series_DC0V_25deg.s2p
+S2P 1 5 ../../../../../../../bulk/datasheets/Samsung/Capacitor/MLCC_Precise_Sparameter/General/C0G/0201inch_0603mm/CL03C020BA3GNN_Series_DC0V_25deg.s2p
+S2P 5 3 ../../../../../../../bulk/datasheets/Samsung/Capacitor/MLCC_Precise_Sparameter/General/C0G/0201inch_0603mm/CL03C6R8BA3GNN_Series_DC0V_25deg.s2p
+S2P 5 0 ../../../../../../../bulk/datasheets/TDK/Inductor/MLG1005S/MLG1005S6N2ST000.s2p
+DEF3P 1 2 3 ad1-ideas R 50.00000
+
+END CKT
+CONTROL
+VARSWP
+OPTIONS  -d
+PUSH
+SPEED 0
+CACHE_ABS 1
+Q_ACC N
+END CONTROL
+VARSWP
+ENABLED Y
+FREQ Y AY ABS_ENTRY 0.1 8.0 -1 300 
+END
+END VARSWP
