@@ -3,7 +3,7 @@
   (general
     (thickness 1.6)
     (drawings 10)
-    (tracks 241)
+    (tracks 243)
     (zones 0)
     (modules 3)
     (nets 4)
@@ -113,7 +113,7 @@
   )
 
   (module azonenberg_pcb:EIA_0402_RES_NOSILK_FLIPCHIP (layer B.Cu) (tedit 600C4855) (tstamp 60565D32)
-    (at 37.6 36.5 90)
+    (at 38 36.5 90)
     (path /60565D97)
     (solder_paste_margin -0.06)
     (fp_text reference R1 (at 0 -1.5 90) (layer B.SilkS) hide
@@ -430,9 +430,11 @@
   (via (at 31 53) (size 0.55) (drill 0.25) (layers F.Cu B.Cu) (net 1))
   (segment (start 32 53) (end 31 53) (width 0.125) (layer In1.Cu) (net 1))
   (segment (start 31 53) (end 30 53) (width 0.125) (layer F.Cu) (net 1))
+  (segment (start 38 36) (end 37.6 36) (width 0.4) (layer B.Cu) (net 1))
   (segment (start 32 37) (end 35.8 37) (width 0.35) (layer F.Cu) (net 2))
   (segment (start 35.8 37) (end 37.4 37) (width 0.4) (layer F.Cu) (net 2))
   (via (at 37.6 37) (size 0.55) (drill 0.25) (layers F.Cu B.Cu) (net 2))
+  (segment (start 38 37) (end 37.6 37) (width 0.4) (layer B.Cu) (net 2))
   (segment (start 32 52) (end 35.8 52) (width 0.35) (layer F.Cu) (net 3))
   (segment (start 35.8 52) (end 36.8 52) (width 0.4) (layer F.Cu) (net 3))
 
