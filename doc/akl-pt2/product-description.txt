@@ -1,0 +1,25 @@
+The AKL-PT2 is a low-cost, solder-in passive oscilloscope probe with 10:1 attenuation and over 6 GHz of bandwidth,
+designed for probing of high speed serial data, DDR memory, and other extremely broadband, low-impedance signals. It is
+suitable for protocol decoding of signals up to 12 Gbps and signal integrity measurements of signals up to 2.5 Gbps.
+
+The 500Ω resistive input stage provides excellent flatness with much lower input loading than conventional passive
+probe designs, with typical S11 (across a 50Ω line) better than -23 dB at 3 GHz. Since there are no active components
+in the probe, it is far less sensitive to ESD and transient overloading than an active probe.
+
+DC coupling allows the AKL-PT2 to be used to probe signals such as DDR RAM which are not DC balanced. (When probing
+signals such as HDMI which are sensitive to DC loading, an industry-standard SMA inner DC block can be easily added.)
+
+The low cost of the AKL-PT2 allows many probes to be attached to different test points on the DUT at once, and attached
+to oscilloscope channels as needed using standard 50Ω coaxial cables with SMA terminations.
+
+
+The AKL-PT2 is available in three versions:
+
+* Student discount: Probe tested for soldering defects only. Compliance to full datasheet specifications not
+guaranteed. For students, hobbyists, and noncommercial users only.
+
+* Standard: Probe plus pack of double-sided mounting tape. Individually tested to ensure full datasheet performance.
+
+* Pro: For advanced users making high-performance measurements. Same as standard, plus full characterization
+report including test data for your probe. Includes a serialized Touchstone .s2p S-parameter file allowing
+response of each individual probe to be de-embedded for the highest measurement fidelity.
