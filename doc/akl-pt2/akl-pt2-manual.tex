@@ -16,7 +16,7 @@
 \usepackage{float}
 \usepackage[libertine,cmbraces]{newtxmath}
 
-\usepackage{draftwatermark}
+%\usepackage{draftwatermark}
 
 
 % table lines
@@ -310,7 +310,9 @@ Antikernel Labs recommends use of Mini-Circuits \href{https://www.minicircuits.c
 flexible cable, \href{https://www.minicircuits.com/pdfs/086-24SM+.pdf}{086 series} hand-formable cable, or equivalents.
 
 The cable should be taped to a lab bench or the DUT as shown in Fig. \ref{cable-secured}, or otherwise secured to
-prevent transferring any force into the probe.
+prevent transferring any force into the probe. While hand-formable cables have greatly limited bend lifetime compared
+to flexible cables, their lack of springiness can be helpful when attaching to solder-in probes since there is no
+tendency for the cable to return to a neutral shape and exert force on the probe.
 
 The probe-side connector is a brass SMA (Amphenol RF 901-10511-3). For best results, this connection should be torqued
 to 5 in-lbf (0.57 Nm). Over-tightening may damage the connector. When torquing the connector, hold the connector body
@@ -423,13 +425,13 @@ de-embedded, unless otherwise stated.
 \thickhline
 \textbf{Parameter} & \textbf{Description} & \textbf{Min} & \textbf{Typ} & \textbf{Max} & \textbf{Units} \\
 \thickhline
-$S_{11o\_low}$ & $S_{11}$ (open circuit) from DC - 4 GHz & -1.85 & -1.75 & -1.40 & dB \\
+$S_{11o\_low}$ & $S_{11}$ across open circuit from DC - 4 GHz & -1.85 & -1.75 & -1.40 & dB \\
 \thinhline
-$S_{11o}$ & $S_{11}$ (open circuit) from DC - 6 GHz & -2.60 & -1.75 & -1.40 & dB \\
+$S_{11o}$ & $S_{11}$ across open circuit from DC - 6 GHz & -2.60 & -1.75 & -1.40 & dB \\
 \thinhline
-$S_{11\_low}$ & $S_{11}$ across $50\Omega$ from DC - 4 GHz & -33.00 & -22.00 & -14.00 & dB \\
+$S_{11\_low}$ & $S_{11}$ from DC - 4 GHz & -33.00 & -22.00 & -14.00 & dB \\
 \thinhline
-$S_{11\_hi}$ & $S_{11}$ across $50\Omega$ from 4 - 6 GHz & -20.00 & -11.00 & -8.75 & dB \\
+$S_{11\_hi}$ & $S_{11}$ from 4 - 6 GHz & -20.00 & -11.00 & -8.75 & dB \\
 \thinhline
 $S_{21}$ & $S_{21}$ from DC - 6 GHz & -23.50 & -21.95 & -20.00 & dB \\
 \thinhline
@@ -445,9 +447,9 @@ $S_{21\_6000}$ & $S_{21}$ at 6.0 GHz & -23.50 & -23.10 & -22.60 & dB \\
 \thinhline
 $BW$ & -3 dB bandwidth & 6.00 & 6.50 & & GHz \\
 \thinhline
-$Rise_{90}$ & Rise time (10-90 \%) & xx & xx & xx & ps \\
+$Rise_{90}$ & Rise time (10-90 \%) &  & 99 & 101 & ps \\
 \thinhline
-$Rise_{80}$ & Rise time (20-80 \%) & xx & xx & xx & ps \\
+$Rise_{80}$ & Rise time (20-80 \%) &  & 47 & 51 & ps \\
 \thinhline
 $Tpd$ & Propagation delay &  & 925 &  & ps \\
 \thickhline
@@ -495,6 +497,18 @@ $Tpd$ & Propagation delay &  & 925 &  & ps \\
 \FloatBarrier
 
 \pagebreak
+\subsection{Step Response}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=14cm]{step-response.png}
+\caption{Typical response of AKL-PT2 to fast rising edge (200ps/div)}
+\label{step-response}
+\end{figure}
+
+\FloatBarrier
+
+\pagebreak
 \section{Performance Data}
 
 If you requested full characterization at the time of your order, test measurements are available at
@@ -503,7 +517,6 @@ measurements are de-embedded to the SMA connector or probe tip, as applicable.
 
 The following S-parameter data files are provided:
 \begin{itemize}
-\item cable.s2p - the provided cable (if applicable)
 \item probe.s2p - probe soldered across $50 \Omega$ load
 \item zin.s1p - probe soldered across an unterminated line for input loading/impedance measurements
 \end{itemize}
