@@ -1,0 +1,106 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "SMA Test"
+Date "2021-04-04"
+Rev "0.1"
+Comp "Antikernel Labs"
+Comment1 "Andrew D. Zonenberg"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:Conn_Coaxial J1
+U 1 1 6069C583
+P 1850 1550
+F 0 "J1" H 1803 1788 50  0000 C CNN
+F 1 "901-10511-3" H 1803 1697 50  0000 C CNN
+F 2 "azonenberg_pcb:CONN_SMA_EDGE_AMPHENOL_901_10511_3" H 1850 1550 50  0001 C CNN
+F 3 "" H 1850 1550 50  0001 C CNN
+	1    1850 1550
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_Coaxial J4
+U 1 1 6069CC2E
+P 2800 1550
+F 0 "J4" H 2900 1525 50  0000 L CNN
+F 1 "901-10511-3" H 2900 1434 50  0000 L CNN
+F 2 "azonenberg_pcb:CONN_SMA_EDGE_AMPHENOL_901_10511_3" H 2800 1550 50  0001 C CNN
+F 3 "" H 2800 1550 50  0001 C CNN
+	1    2800 1550
+	1    0    0    -1  
+$EndComp
+Text Label 2250 1550 0    50   ~ 0
+SIG1
+Wire Wire Line
+	2000 1550 2650 1550
+Text Label 2250 1750 0    50   ~ 0
+GND
+Wire Wire Line
+	1850 1750 2800 1750
+$Comp
+L Connector:Conn_Coaxial J2
+U 1 1 6069D4CC
+P 1850 2200
+F 0 "J2" H 1803 2438 50  0000 C CNN
+F 1 "901-10510-2" H 1803 2347 50  0000 C CNN
+F 2 "azonenberg_pcb:CONN_SMA_EDGE_AMPHENOL_901_10510-2" H 1850 2200 50  0001 C CNN
+F 3 "" H 1850 2200 50  0001 C CNN
+	1    1850 2200
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_Coaxial J5
+U 1 1 6069D4D6
+P 2800 2200
+F 0 "J5" H 2900 2175 50  0000 L CNN
+F 1 "901-10510-2" H 2900 2084 50  0000 L CNN
+F 2 "azonenberg_pcb:CONN_SMA_EDGE_AMPHENOL_901_10510-2" H 2800 2200 50  0001 C CNN
+F 3 "" H 2800 2200 50  0001 C CNN
+	1    2800 2200
+	1    0    0    -1  
+$EndComp
+Text Label 2250 2200 0    50   ~ 0
+SIG1
+Wire Wire Line
+	2000 2200 2650 2200
+Text Label 2250 2400 0    50   ~ 0
+GND
+Wire Wire Line
+	1850 2400 2800 2400
+$Comp
+L Connector:Conn_Coaxial J3
+U 1 1 6069DC43
+P 1850 2800
+F 0 "J3" H 1803 3038 50  0000 C CNN
+F 1 "901-10309" H 1803 2947 50  0000 C CNN
+F 2 "azonenberg_pcb:CONN_SMA_EDGE_AMPHENOL_901_10309" H 1850 2800 50  0001 C CNN
+F 3 "" H 1850 2800 50  0001 C CNN
+	1    1850 2800
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_Coaxial J6
+U 1 1 6069DC4D
+P 2800 2800
+F 0 "J6" H 2900 2775 50  0000 L CNN
+F 1 "901-10309" H 2900 2684 50  0000 L CNN
+F 2 "azonenberg_pcb:CONN_SMA_EDGE_AMPHENOL_901_10309" H 2800 2800 50  0001 C CNN
+F 3 "" H 2800 2800 50  0001 C CNN
+	1    2800 2800
+	1    0    0    -1  
+$EndComp
+Text Label 2250 2800 0    50   ~ 0
+SIG1
+Wire Wire Line
+	2000 2800 2650 2800
+Text Label 2250 3000 0    50   ~ 0
+GND
+Wire Wire Line
+	1850 3000 2800 3000
+$EndSCHEMATC
