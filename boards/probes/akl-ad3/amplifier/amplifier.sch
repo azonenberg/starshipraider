@@ -1,0 +1,597 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "AKL-AD3 amplifier board"
+Date "2021-05-24"
+Rev "0.1"
+Comp "Antikernel Labs"
+Comment1 "Andrew D. Zonenberg"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:Conn_Coaxial J3
+U 1 1 60AAA125
+P 8600 3050
+F 0 "J3" H 8700 3025 50  0000 L CNN
+F 1 "901-10510-2" H 8700 2934 50  0000 L CNN
+F 2 "azonenberg_pcb:CONN_SMA_EDGE_AMPHENOL_901_10510-2" H 8600 3050 50  0001 C CNN
+F 3 "" H 8600 3050 50  0001 C CNN
+	1    8600 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power-azonenberg:LT3042 U1
+U 1 1 60AAA8BC
+P 2000 4500
+F 0 "U1" H 2325 5475 50  0000 C CNN
+F 1 "LT3042" H 2325 5384 50  0000 C CNN
+F 2 "azonenberg_pcb:DFN_10_0.5MM_3x3MM" H 2000 4500 50  0001 C CNN
+F 3 "" H 2000 4500 50  0001 C CNN
+	1    2000 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power-azonenberg:LT3093 U2
+U 1 1 60AAAFFA
+P 2000 5850
+F 0 "U2" H 2325 6925 50  0000 C CNN
+F 1 "LT3093" H 2325 6834 50  0000 C CNN
+F 2 "azonenberg_pcb:DFN_12_0.5MM_3x3MM" H 2000 5850 50  0001 C CNN
+F 3 "" H 2000 5850 50  0001 C CNN
+	1    2000 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power-azonenberg:CONN_3_PWROUT J1
+U 1 1 60AAE007
+P 800 6850
+F 0 "J1" H 667 7150 50  0000 C CNN
+F 1 "CONN_3_PWROUT" H 667 7066 40  0000 C CNN
+F 2 "azonenberg_pcb:CONN_CUI_PJ-058BH_HIPWR_BARREL_NOSLOT" H 800 6850 60  0001 C CNN
+F 3 "" H 800 6850 60  0000 C CNN
+	1    800  6850
+	-1   0    0    -1  
+$EndComp
+NoConn ~ 1150 6950
+Text Label 1250 6850 0    50   ~ 0
+GND
+Wire Wire Line
+	1150 6850 1250 6850
+$Comp
+L passive-azonenberg:INDUCTOR_PWROUT L1
+U 1 1 60AAEA5E
+P 2400 6750
+F 0 "L1" V 2242 6750 40  0000 C CNN
+F 1 "BLM31KN271SH1L" V 2318 6750 40  0000 C CNN
+F 2 "azonenberg_pcb:EIA_1206_CAP_NOSILK" H 2400 6750 60  0001 C CNN
+F 3 "" H 2400 6750 60  0000 C CNN
+	1    2400 6750
+	0    1    1    0   
+$EndComp
+$Comp
+L power-azonenberg:FUSE_PWROUT F1
+U 1 1 60AAF536
+P 1700 6750
+F 0 "F1" H 1700 6990 50  0000 C CNN
+F 1 "1A" H 1700 6899 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" H 1700 6750 60  0001 C CNN
+F 3 "" H 1700 6750 60  0000 C CNN
+	1    1700 6750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1450 6750 1150 6750
+Wire Wire Line
+	1950 6750 2100 6750
+Text Label 2700 6750 0    50   ~ 0
+7V0_P
+$Comp
+L power-azonenberg:CONN_3_PWROUT J2
+U 1 1 60AB00B4
+P 800 7500
+F 0 "J2" H 667 7800 50  0000 C CNN
+F 1 "CONN_3_PWROUT" H 667 7716 40  0000 C CNN
+F 2 "azonenberg_pcb:CONN_CUI_PJ-058BH_HIPWR_BARREL_NOSLOT" H 800 7500 60  0001 C CNN
+F 3 "" H 800 7500 60  0000 C CNN
+	1    800  7500
+	-1   0    0    -1  
+$EndComp
+NoConn ~ 1150 7600
+Text Label 1250 7500 0    50   ~ 0
+GND
+Wire Wire Line
+	1150 7500 1250 7500
+$Comp
+L passive-azonenberg:INDUCTOR_PWROUT L2
+U 1 1 60AB00C1
+P 2400 7400
+F 0 "L2" V 2242 7400 40  0000 C CNN
+F 1 "BLM31KN271SH1L" V 2318 7400 40  0000 C CNN
+F 2 "azonenberg_pcb:EIA_1206_CAP_NOSILK" H 2400 7400 60  0001 C CNN
+F 3 "" H 2400 7400 60  0000 C CNN
+	1    2400 7400
+	0    1    1    0   
+$EndComp
+$Comp
+L power-azonenberg:FUSE_PWROUT F2
+U 1 1 60AB00CB
+P 1700 7400
+F 0 "F2" H 1700 7640 50  0000 C CNN
+F 1 "1A" H 1700 7549 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" H 1700 7400 60  0001 C CNN
+F 3 "" H 1700 7400 60  0000 C CNN
+	1    1700 7400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1450 7400 1150 7400
+Wire Wire Line
+	1950 7400 2100 7400
+Text Label 2700 7400 0    50   ~ 0
+7V0_N
+$Comp
+L device:C C1
+U 1 1 60AB4065
+P 950 3900
+F 0 "C1" H 1065 3946 50  0000 L CNN
+F 1 "4.7 uF 16V" H 1065 3855 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0805_CAP_NOSILK" H 988 3750 50  0001 C CNN
+F 3 "" H 950 3900 50  0001 C CNN
+	1    950  3900
+	1    0    0    -1  
+$EndComp
+Text Label 950  3750 2    50   ~ 0
+7V0_P
+Text Label 950  4050 2    50   ~ 0
+GND
+Wire Wire Line
+	950  3750 1900 3750
+Wire Wire Line
+	1900 3750 1900 3850
+Connection ~ 1900 3750
+Connection ~ 1900 3850
+Wire Wire Line
+	1900 3850 1900 3950
+Wire Wire Line
+	950  4050 950  4250
+Wire Wire Line
+	950  4250 1900 4250
+Wire Wire Line
+	1900 4250 1900 4150
+Connection ~ 1900 4250
+Text Label 1900 4450 2    50   ~ 0
+GND
+Text Label 3450 3750 0    50   ~ 0
+2V5_P
+Wire Wire Line
+	2750 3750 2750 3850
+Connection ~ 2750 3750
+$Comp
+L device:C C5
+U 1 1 60AB61CB
+P 3450 3900
+F 0 "C5" H 3565 3946 50  0000 L CNN
+F 1 "4.7 uF" H 3565 3855 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0603_CAP_NOSILK" H 3488 3750 50  0001 C CNN
+F 3 "" H 3450 3900 50  0001 C CNN
+	1    3450 3900
+	1    0    0    -1  
+$EndComp
+NoConn ~ 2750 4050
+Wire Wire Line
+	2750 3750 3450 3750
+Text Label 3450 4050 0    50   ~ 0
+GND
+Text Label 2750 4150 0    50   ~ 0
+7V0_P
+$Comp
+L device:C C3
+U 1 1 60AB6F2B
+P 2900 4400
+F 0 "C3" H 3015 4446 50  0000 L CNN
+F 1 "0.47 uF" H 3015 4355 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0402_CAP_NOSILK" H 2938 4250 50  0001 C CNN
+F 3 "" H 2900 4400 50  0001 C CNN
+	1    2900 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:R R1
+U 1 1 60AB75F7
+P 3500 4400
+F 0 "R1" H 3570 4446 50  0000 L CNN
+F 1 "24.9K" H 3570 4355 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 3430 4400 50  0001 C CNN
+F 3 "" H 3500 4400 50  0001 C CNN
+	1    3500 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 4250 2900 4250
+Connection ~ 2900 4250
+Wire Wire Line
+	2900 4250 2750 4250
+Wire Wire Line
+	3500 4550 2900 4550
+Text Label 2900 4550 2    50   ~ 0
+GND
+$Comp
+L device:C C2
+U 1 1 60ABC6CF
+P 950 5150
+F 0 "C2" H 1065 5196 50  0000 L CNN
+F 1 "4.7 uF 16V" H 1065 5105 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0805_CAP_NOSILK" H 988 5000 50  0001 C CNN
+F 3 "" H 950 5150 50  0001 C CNN
+	1    950  5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	950  5000 1900 5000
+Wire Wire Line
+	1900 5000 1900 5100
+Connection ~ 1900 5000
+Connection ~ 1900 5100
+Wire Wire Line
+	1900 5100 1900 5200
+Connection ~ 1900 5200
+Wire Wire Line
+	1900 5200 1900 5300
+Wire Wire Line
+	950  5300 950  5500
+Wire Wire Line
+	950  5500 1900 5500
+Text Label 950  5500 2    50   ~ 0
+GND
+Text Label 950  5000 2    50   ~ 0
+7V0_N
+Text Label 1900 5800 2    50   ~ 0
+GND
+Wire Wire Line
+	2750 5000 2750 5100
+Connection ~ 2750 5100
+Wire Wire Line
+	2750 5100 2750 5200
+$Comp
+L device:C C6
+U 1 1 60ABDFF0
+P 3450 5150
+F 0 "C6" H 3565 5196 50  0000 L CNN
+F 1 "4.7 uF" H 3565 5105 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0603_CAP_NOSILK" H 3488 5000 50  0001 C CNN
+F 3 "" H 3450 5150 50  0001 C CNN
+	1    3450 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 5000 2750 5000
+Connection ~ 2750 5000
+Text Label 3450 5000 0    50   ~ 0
+2V5_N
+Text Label 3450 5300 0    50   ~ 0
+GND
+NoConn ~ 2750 5400
+Text Label 2750 5500 0    50   ~ 0
+7V0_N
+$Comp
+L device:C C4
+U 1 1 60ABF0D3
+P 2900 5750
+F 0 "C4" H 3015 5796 50  0000 L CNN
+F 1 "0.47 uF" H 3015 5705 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0402_CAP_NOSILK" H 2938 5600 50  0001 C CNN
+F 3 "" H 2900 5750 50  0001 C CNN
+	1    2900 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:R R2
+U 1 1 60ABF0DD
+P 3500 5750
+F 0 "R2" H 3570 5796 50  0000 L CNN
+F 1 "24.9K" H 3570 5705 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 3430 5750 50  0001 C CNN
+F 3 "" H 3500 5750 50  0001 C CNN
+	1    3500 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 5600 2900 5600
+Connection ~ 2900 5600
+Wire Wire Line
+	2900 5600 2750 5600
+Wire Wire Line
+	3500 5900 2900 5900
+Text Label 2900 5900 2    50   ~ 0
+GND
+NoConn ~ 2750 5800
+$Comp
+L analog-azonenberg:ADL5569 U3
+U 1 1 60AC644C
+P 6300 3700
+F 0 "U3" H 6775 4975 50  0000 C CNN
+F 1 "ADL5569" H 6775 4884 50  0000 C CNN
+F 2 "azonenberg_pcb:QFN_16_0.5MM_2.5x3MM" H 6300 4100 50  0001 C CNN
+F 3 "" H 6300 4100 50  0001 C CNN
+	1    6300 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8450 3050 7400 3050
+Text Label 8500 3250 2    50   ~ 0
+GND
+Wire Wire Line
+	8500 3250 8600 3250
+Text Label 7400 2650 0    50   ~ 0
+2V5_N
+Wire Wire Line
+	7400 2650 7400 2750
+Connection ~ 7400 2750
+Wire Wire Line
+	7400 2750 7400 2850
+Text Label 6150 2650 2    50   ~ 0
+2V5_P
+Wire Wire Line
+	6150 2650 6150 2750
+NoConn ~ 6150 3450
+NoConn ~ 6150 3550
+NoConn ~ 7400 3550
+NoConn ~ 7400 3450
+Text Label 7400 3250 0    50   ~ 0
+GND
+Text Label 7400 3650 0    50   ~ 0
+GND
+$Comp
+L device:R R3
+U 1 1 60ACBDF7
+P 7900 3300
+F 0 "R3" H 7970 3346 50  0000 L CNN
+F 1 "49.9" H 7970 3255 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 7830 3300 50  0001 C CNN
+F 3 "" H 7900 3300 50  0001 C CNN
+	1    7900 3300
+	1    0    0    -1  
+$EndComp
+Text Label 7900 3550 2    50   ~ 0
+GND
+Wire Wire Line
+	7900 3550 7900 3450
+Wire Wire Line
+	7400 3150 7900 3150
+Text Label 7850 3050 0    50   ~ 0
+VOUT
+Text Label 6150 3250 2    50   ~ 0
+2V5_P
+Text Label 6150 3650 2    50   ~ 0
+2V5_N
+$Comp
+L device:C C7
+U 1 1 60ACE0D6
+P 6300 1750
+F 0 "C7" H 6415 1796 50  0000 L CNN
+F 1 "4.7 uF" H 6415 1705 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0603_CAP_NOSILK" H 6338 1600 50  0001 C CNN
+F 3 "" H 6300 1750 50  0001 C CNN
+	1    6300 1750
+	1    0    0    -1  
+$EndComp
+Text Label 6300 1600 2    50   ~ 0
+2V5_P
+Text Label 6300 1900 2    50   ~ 0
+GND
+$Comp
+L device:C C9
+U 1 1 60ACEE6B
+P 6800 1750
+F 0 "C9" H 6915 1796 50  0000 L CNN
+F 1 "0.47 uF" H 6915 1705 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0402_CAP_NOSILK" H 6838 1600 50  0001 C CNN
+F 3 "" H 6800 1750 50  0001 C CNN
+	1    6800 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C11
+U 1 1 60ACF43F
+P 7350 1750
+F 0 "C11" H 7465 1796 50  0000 L CNN
+F 1 "0.47 uF" H 7465 1705 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0402_CAP_NOSILK" H 7388 1600 50  0001 C CNN
+F 3 "" H 7350 1750 50  0001 C CNN
+	1    7350 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7350 1600 6800 1600
+Connection ~ 6800 1600
+Wire Wire Line
+	6800 1600 6300 1600
+Wire Wire Line
+	6300 1900 6800 1900
+Connection ~ 6800 1900
+Wire Wire Line
+	6800 1900 7350 1900
+$Comp
+L device:C C8
+U 1 1 60AD1B04
+P 6300 2200
+F 0 "C8" H 6415 2246 50  0000 L CNN
+F 1 "4.7 uF" H 6415 2155 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0603_CAP_NOSILK" H 6338 2050 50  0001 C CNN
+F 3 "" H 6300 2200 50  0001 C CNN
+	1    6300 2200
+	1    0    0    -1  
+$EndComp
+Text Label 6300 2050 2    50   ~ 0
+2V5_N
+Text Label 6300 2350 2    50   ~ 0
+GND
+$Comp
+L device:C C10
+U 1 1 60AD1B10
+P 6800 2200
+F 0 "C10" H 6915 2246 50  0000 L CNN
+F 1 "0.47 uF" H 6915 2155 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0402_CAP_NOSILK" H 6838 2050 50  0001 C CNN
+F 3 "" H 6800 2200 50  0001 C CNN
+	1    6800 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C12
+U 1 1 60AD1B1A
+P 7350 2200
+F 0 "C12" H 7465 2246 50  0000 L CNN
+F 1 "0.47 uF" H 7465 2155 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0402_CAP_NOSILK" H 7388 2050 50  0001 C CNN
+F 3 "" H 7350 2200 50  0001 C CNN
+	1    7350 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7350 2050 6800 2050
+Connection ~ 6800 2050
+Wire Wire Line
+	6800 2050 6300 2050
+Wire Wire Line
+	6300 2350 6800 2350
+Connection ~ 6800 2350
+Wire Wire Line
+	6800 2350 7350 2350
+$Comp
+L Connector:Conn_Coaxial J4
+U 1 1 60AD38ED
+P 4150 6850
+F 0 "J4" H 4250 6825 50  0000 L CNN
+F 1 "U.FL" H 4250 6734 50  0000 L CNN
+F 2 "azonenberg_pcb:CONN_U.FL_TE_1909763-1" H 4150 6850 50  0001 C CNN
+F 3 "" H 4150 6850 50  0001 C CNN
+	1    4150 6850
+	1    0    0    -1  
+$EndComp
+Text Notes 3600 6600 0    50   ~ 0
+Power rail test points (for RP4030)
+Text Label 3800 6850 2    50   ~ 0
+2V5_P
+Wire Wire Line
+	3800 6850 4000 6850
+Text Label 3800 7050 2    50   ~ 0
+GND
+Wire Wire Line
+	3800 7050 4150 7050
+$Comp
+L Connector:Conn_Coaxial J5
+U 1 1 60AD7251
+P 4150 7250
+F 0 "J5" H 4250 7225 50  0000 L CNN
+F 1 "U.FL" H 4250 7134 50  0000 L CNN
+F 2 "azonenberg_pcb:CONN_U.FL_TE_1909763-1" H 4150 7250 50  0001 C CNN
+F 3 "" H 4150 7250 50  0001 C CNN
+	1    4150 7250
+	1    0    0    -1  
+$EndComp
+Text Label 3800 7250 2    50   ~ 0
+2V5_N
+Wire Wire Line
+	3800 7250 4000 7250
+Text Label 3800 7450 2    50   ~ 0
+GND
+Wire Wire Line
+	3800 7450 4150 7450
+Text Notes 6300 4100 0    50   ~ 0
+100 ohm Zdiff\n+13 dB single ended gain from each leg\n-20 dB insertion loss from 10x probe\nNet gain -7 dB or 2.24x attenuation
+Text Label 4700 2750 0    50   ~ 0
+GND
+Text Label 4700 2850 0    50   ~ 0
+GND
+Text Label 6150 3050 2    50   ~ 0
+VIN_P
+Text Label 4700 3050 0    50   ~ 0
+GND
+Text Label 4700 3150 0    50   ~ 0
+GND
+Text Label 4700 3250 0    50   ~ 0
+GND
+Text Label 6150 3150 2    50   ~ 0
+VIN_N
+Text Label 4700 3450 0    50   ~ 0
+GND
+Text Label 4700 3550 0    50   ~ 0
+GND
+Text Label 4700 3650 0    50   ~ 0
+GND
+Text Label 4700 3750 0    50   ~ 0
+GND
+$Comp
+L passive-azonenberg:Conn_01x10_shielded J6
+U 1 1 60AFA1AA
+P 4500 3250
+F 0 "J6" H 4418 3967 50  0000 C CNN
+F 1 "LSHM-105-02.5-L-DV-A-S-K-TR" H 4418 3876 50  0000 C CNN
+F 2 "azonenberg_pcb:CONN_SAMTEC_LSHM-105-02.5-L-DV-A-S-K-TR" H 4500 3250 50  0001 C CNN
+F 3 "~" H 4500 3250 50  0001 C CNN
+	1    4500 3250
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01 MH1
+U 1 1 60B02B6C
+P 900 1000
+F 0 "MH1" H 818 1217 50  0000 C CNN
+F 1 "1MM" H 818 1126 50  0000 C CNN
+F 2 "azonenberg_pcb:MECHANICAL_CLEARANCEHOLE_M1" H 900 1000 50  0001 C CNN
+F 3 "~" H 900 1000 50  0001 C CNN
+	1    900  1000
+	-1   0    0    -1  
+$EndComp
+Text Label 1100 1000 0    50   ~ 0
+GND
+Text Label 4700 3350 0    50   ~ 0
+VIN_P
+Text Label 4700 2950 0    50   ~ 0
+VIN_N
+$Comp
+L Connector:Conn_01x01 MH2
+U 1 1 60B45248
+P 900 1400
+F 0 "MH2" H 818 1617 50  0000 C CNN
+F 1 "1MM" H 818 1526 50  0000 C CNN
+F 2 "azonenberg_pcb:MECHANICAL_CLEARANCEHOLE_M1" H 900 1400 50  0001 C CNN
+F 3 "~" H 900 1400 50  0001 C CNN
+	1    900  1400
+	-1   0    0    -1  
+$EndComp
+Text Label 1100 1400 0    50   ~ 0
+GND
+$Comp
+L Connector:Conn_01x01 MH3
+U 1 1 60B46158
+P 900 1750
+F 0 "MH3" H 818 1967 50  0000 C CNN
+F 1 "1MM" H 818 1876 50  0000 C CNN
+F 2 "azonenberg_pcb:MECHANICAL_CLEARANCEHOLE_M1" H 900 1750 50  0001 C CNN
+F 3 "~" H 900 1750 50  0001 C CNN
+	1    900  1750
+	-1   0    0    -1  
+$EndComp
+Text Label 1100 1750 0    50   ~ 0
+GND
+$Comp
+L Connector:Conn_01x01 MH4
+U 1 1 60B46163
+P 900 2150
+F 0 "MH4" H 818 2367 50  0000 C CNN
+F 1 "1MM" H 818 2276 50  0000 C CNN
+F 2 "azonenberg_pcb:MECHANICAL_CLEARANCEHOLE_M1" H 900 2150 50  0001 C CNN
+F 3 "~" H 900 2150 50  0001 C CNN
+	1    900  2150
+	-1   0    0    -1  
+$EndComp
+Text Label 1100 2150 0    50   ~ 0
+GND
+$EndSCHEMATC
