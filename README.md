@@ -64,6 +64,15 @@ All are 8 channels.
 ## Signal Generators
 
 * FLEMING (John Ambrose Fleming, inventor of vacuum tube)
-  4 channel 16 bit 1 Gsps arbitrary waveform generator, AD9154 + Kintex-7 + DDR3 SODIMM based.
+  4 channel 14 bit 2.5 Gsps arbitrary waveform generator, AD9739 + Kintex-7 + DDR3 SODIMM based.
+  Need ~160 Gbps of RAM bandwidth to keep them fed
+
+  Two channels of 14-bit LVDS per DAC = 28 LVDS pairs for data, assume clock/sync are external to FPGA
+  Slow control: 4 wire SPI, IRQ = 5 slow lines
+
+  4x DAC = 84 pairs (168 pins used / 4 banks / 200 allocated) + 15 slow lines
+
+  Two xc7k160t's, two dacs + 1 sodimm of ram on each
+
   4GB DDR3 SODIMM, 1 GB per channel = 512 Mpoints of waveform data
   Probably some digital outputs (mix of LVDS and LVCMOS, and maybe some slow pin headers?)
