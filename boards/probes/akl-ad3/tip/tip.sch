@@ -1,0 +1,163 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L passive-azonenberg:Conn_01x10_shielded J1
+U 1 1 60ACA97D
+P 1550 2550
+F 0 "J1" H 1468 3267 50  0000 C CNN
+F 1 "Conn_01x10_shielded" H 1468 3176 50  0000 C CNN
+F 2 "azonenberg_pcb:CONN_SAMTEC_LSHM-105-02.5-L-DV-A-S-K-TR" H 1550 2550 50  0001 C CNN
+F 3 "~" H 1550 2550 50  0001 C CNN
+	1    1550 2550
+	-1   0    0    -1  
+$EndComp
+$Comp
+L device:R R3
+U 1 1 60BB1AB7
+P 4600 2050
+F 0 "R3" V 4393 2050 50  0000 C CNN
+F 1 "FC0402E2000BTT0" V 4484 2050 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK_FLIPCHIP" V 4530 2050 50  0001 C CNN
+F 3 "" H 4600 2050 50  0001 C CNN
+	1    4600 2050
+	0    1    1    0   
+$EndComp
+$Comp
+L device:R R5
+U 1 1 60BB1E4D
+P 5350 2050
+F 0 "R5" V 5143 2050 50  0000 C CNN
+F 1 "FC0402E2000BTT0" V 5234 2050 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK_FLIPCHIP" V 5280 2050 50  0001 C CNN
+F 3 "" H 5350 2050 50  0001 C CNN
+	1    5350 2050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4750 2050 5200 2050
+$Comp
+L device:R R1
+U 1 1 60BB221A
+P 3850 2050
+F 0 "R1" V 3643 2050 50  0000 C CNN
+F 1 "FC0402E50R0BTT0" V 3734 2050 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK_FLIPCHIP" V 3780 2050 50  0001 C CNN
+F 3 "" H 3850 2050 50  0001 C CNN
+	1    3850 2050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4000 2050 4450 2050
+$Comp
+L Connector:Conn_01x01 J2
+U 1 1 60BB30D9
+P 6250 2050
+F 0 "J2" H 6330 2092 50  0000 L CNN
+F 1 "SOCKET" H 6330 2001 50  0000 L CNN
+F 2 "azonenberg_pcb:CONN_TE_2-331677-6_EDGELAUNCH" H 6250 2050 50  0001 C CNN
+F 3 "~" H 6250 2050 50  0001 C CNN
+	1    6250 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 2050 5500 2050
+Text Label 5750 2050 0    50   ~ 0
+IN_P
+Text Label 3250 2050 0    50   ~ 0
+IN_R_P
+Wire Wire Line
+	3700 2050 3250 2050
+$Comp
+L device:R R4
+U 1 1 60BB4014
+P 4600 2450
+F 0 "R4" V 4393 2450 50  0000 C CNN
+F 1 "FC0402E2000BTT0" V 4484 2450 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK_FLIPCHIP" V 4530 2450 50  0001 C CNN
+F 3 "" H 4600 2450 50  0001 C CNN
+	1    4600 2450
+	0    1    1    0   
+$EndComp
+$Comp
+L device:R R6
+U 1 1 60BB401E
+P 5350 2450
+F 0 "R6" V 5143 2450 50  0000 C CNN
+F 1 "FC0402E2000BTT0" V 5234 2450 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK_FLIPCHIP" V 5280 2450 50  0001 C CNN
+F 3 "" H 5350 2450 50  0001 C CNN
+	1    5350 2450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4750 2450 5200 2450
+$Comp
+L device:R R2
+U 1 1 60BB4029
+P 3850 2450
+F 0 "R2" V 3643 2450 50  0000 C CNN
+F 1 "FC0402E50R0BTT0" V 3734 2450 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK_FLIPCHIP" V 3780 2450 50  0001 C CNN
+F 3 "" H 3850 2450 50  0001 C CNN
+	1    3850 2450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4000 2450 4450 2450
+$Comp
+L Connector:Conn_01x01 J3
+U 1 1 60BB4034
+P 6250 2450
+F 0 "J3" H 6330 2492 50  0000 L CNN
+F 1 "SOCKET" H 6330 2401 50  0000 L CNN
+F 2 "azonenberg_pcb:CONN_TE_2-331677-6_EDGELAUNCH" H 6250 2450 50  0001 C CNN
+F 3 "~" H 6250 2450 50  0001 C CNN
+	1    6250 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 2450 5500 2450
+Text Label 5750 2450 0    50   ~ 0
+IN_N
+Text Label 3250 2450 0    50   ~ 0
+IN_R_N
+Wire Wire Line
+	3700 2450 3250 2450
+Text Label 2800 2050 0    50   ~ 0
+GND
+Text Label 1750 2750 0    50   ~ 0
+IN_R_P
+Text Label 1750 2350 0    50   ~ 0
+IN_R_N
+Text Label 1750 2050 0    50   ~ 0
+GND
+Text Label 1750 2150 0    50   ~ 0
+GND
+Text Label 1750 2250 0    50   ~ 0
+GND
+Text Label 1750 2450 0    50   ~ 0
+GND
+Text Label 1750 2550 0    50   ~ 0
+GND
+Text Label 1750 2650 0    50   ~ 0
+GND
+Text Label 1750 2850 0    50   ~ 0
+GND
+Text Label 1750 2950 0    50   ~ 0
+GND
+Text Label 1750 3050 0    50   ~ 0
+GND
+$EndSCHEMATC
