@@ -1,0 +1,612 @@
+FTYP SONPROJ 18 ! Sonnet Project File
+VER 17.56
+HEADER
+LIC antikernel2.1.50170 3cfdfeabd718 havequick azonenberg Level3Gold
+DAT 06/20/2021 02:05:37
+BUILT_BY_CREATED sonntgbr 17.56.081 06/14/2021 17:50:55
+BUILT_BY_SAVED sonnet 17.56
+MDATE 06/20/2021 02:05:37
+HDATE 06/20/2021 02:05:37
+ANN sma-test-whole-gk:
+ANN 
+ANN as imported by Gerber
+ANN 
+ANN _gka:
+ANN 
+ANN moved M5,  Edge Cuts to Gnd level
+ANN removed D4 dielectric layer
+ANN set D1 to 0.166 Isola FR408HR
+ANN There are D2 and D3 FR408HR layers that have a total thickness of 1.4 mm
+ANN set each one to 0.7 mm
+ANN changed Air_added to Air and set each to 10 mm
+ANN 
+ANN _gkb:
+ANN 
+ANN edge cuts opening is 45.5 x 120.95 mm
+ANN changed box size to this
+ANN moved whole layout to align edge cuts inside dimension with the new box
+ANN deleted M5, edge cuts tech layer
+ANN 
+ANN _gkc:
+ANN 
+ANN divided out Line 6 and Line 7
+ANN 
+ANN sma-test-Line6-gk:
+ANN 
+ANN removed all polygons except those related to Line 6
+ANN reduced box Y to 36 mm and nearly centered layout
+ANN 
+ANN sma-test-Line6-samtec-gk:
+ANN 
+ANN used stackup and materials from samtec-test-cutout_gk3 as a guide to add connector geometry
+ANN first modified dielectric layers
+ANN then added tech layers
+ANN then metal types
+ANN copied and pasted each set of polygons by tech layer from gk3 model to this model
+ANN when I did the ConnPins polygons, I noticed the outer ground pins were much further apart than the mount pads
+ANN moved the ground pins inward to align with the pads with a 6.35 mm, overall Y dimension
+ANN increased cell size from 0.01 x 0.01 to 0.025 x 0.025 mm
+ANN copied and pasted remaining tech layer polygons
+ANN reduce the feedlines and ConnPanel vias to 9.5 mm which matches the connector length
+ANN reference planes set to 9.45 mm to end and reduced width (0.05mm) panel
+ANN Added Freq Sweep Combination
+ANN 0.1
+ANN 1, 10, 1
+ANN ABS 0.1 to 10
+ANN Note that model is not symmetrical left to right. There is 0.125mm space between the circuit and the right edge of substrate. On the left side this is 0.075 mm. Both due to Edge Cuts Gerber that set the PCB substrate size
+ANN 
+ANN Estimated memory: 16,953 MB
+ANN Subsection total: 46,666
+ANN 
+ANN sma-test-Line6-samtec-gk2:
+ANN 
+ANN removed M3 tech layer and polygons as these were circular ground via pads
+ANN changed circular ground vias to square
+ANN noticed that the rectangular connector pin mounting pads and the ground vias were not symmetrical. 
+ANN mirrored the upper pad and vias to the lower position
+ANN corrected both regions on each end of the PCB
+ANN added some M4 metal polygons to connect the M4 groundpads to the ConnPanel8 vias. Due to asymmetry noted above, the widths of these added polygons are different
+ANN changed box top and bottom covers to Freespace
+ANN 
+ANN sma-test-Line6-samtec-gk2a:
+ANN 
+ANN decreased the gap between the feedline signal to return traces from 1.525 to 1.5 mm
+ANN increased the return traces from 0.8 to 1.075 mm
+ANN increased the center trace width from 1.2 to 1.25 mm
+ANN 
+ANN -gk2b:
+ANN 
+ANN converted the 1 x 5 ground via arrays to a single via polygon
+ANN removed cround bulge in the ground pads
+ANN 
+ANN -gk2c:
+ANN 
+ANN ABS interpolation error in gk2b at low frequency
+ANN deleted data
+ANN added single frequency points at 0.2 and 0.5 GHz
+ANN 
+ANN -gk2d:
+ANN 
+ANN changed the Vias tech layer to stop at Level 5, which is M2
+ANN removed M4 tech layer and polygons
+ANN 
+ANN -gk2e:
+ANN 
+ANN trying to simplify model and possibly squeeze it into Level3 Gold
+ANN changed the ConnPanel1 and ConnPanel8 vias to ConnBridge1 and ConnBridge7 planar metal
+ANN Combined the two lower Isola FR408HR layers into 1
+ANN Removed the ConnPanel7 tech layer and polygons
+ANN combined upper two and lower two air layers
+ANN 
+ANN -gk2f:
+ANN 
+ANN Moved ConnPins tech layer to level 3. allowing it to ram through M1 thick metal
+ANN changed number of sheets in Gold metal type for ConnPins to 3, since an extra sheet is added due to the M1, Copper_1oz metal type
+ANN deleted ConnPanel4 tech layer and vias
+ANN shifted ConnPins down to Level3
+ANN SHifted ConnBridge down to level1
+ANN shifted ConnPanel2 to levels 1 to 2
+ANN adjusted air layer thicknesses accordingly
+ANN removed top air layer
+ANN 
+ANN -gk2g:
+ANN 
+ANN removed ConnBridge1 and ConnPanel2
+ANN combined uppar air layers
+ANN now at 4 dielectric layers which meets Level3 Gold limit
+ANN memory requirement is still to high at 3300 MB
+ANN renamed ConnPanel5 to ConnPanel 1
+ANN renamed ConnPanel6 to ConnPanel 2
+ANN renamed ConnBridge7 to ConnBridge
+ANN 
+ANN -gk2h:
+ANN 
+ANN changed speed/memory from fine to mid
+ANN 
+ANN 
+ANN 
+ANN 
+ANN 
+ANN 
+ANN 
+ANN 
+ANN 
+ANN 
+ANN 
+ANN 
+ANN 
+ANN 
+ANN 
+ANN 
+ANN 
+ANN 
+ANN 
+ANN 
+ANN 
+ANN 
+ANN 
+ANN 
+ANN 
+ANN 
+ANN 
+ANN 
+ANN 
+END HEADER
+DIM
+ANG DEG
+CAP PF
+CON /OH
+FREQ GHZ
+IND NH
+LNG MM
+RES OH
+END DIM
+CONTROL
+VARSWP
+OPTIONS  -dj
+SPEED 1
+CACHE_ABS 0
+Q_ACC N
+END CONTROL
+GEO
+SYM
+DRP1 LEFT FIX 9.45
+DRP1 RIGHT FIX 9.45
+TMET "Free Space" 0 FREESPACE 376.7303136 0 0 0
+BMET "Free Space" 0 FREESPACE 376.7303136 0 0 0
+MET "Copper_1oz" 2 TMM 58000000 0.5 0.035 2
+MET "Copper_0.5oz" 1 NOR 58000000 0.5 0.0175 
+MET "Gold_Conn" 4 TMM 40900000 0.5 1.27 3
+BOX 3 64.5 36 5160 2880 20 0
+      10 1 1 0 0 0 0 "Air"
+      0.166 3.6 1 0.0092 0 0 0 "Isola FR408HR"
+      1.4 3.6 1 0.0092 0 0 0 "Isola FR408HR"
+      10 1 1 0 0 0 0 "Air"
+TECHLAY VIA Vias <UNSPECIFIED> -6 -65534 GBR Lossless 
+VIA POLYGON
+0 0 -1 N 1831 1 1 100 100 0 0 0 Y
+TOLEVEL 1 RING NOCOVERS
+END
+END
+TECHLAY METAL M1 <UNSPECIFIED> -1 -65534 GBR M1 
+0 0 0 N 1833 1 1 100 100 0 0 0 Y
+END
+END
+TECHLAY VIA ConnPanel1 <UNSPECIFIED> -10 -65534 
+VIA POLYGON
+0 0 -1 N 1835 1 1 100 100 0 0 0 Y
+TOLEVEL 1 RING NOCOVERS
+END
+END
+TECHLAY METAL ConnPins <UNSPECIFIED> -8 -65534 
+0 0 2 N 1837 1 1 100 100 0 0 0 Y
+END
+END
+TECHLAY METAL M2 <UNSPECIFIED> -3 -65534 GBR M2 
+1 0 1 N 1846 1 1 100 100 0 0 0 Y
+END
+END
+TECHLAY VIA ConnPanel2 <UNSPECIFIED> -11 -65534 
+VIA POLYGON
+1 0 -1 N 1848 1 1 100 100 0 0 0 Y
+TOLEVEL 2 RING NOCOVERS
+END
+END
+TECHLAY METAL ConnBridge <UNSPECIFIED> -5 -65534 
+2 0 -1 N 1851 1 1 100 100 0 0 0 Y
+END
+END
+VALVAR TRACE LNG 0.31 "Dim. Param."
+GEOVAR TRACE SYM YDIR 1 NSCD
+POS 10.01277855 0.905122372
+NOM 0.31
+REF1 POLY 727 1
+9
+REF2 POLY 727 1
+2
+PS1 1
+POLY 727 1
+8
+END
+PS2 1
+POLY 727 1
+3
+END
+END
+LORGN 32.25 18 U 
+POR1 BOX
+POLY 1316 1
+3
+-1 50 0 0 0 0 15.3625 
+POR1 BOX
+POLY 1317 1
+3
+-1 50 0 0 0 0 20.6375 
+POR1 BOX
+POLY 1318 1
+1
+1 50 0 0 0 0 18 
+POR1 BOX
+POLY 1387 1
+3
+-2 50 0 0 0 64.5 20.6375 
+POR1 BOX
+POLY 1388 1
+3
+-2 50 0 0 0 64.5 15.3625 
+POR1 BOX
+POLY 1389 1
+1
+2 50 0 0 0 64.5 18 
+NUM 32
+VIA POLYGON
+0 5 -1 N 1610 1 1 100 100 0 0 0 Y
+TOLEVEL 1 RING NOCOVERS
+TLAYNAM Vias INH
+10.2 15.4
+14.275 15.4
+14.275 15.6
+10.2 15.6
+10.2 15.4
+END
+VIA POLYGON
+0 5 -1 N 1623 1 1 100 100 0 0 0 Y
+TOLEVEL 1 RING NOCOVERS
+TLAYNAM Vias INH
+54.35 15.4
+50.175 15.4
+50.175 15.6
+54.35 15.6
+54.35 15.4
+END
+VIA POLYGON
+0 5 -1 N 1753 1 1 100 100 0 0 0 Y
+TOLEVEL 1 RING NOCOVERS
+TLAYNAM Vias INH
+10.2 20.6
+14.275 20.6
+14.275 20.4
+10.2 20.4
+10.2 20.6
+END
+VIA POLYGON
+0 5 -1 N 1754 1 1 100 100 0 0 0 Y
+TOLEVEL 1 RING NOCOVERS
+TLAYNAM Vias INH
+54.35 20.6
+50.175 20.6
+50.175 20.4
+54.35 20.4
+54.35 20.6
+END
+0 5 0 N 15 1 1 100 100 0 0 0 Y
+TLAYNAM M1 INH
+9.575 15.845
+14.275 15.845
+14.275 14.495
+9.575 14.495
+9.575 15.845
+END
+0 5 0 N 25 1 1 100 100 0 0 0 Y
+TLAYNAM M1 INH
+50.175 15.845
+54.875 15.845
+54.875 14.495
+50.175 14.495
+50.175 15.845
+END
+0 13 0 N 727 1 1 100 100 0 0 0 Y
+TLAYNAM M1 INH
+9.575 18.63
+13.775 18.63
+13.775 18.15
+50.675 18.15
+50.675 18.63
+54.875 18.63
+54.875 17.36
+50.675 17.36
+50.675 17.84
+13.775 17.84
+13.775 17.36
+9.575 17.36
+9.575 18.63
+END
+0 5 0 N 1620 1 1 100 100 0 0 0 Y
+TLAYNAM M1 INH
+9.575 20.155
+14.275 20.155
+14.275 21.505
+9.575 21.505
+9.575 20.155
+END
+0 5 0 N 1632 1 1 100 100 0 0 0 Y
+TLAYNAM M1 INH
+50.175 20.155
+54.875 20.155
+54.875 21.505
+50.175 21.505
+50.175 20.155
+END
+VIA POLYGON
+0 5 -1 N 1447 1 1 100 100 0 0 0 Y
+TOLEVEL 1 RING NOCOVERS
+TLAYNAM ConnPanel1 INH
+9.45 15.9
+9.5 15.9
+9.5 14.825
+9.45 14.825
+9.45 15.9
+END
+VIA POLYGON
+0 5 -1 N 1448 1 1 100 100 0 0 0 Y
+TOLEVEL 1 RING NOCOVERS
+TLAYNAM ConnPanel1 INH
+9.45 20.1
+9.5 20.1
+9.5 21.175
+9.45 21.175
+9.45 20.1
+END
+VIA POLYGON
+0 5 -1 N 1460 1 1 100 100 0 0 0 Y
+TOLEVEL 1 RING NOCOVERS
+TLAYNAM ConnPanel1 INH
+55.05 15.9
+55 15.9
+55 14.825
+55.05 14.825
+55.05 15.9
+END
+VIA POLYGON
+0 5 -1 N 1461 1 1 100 100 0 0 0 Y
+TOLEVEL 1 RING NOCOVERS
+TLAYNAM ConnPanel1 INH
+55.05 20.1
+55 20.1
+55 21.175
+55.05 21.175
+55.05 20.1
+END
+0 5 2 N 1316 1 1 100 100 0 0 0 Y
+TLAYNAM ConnPins INH
+0 14.825
+9.5 14.825
+9.5 15.9
+0 15.9
+0 14.825
+END
+0 5 2 N 1317 1 1 100 100 0 0 0 Y
+TLAYNAM ConnPins INH
+0 21.175
+9.5 21.175
+9.5 20.1
+0 20.1
+0 21.175
+END
+0 5 2 N 1318 1 1 100 100 0 0 0 Y
+TLAYNAM ConnPins INH
+9.5 17.375
+0 17.375
+0 18.625
+9.5 18.625
+9.5 17.375
+END
+0 5 2 N 1320 1 1 100 100 0 0 0 Y
+TLAYNAM ConnPins INH
+9.5 21.175
+13.3 21.175
+13.3 20.375
+9.5 20.375
+9.5 21.175
+END
+0 5 2 N 1321 1 1 100 100 0 0 0 Y
+TLAYNAM ConnPins INH
+9.5 17.375
+13.3 17.375
+13.3 18.625
+9.5 18.625
+9.5 17.375
+END
+0 5 2 N 1322 1 1 100 100 0 0 0 Y
+TLAYNAM ConnPins INH
+9.5 14.825
+13.3 14.825
+13.3 15.625
+9.5 15.625
+9.5 14.825
+END
+0 5 2 N 1386 1 1 100 100 0 0 0 Y
+TLAYNAM ConnPins INH
+55 21.175
+51.2 21.175
+51.2 20.375
+55 20.375
+55 21.175
+END
+0 5 2 N 1387 1 1 100 100 0 0 0 Y
+TLAYNAM ConnPins INH
+64.5 21.175
+55 21.175
+55 20.1
+64.5 20.1
+64.5 21.175
+END
+0 5 2 N 1388 1 1 100 100 0 0 0 Y
+TLAYNAM ConnPins INH
+64.5 14.825
+55 14.825
+55 15.9
+64.5 15.9
+64.5 14.825
+END
+0 5 2 N 1389 1 1 100 100 0 0 0 Y
+TLAYNAM ConnPins INH
+55 17.375
+64.5 17.375
+64.5 18.625
+55 18.625
+55 17.375
+END
+0 5 2 N 1390 1 1 100 100 0 0 0 Y
+TLAYNAM ConnPins INH
+55 17.375
+51.2 17.375
+51.2 18.625
+55 18.625
+55 17.375
+END
+0 5 2 N 1391 1 1 100 100 0 0 0 Y
+TLAYNAM ConnPins INH
+55 14.825
+51.2 14.825
+51.2 15.625
+55 15.625
+55 14.825
+END
+1 50 1 N 1817 1 1 100 100 0 0 0 Y
+TLAYNAM M2 INH
+54.775 18.67
+54.77133 18.64682
+54.76068 18.62592
+54.74408 18.60932
+54.72318 18.59867
+54.7 18.595
+50.35 18.595
+50.35 18.59131
+50.2 18.59131
+50.2 18.595
+49.97869 18.595
+49.97533 18.59467
+49.975 18.59131
+49.975 17.575
+49.975 17.39869
+49.97533 17.39533
+49.97869 17.395
+50.2 17.395
+50.2 17.39869
+50.35 17.39869
+50.35 17.395
+54.7 17.395
+54.72318 17.39133
+54.74408 17.38068
+54.76068 17.36408
+54.77133 17.34318
+54.775 17.32
+54.775 11.99
+9.775 11.99
+9.775 17.32
+9.77867 17.34318
+9.78932 17.36408
+9.80592 17.38068
+9.82682 17.39133
+9.85 17.395
+14.47131 17.395
+14.47467 17.39533
+14.475 17.39869
+14.475 18.59131
+14.47467 18.59467
+14.47131 18.595
+9.85 18.595
+9.82682 18.59867
+9.80592 18.60932
+9.78932 18.62592
+9.77867 18.64682
+9.775 18.67
+9.775 23.99
+54.775 23.99
+54.775 18.67
+END
+VIA POLYGON
+1 5 -1 N 1449 1 1 100 100 0 0 0 Y
+TOLEVEL 2 RING NOCOVERS
+TLAYNAM ConnPanel2 INH
+9.45 15.9
+9.5 15.9
+9.5 14.825
+9.45 14.825
+9.45 15.9
+END
+VIA POLYGON
+1 5 -1 N 1450 1 1 100 100 0 0 0 Y
+TOLEVEL 2 RING NOCOVERS
+TLAYNAM ConnPanel2 INH
+9.45 20.1
+9.5 20.1
+9.5 21.175
+9.45 21.175
+9.45 20.1
+END
+VIA POLYGON
+1 5 -1 N 1462 1 1 100 100 0 0 0 Y
+TOLEVEL 2 RING NOCOVERS
+TLAYNAM ConnPanel2 INH
+55.05 15.9
+55 15.9
+55 14.825
+55.05 14.825
+55.05 15.9
+END
+VIA POLYGON
+1 5 -1 N 1463 1 1 100 100 0 0 0 Y
+TOLEVEL 2 RING NOCOVERS
+TLAYNAM ConnPanel2 INH
+55.05 20.1
+55 20.1
+55 21.175
+55.05 21.175
+55.05 20.1
+END
+2 5 -1 N 1452 1 1 100 100 0 0 0 Y
+TLAYNAM ConnBridge INH
+9.45 14.825
+9.5 14.825
+9.5 21.175
+9.45 21.175
+9.45 14.825
+END
+2 5 -1 N 1465 1 1 100 100 0 0 0 Y
+TLAYNAM ConnBridge INH
+55.05 14.825
+55 14.825
+55 21.175
+55.05 21.175
+55.05 14.825
+END
+END GEO
+OPT
+MAX 0
+END OPT
+VARSWP
+ENABLED Y
+FREQ Y AN STEP 0.1
+FREQ Y AN STEP 0.2
+FREQ Y AN STEP 0.5
+FREQ Y AN SWEEP 1.0 16.0 1.0
+FREQ Y AY ABS_ENTRY 0.1 16.0 -1 300 
+VAR TRACE N 0.35 0.35 UNDEF
+END
+END VARSWP
+3DOPTIONS
+GLOBAL 1
+ALL 5 1
+END 3DOPTIONS
