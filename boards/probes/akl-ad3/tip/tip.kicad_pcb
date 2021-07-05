@@ -153,16 +153,16 @@
     )
   )
 
-  (module azonenberg_pcb:CONN_TE_2-331677-6_EDGELAUNCH (layer B.Cu) (tedit 60BB1CF9) (tstamp 60BB37A2)
-    (at 121.7 77.3 270)
+  (module azonenberg_pcb:CONN_TE_2-331677-6_EDGELAUNCH (layer B.Cu) (tedit 60BB1CF9) (tstamp 60E368C4)
+    (at 122.25 77.15 315)
     (path /60BB4034)
-    (fp_text reference J3 (at 0.1 2.25 270) (layer B.SilkS) hide
+    (fp_text reference J3 (at 0.1 2.25 315) (layer B.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
-    (fp_text value SOCKET (at -0.3 4 270) (layer B.Fab) hide
+    (fp_text value SOCKET (at -0.3 4 315) (layer B.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
-    (pad 1 smd rect (at 0 0 270) (size 2.86 1.4) (layers B.Cu B.Paste B.Mask)
+    (pad 1 smd rect (at 0 0 315) (size 2.86 1.4) (layers B.Cu B.Paste B.Mask)
       (net 2 /IN_N))
     (model :share:TE/Socket/c-0331677-26-ar1-3d.stp
       (offset (xyz 2.1 0 0.5))
@@ -171,16 +171,16 @@
     )
   )
 
-  (module azonenberg_pcb:CONN_TE_2-331677-6_EDGELAUNCH (layer B.Cu) (tedit 60BB1CF9) (tstamp 60BB2228)
-    (at 121.7 54.7 90)
+  (module azonenberg_pcb:CONN_TE_2-331677-6_EDGELAUNCH (layer B.Cu) (tedit 60BB1CF9) (tstamp 60E36905)
+    (at 122.25 54.875 225)
     (path /60BB30D9)
-    (fp_text reference J2 (at 0.1 2.25 270) (layer B.SilkS) hide
+    (fp_text reference J2 (at 0.1 2.25 225) (layer B.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
-    (fp_text value SOCKET (at -0.3 4 270) (layer B.Fab) hide
+    (fp_text value SOCKET (at -0.3 4 225) (layer B.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
-    (pad 1 smd rect (at 0 0 90) (size 2.86 1.4) (layers B.Cu B.Paste B.Mask)
+    (pad 1 smd rect (at 0 0 225) (size 2.86 1.4) (layers B.Cu B.Paste B.Mask)
       (net 1 /IN_P))
     (model :share:TE/Socket/c-0331677-26-ar1-3d.stp
       (offset (xyz 2.1 0 0.5))
@@ -318,6 +318,7 @@
   (module azonenberg_pcb:CONN_SAMTEC_LSHM-105-02.5-L-DV-A-S-K-TR (layer B.Cu) (tedit 60AAE7B0) (tstamp 60BB36C4)
     (at 84 66 90)
     (path /60ACA97D)
+    (clearance 0.125)
     (fp_text reference J1 (at -0.05 -4.025 270) (layer B.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
@@ -377,9 +378,9 @@
   (gr_line (start 85.75 60.75) (end 87 62) (layer Edge.Cuts) (width 0.05) (tstamp 60BB5D21))
   (gr_line (start 80.75 60.75) (end 79.5 62) (layer Edge.Cuts) (width 0.05) (tstamp 60BB5CE4))
   (gr_line (start 79.5 70) (end 80.75 71.25) (layer Edge.Cuts) (width 0.05) (tstamp 60BB5CC4))
-  (gr_line (start 122 74.75) (end 123 75.75) (layer Edge.Cuts) (width 0.05) (tstamp 60BB5A54))
+  (gr_line (start 121.75 74.75) (end 124 77) (layer Edge.Cuts) (width 0.05) (tstamp 60BB5A54))
   (gr_line (start 94 76) (end 95.75 77.75) (layer Edge.Cuts) (width 0.05) (tstamp 60BB5973))
-  (gr_line (start 123 56.25) (end 122 57.25) (layer Edge.Cuts) (width 0.05) (tstamp 60BB58E3))
+  (gr_line (start 124 55) (end 121.75 57.25) (layer Edge.Cuts) (width 0.05) (tstamp 60BB58E3))
   (gr_line (start 96 54.25) (end 94 56.25) (layer Edge.Cuts) (width 0.05) (tstamp 60BB58D7))
   (gr_line (start 87 69.25) (end 94 69.25) (layer Edge.Cuts) (width 0.05))
   (gr_line (start 87 70) (end 87 69.25) (layer Edge.Cuts) (width 0.05))
@@ -389,22 +390,22 @@
   (gr_line (start 94 76) (end 94 69.25) (layer Edge.Cuts) (width 0.05) (tstamp 60BB3897))
   (gr_line (start 117 77.75) (end 95.75 77.75) (layer Edge.Cuts) (width 0.05))
   (gr_line (start 117 78.75) (end 117 77.75) (layer Edge.Cuts) (width 0.05))
-  (gr_line (start 123 78.75) (end 117 78.75) (layer Edge.Cuts) (width 0.05))
-  (gr_line (start 123 75.75) (end 123 78.75) (layer Edge.Cuts) (width 0.05))
-  (gr_line (start 98.25 74.75) (end 122 74.75) (layer Edge.Cuts) (width 0.05))
-  (gr_line (start 122 57.25) (end 98.25 57.25) (layer Edge.Cuts) (width 0.05))
-  (gr_line (start 123 53.25) (end 123 56.25) (layer Edge.Cuts) (width 0.05))
-  (gr_line (start 117 53.25) (end 123 53.25) (layer Edge.Cuts) (width 0.05))
+  (gr_line (start 124 78.75) (end 117 78.75) (layer Edge.Cuts) (width 0.05))
+  (gr_line (start 124 77) (end 124 78.75) (layer Edge.Cuts) (width 0.05))
+  (gr_line (start 98.25 74.75) (end 121.75 74.75) (layer Edge.Cuts) (width 0.05))
+  (gr_line (start 121.75 57.25) (end 98.25 57.25) (layer Edge.Cuts) (width 0.05))
+  (gr_line (start 124 53.25) (end 124 55) (layer Edge.Cuts) (width 0.05))
+  (gr_line (start 117 53.25) (end 124 53.25) (layer Edge.Cuts) (width 0.05))
   (gr_line (start 117 54.25) (end 117 53.25) (layer Edge.Cuts) (width 0.05))
   (gr_line (start 96 54.25) (end 117 54.25) (layer Edge.Cuts) (width 0.05))
   (gr_line (start 80.75 71.25) (end 85.75 71.25) (layer Edge.Cuts) (width 0.05))
   (gr_line (start 79.5 62) (end 79.5 70) (layer Edge.Cuts) (width 0.05))
   (gr_line (start 85.75 60.75) (end 80.75 60.75) (layer Edge.Cuts) (width 0.05))
 
-  (segment (start 121.2 55.2) (end 121.7 54.7) (width 0.2) (layer B.Cu) (net 1))
-  (segment (start 120.9 56) (end 121.7 55.2) (width 0.2) (layer B.Cu) (net 1))
-  (segment (start 121.7 55.2) (end 121.7 54.7) (width 0.2) (layer B.Cu) (net 1))
-  (segment (start 120.45 56) (end 120.9 56) (width 0.2) (layer B.Cu) (net 1))
+  (segment (start 120.75 56) (end 121.25 56) (width 0.2) (layer B.Cu) (net 1))
+  (segment (start 120.75 56) (end 120.9 56) (width 0.2) (layer B.Cu) (net 1))
+  (segment (start 120.45 56) (end 120.75 56) (width 0.2) (layer B.Cu) (net 1) (tstamp 60E368F2))
+  (segment (start 121.25 56) (end 121.75 55.5) (width 0.2) (layer B.Cu) (net 1))
   (segment (start 121.2 76.8) (end 121.7 77.3) (width 0.2) (layer B.Cu) (net 2))
   (segment (start 121.7 76.8) (end 121.7 77.3) (width 0.2) (layer B.Cu) (net 2))
   (segment (start 120.9 76) (end 121.7 76.8) (width 0.2) (layer B.Cu) (net 2))
