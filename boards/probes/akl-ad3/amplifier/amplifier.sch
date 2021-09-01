@@ -1,12 +1,13 @@
 EESchema Schematic File Version 4
+LIBS:amplifier-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "AKL-AD3 amplifier board"
-Date "2021-05-24"
-Rev "0.1"
+Date "2021-08-31"
+Rev "0.2"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
 Comment2 ""
@@ -594,4 +595,41 @@ F 3 "~" H 900 2150 50  0001 C CNN
 $EndComp
 Text Label 1100 2150 0    50   ~ 0
 GND
+$Comp
+L device:R R4
+U 1 1 612EEDBD
+P 5050 4600
+F 0 "R4" H 5120 4646 50  0000 L CNN
+F 1 "110" V 5050 4500 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 4980 4600 50  0001 C CNN
+F 3 "" H 5050 4600 50  0001 C CNN
+	1    5050 4600
+	1    0    0    -1  
+$EndComp
+Text Notes 5000 4950 0    50   ~ 0
+Input terminations to match to 50 ohm\n(native amp input Z is ~~91 ohms)
+Text Label 4900 4450 2    50   ~ 0
+VIN_P
+Wire Wire Line
+	4900 4450 5050 4450
+Text Label 4900 4750 2    50   ~ 0
+GND
+Wire Wire Line
+	4900 4750 5050 4750
+$Comp
+L device:R R5
+U 1 1 612F254E
+P 5400 4600
+F 0 "R5" H 5470 4646 50  0000 L CNN
+F 1 "110" V 5400 4500 50  0000 L CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 5330 4600 50  0001 C CNN
+F 3 "" H 5400 4600 50  0001 C CNN
+	1    5400 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 4750 5400 4750
+Connection ~ 5050 4750
+Text Label 5400 4450 0    50   ~ 0
+VIN_N
 $EndSCHEMATC
