@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<technology_file version="18.01" writeable="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://www.sonnetsoftware.com/schema/matl/matl-1.4.xsd">
+  <units cunit="SM" lunit="mm" runit="OHCM" srunit="OHSQ" tempunit="C"/>
+  <comments>
+    <line>Created by dxfgeo, Sonnet Software Inc.</line>
+  </comments>
+  <public>
+    <variables>
+      <var name="BOTLEN" value="2.0" units="LENG"/>
+      <var name="TOPLEN" value="3.0" units="LENG"/>
+    </variables>
+    <materials>
+      <dielectric name="Air">
+        <params erel="1.0" mrel="1.0" tane="0.0" tanm="0.0" cond="0.0"/>
+      </dielectric>
+      <dielectric name="Isola_FR408HR">
+        <params erel="3.6" tane="0.0092"/>
+      </dielectric>
+      <conductor name="Copper_0.5oz" condspec="cond" cond="5.8e7"/>
+      <conductor name="Copper_1oz_thick" condspec="cond" cond="5.8e7"/>
+      <conductor name="Copper_0.25mm_thick" condspec="cond" cond="5.8e7"/>
+      <conductor name="Brass_0.8mm" condspec="cond" cond="1.57e7"/>
+      <conductor name="Nickel_" condspec="cond" cond="1.43e7"/>
+      <conductor name="Unknown_metal" cond="INF"/>
+    </materials>
+    <mesh_defs>
+      <mesh name="TopBridge_mesh" fill_type="Staircase" type="metal"/>
+      <mesh name="Metal1_mesh" fill_type="Staircase" type="metal"/>
+      <mesh name="CenterPin_mesh" fill_type="Staircase" type="metal"/>
+      <mesh name="ConnBody_mesh" fill_type="Staircase" type="metal"/>
+      <mesh name="Metal2_mesh" fill_type="Staircase" type="metal"/>
+      <mesh name="Via2_mesh" fill_type="Ring" type="via"/>
+      <mesh name="Via1_mesh" fill_type="Ring" type="via"/>
+      <mesh name="Default" fill_type="Staircase" type="metal"/>
+      <mesh name="Staircase_def" fill_type="Staircase" type="metal"/>
+      <mesh name="Conformal_def" fill_type="Conformal" type="metal"/>
+      <mesh name="Ring_def" fill_type="Ring" type="via"/>
+      <mesh name="Full_def" fill_type="Full" type="via"/>
+      <mesh name="Bar_def" fill_type="Bar" type="via"/>
+      <mesh name="Vertices_def" fill_type="Vertices" type="via"/>
+    </mesh_defs>
+    <metal_model_defs>
+      <metal_model name="TopBridge_model" model_type="Normal"/>
+      <metal_model name="Metal1_model" model_type="ThickMetal"/>
+      <metal_model name="CenterPin_model" model_type="ThickMetal"/>
+      <metal_model name="ConnBody_model" model_type="ThickMetal"/>
+      <metal_model name="Metal2_model" model_type="Normal"/>
+      <metal_model name="Default" model_type="Normal"/>
+      <metal_model name="Thick_def" model_type="ThickMetal"/>
+      <metal_model name="Thin_def" model_type="Normal"/>
+      <metal_model name="TVM_def" model_type="TrueVolume"/>
+      <via_model name="Via2_model" model_type="Volume"/>
+      <via_model name="Via1_model" model_type="Volume"/>
+      <via_model name="Volume_def" model_type="Volume"/>
+      <via_model name="Array_def" model_type="Array"/>
+      <via_model name="Surface_def" model_type="Surface"/>
+    </metal_model_defs>
+    <stackup>
+      <TOP material="Free Space" model="Default"/>
+      <diel name="Air" dielectric="Air" thickness="10.0">
+        <metal_techlayer name="TopBridge" layer_name="TopBridge" thickness="0.0175" material="Copper_0.5oz" model="TopBridge_model" color_pattern="1" mesh="TopBridge_mesh"/>
+      </diel>
+      <diel name="Air" dielectric="Air" thickness="0.8">
+        <metal_techlayer name="Metal1" layer_name="Metal1" thickness="0.035" material="Copper_1oz_thick" model="Metal1_model" color_pattern="2" mesh="Metal1_mesh">
+          <map dxf_layer="BLACK"/>
+        </metal_techlayer>
+        <metal_techlayer name="CenterPin" layer_name="CenterPin" thickness="0.25" material="Copper_0.25mm_thick" model="CenterPin_model" color_pattern="4" mesh="CenterPin_mesh"/>
+        <metal_techlayer name="ConnBody" layer_name="ConnBody" thickness="0.8" material="Brass_0.8mm" model="ConnBody_model" color_pattern="11" mesh="ConnBody_mesh"/>
+      </diel>
+      <diel name="Isola_FR408HR" dielectric="Isola_FR408HR" thickness="0.166">
+        <metal_techlayer name="Metal2" layer_name="Metal2" thickness="0.0175" material="Copper_0.5oz" model="Metal2_model" color_pattern="1" mesh="Metal2_mesh">
+          <map dxf_layer="BLACK"/>
+        </metal_techlayer>
+      </diel>
+      <diel name="Air" dielectric="Air" thickness="10.0"/>
+      <BOTTOM material="Free Space" model="Default"/>
+      <vias>
+        <via_techlayer name="Via2" layer_name="Via2" from="TopBridge" to="Metal1" material="Lossless" model="Via2_model" color_pattern="0" mesh="Via2_mesh"/>
+        <via_techlayer name="Via1" layer_name="Via1" from="Metal1" to="Metal2" material="Lossless" model="Via1_model" color_pattern="0" mesh="Via1_mesh"/>
+      </vias>
+    </stackup>
+  </public>
+</technology_file>
