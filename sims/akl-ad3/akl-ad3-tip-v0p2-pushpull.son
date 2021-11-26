@@ -1,12 +1,12 @@
 FTYP SONPROJ 19 ! Sonnet Project File
 VER 18.01
 HEADER
-LIC antikernel2.1.51012 90e2ba8817c1 havequick azonenberg Level3Gold
-DAT 09/26/2021 22:28:29
+LIC antikernel2.1.51176 90e2ba8817c1 havequick azonenberg FullLicense
+DAT 10/08/2021 08:49:10
 BUILT_BY_CREATED dxf 18.01 09/25/2021 05:46:11
 BUILT_BY_SAVED sonnet 18.01
-MDATE 09/26/2021 22:27:00
-HDATE 09/26/2021 22:27:00
+MDATE 10/08/2021 08:49:10
+HDATE 10/08/2021 08:49:10
 ANN Created by dxfgeo, Sonnet Software Inc.
 END HEADER
 DIM
@@ -26,7 +26,6 @@ CACHE_ABS 2
 Q_ACC N
 END CONTROL
 GEO
-SYM
 TMET "Free Space" 0 FREESPACE 376.7303136 0 0 0
 BMET "Lossless" 0 SUP 0 0 0 0
 MET "Copper 1oz thick" 1 TMM 58000000 0.5 0.035 2
@@ -36,12 +35,12 @@ BOX 2 45.675 30 3654 2400 20 0
       0.035 4.3 1 0.02 0 0 0 "Soldermask"
       0.1016 3.2 1 0.002 0 0 0 "Panasonic R-F775"
 TECHLAY METAL B.Cu L1D0 -1 -65534 
-1 0 0 N 229 1 1 100 100 0 0 0 Y
+1 0 0 N 438 1 1 100 100 0 0 0 Y
 END
 END
 TECHLAY VIA Via1 L2D0 -2 -65534 
 VIA POLYGON
-1 0 -1 N 368 1 1 100 100 0 0 0 Y
+1 0 -1 N 485 1 1 100 100 0 0 0 Y
 TOLEVEL 2 RING NOCOVERS
 END
 END
@@ -53,7 +52,7 @@ POLY 7 1
 122
 2 50 0 0 0 3.375 14.475 
 CUPGRP "Auto" LOCAL
-ID 366
+ID 483
 END
 POR1 BOX
 POLY 321 1
@@ -70,7 +69,7 @@ POLY 409 1
 122
 -2 50 0 0 0 3.375 15.525 
 CUPGRP "Auto" LOCAL
-ID 418
+ID 484
 END
 SMD 1 "R1"
 ID 338
@@ -1556,6 +1555,6 @@ FREQ Y AY ABS_ENTRY 0.1 20.0 -1 300
 END
 END VARSWP
 SMDFILES
-2 "../../../../../../../bulk/datasheets/Vishay/Resistors/FC/0402/FC0402-FlipChip-50 Ohm.s2p"
 1 "../../../../../../../bulk/datasheets/Vishay/Resistors/FC/0402/FC0402-FlipChip-200 Ohm.s2p"
+2 "../../../../../../../bulk/datasheets/Vishay/Resistors/FC/0402/FC0402-FlipChip-50 Ohm.s2p"
 END SMDFILES
