@@ -275,8 +275,8 @@ module AcquisitionManager(
 
 	logic[12:0]	tx_delay			= 0;
 
-	//100 MHz, rearm at ~52 Hz
-	logic[20:0]	rearm_count			= 0;
+	//100 MHz, rearm at ~26 Hz
+	logic[21:0]	rearm_count			= 0;
 
 	//Saved configuration for the waveform interface
 	logic[15:0]	dst_port			= 0;
@@ -448,7 +448,7 @@ module AcquisitionManager(
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// Debug ILA
-
+	/*
 	ila_0 ila(
 		.clk(tcp_clk),
 		.probe0(trigger_arm),
@@ -467,5 +467,6 @@ module AcquisitionManager(
 		.probe12(trigger_phase_ff),
 		.probe13(trigger_addr_ff)
 	);
+	*/
 
 endmodule

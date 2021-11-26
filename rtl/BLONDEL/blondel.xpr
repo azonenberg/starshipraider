@@ -36,13 +36,13 @@
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="93"/>
-    <Option Name="WTModelSimExportSim" Val="93"/>
-    <Option Name="WTQuestaExportSim" Val="93"/>
-    <Option Name="WTIesExportSim" Val="93"/>
-    <Option Name="WTVcsExportSim" Val="93"/>
-    <Option Name="WTRivieraExportSim" Val="93"/>
-    <Option Name="WTActivehdlExportSim" Val="93"/>
+    <Option Name="WTXSimExportSim" Val="103"/>
+    <Option Name="WTModelSimExportSim" Val="103"/>
+    <Option Name="WTQuestaExportSim" Val="102"/>
+    <Option Name="WTIesExportSim" Val="102"/>
+    <Option Name="WTVcsExportSim" Val="102"/>
+    <Option Name="WTRivieraExportSim" Val="102"/>
+    <Option Name="WTActivehdlExportSim" Val="102"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -541,6 +541,7 @@
     <FileSet Name="ila_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ila_0">
       <File Path="$PSRCDIR/sources_1/ip/ila_0/ila_0.xci">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>

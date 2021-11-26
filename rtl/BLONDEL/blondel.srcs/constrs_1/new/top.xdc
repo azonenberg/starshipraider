@@ -1,93 +1,4 @@
-set_max_delay -from [get_cells [list adc/sync_rst_done/dout0_reg \
-          mac/mac/sync_link_speed/sync_ack/sync/dout0_reg \
-          mac/mac/sync_link_speed/sync_en/sync/dout0_reg \
-          mac/rgmii_bridge/sync_link_speed/sync_ack/sync/dout0_reg \
-          mac/rgmii_bridge/sync_link_speed/sync_en/sync/dout0_reg \
-          stack/mac_sync/sync_ack/sync/dout0_reg \
-          stack/mac_sync/sync_en/sync/dout0_reg \
-          stack/rx_cdc/rx_cdc_fifo/sync_head/sync_ack/sync/dout0_reg \
-          stack/rx_cdc/rx_cdc_fifo/sync_head/sync_en/sync/dout0_reg \
-          stack/rx_cdc/rx_cdc_fifo/sync_tail/sync_ack/sync/dout0_reg \
-          stack/rx_cdc/rx_cdc_fifo/sync_tail/sync_en/sync/dout0_reg \
-          stack/tx_arbiter/arp_header_fifo/sync_head/sync_ack/sync/dout0_reg \
-          stack/tx_arbiter/arp_header_fifo/sync_head/sync_en/sync/dout0_reg \
-          stack/tx_arbiter/arp_header_fifo/sync_tail/sync_ack/sync/dout0_reg \
-          stack/tx_arbiter/arp_header_fifo/sync_tail/sync_en/sync/dout0_reg \
-          stack/tx_arbiter/arp_payload_fifo/sync_head/sync_ack/sync/dout0_reg \
-          stack/tx_arbiter/arp_payload_fifo/sync_head/sync_en/sync/dout0_reg \
-          stack/tx_arbiter/arp_payload_fifo/sync_tail/sync_ack/sync/dout0_reg \
-          stack/tx_arbiter/arp_payload_fifo/sync_tail/sync_en/sync/dout0_reg \
-          stack/tx_arbiter/ipv4_header_fifo/sync_head/sync_ack/sync/dout0_reg \
-          stack/tx_arbiter/ipv4_header_fifo/sync_head/sync_en/sync/dout0_reg \
-          stack/tx_arbiter/ipv4_header_fifo/sync_tail/sync_ack/sync/dout0_reg \
-          stack/tx_arbiter/ipv4_header_fifo/sync_tail/sync_en/sync/dout0_reg \
-          stack/tx_arbiter/ipv4_payload_fifo/sync_head/sync_ack/sync/dout0_reg \
-          stack/tx_arbiter/ipv4_payload_fifo/sync_head/sync_en/sync/dout0_reg \
-          stack/tx_arbiter/ipv4_payload_fifo/sync_tail/sync_ack/sync/dout0_reg \
-          stack/tx_arbiter/ipv4_payload_fifo/sync_tail/sync_en/sync/dout0_reg \
-          stack/tx_buf/header_fifo/sync_head/sync_ack/sync/dout0_reg \
-          stack/tx_buf/header_fifo/sync_head/sync_en/sync/dout0_reg \
-          stack/tx_buf/header_fifo/sync_tail/sync_ack/sync/dout0_reg \
-          stack/tx_buf/header_fifo/sync_tail/sync_en/sync/dout0_reg \
-          stack/tx_buf/payload_fifo/sync_head/sync_ack/sync/dout0_reg \
-          stack/tx_buf/payload_fifo/sync_head/sync_en/sync/dout0_reg \
-          stack/tx_buf/payload_fifo/sync_tail/sync_ack/sync/dout0_reg \
-          stack/tx_buf/payload_fifo/sync_tail/sync_en/sync/dout0_reg \
-          sync_link_up/dout0_reg \
-          uart_bridge/rx_fifo/sync_head/sync_ack/sync/dout0_reg \
-          uart_bridge/rx_fifo/sync_head/sync_en/sync/dout0_reg \
-          uart_bridge/rx_fifo/sync_tail/sync_ack/sync/dout0_reg \
-          uart_bridge/rx_fifo/sync_tail/sync_en/sync/dout0_reg \
-          uart_bridge/sync_flush/sync/dout0_reg \
-          uart_bridge/tx_fifo/fifo/sync_rd_ptr/sync_ack/sync/dout0_reg \
-          uart_bridge/tx_fifo/fifo/sync_rd_ptr/sync_en/sync/dout0_reg \
-          uart_bridge/tx_fifo/fifo/sync_wr_ptr/sync_ack/sync/dout0_reg \
-          uart_bridge/tx_fifo/fifo/sync_wr_ptr/sync_en/sync/dout0_reg]] -to [get_cells [list adc/sync_rst_done/dout1_reg \
-          mac/mac/sync_link_speed/sync_ack/sync/dout1_reg \
-          mac/mac/sync_link_speed/sync_en/sync/dout1_reg \
-          mac/rgmii_bridge/sync_link_speed/sync_ack/sync/dout1_reg \
-          mac/rgmii_bridge/sync_link_speed/sync_en/sync/dout1_reg \
-          stack/mac_sync/sync_ack/sync/dout1_reg \
-          stack/mac_sync/sync_en/sync/dout1_reg \
-          stack/rx_cdc/rx_cdc_fifo/sync_head/sync_ack/sync/dout1_reg \
-          stack/rx_cdc/rx_cdc_fifo/sync_head/sync_en/sync/dout1_reg \
-          stack/rx_cdc/rx_cdc_fifo/sync_tail/sync_ack/sync/dout1_reg \
-          stack/rx_cdc/rx_cdc_fifo/sync_tail/sync_en/sync/dout1_reg \
-          stack/tx_arbiter/arp_header_fifo/sync_head/sync_ack/sync/dout1_reg \
-          stack/tx_arbiter/arp_header_fifo/sync_head/sync_en/sync/dout1_reg \
-          stack/tx_arbiter/arp_header_fifo/sync_tail/sync_ack/sync/dout1_reg \
-          stack/tx_arbiter/arp_header_fifo/sync_tail/sync_en/sync/dout1_reg \
-          stack/tx_arbiter/arp_payload_fifo/sync_head/sync_ack/sync/dout1_reg \
-          stack/tx_arbiter/arp_payload_fifo/sync_head/sync_en/sync/dout1_reg \
-          stack/tx_arbiter/arp_payload_fifo/sync_tail/sync_ack/sync/dout1_reg \
-          stack/tx_arbiter/arp_payload_fifo/sync_tail/sync_en/sync/dout1_reg \
-          stack/tx_arbiter/ipv4_header_fifo/sync_head/sync_ack/sync/dout1_reg \
-          stack/tx_arbiter/ipv4_header_fifo/sync_head/sync_en/sync/dout1_reg \
-          stack/tx_arbiter/ipv4_header_fifo/sync_tail/sync_ack/sync/dout1_reg \
-          stack/tx_arbiter/ipv4_header_fifo/sync_tail/sync_en/sync/dout1_reg \
-          stack/tx_arbiter/ipv4_payload_fifo/sync_head/sync_ack/sync/dout1_reg \
-          stack/tx_arbiter/ipv4_payload_fifo/sync_head/sync_en/sync/dout1_reg \
-          stack/tx_arbiter/ipv4_payload_fifo/sync_tail/sync_ack/sync/dout1_reg \
-          stack/tx_arbiter/ipv4_payload_fifo/sync_tail/sync_en/sync/dout1_reg \
-          stack/tx_buf/header_fifo/sync_head/sync_ack/sync/dout1_reg \
-          stack/tx_buf/header_fifo/sync_head/sync_en/sync/dout1_reg \
-          stack/tx_buf/header_fifo/sync_tail/sync_ack/sync/dout1_reg \
-          stack/tx_buf/header_fifo/sync_tail/sync_en/sync/dout1_reg \
-          stack/tx_buf/payload_fifo/sync_head/sync_ack/sync/dout1_reg \
-          stack/tx_buf/payload_fifo/sync_head/sync_en/sync/dout1_reg \
-          stack/tx_buf/payload_fifo/sync_tail/sync_ack/sync/dout1_reg \
-          stack/tx_buf/payload_fifo/sync_tail/sync_en/sync/dout1_reg \
-          sync_link_up/dout1_reg \
-          uart_bridge/rx_fifo/sync_head/sync_ack/sync/dout1_reg \
-          uart_bridge/rx_fifo/sync_head/sync_en/sync/dout1_reg \
-          uart_bridge/rx_fifo/sync_tail/sync_ack/sync/dout1_reg \
-          uart_bridge/rx_fifo/sync_tail/sync_en/sync/dout1_reg \
-          uart_bridge/sync_flush/sync/dout1_reg \
-          uart_bridge/tx_fifo/fifo/sync_rd_ptr/sync_ack/sync/dout1_reg \
-          uart_bridge/tx_fifo/fifo/sync_rd_ptr/sync_en/sync/dout1_reg \
-          uart_bridge/tx_fifo/fifo/sync_wr_ptr/sync_ack/sync/dout1_reg \
-          uart_bridge/tx_fifo/fifo/sync_wr_ptr/sync_en/sync/dout1_reg \
-          uart_bridge/uart/sync_rx/dout1_reg]] 8.000
+set_max_delay -from [get_cells {adc/sync_rst_done/dout0_reg mac/mac/sync_link_speed/sync_ack/sync/dout0_reg mac/mac/sync_link_speed/sync_en/sync/dout0_reg mac/rgmii_bridge/sync_link_speed/sync_ack/sync/dout0_reg mac/rgmii_bridge/sync_link_speed/sync_en/sync/dout0_reg stack/mac_sync/sync_ack/sync/dout0_reg stack/mac_sync/sync_en/sync/dout0_reg stack/rx_cdc/rx_cdc_fifo/sync_head/sync_ack/sync/dout0_reg stack/rx_cdc/rx_cdc_fifo/sync_head/sync_en/sync/dout0_reg stack/rx_cdc/rx_cdc_fifo/sync_tail/sync_ack/sync/dout0_reg stack/rx_cdc/rx_cdc_fifo/sync_tail/sync_en/sync/dout0_reg stack/tx_arbiter/arp_header_fifo/sync_head/sync_ack/sync/dout0_reg stack/tx_arbiter/arp_header_fifo/sync_head/sync_en/sync/dout0_reg stack/tx_arbiter/arp_header_fifo/sync_tail/sync_ack/sync/dout0_reg stack/tx_arbiter/arp_header_fifo/sync_tail/sync_en/sync/dout0_reg stack/tx_arbiter/arp_payload_fifo/sync_head/sync_ack/sync/dout0_reg stack/tx_arbiter/arp_payload_fifo/sync_head/sync_en/sync/dout0_reg stack/tx_arbiter/arp_payload_fifo/sync_tail/sync_ack/sync/dout0_reg stack/tx_arbiter/arp_payload_fifo/sync_tail/sync_en/sync/dout0_reg stack/tx_arbiter/ipv4_header_fifo/sync_head/sync_ack/sync/dout0_reg stack/tx_arbiter/ipv4_header_fifo/sync_head/sync_en/sync/dout0_reg stack/tx_arbiter/ipv4_header_fifo/sync_tail/sync_ack/sync/dout0_reg stack/tx_arbiter/ipv4_header_fifo/sync_tail/sync_en/sync/dout0_reg stack/tx_arbiter/ipv4_payload_fifo/sync_head/sync_ack/sync/dout0_reg stack/tx_arbiter/ipv4_payload_fifo/sync_head/sync_en/sync/dout0_reg stack/tx_arbiter/ipv4_payload_fifo/sync_tail/sync_ack/sync/dout0_reg stack/tx_arbiter/ipv4_payload_fifo/sync_tail/sync_en/sync/dout0_reg stack/tx_buf/header_fifo/sync_head/sync_ack/sync/dout0_reg stack/tx_buf/header_fifo/sync_head/sync_en/sync/dout0_reg stack/tx_buf/header_fifo/sync_tail/sync_ack/sync/dout0_reg stack/tx_buf/header_fifo/sync_tail/sync_en/sync/dout0_reg stack/tx_buf/payload_fifo/sync_head/sync_ack/sync/dout0_reg stack/tx_buf/payload_fifo/sync_head/sync_en/sync/dout0_reg stack/tx_buf/payload_fifo/sync_tail/sync_ack/sync/dout0_reg stack/tx_buf/payload_fifo/sync_tail/sync_en/sync/dout0_reg sync_link_up/dout0_reg uart_bridge/rx_fifo/sync_head/sync_ack/sync/dout0_reg uart_bridge/rx_fifo/sync_head/sync_en/sync/dout0_reg uart_bridge/rx_fifo/sync_tail/sync_ack/sync/dout0_reg uart_bridge/rx_fifo/sync_tail/sync_en/sync/dout0_reg uart_bridge/sync_flush/sync/dout0_reg uart_bridge/tx_fifo/fifo/sync_rd_ptr/sync_ack/sync/dout0_reg uart_bridge/tx_fifo/fifo/sync_rd_ptr/sync_en/sync/dout0_reg uart_bridge/tx_fifo/fifo/sync_wr_ptr/sync_ack/sync/dout0_reg uart_bridge/tx_fifo/fifo/sync_wr_ptr/sync_en/sync/dout0_reg}] -to [get_cells {adc/sync_rst_done/dout1_reg mac/mac/sync_link_speed/sync_ack/sync/dout1_reg mac/mac/sync_link_speed/sync_en/sync/dout1_reg mac/rgmii_bridge/sync_link_speed/sync_ack/sync/dout1_reg mac/rgmii_bridge/sync_link_speed/sync_en/sync/dout1_reg stack/mac_sync/sync_ack/sync/dout1_reg stack/mac_sync/sync_en/sync/dout1_reg stack/rx_cdc/rx_cdc_fifo/sync_head/sync_ack/sync/dout1_reg stack/rx_cdc/rx_cdc_fifo/sync_head/sync_en/sync/dout1_reg stack/rx_cdc/rx_cdc_fifo/sync_tail/sync_ack/sync/dout1_reg stack/rx_cdc/rx_cdc_fifo/sync_tail/sync_en/sync/dout1_reg stack/tx_arbiter/arp_header_fifo/sync_head/sync_ack/sync/dout1_reg stack/tx_arbiter/arp_header_fifo/sync_head/sync_en/sync/dout1_reg stack/tx_arbiter/arp_header_fifo/sync_tail/sync_ack/sync/dout1_reg stack/tx_arbiter/arp_header_fifo/sync_tail/sync_en/sync/dout1_reg stack/tx_arbiter/arp_payload_fifo/sync_head/sync_ack/sync/dout1_reg stack/tx_arbiter/arp_payload_fifo/sync_head/sync_en/sync/dout1_reg stack/tx_arbiter/arp_payload_fifo/sync_tail/sync_ack/sync/dout1_reg stack/tx_arbiter/arp_payload_fifo/sync_tail/sync_en/sync/dout1_reg stack/tx_arbiter/ipv4_header_fifo/sync_head/sync_ack/sync/dout1_reg stack/tx_arbiter/ipv4_header_fifo/sync_head/sync_en/sync/dout1_reg stack/tx_arbiter/ipv4_header_fifo/sync_tail/sync_ack/sync/dout1_reg stack/tx_arbiter/ipv4_header_fifo/sync_tail/sync_en/sync/dout1_reg stack/tx_arbiter/ipv4_payload_fifo/sync_head/sync_ack/sync/dout1_reg stack/tx_arbiter/ipv4_payload_fifo/sync_head/sync_en/sync/dout1_reg stack/tx_arbiter/ipv4_payload_fifo/sync_tail/sync_ack/sync/dout1_reg stack/tx_arbiter/ipv4_payload_fifo/sync_tail/sync_en/sync/dout1_reg stack/tx_buf/header_fifo/sync_head/sync_ack/sync/dout1_reg stack/tx_buf/header_fifo/sync_head/sync_en/sync/dout1_reg stack/tx_buf/header_fifo/sync_tail/sync_ack/sync/dout1_reg stack/tx_buf/header_fifo/sync_tail/sync_en/sync/dout1_reg stack/tx_buf/payload_fifo/sync_head/sync_ack/sync/dout1_reg stack/tx_buf/payload_fifo/sync_head/sync_en/sync/dout1_reg stack/tx_buf/payload_fifo/sync_tail/sync_ack/sync/dout1_reg stack/tx_buf/payload_fifo/sync_tail/sync_en/sync/dout1_reg sync_link_up/dout1_reg uart_bridge/rx_fifo/sync_head/sync_ack/sync/dout1_reg uart_bridge/rx_fifo/sync_head/sync_en/sync/dout1_reg uart_bridge/rx_fifo/sync_tail/sync_ack/sync/dout1_reg uart_bridge/rx_fifo/sync_tail/sync_en/sync/dout1_reg uart_bridge/sync_flush/sync/dout1_reg uart_bridge/tx_fifo/fifo/sync_rd_ptr/sync_ack/sync/dout1_reg uart_bridge/tx_fifo/fifo/sync_rd_ptr/sync_en/sync/dout1_reg uart_bridge/tx_fifo/fifo/sync_wr_ptr/sync_ack/sync/dout1_reg uart_bridge/tx_fifo/fifo/sync_wr_ptr/sync_en/sync/dout1_reg uart_bridge/uart/sync_rx/dout1_reg}] 8.000
 # Input clock
 set_property IOSTANDARD LVCMOS33 [get_ports clk_25mhz]
 set_property PACKAGE_PIN E12 [get_ports clk_25mhz]
@@ -198,6 +109,9 @@ set_property IOSTANDARD LVCMOS33 [get_ports uart_rx]
 set_property PACKAGE_PIN C11 [get_ports uart_rx]
 
 set_clock_groups -asynchronous -group [get_clocks rgmii_rxc] -group [get_clocks clk_10mhz_SystemPLL]
+
+set_clock_groups -asynchronous -group [get_clocks clk_100mhz_SystemPLL] -group [get_clocks slow_clk_ADCPLL]
+set_max_delay -datapath_only -from [get_cells -hierarchical *trigger_addr*] -to [get_clocks -of_objects [get_pins pll/inst/mmcm_adv_inst/CLKOUT0]] 5.000
 set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
 set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
 set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]
