@@ -1,11 +1,12 @@
 EESchema Schematic File Version 4
+LIBS:maxwell-main-cache
 EELAYER 30 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
 Sheet 17 18
 Title "MAXWELL Main Board"
-Date "2020-07-16"
+Date "2021-10-31"
 Rev "0.1"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
@@ -1490,7 +1491,7 @@ Text HLabel 5000 5850 0    50   Output ~ 0
 ETH_PPS_OUT
 Text HLabel 1350 1750 0    50   Input ~ 0
 RMII_CRS_DV
-Text HLabel 1350 1150 0    50   Output ~ 0
+Text HLabel 1350 1150 0    50   Input ~ 0
 RMII_REFCLK
 Text Notes 2250 1600 0    50   ~ 0
 SPI1 AF5
