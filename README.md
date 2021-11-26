@@ -16,7 +16,7 @@ Boards, subsystems, etc are all named after famous electrical engineers.
 Individual instrument projects are named after famous electrical engineers who made major contributions to the field of
 test equipment design.
 
-All are 8 channels.
+All are 8 channels??
 
 * BLONDEL (Andre-Eugene Blondel, inventor of electromechanical oscillograph) \
   8 bit: 100 MHz / 250 - 500 - 1000 Msps \
@@ -28,9 +28,22 @@ All are 8 channels.
 
 * DUDDELL (William Duddell, inventor of moving-coil mirror oscillograph) \
   250 MHz / 1 Gsps, 1 AFE : 1 HMCAD1520
+  1x XC7K160T-2FFG676
+
+  Eight analog cards, one HMCAD1520 + one AFE each
+  One digital card with 1-2 SFF-8087 connectors for LA
+  One AWG card with a TBD JESD204 DAC using unused serdes lanes (assuming 4 for 40G, one for 10G, three available)
 
 * ZENNECK (Jonathan Zenneck, inventor of electrically scanned CRT oscilloscope) \
-  500 MHz / 4 Gsps, 1 AFE : 4 HMCAD1520
+  500 MHz or 1 GHz / 5 Gsps, 1 AFE : 1 AD9213-6G
+
+  Per channel:
+  * 1x XC7A200T-2FFG1156
+  * 1x AD9213 in 6G speed grade
+  * 2x DDR3 800 SODIMM
+
+  Global:
+  * 1x XC7K160T-2FFG160T (could do six channels with direct lane to each one)
 
 * VOLLUM (Howard Vollum, co-inventor of triggered-sweep oscilloscope) \
   1-2 GHz / 10 Gsps, 1 AFE : 1 AD9213
