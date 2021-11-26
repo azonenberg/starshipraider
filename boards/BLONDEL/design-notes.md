@@ -20,6 +20,14 @@ ADC board bugs found
 
 * None to date
 
+# Active probe stuff
+
+USB only uses AC coupling on the TX side
+Should probably enable power on TX direction first, then RX later
+stm32f042 qfn28 probe
+stm32f401 qfn48 host
+ADA4817-1ACPZ-R7
+
 # Boards
 
 * FPGA board ("brain")
