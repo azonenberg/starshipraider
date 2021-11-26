@@ -1,0 +1,42 @@
+FTYP SONNETPRJ 19 ! Sonnet Netlist Project File
+VER 18.52
+HEADER
+LIC antikernel2.1.51176
+DAT 11/26/2021 07:57:32
+BUILT_BY_CREATED sonnet 18.52 11/25/2021 20:48:01
+BUILT_BY_SAVED sonnet 18.52
+MDATE 11/26/2021 07:57:32
+HDATE 11/26/2021 07:57:32
+END HEADER
+DIM
+ANG DEG
+CAP PF
+CON /OH
+FREQ GHZ
+IND NH
+LNG MM
+RES OH
+END DIM
+VAR
+END VAR
+CKT
+TLINP 3 4 Z=50.0 L=0.5 K=1.0 
+S2P 3 2 ../../../../../../../../tmp/pt5-full-morestitching-feedlines-dualch-simplified.s2p
+RES 1 R=50.0 
+S2P 4 1 "../../../../../../../bulk/datasheets/Vishay/Resistors/FC/0402/FC0402-FlipChip-100 Ohm.s2p"
+DEF2P 1 2 Net R 50.00000
+
+END CKT
+CONTROL
+VARSWP
+OPTIONS  -d
+PUSH
+SPEED 0
+CACHE_ABS 2
+Q_ACC N
+END CONTROL
+VARSWP
+ENABLED Y
+FREQ Y AY ABS_ENTRY 0.1 20.0 -1 300 
+END
+END VARSWP
