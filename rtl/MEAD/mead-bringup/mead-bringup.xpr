@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="49" Path="/nfs4/home/azonenberg/code/starshipraider/rtl/MEAD/mead-bringup/mead-bringup.xpr">
+<Project Version="7" Minor="49" Path="/ceph/fast/home/azonenberg/code/starshipraider/rtl/MEAD/mead-bringup/mead-bringup.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="07381f72cb384d01b3f5c979936f790c"/>
