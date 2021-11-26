@@ -50,6 +50,7 @@ int main()
 	//Initialize GPIOs for power-down control
 	static GPIOPin spi_cs_n(&GPIOA, 0, GPIOPin::MODE_OUTPUT);
 	static GPIOPin pd(&GPIOA, 1, GPIOPin::MODE_OUTPUT);
+
 	pd.Set(0);
 	spi_cs_n.Set(1);
 
@@ -59,14 +60,6 @@ int main()
 	static GPIOPin spi_mosi(&GPIOB, 5, GPIOPin::MODE_PERIPHERAL, 0);
 	static SPI spi(&SPI1, false, 4);
 
-	//Configure the amplifier for max gain
-	spi_cs_n.Set(0);
-	spi.BlockingWrite(0x02);	//gain register
-	spi.BlockingWrite(26);
-	spi.WaitForWrites();
-	spi_cs_n.Set(1);
-
-	/*
 	//Initialize the UART
 	static GPIOPin uart_tx(&GPIOA, 9,	GPIOPin::MODE_PERIPHERAL, 1);
 	static GPIOPin uart_rx(&GPIOA, 10, GPIOPin::MODE_PERIPHERAL, 1);
@@ -75,8 +68,26 @@ int main()
 
 	//Enable RXNE interrupt vector (IRQ27)
 	//TODO: better contants here
-	volatile uint32_t* NVIC_ISER0 = (volatile uint32_t*)(0xe000e100);
-	*NVIC_ISER0 = 0x8000000;
+	//volatile uint32_t* NVIC_ISER0 = (volatile uint32_t*)(0xe000e100);
+	//*NVIC_ISER0 = 0x8000000;
+
+	for(int i=0; i<200; i++)
+	{
+		g_uart->Printf("Initializing gain\n");
+
+		//Configure the amplifier for max gain
+		spi_cs_n.Set(0);
+		spi.BlockingWrite(0x02);	//gain register
+		spi.BlockingWrite(0);
+		spi.WaitForWrites();
+		spi_cs_n.Set(1);
+	}
+
+	while(1)
+	{}
+
+	/*
+	
 
 	int gain = 0;
 	bool invert = false;
