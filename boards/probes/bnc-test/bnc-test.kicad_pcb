@@ -430,4 +430,19 @@
       )
     )
   )
+  (zone (net 0) (net_name "") (layer B.Mask) (tstamp 0) (hatch edge 0.508)
+    (connect_pads (clearance 0.125))
+    (min_thickness 0.1)
+    (fill yes (arc_segments 32) (thermal_gap 0.508) (thermal_bridge_width 0.508))
+    (polygon
+      (pts
+        (xy 99 80.5) (xy 61 80.5) (xy 61 79.5) (xy 99 79.5)
+      )
+    )
+    (filled_polygon
+      (pts
+        (xy 98.95 80.45) (xy 61.05 80.45) (xy 61.05 79.55) (xy 98.95 79.55)
+      )
+    )
+  )
 )
