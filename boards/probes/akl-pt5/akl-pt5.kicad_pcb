@@ -5,8 +5,8 @@
     (drawings 11)
     (tracks 62)
     (zones 0)
-    (modules 5)
-    (nets 5)
+    (modules 4)
+    (nets 4)
   )
 
   (page A4)
@@ -36,7 +36,7 @@
   )
 
   (setup
-    (last_trace_width 0.125)
+    (last_trace_width 0.35)
     (user_trace_width 0.125)
     (user_trace_width 0.35)
     (trace_clearance 0.125)
@@ -97,8 +97,7 @@
   (net 0 "")
   (net 1 /GND)
   (net 2 "Net-(J1-Pad1)")
-  (net 3 "Net-(R1-Pad1)")
-  (net 4 "Net-(J2-Pad1)")
+  (net 3 "Net-(J2-Pad1)")
 
   (net_class Default "This is the default net class."
     (clearance 0.125)
@@ -110,7 +109,26 @@
     (add_net /GND)
     (add_net "Net-(J1-Pad1)")
     (add_net "Net-(J2-Pad1)")
-    (add_net "Net-(R1-Pad1)")
+  )
+
+  (module azonenberg_pcb:EIA_0201_RES_NOSILK (layer F.Cu) (tedit 53D1EB5B) (tstamp 619EFA8A)
+    (at 99.825 78.5 180)
+    (path /619ED558)
+    (fp_text reference R1 (at -0.05 0.75) (layer F.SilkS) hide
+      (effects (font (size 0.508 0.457) (thickness 0.11)))
+    )
+    (fp_text value 348 (at 0.05 1.5) (layer F.SilkS) hide
+      (effects (font (size 0.508 0.457) (thickness 0.11)))
+    )
+    (pad 2 smd rect (at 0.22 0 180) (size 0.21 0.3) (layers F.Cu F.Paste F.Mask)
+      (net 2 "Net-(J1-Pad1)"))
+    (pad 1 smd rect (at -0.22 0 180) (size 0.21 0.3) (layers F.Cu F.Paste F.Mask)
+      (net 3 "Net-(J2-Pad1)"))
+    (model :walter:smd_resistors/r_0402.wrl
+      (at (xyz 0 0 0))
+      (scale (xyz 0.5 0.5 0.5))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module azonenberg_pcb:EDGELAUNCH_350UM (layer F.Cu) (tedit 619F3625) (tstamp 619F43EB)
@@ -136,53 +154,7 @@
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (pad 1 smd rect (at 0 0) (size 2 0.35) (layers F.Cu F.Paste F.Mask)
-      (net 4 "Net-(J2-Pad1)") (zone_connect 0))
-  )
-
-  (module azonenberg_pcb:EIA_02016_RES_NOSILK_FLIPCHIP (layer F.Cu) (tedit 60408141) (tstamp 619EFA94)
-    (at 99.75 78.5 180)
-    (path /619EB00D)
-    (attr smd)
-    (fp_text reference R2 (at -0.05 0.75) (layer F.SilkS) hide
-      (effects (font (size 0.508 0.457) (thickness 0.11)))
-    )
-    (fp_text value "CH 250" (at 0.05 1.5) (layer F.SilkS) hide
-      (effects (font (size 0.508 0.457) (thickness 0.11)))
-    )
-    (fp_line (start -0.25 -0.25) (end -0.25 0.25) (layer Dwgs.User) (width 0.01))
-    (fp_line (start -0.25 -0.25) (end 0.25 -0.25) (layer Dwgs.User) (width 0.01))
-    (fp_line (start 0.25 -0.25) (end 0.25 0.25) (layer Dwgs.User) (width 0.01))
-    (fp_line (start 0.25 0.25) (end -0.25 0.25) (layer Dwgs.User) (width 0.01))
-    (pad 2 smd rect (at 0.175 0 180) (size 0.15 0.31) (layers F.Cu F.Paste F.Mask)
-      (net 3 "Net-(R1-Pad1)"))
-    (pad 1 smd rect (at -0.175 0 180) (size 0.15 0.31) (layers F.Cu F.Paste F.Mask)
-      (net 4 "Net-(J2-Pad1)"))
-    (model :walter:smd_resistors/r_0402.wrl
-      (at (xyz 0 0 0))
-      (scale (xyz 0.5 0.5 0.5))
-      (rotate (xyz 0 0 0))
-    )
-  )
-
-  (module azonenberg_pcb:EIA_0402_RES_NOSILK_FLIPCHIP (layer F.Cu) (tedit 600C4855) (tstamp 619EFA8A)
-    (at 98.5 78.5 180)
-    (path /619ED558)
-    (solder_paste_margin -0.06)
-    (fp_text reference R1 (at 0 1.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value "FC 100" (at 0 3.5) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad 2 smd rect (at 0.5 0 180) (size 0.5 0.5) (layers F.Cu F.Paste F.Mask)
-      (net 2 "Net-(J1-Pad1)"))
-    (pad 1 smd rect (at -0.5 0 180) (size 0.5 0.5) (layers F.Cu F.Paste F.Mask)
-      (net 3 "Net-(R1-Pad1)"))
-    (model :walter:smd_resistors/r_0402.wrl
-      (at (xyz 0 0 0))
-      (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 0))
-    )
+      (net 3 "Net-(J2-Pad1)") (zone_connect 0))
   )
 
   (module azonenberg_pcb:CONN_SMPM_AMPHENOL_925-169J-51PT (layer F.Cu) (tedit 619EDE23) (tstamp 619EFA84)
@@ -221,10 +193,10 @@
     )
   )
 
-  (gr_text 2021-11-24 (at 98.75 77) (layer F.SilkS) (tstamp 619F451E)
+  (gr_text 2021-12-29 (at 98.75 77) (layer F.SilkS) (tstamp 619F451E)
     (effects (font (size 0.5 0.5) (thickness 0.1)))
   )
-  (gr_text v0.1 (at 96.5 80.75) (layer F.SilkS) (tstamp 619F451A)
+  (gr_text v0.2 (at 96.5 80.75) (layer F.SilkS) (tstamp 619F451A)
     (effects (font (size 0.75 0.75) (thickness 0.1)))
   )
   (gr_text AKL-PT5 (at 98.75 76) (layer F.SilkS)
@@ -299,46 +271,41 @@
   (via (at 86 80.75) (size 0.45) (drill 0.25) (layers F.Cu B.Cu) (net 1))
   (segment (start 87 80.75) (end 86 80.75) (width 0.125) (layer In1.Cu) (net 1))
   (segment (start 92.105 78.5) (end 98 78.5) (width 0.35) (layer F.Cu) (net 2))
-  (segment (start 99.575 78.5) (end 99 78.5) (width 0.125) (layer F.Cu) (net 3))
-  (segment (start 99.925 78.5) (end 101.3 78.5) (width 0.125) (layer F.Cu) (net 4))
+  (segment (start 98 78.5) (end 99.475 78.5) (width 0.35) (layer F.Cu) (net 2))
+  (segment (start 101.3 78.5) (end 100.2 78.5) (width 0.35) (layer F.Cu) (net 3))
 
-  (zone (net 3) (net_name "Net-(R1-Pad1)") (layer F.Cu) (tstamp 619FAD2F) (hatch edge 0.508)
-    (connect_pads yes (clearance 0.1))
+  (zone (net 0) (net_name "") (layer F.Mask) (tstamp 0) (hatch edge 0.508)
+    (connect_pads (clearance 0.508))
     (min_thickness 0.05)
     (fill yes (arc_segments 32) (thermal_gap 0.508) (thermal_bridge_width 0.508))
     (polygon
       (pts
-        (xy 99.6 78.65) (xy 99.15 78.65) (xy 99.15 78.35) (xy 99.6 78.35)
+        (xy 99.375 78.75) (xy 95 78.75) (xy 95 78.25) (xy 99.375 78.25)
       )
     )
     (filled_polygon
       (pts
-        (xy 99.575 78.625) (xy 99.175 78.625) (xy 99.175 78.375) (xy 99.575 78.375)
+        (xy 99.35 78.725) (xy 95.025 78.725) (xy 95.025 78.275) (xy 99.35 78.275)
       )
     )
   )
-  (zone (net 4) (net_name "Net-(J2-Pad1)") (layer F.Cu) (tstamp 619FAD2C) (hatch edge 0.508)
-    (connect_pads (clearance 0.1))
-    (min_thickness 0.05)
-    (fill yes (arc_segments 32) (thermal_gap 0.508) (thermal_bridge_width 0.508))
-    (polygon
-      (pts
-        (xy 100.4 78.65) (xy 99.9 78.65) (xy 99.9 78.35) (xy 100.4 78.35)
-      )
-    )
-  )
-  (zone (net 1) (net_name /GND) (layer In1.Cu) (tstamp 619FAD29) (hatch edge 0.508)
+  (zone (net 1) (net_name /GND) (layer In1.Cu) (tstamp 61CCF402) (hatch edge 0.508)
     (connect_pads yes (clearance 0.1))
     (min_thickness 0.1)
     (fill yes (arc_segments 32) (thermal_gap 0.508) (thermal_bridge_width 0.508))
     (polygon
       (pts
-        (xy 102.25 81.5) (xy 85.5 81.5) (xy 85.5 80.5) (xy 89.75 80.5) (xy 89.75 76.5)
-        (xy 85.5 76.5) (xy 85.5 75.5) (xy 102.25 75.5)
+        (xy 102.25 78.2) (xy 99.4 78.2) (xy 99.4 78.8) (xy 102.25 78.8) (xy 102.25 81.5)
+        (xy 85.5 81.5) (xy 85.5 80.5) (xy 89.75 80.5) (xy 89.75 76.5) (xy 85.5 76.5)
+        (xy 85.5 75.5) (xy 102.25 75.5)
       )
     )
     (filled_polygon
       (pts
+        (xy 102.2 78.15) (xy 99.4 78.15) (xy 99.390245 78.150961) (xy 99.380866 78.153806) (xy 99.372221 78.158427)
+        (xy 99.364645 78.164645) (xy 99.358427 78.172221) (xy 99.353806 78.180866) (xy 99.350961 78.190245) (xy 99.35 78.2)
+        (xy 99.35 78.8) (xy 99.350961 78.809755) (xy 99.353806 78.819134) (xy 99.358427 78.827779) (xy 99.364645 78.835355)
+        (xy 99.372221 78.841573) (xy 99.380866 78.846194) (xy 99.390245 78.849039) (xy 99.4 78.85) (xy 102.2 78.85)
         (xy 102.2 81.45) (xy 85.55 81.45) (xy 85.55 80.55) (xy 89.75 80.55) (xy 89.759755 80.549039)
         (xy 89.769134 80.546194) (xy 89.777779 80.541573) (xy 89.785355 80.535355) (xy 89.791573 80.527779) (xy 89.796194 80.519134)
         (xy 89.799039 80.509755) (xy 89.8 80.5) (xy 89.8 80.08667) (xy 89.809558 80.072365) (xy 89.852903 79.967721)
@@ -347,21 +314,6 @@
         (xy 89.852903 77.032279) (xy 89.809558 76.927635) (xy 89.8 76.91333) (xy 89.8 76.5) (xy 89.799039 76.490245)
         (xy 89.796194 76.480866) (xy 89.791573 76.472221) (xy 89.785355 76.464645) (xy 89.777779 76.458427) (xy 89.769134 76.453806)
         (xy 89.759755 76.450961) (xy 89.75 76.45) (xy 85.55 76.45) (xy 85.55 75.55) (xy 102.2 75.55)
-      )
-    )
-  )
-  (zone (net 0) (net_name "") (layer F.Mask) (tstamp 0) (hatch edge 0.508)
-    (connect_pads (clearance 0.508))
-    (min_thickness 0.05)
-    (fill yes (arc_segments 32) (thermal_gap 0.508) (thermal_bridge_width 0.508))
-    (polygon
-      (pts
-        (xy 97.5 78.75) (xy 95 78.75) (xy 95 78.25) (xy 97.5 78.25)
-      )
-    )
-    (filled_polygon
-      (pts
-        (xy 97.475 78.725) (xy 95.025 78.725) (xy 95.025 78.275) (xy 97.475 78.275)
       )
     )
   )

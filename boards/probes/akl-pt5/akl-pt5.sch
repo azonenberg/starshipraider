@@ -14,17 +14,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L device:R R2
-U 1 1 619EB00D
-P 5000 3500
-F 0 "R2" V 4793 3500 50  0000 C CNN
-F 1 "CH 250" V 4884 3500 50  0000 C CNN
-F 2 "azonenberg_pcb:EIA_02016_RES_NOSILK_FLIPCHIP" V 4930 3500 50  0001 C CNN
-F 3 "" H 5000 3500 50  0001 C CNN
-	1    5000 3500
-	0    1    1    0   
-$EndComp
-$Comp
 L Connector:Conn_Coaxial J1
 U 1 1 619EB59D
 P 3950 3500
@@ -50,19 +39,6 @@ F 3 "~" H 5350 3500 50  0001 C CNN
 	1    5350 3500
 	1    0    0    -1  
 $EndComp
-$Comp
-L device:R R1
-U 1 1 619ED558
-P 4550 3500
-F 0 "R1" V 4343 3500 50  0000 C CNN
-F 1 "FC 100" V 4434 3500 50  0000 C CNN
-F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK_FLIPCHIP" V 4480 3500 50  0001 C CNN
-F 3 "" H 4550 3500 50  0001 C CNN
-	1    4550 3500
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	4700 3500 4850 3500
 Wire Wire Line
 	4400 3500 4100 3500
 $Comp
@@ -78,4 +54,17 @@ F 3 "~" H 5350 3700 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	3950 3700 5150 3700
+$Comp
+L device:R R1
+U 1 1 619ED558
+P 4550 3500
+F 0 "R1" V 4343 3500 50  0000 C CNN
+F 1 "348" V 4434 3500 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0201_RES_NOSILK" V 4480 3500 50  0001 C CNN
+F 3 "" H 4550 3500 50  0001 C CNN
+	1    4550 3500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4700 3500 5150 3500
 $EndSCHEMATC
