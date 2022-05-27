@@ -3,3 +3,4 @@ output/*.drl
 output/sim-dxf
 output/*.zip
 *bak
+*backups*
