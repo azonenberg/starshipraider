@@ -1,0 +1,252 @@
+FTYP SONPROJ 19 ! Sonnet Project File
+VER 18.0.alpha
+HEADER
+LIC sonnet8.12.50847
+DAT 11/29/2021 19:33:25
+BUILT_BY_CREATED xgeom 18.52 11/28/2021 22:49:20
+BUILT_BY_SAVED sonnet 18.52.004
+MDATE 11/29/2021 19:33:25
+HDATE 11/29/2021 19:33:25
+ANN fc0402-full_gk:
+ANN 
+ANN Vishay 0402 SMD resistor mounted flip chip
+ANN comparing with Vishay S-parameter data
+ANN Vishay website listed Modelithics as tester and resistor is mounted to quartz substrate. 
+ANN quartz thickness is not given, but a search indicates 1 mm is common. it can't be too thick to operate up to 40 GHz
+ANN changed mounting substrate to 1 mm quartz
+ANN quartz likely has thinfilm gold plating
+ANN defined new Gold Normal metal type with 0.00254 mm (0.1 mil) thickness and applied it to the terminals and box bottom cover
+ANN removed 0.0175 mm thick air layer now terminals tech layer uses Normal metal type
+ANN this also solves the problem that the resistor tech layer was on metal level2 instead of metal level 1, which is the bottom of the resistor alumina substrate
+ANN Z-parts set to 5 for air layer containing brick - changed to 8 - only this layer needs to have a Z-partition value
+ANN now see subsection crash caused by defect #13732 related to overlapping metal and brick polygons in 18.52
+ANN analyze in 18.52.004 alpha
+ANN 
+ANN _gk2:
+ANN 
+ANN reduced box size from 5 x 5 mm to 4 x 4 mm
+ANN reduced upper air layer from 5 to 4 mm
+ANN 
+ANN _gk3:
+ANN 
+ANN reduced box size to 3.5 x 3.5 mm
+ANN reduced upper air layer 3.5 mm
+ANN 
+ANN 
+ANN 
+ANN 
+ANN 
+ANN 
+ANN 
+ANN 
+ANN 
+ANN 
+ANN 
+END HEADER
+DIM
+ANG DEG
+CAP PF
+CON /OH
+FREQ GHZ
+IND NH
+LNG MM
+RES OH
+END DIM
+CONTROL
+VARSWP
+OPTIONS  -dj
+SPEED 0
+CACHE_ABS 2
+Q_ACC N
+END CONTROL
+GEO
+SYM
+DRP1 LEFT LINK
+POLY 141 1
+0
+DRP1 RIGHT LINK
+POLY 137 1
+0
+TMET "Free Space" 0 FREESPACE 376.7303136 0 0 0
+BMET "Gold_Thinfilm" 3 NOR 41000000 0.5 0.00254 
+MET "Copper" 1 TMM 58000000 0.5 0.0175 2
+MET "Metal1" 2 RES 110  0.005
+MET "Gold_Thinfilm" 3 NOR 41000000 0.5 0.00254 
+BRI "Alumina" 1 9.9 0.0001 0 
+BOX 2 3.5 3.5 700 700 20 0
+      3.5 1 1 0 0 0 0 "Air"
+      0.381 1 1 0 0 0 8 "Air"
+      1 3.78 1 0.0001 0 0 0 "Quartz (Fused)"
+TECHLAY METAL Terminals <UNSPECIFIED> -2 -65534 
+1 0 2 N 157 1 1 100 100 0 0 0 Y
+END
+END
+TECHLAY METAL Resistor <UNSPECIFIED> -3 -65534 
+1 0 1 N 161 1 1 100 100 0 0 0 Y
+END
+END
+TECHLAY BRICK Body <UNSPECIFIED> -4 -65534 
+BRI POLY
+1 0 1 N 298 1 1 100 100 0 0 0 Y
+END
+END
+DIM STD XDIR 1
+POS 0.4058644552 -0.06572821911
+NOM 0.18
+REF1 POLY 34 1
+5
+REF2 POLY 34 1
+4
+END
+DIM STD YDIR -1
+POS -0.1416768771 -0.2174602059
+NOM 0.5
+REF1 POLY 34 1
+6
+REF2 POLY 34 1
+5
+END
+DIM STD XDIR -1
+POS -0.0329053812 -0.005911455394
+NOM 0.09
+REF1 POLY 34 1
+2
+REF2 POLY 34 1
+3
+END
+DIM STD YDIR -1
+POS 0.02874469196 -0.08764620787
+NOM 0.09
+REF1 POLY 38 1
+0
+REF2 POLY 34 1
+2
+END
+DIM STD YDIR -1
+POS 0.04065680991 -0.0764893289
+NOM 0.09
+REF1 POLY 34 1
+1
+REF2 POLY 38 1
+3
+END
+DIM STD YDIR -1
+POS -0.1065980287 -0.200907452
+NOM 0.24
+REF1 POLY 38 1
+2
+REF2 POLY 38 1
+1
+END
+DIM STD XDIR 1
+POS 0.0329053812 -0.005911455394
+NOM 0.09
+REF1 POLY 45 1
+2
+REF2 POLY 45 1
+3
+END
+DIM STD XDIR -1
+POS -0.5675764103 -0.09343634565
+NOM 1.02
+REF1 POLY 81 1
+1
+REF2 POLY 81 1
+0
+END
+DIM STD YDIR 1
+POS 0.0431181699 0.3425471713
+NOM 0.54
+REF1 POLY 81 1
+1
+REF2 POLY 81 1
+2
+END
+DIM STD XDIR 1
+POS 0.2624347856 -0.01845001625
+NOM 0.44
+REF1 POLY 38 1
+0
+REF2 POLY 38 1
+1
+END
+LORGN 0 3.5 U 
+POR1 BOX
+POLY 137 1
+2
+2 50 0 0 0 3.5 1.75 
+POR1 BOX
+POLY 141 1
+2
+1 50 0 0 0 0 1.75 
+NUM 6
+1 9 2 N 34 1 1 100 100 0 0 0 Y
+TLAYNAM Terminals INH
+1.44 1.96
+1.53 1.96
+1.53 1.54
+1.44 1.54
+1.44 1.5
+1.26 1.5
+1.26 2
+1.44 2
+1.44 1.96
+END
+1 9 2 N 45 1 1 100 100 0 0 0 Y
+TLAYNAM Terminals INH
+2.06 1.96
+1.97 1.96
+1.97 1.54
+2.06 1.54
+2.06 1.5
+2.24 1.5
+2.24 2
+2.06 2
+2.06 1.96
+END
+1 5 2 N 137 1 1 100 100 0 0 0 Y
+TLAYNAM Terminals INH
+2.24 1.5
+2.24 2
+3.5 2
+3.5 1.5
+2.24 1.5
+END
+1 5 2 N 141 1 1 100 100 0 0 0 Y
+TLAYNAM Terminals INH
+1.26 1.5
+1.26 2
+0 2
+0 1.5
+1.26 1.5
+END
+1 5 1 N 38 1 1 100 100 0 0 0 Y
+TLAYNAM Resistor INH
+1.53 1.63
+1.97 1.63
+1.97 1.87
+1.53 1.87
+1.53 1.63
+END
+BRI POLY
+1 5 1 N 81 1 1 100 100 0 0 0 Y
+TLAYNAM Body INH
+1.24 1.48
+2.26 1.48
+2.26 2.02
+1.24 2.02
+1.24 1.48
+END
+END GEO
+OPT
+MAX 100
+END OPT
+VARSWP
+ENABLED Y
+FREQ Y AY ABS_ENTRY 0.01 40.0 -1 300 
+END
+END VARSWP
+3DOPTIONS
+GLOBAL 1
+ALL 3 1
+END 3DOPTIONS
