@@ -4,6 +4,14 @@
 
   (paper "A4")
 
+  (title_block
+    (title "AKL-AD4")
+    (date "2022-06-11")
+    (rev "0.1")
+    (company "Antikernel Labs")
+    (comment 1 "Andrew D. Zonenberg")
+  )
+
   (lib_symbols
     (symbol "Connector:Conn_Coaxial" (pin_names (offset 1.016) hide) (in_bom yes) (on_board yes)
       (property "Reference" "J" (id 0) (at 0.254 3.048 0)
