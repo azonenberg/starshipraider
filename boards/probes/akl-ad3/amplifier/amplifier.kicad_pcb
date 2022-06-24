@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 12)
+    (drawings 13)
     (tracks 733)
     (zones 0)
     (modules 34)
@@ -982,6 +982,9 @@
     )
   )
 
+  (gr_text "FIX LT3093 0.45mm pitch, not 0.5" (at 76.74 110.56) (layer F.SilkS)
+    (effects (font (size 0.75 0.75) (thickness 0.1)))
+  )
   (gr_text -7VDC (at 73.8 95 90) (layer F.SilkS) (tstamp 60AB4263)
     (effects (font (size 0.75 0.75) (thickness 0.1)))
   )

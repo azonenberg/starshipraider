@@ -6,7 +6,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "SMA Test"
-Date "2021-08-21"
+Date "2021-09-06"
 Rev "0.2"
 Comp "Antikernel Labs"
 Comment1 "Andrew D. Zonenberg"
@@ -134,4 +134,49 @@ Text Label 2300 3000 0    50   ~ 0
 GND
 Wire Wire Line
 	1900 3000 2850 3000
+$Comp
+L Connector:Conn_Coaxial J4
+U 1 1 613692F2
+P 1900 5350
+F 0 "J4" H 1853 5588 50  0000 C CNN
+F 1 "901-10510-2" H 1853 5497 50  0000 C CNN
+F 2 "azonenberg_pcb:CONN_SMA_EDGE_AMPHENOL_901_10510-2" H 1900 5350 50  0001 C CNN
+F 3 "" H 1900 5350 50  0001 C CNN
+	1    1900 5350
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_Coaxial J6
+U 1 1 613692FC
+P 3500 5350
+F 0 "J6" H 3600 5325 50  0000 L CNN
+F 1 "901-10510-2" H 3600 5234 50  0000 L CNN
+F 2 "azonenberg_pcb:CONN_SMA_EDGE_AMPHENOL_901_10510-2" H 3500 5350 50  0001 C CNN
+F 3 "" H 3500 5350 50  0001 C CNN
+	1    3500 5350
+	1    0    0    -1  
+$EndComp
+Text Label 2050 5350 0    50   ~ 0
+SIG5A
+Text Label 2300 5550 0    50   ~ 0
+GND
+Wire Wire Line
+	1900 5550 3500 5550
+Text Label 3350 5350 2    50   ~ 0
+SIG5B
+$Comp
+L device:R R1
+U 1 1 6136E2CA
+P 2750 5350
+F 0 "R1" V 2543 5350 50  0000 C CNN
+F 1 "R" V 2634 5350 50  0000 C CNN
+F 2 "azonenberg_pcb:EIA_0402_RES_NOSILK" V 2680 5350 50  0001 C CNN
+F 3 "" H 2750 5350 50  0001 C CNN
+	1    2750 5350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2050 5350 2600 5350
+Wire Wire Line
+	2900 5350 3350 5350
 $EndSCHEMATC
