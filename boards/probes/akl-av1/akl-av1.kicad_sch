@@ -561,6 +561,12 @@
     (uuid fd663715-d3fa-4473-baeb-2167c4b4bb68)
   )
 
+  (text "Rework on v0.2:\n* Remove R6\n* Remove C16\n* TODO: add series resistor above/below R11\n* TODO: Add bypass cap from middle of trim to ground"
+    (at 80.01 90.17 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 054bdd61-075c-4d74-ab78-918085654073)
+  )
+
   (label "4V5_N" (at 30.48 25.4 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 04f104b6-436d-4d02-a4fc-315b5d8c823e)
@@ -933,7 +939,7 @@
     (property "Reference" "R6" (id 0) (at 42.418 62.5915 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "1M" (id 1) (at 42.418 65.3666 0)
+    (property "Value" "DNP" (id 1) (at 42.418 65.3666 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "azonenberg_pcb:EIA_0402_RES_NOSILK" (id 2) (at 38.862 63.5 90)
@@ -964,7 +970,7 @@
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid f0f3907b-44e3-4106-9f24-d8ce836b6bb0)
     (property "Reference" "C16" (id 0) (at 30.48 43.4045 90))
-    (property "Value" "800 fF" (id 1) (at 30.48 46.1796 90))
+    (property "Value" "DNP" (id 1) (at 30.48 46.1796 90))
     (property "Footprint" "azonenberg_pcb:EIA_0402_CAP_NOSILK" (id 2) (at 34.29 48.5648 0)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -1066,7 +1072,7 @@
       (reference "C15") (unit 1) (value "0.47 uF") (footprint "azonenberg_pcb:EIA_0402_CAP_NOSILK")
     )
     (path "/f0f3907b-44e3-4106-9f24-d8ce836b6bb0"
-      (reference "C16") (unit 1) (value "800 fF") (footprint "azonenberg_pcb:EIA_0402_CAP_NOSILK")
+      (reference "C16") (unit 1) (value "DNP") (footprint "azonenberg_pcb:EIA_0402_CAP_NOSILK")
     )
     (path "/a12b751e-ae7a-468c-af3d-31ed4d501b01/01b78dbf-3409-41aa-9496-f65444fa6c41"
       (reference "J1") (unit 1) (value "U.FL") (footprint "azonenberg_pcb:CONN_U.FL_TE_1909763-1")
@@ -1099,7 +1105,7 @@
       (reference "R5") (unit 1) (value "4.02M") (footprint "azonenberg_pcb:EIA_0402_RES_NOSILK")
     )
     (path "/d763b496-b309-4766-860e-8c52275e77b8"
-      (reference "R6") (unit 1) (value "1M") (footprint "azonenberg_pcb:EIA_0402_RES_NOSILK")
+      (reference "R6") (unit 1) (value "DNP") (footprint "azonenberg_pcb:EIA_0402_RES_NOSILK")
     )
     (path "/9e295006-012e-4c5f-853e-07dac10c3673"
       (reference "R7") (unit 1) (value "1M") (footprint "azonenberg_pcb:EIA_0402_CAP_NOSILK")
