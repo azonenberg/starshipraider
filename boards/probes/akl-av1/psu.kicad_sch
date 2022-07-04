@@ -4,6 +4,10 @@
 
   (paper "A4")
 
+  (title_block
+    (date "2022-07-03")
+  )
+
   (lib_symbols
     (symbol "device:C" (pin_numbers hide) (pin_names (offset 0.254)) (in_bom yes) (on_board yes)
       (property "Reference" "C" (id 0) (at 0.635 2.54 0)
@@ -765,13 +769,13 @@
     (pin "2" (uuid 819476a0-ca6b-4aaa-b4cb-42c553597569))
   )
 
-  (symbol (lib_id "passive-azonenberg:INDUCTOR_PWROUT") (at 80.01 26.67 90) (unit 1)
+  (symbol (lib_id "passive-azonenberg:INDUCTOR_PWROUT") (at 80.01 26.67 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid cc42285d-e5b0-450b-ad46-b9ca27c6c5ee)
-    (property "Reference" "L1" (id 0) (at 80.01 22.1248 90)
+    (property "Reference" "L1" (id 0) (at 80.01 23.3952 90)
       (effects (font (size 1.016 1.016)))
     )
-    (property "Value" "FERRITE" (id 1) (at 80.01 24.3956 90)
+    (property "Value" "FERRITE" (id 1) (at 80.01 25.666 90)
       (effects (font (size 1.016 1.016)))
     )
     (property "Footprint" "azonenberg_pcb:EIA_0402_CAP_NOSILK" (id 2) (at 80.01 26.67 0)
