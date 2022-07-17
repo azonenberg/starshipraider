@@ -5,7 +5,11 @@
   (paper "A4")
 
   (title_block
-    (date "2022-07-03")
+    (title "AKL-AV1 High Impedance Active Voltage Probe")
+    (date "2022-07-16")
+    (rev "0.4")
+    (company "Antikernel Labs")
+    (comment 1 "Andrew D. Zonenberg")
   )
 
   (lib_symbols
@@ -460,12 +464,12 @@
     (uuid fe10ef82-1c88-458a-b2eb-e333378822bf)
   )
 
-  (text "Vout = 1.2V * (1 + R1/R2)\nR2 < 200K\nR2 = 10K, R1 = 27.5K"
+  (text "Vout = 1.2V * (1 + R1/R2)\nR2 < 200K\nR2 = 10K, R1 = 27.5K\nCalculated: 1.2 * (1 + 2.74) = 4.488\n\nAdd 1M || R4 -> 9.9K equivalent\n-> 4.52"
     (at 90.17 67.31 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 351d5969-2e3a-436e-a584-701985869a16)
   )
-  (text "Vout = -1.22 * (1 + Rfb1 / Rfb2)\n-4.5 = -1.22 * (1 + Rfb1 / Rfb2)\n3.688 = 1 + Rfb1 / Rfb2\n2.688 * Rfb2 = Rfb1"
+  (text "Vout = -1.22 * (1 + Rfb1 / Rfb2)\n-4.5 = -1.22 * (1 + Rfb1 / Rfb2)\n3.688 = 1 + Rfb1 / Rfb2\n2.688 * Rfb2 = Rfb1\nCalculated: -1.22 * (1 + 88.7 / 33) = -4.499"
     (at 78.74 106.68 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 8e8e7909-8ffc-469d-9227-ccc947a96671)
