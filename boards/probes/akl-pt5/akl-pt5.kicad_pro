@@ -34,7 +34,7 @@
         "other_text_upright": false,
         "pads": {
           "drill": 0.0,
-          "height": 0.35,
+          "height": 0.4,
           "width": 1.0
         },
         "silk_line_width": 0.12,
@@ -48,8 +48,26 @@
           "min_clearance": 0.09999999999999999
         }
       },
-      "diff_pair_dimensions": [],
-      "drc_exclusions": [],
+      "diff_pair_dimensions": [
+        {
+          "gap": 0.0,
+          "via_gap": 0.0,
+          "width": 0.0
+        }
+      ],
+      "drc_exclusions": [
+        "clearance|89500000|77200000|42d7e76e-0c54-484b-9a2c-a6f00d6781b0|232f00ef-71c8-4a1d-bad3-2872cab8c14d",
+        "clearance|89500000|79800000|25854ac8-4e1c-4b0e-a82a-fdd3b767f562|dc495f43-30db-47fc-95a5-b2bcf36de27c",
+        "copper_edge_clearance|89300000|80200000|a07d71ae-0734-4baa-b37f-d89e86890e35|25854ac8-4e1c-4b0e-a82a-fdd3b767f562",
+        "copper_edge_clearance|89500000|76800000|067fcbdc-a037-45c7-a11e-fa748d280ce6|232f00ef-71c8-4a1d-bad3-2872cab8c14d",
+        "copper_edge_clearance|89500000|77200000|067fcbdc-a037-45c7-a11e-fa748d280ce6|42d7e76e-0c54-484b-9a2c-a6f00d6781b0",
+        "copper_edge_clearance|89500000|78300000|067fcbdc-a037-45c7-a11e-fa748d280ce6|be957946-3830-4060-abd8-5d63e0456e40",
+        "copper_edge_clearance|89500000|80200000|a07d71ae-0734-4baa-b37f-d89e86890e35|dc495f43-30db-47fc-95a5-b2bcf36de27c",
+        "hole_clearance|89300000|77200000|3888ef44-68e2-4b79-bf20-988ad2144095|42d7e76e-0c54-484b-9a2c-a6f00d6781b0",
+        "hole_clearance|89300000|79800000|df1b28de-d73c-4328-9f7f-55bf26651bdf|25854ac8-4e1c-4b0e-a82a-fdd3b767f562",
+        "hole_clearance|90021145|76993959|42d7e76e-0c54-484b-9a2c-a6f00d6781b0|3888ef44-68e2-4b79-bf20-988ad2144095",
+        "hole_clearance|90021145|80006041|25854ac8-4e1c-4b0e-a82a-fdd3b767f562|df1b28de-d73c-4328-9f7f-55bf26651bdf"
+      ],
       "meta": {
         "filename": "board_design_settings.json",
         "version": 2
@@ -137,6 +155,211 @@
   "cvpcb": {
     "equivalence_files": []
   },
+  "erc": {
+    "erc_exclusions": [],
+    "meta": {
+      "version": 0
+    },
+    "pin_map": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        2,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        2,
+        2,
+        2,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        2
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        2,
+        1,
+        2,
+        0,
+        0,
+        1,
+        0,
+        2,
+        2,
+        2,
+        2
+      ],
+      [
+        0,
+        2,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        2,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        2,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        2,
+        0,
+        0,
+        2
+      ],
+      [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    ],
+    "rule_severities": {
+      "bus_definition_conflict": "error",
+      "bus_entry_needed": "error",
+      "bus_label_syntax": "error",
+      "bus_to_bus_conflict": "error",
+      "bus_to_net_conflict": "error",
+      "different_unit_footprint": "error",
+      "different_unit_net": "error",
+      "duplicate_reference": "error",
+      "duplicate_sheet_names": "error",
+      "extra_units": "error",
+      "global_label_dangling": "warning",
+      "hier_label_mismatch": "error",
+      "label_dangling": "error",
+      "lib_symbol_issues": "warning",
+      "multiple_net_names": "warning",
+      "net_not_bus_member": "warning",
+      "no_connect_connected": "warning",
+      "no_connect_dangling": "warning",
+      "pin_not_connected": "error",
+      "pin_not_driven": "error",
+      "pin_to_pin": "warning",
+      "power_pin_not_driven": "error",
+      "similar_labels": "warning",
+      "unannotated": "error",
+      "unit_value_mismatch": "error",
+      "unresolved_variable": "error",
+      "wire_dangling": "error"
+    }
+  },
   "libraries": {
     "pinned_footprint_libs": [],
     "pinned_symbol_libs": []
@@ -182,14 +405,48 @@
     "page_layout_descr_file": ""
   },
   "schematic": {
+    "annotate_start_num": 0,
     "drawing": {
+      "default_line_thickness": 6.0,
+      "default_text_size": 50.0,
+      "field_names": [],
+      "intersheets_ref_own_page": false,
+      "intersheets_ref_prefix": "",
+      "intersheets_ref_short": false,
+      "intersheets_ref_show": false,
+      "intersheets_ref_suffix": "",
+      "junction_size_choice": 3,
       "label_size_ratio": 0.25,
-      "pin_symbol_size": 0,
+      "pin_symbol_size": 0.0,
       "text_offset_ratio": 0.08
     },
     "legacy_lib_dir": "",
-    "legacy_lib_list": []
+    "legacy_lib_list": [],
+    "meta": {
+      "version": 1
+    },
+    "net_format_name": "",
+    "ngspice": {
+      "fix_include_paths": true,
+      "fix_passive_vals": false,
+      "meta": {
+        "version": 0
+      },
+      "model_mode": 0,
+      "workbook_filename": ""
+    },
+    "page_layout_descr_file": "",
+    "plot_directory": "",
+    "spice_adjust_passive_values": false,
+    "spice_external_command": "spice \"%I\"",
+    "subpart_first_id": 65,
+    "subpart_id_separator": 0
   },
-  "sheets": [],
+  "sheets": [
+    [
+      "7e969d15-6cc0-4258-8b27-586608a21adb",
+      ""
+    ]
+  ],
   "text_variables": {}
 }
