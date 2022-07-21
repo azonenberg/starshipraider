@@ -4256,7 +4256,7 @@
   (gr_text "150 mm\n\nDesign IL for line:\n2 GHz:  -1.06 dB\n5 GHz:  -2.38 dB\n10 GHz: -4.50 dB" (at 110.5 40.5) (layer "F.SilkS") (tstamp 7fca7a39-4c55-4ff8-9690-62eba2b001d5)
     (effects (font (size 1 1) (thickness 0.1)) (justify left))
   )
-  (gr_text "Antikernel Labs\nLossy / ISI Channel v0.1\nAndrew D. Zonenberg\n2022-07-19" (at 60 125) (layer "F.SilkS") (tstamp be076f90-b25a-403d-93c5-d955a66ceb10)
+  (gr_text "Antikernel Labs\nLossy / ISI Channel v0.1b\nAndrew D. Zonenberg\n2022-07-21" (at 60 125) (layer "F.SilkS") (tstamp be076f90-b25a-403d-93c5-d955a66ceb10)
     (effects (font (size 1 1) (thickness 0.1)) (justify left))
   )
   (gr_text "0.4mm = 50Ω" (at 82.5 60) (layer "F.SilkS") (tstamp cdc39a29-5424-42bb-9dda-d6189fc7358f)
@@ -4271,7 +4271,7 @@
   (gr_text "Connector IL (per pair):\n2 GHz: -0.08 dB\n5 GHz: -0.13 dB\n10 GHz: -0.19 dB" (at 80 71) (layer "F.SilkS") (tstamp e4d36ce8-a34a-4010-8d16-8cfe33609724)
     (effects (font (size 1 1) (thickness 0.1)) (justify left))
   )
-  (gr_text "0.2mm Shengyi S1000-2M" (at 79 62.5) (layer "F.SilkS") (tstamp e744c5ab-3a45-42f5-87c2-20de9a63dc83)
+  (gr_text "0.228mm Shengyi S1000-2M" (at 78.5 62.5) (layer "F.SilkS") (tstamp e744c5ab-3a45-42f5-87c2-20de9a63dc83)
     (effects (font (size 0.75 0.75) (thickness 0.1)) (justify left))
   )
 
