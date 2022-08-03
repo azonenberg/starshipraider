@@ -89,7 +89,7 @@
   (gr_line (start 70 70) (end 60 70) (layer "Edge.Cuts") (width 0.05) (tstamp 10109f84-4940-47f8-8640-91f185ac9bc1))
   (gr_line (start 70 60) (end 70 70) (layer "Edge.Cuts") (width 0.05) (tstamp 55e740a3-0735-4744-896e-2bf5437093b9))
   (gr_line (start 60 60) (end 70 60) (layer "Edge.Cuts") (width 0.05) (tstamp f4f99e3d-7269-4f6a-a759-16ad2a258779))
-  (gr_text "AKL-PT5\nTip Holder\nBase v0.2\nA. Zonenberg\n2022-03-20" (at 65 65) (layer "B.SilkS") (tstamp e10b5627-3247-4c86-b9f6-ef474ca11543)
+  (gr_text "Probe Mount\nv0.2\nA. Zonenberg\n2022-08-03" (at 65 65) (layer "B.SilkS") (tstamp e10b5627-3247-4c86-b9f6-ef474ca11543)
     (effects (font (size 0.75 0.75) (thickness 0.1)) (justify mirror))
   )
 
