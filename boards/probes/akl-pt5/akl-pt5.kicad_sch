@@ -6,8 +6,8 @@
 
   (title_block
     (title "AKL-PT5")
-    (date "2022-07-17")
-    (rev "0.6")
+    (date "2022-08-02")
+    (rev "0.7")
     (company "Antikernel Labs")
     (comment 1 "Andrew D. Zonenberg")
   )
@@ -61,7 +61,7 @@
         (effects (font (size 1.27 1.27)) hide)
       )
       (symbol "Conn_Coaxial_0_1"
-        (arc (start -1.778 -0.508) (mid 0.2311 -1.8066) (end 1.778 0)
+        (arc (start -1.778 -0.508) (mid 0.222 -1.808) (end 1.778 0)
           (stroke (width 0.254) (type default) (color 0 0 0 0))
           (fill (type none))
         )
@@ -85,7 +85,7 @@
           (stroke (width 0.2032) (type default) (color 0 0 0 0))
           (fill (type none))
         )
-        (arc (start 1.778 0) (mid 0.2099 1.8101) (end -1.778 0.508)
+        (arc (start 1.778 0) (mid 0.2221 1.8083) (end -1.778 0.508)
           (stroke (width 0.254) (type default) (color 0 0 0 0))
           (fill (type none))
         )
@@ -103,10 +103,17 @@
     )
   )
 
+  (junction (at 130.81 93.98) (diameter 0) (color 0 0 0 0)
+    (uuid 971c1271-0f6f-46b9-8494-7107930ab4af)
+  )
 
   (wire (pts (xy 100.33 93.98) (xy 130.81 93.98))
     (stroke (width 0) (type default) (color 0 0 0 0))
     (uuid 2f3deced-880d-4075-a81b-95c62da5b94d)
+  )
+  (wire (pts (xy 130.81 93.98) (xy 130.81 100.33))
+    (stroke (width 0) (type default) (color 0 0 0 0))
+    (uuid baa2bb27-3ff4-481e-b331-7cfee71362fe)
   )
   (wire (pts (xy 104.14 88.9) (xy 130.81 88.9))
     (stroke (width 0) (type default) (color 0 0 0 0))
@@ -117,6 +124,10 @@
     (at 146.05 90.17 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 213a2af1-412b-47f4-ab3b-c5f43b6be7a6)
+  )
+  (text "Ground lead to be soldered to J3 or J4 as needed" (at 146.05 96.52 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid d5926ae5-e972-4dcc-8335-d8bd16db6dbc)
   )
 
   (label "GND" (at 104.14 93.98 0)
@@ -175,6 +186,24 @@
     (pin "1" (uuid b362ed42-4b28-4023-8338-57fce2c46bcc))
   )
 
+  (symbol (lib_id "Connector:Conn_01x01") (at 135.89 100.33 0) (unit 1)
+    (in_bom yes) (on_board yes)
+    (uuid 8b290a17-6328-4178-9131-29524d345539)
+    (property "Reference" "J4" (id 0) (at 137.922 99.2632 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "TIPRES" (id 1) (at 137.922 101.5746 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "azonenberg_pcb:EDGELAUNCH_350UM" (id 2) (at 135.89 100.33 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (id 3) (at 135.89 100.33 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 27b2eb82-662b-42d8-90e6-830fec4bb8d2))
+  )
+
   (sheet_instances
     (path "/" (page "1"))
   )
@@ -188,6 +217,9 @@
     )
     (path "/00000000-0000-0000-0000-0000619eeb2b"
       (reference "J3") (unit 1) (value "TIPRES") (footprint "azonenberg_pcb:EDGELAUNCH_350UM")
+    )
+    (path "/8b290a17-6328-4178-9131-29524d345539"
+      (reference "J4") (unit 1) (value "TIPRES") (footprint "azonenberg_pcb:EDGELAUNCH_350UM")
     )
   )
 )
