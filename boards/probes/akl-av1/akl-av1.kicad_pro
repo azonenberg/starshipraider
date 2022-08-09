@@ -57,12 +57,21 @@
       ],
       "drc_exclusions": [
         "clearance|51500000|49700000|3ef58b85-72cb-4c23-8c6a-4b272ee4db3d|22251917-1dba-4d83-a415-ffa6b9ed0661",
+        "clearance|51500000|49700000|401e0ae0-9685-458b-bbd2-1f0ff080bcf8|f1ed5572-0fa9-4e9d-a411-5dcb7ff69673",
         "clearance|51500000|52300000|2285c4c7-ab17-4a35-bd27-d9589ec29e5a|f999575a-1380-45ce-bd36-be45e2e4dddc",
+        "clearance|51500000|52300000|d90c06ff-fb51-4ab7-8d42-f4988ad31cc8|1f5beb24-3b2e-478d-868e-22a9166bce3e",
         "copper_edge_clearance|51500000|49250000|96c0a8a7-3b35-485f-baf5-4fe5f2a8cab3|22251917-1dba-4d83-a415-ffa6b9ed0661",
+        "copper_edge_clearance|51500000|49250000|96c0a8a7-3b35-485f-baf5-4fe5f2a8cab3|f1ed5572-0fa9-4e9d-a411-5dcb7ff69673",
         "copper_edge_clearance|51500000|49700000|ee6b1cab-51b4-4a92-8986-3d5bb0b6ac00|3ef58b85-72cb-4c23-8c6a-4b272ee4db3d",
+        "copper_edge_clearance|51500000|49700000|ee6b1cab-51b4-4a92-8986-3d5bb0b6ac00|401e0ae0-9685-458b-bbd2-1f0ff080bcf8",
+        "copper_edge_clearance|51500000|50800000|ee6b1cab-51b4-4a92-8986-3d5bb0b6ac00|6889cce7-7b17-470f-b76d-986ce6db4658",
         "copper_edge_clearance|51500000|50800000|ee6b1cab-51b4-4a92-8986-3d5bb0b6ac00|bd661d62-c405-4512-8a99-d60f749d77d9",
         "copper_edge_clearance|51500000|52300000|ee6b1cab-51b4-4a92-8986-3d5bb0b6ac00|2285c4c7-ab17-4a35-bd27-d9589ec29e5a",
+        "copper_edge_clearance|51500000|52300000|ee6b1cab-51b4-4a92-8986-3d5bb0b6ac00|d90c06ff-fb51-4ab7-8d42-f4988ad31cc8",
+        "copper_edge_clearance|51500000|52750000|139873f8-6bbf-4c1c-a410-75f6800c8fb3|1f5beb24-3b2e-478d-868e-22a9166bce3e",
         "copper_edge_clearance|51500000|52750000|139873f8-6bbf-4c1c-a410-75f6800c8fb3|f999575a-1380-45ce-bd36-be45e2e4dddc",
+        "silk_over_copper|63528571|52064107|59e15981-ff10-4136-98da-615d4f404bc7|4a97e088-638e-4cc2-b944-0f5b6c7f9a26",
+        "silk_over_copper|64778571|51885535|59e15981-ff10-4136-98da-615d4f404bc7|378991be-92f9-44b3-951a-fb663d1e80a8",
         "silk_over_copper|68025000|51246894|6819b90a-1695-4def-a6e4-69ee198c0c99|9356cc88-d94d-4c82-9188-9d3bf0e214cd"
       ],
       "meta": {
