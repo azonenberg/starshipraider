@@ -1,0 +1,21 @@
+335.6 pH
+2192 pH
+386.2 fF
+
+150 um track = 83.1 ohms
+1mm track = 28.1 ohms
+1.5mm track = 20.5 ohms
+
+w @ 8 GHz = 8e9 * 2 * pi = 50.25e9 rad/sec
+S21 phase for 8mm long 1.5mm track is 128.6 degrees = 16.075 deg/mm
+
+C1
+	C = w * C * Zlow
+	With 1.5mm wide track, 22.79 deg = 1.41 mm long
+
+L1
+	L = w * L / Zhigh
+	with 150um wide track, 11.63 degrees = 0.723 mm
+
+L2
+	L = 75.94 deg = 4.72 mm
