@@ -6,8 +6,8 @@
 
   (title_block
     (title "AKL-AV1 High Impedance Active Voltage Probe")
-    (date "2022-07-16")
-    (rev "0.4")
+    (date "2022-10-06")
+    (rev "0.6")
     (company "Antikernel Labs")
     (comment 1 "Andrew D. Zonenberg")
   )

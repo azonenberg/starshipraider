@@ -1,0 +1,43 @@
+FTYP SONNETPRJ 19 ! Sonnet Netlist Project File
+VER 18.54
+HEADER
+LIC antikernel2.1.51813
+DAT 10/06/2022 08:24:37
+BUILT_BY_CREATED sonnet 18.54 10/06/2022 07:54:41
+BUILT_BY_SAVED sonnet 18.54
+MDATE 10/06/2022 08:24:37
+HDATE 10/06/2022 08:24:37
+END HEADER
+DIM
+ANG DEG
+CAP PF
+CON /OH
+FREQ GHZ
+IND NH
+LNG MM
+RES OH
+END DIM
+VAR
+END VAR
+CKT
+S2P 1 3 ../../../../../../ceph/bulk/datasheets/Murata/Inductor/LQG15HN1N0S02.s2p
+S2P 2 0 ../../../../../../ceph/bulk/datasheets/Murata/Capacitor/GJM1555C1H4R0WB01_DC0V_25degC.s2p
+S2P 3 2 ../../../../../../ceph/bulk/datasheets/Murata/Inductor/LQG15HN4N7C02.s2p
+S2P 3 0 ../../../../../../ceph/bulk/datasheets/Murata/Capacitor/GJM1555C1H1R1WB01_DC0V_25degC.s2p
+DEF2P 1 2 Net R 50.00000
+
+END CKT
+CONTROL
+VARSWP
+OPTIONS  -d
+PUSH
+SPEED 0
+CACHE_ABS 2
+TARG_ABS 300
+Q_ACC N
+END CONTROL
+VARSWP
+ENABLED Y
+FREQ Y AY ABS_ENTRY 0.1 4.0 -1 300 
+END
+END VARSWP
