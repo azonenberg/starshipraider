@@ -832,7 +832,8 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 9f81a11e-f660-493d-9aa8-aabc87adcc94)
   )
-  (text "4th order Bessel LPF\n1.8 GHz design cutoff" (at 220.98 74.93 0)
+  (text "4th order Bessel LPF\nOriginal was: 1.8 GHz design cutoff, 1.58 simulated, 1.31 GHz system BW\nNew target: 2.2 GHz"
+    (at 209.55 77.47 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid d2132581-76a3-40f6-8c03-c6f2d6ae5e89)
   )
@@ -840,6 +841,11 @@
     (at 13.97 50.8 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid e14f9a61-7e67-4b14-baee-298f4f644b28)
+  )
+  (text "For 2.2 GHz design cutoff, nominal values:\n* 844 pH\n* 973 fF\n* 3.91 nH\n* 3.24 pF\nS-param simulation shows 2 GHz filter cutoff"
+    (at 209.55 92.075 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid e2d0f7de-130f-45fe-8137-c98d54977ba1)
   )
 
   (label "4V5_N" (at 30.48 25.4 0)
@@ -1041,7 +1047,7 @@
     (property "Reference" "C7" (id 0) (at 224.536 62.5915 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "GJM1555C1H1R1WB01D" (id 1) (at 211.455 69.215 0)
+    (property "Value" "GJM1555C1H1R0WB01D" (id 1) (at 211.455 69.215 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Footprint" "azonenberg_pcb:EIA_0402_CAP_NOSILK" (id 2) (at 220.6498 59.69 0)
@@ -1303,7 +1309,7 @@
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 95d3d7e1-641f-435c-9cc8-0d359ea2fc7b)
     (property "Reference" "L2" (id 0) (at 233.045 55.8505 90))
-    (property "Value" "LQG15HN4N7C02D" (id 1) (at 233.045 58.6256 90))
+    (property "Value" "L04023R9BHNTR" (id 1) (at 233.045 58.6256 90))
     (property "Footprint" "azonenberg_pcb:EIA_0402_CAP_NOSILK" (id 2) (at 233.045 59.69 0)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -1446,7 +1452,7 @@
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid ca1af6e0-b911-4719-a936-e41d586110b5)
     (property "Reference" "L1" (id 0) (at 212.09 55.8505 90))
-    (property "Value" "LQG15HN1N0S02D" (id 1) (at 212.09 58.6256 90))
+    (property "Value" "L0402R82BHNTR" (id 1) (at 212.09 58.6256 90))
     (property "Footprint" "azonenberg_pcb:EIA_0402_CAP_NOSILK" (id 2) (at 212.09 59.69 0)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -1463,7 +1469,7 @@
     (property "Reference" "C22" (id 0) (at 244.856 62.5915 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "GJM1555C1H4R0WB01D" (id 1) (at 240.03 69.215 0)
+    (property "Value" "GJM1555C1H3R2BB01D" (id 1) (at 240.03 69.215 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Footprint" "azonenberg_pcb:EIA_0402_CAP_NOSILK" (id 2) (at 240.9698 59.69 0)
@@ -1607,7 +1613,7 @@
       (reference "C6") (unit 1) (value "4.7 uF") (footprint "azonenberg_pcb:EIA_0603_CAP_NOSILK")
     )
     (path "/2a72d102-5cc2-46a5-ba1d-7fad5fd13e56"
-      (reference "C7") (unit 1) (value "GJM1555C1H1R1WB01D") (footprint "azonenberg_pcb:EIA_0402_CAP_NOSILK")
+      (reference "C7") (unit 1) (value "GJM1555C1H1R0WB01D") (footprint "azonenberg_pcb:EIA_0402_CAP_NOSILK")
     )
     (path "/bd065bd8-f096-4339-86bc-73022c7c9598"
       (reference "C8") (unit 1) (value "9701-0SL-1R3") (footprint "azonenberg_pcb:CAP_TRIM_KNOWLES_9701_xSL-1")
@@ -1652,7 +1658,7 @@
       (reference "C21") (unit 1) (value "2 pF") (footprint "azonenberg_pcb:EIA_0402_CAP_NOSILK")
     )
     (path "/d3beebe0-c3be-42e7-b903-8d54a7dd6e53"
-      (reference "C22") (unit 1) (value "GJM1555C1H4R0WB01D") (footprint "azonenberg_pcb:EIA_0402_CAP_NOSILK")
+      (reference "C22") (unit 1) (value "GJM1555C1H3R2BB01D") (footprint "azonenberg_pcb:EIA_0402_CAP_NOSILK")
     )
     (path "/a12b751e-ae7a-468c-af3d-31ed4d501b01/b2ee61e9-2ecc-4e69-9c1a-3d3d2b7bee7d"
       (reference "J1") (unit 1) (value "U.FL") (footprint "azonenberg_pcb:CONN_U.FL_TE_1909763-1")
@@ -1670,10 +1676,10 @@
       (reference "J5") (unit 1) (value "TIPRES") (footprint "azonenberg_pcb:EDGELAUNCH_350UM")
     )
     (path "/ca1af6e0-b911-4719-a936-e41d586110b5"
-      (reference "L1") (unit 1) (value "LQG15HN1N0S02D") (footprint "azonenberg_pcb:EIA_0402_CAP_NOSILK")
+      (reference "L1") (unit 1) (value "L0402R82BHNTR") (footprint "azonenberg_pcb:EIA_0402_CAP_NOSILK")
     )
     (path "/95d3d7e1-641f-435c-9cc8-0d359ea2fc7b"
-      (reference "L2") (unit 1) (value "LQG15HN4N7C02D") (footprint "azonenberg_pcb:EIA_0402_CAP_NOSILK")
+      (reference "L2") (unit 1) (value "L04023R9BHNTR") (footprint "azonenberg_pcb:EIA_0402_CAP_NOSILK")
     )
     (path "/a12b751e-ae7a-468c-af3d-31ed4d501b01/26c9a61b-49de-43ad-b3c9-7b4385b6b4c9"
       (reference "R1") (unit 1) (value "255K") (footprint "azonenberg_pcb:EIA_0402_RES_NOSILK")
