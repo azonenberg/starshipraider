@@ -86,12 +86,12 @@ components of the probe and cable, including solder, are lead free.
 \section{Safety Information}
 
 To avoid personal injury, damage to the probe, or damage to the attached instrument, it is important to understand and
-follow the warnings and specification limits in this document.
+follow the warnings and specifications in this document.
 
 \begin{itemize}
 \item Only personnel familiar with the safe use and operation of electronic test equipment should use this probe.
 \item Do not connect the ground terminal of this probe to any voltage other than earth ground.
-\item Do not exceed operating limits in the specifications section of this document.
+\item Do not exceed operating limits described in the specifications section of this document.
 \item The soldermask on this probe is \emph{not} rated for insulation against hazardous voltages, and conductive
 elements are exposed at the tip and connector. Do not use this probe on any circuits which may contain voltages
 exceeding 30 Vrms, or the touch-safe voltage limit in your organization's standard operating procedures if this is
@@ -110,7 +110,7 @@ CA PROP 65 WARNING: This product can expose you to beryllium, which is known to 
 \pagebreak
 \section{Theory of Operation}
 
-Tha AKL-PT5 probe is a \emph{transmission line probe} and works very differently from high-impedance passive or active
+The AKL-PT5 probe is a \emph{transmission line probe} and works very differently from high-impedance passive or active
 probes many engineers are familiar with. It is intended primarily for probing relatively low impedance ($50 \Omega$),
 high bandwidth digital signals, which ordinarily require expensive active probes to properly examine.
 
@@ -121,25 +121,26 @@ high bandwidth digital signals, which ordinarily require expensive active probes
 \label{schematic}
 \end{figure}
 
-The signal is split off from the DUT at the point of contact and travels through a $450\Omega$ resistor at the probe
+The signal is coupled from the DUT at the point of contact and travels through a $450\Omega$ resistor at the probe
 tip. A distributed element filter applies a low-pass response to compensate for parasitic capacitance of the tip
 resistor, which would otherwise create undesired peaking. It then travels on $50\Omega$ transmission line through a
 SMPM connector and coaxial cable to the oscilloscope, which terminates the signal with $50\Omega$ to ground.
 
 The tip resistor and termination form a 10:1 voltage divider, so the oscilloscope sees the incident signal attenuated
 by a factor of 10 (-20 dB). \emph{Note that a $50 \Omega$ termination at the instrument is required. This probe cannot
-be used with lower-cost oscilloscopes that only have $1M \Omega$ terminations.}
+be used with oscilloscopes that only have $1M \Omega$ terminations.}
 
 The tip resistor and scope-side termination in series present a total loading of $500 \Omega$ on the DUT. While this is
-a significantly lower DC impedance than conventional probes, the resistive input stage has extremely flat frequency
-characteristics with much less capacitance than conventional passive probes. This means that the impedance of the probe
+a significantly lower DC impedance than conventional passive probes, the resistive input stage has flat frequency
+characteristics with much less capacitance. This means that the impedance of the probe
 remains comparatively constant across the entire operating range, rather than greatly decreasing at higher frequencies.
 
 \pagebreak
 
 \section{Usage Instructions}
 
-Proper soldering and desoldering technique is crucial to getting the best performance and lifetime from your probe.
+Please read this section carefully. There are many factors which will affect the accuracy of your measurements and/or 
+the lifetime of the probe. The most crucial of these is proper soldering and desoldering technique.
 
 \subsection{Probe Coupling}
 
@@ -150,13 +151,13 @@ different type of probe for these applications.
 
 \subsection{Test Point Design}
 
-The probe tip leads are flexible and can mate with signal and ground contacts at arbitrary spacing from 0 to 8mm. The
-natural spacing of signal and ground contacts, requiring the least amount of bending of the leads, is 2.0 mm.
+The probe tip leads are flexible and can mate with signal and ground contacts on the DUT that are arbitrarily spaced from 
+0 to 8mm. The normal spacing of signal and ground contacts, requiring the least amount of bending of the leads, is 2.0 mm.
 
-Avoid placing test points in confined spaces between components or in other difficult-to-reach locations. The probe PCB
-is nominally 5.6 mm wide so a minimum width of 6.0 mm is suggested for a free fit allowing for PCB routing tolerances.
-Sufficient clearance around the signal and ground contacts for hand soldering must be provided, taking into account the
-location of the probe PCB itself.
+Avoid placing test points in confined spaces between components or in other difficult-to-reach locations. The AKL-PT5 
+probe PCB is nominally 5.6 mm wide so a minimum width of 6.0 mm is suggested for a free fit allowing for PCB routing 
+tolerances. Sufficient clearance around the signal and ground contacts for hand soldering must be provided, taking into
+account the location of the probe PCB itself.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -164,7 +165,7 @@ location of the probe PCB itself.
 
 \subsubsection{Site Selection and Optimal Placement}
 
-Determine which side of the test point you intend for the probe to approach from and ensure a good ground point is
+Determine which side of the test point you intend for the probe to approach from. Ensure a good ground point is
 easily reachable, removing solder mask if necessary.
 
 If your probe is configured with the ground lead on the wrong side\footnote{For convenience, the AKL-PT5 is available
@@ -203,7 +204,8 @@ Hold the foot in place and place the probe head close to the test point to check
 that the leads are floating a short distance (roughly the thickness of the probe PCB) above the test point, accounting
 for the thickness of the mounting tape.
 
-Remove the liner from the tape and secure the foot to the desired location.
+Remove the liner from the tape and secure the foot to the desired location. Once this is secured and the leads are 
+soldered, moving this foot will risk damage to the probe, trace and DUT.
 
 \begin{figure}[h]
 \centering
@@ -217,10 +219,10 @@ Note placement of mounting foot on connector.}
 
 \subsubsection{Attaching and Securing the Cable}
 
-Once you are satisfied with the placement, if the probe head and cable are not already attached, connect the SMPM cable
-to the probe head by grasping the cable connector and probe PCB firmly and pressing the connectors straight into each
-other, as shown in Fig. \ref{smpm-mating}. You may hear or feel a slight click when the connector seats fully, but this
-may not be noticeable in every case.
+Once you are satisfied with your probe positioning, it is time to attach and secure the cable. This should not be 
+removed until after the probe is de-soldered. connect the SMPM cable to the probe head by first grasping the cable
+connector and probe PCB firmly then pressing the connections straight into each other, as shown in Figure \ref{smpm-mating}. 
+You may hear or feel a slight click when the connector seats fully, but this may not be noticeable in every case.
 
 Make sure to hold the probe by the edges to avoid exerting force on the leads. Do not twist or rotate the connectors
 during or after mating.
@@ -232,12 +234,12 @@ during or after mating.
 \label{smpm-mating}
 \end{figure}
 
-CAUTION: DO NOT attempt to mate or unmate the SMPM connector once the probe is soldered to the DUT. This is very likely
+CAUTION: DO NOT attempt to mate or unmate the SMPM connector once the probe is soldered to the DUT. This is likely
 to result in the probe moving enough to damage the test point, probe, or both. Always mate the connector prior to
 soldering, and desolder the probe prior to unmating.
 
-The coaxial cable attached to the probe should also be secured to prevent applying excessive force to the probe body,
-as the mounting wire is too flexible to resist a significant tug on the cable without the probe head moving. Any method
+The coaxial cable attached to the probe should be secured to prevent applying excessive force to the probe body, as the
+mounting wire is too flexible to resist a significant tug on the cable without the probe head moving. Any method
 providing adequate mechanical support while respecting the minimum bend radius of the cable (0.1 inch / 2.54 mm) may be
 used.
 
@@ -265,7 +267,7 @@ leads under very slight tension once soldered - just enough to keep them taut, b
 force on the solder joints.
 
 Remove soldermask from the signal and ground test points with a scraper if necessary, and tin the points with a fine
-point soldering iron.
+point soldering iron. A BRS-290 fiberglass bristle brush is great for gently scraping mask. 
 
 Apply a small amount of flux to the ground test point. Manipulate the probe body with one hand while holding the
 soldering iron in the other. Gently move the probe body to press the ground lead against the tinned test point, then
@@ -306,7 +308,7 @@ To unmate the cable from the probe, grasp the probe head by the edges between tw
 the SMPM connector of the cable between two fingers of the other hand and pull them apart with a slight rocking motion.
 Do not apply any force to the coaxial cable or heat shrink tubing as these are not designed to handle significant
 tensile loads. You may be able to get a better grip on the cable connector by using your fingernails to pull the front
-face of the connector away from the probe (Fig. \ref{smpm-unmating})
+face of the connector away from the probe as shown in Fig. \ref{smpm-unmating}.
 
 \begin{figure}[h]
 \centering
@@ -358,7 +360,7 @@ and is relatively insensitive to ESD.
 
 The AKL-PT5 must be connected to the host instrument via a $50 \Omega$ coaxial cable terminated with a SMPM female
 connector at the probe side. Highly flexible cabling, such as 0.047" / 1.19mm micro coax, is preferred for mechanical
-reasons despite having higher loss than larger cables: thicker flexible cables are much stiffer and springier, and
+reasons despite having higher loss than larger cables. Most cables are much stiffer and springier, and
 unless perfectly straight are likely to apply significant forces to the solder joints.
 
 The stock cable supplied with the probe kit is Koaxis part number AO10-KF047-RO10-36.00-MC-TD,
