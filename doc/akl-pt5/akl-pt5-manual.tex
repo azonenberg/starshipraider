@@ -26,7 +26,7 @@
 
 \begin{document}
 
-\title{AKL-PT5 8 GHz Passive Probe Operator Manual}
+\title{AKL-PT5 7 GHz Passive Probe Operator Manual}
 \author{Antikernel Labs}
 \date{\today}
 
@@ -116,17 +116,19 @@ high bandwidth digital signals, which ordinarily require expensive active probes
 
 \begin{figure}[h]
 \centering
-%\includegraphics[height=4cm]{schematic.png}
+\includegraphics[height=4cm]{schematic.png}
 \caption{Simplified probe schematic}
 \label{schematic}
 \end{figure}
 
-The signal is split off from the DUT at the point of contact and travels through a $450\Omega$ resistor at the
-probe tip. It then travels on $50\Omega$ transmission line through a SMPM connector and coaxial cable to the
-oscilloscope, which terminates the signal with $50\Omega$ to ground. The tip resistor and termination form a 10:1
-voltage divider, so the oscilloscope sees the incident signal attenuated by a factor of 10 (-20 dB). \emph{Note that a
-$50 \Omega$ termination at the instrument is required. This probe cannot be used with lower-cost oscilloscopes that
-only have $1M \Omega$ terminations.}
+The signal is split off from the DUT at the point of contact and travels through a $450\Omega$ resistor at the probe
+tip. A distributed element filter applies a low-pass response to compensate for parasitic capacitance of the tip
+resistor, which would otherwise create undesired peaking. It then travels on $50\Omega$ transmission line through a
+SMPM connector and coaxial cable to the oscilloscope, which terminates the signal with $50\Omega$ to ground.
+
+The tip resistor and termination form a 10:1 voltage divider, so the oscilloscope sees the incident signal attenuated
+by a factor of 10 (-20 dB). \emph{Note that a $50 \Omega$ termination at the instrument is required. This probe cannot
+be used with lower-cost oscilloscopes that only have $1M \Omega$ terminations.}
 
 The tip resistor and scope-side termination in series present a total loading of $500 \Omega$ on the DUT. While this is
 a significantly lower DC impedance than conventional probes, the resistive input stage has extremely flat frequency
@@ -141,9 +143,9 @@ Proper soldering and desoldering technique is crucial to getting the best perfor
 
 \subsection{Probe Coupling}
 
-Transmission line probes such as the AKL-PT5 have significantly higher DC loading than a standard $10M\Omega$ passive
-probe, and may interact poorly with pull-up/pull-down resistors or level shifters with automatic direction sensing.
-Consider AC coupling (using an industry standard SMA inner DC block between the probe and coaxial cable), or use of a
+Transmission line probes such as the AKL-PT5 have significantly higher DC loading than a the common $10M\Omega$ passive
+R-C divider probe, and may interact poorly with pull-up/pull-down resistors or level shifters with automatic direction
+sensing. Consider AC coupling (using an industry standard SMA inner DC block before the scope input), or use of a
 different type of probe for these applications.
 
 \subsection{Test Point Design}
@@ -160,65 +162,94 @@ location of the probe PCB itself.
 
 \subsection{Placing and Securing}
 
+\subsubsection{Site Selection and Optimal Placement}
+
+Determine which side of the test point you intend for the probe to approach from and ensure a good ground point is
+easily reachable, removing solder mask if necessary.
+
+If your probe is configured with the ground lead on the wrong side\footnote{For convenience, the AKL-PT5 is available
+with one of two ground lead placements from the factory, to the left (AKL-PT5L) or right (AKL-PT5R) of the signal
+contact as seen with the SMPM connector facing upward. The PCB is identical for both SKUs, and a probe can be easily
+swapped between configurations in the field with a soldering iron.} of the signal contact, desolder it and reattach it
+to the opposite footprint.
+
+The probe should approach the test point from a fairly steep angle: a 45 to 60 degree angle from horizontal usually
+works well. This minimizes coupling between the tip leads/resistor and signals or ground planes on the DUT, which can
+introduce crosstalk to measurements or degrade bandwidth. Avoid placing the probe body or leads parallel to the board
+whenever possible.
+
+\subsubsection{Mounting the Probe Head}
+
 The probe leads are fragile and not intended to be load bearing. When working with any solder-in probe, it is critical
 to provide a firm mechanical attachment \emph{before} soldering the tip. Securing a probe operating at microwave
 frequencies, such as the AKL-PT5, requires additional care to avoid degrading the performance of the system.
 
-The AKL-PT5 contains an integrated mounting fixture consisting of an 0.5 inch (12.7 mm) square FR4 ``foot" and a FIXME
-length of 20 AWG (0.81mm) insulated solid copper wire, attached to each other and the probe head with SAC305 solder.
-The mounting wire is considered to be a consumable and is expected to eventually fail from repeated bending over the
-lifetime of the probe. The mounting wire may be easily replaced with a new piece of wire\footnote{While the supplied
-mounting wire was chosen to provide a reasonable default for most applications, feel free to customize your probe by
-replacing it with a longer, shorter, stiffer, or more flexible wire if your application dictates.} by hand soldering
-when this happens.
-
-Determine which side of the test point you intend for the probe to approach from and ensure a good ground point is
-easily reachable. If your probe is configured with the ground lead on the wrong side\footnote{For convenience, the
-AKL-PT5 is available with one of two ground lead placements from the factory, to the left (AKL-PT5L) or right
-(AKL-PT5R) of the signal contact as seen with the SMPM connector facing upward. The PCB is identical for both variants,
-and the ground lead can be easily swapped from one footprint to the other in the field with a soldering iron.} of the
-signal contact, desolder it and reattach it to the opposite footprint.
-
-To mount the probe, begin by selecting a suitable location for the mounting foot, typically about 1 inch (25 mm) from
-the test point. Hold the foot in place and pre-bend the mounting wire to place the probe head close to the test point
-to check the fit.
-
-Once you are satisfied with the placement, if the probe head and cable are not already attached, connect the SMPM cable
-to the probe head by grasping the cable connector and probe PCB firmly with two fingers and pressing the connectors
-straight into each other. You may hear or feel a slight click when the connector seats fully, but this may not be
-noticeable.
-
-DO NOT attempt to mate or unmate the SMPM connector once the probe is soldered to the DUT. This may result in damage to
-the test point, probe, or both. Always mate the connector prior to soldering, and desolder the probe prior to unmating.
+The AKL-PT5 contains an integrated mounting fixture consisting of an 0.5 inch (12.7 mm) square FR4 ``foot" and a 2.1
+inch (55 mm) length of 20 AWG (0.81mm) insulated solid copper wire, attached to each other and the probe head with
+SAC305 solder. To mount the probe, begin by selecting a suitable location for the mounting foot, typically about 1 inch
+(25 mm) from the test point. The upper surfaces of ICs or connectors are often good locations for the foot, as seen in
+Fig. \ref{placement}.
 
 Select a piece of double-sided tape and attach one side of the tape to the underside of the mounting foot. The AKL-PT5
-ships with sample quantities of two different types of tape: a clear rubbery material and a white polyurethane foam.
-For information on ordering additional tape, see the Ordering Information section.
+ships with sample quantities of two different types of tape: a clear acrylic elastomer and a white polyurethane foam.
+For information on ordering additional tape, see the \hyperref[ordering-info]{Ordering Information} section.
 
-Both tapes may be removed from the probe and DUT without damage or leaving residue, however the white foam tape
-provides significantly greater holding force when attached to typical PCB materials. It is typically used for longer
-term, semi-permanent measurements; the clear tape has a weaker adhesive and may be preferable for shorter term use when
-the probe is expected to be frequently repositioned.
+Both tapes may be removed from the probe and DUT without damage or leaving residue if appropriate care is exercised,
+however the white foam tape provides significantly greater holding force when attached to typical PCB materials. It is
+typically used for longer term, semi-permanent measurements; the clear tape has a weaker adhesive and may be preferable
+for shorter term use when the probe is expected to be frequently repositioned.
+
+Hold the foot in place and place the probe head close to the test point to check the fit. Adjust the mount as needed so
+that the leads are floating a short distance (roughly the thickness of the probe PCB) above the test point, accounting
+for the thickness of the mounting tape.
 
 Remove the liner from the tape and secure the foot to the desired location.
 
 \begin{figure}[h]
 \centering
-%\includegraphics[width=12cm]{secured-tip.jpg}
-\caption{AKL-PT5 probe mounted to DUT with double-sided adhesive squares}
-\label{secured-tip}
+\includegraphics[width=12cm]{placement.jpg}
+\caption{AKL-PT5 probe mounted to DUT with double-sided adhesive square and ready to solder.
+Note placement of mounting foot on connector.}
+\label{placement}
 \end{figure}
 
-The coaxial cable attached to the probe should also be secured to prevent applying excessive force to the probe body,
-as the mounting wire is too flexible to resist a significant tug on the cable without the probe head moving. Any method
-providing adequate mechanical support may be used; an example setup using polyimide tape is shown in Fig.
-\ref{cable-secured}. Leave a small amount of slack at the probe end of the cable so that the probe head can move
-slightly during soldering.
+\FloatBarrier
+
+\subsubsection{Attaching and Securing the Cable}
+
+Once you are satisfied with the placement, if the probe head and cable are not already attached, connect the SMPM cable
+to the probe head by grasping the cable connector and probe PCB firmly and pressing the connectors straight into each
+other, as shown in Fig. \ref{smpm-mating}. You may hear or feel a slight click when the connector seats fully, but this
+may not be noticeable in every case.
+
+Make sure to hold the probe by the edges to avoid exerting force on the leads. Do not twist or rotate the connectors
+during or after mating.
 
 \begin{figure}[h]
 \centering
-%\includegraphics[width=12cm]{cable-secured.jpg}
-\caption{Securing cable and DUT to lab bench with polyimide tape}
+\includegraphics[width=12cm]{smpm-mating.jpg}
+\caption{Connecting the probe and cable.}
+\label{smpm-mating}
+\end{figure}
+
+CAUTION: DO NOT attempt to mate or unmate the SMPM connector once the probe is soldered to the DUT. This is very likely
+to result in the probe moving enough to damage the test point, probe, or both. Always mate the connector prior to
+soldering, and desolder the probe prior to unmating.
+
+The coaxial cable attached to the probe should also be secured to prevent applying excessive force to the probe body,
+as the mounting wire is too flexible to resist a significant tug on the cable without the probe head moving. Any method
+providing adequate mechanical support while respecting the minimum bend radius of the cable (0.1 inch / 2.54 mm) may be
+used.
+
+For a small DUT it may be necessary to either loop the cable back over the board before taping it down (see example
+setup using polyimide tape in Fig. \ref{cable-secured}) or tape both the DUT and cable to the bench. Leave sufficient
+slack at the probe end of the cable to allow motion during soldering, and to act as a strain relief in case the main
+length of the cable is accidentally bumped or tugged.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=12cm]{cable-tape.jpg}
+\caption{Securing cable to DUT with polyimide tape}
 \label{cable-secured}
 \end{figure}
 
@@ -226,8 +257,8 @@ slightly during soldering.
 
 \subsection{Soldering}
 
-Once the mounting foot is secured to the DUT and the mounting wire is bent correctly, the head should be floating just
-above (typically about 1mm) the test point. Use tweezers to pre-bend the signal and ground leads so that the tips are
+Once the mounting foot is secured to the DUT and the mounting wire is bent correctly, the signal and ground leads
+should be floating just above the test point. Use tweezers to pre-bend the signal and ground leads so that the tips are
 correctly spaced for your test points. The probe body should be roughly centered between the signal and ground points
 so that both leads bend approximately the same amount. The goal is for the springiness of the mounting wire to hold the
 leads under very slight tension once soldered - just enough to keep them taut, but not enough to place significant
@@ -236,19 +267,22 @@ force on the solder joints.
 Remove soldermask from the signal and ground test points with a scraper if necessary, and tin the points with a fine
 point soldering iron.
 
-Apply a small amount of flux to the ground test point. Grasp the probe body with one hand while holding the soldering
-iron in the other. Gently move the probe body to press the ground lead against the tinned test point, then melt the
-solder to form the joint. Ensure the solder solidifies fully before letting go of the probe. (Soldering the ground
-point before the signal point helps reduce mechanical stresses on the DUT signal traces, which are typically smaller
-and less mechanically robust than large ground planes or bypass capacitor pads.)
+Apply a small amount of flux to the ground test point. Manipulate the probe body with one hand while holding the
+soldering iron in the other. Gently move the probe body to press the ground lead against the tinned test point, then
+melt the solder to form the joint. Do not tug directly on the ground lead with tweezers as this places significant
+stress on it.
+
+Ensure the solder solidifies fully before letting go of the probe. (Soldering the ground point before the signal point
+helps reduce mechanical stresses on the DUT signal traces, which are typically smaller and less mechanically robust
+than large ground planes or bypass capacitor pads.)
 
 Apply flux to the signal test point, then use tweezers to position the signal lead against the tinned test point and
-solder it. Inspect the joints as necessary. For best accuracy and lowest loading, remove flux from the probe tip area
-after soldering using isopropyl alcohol on a lint-free swab.
+solder it. Inspect the joints as necessary. Remove excess flux after soldering using isopropyl alcohol on a lint-free
+swab.
 
 \begin{figure}[h]
 \centering
-%\includegraphics[width=8cm]{tip-on-testpoint.jpg}
+\includegraphics[width=12cm]{tip-soldered.jpg}
 \caption{AKL-PT5 tip soldered to test point}
 \label{tip-on-testpoint}
 \end{figure}
@@ -272,9 +306,39 @@ To unmate the cable from the probe, grasp the probe head by the edges between tw
 the SMPM connector of the cable between two fingers of the other hand and pull them apart with a slight rocking motion.
 Do not apply any force to the coaxial cable or heat shrink tubing as these are not designed to handle significant
 tensile loads. You may be able to get a better grip on the cable connector by using your fingernails to pull the front
-face of the connector away from the probe (Fig. X)
+face of the connector away from the probe (Fig. \ref{smpm-unmating})
 
-\subsection{Maintenance, Cleaning, and Storage}
+\begin{figure}[h]
+\centering
+\includegraphics[width=12cm]{smpm-unmating.jpg}
+\caption{Disconnecting SMPM connector. Note placement of fingernail. TODO: re-shoot with better focus.}
+\label{smpm-unmating}
+\end{figure}
+\FloatBarrier
+
+\subsection{Maintenance and Repair}
+
+\subsubsection{Replacing the Mounting Wire}
+
+The mounting wire is considered to be a consumable and is expected to eventually fail from repeated
+bending over the lifetime of the probe. The mounting wire may be easily replaced with a new piece of
+wire by hand soldering when this happens, or if a longer, shorter, stiffer, or more flexible mount is preferred. The
+factory-supplied mounting wire is a 2.1 inch (55 mm) length of 20 AWG (0.81mm) insulated solid copper.
+
+The solder joint connecting the mounting wire to the underside of the probe head is covered by a peelable blue
+polyurethane mask (Dymax E-MAX 906-B or similar) to reduce the risk of accidentally short-circuiting the DUT. This mask
+may be easily peeled away with tweezers to enable desoldering of the mounting wire. Once a new mounting wire is
+installed, flux residue should be removed and the solder joint re-covered with an insulative material. Electrical tape,
+polyimide tape, or a similar peelable maskant are all acceptable for this purpose.
+
+\subsubsection{Replacing the Tip Resistor or Ground Lead}
+
+The tip resistor and ground lead are expected to fail over time from repeated bending and soldering cycles. The ground
+lead may also need to be moved from one side to the other in order to fit a particular DUT.
+
+TODO: talk about details of parts and procedure
+
+\subsection{Cleaning and Storage}
 
 To avoid attracting dust or corroding the tip contacts, when the probe is being stored it is best to remove flux
 residue from the tip area. This may be done with isopropyl alcohol and a lint-free swab, or any other industry-standard
@@ -284,19 +348,27 @@ The SMA connector on the supplied cable is gaged before shipment to ensure the p
 tolerance, however it is good practice to gage the connector periodically to detect any gradual misalignments as the
 connector wears.
 
-No other maintenance is normally required.
-
 The probe should be stored in the provided foam-lined cardboard box when not in use to protect the fragile tip contacts
 from mechanical damage. The foam and cardboard are static dissipative to ensure ESD safety and prevent charges from
 building up on the probe which could damage surrounding equipment, however the probe itself has no active components
-and does not require special handling for ESD reasons.
+and is relatively insensitive to ESD.
 
 \FloatBarrier
 \subsection{Cables}
 
-The AKL-PT5 must be connected to the host instrument via a $50 \Omega$ coaxial cable with low loss over the operating
-bandwidth of the probe, terminated with a SMPM female connector at the probe side. The stock cable supplied with the
-probe is Koaxis part number AO10-KF047-RO10-36.00-MC-TD.
+The AKL-PT5 must be connected to the host instrument via a $50 \Omega$ coaxial cable terminated with a SMPM female
+connector at the probe side. Highly flexible cabling, such as 0.047" / 1.19mm micro coax, is preferred for mechanical
+reasons despite having higher loss than larger cables: thicker flexible cables are much stiffer and springier, and
+unless perfectly straight are likely to apply significant forces to the solder joints.
+
+The stock cable supplied with the probe kit is Koaxis part number AO10-KF047-RO10-36.00-MC-TD,
+and comes with individually serialized S-parameters for de-embedding. Longer or shorter cables using the same KF047
+cable stock, or using a connector other than SMA at the instrument end, may be ordered directly from Koaxis if required
+for your application.
+
+For specialized applications requiring very low loss, consider use of hand formable cables. Although they have limited
+lifetime, their relative lack of springiness once bent allows thicker cabling to be used without applying excessive
+force to the probe.
 
 The cable should be taped to a lab bench or the DUT as shown in Fig. \ref{cable-secured}, or otherwise secured to
 prevent transferring any force into the probe.
@@ -494,6 +566,7 @@ side.
 
 \pagebreak
 \section{Ordering Information}
+\label{ordering-info}
 
 \subsection{Probe}
 
