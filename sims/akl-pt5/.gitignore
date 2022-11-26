@@ -1,2 +1,4 @@
+*.zon
+*.~lock*
 *.bck
 sondata

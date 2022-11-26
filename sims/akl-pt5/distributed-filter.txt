@@ -19,3 +19,4 @@ L1
 
 L2
 	L = 75.94 deg = 4.72 mm
+	have to fit in ~1.8 x 1.8 mm
