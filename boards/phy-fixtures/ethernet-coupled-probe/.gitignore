@@ -1,0 +1,4 @@
+*-backups
+*cache
+*.kicad_prl
+output
