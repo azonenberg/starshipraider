@@ -158,7 +158,7 @@
           (stroke (width 0.2032) (type default) (color 0 0 0 0))
           (fill (type none))
         )
-        (arc (start 1.778 0) (mid 0.2221 1.8083) (end -1.778 0.508)
+        (arc (start 1.778 0) (mid 0.222 1.8083) (end -1.778 0.508)
           (stroke (width 0.254) (type default) (color 0 0 0 0))
           (fill (type none))
         )
