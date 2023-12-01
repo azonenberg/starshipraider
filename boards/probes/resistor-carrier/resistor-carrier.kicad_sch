@@ -105,7 +105,7 @@
     (uuid aefa2e1c-fba2-460f-b7b3-14256a6c386f)
     (property "Reference" "R1" (id 0) (at 95.25 63.8642 90))
     (property "Value" "R" (id 1) (at 95.25 66.4011 90))
-    (property "Footprint" "azonenberg_pcb:EIA_0402_RES_NOSILK_FLIPCHIP" (id 2) (at 95.25 70.358 90)
+    (property "Footprint" "azonenberg_pcb:EIA_0201_RES_NOSILK" (id 2) (at 95.25 70.358 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (id 3) (at 95.25 68.58 0)
@@ -145,7 +145,7 @@
       (reference "J2") (unit 1) (value "CONN_01X01") (footprint "azonenberg_pcb:EDGELAUNCH_350UM")
     )
     (path "/aefa2e1c-fba2-460f-b7b3-14256a6c386f"
-      (reference "R1") (unit 1) (value "R") (footprint "azonenberg_pcb:EIA_0402_RES_NOSILK_FLIPCHIP")
+      (reference "R1") (unit 1) (value "R") (footprint "azonenberg_pcb:EIA_0201_RES_NOSILK")
     )
   )
 )
