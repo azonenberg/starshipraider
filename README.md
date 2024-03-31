@@ -1,10 +1,83 @@
 # Intro
 
-TODO: talk more about the project
+This is the umbrella repo for a lot of my T&M projects. Some will end up in separate repos.
 
 # Project Codenames
 
-Boards, subsystems, etc are all named after famous electrical engineers.
+Boards, subsystems, etc are all named after famous electrical engineers who made major contributions to the field of test equipment design.
+
+# Platform Architecture
+
+All instruments are planned to share the same basic platform. Generally speaking, this platform will be:
+
+## Mechanical form factor
+
+* 1U rackmount, depth dependent on the specific instrument.
+
+## Power
+* 48V DC power on 6-pin Molex Mini-Fit Jr connector (back left)
+* Intermediate bus converter based on the [trigger crossbar](https://github.com/azonenberg/triggercrossbar/tree/main/pcb/ibc) IBC design to produce 12V output.
+* Possible changes from current design (as of 2024-03-31): switch to bigger MCU with flash space for A/B firmware images, consider swapping main DC-DC module to something with lower standby power (current IBC wastes ~3W no-load which isn't great)
+* STM32L0 based power/reset sequencing supervisor with soft power on/off
+
+## Software/firmware stack
+
+* ngscopeclient as primary UI
+* staticnet as TCP/IP stack
+* Bare metal, no OS, no dynamic memory allocation
+* SFTP based firmware update, eventually with signed updates (user can add new signing keys via uart console)
+
+## Main chipset
+* STM32H7 as main processor running SCPI stack, sshd, and control plane functionality (low speed ADCs/DACs, GPIOs, etc)
+* Xilinx UltraScale+ / UltraScale / 7 series FPGA as main datapath. Some instruments may have >1 FPGA.
+
+## Communications
+
+* KSZ9031 based 10/100/1000 baseT fallback Ethernet interface
+* 10Gbase-R SFP+ / 25Gbase-R SFP28 interface for primary remote control path
+* Twinlan transport, SCPI control plane socket plus bare TCP socket for binary waveform data
+* 2.13" monochrome e-ink display with IP/version/status information
+* RS232 console on rear panel RJ45 (Cisco pinout)
+
+## RF / signal interface
+
+* Front panel SMA/BNC probe ports. Number of channels dependent on PCB size.
+* Rear panel SMA for 10 MHz reference in, level TBD
+* May have reference out TBD
+* May have PPS in/out TBD
+* Rear panel trigger in/out if applicable
+
+# Roadmap (including external repos)
+
+1. [Trigger Crossbar](https://github.com/azonenberg/triggercrossbar)  
+Currently in progress. Not planning to make in volume, focus is on prototyping as much of the platform as possible to speed development and de-risk future projects. Prototype assembled, firmware dev in progress.
+
+1. [kup-lulz](https://github.com/azonenberg/misc-devboards/tree/master/kup-lulz): One-off Kintex UltraScale+ test board on OSHPark 4 layers, using a sketchy reballed aliexpress FPGA. Intended as a low-risk validation for UltraScale+ based power, pcb footprint/schematic, and some RTL development. Schematic complete, fine tuning layout.
+
+1. [GROVER](https://github.com/azonenberg/grover): Kintex UltraScale+ based 10/25G BERT. On hold until kup-lulz is brought up and working as it will essentially be a scaled-up version of the same design
+
+1. VOLLUM (Howard Vollum, co-inventor of triggered-sweep oscilloscope)
+    - No design progress yet, but can probably leverage some old frontend work. One 6 Gbps AD9213 is in inventory for a scaled down (7 series based) single channel prototype.
+    - 2 GHz / 10 Gsps 12 bit oscilloscope, as many channels as I can fit in 1U
+    - Per channel: 1x AD9213, frontend, XCAU25P-2FFVB676, 72-bit DDR4 LRDIMM
+    - Top level: One more FPGA, details TBD, doing trigger sync and MSO channels
+    - Will need to use parallel / bonded serial LVDS for waveform download since all 12 GTYs on the KU25Ps will be used for the JESD204
+
+
+
+
+
+
+
+
+
+
+
+-----
+
+# Stuff below here is way old and needs to be redone
+
+-----
 
 ## General
 
@@ -12,9 +85,6 @@ Boards, subsystems, etc are all named after famous electrical engineers.
 * CLARKE (Edith Clarke, first female EE professor in USA): the original STARSHIPRAIDER project
 
 ## Oscilloscopes
-
-Individual instrument projects are named after famous electrical engineers who made major contributions to the field of
-test equipment design.
 
 All are 8 channels??
 
@@ -70,9 +140,6 @@ All are 8 channels??
 * BRAUN (Karl Ferdinand Braun, inventor of optically scanned CRT oscilloscope and phased array)
   Low-bandwidth active probe
 	ADA4817-1ACPZ-R7
-
-* HALL (discovered Hall effect)
-  AKL-PT1 passive probe
 
 ## Signal Generators
 
