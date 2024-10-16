@@ -1,0 +1,4 @@
+*.lck
+*backups
+output
+*.prl
